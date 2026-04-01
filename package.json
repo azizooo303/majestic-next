@@ -2,12 +2,17 @@
   "name": "wordpress-next",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "ship": "node scripts/majestic.js ship",
+    "deploy": "node scripts/majestic.js deploy",
+    "status": "node scripts/majestic.js status",
+    "majestic": "node scripts/majestic.js"
   },
   "dependencies": {
     "@base-ui/react": "^1.3.0",
