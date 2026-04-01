@@ -70,7 +70,7 @@ export default async function LocaleLayout({
       dir={isRTL ? "rtl" : "ltr"}
       className={`${alyamama.variable} ${raleway.variable} ${montserrat.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-white text-[#0c0c0c] font-sans pt-[196px]">
+      <body className="min-h-full flex flex-col bg-[#D4D0C8] text-black font-sans pt-[100px]" style={{ fontFamily: "'Tahoma', 'MS Sans Serif', Arial, sans-serif" }}>
         <NextIntlClientProvider messages={messages}>
           <a
             href="#main-content"

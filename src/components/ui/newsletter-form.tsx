@@ -20,32 +20,35 @@ export function NewsletterForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="mt-6 flex flex-col sm:flex-row gap-3 relative">
-      <input
-        type="email"
-        value={email}
-        onChange={(e) => { setEmail(e.target.value); setStatus("idle"); }}
-        placeholder={t("checkout.email")}
-        required
-        className="flex-1 px-4 py-3 rounded-lg bg-white/10 text-white
-          placeholder:text-white/50 border border-white/20
-          focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/30"
-      />
-      <button
-        type="submit"
-        className="px-6 py-3 bg-gold text-primary font-medium rounded-lg
-          transition-all duration-200 hover:opacity-90 cursor-pointer"
-      >
-        {t("common.subscribe")}
-      </button>
+    <form onSubmit={handleSubmit} className="mt-3 flex flex-col gap-2" style={{ fontFamily: "'Tahoma', Arial, sans-serif" }}>
+      <label className="text-xs text-black text-start" htmlFor="newsletter-email">
+        {t("checkout.email")}:
+      </label>
+      <div className="flex gap-2">
+        <input
+          id="newsletter-email"
+          type="email"
+          value={email}
+          onChange={(e) => { setEmail(e.target.value); setStatus("idle"); }}
+          placeholder="user@example.com"
+          required
+          className="flex-1 win2k-sunken bg-white text-black text-xs px-2 py-1 outline-none min-w-0"
+        />
+        <button
+          type="submit"
+          className="win2k-btn-primary text-xs px-4 py-1"
+        >
+          {t("common.subscribe")}
+        </button>
+      </div>
       {status === "success" && (
-        <p className="sm:absolute sm:top-full sm:mt-2 text-sm text-gold mt-2">
-          {t("common.subscribeThankYou")}
+        <p className="text-xs text-[#006600] flex items-center gap-1">
+          <span>&#10003;</span> {t("common.subscribeThankYou")}
         </p>
       )}
       {status === "error" && (
-        <p className="sm:absolute sm:top-full sm:mt-2 text-sm text-red-400 mt-2">
-          {t("common.invalidEmail")}
+        <p className="text-xs text-[#CC0000] flex items-center gap-1">
+          <span>&#9888;</span> {t("common.invalidEmail")}
         </p>
       )}
     </form>
