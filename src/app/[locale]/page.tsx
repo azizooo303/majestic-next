@@ -127,19 +127,31 @@ export default async function HomePage({
     <Link
       key={cat.slug}
       href={`/shop?category=${cat.slug}`}
-      className="flex flex-col items-center gap-2 min-w-[72px] group"
+      className="flex flex-col items-center gap-1 min-w-[64px] group"
+      style={{ fontFamily: "'Tahoma', Arial, sans-serif" }}
     >
-      <div className="w-16 h-16 bg-[#fafafa] border border-[rgba(0,0,0,0.12)] overflow-hidden rounded-sm">
+      {/* Win2K folder/icon style */}
+      <div
+        className="w-14 h-14 overflow-hidden relative"
+        style={{
+          background: '#ECE9D8',
+          border: '1px solid #808080',
+          boxShadow: 'inset 1px 1px 0 #FFFFFF, inset -1px -1px 0 #404040',
+        }}
+      >
         <Image
           src={cat.image}
           alt={t(`categories.${cat.key}`)}
-          width={64}
-          height={64}
+          width={56}
+          height={56}
           loading="lazy"
-          className="object-cover w-full h-full group-hover:scale-[1.03] transition-transform duration-200"
+          className="object-cover w-full h-full"
         />
       </div>
-      <span className="text-xs font-medium text-[#0c0c0c] text-center whitespace-nowrap group-hover:text-[#484848]">
+      <span
+        className="text-[10px] text-black text-center whitespace-nowrap group-hover:bg-[#0A246A] group-hover:text-white px-0.5"
+        style={{ fontFamily: "'Tahoma', Arial, sans-serif" }}
+      >
         {t(`categories.${cat.key}`)}
       </span>
     </Link>
@@ -178,57 +190,111 @@ export default async function HomePage({
   };
 
   return (
-    <PageWrapper id="main-content" className="flex-1 bg-white">
+    <PageWrapper id="main-content" className="flex-1 bg-[#D4D0C8]">
       <JsonLd data={organizationSchema} />
       {/* Hero */}
       <HeroBanner slide={heroSlide} />
 
-      {/* Category Navigation Strip */}
-      <section className="w-full bg-white border-b border-[rgba(0,0,0,0.21)] py-6">
-        <div className="max-w-screen-2xl mx-auto px-4 md:px-6 lg:px-8">
-          <StaggerGrid
-            stagger={0.07}
-            isRTL={isAr}
-            className="flex overflow-x-auto gap-6 no-scrollbar justify-start md:justify-center"
+      {/* Category Navigation Strip — Win2K Explorer toolbar */}
+      <section className="w-full px-3 py-2 bg-[#D4D0C8]">
+        <div
+          className="mx-auto win2k-window"
+          style={{ maxWidth: '1200px' }}
+        >
+          {/* Win2K title bar */}
+          <div className="win2k-titlebar px-2 py-0.5 text-xs flex items-center gap-1">
+            <span>&#128193;</span>
+            <span>{isAr ? "استعراض الفئات" : "Browse Categories"}</span>
+          </div>
+          {/* Toolbar area */}
+          <div
+            className="px-3 py-2 bg-[#D4D0C8] overflow-x-auto no-scrollbar"
+            style={{ borderTop: '1px solid #FFFFFF', borderBottom: '1px solid #808080' }}
           >
-            {categoryItems}
-          </StaggerGrid>
+            <StaggerGrid
+              stagger={0.07}
+              isRTL={isAr}
+              className="flex gap-2 justify-start md:justify-center"
+            >
+              {categoryItems}
+            </StaggerGrid>
+          </div>
+          {/* Status bar */}
+          <div className="win2k-statusbar px-2 py-0.5 text-xs text-black flex gap-2">
+            <div className="win2k-raised px-2 py-0.5">
+              {CATEGORIES.length} {isAr ? "فئات" : "Categories"}
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Featured Products */}
-      <section className="bg-white py-12 md:py-16">
-        <div className="max-w-screen-2xl mx-auto px-4 md:px-6 lg:px-8">
-          <Reveal>
-            <div className="flex items-center justify-between mb-8">
-              <h2 className="text-2xl md:text-3xl font-bold text-[#0c0c0c] tracking-tight">
-                {isAr ? "المنتجات المميزة" : "Featured Products"}
-              </h2>
-              <Link
-                href="/shop"
-                className="text-sm font-medium text-[#484848] hover:text-[#0c0c0c] border-b border-[#484848] pb-0.5"
-              >
-                {isAr ? "عرض الكل" : t("common.viewAll")}
-              </Link>
-            </div>
-          </Reveal>
-
-          <StaggerGrid
-            stagger={0.08}
-            isRTL={isAr}
-            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[15px]"
-          >
-            {productItems}
-          </StaggerGrid>
-
-          <div className="text-center mt-10">
+      {/* Featured Products — Win2K explorer window */}
+      <section className="px-3 py-2 bg-[#D4D0C8]">
+        <div
+          className="mx-auto win2k-window"
+          style={{ maxWidth: '1200px' }}
+        >
+          {/* Title bar */}
+          <div className="win2k-titlebar px-2 py-0.5 text-xs flex items-center gap-1">
+            <span>&#128203;</span>
+            <span>{isAr ? "المنتجات المميزة" : "Featured Products"}</span>
+            <div className="flex-1" />
             <Link
               href="/shop"
-              className="btn-press inline-block bg-[#0c0c0c] text-white px-10 py-3.5 font-semibold
-                text-sm tracking-wide rounded-sm hover:bg-[#333] transition-colors"
+              className="win2k-btn !min-w-0 !px-2 !py-0 text-[10px] no-underline text-black"
+            >
+              {isAr ? "عرض الكل" : t("common.viewAll")}
+            </Link>
+          </div>
+
+          {/* Toolbar */}
+          <div
+            className="flex items-center gap-1 px-2 py-1 text-xs bg-[#D4D0C8]"
+            style={{ borderBottom: '1px solid #808080', borderTop: '1px solid #FFFFFF' }}
+          >
+            <button className="win2k-btn !min-w-0 !px-2 !py-0.5 text-xs">&#8592; Back</button>
+            <button className="win2k-btn !min-w-0 !px-2 !py-0.5 text-xs">Forward &#8594;</button>
+            <div style={{ borderLeft: '1px solid #808080', borderRight: '1px solid #FFFFFF', height: '18px', width: '2px', margin: '0 4px' }} />
+            <button className="win2k-btn !min-w-0 !px-2 !py-0.5 text-xs">&#9851; Refresh</button>
+            <div className="flex-1" />
+            <button className="win2k-btn !min-w-0 !px-2 !py-0.5 text-xs">&#9776; View</button>
+          </div>
+
+          {/* Products grid area — sunken panel */}
+          <div
+            className="m-2 p-3 bg-white"
+            style={{
+              border: '2px solid #808080',
+              boxShadow: 'inset 1px 1px 0 #404040, inset -1px -1px 0 #FFFFFF',
+            }}
+          >
+            <StaggerGrid
+              stagger={0.08}
+              isRTL={isAr}
+              className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3"
+            >
+              {productItems}
+            </StaggerGrid>
+          </div>
+
+          {/* Shop All button */}
+          <div className="flex justify-center py-3">
+            <Link
+              href="/shop"
+              className="win2k-btn-primary text-xs px-8 py-1.5 font-bold no-underline text-black inline-block text-center"
             >
               {isAr ? "تسوق جميع المنتجات" : "Shop All Products"}
             </Link>
+          </div>
+
+          {/* Status bar */}
+          <div
+            className="win2k-statusbar flex items-center gap-1 px-2 py-1"
+            style={{ borderTop: '2px solid #FFFFFF' }}
+          >
+            <div className="win2k-raised px-2 py-0.5 text-xs">{MOCK_PRODUCTS.length} {isAr ? "عنصر" : "object(s)"}</div>
+            <div className="win2k-raised px-2 py-0.5 text-xs flex-1">{isAr ? "مجموعة ماجيستيك" : "Majestic Collection"}</div>
+            <div className="win2k-raised px-2 py-0.5 text-xs">&#127760; Online</div>
           </div>
         </div>
       </section>
@@ -247,49 +313,48 @@ export default async function HomePage({
       {/* Planning Ideas / Get Inspired */}
       <InspireSection isAr={isAr} />
 
-      {/* Newsletter */}
-      <Reveal>
-        <section className="border-t border-[rgba(0,0,0,0.08)] py-12 bg-white">
-          <div className="max-w-md mx-auto px-4 text-center">
-            <h2 className="text-xl font-semibold text-[#0c0c0c]">
-              {isAr ? "اشترك في النشرة الإخبارية" : "Sign Up to Newsletter"}
-            </h2>
-            <p className="text-[#484848] text-sm mt-2">
+      {/* Newsletter — Win2K dialog */}
+      <section className="px-3 py-2 bg-[#D4D0C8]">
+        <div
+          className="mx-auto win2k-window"
+          style={{ maxWidth: '500px' }}
+        >
+          <div className="win2k-titlebar px-2 py-0.5 text-xs flex items-center gap-1">
+            <span>&#128140;</span>
+            <span>{isAr ? "اشترك في النشرة الإخبارية" : "Sign Up to Newsletter"}</span>
+            <div className="flex-1" />
+            <button className="win2k-btn !min-w-0 !px-1.5 !py-0 text-xs leading-4 h-[18px] font-bold">&#x2715;</button>
+          </div>
+          <div className="p-4 bg-[#D4D0C8]">
+            <p className="text-xs text-black mb-3 leading-relaxed">
               {isAr
-                ? "ابقَ على اطلاع بالمجموعات الجديدة"
-                : "Stay updated with new collections and ideas"}
+                ? "ابقَ على اطلاع بالمجموعات الجديدة والعروض الحصرية."
+                : "Stay updated with new collections and exclusive offers."}
             </p>
             <NewsletterForm />
-            {/* Social links */}
-            <div className="flex justify-center gap-6 mt-6">
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#484848] hover:text-[#0c0c0c] text-sm transition-colors"
-              >
-                Instagram
-              </a>
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#484848] hover:text-[#0c0c0c] text-sm transition-colors"
-              >
-                LinkedIn
-              </a>
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#484848] hover:text-[#0c0c0c] text-sm transition-colors"
-              >
-                Facebook
-              </a>
+            <div
+              className="flex justify-center gap-4 mt-4 pt-3"
+              style={{ borderTop: '1px solid #808080' }}
+            >
+              {[
+                { label: "Instagram", href: "https://instagram.com" },
+                { label: "LinkedIn", href: "https://linkedin.com" },
+                { label: "Facebook", href: "https://facebook.com" },
+              ].map((s) => (
+                <a
+                  key={s.label}
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[10px] text-[#0000FF] underline hover:text-[#800080]"
+                >
+                  {s.label}
+                </a>
+              ))}
             </div>
           </div>
-        </section>
-      </Reveal>
+        </div>
+      </section>
     </PageWrapper>
   );
 }

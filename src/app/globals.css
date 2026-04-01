@@ -4,29 +4,33 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* ── Majestic Brand Tokens ── */
+/* ── Windows 2000 Design Tokens ── */
 @theme inline {
-  /* Brand Colors — workspace.ae palette */
-  --color-primary: #0c0c0c;
-  --color-dark: #484848;
-  --color-medium: #333333;
-  --color-light: #fafafa;
-  --color-white: #ffffff;
-  --color-sage: #fafafa;
-  --color-gold: #0c0c0c;
-  --color-border: rgba(0,0,0,0.21);
+  /* Win2K System Palette */
+  --color-win-gray: #D4D0C8;
+  --color-win-gray-light: #ECE9D8;
+  --color-win-gray-dark: #808080;
+  --color-win-blue: #0A246A;
+  --color-win-blue-title: #1660A7;
+  --color-win-white: #FFFFFF;
+  --color-win-black: #000000;
+  --color-win-highlight: #0078D7;
+  --color-win-shadow: #808080;
+  --color-win-dark-shadow: #404040;
+  --color-win-desktop: #3A6EA5;
   --color-sale: #e53e3e;
-  --color-disabled: #E7E7E7;
+  --color-disabled: #A0A0A0;
   --color-error: #B91C1C;
   --color-error-light: #FEF2F2;
 
-  /* Semantic (shadcn compatibility) */
+  /* Semantic tokens */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
   --color-popover: var(--popover);
   --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
@@ -37,8 +41,9 @@
   --color-destructive: var(--destructive);
   --color-input: var(--input);
   --color-ring: var(--ring);
+  --color-border: var(--border);
 
-  /* Sidebar (shadcn) */
+  /* Sidebar */
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -48,74 +53,79 @@
   --color-sidebar-foreground: var(--sidebar-foreground);
   --color-sidebar: var(--sidebar);
 
-  /* Charts (shadcn) */
+  /* Charts */
   --color-chart-5: var(--chart-5);
   --color-chart-4: var(--chart-4);
   --color-chart-3: var(--chart-3);
   --color-chart-2: var(--chart-2);
   --color-chart-1: var(--chart-1);
 
-  /* Radius */
-  --radius-sm: calc(var(--radius) * 0.6);
-  --radius-md: calc(var(--radius) * 0.8);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) * 1.4);
-  --radius-2xl: calc(var(--radius) * 1.8);
-  --radius-3xl: calc(var(--radius) * 2.2);
-  --radius-4xl: calc(var(--radius) * 2.6);
+  /* Radius — Win2K has NO rounded corners */
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+  --radius-2xl: 0px;
+  --radius-3xl: 0px;
+  --radius-4xl: 0px;
 
-  /* Fonts */
-  --font-sans: var(--font-raleway), var(--font-montserrat), sans-serif;
+  /* Fonts — Tahoma was the Win2K system font */
+  --font-sans: 'Tahoma', 'MS Sans Serif', Arial, sans-serif;
+  --font-serif: 'Times New Roman', serif;
+  --font-mono: 'Courier New', monospace;
 }
 
 :root {
-  /* workspace.ae palette mapped to shadcn semantics */
-  --background: #ffffff;
-  --foreground: #0c0c0c;
-  --card: #ffffff;
-  --card-foreground: #0c0c0c;
-  --popover: #ffffff;
-  --popover-foreground: #0c0c0c;
-  --primary: #0c0c0c;
-  --primary-foreground: #ffffff;
-  --secondary: #fafafa;
-  --secondary-foreground: #0c0c0c;
-  --muted: #fafafa;
-  --muted-foreground: #484848;
-  --accent: #0c0c0c;
-  --accent-foreground: #ffffff;
+  /* Windows 2000 mapped to shadcn semantics */
+  --background: #D4D0C8;
+  --foreground: #000000;
+  --card: #D4D0C8;
+  --card-foreground: #000000;
+  --popover: #D4D0C8;
+  --popover-foreground: #000000;
+  --primary: #0A246A;
+  --primary-foreground: #FFFFFF;
+  --secondary: #ECE9D8;
+  --secondary-foreground: #000000;
+  --muted: #C0C0C0;
+  --muted-foreground: #555555;
+  --accent: #1660A7;
+  --accent-foreground: #FFFFFF;
   --destructive: #DC2626;
-  --border: rgba(0,0,0,0.21);
-  --input: rgba(0,0,0,0.21);
-  --ring: #0c0c0c;
-  --chart-1: #0c0c0c;
-  --chart-2: #484848;
-  --chart-3: #333333;
-  --chart-4: rgba(0,0,0,0.21);
-  --chart-5: #fafafa;
-  --radius: 0.125rem;
-  --sidebar: #ffffff;
-  --sidebar-foreground: #0c0c0c;
-  --sidebar-primary: #0c0c0c;
-  --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #fafafa;
-  --sidebar-accent-foreground: #0c0c0c;
-  --sidebar-border: rgba(0,0,0,0.21);
-  --sidebar-ring: #0c0c0c;
+  --border: #808080;
+  --input: #FFFFFF;
+  --ring: #0A246A;
+  --chart-1: #0A246A;
+  --chart-2: #808080;
+  --chart-3: #D4D0C8;
+  --chart-4: #ECE9D8;
+  --chart-5: #1660A7;
+  --radius: 0px;
+  --sidebar: #D4D0C8;
+  --sidebar-foreground: #000000;
+  --sidebar-primary: #0A246A;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #ECE9D8;
+  --sidebar-accent-foreground: #000000;
+  --sidebar-border: #808080;
+  --sidebar-ring: #0A246A;
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
+    box-sizing: border-box;
   }
   body {
     @apply bg-background text-foreground;
+    font-family: 'Tahoma', 'MS Sans Serif', Arial, sans-serif;
+    font-size: 11px;
   }
   html {
-    @apply font-sans;
+    font-family: 'Tahoma', 'MS Sans Serif', Arial, sans-serif;
   }
 
-  /* Arabic RTL: 10% larger text (scoped to text elements), zero letter-spacing */
+  /* Arabic RTL: 10% larger text, zero letter-spacing */
   [dir="rtl"] h1, [dir="rtl"] h2, [dir="rtl"] h3, [dir="rtl"] h4, [dir="rtl"] h5, [dir="rtl"] h6,
   [dir="rtl"] p, [dir="rtl"] span, [dir="rtl"] a, [dir="rtl"] li, [dir="rtl"] label {
     font-size: 110%;
@@ -125,30 +135,202 @@
   }
 }
 
+/* ── Windows 2000 Chrome Utilities ── */
+
+/* Classic raised bevel — outer highlight top-left, shadow bottom-right */
+.win2k-raised {
+  border-top: 2px solid #FFFFFF;
+  border-left: 2px solid #FFFFFF;
+  border-right: 2px solid #404040;
+  border-bottom: 2px solid #404040;
+  box-shadow: inset 1px 1px 0 #D4D0C8, inset -1px -1px 0 #808080;
+}
+
+/* Sunken / inset field */
+.win2k-sunken {
+  border-top: 2px solid #808080;
+  border-left: 2px solid #808080;
+  border-right: 2px solid #FFFFFF;
+  border-bottom: 2px solid #FFFFFF;
+  box-shadow: inset 1px 1px 0 #404040;
+}
+
+/* Classic button */
+.win2k-btn {
+  background: #D4D0C8;
+  border-top: 2px solid #FFFFFF;
+  border-left: 2px solid #FFFFFF;
+  border-right: 2px solid #404040;
+  border-bottom: 2px solid #404040;
+  box-shadow: inset 1px 1px 0 #ECE9D8, inset -1px -1px 0 #808080;
+  font-family: 'Tahoma', Arial, sans-serif;
+  font-size: 11px;
+  color: #000000;
+  cursor: pointer;
+  padding: 3px 12px;
+  min-width: 75px;
+  text-align: center;
+}
+.win2k-btn:active {
+  border-top: 2px solid #404040;
+  border-left: 2px solid #404040;
+  border-right: 2px solid #FFFFFF;
+  border-bottom: 2px solid #FFFFFF;
+  box-shadow: inset 1px 1px 0 #808080;
+  padding-top: 4px;
+  padding-left: 13px;
+}
+.win2k-btn:focus {
+  outline: 1px dotted #000;
+  outline-offset: -4px;
+}
+
+/* Primary / default button (blue border focus) */
+.win2k-btn-primary {
+  background: #D4D0C8;
+  border: 2px solid #000000;
+  box-shadow: inset 1px 1px 0 #FFFFFF, inset -1px -1px 0 #808080, 1px 1px 0 #404040;
+  font-family: 'Tahoma', Arial, sans-serif;
+  font-size: 11px;
+  color: #000000;
+  cursor: pointer;
+  padding: 3px 12px;
+  min-width: 75px;
+}
+.win2k-btn-primary:active {
+  padding-top: 4px;
+  padding-left: 13px;
+  box-shadow: inset 1px 1px 0 #808080;
+}
+
+/* Window title bar gradient */
+.win2k-titlebar {
+  background: linear-gradient(to right, #0A246A, #3D6EA5);
+  color: #FFFFFF;
+  font-family: 'Tahoma', Arial, sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 3px 5px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  user-select: none;
+}
+
+/* Window panel */
+.win2k-window {
+  background: #D4D0C8;
+  border-top: 2px solid #FFFFFF;
+  border-left: 2px solid #FFFFFF;
+  border-right: 2px solid #404040;
+  border-bottom: 2px solid #404040;
+  box-shadow: 1px 1px 0 #808080, -1px -1px 0 #ECE9D8;
+}
+
+/* Flat panel inset area */
+.win2k-panel {
+  background: #ECE9D8;
+  border-top: 1px solid #808080;
+  border-left: 1px solid #808080;
+  border-right: 1px solid #FFFFFF;
+  border-bottom: 1px solid #FFFFFF;
+}
+
+/* Menu bar item */
+.win2k-menu-item {
+  padding: 2px 6px;
+  font-family: 'Tahoma', Arial, sans-serif;
+  font-size: 11px;
+  color: #000000;
+  cursor: pointer;
+}
+.win2k-menu-item:hover {
+  background: #0A246A;
+  color: #FFFFFF;
+}
+
+/* Scrollbar (Chrome/Edge) */
+::-webkit-scrollbar { width: 16px; height: 16px; }
+::-webkit-scrollbar-track { background: #D4D0C8; }
+::-webkit-scrollbar-thumb {
+  background: #D4D0C8;
+  border-top: 2px solid #FFFFFF;
+  border-left: 2px solid #FFFFFF;
+  border-right: 2px solid #404040;
+  border-bottom: 2px solid #404040;
+}
+::-webkit-scrollbar-button {
+  background: #D4D0C8;
+  border-top: 2px solid #FFFFFF;
+  border-left: 2px solid #FFFFFF;
+  border-right: 2px solid #404040;
+  border-bottom: 2px solid #404040;
+  display: block;
+  height: 16px;
+  width: 16px;
+}
+
 /* Hide scrollbar while keeping scroll functionality */
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
+/* Button press micro-feedback */
+.btn-press {
+  transition: none;
+}
+.btn-press:active {
+  transform: none;
+}
+
+/* Nav underline — disabled for Win2K look */
+.nav-underline {
+  background-image: none;
+}
+
+/* Win2K status bar */
+.win2k-statusbar {
+  background: #D4D0C8;
+  border-top: 1px solid #808080;
+  font-family: 'Tahoma', Arial, sans-serif;
+  font-size: 11px;
+  padding: 2px 4px;
+}
+
+/* Win2K group box */
+.win2k-groupbox {
+  border: 1px solid #808080;
+  box-shadow: inset 1px 1px 0 #FFFFFF;
+  padding: 12px 8px 8px;
+  position: relative;
+  margin-top: 8px;
+}
+
+/* Marquee for authentic Win2K feel */
+marquee { font-family: 'Tahoma', Arial, sans-serif; font-size: 11px; }
+
+/* Desktop teal background */
+.win2k-desktop {
+  background-color: #3A6EA5;
+}
+
+/* Win2K link style */
+a.win2k-link {
+  color: #0000FF;
+  text-decoration: underline;
+}
+a.win2k-link:visited {
+  color: #800080;
+}
+
+/* Tooltip */
+.win2k-tooltip {
+  background: #FFFFE1;
+  border: 1px solid #000000;
+  font-size: 11px;
+  font-family: 'Tahoma', Arial, sans-serif;
+  padding: 2px 4px;
+}
+
 /* Promote animated elements to their own GPU layer */
 .will-change-transform { will-change: transform; }
 .will-change-opacity { will-change: opacity; }
-
-/* Button press micro-feedback */
-.btn-press {
-  transition: transform 0.15s ease;
-}
-.btn-press:active {
-  transform: scale(0.97);
-}
-
-/* Smooth nav underline grow */
-.nav-underline {
-  background-image: linear-gradient(currentColor, currentColor);
-  background-position: 0% 100%;
-  background-repeat: no-repeat;
-  background-size: 0% 1px;
-  transition: background-size 0.25s ease;
-}
-.nav-underline:hover {
-  background-size: 100% 1px;
-}
