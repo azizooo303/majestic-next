@@ -55,7 +55,7 @@ const MOCK_PRODUCTS = [
     price: 2850,
     originalPrice: undefined as number | undefined,
     discount: undefined as number | undefined,
-    image: "/images/hero-desks.jpg",
+    image: "/images/wp-media/hero_office_desktop_en-1.png",
   },
   {
     id: 2,
@@ -65,7 +65,7 @@ const MOCK_PRODUCTS = [
     price: 1250,
     originalPrice: 1650 as number | undefined,
     discount: 24 as number | undefined,
-    image: "/images/hero-seating.jpg",
+    image: "/images/wp-media/hero_chairs_desktop_en-1.png",
   },
   {
     id: 3,
@@ -75,7 +75,7 @@ const MOCK_PRODUCTS = [
     price: 3400,
     originalPrice: undefined as number | undefined,
     discount: undefined as number | undefined,
-    image: "/images/hero-storage.jpg",
+    image: "/images/wp-media/hero_cabinet_desktop_en-1.png",
   },
   {
     id: 4,
@@ -85,17 +85,17 @@ const MOCK_PRODUCTS = [
     price: 4200,
     originalPrice: undefined as number | undefined,
     discount: undefined as number | undefined,
-    image: "/images/hero-tables.jpg",
+    image: "/images/wp-media/hero_meeting_desktop_en-1.png",
   },
 ] as const;
 
 const CATEGORIES = [
-  { slug: "seating", key: "seating" as const, image: "/images/hero-seating.jpg" },
-  { slug: "tables", key: "tables" as const, image: "/images/hero-tables.jpg" },
-  { slug: "storage", key: "storage" as const, image: "/images/hero-storage.jpg" },
-  { slug: "workstations", key: "workstations" as const, image: "/images/hero-desks.jpg" },
-  { slug: "acoustics", key: "acoustics" as const, image: "/images/hero-seating.jpg" },
-  { slug: "lounge", key: "lounge" as const, image: "/images/hero-storage.jpg" },
+  { slug: "seating", key: "seating" as const, image: "/images/wp-media/category-seating.png" },
+  { slug: "tables", key: "tables" as const, image: "/images/wp-media/category-tables.png" },
+  { slug: "storage", key: "storage" as const, image: "/images/wp-media/category-storage.png" },
+  { slug: "workstations", key: "workstations" as const, image: "/images/wp-media/category-workstations.png" },
+  { slug: "acoustics", key: "acoustics" as const, image: "/images/wp-media/category-acoustics.png" },
+  { slug: "lounge", key: "lounge" as const, image: "/images/wp-media/category-lounge.png" },
 ];
 
 export default async function HomePage({
@@ -108,8 +108,8 @@ export default async function HomePage({
   const isAr = locale === "ar";
 
   const heroSlide: HeroSlide = {
-    image: "/images/hero-desks.jpg",
-    mobileImage: "/images/hero-desks-mobile.jpg",
+    image: "/images/wp-media/hero_office_desktop_en-1.png",
+    mobileImage: "/images/wp-media/hero_chairs_mobile_en-1.png",
     alt: isAr ? "مكاتب تنفيذية ماجيستيك" : "Majestic Executive Desks",
     collection: isAr ? "مجموعة المكاتب التنفيذية" : "Executive Desk Collection",
     headline: isAr
