@@ -1,0 +1,214 @@
+import Image from "next/image";
+import { Link } from "@/i18n/navigation";
+import { getLocale } from "next-intl/server";
+import { StaggerGrid } from "@/components/common/stagger-grid";
+
+/* ------------------------------------------------------------------ */
+/*  Footer — workspace.ae dark 5-column layout                         */
+/* ------------------------------------------------------------------ */
+
+export async function Footer() {
+  const locale = await getLocale();
+  const year = new Date().getFullYear();
+  const isAr = locale === "ar";
+
+  /* ── Column 1 — Brand ── */
+  const colBrand = (
+    <div className="col-span-2 md:col-span-3 lg:col-span-1">
+      {/* Logo */}
+      <div className="mb-4">
+        <Image
+          src="/images/majestic-logo-original.png"
+          alt="Majestic Furniture"
+          width={120}
+          height={34}
+          loading="lazy"
+          style={{ width: "auto" }}
+          className="h-8"
+          onError={undefined}
+        />
+      </div>
+      <p className="text-sm text-[#484848] leading-relaxed max-w-[210px]">
+        {isAr
+          ? "أثاث مكتبي احترافي لبيئة العمل الحديثة"
+          : "Premium Office Furniture for the Modern Workplace"}
+      </p>
+      {/* Social links */}
+      <div className="flex gap-5 mt-6">
+        {[
+          { label: "Instagram", href: "https://instagram.com" },
+          { label: "LinkedIn", href: "https://linkedin.com" },
+          { label: "Facebook", href: "https://facebook.com" },
+          { label: "X", href: "https://x.com" },
+        ].map((s) => (
+          <a
+            key={s.label}
+            href={s.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={s.label}
+            className="text-xs text-[#484848] hover:text-[#0c0c0c] transition-colors font-medium"
+          >
+            {s.label}
+          </a>
+        ))}
+      </div>
+    </div>
+  );
+
+  /* ── Column 2 — Shop ── */
+  const colShop = (
+    <div>
+      <h3 className="text-xs uppercase tracking-widest text-[#484848] mb-4 font-medium">
+        {isAr ? "تسوق" : "Shop"}
+      </h3>
+      <ul className="space-y-2.5">
+        {[
+          { label: isAr ? "الكراسي" : "Seating", href: "/shop?category=seating" },
+          { label: isAr ? "المكاتب" : "Desks", href: "/shop?category=tables" },
+          { label: isAr ? "التخزين" : "Storage", href: "/shop?category=storage" },
+          { label: isAr ? "محطات العمل" : "Workstations", href: "/shop?category=workstations" },
+          { label: isAr ? "حلول الصوتيات" : "Acoustic Solutions", href: "/shop?category=acoustics" },
+          { label: isAr ? "الاستقبال" : "Lounge", href: "/shop?category=lounge" },
+          { label: isAr ? "الوافد الجديد" : "New Arrivals", href: "/shop?sort=new" },
+          { label: isAr ? "تخفيضات" : "Sale", href: "/shop?sort=sale" },
+        ].map((link) => (
+          <li key={link.href}>
+            <Link
+              href={link.href}
+              className="text-sm text-[#484848] hover:text-[#0c0c0c] transition-colors"
+            >
+              {link.label}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+
+  /* ── Column 3 — Company ── */
+  const colCompany = (
+    <div>
+      <h3 className="text-xs uppercase tracking-widest text-[#484848] mb-4 font-medium">
+        {isAr ? "الشركة" : "Company"}
+      </h3>
+      <ul className="space-y-2.5">
+        {[
+          { label: isAr ? "من نحن" : "About Us", href: "/about" },
+          { label: isAr ? "مشاريعنا" : "Projects", href: "/projects" },
+          { label: isAr ? "العلامات التجارية" : "Brands", href: "/brands" },
+          { label: isAr ? "المعارض" : "Showrooms", href: "/showrooms" },
+          { label: isAr ? "وظائف" : "Careers", href: "/careers" },
+          { label: isAr ? "المدونة" : "Blog", href: "/blog" },
+        ].map((link) => (
+          <li key={link.href}>
+            <Link
+              href={link.href}
+              className="text-sm text-[#484848] hover:text-[#0c0c0c] transition-colors"
+            >
+              {link.label}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+
+  /* ── Column 4 — Support ── */
+  const colSupport = (
+    <div>
+      <h3 className="text-xs uppercase tracking-widest text-[#484848] mb-4 font-medium">
+        {isAr ? "الدعم" : "Support"}
+      </h3>
+      <ul className="space-y-2.5">
+        {[
+          { label: isAr ? "الأسئلة الشائعة" : "FAQ", href: "/faq" },
+          { label: isAr ? "تواصل معنا" : "Contact Us", href: "/contact" },
+          { label: isAr ? "التوصيل والإرجاع" : "Delivery & Returns", href: "/delivery" },
+          { label: isAr ? "العناية بالمنتج" : "Product Care", href: "/product-care" },
+          { label: isAr ? "الضمان" : "Warranty", href: "/warranty" },
+          { label: isAr ? "تتبع طلبك" : "Track Your Order", href: "/track-order" },
+        ].map((link) => (
+          <li key={link.href}>
+            <Link
+              href={link.href}
+              className="text-sm text-[#484848] hover:text-[#0c0c0c] transition-colors"
+            >
+              {link.label}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+
+  /* ── Column 5 — Contact ── */
+  const colContact = (
+    <div>
+      <h3 className="text-xs uppercase tracking-widest text-[#484848] mb-4 font-medium">
+        {isAr ? "تواصل" : "Contact"}
+      </h3>
+      <address className="not-italic space-y-2.5">
+        <p className="text-sm text-[#484848]">
+          {isAr ? "الرياض، المملكة العربية السعودية" : "Riyadh, Saudi Arabia"}
+        </p>
+        <a
+          href="tel:+966XXXXXXXXX"
+          className="block text-sm text-[#484848] hover:text-[#0c0c0c] transition-colors"
+        >
+          +966 XX XXX XXXX
+        </a>
+        <a
+          href="mailto:hello@thedeskco.net"
+          className="block text-sm text-[#484848] hover:text-[#0c0c0c] transition-colors"
+        >
+          hello@thedeskco.net
+        </a>
+        <p className="text-sm text-[#484848]">
+          {isAr ? "الأحد–الخميس، ٩ص–٦م" : "Sun–Thu 9am–6pm"}
+        </p>
+      </address>
+    </div>
+  );
+
+  const columns = [colBrand, colShop, colCompany, colSupport, colContact];
+
+  return (
+    <footer className="bg-white border-t border-[rgba(0,0,0,0.08)]">
+      {/* Main grid */}
+      <div className="max-w-screen-xl mx-auto px-4 md:px-8 py-14 md:py-16">
+        <StaggerGrid
+          stagger={0.07}
+          isRTL={isAr}
+          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-6"
+        >
+          {columns}
+        </StaggerGrid>
+      </div>
+
+      {/* Bottom bar */}
+      <div className="border-t border-[rgba(0,0,0,0.08)]">
+        <div className="max-w-screen-xl mx-auto px-4 md:px-8 py-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <p className="text-xs text-[#484848]">
+            &copy; {year} Majestic. {isAr ? "جميع الحقوق محفوظة." : "All rights reserved."}
+          </p>
+          <div className="flex items-center gap-4">
+            <Link
+              href="/privacy"
+              className="text-xs text-[#484848] hover:text-[#0c0c0c] transition-colors"
+            >
+              {isAr ? "سياسة الخصوصية" : "Privacy Policy"}
+            </Link>
+            <span className="text-[rgba(0,0,0,0.2)] text-xs">|</span>
+            <Link
+              href="/terms"
+              className="text-xs text-[#484848] hover:text-[#0c0c0c] transition-colors"
+            >
+              {isAr ? "شروط الخدمة" : "Terms of Service"}
+            </Link>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
