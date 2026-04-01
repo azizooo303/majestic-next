@@ -150,22 +150,24 @@ export async function Footer() {
       </h3>
       <address className="not-italic space-y-2.5">
         <p className="text-sm text-[#484848]">
-          {isAr ? "الرياض، المملكة العربية السعودية" : "Riyadh, Saudi Arabia"}
+          {isAr
+            ? "أركيد سنتر، الرشيدية، الرياض"
+            : "Arcade Centre, Al Rashidiah, Riyadh"}
         </p>
         <a
-          href="tel:+966XXXXXXXXX"
+          href="tel:+96692001219"
           className="block text-sm text-[#484848] hover:text-[#0c0c0c] transition-colors"
         >
-          +966 XX XXX XXXX
+          +966 9200 12019
         </a>
         <a
-          href="mailto:hello@thedeskco.net"
+          href="mailto:info@majestic.com.sa"
           className="block text-sm text-[#484848] hover:text-[#0c0c0c] transition-colors"
         >
-          hello@thedeskco.net
+          info@majestic.com.sa
         </a>
         <p className="text-sm text-[#484848]">
-          {isAr ? "الأحد–الخميس، ٩ص–٦م" : "Sun–Thu 9am–6pm"}
+          {isAr ? "الأحد–الخميس، ٩ص–٥م" : "Sun–Thu 9am–5pm"}
         </p>
       </address>
     </div>
