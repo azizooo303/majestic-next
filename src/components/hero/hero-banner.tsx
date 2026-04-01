@@ -49,7 +49,8 @@ export function HeroBanner({ slide }: { slide: HeroSlide }) {
     const isRTL = document.documentElement.dir === "rtl";
 
     let killed = false;
-    let tl: { kill: () => void } | null = null;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    let tl: any = null;
 
     import("gsap").then(({ gsap }) => {
       if (killed) return;
