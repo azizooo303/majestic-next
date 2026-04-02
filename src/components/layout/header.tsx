@@ -220,11 +220,20 @@ export function Header() {
 
         {/* ── Row 2: Logo + icons ── */}
         <div className="border-b border-[rgba(0,0,0,0.12)]">
-          <div className="max-w-screen-xl mx-auto px-4 md:px-8 py-5 grid grid-cols-3 items-center">
-            {/* Left spacer — keeps logo truly centered */}
-            <div className="flex items-center" />
+          <div className="max-w-screen-xl mx-auto px-4 md:px-8 py-4 md:py-5 grid grid-cols-3 items-center">
 
-            {/* Logo — centered */}
+            {/* Left: hamburger on mobile, spacer on desktop */}
+            <div className="flex items-center">
+              <button
+                className="lg:hidden p-2 text-[#0c0c0c] cursor-pointer"
+                onClick={() => setIsMobileOpen(true)}
+                aria-label="Open menu"
+              >
+                <Menu className="w-5 h-5" />
+              </button>
+            </div>
+
+            {/* Center: logo — always centered */}
             <div className="flex justify-center">
               <Link href="/" className="flex-shrink-0">
                 <Image
@@ -233,36 +242,36 @@ export function Header() {
                   width={220}
                   height={62}
                   style={{ width: "auto" }}
-                  className="h-16 md:h-20 lg:h-24"
+                  className="h-12 md:h-20 lg:h-24"
                   priority
                 />
               </Link>
             </div>
 
             {/* Right icons */}
-            <div className="flex items-center gap-1 justify-end">
-              {/* Search icon */}
+            <div className="flex items-center gap-0.5 md:gap-1 justify-end">
+              {/* Search — desktop + tablet */}
               <button
                 onClick={() => setIsSearchOpen(true)}
-                className="p-2.5 text-[#0c0c0c] hover:text-[#484848] transition-colors cursor-pointer"
+                className="hidden sm:flex p-2 md:p-2.5 text-[#0c0c0c] hover:text-[#484848] transition-colors cursor-pointer"
                 aria-label={locale === "ar" ? "بحث" : "Search"}
               >
                 <Search className="w-5 h-5" />
               </button>
 
-              {/* Account icon */}
+              {/* Account — desktop only */}
               <Link
                 href="/account"
-                className="p-2.5 text-[#0c0c0c] hover:text-[#484848] transition-colors hidden sm:flex"
+                className="p-2 md:p-2.5 text-[#0c0c0c] hover:text-[#484848] transition-colors hidden sm:flex"
                 aria-label={locale === "ar" ? "حسابي" : "Account"}
               >
                 <User className="w-5 h-5" />
               </Link>
 
-              {/* Cart icon */}
+              {/* Cart — always visible */}
               <Link
                 href="/cart"
-                className="p-2.5 text-[#0c0c0c] hover:text-[#484848] transition-colors relative"
+                className="p-2 md:p-2.5 text-[#0c0c0c] hover:text-[#484848] transition-colors relative"
                 aria-label={locale === "ar" ? "سلة التسوق" : "Cart, 0 items"}
               >
                 <ShoppingBag className="w-5 h-5" />
@@ -271,17 +280,8 @@ export function Header() {
                 </span>
               </Link>
 
-              {/* Language toggle */}
+              {/* Language toggle — desktop only */}
               <LanguageToggle />
-
-              {/* Mobile hamburger */}
-              <button
-                className="lg:hidden p-2.5 text-[#0c0c0c] cursor-pointer"
-                onClick={() => setIsMobileOpen(true)}
-                aria-label="Open menu"
-              >
-                <Menu className="w-5 h-5" />
-              </button>
             </div>
           </div>
         </div>
