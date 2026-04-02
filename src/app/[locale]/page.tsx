@@ -21,7 +21,7 @@ import { InsightEditorial } from "@/components/sections/insight-editorial";
 import { ConsultationCta } from "@/components/sections/consultation-cta";
 import type { HeroSlide } from "@/components/hero/hero-banner";
 import { getProducts, parsePrice, calcDiscount, PRODUCT_PLACEHOLDER } from "@/lib/woocommerce";
-import { HERO_SLIDES } from "@/config/site";
+import { getSiteContent } from "@/lib/edge-config";
 
 export async function generateMetadata({
   params,
@@ -76,9 +76,12 @@ export default async function HomePage({
   const t = await getTranslations({ locale });
   const isAr = locale === "ar";
 
-  const wcProducts = await getProducts({ lang: locale, per_page: 8 }).catch(() => [] as Awaited<ReturnType<typeof getProducts>>);
+  const [wcProducts, siteContent] = await Promise.all([
+    getProducts({ lang: locale, per_page: 8 }).catch(() => [] as Awaited<ReturnType<typeof getProducts>>),
+    getSiteContent(),
+  ]);
 
-  const heroSlides: HeroSlide[] = HERO_SLIDES.map((s) => ({
+  const heroSlides: HeroSlide[] = siteContent.heroSlides.map((s) => ({
     image: s.image,
     mobileImage: s.mobileImage,
     alt: isAr ? s.collection.ar : s.collection.en,
@@ -208,13 +211,13 @@ export default async function HomePage({
       </section>
 
       {/* New Sections */}
-      <SpaceTypology isAr={isAr} />
-      <Collections isAr={isAr} />
-      <CraftsmanshipBand isAr={isAr} />
-      <ProjectScale isAr={isAr} />
+      {siteContent.sections.spaceTypology && <SpaceTypology isAr={isAr} />}
+      {siteContent.sections.collections && <Collections isAr={isAr} />}
+      {siteContent.sections.craftsmanshipBand && <CraftsmanshipBand isAr={isAr} />}
+      {siteContent.sections.projectScale && <ProjectScale isAr={isAr} />}
       <BrandStandard isAr={isAr} />
-      <MaterialSelector isAr={isAr} />
-      <InsightEditorial isAr={isAr} />
+      {siteContent.sections.materialSelector && <MaterialSelector isAr={isAr} />}
+      {siteContent.sections.insightEditorial && <InsightEditorial isAr={isAr} />}
 
       {/* Promotional Banner */}
       <PromoBanner
@@ -273,7 +276,7 @@ export default async function HomePage({
           </div>
         </section>
       </FadeUp>
-      <ConsultationCta isAr={isAr} />
+      {siteContent.sections.consultationCta && <ConsultationCta isAr={isAr} />}
     </PageWrapper>
   );
 }

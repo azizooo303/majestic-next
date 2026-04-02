@@ -5,6 +5,7 @@ import { getMessages } from "next-intl/server";
 import { Raleway, Montserrat } from "next/font/google";
 import { routing } from "@/i18n/routing";
 import { Header } from "@/components/layout/header";
+import { getSiteContent } from "@/lib/edge-config";
 import { Footer } from "@/components/layout/footer";
 import { AnimatePresenceWrapper } from "@/components/common/animate-presence-wrapper";
 import "../globals.css";
@@ -53,7 +54,10 @@ export default async function LocaleLayout({
     notFound();
   }
 
-  const messages = await getMessages();
+  const [messages, siteContent] = await Promise.all([
+    getMessages(),
+    getSiteContent(),
+  ]);
   const isRTL = locale === "ar";
 
   return (
@@ -70,7 +74,7 @@ export default async function LocaleLayout({
           >
             Skip to content
           </a>
-          <Header />
+          <Header announcement={siteContent.announcement} />
           <AnimatePresenceWrapper>
             {children}
           </AnimatePresenceWrapper>

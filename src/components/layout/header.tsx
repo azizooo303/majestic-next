@@ -153,7 +153,18 @@ function SearchModal({
 // Total header height: ~30px (utility) + ~120px (logo row) + ~46px (nav row) = ~196px
 export const HEADER_HEIGHT = 196;
 
-export function Header() {
+interface AnnouncementBarData {
+  enabled: boolean
+  message: { en: string; ar: string }
+  bgColor: string
+  link: string
+}
+
+interface HeaderProps {
+  announcement?: AnnouncementBarData
+}
+
+export function Header({ announcement }: HeaderProps) {
   const t = useTranslations();
   const locale = useLocale();
   const pathname = usePathname();
@@ -205,6 +216,25 @@ export function Header() {
           scrolled && "shadow-sm"
         )}
       >
+        {/* ── Announcement Bar ── */}
+        {announcement?.enabled && announcement.message && (
+          <div
+            className={cn(
+              "w-full text-center text-xs font-medium py-2 px-4 overflow-hidden transition-all duration-300",
+              scrolled ? "max-h-0 py-0" : "max-h-[40px]"
+            )}
+            style={{ backgroundColor: announcement.bgColor || '#2C2C2C', color: '#fff' }}
+          >
+            {announcement.link ? (
+              <a href={announcement.link} className="hover:underline">
+                {locale === 'ar' ? announcement.message.ar : announcement.message.en}
+              </a>
+            ) : (
+              <span>{locale === 'ar' ? announcement.message.ar : announcement.message.en}</span>
+            )}
+          </div>
+        )}
+
         {/* ── Row 1: Utility bar — hidden when scrolled ── */}
         <div className={cn(
           "hidden md:block border-b border-[rgba(0,0,0,0.08)] bg-white overflow-hidden transition-all duration-300",
