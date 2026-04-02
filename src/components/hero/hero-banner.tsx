@@ -1,10 +1,12 @@
 "use client";
 
-import { useRef, useEffect, useState, useCallback } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
-import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { useLocale } from "next-intl";
+import { cn } from "@/lib/utils";
+import { BlueprintOverlay } from "@/components/hero/blueprint-overlay";
 
 export interface HeroSlide {
   image: string;
@@ -16,20 +18,22 @@ export interface HeroSlide {
   cta: string;
   href: string;
   locale?: string;
+  objectPosition?: string;
 }
 
 interface HeroBannerProps {
-  /** Pass multiple slides for a carousel, or a single slide for static hero */
   slides?: HeroSlide[];
-  /** Legacy single-slide prop — wrapped into a 1-item array internally */
+  /** Legacy single-slide prop */
   slide?: HeroSlide;
 }
+
+const AUTO_ADVANCE_MS = 5000;
 
 export function HeroBanner({ slides, slide }: HeroBannerProps) {
   const locale = useLocale();
   const isAr = locale === "ar";
+  const reduced = useReducedMotion();
 
-  // Normalise: prefer slides array, fall back to wrapping single slide
   const allSlides: HeroSlide[] = slides ?? (slide ? [slide] : []);
   const total = allSlides.length;
 
@@ -37,359 +41,284 @@ export function HeroBanner({ slides, slide }: HeroBannerProps) {
   const [paused, setPaused] = useState(false);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
-  // Mobile touch guard — no parallax on touch devices
-  const [isMobile, setIsMobile] = useState(false);
-  useEffect(() => {
-    setIsMobile(window.matchMedia("(hover: none) and (pointer: coarse)").matches);
-  }, []);
-
-  // Auto-advance
   const advance = useCallback(() => {
     setActiveIdx((prev) => (prev + 1) % total);
   }, [total]);
 
+  const startTimer = useCallback(() => {
+    if (intervalRef.current) clearInterval(intervalRef.current);
+    if (!paused && total > 1 && !reduced) {
+      intervalRef.current = setInterval(advance, AUTO_ADVANCE_MS);
+    }
+  }, [paused, total, reduced, advance]);
+
   useEffect(() => {
-    if (total <= 1 || paused) return;
-    intervalRef.current = setInterval(advance, 5000);
+    startTimer();
     return () => {
       if (intervalRef.current) clearInterval(intervalRef.current);
     };
-  }, [total, paused, advance]);
+  }, [startTimer]);
 
   const goTo = (idx: number) => {
     setActiveIdx(idx);
     // Reset timer on manual navigation
     if (intervalRef.current) clearInterval(intervalRef.current);
-    if (!paused && total > 1) {
-      intervalRef.current = setInterval(advance, 5000);
+    if (!paused && total > 1 && !reduced) {
+      intervalRef.current = setInterval(advance, AUTO_ADVANCE_MS);
     }
   };
 
-  // Scroll parallax — image panel only
-  const sectionRef = useRef<HTMLElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ["start start", "end start"],
-  });
-  const imageY = useTransform(scrollYProgress, [0, 1], [0, 40]);
-
-  // GSAP refs — only used for the initial page load animation on slide 0
-  const imageRef = useRef<HTMLDivElement>(null);
-  const gradientRef = useRef<HTMLDivElement>(null);
-  const collectionRef = useRef<HTMLParagraphElement>(null);
-  const headlineRef = useRef<HTMLHeadingElement>(null);
-  const taglineRef = useRef<HTMLParagraphElement>(null);
-  const ctaRef = useRef<HTMLAnchorElement>(null);
-
-  // GSAP intro — fires once on mount for the initial slide
-  useEffect(() => {
-    const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const isRTL = document.documentElement.dir === "rtl";
-
-    let killed = false;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    let tl: any = null;
-
-    import("gsap").then(({ gsap }) => {
-      if (killed) return;
-
-      if (prefersReduced) {
-        gsap.set(
-          [collectionRef.current, headlineRef.current, taglineRef.current, ctaRef.current],
-          { opacity: 1, clearProps: "all" }
-        );
-        if (imageRef.current) gsap.set(imageRef.current, { scale: 1 });
-        return;
-      }
-
-      tl = gsap.timeline();
-
-      if (imageRef.current) {
-        tl.fromTo(
-          imageRef.current,
-          { scale: 1.04 },
-          { scale: 1.0, duration: 1.2, ease: "power2.out" },
-          0
-        );
-      }
-
-      if (gradientRef.current) {
-        tl.fromTo(
-          gradientRef.current,
-          { opacity: 0 },
-          { opacity: 1, duration: 0.6, ease: "power2.out" },
-          0
-        );
-      }
-
-      if (collectionRef.current) {
-        tl.fromTo(
-          collectionRef.current,
-          { y: 8, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.4, ease: "power2.out" },
-          0.1
-        );
-      }
-
-      if (headlineRef.current) {
-        const clipFrom = isRTL ? "inset(0 0 0 100%)" : "inset(0 100% 0 0)";
-        const clipTo   = isRTL ? "inset(0 0 0 0%)"   : "inset(0 0% 0 0)";
-        tl.fromTo(
-          headlineRef.current,
-          { clipPath: clipFrom, opacity: 1 },
-          { clipPath: clipTo, duration: 0.45, ease: "power3.out" },
-          0.25
-        );
-      }
-
-      if (taglineRef.current) {
-        tl.fromTo(
-          taglineRef.current,
-          { opacity: 0, y: 6 },
-          { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" },
-          0.45
-        );
-      }
-
-      if (ctaRef.current) {
-        tl.fromTo(
-          ctaRef.current,
-          { opacity: 0 },
-          { opacity: 1, duration: 0.35, ease: "power2.out" },
-          0.65
-        );
-      }
-    });
-
-    return () => {
-      killed = true;
-      tl?.kill();
-    };
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  // Keyboard navigation
+  const handleKeyDown = useCallback(
+    (e: React.KeyboardEvent) => {
+      if (e.key === "ArrowRight") goTo((activeIdx + 1) % total);
+      if (e.key === "ArrowLeft") goTo((activeIdx - 1 + total) % total);
+    },
+    [activeIdx, total] // eslint-disable-line react-hooks/exhaustive-deps
+  );
 
   if (allSlides.length === 0) return null;
 
   const currentSlide = allSlides[activeIdx];
 
-  const trustStats = [
-    { value: "500+",                          label: isAr ? "شركة وجهة حكومية"   : "Corporate clients"    },
-    { value: isAr ? "الرياض وخارجها" : "KSA-wide", label: isAr ? "توريد في كل مكان" : "delivery & install"  },
-    { value: "15+",                           label: isAr ? "سنة في السوق"        : "years in market"      },
-  ];
-
   return (
     <section
-      ref={sectionRef}
-      className="relative w-full overflow-hidden flex flex-col md:flex-row md:items-center min-h-[85vh]"
-      style={{ minHeight: "715px", background: "#F8F8F6" }}
+      className={cn(
+        "relative w-full overflow-hidden bg-[#0c0c0c]",
+        "min-h-[100svh] md:min-h-[90vh]"
+      )}
+      style={{ minHeight: "640px" }}
+      aria-label="Featured collections"
+      aria-live="polite"
+      role="region"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
+      onFocus={() => setPaused(true)}
+      onBlur={() => setPaused(false)}
+      onKeyDown={handleKeyDown}
+      tabIndex={-1}
     >
-      {/* ── MOBILE: stacked image ── */}
-      <div
-        className="relative w-full md:hidden"
-        style={{ minHeight: "200px", maxHeight: "320px", height: "52vw" }}
-      >
-        <AnimatePresence mode="sync" initial={false}>
-          <motion.div
-            key={`mobile-img-${activeIdx}`}
-            className="absolute inset-0"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.55, ease: "easeInOut" }}
-          >
-            <Image
-              src={currentSlide.mobileImage ?? currentSlide.image}
-              alt={currentSlide.alt}
-              fill
-              className="object-cover object-center"
-              priority={activeIdx === 0}
-              sizes="100vw"
-            />
-          </motion.div>
-        </AnimatePresence>
-      </div>
-
-      {/* ── MOBILE: text block ── */}
-      <div className="bg-[#F8F8F6] px-6 py-8 md:hidden w-full">
-        <AnimatePresence mode="wait" initial={false}>
-          <motion.div
-            key={`mobile-text-${activeIdx}`}
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -6 }}
-            transition={{ duration: 0.35, ease: "easeOut" }}
-          >
-            {currentSlide.collection && (
-              <p className="text-xs uppercase tracking-widest text-[#C1B167] mb-3 font-medium">
-                {currentSlide.collection}
-              </p>
-            )}
-            <h1
-              className={
-                "text-[32px] font-bold text-[#2C2C2C] leading-[1.0] tracking-tight whitespace-pre-line" +
-                (isAr ? " font-alyamama" : "")
-              }
-            >
-              {currentSlide.headline}
-            </h1>
-            {currentSlide.tagline && (
-              <p className="mt-4 text-[#2C2C2C]/70 text-base max-w-sm leading-relaxed">
-                {currentSlide.tagline}
-              </p>
-            )}
-            <Link
-              href={currentSlide.href}
-              className="mt-8 w-fit self-start inline-flex items-center gap-3 bg-[#2C2C2C] text-white text-sm font-semibold px-6 py-3 min-h-[48px] rounded-none tracking-wide hover:bg-[#444] active:bg-[#1a1a1a] transition-colors group"
-            >
-              {currentSlide.cta}
-              <svg
-                width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"
-                className="transition-transform duration-150 ltr:group-hover:translate-x-1 rtl:group-hover:-translate-x-1 rtl:rotate-180"
-              >
-                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </Link>
-          </motion.div>
-        </AnimatePresence>
-
-        {/* Trust strip */}
-        <div className="mt-10 flex items-center gap-6 flex-wrap">
-          {trustStats.map((stat) => (
-            <div key={stat.value} className="flex flex-col">
-              <span className="text-sm font-bold text-[#2C2C2C] tracking-tight">{stat.value}</span>
-              <span className="text-[11px] text-[#2C2C2C]/50 uppercase tracking-wider mt-0.5">{stat.label}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* ── DESKTOP: image panel — right 58% ── */}
-      <motion.div
-        className="hidden md:block absolute inset-y-0 end-0 w-[58%]"
-        style={{ y: isMobile ? 0 : imageY, willChange: "transform" }}
-      >
-        {/* Crossfade between slides */}
-        <AnimatePresence mode="sync" initial={false}>
-          <motion.div
-            key={`desktop-img-${activeIdx}`}
-            className="absolute inset-0"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.65, ease: "easeInOut" }}
-          >
-            <div ref={activeIdx === 0 ? imageRef : undefined} className="absolute inset-0 will-change-transform">
-              <Image
-                src={currentSlide.image}
-                alt={currentSlide.alt}
-                fill
-                className="object-cover object-center"
-                priority={activeIdx === 0}
-                sizes="(max-width: 768px) 100vw, 58vw"
-              />
-            </div>
-          </motion.div>
-        </AnimatePresence>
-
-        {/* Soft vignette — 3-stop gradient, much gentler than a sharp seam */}
+      {/* ── Slide images — stacked, crossfade via opacity ── */}
+      {allSlides.map((s, i) => (
         <div
-          ref={gradientRef}
-          className={`absolute inset-y-0 start-0 w-2/5 pointer-events-none ${
-            isAr
-              ? "bg-gradient-to-l from-[#F8F8F6]/60 via-[#F8F8F6]/10 to-transparent"
-              : "bg-gradient-to-r from-[#F8F8F6]/60 via-[#F8F8F6]/10 to-transparent"
-          }`}
-        />
-      </motion.div>
+          key={s.image}
+          className="absolute inset-0 z-0"
+          aria-hidden={i !== activeIdx}
+        >
+          {/* Desktop image */}
+          <Image
+            src={s.image}
+            alt={s.alt}
+            fill
+            priority={i === 0}
+            className={cn(
+              "object-cover hidden md:block",
+              "transition-opacity duration-[800ms] ease-in-out",
+              i === activeIdx ? "opacity-100" : "opacity-0"
+            )}
+            style={{ objectPosition: s.objectPosition ?? "center center" }}
+            sizes="100vw"
+            data-hero-image
+          />
+          {/* Mobile image */}
+          <Image
+            src={s.mobileImage ?? s.image}
+            alt={s.alt}
+            fill
+            priority={i === 0}
+            className={cn(
+              "object-cover object-top md:hidden",
+              "transition-opacity duration-[800ms] ease-in-out",
+              i === activeIdx ? "opacity-100" : "opacity-0"
+            )}
+            sizes="100vw"
+            data-hero-image
+          />
+        </div>
+      ))}
 
-      {/* ── DESKTOP: text panel — left 42% ── */}
-      <div className="hidden md:flex flex-col relative z-10 w-[42%] pl-16 lg:pl-24 xl:pl-32 pr-8 py-20">
-        {/* Inner wrapper constrains text width */}
-        <div className="max-w-[520px]">
-          <AnimatePresence mode="wait" initial={false}>
+      {/* ── Blueprint overlay — fades in on each slide ── */}
+      <BlueprintOverlay slideKey={activeIdx} />
+
+      {/* ── Legibility gradient — bottom-third only ── */}
+      <div
+        className="absolute inset-0 z-10 pointer-events-none"
+        style={{
+          background:
+            "linear-gradient(to top, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.30) 35%, rgba(0,0,0,0) 60%)",
+        }}
+      />
+
+      {/* ── Blueprint watermark — corner ── */}
+      <div className="absolute top-0 end-0 z-10 pointer-events-none w-[180px] h-[180px] md:w-[320px] md:h-[320px]">
+        <Image
+          src="/images/blueprint-pattern.png"
+          alt=""
+          fill
+          className="object-cover object-right-top"
+          style={{ opacity: 0.04, mixBlendMode: "screen" }}
+          aria-hidden="true"
+        />
+      </div>
+
+      {/* ── Text content — slides in per slide ── */}
+      <div className="absolute bottom-0 start-0 end-0 z-20 ps-4 pe-4 pb-16 sm:ps-6 sm:pb-16 md:ps-10 md:pe-10 md:pb-16 lg:ps-16 lg:pb-20">
+        <div style={{ maxWidth: "540px" }}>
+          <AnimatePresence mode="wait">
             <motion.div
-              key={`desktop-text-${activeIdx}`}
-              initial={{ opacity: 0, y: 8 }}
+              key={`text-${activeIdx}`}
+              initial={reduced ? false : { opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -6 }}
-              transition={{ duration: 0.4, ease: "easeOut" }}
+              exit={reduced ? {} : { opacity: 0, y: -20 }}
+              transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1], delay: 0.4 }}
             >
+              {/* Collection label */}
               {currentSlide.collection && (
                 <p
-                  ref={activeIdx === 0 ? collectionRef : undefined}
-                  className="text-xs uppercase tracking-widest text-[#C1B167] mb-3 font-medium"
+                  className={cn(
+                    "font-semibold mb-3",
+                    isAr
+                      ? "font-alyamama text-[12px] tracking-normal"
+                      : "text-[11px] uppercase tracking-[0.14em]"
+                  )}
+                  style={{ color: "#C1B167" }}
+                  data-hero-label
                 >
                   {currentSlide.collection}
                 </p>
               )}
+
+              {/* Headline */}
               <h1
-                ref={activeIdx === 0 ? headlineRef : undefined}
-                className={
-                  "text-[38px] lg:text-[52px] xl:text-[60px] font-bold text-[#2C2C2C] leading-[1.0] tracking-tight whitespace-pre-line" +
-                  (isAr ? " font-alyamama" : "")
-                }
+                className={cn(
+                  "font-extrabold text-white mb-3 whitespace-pre-line",
+                  isAr
+                    ? "font-alyamama font-bold leading-[1.1em] tracking-normal text-[33px] sm:text-[42px] md:text-[48px] lg:text-[57px]"
+                    : "leading-[0.95em] tracking-[-0.04em] text-[30px] sm:text-[38px] md:text-[44px] lg:text-[52px]"
+                )}
+                data-hero-headline
               >
                 {currentSlide.headline}
               </h1>
+
+              {/* Tagline */}
               {currentSlide.tagline && (
                 <p
-                  ref={activeIdx === 0 ? taglineRef : undefined}
-                  className="mt-4 text-[#2C2C2C]/70 text-base leading-relaxed"
+                  className={cn(
+                    "font-normal leading-[1.55] mb-6",
+                    isAr
+                      ? "font-alyamama text-[16px] sm:text-[17px] tracking-normal"
+                      : "text-[14px] sm:text-[15px] tracking-normal max-w-[400px]"
+                  )}
+                  style={{ color: "rgba(255,255,255,0.82)" }}
+                  data-hero-tagline
                 >
                   {currentSlide.tagline}
                 </p>
               )}
+
+              {/* CTA */}
               <Link
-                ref={activeIdx === 0 ? ctaRef : undefined}
                 href={currentSlide.href}
-                className="mt-8 w-fit self-start inline-flex items-center gap-3 bg-[#2C2C2C] text-white text-sm font-semibold px-6 py-3 min-h-[48px] rounded-none tracking-wide hover:bg-[#444] active:bg-[#1a1a1a] transition-colors group"
+                className={cn(
+                  "group inline-flex items-center gap-2",
+                  "border-2 text-white",
+                  "px-6 py-3 min-h-[48px]",
+                  "rounded-none",
+                  "font-semibold text-sm tracking-tight",
+                  "bg-transparent",
+                  "transition-all duration-200",
+                  "hover:bg-white/[0.12]",
+                  "active:scale-[0.98] active:bg-white/[0.20]",
+                  "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#C1B167]",
+                  "w-full max-w-[280px] justify-center sm:w-auto sm:max-w-none sm:justify-start"
+                )}
+                style={{ borderColor: "rgba(255,255,255,0.85)" }}
+                onMouseEnter={(e) => (e.currentTarget.style.borderColor = "#ffffff")}
+                onMouseLeave={(e) => (e.currentTarget.style.borderColor = "rgba(255,255,255,0.85)")}
+                data-hero-cta
               >
                 {currentSlide.cta}
                 <svg
-                  width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"
-                  className="transition-transform duration-150 ltr:group-hover:translate-x-1 rtl:group-hover:-translate-x-1 rtl:rotate-180"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  aria-hidden="true"
+                  className={cn(
+                    "transition-transform duration-200",
+                    isAr
+                      ? "rotate-180 group-hover:-translate-x-1"
+                      : "group-hover:translate-x-1"
+                  )}
                 >
-                  <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  <path
+                    d="M3 8h10M9 4l4 4-4 4"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
                 </svg>
               </Link>
             </motion.div>
           </AnimatePresence>
-
-          {/* Trust strip */}
-          <div className="mt-10 flex items-center gap-6 flex-wrap">
-            {trustStats.map((stat) => (
-              <div key={stat.value} className="flex flex-col">
-                <span className="text-sm font-bold text-[#2C2C2C] tracking-tight">{stat.value}</span>
-                <span className="text-[11px] text-[#2C2C2C]/50 uppercase tracking-wider mt-0.5">{stat.label}</span>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
 
-      {/* ── Dot indicators — shown when more than 1 slide ── */}
+      {/* ── Slide indicators — numbered architectural lines ── */}
       {total > 1 && (
         <div
-          className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-2"
+          className="absolute bottom-5 md:bottom-10 start-1/2 -translate-x-1/2 z-30 flex gap-4 items-end"
           role="tablist"
           aria-label={isAr ? "شرائح البانر" : "Hero slides"}
         >
-          {allSlides.map((_, idx) => (
+          {allSlides.map((s, i) => (
             <button
-              key={idx}
+              key={s.image}
               role="tab"
-              aria-selected={idx === activeIdx}
-              aria-label={isAr ? `الشريحة ${idx + 1}` : `Slide ${idx + 1}`}
-              onClick={() => goTo(idx)}
-              className={`h-1.5 rounded-full transition-all duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C1B167] ${
-                idx === activeIdx
-                  ? "bg-[#2C2C2C] w-4"
-                  : "bg-[#2C2C2C]/30 w-1.5"
-              }`}
-            />
+              aria-selected={i === activeIdx}
+              aria-label={isAr ? `الشريحة ${i + 1}` : `Go to slide ${String(i + 1).padStart(2, "0")}: ${s.alt}`}
+              onClick={() => goTo(i)}
+              className="flex flex-col items-center gap-1.5 p-3 -m-3 cursor-pointer"
+            >
+              {/* Progress line */}
+              <div
+                className="relative h-[2px] overflow-hidden transition-all duration-300 ease-out"
+                style={{
+                  width: i === activeIdx ? "48px" : "24px",
+                  backgroundColor:
+                    i === activeIdx ? "rgba(255,255,255,0.4)" : "rgba(255,255,255,0.4)",
+                }}
+                data-indicator-progress={i === activeIdx ? "true" : undefined}
+              >
+                {/* Active fill animation */}
+                {i === activeIdx && (
+                  <div
+                    className="absolute inset-y-0 start-0 bg-white"
+                    style={{
+                      animation: reduced
+                        ? undefined
+                        : `indicator-fill ${AUTO_ADVANCE_MS}ms linear forwards`,
+                      width: reduced ? "100%" : undefined,
+                    }}
+                  />
+                )}
+                {/* Inactive line — static white */}
+                {i !== activeIdx && (
+                  <div className="absolute inset-0 bg-white/40" />
+                )}
+              </div>
+              {/* Number — hidden on mobile */}
+              <span
+                className={cn(
+                  "font-semibold text-[10px] tracking-[0.10em] hidden sm:block transition-colors duration-200",
+                  i === activeIdx ? "text-white/90" : "text-white/50"
+                )}
+              >
+                {String(i + 1).padStart(2, "0")}
+              </span>
+            </button>
           ))}
         </div>
       )}

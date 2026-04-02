@@ -1,6 +1,11 @@
+"use client";
+
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
-import { Reveal } from "@/components/common/reveal";
+import { motion } from "framer-motion";
+import { FadeUp } from "@/components/common/fade-up";
+import { CountUp } from "@/components/common/count-up";
+import { ease } from "@/lib/motion";
 
 interface Stat {
   value: string;
@@ -42,11 +47,16 @@ const PROJECTS: Project[] = [
   },
 ];
 
+const revealVariant = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] } },
+};
+
 export function ProjectScale({ isAr }: { isAr: boolean }) {
   return (
     <section className="w-full bg-white py-14 md:py-20">
       <div className="max-w-screen-2xl mx-auto px-4 md:px-6 lg:px-8">
-        <Reveal>
+        <FadeUp>
           <div className="mb-10">
             <p className="text-xs uppercase tracking-widest text-[#484848] mb-2">
               {isAr ? "مشاريع منجزة" : "Completed Projects"}
@@ -55,49 +65,65 @@ export function ProjectScale({ isAr }: { isAr: boolean }) {
               {isAr ? "تجهيز على المستوى المؤسسي" : "Built for Institutional Scale"}
             </h2>
           </div>
-        </Reveal>
+        </FadeUp>
 
         <div className="flex flex-col gap-12">
           {PROJECTS.map((project, i) => (
-            <Reveal key={i}>
-              <div className={`flex flex-col md:flex-row gap-0 overflow-hidden border border-[rgba(0,0,0,0.12)] ${isAr ? "md:flex-row-reverse" : ""}`}>
-                {/* Image */}
-                <div className="relative w-full md:w-1/2 aspect-[16/9] md:aspect-auto min-h-[280px]">
-                  <Image
-                    src={project.image}
-                    alt={isAr ? project.descAr.slice(0, 40) : project.descEn.slice(0, 40)}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                  />
+            <div
+              key={i}
+              className={`flex flex-col md:flex-row gap-0 overflow-hidden border border-[rgba(0,0,0,0.12)] ${isAr ? "md:flex-row-reverse" : ""}`}
+            >
+              {/* Image — slides in from left (or right in RTL) */}
+              <motion.div
+                className="relative w-full md:w-1/2 aspect-[16/9] md:aspect-auto min-h-[280px]"
+                initial={{ opacity: 0, x: isAr ? 40 : -40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.5, ease: ease.smooth }}
+              >
+                <Image
+                  src={project.image}
+                  alt={isAr ? project.descAr.slice(0, 40) : project.descEn.slice(0, 40)}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              </motion.div>
+
+              {/* Text block — slides in from right (or left in RTL) */}
+              <motion.div
+                className="w-full md:w-1/2 bg-[#f7f7f5] p-8 md:p-12 flex flex-col justify-center"
+                initial={{ opacity: 0, x: isAr ? -40 : 40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.5, ease: ease.smooth, delay: 0.1 }}
+              >
+                {/* Stats with CountUp */}
+                <div className="flex gap-8 mb-8">
+                  {project.stats.map((stat) => (
+                    <div key={stat.labelEn}>
+                      <p className="text-4xl font-bold text-[#C1B167]">
+                        <CountUp value={stat.value} duration={1500} />
+                      </p>
+                      <p className="text-xs text-[#484848] mt-1 leading-tight">
+                        {isAr ? stat.labelAr : stat.labelEn}
+                      </p>
+                    </div>
+                  ))}
                 </div>
-                {/* Text block */}
-                <div className="w-full md:w-1/2 bg-[#f7f7f5] p-8 md:p-12 flex flex-col justify-center">
-                  {/* Stats */}
-                  <div className="flex gap-8 mb-8">
-                    {project.stats.map((stat) => (
-                      <div key={stat.labelEn}>
-                        <p className="text-4xl font-bold text-[#C1B167]">{stat.value}</p>
-                        <p className="text-xs text-[#484848] mt-1 leading-tight">
-                          {isAr ? stat.labelAr : stat.labelEn}
-                        </p>
-                      </div>
-                    ))}
-                  </div>
-                  {/* Description */}
-                  <p className="text-[#484848] text-sm leading-relaxed mb-8">
-                    {isAr ? project.descAr : project.descEn}
-                  </p>
-                  {/* CTA */}
-                  <Link
-                    href="/about"
-                    className="btn-press inline-block self-start bg-[#0c0c0c] text-white px-7 py-3 text-sm font-semibold rounded-sm hover:bg-[#333] transition-colors"
-                  >
-                    {isAr ? "اطلب استشارة مشروع" : "Request a Project Consultation"}
-                  </Link>
-                </div>
-              </div>
-            </Reveal>
+                {/* Description */}
+                <p className="text-[#484848] text-sm leading-relaxed mb-8">
+                  {isAr ? project.descAr : project.descEn}
+                </p>
+                {/* CTA */}
+                <Link
+                  href="/about"
+                  className="btn-press inline-block self-start bg-[#0c0c0c] text-white px-7 py-3 text-sm font-semibold rounded-sm hover:bg-[#333] transition-colors"
+                >
+                  {isAr ? "اطلب استشارة مشروع" : "Request a Project Consultation"}
+                </Link>
+              </motion.div>
+            </div>
           ))}
         </div>
       </div>

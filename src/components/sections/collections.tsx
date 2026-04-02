@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
-import { Reveal } from "@/components/common/reveal";
-import { StaggerGrid } from "@/components/common/stagger-grid";
+import { FadeUp } from "@/components/common/fade-up";
+import { StaggerChildren } from "@/components/common/stagger-children";
 
 interface Collection {
   image: string;
@@ -39,7 +39,7 @@ export function Collections({ isAr }: { isAr: boolean }) {
   return (
     <section className="w-full bg-[#f7f7f5] py-14 md:py-20">
       <div className="max-w-screen-2xl mx-auto px-4 md:px-6 lg:px-8">
-        <Reveal>
+        <FadeUp>
           <div className="flex items-end justify-between mb-10">
             <div>
               <p className="text-xs uppercase tracking-widest text-[#484848] mb-2">
@@ -59,17 +59,20 @@ export function Collections({ isAr }: { isAr: boolean }) {
               {isAr ? "عرض جميع التشكيلات" : "View All Collections"}
             </Link>
           </div>
-        </Reveal>
+        </FadeUp>
 
-        <StaggerGrid stagger={0.1} isRTL={isAr} className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <StaggerChildren staggerDelay={0.08} yOffset={24} className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {COLLECTIONS.map((col) => (
-            <div key={col.nameEn} className="bg-white border border-[rgba(0,0,0,0.12)] overflow-hidden group">
+            <div
+              key={col.nameEn}
+              className="bg-white border border-[rgba(0,0,0,0.12)] overflow-hidden group transition-all duration-200 hover:-translate-y-2 hover:shadow-lg"
+            >
               <div className="relative aspect-[3/2] overflow-hidden">
                 <Image
                   src={col.image}
                   alt={isAr ? col.nameAr : col.nameEn}
                   fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                  className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />
               </div>
@@ -90,7 +93,7 @@ export function Collections({ isAr }: { isAr: boolean }) {
               </div>
             </div>
           ))}
-        </StaggerGrid>
+        </StaggerChildren>
       </div>
     </section>
   );

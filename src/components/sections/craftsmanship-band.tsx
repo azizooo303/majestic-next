@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { Reveal } from "@/components/common/reveal";
+import { FadeUp } from "@/components/common/fade-up";
+import { AutoScroll } from "@/components/common/auto-scroll";
 
 const IMAGES = [
   { src: "/images/website/s3-a-desk-edge-detail.jpg", alt: "Desk edge detail" },
@@ -13,19 +14,20 @@ export function CraftsmanshipBand({ isAr }: { isAr: boolean }) {
   return (
     <section className="w-full bg-[#0c0c0c] py-14 md:py-20 overflow-hidden">
       {/* Overline */}
-      <Reveal>
+      <FadeUp>
         <div className="max-w-screen-2xl mx-auto px-4 md:px-6 lg:px-8 pb-8">
           <p className="text-xs uppercase tracking-widest text-[#aaaaaa]">
             {isAr ? "تفاصيل التصنيع والتشطيب" : "Construction Detail"}
           </p>
         </div>
-      </Reveal>
-      {/* Horizontal scroll strip */}
-      <div className="flex gap-2 overflow-x-auto no-scrollbar px-4 md:px-6 lg:px-8 max-w-screen-2xl mx-auto">
+      </FadeUp>
+
+      {/* Auto-scrolling image strip */}
+      <AutoScroll duration={60} gap="8px" isRTL={isAr}>
         {IMAGES.map((img) => (
           <div
             key={img.src}
-            className="relative flex-none w-[220px] md:w-[260px] aspect-[3/4] overflow-hidden"
+            className="relative flex-none w-[220px] md:w-[260px] aspect-[3/4] overflow-hidden transition-transform duration-300 hover:scale-[1.05] hover:rotate-[0.5deg]"
           >
             <Image
               src={img.src}
@@ -36,16 +38,16 @@ export function CraftsmanshipBand({ isAr }: { isAr: boolean }) {
             />
           </div>
         ))}
-      </div>
+      </AutoScroll>
 
       {/* Centered bilingual tagline */}
-      <Reveal>
+      <FadeUp>
         <div className="text-center mt-10 px-4">
           <p className="text-white text-lg font-semibold tracking-widest uppercase">
             {isAr ? "كل سطح. وفق مواصفة." : "Every surface. Considered."}
           </p>
         </div>
-      </Reveal>
+      </FadeUp>
     </section>
   );
 }

@@ -160,6 +160,7 @@ export function Header() {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [headerHeight, setHeaderHeight] = useState(HEADER_HEIGHT);
+  const [scrolled, setScrolled] = useState(false);
   const headerRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -168,6 +169,12 @@ export function Header() {
       document.body.style.overflow = "";
     };
   }, [isMobileOpen]);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 80);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   useEffect(() => {
     const measure = () => {
@@ -191,9 +198,18 @@ export function Header() {
         Skip to content
       </a>
 
-      <header ref={headerRef} className="fixed top-0 w-full z-50 bg-white">
-        {/* ── Row 1: Utility bar ── */}
-        <div className="hidden md:block border-b border-[rgba(0,0,0,0.08)] bg-white">
+      <header
+        ref={headerRef}
+        className={cn(
+          "fixed top-0 w-full z-50 bg-white transition-all duration-300",
+          scrolled && "shadow-sm"
+        )}
+      >
+        {/* ── Row 1: Utility bar — hidden when scrolled ── */}
+        <div className={cn(
+          "hidden md:block border-b border-[rgba(0,0,0,0.08)] bg-white overflow-hidden transition-all duration-300",
+          scrolled ? "max-h-0 border-b-0" : "max-h-[40px]"
+        )}>
           <div className="max-w-screen-xl mx-auto px-8 py-1.5 flex items-center gap-1 text-xs text-[#484848]">
             <Link
               href="/showrooms"

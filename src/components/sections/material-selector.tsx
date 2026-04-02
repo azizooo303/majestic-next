@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
+import { FadeUp } from "@/components/common/fade-up";
 
 interface Finish {
   key: string;
@@ -31,14 +32,16 @@ export function MaterialSelector({ isAr }: { isAr: boolean }) {
     <section className="w-full bg-[#f7f7f5] py-14 md:py-20">
       <div className="max-w-screen-2xl mx-auto px-4 md:px-6 lg:px-8">
         {/* Header */}
-        <div className="mb-8">
-          <p className="text-xs uppercase tracking-widest text-[#484848] mb-2">
-            {isAr ? "الأسطح والتشطيبات" : "Materials & Finishes"}
-          </p>
-          <h2 className="text-2xl md:text-3xl font-bold text-[#0c0c0c] tracking-tight">
-            {isAr ? "حدّد التشطيب المناسب لمشروعك" : "Find the Right Finish"}
-          </h2>
-        </div>
+        <FadeUp>
+          <div className="mb-8">
+            <p className="text-xs uppercase tracking-widest text-[#484848] mb-2">
+              {isAr ? "الأسطح والتشطيبات" : "Materials & Finishes"}
+            </p>
+            <h2 className="text-2xl md:text-3xl font-bold text-[#0c0c0c] tracking-tight">
+              {isAr ? "حدّد التشطيب المناسب لمشروعك" : "Find the Right Finish"}
+            </h2>
+          </div>
+        </FadeUp>
 
         <div className={`flex flex-col md:flex-row gap-8 md:gap-12 ${isAr ? "md:flex-row-reverse" : ""}`}>
           {/* Product render */}
@@ -46,7 +49,7 @@ export function MaterialSelector({ isAr }: { isAr: boolean }) {
             {FINISHES.map((finish) => (
               <div
                 key={finish.key}
-                className={`absolute inset-0 transition-opacity duration-400 ${finish.key === selected ? "opacity-100" : "opacity-0"}`}
+                className={`absolute inset-0 transition-opacity duration-300 ${finish.key === selected ? "opacity-100" : "opacity-0"}`}
               >
                 <Image
                   src={finish.image}
@@ -87,7 +90,7 @@ export function MaterialSelector({ isAr }: { isAr: boolean }) {
                     className={`w-full aspect-square border-2 transition-all duration-150 ${
                       selected === finish.key
                         ? "border-[#0c0c0c] scale-105"
-                        : "border-transparent hover:border-[#484848]"
+                        : "border-transparent hover:border-[#C1B167] hover:scale-110"
                     }`}
                     style={{ backgroundColor: finish.swatch }}
                   />

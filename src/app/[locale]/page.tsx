@@ -6,8 +6,8 @@ import { HeroBanner } from "@/components/hero/hero-banner";
 import { NewsletterForm } from "@/components/ui/newsletter-form";
 import { InspireSection } from "@/components/common/inspire-section";
 import { PageWrapper } from "@/components/common/page-wrapper";
-import { StaggerGrid } from "@/components/common/stagger-grid";
-import { Reveal } from "@/components/common/reveal";
+import { StaggerChildren } from "@/components/common/stagger-children";
+import { FadeUp } from "@/components/common/fade-up";
 import { PromoBanner } from "@/components/common/promo-banner";
 import { ProductCard } from "@/components/shop/product-card";
 import { JsonLd, LocalBusinessJsonLd, WebSiteJsonLd } from "@/components/common/json-ld";
@@ -191,20 +191,19 @@ export default async function HomePage({
       {/* Category Navigation Strip */}
       <section className="w-full bg-white border-b border-[rgba(0,0,0,0.21)] py-6">
         <div className="max-w-screen-2xl mx-auto px-4 md:px-6 lg:px-8">
-          <StaggerGrid
-            stagger={0.07}
-            isRTL={isAr}
+          <StaggerChildren
+            staggerDelay={0.05}
             className="flex overflow-x-auto gap-6 no-scrollbar justify-start md:justify-center"
           >
             {categoryItems}
-          </StaggerGrid>
+          </StaggerChildren>
         </div>
       </section>
 
       {/* Featured Products */}
       <section className="bg-white py-12 md:py-16">
         <div className="max-w-screen-2xl mx-auto px-4 md:px-6 lg:px-8">
-          <Reveal>
+          <FadeUp>
             <div className="flex items-center justify-between mb-8">
               <h2 className="text-2xl md:text-3xl font-bold text-[#0c0c0c] tracking-tight">
                 {isAr ? "مختارات هذا الموسم" : "Selected for This Season"}
@@ -216,15 +215,14 @@ export default async function HomePage({
                 {isAr ? "عرض الكل" : t("common.viewAll")}
               </Link>
             </div>
-          </Reveal>
+          </FadeUp>
 
-          <StaggerGrid
-            stagger={0.08}
-            isRTL={isAr}
+          <StaggerChildren
+            staggerDelay={0.06}
             className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[15px]"
           >
             {productItems}
-          </StaggerGrid>
+          </StaggerChildren>
 
           <div className="text-center mt-10">
             <Link
@@ -262,7 +260,7 @@ export default async function HomePage({
       <InspireSection isAr={isAr} />
 
       {/* Newsletter */}
-      <Reveal>
+      <FadeUp>
         <section className="border-t border-[rgba(0,0,0,0.08)] py-12 bg-white">
           <div className="max-w-md mx-auto px-4 text-center">
             <h2 className="text-xl font-semibold text-[#0c0c0c]">
@@ -303,7 +301,7 @@ export default async function HomePage({
             </div>
           </div>
         </section>
-      </Reveal>
+      </FadeUp>
       <ConsultationCta isAr={isAr} />
     </PageWrapper>
   );
