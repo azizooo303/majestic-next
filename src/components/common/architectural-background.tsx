@@ -43,6 +43,9 @@ export function ArchitecturalBackground() {
 
   useEffect(() => {
     if (reduced) return;
+    // Skip all GSAP on mobile — sketch objects are hidden lg:block anyway,
+    // and 20+ ScrollTriggers on hidden elements waste mobile CPU
+    if (typeof window !== "undefined" && window.innerWidth < 1024) return;
 
     const ctx = gsap.context(() => {
       const scrollConfig = {

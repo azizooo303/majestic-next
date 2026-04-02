@@ -31,6 +31,8 @@ export function SectionReveal({
 
   useGSAP(() => {
     if (!ref.current || reduced) return;
+    // Skip GSAP scrub on mobile — full-viewport slide-ins are too heavy on iOS
+    if (typeof window !== "undefined" && window.innerWidth < 768) return;
 
     const isHorizontal = direction === "left" || direction === "right";
 
