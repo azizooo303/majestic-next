@@ -52,6 +52,7 @@ export function HeroBanner({ slides, slide }: HeroBannerProps) {
   // DrawSVG bracket animation on mount
   useEffect(() => {
     if (reduced) return;
+    if (typeof window !== "undefined" && window.innerWidth < 768) return;
     if (bracketTL.current) { gsap.set(bracketTL.current, { drawSVG: "0%" }); gsap.to(bracketTL.current, { drawSVG: "100%", duration: 1.0, ease: "power2.out", delay: 0.6 }); }
     if (bracketTR.current) { gsap.set(bracketTR.current, { drawSVG: "0%" }); gsap.to(bracketTR.current, { drawSVG: "100%", duration: 1.0, ease: "power2.out", delay: 0.8 }); }
     if (dimLine.current)   { gsap.set(dimLine.current,   { drawSVG: "0%" }); gsap.to(dimLine.current,   { drawSVG: "100%", duration: 1.8, ease: "power1.out", delay: 1.2 }); }
@@ -60,6 +61,7 @@ export function HeroBanner({ slides, slide }: HeroBannerProps) {
   // SplitText headline reveal on each slide change
   useEffect(() => {
     if (reduced || !headlineRef.current) return;
+    if (typeof window !== "undefined" && window.innerWidth < 768) return;
     const split = new SplitText(headlineRef.current, { type: "words,chars" });
     const tl = gsap.timeline({ delay: 0.35 });
     tl.from(split.chars, {

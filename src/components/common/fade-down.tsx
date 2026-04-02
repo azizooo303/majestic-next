@@ -21,6 +21,7 @@ export function FadeDown({ children, className, yOffset = 24, delay = 0 }: FadeD
 
   useGSAP(() => {
     if (!ref.current || reduced) return;
+    if (typeof window !== "undefined" && window.innerWidth < 768) return;
 
     const el = ref.current;
 
