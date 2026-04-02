@@ -1,60 +1,64 @@
 "use client";
-import { motion, useReducedMotion } from "framer-motion";
+import { useRef } from "react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useReducedMotion } from "framer-motion";
+
+gsap.registerPlugin(ScrollTrigger);
 
 type Direction = "left" | "right" | "up" | "fade-scale";
 
 interface SectionRevealProps {
   children: React.ReactNode;
   direction?: Direction;
-  distance?: number;   // px offset to start from, default 60
-  duration?: number;   // seconds, default 0.7
+  distance?: number;
+  duration?: number;
   delay?: number;
   className?: string;
 }
 
-const variants = (direction: Direction, distance: number) => ({
-  hidden: {
-    opacity: 0,
-    x: direction === "left" ? -distance : direction === "right" ? distance : 0,
-    y: direction === "up" ? distance * 0.6 : 0,
-    scale: direction === "fade-scale" ? 0.97 : 1,
-  },
-  visible: {
-    opacity: 1,
-    x: 0,
-    y: 0,
-    scale: 1,
-  },
-});
-
 export function SectionReveal({
   children,
   direction = "up",
-  distance = 60,
+  distance = 50,
   duration = 0.7,
   delay = 0,
   className,
 }: SectionRevealProps) {
+  const ref = useRef<HTMLDivElement>(null);
   const reduced = useReducedMotion();
+
+  useGSAP(() => {
+    if (!ref.current || reduced) return;
+
+    const fromVars: gsap.TweenVars = {
+      opacity: 0,
+      x: direction === "left" ? -distance : direction === "right" ? distance : 0,
+      y: direction === "up" ? distance * 0.6 : 0,
+      scale: direction === "fade-scale" ? 0.97 : 1,
+      duration,
+      delay,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: ref.current,
+        start: "top 92%",
+        end: "top 55%",
+        // play on enter, reverse on leave-back, play on enter-back, reverse on leave
+        toggleActions: "play reverse play reverse",
+      },
+    };
+
+    gsap.from(ref.current, fromVars);
+  }, { scope: ref });
 
   if (reduced) {
     return <div className={className}>{children}</div>;
   }
 
   return (
-    <motion.div
-      className={className}
-      variants={variants(direction, Math.min(distance, 28))}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: false, amount: 0.06 }}
-      transition={{
-        duration,
-        ease: [0.16, 1, 0.3, 1],
-        delay,
-      }}
-    >
+    <div ref={ref} className={className}>
       {children}
-    </motion.div>
+    </div>
   );
 }
