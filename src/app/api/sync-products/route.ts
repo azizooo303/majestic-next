@@ -20,7 +20,7 @@ export const dynamic = "force-dynamic";
 export async function GET(req: NextRequest) {
   const authHeader = req.headers.get("authorization") ?? "";
   const token = authHeader.replace(/^Bearer\s+/i, "").trim();
-  const expected = process.env.SUPABASE_SERVICE_ROLE_KEY ?? "";
+  const expected = (process.env.SUPABASE_SERVICE_ROLE_KEY ?? "").trim();
 
   if (!token || token !== expected) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
