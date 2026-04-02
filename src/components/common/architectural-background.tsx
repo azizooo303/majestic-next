@@ -30,7 +30,7 @@ export function ArchitecturalBackground() {
       ref={containerRef}
       aria-hidden="true"
       className="absolute inset-0 pointer-events-none"
-      style={{ zIndex: 5 }}
+      style={{ zIndex: 5, mixBlendMode: "difference" }}
     >
       {/* ─────────────────────────────────────────
           OBJECT 1: Office Chair — right edge, near top
@@ -46,7 +46,7 @@ export function ArchitecturalBackground() {
         }}
       >
         <svg viewBox="0 0 200 280" width="220" height="308" fill="none" aria-hidden="true">
-          <g stroke="#0c0c0c" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" opacity="0.08">
+          <g stroke="#ffffff" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" opacity="0.4">
             {/* Backrest */}
             <rect x="55" y="20" width="90" height="100" rx="4" />
             <line x1="75" y1="40" x2="125" y2="40" />
@@ -97,7 +97,7 @@ export function ArchitecturalBackground() {
         }}
       >
         <svg viewBox="0 0 260 160" width="280" height="172" fill="none" aria-hidden="true">
-          <g stroke="#0c0c0c" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" opacity="0.07">
+          <g stroke="#ffffff" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" opacity="0.38">
             {/* Desk top surface — isometric-ish */}
             <rect x="30" y="30" width="200" height="55" rx="2" />
             {/* Desk top edge detail */}
@@ -140,7 +140,7 @@ export function ArchitecturalBackground() {
         }}
       >
         <svg viewBox="0 0 100 320" width="120" height="384" fill="none" aria-hidden="true">
-          <g stroke="#0c0c0c" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" opacity="0.09">
+          <g stroke="#ffffff" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" opacity="0.42">
             {/* Lamp shade */}
             <path d="M 30,60 L 15,15 L 75,15 L 60,60 Z" />
             {/* Inner shade line */}
@@ -183,7 +183,7 @@ export function ArchitecturalBackground() {
         }}
       >
         <svg viewBox="0 0 140 200" width="160" height="229" fill="none" aria-hidden="true">
-          <g stroke="#0c0c0c" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" opacity="0.08">
+          <g stroke="#ffffff" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" opacity="0.38">
             {/* Left leg */}
             <line x1="70" y1="20" x2="30" y2="170" />
             {/* Right leg */}
@@ -203,7 +203,7 @@ export function ArchitecturalBackground() {
             {/* Arc sweep */}
             <path d="M 30 170 Q 70 130 110 170" strokeDasharray="4 3" />
             {/* Radius notation */}
-            <text fontSize="9" fill="#0c0c0c" opacity="0.4" x="60" y="158" fontFamily="monospace">R</text>
+            <text fontSize="9" fill="#ffffff" opacity="0.4" x="60" y="158" fontFamily="monospace">R</text>
           </g>
         </svg>
       </motion.div>
@@ -222,7 +222,7 @@ export function ArchitecturalBackground() {
         }}
       >
         <svg viewBox="0 0 180 60" width="200" height="67" fill="none" aria-hidden="true">
-          <g stroke="#0c0c0c" strokeWidth="1.2" strokeLinecap="round" opacity="0.07">
+          <g stroke="#ffffff" strokeWidth="1.2" strokeLinecap="round" opacity="0.38">
             {/* Ruler body */}
             <rect x="5" y="15" width="170" height="30" rx="2" />
             {/* Major ticks */}
@@ -255,7 +255,7 @@ export function ArchitecturalBackground() {
         }}
       >
         <svg viewBox="0 0 150 220" width="180" height="264" fill="none" aria-hidden="true">
-          <g stroke="#0c0c0c" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" opacity="0.07">
+          <g stroke="#ffffff" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" opacity="0.38">
             {/* Cabinet body */}
             <rect x="15" y="10" width="120" height="200" rx="2" />
             {/* Horizontal shelf dividers */}
@@ -292,7 +292,7 @@ export function ArchitecturalBackground() {
         style={{ top: "20vh", left: "12px", y: y3 }}
       >
         <svg viewBox="0 0 40 40" width="40" height="40" fill="none" aria-hidden="true">
-          <g stroke="#0c0c0c" strokeWidth="1" opacity="0.12" strokeLinecap="square">
+          <g stroke="#ffffff" strokeWidth="1" opacity="0.5" strokeLinecap="square">
             <path d="M 0,14 L 0,0 L 14,0" />
           </g>
         </svg>
@@ -303,7 +303,7 @@ export function ArchitecturalBackground() {
         style={{ top: "20vh", right: "12px", y: y3 }}
       >
         <svg viewBox="0 0 40 40" width="40" height="40" fill="none" aria-hidden="true">
-          <g stroke="#0c0c0c" strokeWidth="1" opacity="0.12" strokeLinecap="square">
+          <g stroke="#ffffff" strokeWidth="1" opacity="0.5" strokeLinecap="square">
             <path d="M 40,14 L 40,0 L 26,0" />
           </g>
         </svg>
@@ -323,7 +323,7 @@ export function ArchitecturalBackground() {
           style={{ ...pos, width: 24, height: 24 }}
         >
           <svg viewBox="0 0 24 24" width="24" height="24" fill="none" aria-hidden="true">
-            <g stroke="#0c0c0c" strokeWidth="0.8" opacity="0.1" strokeLinecap="round">
+            <g stroke="#ffffff" strokeWidth="0.8" opacity="0.45" strokeLinecap="round">
               <line x1="12" y1="0" x2="12" y2="10" />
               <line x1="12" y1="14" x2="12" y2="24" />
               <line x1="0" y1="12" x2="10" y2="12" />

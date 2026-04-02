@@ -44,10 +44,10 @@ export function SectionReveal({
   return (
     <motion.div
       className={className}
-      variants={variants(direction, distance)}
+      variants={variants(direction, Math.min(distance, 28))}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: false, amount: 0.08 }}
+      viewport={{ once: false, amount: 0.06 }}
       transition={{
         duration,
         ease: [0.16, 1, 0.3, 1],
