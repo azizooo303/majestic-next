@@ -7,6 +7,10 @@ import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { useLocale } from "next-intl";
 import { cn } from "@/lib/utils";
 import { BlueprintOverlay } from "@/components/hero/blueprint-overlay";
+import gsap from "gsap";
+import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
+import { SplitText } from "gsap/SplitText";
+gsap.registerPlugin(DrawSVGPlugin, SplitText);
 
 export interface HeroSlide {
   image: string;
@@ -40,6 +44,34 @@ export function HeroBanner({ slides, slide }: HeroBannerProps) {
   const [activeIdx, setActiveIdx] = useState(0);
   const [paused, setPaused] = useState(false);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const bracketTL = useRef<SVGPathElement>(null);
+  const bracketTR = useRef<SVGPathElement>(null);
+  const dimLine = useRef<SVGPathElement>(null);
+  const headlineRef = useRef<HTMLHeadingElement>(null);
+
+  // DrawSVG bracket animation on mount
+  useEffect(() => {
+    if (reduced) return;
+    if (bracketTL.current) { gsap.set(bracketTL.current, { drawSVG: "0%" }); gsap.to(bracketTL.current, { drawSVG: "100%", duration: 1.0, ease: "power2.out", delay: 0.6 }); }
+    if (bracketTR.current) { gsap.set(bracketTR.current, { drawSVG: "0%" }); gsap.to(bracketTR.current, { drawSVG: "100%", duration: 1.0, ease: "power2.out", delay: 0.8 }); }
+    if (dimLine.current)   { gsap.set(dimLine.current,   { drawSVG: "0%" }); gsap.to(dimLine.current,   { drawSVG: "100%", duration: 1.8, ease: "power1.out", delay: 1.2 }); }
+  }, [reduced]);
+
+  // SplitText headline reveal on each slide change
+  useEffect(() => {
+    if (reduced || !headlineRef.current) return;
+    const split = new SplitText(headlineRef.current, { type: "words,chars" });
+    const tl = gsap.timeline({ delay: 0.35 });
+    tl.from(split.chars, {
+      opacity: 0,
+      y: 18,
+      stagger: 0.025,
+      duration: 0.45,
+      ease: "power3.out",
+      onComplete: () => split.revert(),
+    });
+    return () => { tl.kill(); split.revert(); };
+  }, [activeIdx, reduced]);
 
   const advance = useCallback(() => {
     setActiveIdx((prev) => (prev + 1) % total);
@@ -164,62 +196,17 @@ export function HeroBanner({ slides, slide }: HeroBannerProps) {
       {/* ── Architectural corner brackets ── */}
       {!reduced && (
         <>
-          {/* Top-left bracket */}
-          <svg
-            className="absolute top-8 start-8 z-10 pointer-events-none hidden md:block"
-            width="60"
-            height="60"
-            viewBox="0 0 60 60"
-            aria-hidden="true"
-          >
-            <motion.path
-              d="M 0,40 L 0,0 L 40,0"
-              stroke="rgba(255,255,255,0.35)"
-              strokeWidth="1.5"
-              fill="none"
-              strokeLinecap="square"
-              initial={{ pathLength: 0 }}
-              animate={{ pathLength: 1 }}
-              transition={{ duration: 1.2, ease: [0, 0, 0.2, 1], delay: 0.6 }}
-            />
+          {/* Top-left bracket — GSAP DrawSVG */}
+          <svg className="absolute top-8 start-8 z-10 pointer-events-none hidden md:block" width="60" height="60" viewBox="0 0 60 60" aria-hidden="true">
+            <path ref={bracketTL} d="M 0,40 L 0,0 L 40,0" stroke="rgba(255,255,255,0.35)" strokeWidth="1.5" fill="none" strokeLinecap="square" />
           </svg>
-          {/* Top-right bracket */}
-          <svg
-            className="absolute top-8 end-8 z-10 pointer-events-none hidden md:block"
-            width="60"
-            height="60"
-            viewBox="0 0 60 60"
-            aria-hidden="true"
-          >
-            <motion.path
-              d="M 60,40 L 60,0 L 20,0"
-              stroke="rgba(255,255,255,0.35)"
-              strokeWidth="1.5"
-              fill="none"
-              strokeLinecap="square"
-              initial={{ pathLength: 0 }}
-              animate={{ pathLength: 1 }}
-              transition={{ duration: 1.2, ease: [0, 0, 0.2, 1], delay: 0.8 }}
-            />
+          {/* Top-right bracket — GSAP DrawSVG */}
+          <svg className="absolute top-8 end-8 z-10 pointer-events-none hidden md:block" width="60" height="60" viewBox="0 0 60 60" aria-hidden="true">
+            <path ref={bracketTR} d="M 60,40 L 60,0 L 20,0" stroke="rgba(255,255,255,0.35)" strokeWidth="1.5" fill="none" strokeLinecap="square" />
           </svg>
-          {/* Bottom dimension line */}
-          <svg
-            className="absolute bottom-16 inset-x-0 z-10 pointer-events-none hidden md:block w-full"
-            height="8"
-            viewBox="0 0 1000 8"
-            preserveAspectRatio="none"
-            aria-hidden="true"
-          >
-            <motion.path
-              d="M 80,4 L 920,4"
-              stroke="rgba(255,255,255,0.12)"
-              strokeWidth="0.5"
-              fill="none"
-              strokeDasharray="3 8"
-              initial={{ pathLength: 0 }}
-              animate={{ pathLength: 1 }}
-              transition={{ duration: 2.0, ease: [0, 0, 0.2, 1], delay: 1.2 }}
-            />
+          {/* Bottom dimension line — GSAP DrawSVG */}
+          <svg className="absolute bottom-16 inset-x-0 z-10 pointer-events-none hidden md:block w-full" height="8" viewBox="0 0 1000 8" preserveAspectRatio="none" aria-hidden="true">
+            <path ref={dimLine} d="M 80,4 L 920,4" stroke="rgba(255,255,255,0.12)" strokeWidth="0.5" fill="none" strokeDasharray="3 8" />
           </svg>
         </>
       )}
@@ -260,6 +247,7 @@ export function HeroBanner({ slides, slide }: HeroBannerProps) {
                     : "leading-[0.95em] tracking-[-0.04em] text-[30px] sm:text-[38px] md:text-[44px] lg:text-[52px]"
                 )}
                 data-hero-headline
+                ref={headlineRef}
               >
                 {currentSlide.headline}
               </h1>

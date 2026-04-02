@@ -1,37 +1,73 @@
 "use client";
-import { motion, useReducedMotion } from "framer-motion";
-import { ease, duration as motionDurationScale, VIEWPORT_THRESHOLD } from "@/lib/motion";
+import { useRef } from "react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { SplitText } from "gsap/SplitText";
+import { useReducedMotion } from "framer-motion";
+
+gsap.registerPlugin(ScrollTrigger, SplitText);
 
 interface FadeDownProps {
   children: React.ReactNode;
   className?: string;
-  yOffset?: number;        // px, default 24
-  delay?: number;          // seconds, default 0
-  motionDuration?: number; // seconds, default duration.slow (0.5)
+  yOffset?: number;
+  delay?: number;
 }
 
-export function FadeDown({
-  children,
-  className,
-  yOffset = 24,
-  delay = 0,
-  motionDuration = motionDurationScale.slow,
-}: FadeDownProps) {
+export function FadeDown({ children, className, yOffset = 24, delay = 0 }: FadeDownProps) {
+  const ref = useRef<HTMLDivElement>(null);
   const reduced = useReducedMotion();
+
+  useGSAP(() => {
+    if (!ref.current || reduced) return;
+
+    const el = ref.current;
+
+    // Headings get SplitText word-by-word reveal
+    const headings = el.querySelectorAll<HTMLElement>("h1, h2, h3");
+    if (headings.length > 0) {
+      headings.forEach((heading) => {
+        const split = new SplitText(heading, { type: "words" });
+        gsap.from(split.words, {
+          opacity: 0,
+          y: -yOffset,
+          stagger: 0.06,
+          duration: 0.55,
+          delay,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: heading,
+            start: "top 88%",
+            toggleActions: "play none play reverse",
+          },
+          onComplete: () => split.revert(),
+        });
+      });
+    } else {
+      // Non-heading content: simple fade from above
+      gsap.from(el, {
+        opacity: 0,
+        y: -yOffset,
+        duration: 0.55,
+        delay,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: el,
+          start: "top 88%",
+          toggleActions: "play none play reverse",
+        },
+      });
+    }
+  }, { scope: ref });
 
   if (reduced) {
     return <div className={className}>{children}</div>;
   }
 
   return (
-    <motion.div
-      className={className}
-      initial={{ opacity: 0, y: -yOffset }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: VIEWPORT_THRESHOLD }}
-      transition={{ duration: motionDuration, ease: ease.smooth, delay }}
-    >
+    <div ref={ref} className={className}>
       {children}
-    </motion.div>
+    </div>
   );
 }
