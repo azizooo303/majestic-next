@@ -42,10 +42,9 @@ export function SectionReveal({
       ease: "power3.out",
       scrollTrigger: {
         trigger: ref.current,
-        start: "top 92%",
-        end: "top 55%",
-        // play on enter, reverse on leave-back, play on enter-back, reverse on leave
-        toggleActions: "play reverse play reverse",
+        start: "top 88%",
+        // play on enter ↓, stay visible scrolling past ↓, re-play on scroll up ↑, hide when fully above ↑
+        toggleActions: "play none play reverse",
       },
     };
 
