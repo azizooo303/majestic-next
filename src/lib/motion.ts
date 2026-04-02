@@ -20,6 +20,7 @@ export const duration = {
   slow: 0.5,       // section reveals, card entrance
   hero: 0.8,       // hero crossfade, large transitions
   blueprint: 1.2,  // blueprint pattern fade
+  draw: 1.6,       // SVG stroke-dashoffset draw-in animations
 } as const;
 
 // Viewport threshold — trigger when 20% of element is visible

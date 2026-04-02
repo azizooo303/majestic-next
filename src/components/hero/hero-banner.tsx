@@ -161,6 +161,69 @@ export function HeroBanner({ slides, slide }: HeroBannerProps) {
         />
       </div>
 
+      {/* ── Architectural corner brackets ── */}
+      {!reduced && (
+        <>
+          {/* Top-left bracket */}
+          <svg
+            className="absolute top-8 start-8 z-10 pointer-events-none hidden md:block"
+            width="60"
+            height="60"
+            viewBox="0 0 60 60"
+            aria-hidden="true"
+          >
+            <motion.path
+              d="M 0,40 L 0,0 L 40,0"
+              stroke="rgba(255,255,255,0.35)"
+              strokeWidth="1.5"
+              fill="none"
+              strokeLinecap="square"
+              initial={{ pathLength: 0 }}
+              animate={{ pathLength: 1 }}
+              transition={{ duration: 1.2, ease: [0, 0, 0.2, 1], delay: 0.6 }}
+            />
+          </svg>
+          {/* Top-right bracket */}
+          <svg
+            className="absolute top-8 end-8 z-10 pointer-events-none hidden md:block"
+            width="60"
+            height="60"
+            viewBox="0 0 60 60"
+            aria-hidden="true"
+          >
+            <motion.path
+              d="M 60,40 L 60,0 L 20,0"
+              stroke="rgba(255,255,255,0.35)"
+              strokeWidth="1.5"
+              fill="none"
+              strokeLinecap="square"
+              initial={{ pathLength: 0 }}
+              animate={{ pathLength: 1 }}
+              transition={{ duration: 1.2, ease: [0, 0, 0.2, 1], delay: 0.8 }}
+            />
+          </svg>
+          {/* Bottom dimension line */}
+          <svg
+            className="absolute bottom-16 inset-x-0 z-10 pointer-events-none hidden md:block w-full"
+            height="8"
+            viewBox="0 0 1000 8"
+            preserveAspectRatio="none"
+            aria-hidden="true"
+          >
+            <motion.path
+              d="M 80,4 L 920,4"
+              stroke="rgba(255,255,255,0.12)"
+              strokeWidth="0.5"
+              fill="none"
+              strokeDasharray="3 8"
+              initial={{ pathLength: 0 }}
+              animate={{ pathLength: 1 }}
+              transition={{ duration: 2.0, ease: [0, 0, 0.2, 1], delay: 1.2 }}
+            />
+          </svg>
+        </>
+      )}
+
       {/* ── Text content — slides in per slide ── */}
       <div className="absolute bottom-0 start-0 end-0 z-20 ps-4 pe-4 pb-16 sm:ps-6 sm:pb-16 md:ps-10 md:pe-10 md:pb-16 lg:ps-16 lg:pb-20">
         <div style={{ maxWidth: "540px" }}>

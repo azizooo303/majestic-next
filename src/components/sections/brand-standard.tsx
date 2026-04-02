@@ -1,4 +1,5 @@
 import { Reveal } from "@/components/common/reveal";
+import { SectionArchOverlay } from "@/components/sections/section-arch-overlay";
 import { StaggerGrid } from "@/components/common/stagger-grid";
 
 interface Pillar {
@@ -42,7 +43,8 @@ const PILLARS: Pillar[] = [
 
 export function BrandStandard({ isAr }: { isAr: boolean }) {
   return (
-    <section className="w-full bg-[#0c0c0c] py-16 md:py-24">
+    <section className="relative w-full bg-[#0c0c0c] py-16 md:py-24 overflow-hidden">
+      <SectionArchOverlay variant="crosshair" color="rgba(255,255,255,1)" opacity={0.04} />
       <div className="max-w-screen-2xl mx-auto px-4 md:px-6 lg:px-8">
         <Reveal>
           <div className="mb-12 text-center">

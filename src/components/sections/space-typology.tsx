@@ -1,7 +1,8 @@
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
-import { FadeUp } from "@/components/common/fade-up";
+import { FadeDown } from "@/components/common/fade-down";
 import { SlideIn } from "@/components/common/slide-in";
+import { SectionArchOverlay } from "@/components/sections/section-arch-overlay";
 
 interface Panel {
   image: string;
@@ -21,14 +22,15 @@ const PANELS: Panel[] = [
 
 export function SpaceTypology({ isAr }: { isAr: boolean }) {
   return (
-    <section className="w-full bg-[#0c0c0c]">
-      <FadeUp>
+    <section className="relative w-full bg-[#0c0c0c] overflow-hidden">
+      <SectionArchOverlay variant="grid" color="rgba(255,255,255,1)" opacity={0.05} />
+      <FadeDown>
         <div className="max-w-screen-2xl mx-auto px-4 md:px-6 lg:px-8 pt-10 pb-4">
           <h2 className="text-xs uppercase tracking-widest text-[#aaaaaa] mb-6">
             {isAr ? "حلول تجهيز لكل فضاء عمل" : "Every Space Has a Standard"}
           </h2>
         </div>
-      </FadeUp>
+      </FadeDown>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
         {PANELS.map((panel, i) => (
           <SlideIn

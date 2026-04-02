@@ -19,6 +19,7 @@ import { BrandStandard } from "@/components/sections/brand-standard";
 import { MaterialSelector } from "@/components/sections/material-selector";
 import { InsightEditorial } from "@/components/sections/insight-editorial";
 import { ConsultationCta } from "@/components/sections/consultation-cta";
+import { ArchitecturalBackground } from "@/components/common/architectural-background";
 import type { HeroSlide } from "@/components/hero/hero-banner";
 import { getProducts, parsePrice, calcDiscount, PRODUCT_PLACEHOLDER } from "@/lib/woocommerce";
 import { getSiteContent } from "@/lib/edge-config";
@@ -155,7 +156,8 @@ export default async function HomePage({
   };
 
   return (
-    <PageWrapper id="main-content" className="flex-1 bg-white">
+    <PageWrapper id="main-content" className="flex-1 bg-white relative z-10">
+      <ArchitecturalBackground />
       <JsonLd data={organizationSchema} />
       <LocalBusinessJsonLd />
       <WebSiteJsonLd />

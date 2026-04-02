@@ -3,7 +3,8 @@
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { motion } from "framer-motion";
-import { FadeUp } from "@/components/common/fade-up";
+import { FadeDown } from "@/components/common/fade-down";
+import { SectionArchOverlay } from "@/components/sections/section-arch-overlay";
 import { CountUp } from "@/components/common/count-up";
 import { ease } from "@/lib/motion";
 
@@ -47,16 +48,13 @@ const PROJECTS: Project[] = [
   },
 ];
 
-const revealVariant = {
-  hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] } },
-};
 
 export function ProjectScale({ isAr }: { isAr: boolean }) {
   return (
-    <section className="w-full bg-white py-14 md:py-20">
+    <section className="relative w-full bg-white py-14 md:py-20 overflow-hidden">
+      <SectionArchOverlay variant="dimension" opacity={0.07} />
       <div className="max-w-screen-2xl mx-auto px-4 md:px-6 lg:px-8">
-        <FadeUp>
+        <FadeDown>
           <div className="mb-10">
             <p className="text-xs uppercase tracking-widest text-[#484848] mb-2">
               {isAr ? "مشاريع منجزة" : "Completed Projects"}
@@ -65,7 +63,7 @@ export function ProjectScale({ isAr }: { isAr: boolean }) {
               {isAr ? "تجهيز على المستوى المؤسسي" : "Built for Institutional Scale"}
             </h2>
           </div>
-        </FadeUp>
+        </FadeDown>
 
         <div className="flex flex-col gap-12">
           {PROJECTS.map((project, i) => (
