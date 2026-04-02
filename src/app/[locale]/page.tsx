@@ -21,6 +21,7 @@ import { InsightEditorial } from "@/components/sections/insight-editorial";
 import { ConsultationCta } from "@/components/sections/consultation-cta";
 import type { HeroSlide } from "@/components/hero/hero-banner";
 import { getProducts, parsePrice, calcDiscount, PRODUCT_PLACEHOLDER } from "@/lib/woocommerce";
+import { HERO_SLIDES } from "@/config/site";
 
 export async function generateMetadata({
   params,
@@ -77,47 +78,17 @@ export default async function HomePage({
 
   const wcProducts = await getProducts({ lang: locale, per_page: 8 }).catch(() => [] as Awaited<ReturnType<typeof getProducts>>);
 
-  const heroSlides: HeroSlide[] = [
-    {
-      image: "/images/hero-desks.jpg",
-      mobileImage: "/images/hero-desks-mobile.jpg",
-      alt: isAr ? "مكاتب تنفيذية ماجيستيك" : "Majestic Executive Desks",
-      collection: isAr ? "تشكيلة المكاتب التنفيذية" : "Executive Desk Collection",
-      headline: isAr ? "المكاتب التنفيذية" : "Desks Built\nfor Authority",
-      tagline: isAr
-        ? "تشكيلات مكاتب تنفيذية لبيئات العمل المؤسسية السعودية."
-        : "Executive collections engineered for the modern Saudi workspace.",
-      cta: isAr ? "استعرض المكاتب التنفيذية" : "Explore Executive Desks",
-      href: "/shop",
-      locale,
-    },
-    {
-      image: "/images/hero-seating.jpg",
-      mobileImage: "/images/hero-seating-mobile.jpg",
-      alt: isAr ? "كراسي مريحة ماجيستيك" : "Majestic Ergonomic Seating",
-      collection: isAr ? "تشكيلة الكراسي" : "Seating Collection",
-      headline: isAr ? "كراسي المهام والجلسات" : "Seating That\nPerforms",
-      tagline: isAr
-        ? "كراسي مريحة وداعمة للجسم، مُصنَّعة للجلسات الطويلة والاستخدام المكثف."
-        : "Ergonomic chairs built for focused comfort and extensive use.",
-      cta: isAr ? "استعرض تشكيلة الكراسي" : "Explore Seating",
-      href: "/shop?category=seating",
-      locale,
-    },
-    {
-      image: "/images/hero-tables.jpg",
-      mobileImage: "/images/hero-tables-mobile.jpg",
-      alt: isAr ? "طاولات اجتماعات ماجيستيك" : "Majestic Meeting Tables",
-      collection: isAr ? "طاولات الاجتماعات" : "Meeting Tables",
-      headline: isAr ? "طاولات الاجتماعات والقاعات" : "Tables That\nCommand Rooms",
-      tagline: isAr
-        ? "طاولات اجتماعات وقاعات إدارة — من أربعة مقاعد حتى أربعين — لكل حجم ونوع فضاء."
-        : "Conference and boardroom tables sized for every setting — from four seats to forty.",
-      cta: isAr ? "استعرض طاولات الاجتماعات" : "Explore Meeting Tables",
-      href: "/shop?category=tables",
-      locale,
-    },
-  ];
+  const heroSlides: HeroSlide[] = HERO_SLIDES.map((s) => ({
+    image: s.image,
+    mobileImage: s.mobileImage,
+    alt: isAr ? s.collection.ar : s.collection.en,
+    collection: isAr ? s.collection.ar : s.collection.en,
+    headline: isAr ? s.headline.ar : s.headline.en,
+    tagline: isAr ? s.tagline.ar : s.tagline.en,
+    cta: isAr ? s.cta.ar : s.cta.en,
+    href: s.href,
+    locale,
+  }));
 
   const categoryItems = CATEGORIES.map((cat) => (
     <Link
