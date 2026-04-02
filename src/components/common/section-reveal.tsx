@@ -32,23 +32,37 @@ export function SectionReveal({
   useGSAP(() => {
     if (!ref.current || reduced) return;
 
-    const fromVars: gsap.TweenVars = {
-      opacity: 0,
-      x: direction === "left" ? -distance : direction === "right" ? distance : 0,
-      y: direction === "up" ? distance * 0.6 : 0,
-      scale: direction === "fade-scale" ? 0.97 : 1,
-      duration,
-      delay,
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: ref.current,
-        start: "top 88%",
-        // play on enter ↓, stay visible scrolling past ↓, re-play on scroll up ↑, hide when fully above ↑
-        toggleActions: "play none play reverse",
-      },
-    };
+    const isHorizontal = direction === "left" || direction === "right";
 
-    gsap.from(ref.current, fromVars);
+    if (isHorizontal) {
+      // Slide from true page edge — scrub-tied so it tracks mouse scroll position
+      gsap.from(ref.current, {
+        x: () => direction === "left" ? -window.innerWidth * 1.05 : window.innerWidth * 1.05,
+        opacity: 0,
+        ease: "power2.inOut",
+        scrollTrigger: {
+          trigger: ref.current,
+          start: "top bottom",
+          end: "top 25%",
+          scrub: 1.2,
+          invalidateOnRefresh: true,
+        },
+      });
+    } else {
+      // Vertical / fade-scale — scroll-synced
+      gsap.from(ref.current, {
+        opacity: 0,
+        y: direction === "up" ? 130 : 0,
+        scale: direction === "fade-scale" ? 0.96 : 1,
+        ease: "power2.inOut",
+        scrollTrigger: {
+          trigger: ref.current,
+          start: "top bottom",
+          end: "top 42%",
+          scrub: 1.2,
+        },
+      });
+    }
   }, { scope: ref });
 
   if (reduced) {

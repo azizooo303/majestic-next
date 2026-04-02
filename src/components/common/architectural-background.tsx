@@ -8,6 +8,23 @@ import { useReducedMotion } from "framer-motion";
 
 gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin, MotionPathPlugin);
 
+// Horizontal rule lines — blueprint measurement lines across full page width
+// Each has a different parallax rate so they drift past each other as you scroll
+const RULES = [
+  { top: "6vh",   yTravel: 500, opacity: 0.13, dashed: false, label: "A1" },
+  { top: "18vh",  yTravel: 310, opacity: 0.07, dashed: true },
+  { top: "32vh",  yTravel: 420, opacity: 0.11, dashed: false, label: "A2" },
+  { top: "50vh",  yTravel: 190, opacity: 0.06, dashed: true },
+  { top: "68vh",  yTravel: 550, opacity: 0.12, dashed: false, label: "B1" },
+  { top: "88vh",  yTravel: 270, opacity: 0.08, dashed: true },
+  { top: "112vh", yTravel: 460, opacity: 0.10, dashed: false, label: "B2" },
+  { top: "138vh", yTravel: 360, opacity: 0.06, dashed: true },
+  { top: "168vh", yTravel: 480, opacity: 0.11, dashed: false, label: "C1" },
+  { top: "200vh", yTravel: 220, opacity: 0.07, dashed: true },
+  { top: "240vh", yTravel: 520, opacity: 0.10, dashed: false, label: "C2" },
+  { top: "285vh", yTravel: 160, opacity: 0.06, dashed: true },
+];
+
 export function ArchitecturalBackground() {
   const containerRef = useRef<HTMLDivElement>(null);
   const reduced = useReducedMotion();
@@ -21,6 +38,7 @@ export function ArchitecturalBackground() {
   const cornerTL = useRef<HTMLDivElement>(null);
   const cornerTR = useRef<HTMLDivElement>(null);
   const crosshairs = useRef<(HTMLDivElement | null)[]>([]);
+  const rulesRef = useRef<(HTMLDivElement | null)[]>([]);
   const compassDot = useRef<SVGCircleElement>(null);
 
   useEffect(() => {
@@ -34,30 +52,36 @@ export function ArchitecturalBackground() {
         scrub: 1.5,
       };
 
-      // Parallax depth layers
-      if (obj0.current) gsap.to(obj0.current, { y: 320, ease: "none", scrollTrigger: scrollConfig });
-      if (obj1.current) gsap.to(obj1.current, { y: 180, ease: "none", scrollTrigger: scrollConfig });
-      if (obj2.current) gsap.to(obj2.current, { y: 100, ease: "none", scrollTrigger: scrollConfig });
-      if (obj3.current) gsap.to(obj3.current, { y: -80, ease: "none", scrollTrigger: scrollConfig });
-      if (obj4.current) gsap.to(obj4.current, { y: 320, ease: "none", scrollTrigger: scrollConfig });
-      if (obj5.current) gsap.to(obj5.current, { y: 180, ease: "none", scrollTrigger: scrollConfig });
-      if (cornerTL.current) gsap.to(cornerTL.current, { y: 60, ease: "none", scrollTrigger: scrollConfig });
-      if (cornerTR.current) gsap.to(cornerTR.current, { y: 60, ease: "none", scrollTrigger: scrollConfig });
+      // Sketch objects — y + subtle x drift for depth
+      if (obj0.current) gsap.to(obj0.current, { y: 340, x: 18,  ease: "none", scrollTrigger: scrollConfig });
+      if (obj1.current) gsap.to(obj1.current, { y: 200, x: -14, ease: "none", scrollTrigger: scrollConfig });
+      if (obj2.current) gsap.to(obj2.current, { y: 120, x: 10,  ease: "none", scrollTrigger: scrollConfig });
+      if (obj3.current) gsap.to(obj3.current, { y: -90, x: -12, ease: "none", scrollTrigger: scrollConfig });
+      if (obj4.current) gsap.to(obj4.current, { y: 340, x: 8,   ease: "none", scrollTrigger: scrollConfig });
+      if (obj5.current) gsap.to(obj5.current, { y: 200, x: -10, ease: "none", scrollTrigger: scrollConfig });
+      if (cornerTL.current) gsap.to(cornerTL.current, { y: 70,  ease: "none", scrollTrigger: scrollConfig });
+      if (cornerTR.current) gsap.to(cornerTR.current, { y: 70,  ease: "none", scrollTrigger: scrollConfig });
       crosshairs.current.forEach((el, i) => {
         if (!el) return;
-        gsap.to(el, { y: [100, 60, 140, 200, 80][i] ?? 80, ease: "none", scrollTrigger: scrollConfig });
+        gsap.to(el, { y: [110, 70, 160, 220, 90][i] ?? 90, ease: "none", scrollTrigger: scrollConfig });
       });
 
-      // DrawSVG — precise stroke draw-in as each object enters viewport
+      // Horizontal rule lines — each at its own parallax rate creating depth layers
+      rulesRef.current.forEach((el, i) => {
+        if (!el) return;
+        gsap.to(el, { y: RULES[i]?.yTravel ?? 200, ease: "none", scrollTrigger: scrollConfig });
+      });
+
+      // DrawSVG — stroke draw-in as each sketch object enters viewport
       const drawObj = (container: HTMLDivElement | null, start = "top 88%") => {
         if (!container) return;
         const paths = container.querySelectorAll<SVGGeometryElement>("path, line, rect, circle, ellipse");
         gsap.set(paths, { drawSVG: "0%" });
         gsap.to(paths, {
           drawSVG: "100%",
-          duration: 1.6,
+          duration: 1.8,
           ease: "power2.out",
-          stagger: 0.04,
+          stagger: 0.045,
           scrollTrigger: {
             trigger: container,
             start,
@@ -66,14 +90,14 @@ export function ArchitecturalBackground() {
         });
       };
 
-      drawObj(obj0.current, "top 90%");
+      drawObj(obj0.current, "top 92%");
       drawObj(obj1.current, "top 88%");
       drawObj(obj2.current, "top 85%");
       drawObj(obj3.current, "top 85%");
       drawObj(obj4.current, "top 88%");
       drawObj(obj5.current, "top 88%");
 
-      // Corner brackets draw in on page load (not scroll)
+      // Corner brackets draw in on page load
       if (cornerTL.current && cornerTR.current) {
         const tlPath = cornerTL.current.querySelector("path");
         const trPath = cornerTR.current.querySelector("path");
@@ -81,7 +105,7 @@ export function ArchitecturalBackground() {
         if (trPath) { gsap.set(trPath, { drawSVG: "0%" }); gsap.to(trPath, { drawSVG: "100%", duration: 1.0, ease: "power2.out", delay: 1.0 }); }
       }
 
-      // MotionPath — compass dot travels the arc as you scroll past the compass
+      // MotionPath — compass dot travels the arc on scroll
       if (compassDot.current && obj3.current) {
         gsap.to(compassDot.current, {
           motionPath: {
@@ -110,10 +134,72 @@ export function ArchitecturalBackground() {
     <div
       ref={containerRef}
       aria-hidden="true"
-      className="absolute inset-0 pointer-events-none"
-      style={{ zIndex: 5, mixBlendMode: "difference" }}
+      className="absolute inset-0 pointer-events-none overflow-hidden"
+      style={{
+        zIndex: 5,
+        mixBlendMode: "difference",
+        // Sketch paper grid — fine 40×40 graph paper at very low opacity
+        backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Cpath d='M 40 0 L 0 0 0 40' fill='none' stroke='%23ffffff' stroke-width='0.35' opacity='0.18'/%3E%3C/svg%3E")`,
+        backgroundRepeat: "repeat",
+        backgroundSize: "40px 40px",
+      }}
     >
-      {/* OBJECT 1: Office Chair — right edge, top */}
+      {/* ── Moving horizontal rule lines — blueprint paper effect ── */}
+      {RULES.map((rule, i) => (
+        <div
+          key={i}
+          ref={(el) => { rulesRef.current[i] = el; }}
+          className="absolute left-0 right-0 hidden md:block"
+          style={{ top: rule.top }}
+        >
+          <div
+            style={{
+              position: "relative",
+              height: "1px",
+              width: "100%",
+              background: rule.dashed
+                ? "none"
+                : `rgba(255,255,255,${rule.opacity})`,
+              borderTop: rule.dashed
+                ? `1px dashed rgba(255,255,255,${rule.opacity})`
+                : "none",
+            }}
+          >
+            {/* Label on left edge for solid lines */}
+            {rule.label && (
+              <span
+                style={{
+                  position: "absolute",
+                  left: 8,
+                  top: -9,
+                  fontSize: 9,
+                  fontFamily: "monospace",
+                  color: `rgba(255,255,255,${rule.opacity * 1.4})`,
+                  letterSpacing: "0.12em",
+                  userSelect: "none",
+                }}
+              >
+                {rule.label}
+              </span>
+            )}
+            {/* Tick marks every 80px via repeating linear-gradient */}
+            <div
+              style={{
+                position: "absolute",
+                inset: 0,
+                backgroundImage: `repeating-linear-gradient(90deg, rgba(255,255,255,${rule.opacity * 0.9}) 0px, rgba(255,255,255,${rule.opacity * 0.9}) 1px, transparent 1px, transparent 80px)`,
+                backgroundSize: "80px 6px",
+                backgroundRepeat: "repeat-x",
+                backgroundPosition: "0 -2px",
+                height: 6,
+                top: -2,
+              }}
+            />
+          </div>
+        </div>
+      ))}
+
+      {/* ── SKETCH OBJECT 1: Office Chair — right edge, top ── */}
       <div ref={obj0} className="absolute hidden lg:block" style={{ top: "8vh", right: "-20px", width: 220 }}>
         <svg viewBox="0 0 200 280" width="220" height="308" fill="none">
           <g stroke="#ffffff" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" opacity="0.55">
@@ -145,7 +231,7 @@ export function ArchitecturalBackground() {
         </svg>
       </div>
 
-      {/* OBJECT 2: Executive Desk — left edge */}
+      {/* ── SKETCH OBJECT 2: Executive Desk — left edge ── */}
       <div ref={obj1} className="absolute hidden lg:block" style={{ top: "55vh", left: "-30px", width: 280 }}>
         <svg viewBox="0 0 260 160" width="280" height="172" fill="none">
           <g stroke="#ffffff" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" opacity="0.5">
@@ -167,7 +253,7 @@ export function ArchitecturalBackground() {
         </svg>
       </div>
 
-      {/* OBJECT 3: Floor Lamp — right edge, mid */}
+      {/* ── SKETCH OBJECT 3: Floor Lamp — right edge, mid ── */}
       <div ref={obj2} className="absolute hidden xl:block" style={{ top: "130vh", right: "10px", width: 120 }}>
         <svg viewBox="0 0 100 320" width="120" height="384" fill="none">
           <g stroke="#ffffff" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" opacity="0.52">
@@ -189,7 +275,7 @@ export function ArchitecturalBackground() {
         </svg>
       </div>
 
-      {/* OBJECT 4: Drafting Compass — left, counter-drifts up */}
+      {/* ── SKETCH OBJECT 4: Drafting Compass — left, counter-drifts up ── */}
       <div ref={obj3} className="absolute hidden xl:block" style={{ top: "200vh", left: "20px", width: 160 }}>
         <svg viewBox="0 0 140 200" width="160" height="229" fill="none">
           <g stroke="#ffffff" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" opacity="0.5">
@@ -202,15 +288,13 @@ export function ArchitecturalBackground() {
             <rect x="111" y="183" width="7" height="12" rx="1" />
             <rect x="55" y="78" width="30" height="10" rx="2" />
             <line x1="60" y1="83" x2="80" y2="83" />
-            {/* Arc path with id for MotionPath */}
             <path id="compass-arc" d="M 30 170 Q 70 130 110 170" strokeDasharray="4 3" />
           </g>
-          {/* Dot that travels the arc via MotionPath */}
           <circle ref={compassDot} r="3" fill="#ffffff" opacity="0.6" cx="30" cy="170" />
         </svg>
       </div>
 
-      {/* OBJECT 5: Ruler — left, deep */}
+      {/* ── SKETCH OBJECT 5: Ruler — left, deep ── */}
       <div ref={obj4} className="absolute hidden lg:block" style={{ top: "280vh", left: "-10px", width: 200 }}>
         <svg viewBox="0 0 180 60" width="200" height="67" fill="none">
           <g stroke="#ffffff" strokeWidth="1.4" strokeLinecap="round" opacity="0.5">
@@ -227,7 +311,7 @@ export function ArchitecturalBackground() {
         </svg>
       </div>
 
-      {/* OBJECT 6: Storage Cabinet — right, lower */}
+      {/* ── SKETCH OBJECT 6: Storage Cabinet — right, lower ── */}
       <div ref={obj5} className="absolute hidden lg:block" style={{ top: "340vh", right: "-15px", width: 180 }}>
         <svg viewBox="0 0 150 220" width="180" height="264" fill="none">
           <g stroke="#ffffff" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" opacity="0.5">
@@ -249,7 +333,7 @@ export function ArchitecturalBackground() {
         </svg>
       </div>
 
-      {/* Corner brackets — draw in on load */}
+      {/* ── Corner brackets — draw in on load ── */}
       <div ref={cornerTL} className="absolute hidden md:block" style={{ top: "20vh", left: "12px" }}>
         <svg viewBox="0 0 40 40" width="40" height="40" fill="none">
           <path d="M 0,14 L 0,0 L 14,0" stroke="#ffffff" strokeWidth="1.2" opacity="0.65" strokeLinecap="square" />
@@ -261,7 +345,7 @@ export function ArchitecturalBackground() {
         </svg>
       </div>
 
-      {/* Crosshairs */}
+      {/* ── Crosshairs at strategic intervals ── */}
       {[
         { top: "45vh", left: "5%" },
         { top: "95vh", right: "4%" },
