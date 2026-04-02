@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { supabaseClient } from "@/lib/supabase";
+import { supabaseClient } from "@/lib/supabase-client";
 
 interface ContactFormProps {
   isAr: boolean;

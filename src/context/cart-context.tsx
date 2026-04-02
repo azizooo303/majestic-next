@@ -8,7 +8,7 @@ import {
   useReducer,
   useRef,
 } from "react";
-import { supabaseClient } from "@/lib/supabase";
+import { supabaseClient } from "@/lib/supabase-client";
 import type { CartItem } from "@/lib/cart";
 
 // ── State ──────────────────────────────────────────────────────────────────
