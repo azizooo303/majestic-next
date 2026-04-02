@@ -253,7 +253,7 @@ export function Header() {
               {/* Search — desktop + tablet */}
               <button
                 onClick={() => setIsSearchOpen(true)}
-                className="hidden sm:flex p-2 md:p-2.5 text-[#0c0c0c] hover:text-[#484848] transition-colors cursor-pointer"
+                className="flex p-2 md:p-2.5 text-[#0c0c0c] hover:text-[#484848] transition-colors cursor-pointer"
                 aria-label={locale === "ar" ? "بحث" : "Search"}
               >
                 <Search className="w-5 h-5" />

@@ -14,7 +14,7 @@ export function ProductGallery({ images, name }: ProductGalleryProps) {
 
   if (!images.length) {
     return (
-      <div className="aspect-square bg-light rounded-xl flex items-center justify-center text-disabled">
+      <div className="aspect-square bg-[#fafafa] rounded-sm border border-[rgba(0,0,0,0.08)] flex items-center justify-center text-[#484848] text-sm">
         No image available
       </div>
     );

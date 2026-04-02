@@ -23,9 +23,9 @@ export function SpaceTypology({ isAr }: { isAr: boolean }) {
     <section className="w-full bg-[#0c0c0c]">
       <Reveal>
         <div className="max-w-screen-2xl mx-auto px-4 md:px-6 lg:px-8 pt-10 pb-4">
-          <p className="text-xs uppercase tracking-widest text-[#aaaaaa] mb-6">
+          <h2 className="text-xs uppercase tracking-widest text-[#aaaaaa] mb-6">
             {isAr ? "حلول تجهيز لكل فضاء عمل" : "Every Space Has a Standard"}
-          </p>
+          </h2>
         </div>
       </Reveal>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6">

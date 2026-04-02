@@ -50,7 +50,7 @@ export function ShopSidebar({ activeCategory }: ShopSidebarProps) {
 
   return (
     <aside
-      className="hidden lg:block w-[260px] shrink-0 sticky top-[156px]"
+      className="hidden lg:block w-[260px] shrink-0 sticky top-[200px]"
       aria-label={isAr ? "تصفية المنتجات" : "Product filters"}
     >
       {/* Heading + Reset */}
