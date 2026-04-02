@@ -1,12 +1,14 @@
 "use client";
 
 import { useState } from "react";
+import { supabaseClient } from "@/lib/supabase";
 
 interface ContactFormProps {
   isAr: boolean;
+  source?: "contact" | "quotation";
 }
 
-export function ContactForm({ isAr }: ContactFormProps) {
+export function ContactForm({ isAr, source = "contact" }: ContactFormProps) {
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -14,6 +16,8 @@ export function ContactForm({ isAr }: ContactFormProps) {
     subject: "",
     message: "",
   });
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [errorMsg, setErrorMsg] = useState("");
 
   function handleChange(
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -21,9 +25,33 @@ export function ContactForm({ isAr }: ContactFormProps) {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   }
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    console.log("Contact form submission:", form);
+    setStatus("loading");
+    setErrorMsg("");
+
+    const { error } = await supabaseClient.from("contact_submissions").insert({
+      name: form.name,
+      email: form.email,
+      phone: form.phone || null,
+      subject: form.subject || null,
+      message: form.message,
+      source,
+    });
+
+    if (error) {
+      console.error("[ContactForm] Supabase insert error:", error);
+      setErrorMsg(
+        isAr
+          ? "حدث خطأ أثناء الإرسال. يرجى المحاولة مرة أخرى."
+          : "Something went wrong. Please try again."
+      );
+      setStatus("error");
+      return;
+    }
+
+    setStatus("success");
+    setForm({ name: "", email: "", phone: "", subject: "", message: "" });
   }
 
   const fieldClass =
@@ -44,6 +72,28 @@ export function ContactForm({ isAr }: ContactFormProps) {
         { value: "aftersales", label: "After Sales" },
         { value: "other", label: "Other" },
       ];
+
+  if (status === "success") {
+    return (
+      <div className="rounded-sm border border-[rgba(0,0,0,0.12)] bg-[#fafafa] px-6 py-10 text-center space-y-3">
+        <p className="text-2xl">✓</p>
+        <p className="font-semibold text-[#0c0c0c] text-base">
+          {isAr ? "تم إرسال رسالتك بنجاح" : "Message sent successfully"}
+        </p>
+        <p className="text-sm text-[#484848]">
+          {isAr
+            ? "سيتواصل معك فريقنا خلال يوم عمل."
+            : "Our team will get back to you within one business day."}
+        </p>
+        <button
+          onClick={() => setStatus("idle")}
+          className="mt-2 text-sm text-[#484848] border-b border-[#484848] pb-0.5 hover:text-[#0c0c0c] transition-colors"
+        >
+          {isAr ? "إرسال رسالة أخرى" : "Send another message"}
+        </button>
+      </div>
+    );
+  }
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4" noValidate>
@@ -132,11 +182,20 @@ export function ContactForm({ isAr }: ContactFormProps) {
         />
       </div>
 
+      {status === "error" && (
+        <p className="text-sm text-[#e53e3e] bg-[#fff5f5] border border-[#fed7d7] rounded-sm px-4 py-3">
+          {errorMsg}
+        </p>
+      )}
+
       <button
         type="submit"
-        className="btn-press w-full bg-[#0c0c0c] text-white px-8 py-3.5 font-semibold text-sm tracking-wide rounded-sm hover:bg-[#333] transition-colors"
+        disabled={status === "loading"}
+        className="btn-press w-full bg-[#0c0c0c] text-white px-8 py-3.5 font-semibold text-sm tracking-wide rounded-sm hover:bg-[#333] transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
       >
-        {isAr ? "إرسال الرسالة" : "Send Message"}
+        {status === "loading"
+          ? isAr ? "جارٍ الإرسال..." : "Sending..."
+          : isAr ? "إرسال الرسالة" : "Send Message"}
       </button>
     </form>
   );

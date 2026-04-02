@@ -1,44 +1,10 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { useLocale } from "next-intl";
 import { X, ShieldCheck } from "lucide-react";
-
-interface CartItem {
-  id: number;
-  name: string;
-  nameAr: string;
-  category: string;
-  categoryAr: string;
-  brand: string;
-  price: number;
-  image: string;
-}
-
-const INITIAL_ITEMS: CartItem[] = [
-  {
-    id: 1,
-    name: "Enigma Executive Desk",
-    nameAr: "مكتب إنيجما التنفيذي",
-    category: "Executive Desks",
-    categoryAr: "المكاتب التنفيذية",
-    brand: "Majestic",
-    price: 2850,
-    image: "/images/hero-desks.jpg",
-  },
-  {
-    id: 2,
-    name: "ErgoMax Pro Chair",
-    nameAr: "كرسي إرجوماكس برو",
-    category: "Ergonomic Chairs",
-    categoryAr: "الكراسي المريحة",
-    brand: "ChairLine",
-    price: 1250,
-    image: "/images/hero-seating.jpg",
-  },
-];
+import { useCart } from "@/context/cart-context";
 
 const VAT_RATE = 0.15;
 
@@ -75,28 +41,9 @@ function QuantityControl({
 export function CartClient() {
   const locale = useLocale();
   const isAr = locale === "ar";
+  const { items, removeItem, updateQuantity, hydrated } = useCart();
 
-  const [items, setItems] = useState<CartItem[]>(INITIAL_ITEMS);
-  const [quantities, setQuantities] = useState<Record<number, number>>(
-    Object.fromEntries(INITIAL_ITEMS.map((i) => [i.id, 1]))
-  );
-
-  const updateQuantity = (id: number, qty: number) =>
-    setQuantities((prev) => ({ ...prev, [id]: qty }));
-
-  const removeItem = (id: number) => {
-    setItems((prev) => prev.filter((i) => i.id !== id));
-    setQuantities((prev) => {
-      const next = { ...prev };
-      delete next[id];
-      return next;
-    });
-  };
-
-  const subtotal = items.reduce(
-    (sum, item) => sum + item.price * (quantities[item.id] ?? 1),
-    0
-  );
+  const subtotal = items.reduce((sum, item) => sum + item.price * item.quantity, 0);
   const vat = subtotal * VAT_RATE;
   const total = subtotal + vat;
 
@@ -107,7 +54,19 @@ export function CartClient() {
     })}`;
 
   const isEmpty = items.length === 0;
-  const totalQty = items.reduce((s, i) => s + (quantities[i.id] ?? 1), 0);
+  const totalQty = items.reduce((s, i) => s + i.quantity, 0);
+
+  // While Supabase session is loading, show a neutral skeleton to avoid flash
+  if (!hydrated) {
+    return (
+      <main id="main-content" className="bg-white min-h-screen py-10 md:py-14">
+        <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
+          <div className="h-8 w-48 bg-[#f0f0f0] rounded-sm animate-pulse mb-8" />
+          <div className="h-32 bg-[#f0f0f0] rounded-sm animate-pulse" />
+        </div>
+      </main>
+    );
+  }
 
   return (
     <main id="main-content" className="bg-white min-h-screen py-10 md:py-14">
@@ -165,7 +124,6 @@ export function CartClient() {
                           </p>
                           <p className="text-xs text-[#484848] mt-0.5">
                             {isAr ? item.categoryAr : item.category}
-                            &nbsp;·&nbsp;{item.brand}
                           </p>
                         </div>
                         <button
@@ -179,11 +137,11 @@ export function CartClient() {
 
                       <div className="flex items-center justify-between mt-auto pt-2">
                         <QuantityControl
-                          value={quantities[item.id] ?? 1}
+                          value={item.quantity}
                           onChange={(v) => updateQuantity(item.id, v)}
                         />
                         <p className="font-bold text-[#0c0c0c] text-sm">
-                          {fmt(item.price * (quantities[item.id] ?? 1))}
+                          {fmt(item.price * item.quantity)}
                         </p>
                       </div>
                     </div>

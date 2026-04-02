@@ -2,35 +2,42 @@
 
 import { useState } from "react";
 import { ShoppingBag, Loader2, Minus, Plus } from "lucide-react";
+import { useCart } from "@/context/cart-context";
+import type { CartItem } from "@/lib/cart";
 
 interface AddToCartButtonProps {
   productId: number;
   locale: string;
+  /** Product details needed to populate the cart item */
+  product?: {
+    name: string;
+    nameAr: string;
+    price: number;
+    image: string;
+    category: string;
+    categoryAr: string;
+  };
 }
 
-export function AddToCartButton({ productId, locale }: AddToCartButtonProps) {
+export function AddToCartButton({ productId, locale, product }: AddToCartButtonProps) {
   const [quantity, setQuantity] = useState(1);
-  const [isLoading, setIsLoading] = useState(false);
   const [added, setAdded] = useState(false);
   const isAr = locale === "ar";
+  const { addItem } = useCart();
 
-  async function handleAddToCart() {
-    setIsLoading(true);
-    try {
-      const res = await fetch("/api/cart/add", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ productId, quantity }),
-      });
-      if (res.ok) {
-        setAdded(true);
-        setTimeout(() => setAdded(false), 2000);
-      }
-    } catch {
-      // Handle error silently for now
-    } finally {
-      setIsLoading(false);
-    }
+  function handleAddToCart() {
+    const item: Omit<CartItem, "quantity"> = {
+      id: productId,
+      name: product?.name ?? `Product ${productId}`,
+      nameAr: product?.nameAr ?? `منتج ${productId}`,
+      price: product?.price ?? 0,
+      image: product?.image ?? "",
+      category: product?.category ?? "",
+      categoryAr: product?.categoryAr ?? "",
+    };
+    addItem({ ...item, quantity });
+    setAdded(true);
+    setTimeout(() => setAdded(false), 2000);
   }
 
   return (
@@ -61,20 +68,16 @@ export function AddToCartButton({ productId, locale }: AddToCartButtonProps) {
       {/* Add to Cart */}
       <button
         onClick={handleAddToCart}
-        disabled={isLoading}
+        disabled={added}
         className="w-full flex items-center justify-center gap-2 px-6 py-3.5
           bg-gold text-primary font-medium rounded-md
           transition-all duration-200 hover:opacity-90 hover:-translate-y-0.5
           focus:outline-none focus:ring-2 focus:ring-gold/50
           disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
       >
-        {isLoading ? (
-          <Loader2 className="w-5 h-5 animate-spin" />
-        ) : (
-          <ShoppingBag className="w-5 h-5" />
-        )}
+        <ShoppingBag className="w-5 h-5" />
         {added
-          ? isAr ? "تمت الإضافة" : "Added"
+          ? isAr ? "تمت الإضافة ✓" : "Added ✓"
           : isAr ? "أضف إلى السلة" : "Add to Cart"}
       </button>
 

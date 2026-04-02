@@ -8,6 +8,7 @@ import { Header } from "@/components/layout/header";
 import { getSiteContent } from "@/lib/edge-config";
 import { Footer } from "@/components/layout/footer";
 import { AnimatePresenceWrapper } from "@/components/common/animate-presence-wrapper";
+import { CartProvider } from "@/context/cart-context";
 import "../globals.css";
 
 const raleway = Raleway({
@@ -74,11 +75,13 @@ export default async function LocaleLayout({
           >
             Skip to content
           </a>
-          <Header announcement={siteContent.announcement} />
-          <AnimatePresenceWrapper>
-            {children}
-          </AnimatePresenceWrapper>
-          <Footer />
+          <CartProvider>
+            <Header announcement={siteContent.announcement} />
+            <AnimatePresenceWrapper>
+              {children}
+            </AnimatePresenceWrapper>
+            <Footer />
+          </CartProvider>
         </NextIntlClientProvider>
       </body>
     </html>

@@ -40,8 +40,8 @@ export default async function QuotationPage({
           </p>
         </Reveal>
 
-        {/* Reuse the existing contact form — works for quotation requests too */}
-        <ContactForm isAr={isAr} />
+        {/* Reuse the existing contact form — source="quotation" tags the row in Supabase */}
+        <ContactForm isAr={isAr} source="quotation" />
       </div>
     </PageWrapper>
   );

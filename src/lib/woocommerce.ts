@@ -139,6 +139,26 @@ export interface ProductPage {
   totalPages: number;
 }
 
+// ── Supabase cache imports (lazy to avoid circular deps) ──────────────────
+
+async function trySupabaseProducts() {
+  try {
+    const { getProductsFromSupabase } = await import("./sync-products");
+    return await getProductsFromSupabase();
+  } catch {
+    return [];
+  }
+}
+
+async function trySupabaseCategories() {
+  try {
+    const { getCategoriesFromSupabase } = await import("./sync-products");
+    return await getCategoriesFromSupabase();
+  } catch {
+    return [];
+  }
+}
+
 export async function getProductPage(params: {
   page?: number;
   per_page?: number;
@@ -194,6 +214,19 @@ export async function getProduct(idOrSlug: number | string): Promise<WCProduct> 
 }
 
 export async function getCategories(): Promise<WCCategory[]> {
+  // Try Supabase cache first; fall back to direct WC call if empty
+  const cached = await trySupabaseCategories();
+  if (cached.length) {
+    return cached.map((c) => ({
+      id: c.id,
+      name: c.name,
+      slug: c.slug,
+      parent: 0,
+      description: "",
+      image: null,
+      count: c.count,
+    }));
+  }
   return wcFetch<WCCategory[]>({
     endpoint: "products/categories",
     params: { per_page: 100, hide_empty: 1 },

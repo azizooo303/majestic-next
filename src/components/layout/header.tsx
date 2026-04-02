@@ -15,6 +15,7 @@ import {
   FileText,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useCart } from "@/context/cart-context";
 
 /* ------------------------------------------------------------------ */
 /*  NAV CONFIG                                                         */
@@ -167,6 +168,7 @@ interface HeaderProps {
 export function Header({ announcement }: HeaderProps) {
   const t = useTranslations();
   const locale = useLocale();
+  const { itemCount } = useCart();
   const pathname = usePathname();
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -318,11 +320,11 @@ export function Header({ announcement }: HeaderProps) {
               <Link
                 href="/cart"
                 className="p-2 md:p-2.5 text-[#0c0c0c] hover:text-[#484848] transition-colors relative"
-                aria-label={locale === "ar" ? "سلة التسوق" : "Cart, 0 items"}
+                aria-label={locale === "ar" ? "سلة التسوق" : `Cart, ${itemCount} items`}
               >
                 <ShoppingBag className="w-5 h-5" />
                 <span className="absolute top-1 end-1 w-3.5 h-3.5 bg-[#0c0c0c] text-white text-[9px] font-bold rounded-full flex items-center justify-center">
-                  0
+                  {itemCount}
                 </span>
               </Link>
 
