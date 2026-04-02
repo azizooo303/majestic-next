@@ -30,7 +30,7 @@ export function ProductCard({
     <div className="group bg-white border border-[rgba(0,0,0,0.21)] rounded-sm overflow-hidden transition-all duration-200 hover:shadow-md">
       {/* Clickable image + info area */}
       <Link href={`/shop/${id}`} className="block">
-        <div className="relative aspect-[281/356] bg-[#fafafa] overflow-hidden">
+        <div className="relative aspect-square bg-[#fafafa] overflow-hidden">
           {discount && (
             <span className="absolute top-2 start-2 z-10 bg-[#e53e3e] text-white text-xs font-bold px-2 py-0.5 rounded-sm">
               -{discount}%

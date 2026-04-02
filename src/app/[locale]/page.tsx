@@ -20,6 +20,7 @@ import { MaterialSelector } from "@/components/sections/material-selector";
 import { InsightEditorial } from "@/components/sections/insight-editorial";
 import { ConsultationCta } from "@/components/sections/consultation-cta";
 import { ArchitecturalBackground } from "@/components/common/architectural-background";
+import { SectionReveal } from "@/components/common/section-reveal";
 import type { HeroSlide } from "@/components/hero/hero-banner";
 import { getProducts, parsePrice, calcDiscount, PRODUCT_PLACEHOLDER } from "@/lib/woocommerce";
 import { getSiteContent } from "@/lib/edge-config";
@@ -165,75 +166,97 @@ export default async function HomePage({
       <HeroBanner slides={heroSlides} />
 
       {/* Category Navigation Strip */}
-      <section className="w-full bg-white border-b border-[rgba(0,0,0,0.21)] py-6">
-        <div className="max-w-screen-2xl mx-auto px-4 md:px-6 lg:px-8">
-          <StaggerChildren
-            staggerDelay={0.05}
-            className="flex overflow-x-auto gap-6 no-scrollbar justify-start md:justify-center"
-          >
-            {categoryItems}
-          </StaggerChildren>
-        </div>
-      </section>
+      <SectionReveal direction="up" distance={40} duration={0.6}>
+        <section className="w-full bg-white border-b border-[rgba(0,0,0,0.21)] py-6">
+          <div className="max-w-screen-2xl mx-auto px-4 md:px-6 lg:px-8">
+            <StaggerChildren
+              staggerDelay={0.05}
+              className="flex overflow-x-auto gap-6 no-scrollbar justify-start md:justify-center"
+            >
+              {categoryItems}
+            </StaggerChildren>
+          </div>
+        </section>
+      </SectionReveal>
 
       {/* Featured Products */}
-      <section className="bg-white py-12 md:py-16">
-        <div className="max-w-screen-2xl mx-auto px-4 md:px-6 lg:px-8">
-          <FadeUp>
-            <div className="flex items-center justify-between mb-8">
-              <h2 className="text-2xl md:text-3xl font-bold text-[#0c0c0c] tracking-tight">
-                {isAr ? "مختارات هذا الموسم" : "Selected for This Season"}
-              </h2>
+      <SectionReveal direction="fade-scale" duration={0.75}>
+        <section className="bg-white py-12 md:py-16">
+          <div className="max-w-screen-2xl mx-auto px-4 md:px-6 lg:px-8">
+            <FadeUp>
+              <div className="flex items-center justify-between mb-8">
+                <h2 className="text-2xl md:text-3xl font-bold text-[#0c0c0c] tracking-tight">
+                  {isAr ? "مختارات هذا الموسم" : "Selected for This Season"}
+                </h2>
+                <Link
+                  href="/shop"
+                  className="text-sm font-medium text-[#484848] hover:text-[#0c0c0c] border-b border-[#484848] pb-0.5"
+                >
+                  {isAr ? "عرض الكل" : t("common.viewAll")}
+                </Link>
+              </div>
+            </FadeUp>
+
+            <StaggerChildren
+              staggerDelay={0.06}
+              className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[15px]"
+            >
+              {productItems}
+            </StaggerChildren>
+
+            <div className="text-center mt-10">
               <Link
                 href="/shop"
-                className="text-sm font-medium text-[#484848] hover:text-[#0c0c0c] border-b border-[#484848] pb-0.5"
+                className="btn-press inline-block bg-[#0c0c0c] text-white px-10 py-3.5 font-semibold
+                  text-sm tracking-wide rounded-sm hover:bg-[#333] transition-colors"
               >
-                {isAr ? "عرض الكل" : t("common.viewAll")}
+                {isAr ? "تسوق جميع المنتجات" : "Shop All Products"}
               </Link>
             </div>
-          </FadeUp>
-
-          <StaggerChildren
-            staggerDelay={0.06}
-            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[15px]"
-          >
-            {productItems}
-          </StaggerChildren>
-
-          <div className="text-center mt-10">
-            <Link
-              href="/shop"
-              className="btn-press inline-block bg-[#0c0c0c] text-white px-10 py-3.5 font-semibold
-                text-sm tracking-wide rounded-sm hover:bg-[#333] transition-colors"
-            >
-              {isAr ? "تسوق جميع المنتجات" : "Shop All Products"}
-            </Link>
           </div>
-        </div>
-      </section>
+        </section>
+      </SectionReveal>
 
-      {/* New Sections */}
-      {siteContent.sections.spaceTypology && <SpaceTypology isAr={isAr} />}
-      {siteContent.sections.collections && <Collections isAr={isAr} />}
-      {siteContent.sections.craftsmanshipBand && <CraftsmanshipBand isAr={isAr} />}
-      {siteContent.sections.projectScale && <ProjectScale isAr={isAr} />}
-      <BrandStandard isAr={isAr} />
-      {siteContent.sections.materialSelector && <MaterialSelector isAr={isAr} />}
-      {siteContent.sections.insightEditorial && <InsightEditorial isAr={isAr} />}
+      {/* New Sections — alternating directions for storytelling rhythm */}
+      <SectionReveal direction="left" duration={0.8}>
+        {siteContent.sections.spaceTypology && <SpaceTypology isAr={isAr} />}
+      </SectionReveal>
+      <SectionReveal direction="right" duration={0.8}>
+        {siteContent.sections.collections && <Collections isAr={isAr} />}
+      </SectionReveal>
+      <SectionReveal direction="up" duration={0.7}>
+        {siteContent.sections.craftsmanshipBand && <CraftsmanshipBand isAr={isAr} />}
+      </SectionReveal>
+      <SectionReveal direction="left" duration={0.8}>
+        {siteContent.sections.projectScale && <ProjectScale isAr={isAr} />}
+      </SectionReveal>
+      <SectionReveal direction="right" duration={0.8}>
+        <BrandStandard isAr={isAr} />
+      </SectionReveal>
+      <SectionReveal direction="up" duration={0.7}>
+        {siteContent.sections.materialSelector && <MaterialSelector isAr={isAr} />}
+      </SectionReveal>
+      <SectionReveal direction="left" duration={0.8}>
+        {siteContent.sections.insightEditorial && <InsightEditorial isAr={isAr} />}
+      </SectionReveal>
 
       {/* Promotional Banner */}
-      <PromoBanner
-        isAr={isAr}
-        headline={isAr ? "توريد للقطاع الحكومي والمؤسسي — خدمة على مستوى المملكة" : "Corporate & Government Supply — Available Nationwide"}
-        body={isAr
-          ? "تورّد ماجستيك بيئات عمل متكاملة للمؤسسات في جميع أنحاء المملكة. اطلب استشارة للمشروع."
-          : "Majestic supplies complete workspace environments to organizations across the Kingdom. Request a project consultation."}
-        cta={isAr ? "طلب استشارة" : "Request a Consultation"}
-        ctaHref="/about"
-      />
+      <SectionReveal direction="fade-scale" duration={0.7}>
+        <PromoBanner
+          isAr={isAr}
+          headline={isAr ? "توريد للقطاع الحكومي والمؤسسي — خدمة على مستوى المملكة" : "Corporate & Government Supply — Available Nationwide"}
+          body={isAr
+            ? "تورّد ماجستيك بيئات عمل متكاملة للمؤسسات في جميع أنحاء المملكة. اطلب استشارة للمشروع."
+            : "Majestic supplies complete workspace environments to organizations across the Kingdom. Request a project consultation."}
+          cta={isAr ? "طلب استشارة" : "Request a Consultation"}
+          ctaHref="/about"
+        />
+      </SectionReveal>
 
       {/* Planning Ideas / Get Inspired */}
-      <InspireSection isAr={isAr} />
+      <SectionReveal direction="right" duration={0.8}>
+        <InspireSection isAr={isAr} />
+      </SectionReveal>
 
       {/* Newsletter */}
       <FadeUp>
