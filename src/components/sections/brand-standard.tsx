@@ -43,7 +43,7 @@ const PILLARS: Pillar[] = [
 
 export function BrandStandard({ isAr }: { isAr: boolean }) {
   return (
-    <section className="relative w-full bg-[#0c0c0c] py-16 md:py-24 overflow-hidden">
+    <section className="relative w-full bg-[rgba(12,12,12,0.85)] py-16 md:py-24 overflow-hidden">
       <SectionArchOverlay variant="crosshair" color="rgba(255,255,255,1)" opacity={0.04} />
       <div className="max-w-screen-2xl mx-auto px-4 md:px-6 lg:px-8">
         <Reveal>
@@ -66,7 +66,7 @@ export function BrandStandard({ isAr }: { isAr: boolean }) {
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-[rgba(255,255,255,0.08)]"
         >
           {PILLARS.map((pillar) => (
-            <div key={pillar.number} className="bg-[#0c0c0c] p-8 md:p-10">
+            <div key={pillar.number} className="bg-[rgba(12,12,12,0.85)] p-8 md:p-10">
               <p className="text-4xl font-bold text-[#C1B167] mb-5">{pillar.number}</p>
               <h3 className="text-white font-bold text-base mb-3">
                 {isAr ? pillar.headingAr : pillar.headingEn}

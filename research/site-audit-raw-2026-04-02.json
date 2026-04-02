@@ -1,0 +1,4088 @@
+{
+  "capturedAt": "2026-04-02T11:45:40.172Z",
+  "homepage": {
+    "url": "https://majestic-next.vercel.app/en",
+    "title": "Majestic Furniture | Premium Office Furniture in Riyadh",
+    "metaDescription": "Majestic Furniture — Saudi Arabia's premier destination for professional office furniture. Executive desks, ergonomic chairs, and workstations for elevated workspace environments.",
+    "lang": "en",
+    "dir": "ltr",
+    "documentHeight": 10025,
+    "topLevelSections": [
+      {
+        "index": 0,
+        "tag": "script",
+        "id": "",
+        "classes": "",
+        "dataAttributes": {},
+        "innerTextSnippet": "{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"name\":\"Majestic Furniture\",\"url\":\"https://thedeskco.net\",\"logo\":\"https://thedeskco.net/images/majestic-logo-original.png\",\"address\":{\"@type\":\"P",
+        "headings": [],
+        "links": [],
+        "imageCount": 0,
+        "images": [],
+        "boundingBox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "isVisible": false
+      },
+      {
+        "index": 1,
+        "tag": "script",
+        "id": "",
+        "classes": "",
+        "dataAttributes": {},
+        "innerTextSnippet": "{\"@context\":\"https://schema.org\",\"@type\":\"LocalBusiness\",\"name\":\"Majestic Furniture\",\"url\":\"https://thedeskco.net\",\"telephone\":\"+966-XX-XXXXXXX\",\"address\":{\"@type\":\"PostalAddress\",\"streetAddress\":\"TBD",
+        "headings": [],
+        "links": [],
+        "imageCount": 0,
+        "images": [],
+        "boundingBox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "isVisible": false
+      },
+      {
+        "index": 2,
+        "tag": "script",
+        "id": "",
+        "classes": "",
+        "dataAttributes": {},
+        "innerTextSnippet": "{\"@context\":\"https://schema.org\",\"@type\":\"WebSite\",\"name\":\"Majestic Furniture\",\"url\":\"https://thedeskco.net\",\"potentialAction\":{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"htt",
+        "headings": [],
+        "links": [],
+        "imageCount": 0,
+        "images": [],
+        "boundingBox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "isVisible": false
+      },
+      {
+        "index": 3,
+        "tag": "section",
+        "id": "",
+        "classes": "relative w-full overflow-hidden flex flex-col md:flex-row md:items-center min-h-[85vh]",
+        "dataAttributes": {},
+        "innerTextSnippet": "SEATING COLLECTION Seating That Performs Ergonomic chairs built for focused comfort and extensive use. Explore Seating 500+ CORPORATE CLIENTS KSA-wide DELIVERY & INSTALL 15+ YEARS IN MARKET",
+        "headings": [
+          {
+            "tag": "H1",
+            "text": "Seating That\nPerforms"
+          },
+          {
+            "tag": "H1",
+            "text": "Seating That\nPerforms"
+          }
+        ],
+        "links": [
+          {
+            "href": "/en/shop?category=seating",
+            "text": "Explore Seating"
+          },
+          {
+            "href": "/en/shop?category=seating",
+            "text": "Explore Seating"
+          }
+        ],
+        "imageCount": 2,
+        "images": [
+          {
+            "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fhero-seating-mobile.jpg&w=3840&q=75",
+            "srcAttr": "/_next/image?url=%2Fimages%2Fhero-seating-mobile.jpg&w=3840&q=75",
+            "srcset": "/_next/image?url=%2Fimages%2Fhero-seating-mobile.jpg&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fhero-seating-mobile.jpg&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fhero-seating-mobile.jpg&w=828&q",
+            "alt": "Majestic Ergonomic Seating",
+            "width": 0,
+            "height": 0,
+            "naturalWidth": 0,
+            "naturalHeight": 0,
+            "isVisible": false,
+            "loading": "lazy",
+            "isNextImage": true
+          },
+          {
+            "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fhero-seating.jpg&w=3840&q=75",
+            "srcAttr": "/_next/image?url=%2Fimages%2Fhero-seating.jpg&w=3840&q=75",
+            "srcset": "/_next/image?url=%2Fimages%2Fhero-seating.jpg&w=384&q=75 384w, /_next/image?url=%2Fimages%2Fhero-seating.jpg&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fhero-seating.jpg&w=750&q=75 750w, /_next/imag",
+            "alt": "Majestic Ergonomic Seating",
+            "width": 835,
+            "height": 715,
+            "naturalWidth": 835,
+            "naturalHeight": 304,
+            "isVisible": true,
+            "loading": "lazy",
+            "isNextImage": true
+          }
+        ],
+        "boundingBox": {
+          "x": 0,
+          "y": 196,
+          "width": 1440,
+          "height": 715
+        },
+        "isVisible": true
+      },
+      {
+        "index": 4,
+        "tag": "section",
+        "id": "",
+        "classes": "w-full bg-white border-b border-[rgba(0,0,0,0.21)] py-6",
+        "dataAttributes": {},
+        "innerTextSnippet": "Seating Tables Storage Workstations Acoustics Lounge",
+        "headings": [],
+        "links": [
+          {
+            "href": "/en/shop?category=seating",
+            "text": "Seating"
+          },
+          {
+            "href": "/en/shop?category=tables",
+            "text": "Tables"
+          },
+          {
+            "href": "/en/shop?category=storage",
+            "text": "Storage"
+          },
+          {
+            "href": "/en/shop?category=workstations",
+            "text": "Workstations"
+          },
+          {
+            "href": "/en/shop?category=acoustics",
+            "text": "Acoustics"
+          },
+          {
+            "href": "/en/shop?category=lounge",
+            "text": "Lounge"
+          }
+        ],
+        "imageCount": 6,
+        "images": [
+          {
+            "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2Fcategory-seating.png&w=128&q=75",
+            "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2Fcategory-seating.png&w=128&q=75",
+            "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2Fcategory-seating.png&w=64&q=75 1x, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2Fc",
+            "alt": "Seating",
+            "width": 62,
+            "height": 62,
+            "naturalWidth": 64,
+            "naturalHeight": 43,
+            "isVisible": true,
+            "loading": "lazy",
+            "isNextImage": true
+          },
+          {
+            "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2Fcategory-tables.png&w=128&q=75",
+            "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2Fcategory-tables.png&w=128&q=75",
+            "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2Fcategory-tables.png&w=64&q=75 1x, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2Fca",
+            "alt": "Tables",
+            "width": 62,
+            "height": 62,
+            "naturalWidth": 64,
+            "naturalHeight": 43,
+            "isVisible": true,
+            "loading": "lazy",
+            "isNextImage": true
+          },
+          {
+            "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2Fcategory-storage.png&w=128&q=75",
+            "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2Fcategory-storage.png&w=128&q=75",
+            "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2Fcategory-storage.png&w=64&q=75 1x, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2Fc",
+            "alt": "Storage",
+            "width": 62,
+            "height": 62,
+            "naturalWidth": 64,
+            "naturalHeight": 43,
+            "isVisible": true,
+            "loading": "lazy",
+            "isNextImage": true
+          },
+          {
+            "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2Fcategory-workstations.png&w=128&q=75",
+            "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2Fcategory-workstations.png&w=128&q=75",
+            "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2Fcategory-workstations.png&w=64&q=75 1x, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F0",
+            "alt": "Workstations",
+            "width": 62,
+            "height": 62,
+            "naturalWidth": 64,
+            "naturalHeight": 43,
+            "isVisible": true,
+            "loading": "lazy",
+            "isNextImage": true
+          },
+          {
+            "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2Fcategory-acoustics.png&w=128&q=75",
+            "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2Fcategory-acoustics.png&w=128&q=75",
+            "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2Fcategory-acoustics.png&w=64&q=75 1x, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2",
+            "alt": "Acoustics",
+            "width": 62,
+            "height": 62,
+            "naturalWidth": 64,
+            "naturalHeight": 43,
+            "isVisible": true,
+            "loading": "lazy",
+            "isNextImage": true
+          },
+          {
+            "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2Fcategory-lounge.png&w=128&q=75",
+            "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2Fcategory-lounge.png&w=128&q=75",
+            "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2Fcategory-lounge.png&w=64&q=75 1x, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2Fca",
+            "alt": "Lounge",
+            "width": 62,
+            "height": 62,
+            "naturalWidth": 64,
+            "naturalHeight": 43,
+            "isVisible": true,
+            "loading": "lazy",
+            "isNextImage": true
+          }
+        ],
+        "boundingBox": {
+          "x": 0,
+          "y": 911,
+          "width": 1440,
+          "height": 137
+        },
+        "isVisible": true
+      },
+      {
+        "index": 5,
+        "tag": "section",
+        "id": "",
+        "classes": "bg-white py-12 md:py-16",
+        "dataAttributes": {},
+        "innerTextSnippet": "Selected for This Season View All جاهز كرسي كاكتس Contact for price Add to Cart جاهز كرسي اي ام اس Contact for price Add to Cart جاهز مقعد فلاي SAR 488 Add to Cart جاهز ليمون Contact for price Add to ",
+        "headings": [
+          {
+            "tag": "H2",
+            "text": "Selected for This Season"
+          },
+          {
+            "tag": "H3",
+            "text": "كرسي كاكتس"
+          },
+          {
+            "tag": "H3",
+            "text": "كرسي اي ام اس"
+          },
+          {
+            "tag": "H3",
+            "text": "مقعد فلاي"
+          },
+          {
+            "tag": "H3",
+            "text": "ليمون"
+          },
+          {
+            "tag": "H3",
+            "text": "كرسي اورنج"
+          },
+          {
+            "tag": "H3",
+            "text": "كرسي SYS"
+          },
+          {
+            "tag": "H3",
+            "text": "كرسي تايم"
+          },
+          {
+            "tag": "H3",
+            "text": "كرسي 252"
+          }
+        ],
+        "links": [
+          {
+            "href": "/en/shop",
+            "text": "View All"
+          },
+          {
+            "href": "/en/shop/990931",
+            "text": "جاهزكرسي كاكتسContact for price"
+          },
+          {
+            "href": "/en/shop/990930",
+            "text": "جاهزكرسي اي ام اسContact for price"
+          },
+          {
+            "href": "/en/shop/990929",
+            "text": "جاهزمقعد فلايSAR 488"
+          },
+          {
+            "href": "/en/shop/990928",
+            "text": "جاهزليمونContact for price"
+          },
+          {
+            "href": "/en/shop/990927",
+            "text": "جاهزكرسي اورنجContact for price"
+          },
+          {
+            "href": "/en/shop/990926",
+            "text": "جاهزكرسي SYSSAR 675"
+          },
+          {
+            "href": "/en/shop/990925",
+            "text": "جاهزكرسي تايمContact for price"
+          },
+          {
+            "href": "/en/shop/990924",
+            "text": "جاهزكرسي 252Contact for price"
+          },
+          {
+            "href": "/en/shop",
+            "text": "Shop All Products"
+          }
+        ],
+        "imageCount": 8,
+        "images": [
+          {
+            "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2F%D8%AC5.jpg&w=3840&q=75",
+            "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2F%D8%AC5.jpg&w=3840&q=75",
+            "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2F%D8%AC5.jpg&w=256&q=75 256w, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2F%D8%AC5",
+            "alt": "كرسي كاكتس",
+            "width": 331,
+            "height": 419,
+            "naturalWidth": 328,
+            "naturalHeight": 562,
+            "isVisible": true,
+            "loading": "lazy",
+            "isNextImage": true
+          },
+          {
+            "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2F%D8%B71.jpg&w=3840&q=75",
+            "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2F%D8%B71.jpg&w=3840&q=75",
+            "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2F%D8%B71.jpg&w=256&q=75 256w, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2F%D8%B71",
+            "alt": "كرسي اي ام اس",
+            "width": 331,
+            "height": 419,
+            "naturalWidth": 328,
+            "naturalHeight": 562,
+            "isVisible": true,
+            "loading": "lazy",
+            "isNextImage": true
+          },
+          {
+            "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2F%D8%B72.jpg&w=3840&q=75",
+            "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2F%D8%B72.jpg&w=3840&q=75",
+            "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2F%D8%B72.jpg&w=256&q=75 256w, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2F%D8%B72",
+            "alt": "مقعد فلاي",
+            "width": 331,
+            "height": 419,
+            "naturalWidth": 328,
+            "naturalHeight": 562,
+            "isVisible": true,
+            "loading": "lazy",
+            "isNextImage": true
+          },
+          {
+            "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2F%D8%B74.jpg&w=3840&q=75",
+            "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2F%D8%B74.jpg&w=3840&q=75",
+            "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2F%D8%B74.jpg&w=256&q=75 256w, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2F%D8%B74",
+            "alt": "ليمون",
+            "width": 331,
+            "height": 419,
+            "naturalWidth": 328,
+            "naturalHeight": 562,
+            "isVisible": true,
+            "loading": "lazy",
+            "isNextImage": true
+          },
+          {
+            "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2F%D8%B75.jpg&w=3840&q=75",
+            "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2F%D8%B75.jpg&w=3840&q=75",
+            "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2F%D8%B75.jpg&w=256&q=75 256w, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2F%D8%B75",
+            "alt": "كرسي اورنج",
+            "width": 331,
+            "height": 419,
+            "naturalWidth": 328,
+            "naturalHeight": 562,
+            "isVisible": true,
+            "loading": "lazy",
+            "isNextImage": true
+          },
+          {
+            "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2F%D8%B77.jpg&w=3840&q=75",
+            "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2F%D8%B77.jpg&w=3840&q=75",
+            "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2F%D8%B77.jpg&w=256&q=75 256w, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2F%D8%B77",
+            "alt": "كرسي SYS",
+            "width": 331,
+            "height": 419,
+            "naturalWidth": 328,
+            "naturalHeight": 562,
+            "isVisible": true,
+            "loading": "lazy",
+            "isNextImage": true
+          },
+          {
+            "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2F%D8%B78.jpg&w=3840&q=75",
+            "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2F%D8%B78.jpg&w=3840&q=75",
+            "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2F%D8%B78.jpg&w=256&q=75 256w, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2F%D8%B78",
+            "alt": "كرسي تايم",
+            "width": 331,
+            "height": 419,
+            "naturalWidth": 328,
+            "naturalHeight": 562,
+            "isVisible": true,
+            "loading": "lazy",
+            "isNextImage": true
+          },
+          {
+            "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2F%D8%B81.jpg&w=3840&q=75",
+            "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2F%D8%B81.jpg&w=3840&q=75",
+            "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2F%D8%B81.jpg&w=256&q=75 256w, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2F%D8%B81",
+            "alt": "كرسي 252",
+            "width": 331,
+            "height": 419,
+            "naturalWidth": 328,
+            "naturalHeight": 562,
+            "isVisible": true,
+            "loading": "lazy",
+            "isNextImage": true
+          }
+        ],
+        "boundingBox": {
+          "x": 0,
+          "y": 1048,
+          "width": 1440,
+          "height": 1400
+        },
+        "isVisible": true
+      },
+      {
+        "index": 6,
+        "tag": "section",
+        "id": "",
+        "classes": "w-full bg-[#0c0c0c]",
+        "dataAttributes": {},
+        "innerTextSnippet": "EVERY SPACE HAS A STANDARD Executive Office See the range → Boardroom See the range → Open Workfloor See the range → Reception & Lobby See the range → Lounge & Collaboration See the range → Training &",
+        "headings": [
+          {
+            "tag": "H2",
+            "text": "Every Space Has a Standard"
+          }
+        ],
+        "links": [
+          {
+            "href": "/en/shop?category=tables",
+            "text": "Executive OfficeSee the range →"
+          },
+          {
+            "href": "/en/shop?category=tables",
+            "text": "BoardroomSee the range →"
+          },
+          {
+            "href": "/en/shop?category=workstations",
+            "text": "Open WorkfloorSee the range →"
+          },
+          {
+            "href": "/en/shop?category=storage",
+            "text": "Reception & LobbySee the range →"
+          },
+          {
+            "href": "/en/shop?category=lounge",
+            "text": "Lounge & CollaborationSee the range →"
+          },
+          {
+            "href": "/en/shop?category=workstations",
+            "text": "Training & SeminarSee the range →"
+          }
+        ],
+        "imageCount": 6,
+        "images": [
+          {
+            "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fwebsite%2Fs1-a-executive-office.jpg&w=3840&q=75",
+            "srcAttr": "/_next/image?url=%2Fimages%2Fwebsite%2Fs1-a-executive-office.jpg&w=3840&q=75",
+            "srcset": "/_next/image?url=%2Fimages%2Fwebsite%2Fs1-a-executive-office.jpg&w=128&q=75 128w, /_next/image?url=%2Fimages%2Fwebsite%2Fs1-a-executive-office.jpg&w=256&q=75 256w, /_next/image?url=%2Fimages%2Fwebsite",
+            "alt": "Executive Office",
+            "width": 240,
+            "height": 427,
+            "naturalWidth": 244,
+            "naturalHeight": 107,
+            "isVisible": true,
+            "loading": "lazy",
+            "isNextImage": true
+          },
+          {
+            "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fwebsite%2Fs1-b-boardroom.jpg&w=3840&q=75",
+            "srcAttr": "/_next/image?url=%2Fimages%2Fwebsite%2Fs1-b-boardroom.jpg&w=3840&q=75",
+            "srcset": "/_next/image?url=%2Fimages%2Fwebsite%2Fs1-b-boardroom.jpg&w=128&q=75 128w, /_next/image?url=%2Fimages%2Fwebsite%2Fs1-b-boardroom.jpg&w=256&q=75 256w, /_next/image?url=%2Fimages%2Fwebsite%2Fs1-b-boardr",
+            "alt": "Boardroom",
+            "width": 240,
+            "height": 427,
+            "naturalWidth": 244,
+            "naturalHeight": 107,
+            "isVisible": true,
+            "loading": "lazy",
+            "isNextImage": true
+          },
+          {
+            "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fwebsite%2Fs1-c-open-workfloor.jpg&w=3840&q=75",
+            "srcAttr": "/_next/image?url=%2Fimages%2Fwebsite%2Fs1-c-open-workfloor.jpg&w=3840&q=75",
+            "srcset": "/_next/image?url=%2Fimages%2Fwebsite%2Fs1-c-open-workfloor.jpg&w=128&q=75 128w, /_next/image?url=%2Fimages%2Fwebsite%2Fs1-c-open-workfloor.jpg&w=256&q=75 256w, /_next/image?url=%2Fimages%2Fwebsite%2Fs",
+            "alt": "Open Workfloor",
+            "width": 240,
+            "height": 427,
+            "naturalWidth": 244,
+            "naturalHeight": 107,
+            "isVisible": true,
+            "loading": "lazy",
+            "isNextImage": true
+          },
+          {
+            "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fwebsite%2Fs1-d-reception-lobby.jpg&w=3840&q=75",
+            "srcAttr": "/_next/image?url=%2Fimages%2Fwebsite%2Fs1-d-reception-lobby.jpg&w=3840&q=75",
+            "srcset": "/_next/image?url=%2Fimages%2Fwebsite%2Fs1-d-reception-lobby.jpg&w=128&q=75 128w, /_next/image?url=%2Fimages%2Fwebsite%2Fs1-d-reception-lobby.jpg&w=256&q=75 256w, /_next/image?url=%2Fimages%2Fwebsite%2",
+            "alt": "Reception & Lobby",
+            "width": 240,
+            "height": 427,
+            "naturalWidth": 244,
+            "naturalHeight": 107,
+            "isVisible": true,
+            "loading": "lazy",
+            "isNextImage": true
+          },
+          {
+            "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fwebsite%2Fs1-e-lounge-collaboration.jpg&w=3840&q=75",
+            "srcAttr": "/_next/image?url=%2Fimages%2Fwebsite%2Fs1-e-lounge-collaboration.jpg&w=3840&q=75",
+            "srcset": "/_next/image?url=%2Fimages%2Fwebsite%2Fs1-e-lounge-collaboration.jpg&w=128&q=75 128w, /_next/image?url=%2Fimages%2Fwebsite%2Fs1-e-lounge-collaboration.jpg&w=256&q=75 256w, /_next/image?url=%2Fimages%2",
+            "alt": "Lounge & Collaboration",
+            "width": 240,
+            "height": 427,
+            "naturalWidth": 244,
+            "naturalHeight": 107,
+            "isVisible": true,
+            "loading": "lazy",
+            "isNextImage": true
+          },
+          {
+            "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fwebsite%2Fs1-f-training-seminar.jpg&w=3840&q=75",
+            "srcAttr": "/_next/image?url=%2Fimages%2Fwebsite%2Fs1-f-training-seminar.jpg&w=3840&q=75",
+            "srcset": "/_next/image?url=%2Fimages%2Fwebsite%2Fs1-f-training-seminar.jpg&w=128&q=75 128w, /_next/image?url=%2Fimages%2Fwebsite%2Fs1-f-training-seminar.jpg&w=256&q=75 256w, /_next/image?url=%2Fimages%2Fwebsite",
+            "alt": "Training & Seminar",
+            "width": 240,
+            "height": 427,
+            "naturalWidth": 244,
+            "naturalHeight": 107,
+            "isVisible": true,
+            "loading": "lazy",
+            "isNextImage": true
+          }
+        ],
+        "boundingBox": {
+          "x": 0,
+          "y": 2448,
+          "width": 1440,
+          "height": 523
+        },
+        "isVisible": true
+      },
+      {
+        "index": 7,
+        "tag": "section",
+        "id": "",
+        "classes": "w-full bg-[#f7f7f5] py-14 md:py-20",
+        "dataAttributes": {},
+        "innerTextSnippet": "THE COLLECTIONS Complete Workspace Environments Three coordinated environments, ready to specify. View All Collections The Directorial Suite Executive desk, credenza, chair, and conference table — one",
+        "headings": [
+          {
+            "tag": "H2",
+            "text": "Complete Workspace Environments"
+          },
+          {
+            "tag": "H3",
+            "text": "The Directorial Suite"
+          },
+          {
+            "tag": "H3",
+            "text": "The Collaborative Floor"
+          },
+          {
+            "tag": "H3",
+            "text": "The Reception Statement"
+          }
+        ],
+        "links": [
+          {
+            "href": "/en/shop",
+            "text": "View All Collections"
+          },
+          {
+            "href": "/en/shop",
+            "text": "Explore the collection›"
+          },
+          {
+            "href": "/en/shop",
+            "text": "Explore the collection›"
+          },
+          {
+            "href": "/en/shop",
+            "text": "Explore the collection›"
+          }
+        ],
+        "imageCount": 3,
+        "images": [
+          {
+            "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fwebsite%2Fs2-a-directorial-suite.jpg&w=3840&q=75",
+            "srcAttr": "/_next/image?url=%2Fimages%2Fwebsite%2Fs2-a-directorial-suite.jpg&w=3840&q=75",
+            "srcset": "/_next/image?url=%2Fimages%2Fwebsite%2Fs2-a-directorial-suite.jpg&w=256&q=75 256w, /_next/image?url=%2Fimages%2Fwebsite%2Fs2-a-directorial-suite.jpg&w=384&q=75 384w, /_next/image?url=%2Fimages%2Fwebsi",
+            "alt": "The Directorial Suite",
+            "width": 441,
+            "height": 294,
+            "naturalWidth": 475,
+            "naturalHeight": 207,
+            "isVisible": true,
+            "loading": "lazy",
+            "isNextImage": true
+          },
+          {
+            "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fwebsite%2Fs2-b-collaborative-floor.jpg&w=3840&q=75",
+            "srcAttr": "/_next/image?url=%2Fimages%2Fwebsite%2Fs2-b-collaborative-floor.jpg&w=3840&q=75",
+            "srcset": "/_next/image?url=%2Fimages%2Fwebsite%2Fs2-b-collaborative-floor.jpg&w=256&q=75 256w, /_next/image?url=%2Fimages%2Fwebsite%2Fs2-b-collaborative-floor.jpg&w=384&q=75 384w, /_next/image?url=%2Fimages%2Fw",
+            "alt": "The Collaborative Floor",
+            "width": 441,
+            "height": 294,
+            "naturalWidth": 475,
+            "naturalHeight": 207,
+            "isVisible": true,
+            "loading": "lazy",
+            "isNextImage": true
+          },
+          {
+            "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fwebsite%2Fs2-c-reception-statement.jpg&w=3840&q=75",
+            "srcAttr": "/_next/image?url=%2Fimages%2Fwebsite%2Fs2-c-reception-statement.jpg&w=3840&q=75",
+            "srcset": "/_next/image?url=%2Fimages%2Fwebsite%2Fs2-c-reception-statement.jpg&w=256&q=75 256w, /_next/image?url=%2Fimages%2Fwebsite%2Fs2-c-reception-statement.jpg&w=384&q=75 384w, /_next/image?url=%2Fimages%2Fw",
+            "alt": "The Reception Statement",
+            "width": 441,
+            "height": 294,
+            "naturalWidth": 475,
+            "naturalHeight": 207,
+            "isVisible": true,
+            "loading": "lazy",
+            "isNextImage": true
+          }
+        ],
+        "boundingBox": {
+          "x": 0,
+          "y": 2971,
+          "width": 1440,
+          "height": 762
+        },
+        "isVisible": true
+      },
+      {
+        "index": 8,
+        "tag": "section",
+        "id": "",
+        "classes": "w-full bg-[#0c0c0c] py-14 md:py-20 overflow-hidden",
+        "dataAttributes": {},
+        "innerTextSnippet": "CONSTRUCTION DETAIL EVERY SURFACE. CONSIDERED.",
+        "headings": [],
+        "links": [],
+        "imageCount": 5,
+        "images": [
+          {
+            "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fwebsite%2Fs3-a-desk-edge-detail.jpg&w=3840&q=75",
+            "srcAttr": "/_next/image?url=%2Fimages%2Fwebsite%2Fs3-a-desk-edge-detail.jpg&w=3840&q=75",
+            "srcset": "/_next/image?url=%2Fimages%2Fwebsite%2Fs3-a-desk-edge-detail.jpg&w=32&q=75 32w, /_next/image?url=%2Fimages%2Fwebsite%2Fs3-a-desk-edge-detail.jpg&w=48&q=75 48w, /_next/image?url=%2Fimages%2Fwebsite%2Fs",
+            "alt": "Desk edge detail",
+            "width": 260,
+            "height": 347,
+            "naturalWidth": 260,
+            "naturalHeight": 113,
+            "isVisible": true,
+            "loading": "lazy",
+            "isNextImage": true
+          },
+          {
+            "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fwebsite%2Fs3-b-height-adjustment-mechanism.jpg&w=3840&q=75",
+            "srcAttr": "/_next/image?url=%2Fimages%2Fwebsite%2Fs3-b-height-adjustment-mechanism.jpg&w=3840&q=75",
+            "srcset": "/_next/image?url=%2Fimages%2Fwebsite%2Fs3-b-height-adjustment-mechanism.jpg&w=32&q=75 32w, /_next/image?url=%2Fimages%2Fwebsite%2Fs3-b-height-adjustment-mechanism.jpg&w=48&q=75 48w, /_next/image?url=%",
+            "alt": "Height adjustment mechanism",
+            "width": 260,
+            "height": 347,
+            "naturalWidth": 260,
+            "naturalHeight": 113,
+            "isVisible": true,
+            "loading": "lazy",
+            "isNextImage": true
+          },
+          {
+            "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fwebsite%2Fs3-c-leather-armrest-seam.jpg&w=3840&q=75",
+            "srcAttr": "/_next/image?url=%2Fimages%2Fwebsite%2Fs3-c-leather-armrest-seam.jpg&w=3840&q=75",
+            "srcset": "/_next/image?url=%2Fimages%2Fwebsite%2Fs3-c-leather-armrest-seam.jpg&w=32&q=75 32w, /_next/image?url=%2Fimages%2Fwebsite%2Fs3-c-leather-armrest-seam.jpg&w=48&q=75 48w, /_next/image?url=%2Fimages%2Fweb",
+            "alt": "Leather armrest seam",
+            "width": 260,
+            "height": 347,
+            "naturalWidth": 260,
+            "naturalHeight": 113,
+            "isVisible": true,
+            "loading": "lazy",
+            "isNextImage": true
+          },
+          {
+            "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fwebsite%2Fs3-d-conference-table-joinery.jpg&w=3840&q=75",
+            "srcAttr": "/_next/image?url=%2Fimages%2Fwebsite%2Fs3-d-conference-table-joinery.jpg&w=3840&q=75",
+            "srcset": "/_next/image?url=%2Fimages%2Fwebsite%2Fs3-d-conference-table-joinery.jpg&w=32&q=75 32w, /_next/image?url=%2Fimages%2Fwebsite%2Fs3-d-conference-table-joinery.jpg&w=48&q=75 48w, /_next/image?url=%2Fimag",
+            "alt": "Conference table joinery",
+            "width": 260,
+            "height": 347,
+            "naturalWidth": 260,
+            "naturalHeight": 113,
+            "isVisible": true,
+            "loading": "lazy",
+            "isNextImage": true
+          },
+          {
+            "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fwebsite%2Fs3-e-acoustic-fabric-weave.jpg&w=3840&q=75",
+            "srcAttr": "/_next/image?url=%2Fimages%2Fwebsite%2Fs3-e-acoustic-fabric-weave.jpg&w=3840&q=75",
+            "srcset": "/_next/image?url=%2Fimages%2Fwebsite%2Fs3-e-acoustic-fabric-weave.jpg&w=32&q=75 32w, /_next/image?url=%2Fimages%2Fwebsite%2Fs3-e-acoustic-fabric-weave.jpg&w=48&q=75 48w, /_next/image?url=%2Fimages%2Fw",
+            "alt": "Acoustic fabric weave",
+            "width": 260,
+            "height": 347,
+            "naturalWidth": 260,
+            "naturalHeight": 113,
+            "isVisible": true,
+            "loading": "lazy",
+            "isNextImage": true
+          }
+        ],
+        "boundingBox": {
+          "x": 0,
+          "y": 3733,
+          "width": 1440,
+          "height": 623
+        },
+        "isVisible": true
+      },
+      {
+        "index": 9,
+        "tag": "section",
+        "id": "",
+        "classes": "w-full bg-white py-14 md:py-20",
+        "dataAttributes": {},
+        "innerTextSnippet": "COMPLETED PROJECTS Built for Institutional Scale 320 Workstations Installed 4 Floors Furnished 12 Weeks to Delivery A complete open-floor fit-out across four levels for a financial services firm in Ri",
+        "headings": [
+          {
+            "tag": "H2",
+            "text": "Built for Institutional Scale"
+          }
+        ],
+        "links": [
+          {
+            "href": "/en/about",
+            "text": "Request a Project Consultation"
+          },
+          {
+            "href": "/en/about",
+            "text": "Request a Project Consultation"
+          }
+        ],
+        "imageCount": 2,
+        "images": [
+          {
+            "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fwebsite%2Fs4-a-workfloor-scale.jpg&w=3840&q=75",
+            "srcAttr": "/_next/image?url=%2Fimages%2Fwebsite%2Fs4-a-workfloor-scale.jpg&w=3840&q=75",
+            "srcset": "/_next/image?url=%2Fimages%2Fwebsite%2Fs4-a-workfloor-scale.jpg&w=384&q=75 384w, /_next/image?url=%2Fimages%2Fwebsite%2Fs4-a-workfloor-scale.jpg&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fwebsite%2",
+            "alt": "A complete open-floor fit-out across fou",
+            "width": 687,
+            "height": 309,
+            "naturalWidth": 0,
+            "naturalHeight": 0,
+            "isVisible": true,
+            "loading": "lazy",
+            "isNextImage": true
+          },
+          {
+            "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fwebsite%2Fs4-b-executive-floor-corridor.jpg&w=3840&q=75",
+            "srcAttr": "/_next/image?url=%2Fimages%2Fwebsite%2Fs4-b-executive-floor-corridor.jpg&w=3840&q=75",
+            "srcset": "/_next/image?url=%2Fimages%2Fwebsite%2Fs4-b-executive-floor-corridor.jpg&w=384&q=75 384w, /_next/image?url=%2Fimages%2Fwebsite%2Fs4-b-executive-floor-corridor.jpg&w=640&q=75 640w, /_next/image?url=%2F",
+            "alt": "A full executive floor for a regional he",
+            "width": 687,
+            "height": 309,
+            "naturalWidth": 0,
+            "naturalHeight": 0,
+            "isVisible": true,
+            "loading": "lazy",
+            "isNextImage": true
+          }
+        ],
+        "boundingBox": {
+          "x": 0,
+          "y": 4355,
+          "width": 1440,
+          "height": 929
+        },
+        "isVisible": true
+      },
+      {
+        "index": 10,
+        "tag": "section",
+        "id": "",
+        "classes": "w-full bg-[#0c0c0c] py-16 md:py-24",
+        "dataAttributes": {},
+        "innerTextSnippet": "THE MAJESTIC STANDARD What We Are Built On Four commitments that define every project we take on. 01 Precision Every product meets defined structural and finish standards. We do not compromise on tole",
+        "headings": [
+          {
+            "tag": "H2",
+            "text": "What We Are Built On"
+          },
+          {
+            "tag": "H3",
+            "text": "Precision"
+          },
+          {
+            "tag": "H3",
+            "text": "Scale"
+          },
+          {
+            "tag": "H3",
+            "text": "Partnership"
+          },
+          {
+            "tag": "H3",
+            "text": "Regional Expertise"
+          }
+        ],
+        "links": [],
+        "imageCount": 0,
+        "images": [],
+        "boundingBox": {
+          "x": 0,
+          "y": 5284,
+          "width": 1440,
+          "height": 603
+        },
+        "isVisible": true
+      },
+      {
+        "index": 11,
+        "tag": "section",
+        "id": "",
+        "classes": "w-full bg-[#f7f7f5] py-14 md:py-20",
+        "dataAttributes": {},
+        "innerTextSnippet": "MATERIALS & FINISHES Find the Right Finish Wenge Choose from Majestic's surface range — wood tones, laminates, and metals — to identify the right finish for your project. Wenge Walnut Oak White Light ",
+        "headings": [
+          {
+            "tag": "H2",
+            "text": "Find the Right Finish"
+          }
+        ],
+        "links": [
+          {
+            "href": "/en/about",
+            "text": "Request Material Samples"
+          }
+        ],
+        "imageCount": 8,
+        "images": [
+          {
+            "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish-wenge.jpg&w=3840&q=75",
+            "srcAttr": "/_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish-wenge.jpg&w=3840&q=75",
+            "srcset": "/_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish-wenge.jpg&w=384&q=75 384w, /_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish-wenge.jpg&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish",
+            "alt": "Wenge",
+            "width": 795,
+            "height": 954,
+            "naturalWidth": 0,
+            "naturalHeight": 0,
+            "isVisible": true,
+            "loading": "lazy",
+            "isNextImage": true
+          },
+          {
+            "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish-walnut.jpg&w=3840&q=75",
+            "srcAttr": "/_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish-walnut.jpg&w=3840&q=75",
+            "srcset": "/_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish-walnut.jpg&w=384&q=75 384w, /_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish-walnut.jpg&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fwebsite%2Fs6-fini",
+            "alt": "Walnut",
+            "width": 795,
+            "height": 954,
+            "naturalWidth": 0,
+            "naturalHeight": 0,
+            "isVisible": true,
+            "loading": "lazy",
+            "isNextImage": true
+          },
+          {
+            "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish-oak.jpg&w=3840&q=75",
+            "srcAttr": "/_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish-oak.jpg&w=3840&q=75",
+            "srcset": "/_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish-oak.jpg&w=384&q=75 384w, /_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish-oak.jpg&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish-oak",
+            "alt": "Oak",
+            "width": 795,
+            "height": 954,
+            "naturalWidth": 0,
+            "naturalHeight": 0,
+            "isVisible": true,
+            "loading": "lazy",
+            "isNextImage": true
+          },
+          {
+            "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish-white.jpg&w=3840&q=75",
+            "srcAttr": "/_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish-white.jpg&w=3840&q=75",
+            "srcset": "/_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish-white.jpg&w=384&q=75 384w, /_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish-white.jpg&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish",
+            "alt": "White",
+            "width": 795,
+            "height": 954,
+            "naturalWidth": 0,
+            "naturalHeight": 0,
+            "isVisible": true,
+            "loading": "lazy",
+            "isNextImage": true
+          },
+          {
+            "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish-light-grey.jpg&w=3840&q=75",
+            "srcAttr": "/_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish-light-grey.jpg&w=3840&q=75",
+            "srcset": "/_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish-light-grey.jpg&w=384&q=75 384w, /_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish-light-grey.jpg&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fwebsite%2",
+            "alt": "Light Grey",
+            "width": 795,
+            "height": 954,
+            "naturalWidth": 0,
+            "naturalHeight": 0,
+            "isVisible": true,
+            "loading": "lazy",
+            "isNextImage": true
+          },
+          {
+            "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish-black-chrome.jpg&w=3840&q=75",
+            "srcAttr": "/_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish-black-chrome.jpg&w=3840&q=75",
+            "srcset": "/_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish-black-chrome.jpg&w=384&q=75 384w, /_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish-black-chrome.jpg&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fwebsi",
+            "alt": "Black Chrome",
+            "width": 795,
+            "height": 954,
+            "naturalWidth": 0,
+            "naturalHeight": 0,
+            "isVisible": true,
+            "loading": "lazy",
+            "isNextImage": true
+          },
+          {
+            "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish-warm-sand.jpg&w=3840&q=75",
+            "srcAttr": "/_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish-warm-sand.jpg&w=3840&q=75",
+            "srcset": "/_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish-warm-sand.jpg&w=384&q=75 384w, /_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish-warm-sand.jpg&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fwebsite%2Fs",
+            "alt": "Warm Sand",
+            "width": 795,
+            "height": 954,
+            "naturalWidth": 0,
+            "naturalHeight": 0,
+            "isVisible": true,
+            "loading": "lazy",
+            "isNextImage": true
+          },
+          {
+            "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish-graphite.jpg&w=3840&q=75",
+            "srcAttr": "/_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish-graphite.jpg&w=3840&q=75",
+            "srcset": "/_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish-graphite.jpg&w=384&q=75 384w, /_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish-graphite.jpg&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fwebsite%2Fs6-",
+            "alt": "Graphite",
+            "width": 795,
+            "height": 954,
+            "naturalWidth": 0,
+            "naturalHeight": 0,
+            "isVisible": true,
+            "loading": "lazy",
+            "isNextImage": true
+          }
+        ],
+        "boundingBox": {
+          "x": 0,
+          "y": 5887,
+          "width": 1440,
+          "height": 1208
+        },
+        "isVisible": true
+      },
+      {
+        "index": 12,
+        "tag": "section",
+        "id": "",
+        "classes": "w-full bg-[#f2f2f2] py-14 md:py-20",
+        "dataAttributes": {},
+        "innerTextSnippet": "INSIGHTS The Workspace Standard All Articles DESIGN STANDARDS April 2026 Designing the Executive Floor: Standards for Saudi Corporate Offices Read › ERGONOMICS March 2026 Why Height-Adjustable Desks A",
+        "headings": [
+          {
+            "tag": "H2",
+            "text": "The Workspace Standard"
+          },
+          {
+            "tag": "H3",
+            "text": "Designing the Executive Floor: Standards for Saudi Corporate Offices"
+          },
+          {
+            "tag": "H3",
+            "text": "Why Height-Adjustable Desks Are Now a Specification Requirement"
+          },
+          {
+            "tag": "H3",
+            "text": "Complete Workspace: How to Brief a Full Office Fit-Out"
+          }
+        ],
+        "links": [
+          {
+            "href": "/en/insights",
+            "text": "All Articles"
+          },
+          {
+            "href": "/en/insights",
+            "text": "Read›"
+          },
+          {
+            "href": "/en/insights",
+            "text": "Read›"
+          },
+          {
+            "href": "/en/insights",
+            "text": "Read›"
+          }
+        ],
+        "imageCount": 3,
+        "images": [
+          {
+            "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fwebsite%2Fs7-a-executive-floor-article.jpg&w=3840&q=75",
+            "srcAttr": "/_next/image?url=%2Fimages%2Fwebsite%2Fs7-a-executive-floor-article.jpg&w=3840&q=75",
+            "srcset": "/_next/image?url=%2Fimages%2Fwebsite%2Fs7-a-executive-floor-article.jpg&w=256&q=75 256w, /_next/image?url=%2Fimages%2Fwebsite%2Fs7-a-executive-floor-article.jpg&w=384&q=75 384w, /_next/image?url=%2Fim",
+            "alt": "Designing the Executive Floor: Standards for Saudi Corporate Offices",
+            "width": 441,
+            "height": 231,
+            "naturalWidth": 0,
+            "naturalHeight": 0,
+            "isVisible": true,
+            "loading": "lazy",
+            "isNextImage": true
+          },
+          {
+            "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fwebsite%2Fs7-b-height-adjustable-article.jpg&w=3840&q=75",
+            "srcAttr": "/_next/image?url=%2Fimages%2Fwebsite%2Fs7-b-height-adjustable-article.jpg&w=3840&q=75",
+            "srcset": "/_next/image?url=%2Fimages%2Fwebsite%2Fs7-b-height-adjustable-article.jpg&w=256&q=75 256w, /_next/image?url=%2Fimages%2Fwebsite%2Fs7-b-height-adjustable-article.jpg&w=384&q=75 384w, /_next/image?url=%",
+            "alt": "Why Height-Adjustable Desks Are Now a Specification Requirement",
+            "width": 441,
+            "height": 231,
+            "naturalWidth": 0,
+            "naturalHeight": 0,
+            "isVisible": true,
+            "loading": "lazy",
+            "isNextImage": true
+          },
+          {
+            "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fwebsite%2Fs7-c-fit-out-brief-article.jpg&w=3840&q=75",
+            "srcAttr": "/_next/image?url=%2Fimages%2Fwebsite%2Fs7-c-fit-out-brief-article.jpg&w=3840&q=75",
+            "srcset": "/_next/image?url=%2Fimages%2Fwebsite%2Fs7-c-fit-out-brief-article.jpg&w=256&q=75 256w, /_next/image?url=%2Fimages%2Fwebsite%2Fs7-c-fit-out-brief-article.jpg&w=384&q=75 384w, /_next/image?url=%2Fimages",
+            "alt": "Complete Workspace: How to Brief a Full Office Fit-Out",
+            "width": 441,
+            "height": 231,
+            "naturalWidth": 0,
+            "naturalHeight": 0,
+            "isVisible": true,
+            "loading": "lazy",
+            "isNextImage": true
+          }
+        ],
+        "boundingBox": {
+          "x": 0,
+          "y": 7096,
+          "width": 1440,
+          "height": 639
+        },
+        "isVisible": true
+      },
+      {
+        "index": 13,
+        "tag": "section",
+        "id": "",
+        "classes": "relative w-full bg-[#fafafa] border-t border-b border-[rgba(0,0,0,0.12)] overflow-hidden",
+        "dataAttributes": {},
+        "innerTextSnippet": "Corporate & Government Supply — Available Nationwide Majestic supplies complete workspace environments to organizations across the Kingdom. Request a project consultation. Request a Consultation",
+        "headings": [
+          {
+            "tag": "H2",
+            "text": "Corporate & Government Supply — Available Nationwide"
+          }
+        ],
+        "links": [
+          {
+            "href": "/en/about",
+            "text": "Request a Consultation"
+          }
+        ],
+        "imageCount": 1,
+        "images": [
+          {
+            "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fhero-tables.jpg&w=3840&q=75",
+            "srcAttr": "/_next/image?url=%2Fimages%2Fhero-tables.jpg&w=3840&q=75",
+            "srcset": "/_next/image?url=%2Fimages%2Fhero-tables.jpg&w=384&q=75 384w, /_next/image?url=%2Fimages%2Fhero-tables.jpg&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fhero-tables.jpg&w=750&q=75 750w, /_next/image?u",
+            "alt": "Office furniture showroom",
+            "width": 672,
+            "height": 504,
+            "naturalWidth": 0,
+            "naturalHeight": 0,
+            "isVisible": true,
+            "loading": "lazy",
+            "isNextImage": true
+          }
+        ],
+        "boundingBox": {
+          "x": 0,
+          "y": 7734,
+          "width": 1440,
+          "height": 666
+        },
+        "isVisible": true
+      },
+      {
+        "index": 14,
+        "tag": "section",
+        "id": "",
+        "classes": "w-full bg-[#f7f7f5] border-t border-b border-[rgba(0,0,0,0.08)] overflow-hidden relative",
+        "dataAttributes": {},
+        "innerTextSnippet": "DESIGN INSPIRATION Planning Ideas For Your Workspace Get inspired by curated office furniture collections designed to elevate productivity and style in any work environment. Explore the collection ›",
+        "headings": [
+          {
+            "tag": "H2",
+            "text": "Planning Ideas\nFor Your Workspace"
+          }
+        ],
+        "links": [
+          {
+            "href": "/en/inspirations",
+            "text": "Explore the collection›"
+          }
+        ],
+        "imageCount": 1,
+        "images": [
+          {
+            "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fhero-tables.jpg&w=3840&q=75",
+            "srcAttr": "/_next/image?url=%2Fimages%2Fhero-tables.jpg&w=3840&q=75",
+            "srcset": "/_next/image?url=%2Fimages%2Fhero-tables.jpg&w=384&q=75 384w, /_next/image?url=%2Fimages%2Fhero-tables.jpg&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fhero-tables.jpg&w=750&q=75 750w, /_next/image?u",
+            "alt": "Office space planning ideas",
+            "width": 640,
+            "height": 420,
+            "naturalWidth": 0,
+            "naturalHeight": 0,
+            "isVisible": true,
+            "loading": "lazy",
+            "isNextImage": true
+          }
+        ],
+        "boundingBox": {
+          "x": 0,
+          "y": 8400,
+          "width": 1440,
+          "height": 422
+        },
+        "isVisible": true
+      },
+      {
+        "index": 15,
+        "tag": "div",
+        "id": "",
+        "classes": "",
+        "dataAttributes": {},
+        "innerTextSnippet": "Stay Informed New collections, project stories, and workspace insights — delivered to your inbox. Subscribe Instagram LinkedIn Facebook",
+        "headings": [
+          {
+            "tag": "H2",
+            "text": "Stay Informed"
+          }
+        ],
+        "links": [
+          {
+            "href": "https://instagram.com",
+            "text": "Instagram"
+          },
+          {
+            "href": "https://linkedin.com",
+            "text": "LinkedIn"
+          },
+          {
+            "href": "https://facebook.com",
+            "text": "Facebook"
+          }
+        ],
+        "imageCount": 0,
+        "images": [],
+        "boundingBox": {
+          "x": 0,
+          "y": 8852,
+          "width": 1440,
+          "height": 291
+        },
+        "isVisible": true
+      },
+      {
+        "index": 16,
+        "tag": "section",
+        "id": "",
+        "classes": "w-full bg-[#0c0c0c] py-16 md:py-24",
+        "dataAttributes": {},
+        "innerTextSnippet": "Your next workspace, built to specification. From a single office to a multi-floor fit-out — Majestic delivers complete workspace environments across Saudi Arabia and the GCC. Book a Consultation Visi",
+        "headings": [
+          {
+            "tag": "H2",
+            "text": "Your next workspace, built to specification."
+          }
+        ],
+        "links": [
+          {
+            "href": "/en/about",
+            "text": "Book a Consultation"
+          },
+          {
+            "href": "/en/about",
+            "text": "Visit the Showroom"
+          }
+        ],
+        "imageCount": 0,
+        "images": [],
+        "boundingBox": {
+          "x": 0,
+          "y": 9113,
+          "width": 1440,
+          "height": 440
+        },
+        "isVisible": true
+      }
+    ],
+    "semanticSections": [
+      {
+        "index": 0,
+        "tag": "header",
+        "id": "",
+        "classes": "fixed top-0 w-full z-50 bg-white",
+        "innerTextSnippet": "Showrooms | Material and Colors | Warranty 0 AR Chairs Desks Storage Lounge Acoustic Solutions Accessories Inspirations E-Quotation",
+        "headings": [],
+        "imageCount": 1,
+        "images": [
+          {
+            "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fmajestic-logo-original.png&w=640&q=75",
+            "srcAttr": "/_next/image?url=%2Fimages%2Fmajestic-logo-original.png&w=640&q=75",
+            "srcset": "/_next/image?url=%2Fimages%2Fmajestic-logo-original.png&w=256&q=75 1x, /_next/image?url=%2Fimages%2Fmajestic-logo-original.png&w=640&q=75 2x",
+            "alt": "Majestic Furniture",
+            "width": 176,
+            "height": 96,
+            "naturalWidth": 256,
+            "naturalHeight": 140,
+            "isVisible": true,
+            "loading": "auto",
+            "isNextImage": true
+          }
+        ],
+        "boundingBox": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 221
+        },
+        "isVisible": true
+      },
+      {
+        "index": 1,
+        "tag": "nav",
+        "id": "",
+        "classes": "flex items-center",
+        "innerTextSnippet": "Chairs Desks Storage Lounge Acoustic Solutions Accessories Inspirations E-Quotation",
+        "headings": [],
+        "imageCount": 0,
+        "images": [],
+        "boundingBox": {
+          "x": 112,
+          "y": 170,
+          "width": 1216,
+          "height": 50
+        },
+        "isVisible": true
+      },
+      {
+        "index": 2,
+        "tag": "nav",
+        "id": "",
+        "classes": "flex-1 overflow-y-auto py-2",
+        "innerTextSnippet": "ChairsExecutive ChairsTask ChairsMeeting ChairsLoungeView All DesksExecutive DesksWorkstationsHeight Adjustable DesksAccessoriesMeeting TablesReception DeskView All StorageLoungeAcoustic SolutionsAcce",
+        "headings": [],
+        "imageCount": 0,
+        "images": [],
+        "boundingBox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "isVisible": false
+      },
+      {
+        "index": 3,
+        "tag": "section",
+        "id": "",
+        "classes": "border-t border-[rgba(0,0,0,0.08)] py-12 bg-white",
+        "innerTextSnippet": "Stay Informed New collections, project stories, and workspace insights — delivered to your inbox. Subscribe Instagram LinkedIn Facebook",
+        "headings": [
+          {
+            "tag": "H2",
+            "text": "Stay Informed"
+          }
+        ],
+        "imageCount": 0,
+        "images": [],
+        "boundingBox": {
+          "x": 0,
+          "y": 8852,
+          "width": 1440,
+          "height": 291
+        },
+        "isVisible": true
+      },
+      {
+        "index": 4,
+        "tag": "footer",
+        "id": "",
+        "classes": "bg-white border-t border-[rgba(0,0,0,0.08)]",
+        "innerTextSnippet": "Majestic Furniture supplies professional workspace environments to corporate and government clients across Saudi Arabia and the Gulf. Instagram LinkedIn Facebook X SHOP Seating Desks Storage Workstati",
+        "headings": [
+          {
+            "tag": "H3",
+            "text": "Shop"
+          },
+          {
+            "tag": "H3",
+            "text": "Company"
+          },
+          {
+            "tag": "H3",
+            "text": "Support"
+          },
+          {
+            "tag": "H3",
+            "text": "Contact"
+          }
+        ],
+        "imageCount": 1,
+        "images": [
+          {
+            "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fmajestic-logo-original.png&w=256&q=75",
+            "srcAttr": "/_next/image?url=%2Fimages%2Fmajestic-logo-original.png&w=256&q=75",
+            "srcset": "/_next/image?url=%2Fimages%2Fmajestic-logo-original.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2Fmajestic-logo-original.png&w=256&q=75 2x",
+            "alt": "Majestic Furniture",
+            "width": 113,
+            "height": 32,
+            "naturalWidth": 0,
+            "naturalHeight": 0,
+            "isVisible": true,
+            "loading": "lazy",
+            "isNextImage": true
+          }
+        ],
+        "boundingBox": {
+          "x": 0,
+          "y": 9553,
+          "width": 1440,
+          "height": 472
+        },
+        "isVisible": true
+      }
+    ],
+    "navLinks": [
+      {
+        "href": "/en/showrooms",
+        "text": "Showrooms",
+        "ariaLabel": ""
+      },
+      {
+        "href": "/en/materials",
+        "text": "Material and Colors",
+        "ariaLabel": ""
+      },
+      {
+        "href": "/en/warranty",
+        "text": "Warranty",
+        "ariaLabel": ""
+      },
+      {
+        "href": "/en",
+        "text": "",
+        "ariaLabel": ""
+      },
+      {
+        "href": "/en/account",
+        "text": "",
+        "ariaLabel": "Account"
+      },
+      {
+        "href": "/en/cart",
+        "text": "0",
+        "ariaLabel": "Cart, 0 items"
+      },
+      {
+        "href": "/ar",
+        "text": "AR",
+        "ariaLabel": ""
+      },
+      {
+        "href": "/en/shop?category=seating",
+        "text": "Chairs",
+        "ariaLabel": ""
+      },
+      {
+        "href": "/en/shop?category=tables",
+        "text": "Desks",
+        "ariaLabel": ""
+      },
+      {
+        "href": "/en/shop?category=storage",
+        "text": "Storage",
+        "ariaLabel": ""
+      },
+      {
+        "href": "/en/shop?category=lounge",
+        "text": "Lounge",
+        "ariaLabel": ""
+      },
+      {
+        "href": "/en/shop?category=acoustics",
+        "text": "Acoustic Solutions",
+        "ariaLabel": ""
+      },
+      {
+        "href": "/en/shop?category=accessories",
+        "text": "Accessories",
+        "ariaLabel": ""
+      },
+      {
+        "href": "/en/inspirations",
+        "text": "Inspirations",
+        "ariaLabel": ""
+      },
+      {
+        "href": "/en/quotation",
+        "text": "E-Quotation",
+        "ariaLabel": ""
+      },
+      {
+        "href": "/en/shop?category=executive-chairs",
+        "text": "Executive Chairs",
+        "ariaLabel": ""
+      },
+      {
+        "href": "/en/shop?category=task-chairs",
+        "text": "Task Chairs",
+        "ariaLabel": ""
+      },
+      {
+        "href": "/en/shop?category=meeting-chairs",
+        "text": "Meeting Chairs",
+        "ariaLabel": ""
+      },
+      {
+        "href": "/en/shop?category=lounge-chairs",
+        "text": "Lounge",
+        "ariaLabel": ""
+      },
+      {
+        "href": "/en/shop?category=seating",
+        "text": "View All",
+        "ariaLabel": ""
+      },
+      {
+        "href": "/en/shop?category=executive-desks",
+        "text": "Executive Desks",
+        "ariaLabel": ""
+      },
+      {
+        "href": "/en/shop?category=workstations",
+        "text": "Workstations",
+        "ariaLabel": ""
+      },
+      {
+        "href": "/en/shop?category=height-adjustable",
+        "text": "Height Adjustable Desks",
+        "ariaLabel": ""
+      },
+      {
+        "href": "/en/shop?category=accessories",
+        "text": "Accessories",
+        "ariaLabel": ""
+      },
+      {
+        "href": "/en/shop?category=meeting-tables",
+        "text": "Meeting Tables",
+        "ariaLabel": ""
+      },
+      {
+        "href": "/en/shop?category=reception",
+        "text": "Reception Desk",
+        "ariaLabel": ""
+      },
+      {
+        "href": "/en/shop?category=tables",
+        "text": "View All",
+        "ariaLabel": ""
+      },
+      {
+        "href": "/en/shop?category=storage",
+        "text": "Storage",
+        "ariaLabel": ""
+      },
+      {
+        "href": "/en/shop?category=lounge",
+        "text": "Lounge",
+        "ariaLabel": ""
+      },
+      {
+        "href": "/en/shop?category=acoustics",
+        "text": "Acoustic Solutions",
+        "ariaLabel": ""
+      },
+      {
+        "href": "/en/shop?category=accessories",
+        "text": "Accessories",
+        "ariaLabel": ""
+      },
+      {
+        "href": "/en/inspirations",
+        "text": "Inspirations",
+        "ariaLabel": ""
+      },
+      {
+        "href": "/en/quotation",
+        "text": "E-Quotation",
+        "ariaLabel": ""
+      }
+    ],
+    "allImages": [
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fmajestic-logo-original.png&w=640&q=75",
+        "srcAttr": "/_next/image?url=%2Fimages%2Fmajestic-logo-original.png&w=640&q=75",
+        "srcset": "/_next/image?url=%2Fimages%2Fmajestic-logo-original.png&w=256&q=75 1x, /_next/image?url=%2Fimages%2Fmajestic-logo-original.png&w=640&q=75 2x",
+        "alt": "Majestic Furniture",
+        "width": 176,
+        "height": 96,
+        "naturalWidth": 256,
+        "naturalHeight": 140,
+        "isVisible": true,
+        "loading": "auto",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fmajestic-logo-original.png&w=256&q=75",
+        "srcAttr": "/_next/image?url=%2Fimages%2Fmajestic-logo-original.png&w=256&q=75",
+        "srcset": "/_next/image?url=%2Fimages%2Fmajestic-logo-original.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2Fmajestic-logo-original.png&w=256&q=75 2x",
+        "alt": "Majestic Furniture",
+        "width": 0,
+        "height": 0,
+        "naturalWidth": 0,
+        "naturalHeight": 0,
+        "isVisible": false,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fhero-seating-mobile.jpg&w=3840&q=75",
+        "srcAttr": "/_next/image?url=%2Fimages%2Fhero-seating-mobile.jpg&w=3840&q=75",
+        "srcset": "/_next/image?url=%2Fimages%2Fhero-seating-mobile.jpg&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fhero-seating-mobile.jpg&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fhero-seating-mobile.jpg&w=828&q",
+        "alt": "Majestic Ergonomic Seating",
+        "width": 0,
+        "height": 0,
+        "naturalWidth": 0,
+        "naturalHeight": 0,
+        "isVisible": false,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fhero-seating.jpg&w=3840&q=75",
+        "srcAttr": "/_next/image?url=%2Fimages%2Fhero-seating.jpg&w=3840&q=75",
+        "srcset": "/_next/image?url=%2Fimages%2Fhero-seating.jpg&w=384&q=75 384w, /_next/image?url=%2Fimages%2Fhero-seating.jpg&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fhero-seating.jpg&w=750&q=75 750w, /_next/imag",
+        "alt": "Majestic Ergonomic Seating",
+        "width": 835,
+        "height": 715,
+        "naturalWidth": 835,
+        "naturalHeight": 304,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2Fcategory-seating.png&w=128&q=75",
+        "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2Fcategory-seating.png&w=128&q=75",
+        "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2Fcategory-seating.png&w=64&q=75 1x, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2Fc",
+        "alt": "Seating",
+        "width": 62,
+        "height": 62,
+        "naturalWidth": 64,
+        "naturalHeight": 43,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2Fcategory-tables.png&w=128&q=75",
+        "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2Fcategory-tables.png&w=128&q=75",
+        "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2Fcategory-tables.png&w=64&q=75 1x, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2Fca",
+        "alt": "Tables",
+        "width": 62,
+        "height": 62,
+        "naturalWidth": 64,
+        "naturalHeight": 43,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2Fcategory-storage.png&w=128&q=75",
+        "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2Fcategory-storage.png&w=128&q=75",
+        "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2Fcategory-storage.png&w=64&q=75 1x, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2Fc",
+        "alt": "Storage",
+        "width": 62,
+        "height": 62,
+        "naturalWidth": 64,
+        "naturalHeight": 43,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2Fcategory-workstations.png&w=128&q=75",
+        "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2Fcategory-workstations.png&w=128&q=75",
+        "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2Fcategory-workstations.png&w=64&q=75 1x, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F0",
+        "alt": "Workstations",
+        "width": 62,
+        "height": 62,
+        "naturalWidth": 64,
+        "naturalHeight": 43,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2Fcategory-acoustics.png&w=128&q=75",
+        "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2Fcategory-acoustics.png&w=128&q=75",
+        "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2Fcategory-acoustics.png&w=64&q=75 1x, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2",
+        "alt": "Acoustics",
+        "width": 62,
+        "height": 62,
+        "naturalWidth": 64,
+        "naturalHeight": 43,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2Fcategory-lounge.png&w=128&q=75",
+        "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2Fcategory-lounge.png&w=128&q=75",
+        "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2Fcategory-lounge.png&w=64&q=75 1x, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2Fca",
+        "alt": "Lounge",
+        "width": 62,
+        "height": 62,
+        "naturalWidth": 64,
+        "naturalHeight": 43,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2F%D8%AC5.jpg&w=3840&q=75",
+        "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2F%D8%AC5.jpg&w=3840&q=75",
+        "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2F%D8%AC5.jpg&w=256&q=75 256w, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2F%D8%AC5",
+        "alt": "كرسي كاكتس",
+        "width": 331,
+        "height": 419,
+        "naturalWidth": 328,
+        "naturalHeight": 562,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2F%D8%B71.jpg&w=3840&q=75",
+        "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2F%D8%B71.jpg&w=3840&q=75",
+        "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2F%D8%B71.jpg&w=256&q=75 256w, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2F%D8%B71",
+        "alt": "كرسي اي ام اس",
+        "width": 331,
+        "height": 419,
+        "naturalWidth": 328,
+        "naturalHeight": 562,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2F%D8%B72.jpg&w=3840&q=75",
+        "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2F%D8%B72.jpg&w=3840&q=75",
+        "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2F%D8%B72.jpg&w=256&q=75 256w, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2F%D8%B72",
+        "alt": "مقعد فلاي",
+        "width": 331,
+        "height": 419,
+        "naturalWidth": 328,
+        "naturalHeight": 562,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2F%D8%B74.jpg&w=3840&q=75",
+        "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2F%D8%B74.jpg&w=3840&q=75",
+        "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2F%D8%B74.jpg&w=256&q=75 256w, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2F%D8%B74",
+        "alt": "ليمون",
+        "width": 331,
+        "height": 419,
+        "naturalWidth": 328,
+        "naturalHeight": 562,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2F%D8%B75.jpg&w=3840&q=75",
+        "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2F%D8%B75.jpg&w=3840&q=75",
+        "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2F%D8%B75.jpg&w=256&q=75 256w, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2F%D8%B75",
+        "alt": "كرسي اورنج",
+        "width": 331,
+        "height": 419,
+        "naturalWidth": 328,
+        "naturalHeight": 562,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2F%D8%B77.jpg&w=3840&q=75",
+        "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2F%D8%B77.jpg&w=3840&q=75",
+        "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2F%D8%B77.jpg&w=256&q=75 256w, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2F%D8%B77",
+        "alt": "كرسي SYS",
+        "width": 331,
+        "height": 419,
+        "naturalWidth": 328,
+        "naturalHeight": 562,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2F%D8%B78.jpg&w=3840&q=75",
+        "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2F%D8%B78.jpg&w=3840&q=75",
+        "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2F%D8%B78.jpg&w=256&q=75 256w, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2F%D8%B78",
+        "alt": "كرسي تايم",
+        "width": 331,
+        "height": 419,
+        "naturalWidth": 328,
+        "naturalHeight": 562,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2F%D8%B81.jpg&w=3840&q=75",
+        "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2F%D8%B81.jpg&w=3840&q=75",
+        "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2F%D8%B81.jpg&w=256&q=75 256w, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F03%2F%D8%B81",
+        "alt": "كرسي 252",
+        "width": 331,
+        "height": 419,
+        "naturalWidth": 328,
+        "naturalHeight": 562,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fwebsite%2Fs1-a-executive-office.jpg&w=3840&q=75",
+        "srcAttr": "/_next/image?url=%2Fimages%2Fwebsite%2Fs1-a-executive-office.jpg&w=3840&q=75",
+        "srcset": "/_next/image?url=%2Fimages%2Fwebsite%2Fs1-a-executive-office.jpg&w=128&q=75 128w, /_next/image?url=%2Fimages%2Fwebsite%2Fs1-a-executive-office.jpg&w=256&q=75 256w, /_next/image?url=%2Fimages%2Fwebsite",
+        "alt": "Executive Office",
+        "width": 240,
+        "height": 427,
+        "naturalWidth": 244,
+        "naturalHeight": 107,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fwebsite%2Fs1-b-boardroom.jpg&w=3840&q=75",
+        "srcAttr": "/_next/image?url=%2Fimages%2Fwebsite%2Fs1-b-boardroom.jpg&w=3840&q=75",
+        "srcset": "/_next/image?url=%2Fimages%2Fwebsite%2Fs1-b-boardroom.jpg&w=128&q=75 128w, /_next/image?url=%2Fimages%2Fwebsite%2Fs1-b-boardroom.jpg&w=256&q=75 256w, /_next/image?url=%2Fimages%2Fwebsite%2Fs1-b-boardr",
+        "alt": "Boardroom",
+        "width": 240,
+        "height": 427,
+        "naturalWidth": 244,
+        "naturalHeight": 107,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fwebsite%2Fs1-c-open-workfloor.jpg&w=3840&q=75",
+        "srcAttr": "/_next/image?url=%2Fimages%2Fwebsite%2Fs1-c-open-workfloor.jpg&w=3840&q=75",
+        "srcset": "/_next/image?url=%2Fimages%2Fwebsite%2Fs1-c-open-workfloor.jpg&w=128&q=75 128w, /_next/image?url=%2Fimages%2Fwebsite%2Fs1-c-open-workfloor.jpg&w=256&q=75 256w, /_next/image?url=%2Fimages%2Fwebsite%2Fs",
+        "alt": "Open Workfloor",
+        "width": 240,
+        "height": 427,
+        "naturalWidth": 244,
+        "naturalHeight": 107,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fwebsite%2Fs1-d-reception-lobby.jpg&w=3840&q=75",
+        "srcAttr": "/_next/image?url=%2Fimages%2Fwebsite%2Fs1-d-reception-lobby.jpg&w=3840&q=75",
+        "srcset": "/_next/image?url=%2Fimages%2Fwebsite%2Fs1-d-reception-lobby.jpg&w=128&q=75 128w, /_next/image?url=%2Fimages%2Fwebsite%2Fs1-d-reception-lobby.jpg&w=256&q=75 256w, /_next/image?url=%2Fimages%2Fwebsite%2",
+        "alt": "Reception & Lobby",
+        "width": 240,
+        "height": 427,
+        "naturalWidth": 244,
+        "naturalHeight": 107,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fwebsite%2Fs1-e-lounge-collaboration.jpg&w=3840&q=75",
+        "srcAttr": "/_next/image?url=%2Fimages%2Fwebsite%2Fs1-e-lounge-collaboration.jpg&w=3840&q=75",
+        "srcset": "/_next/image?url=%2Fimages%2Fwebsite%2Fs1-e-lounge-collaboration.jpg&w=128&q=75 128w, /_next/image?url=%2Fimages%2Fwebsite%2Fs1-e-lounge-collaboration.jpg&w=256&q=75 256w, /_next/image?url=%2Fimages%2",
+        "alt": "Lounge & Collaboration",
+        "width": 240,
+        "height": 427,
+        "naturalWidth": 244,
+        "naturalHeight": 107,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fwebsite%2Fs1-f-training-seminar.jpg&w=3840&q=75",
+        "srcAttr": "/_next/image?url=%2Fimages%2Fwebsite%2Fs1-f-training-seminar.jpg&w=3840&q=75",
+        "srcset": "/_next/image?url=%2Fimages%2Fwebsite%2Fs1-f-training-seminar.jpg&w=128&q=75 128w, /_next/image?url=%2Fimages%2Fwebsite%2Fs1-f-training-seminar.jpg&w=256&q=75 256w, /_next/image?url=%2Fimages%2Fwebsite",
+        "alt": "Training & Seminar",
+        "width": 240,
+        "height": 427,
+        "naturalWidth": 244,
+        "naturalHeight": 107,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fwebsite%2Fs2-a-directorial-suite.jpg&w=3840&q=75",
+        "srcAttr": "/_next/image?url=%2Fimages%2Fwebsite%2Fs2-a-directorial-suite.jpg&w=3840&q=75",
+        "srcset": "/_next/image?url=%2Fimages%2Fwebsite%2Fs2-a-directorial-suite.jpg&w=256&q=75 256w, /_next/image?url=%2Fimages%2Fwebsite%2Fs2-a-directorial-suite.jpg&w=384&q=75 384w, /_next/image?url=%2Fimages%2Fwebsi",
+        "alt": "The Directorial Suite",
+        "width": 441,
+        "height": 294,
+        "naturalWidth": 475,
+        "naturalHeight": 207,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fwebsite%2Fs2-b-collaborative-floor.jpg&w=3840&q=75",
+        "srcAttr": "/_next/image?url=%2Fimages%2Fwebsite%2Fs2-b-collaborative-floor.jpg&w=3840&q=75",
+        "srcset": "/_next/image?url=%2Fimages%2Fwebsite%2Fs2-b-collaborative-floor.jpg&w=256&q=75 256w, /_next/image?url=%2Fimages%2Fwebsite%2Fs2-b-collaborative-floor.jpg&w=384&q=75 384w, /_next/image?url=%2Fimages%2Fw",
+        "alt": "The Collaborative Floor",
+        "width": 441,
+        "height": 294,
+        "naturalWidth": 475,
+        "naturalHeight": 207,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fwebsite%2Fs2-c-reception-statement.jpg&w=3840&q=75",
+        "srcAttr": "/_next/image?url=%2Fimages%2Fwebsite%2Fs2-c-reception-statement.jpg&w=3840&q=75",
+        "srcset": "/_next/image?url=%2Fimages%2Fwebsite%2Fs2-c-reception-statement.jpg&w=256&q=75 256w, /_next/image?url=%2Fimages%2Fwebsite%2Fs2-c-reception-statement.jpg&w=384&q=75 384w, /_next/image?url=%2Fimages%2Fw",
+        "alt": "The Reception Statement",
+        "width": 441,
+        "height": 294,
+        "naturalWidth": 475,
+        "naturalHeight": 207,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fwebsite%2Fs3-a-desk-edge-detail.jpg&w=3840&q=75",
+        "srcAttr": "/_next/image?url=%2Fimages%2Fwebsite%2Fs3-a-desk-edge-detail.jpg&w=3840&q=75",
+        "srcset": "/_next/image?url=%2Fimages%2Fwebsite%2Fs3-a-desk-edge-detail.jpg&w=32&q=75 32w, /_next/image?url=%2Fimages%2Fwebsite%2Fs3-a-desk-edge-detail.jpg&w=48&q=75 48w, /_next/image?url=%2Fimages%2Fwebsite%2Fs",
+        "alt": "Desk edge detail",
+        "width": 260,
+        "height": 347,
+        "naturalWidth": 260,
+        "naturalHeight": 113,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fwebsite%2Fs3-b-height-adjustment-mechanism.jpg&w=3840&q=75",
+        "srcAttr": "/_next/image?url=%2Fimages%2Fwebsite%2Fs3-b-height-adjustment-mechanism.jpg&w=3840&q=75",
+        "srcset": "/_next/image?url=%2Fimages%2Fwebsite%2Fs3-b-height-adjustment-mechanism.jpg&w=32&q=75 32w, /_next/image?url=%2Fimages%2Fwebsite%2Fs3-b-height-adjustment-mechanism.jpg&w=48&q=75 48w, /_next/image?url=%",
+        "alt": "Height adjustment mechanism",
+        "width": 260,
+        "height": 347,
+        "naturalWidth": 260,
+        "naturalHeight": 113,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fwebsite%2Fs3-c-leather-armrest-seam.jpg&w=3840&q=75",
+        "srcAttr": "/_next/image?url=%2Fimages%2Fwebsite%2Fs3-c-leather-armrest-seam.jpg&w=3840&q=75",
+        "srcset": "/_next/image?url=%2Fimages%2Fwebsite%2Fs3-c-leather-armrest-seam.jpg&w=32&q=75 32w, /_next/image?url=%2Fimages%2Fwebsite%2Fs3-c-leather-armrest-seam.jpg&w=48&q=75 48w, /_next/image?url=%2Fimages%2Fweb",
+        "alt": "Leather armrest seam",
+        "width": 260,
+        "height": 347,
+        "naturalWidth": 260,
+        "naturalHeight": 113,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fwebsite%2Fs3-d-conference-table-joinery.jpg&w=3840&q=75",
+        "srcAttr": "/_next/image?url=%2Fimages%2Fwebsite%2Fs3-d-conference-table-joinery.jpg&w=3840&q=75",
+        "srcset": "/_next/image?url=%2Fimages%2Fwebsite%2Fs3-d-conference-table-joinery.jpg&w=32&q=75 32w, /_next/image?url=%2Fimages%2Fwebsite%2Fs3-d-conference-table-joinery.jpg&w=48&q=75 48w, /_next/image?url=%2Fimag",
+        "alt": "Conference table joinery",
+        "width": 260,
+        "height": 347,
+        "naturalWidth": 260,
+        "naturalHeight": 113,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fwebsite%2Fs3-e-acoustic-fabric-weave.jpg&w=3840&q=75",
+        "srcAttr": "/_next/image?url=%2Fimages%2Fwebsite%2Fs3-e-acoustic-fabric-weave.jpg&w=3840&q=75",
+        "srcset": "/_next/image?url=%2Fimages%2Fwebsite%2Fs3-e-acoustic-fabric-weave.jpg&w=32&q=75 32w, /_next/image?url=%2Fimages%2Fwebsite%2Fs3-e-acoustic-fabric-weave.jpg&w=48&q=75 48w, /_next/image?url=%2Fimages%2Fw",
+        "alt": "Acoustic fabric weave",
+        "width": 260,
+        "height": 347,
+        "naturalWidth": 260,
+        "naturalHeight": 113,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fwebsite%2Fs4-a-workfloor-scale.jpg&w=3840&q=75",
+        "srcAttr": "/_next/image?url=%2Fimages%2Fwebsite%2Fs4-a-workfloor-scale.jpg&w=3840&q=75",
+        "srcset": "/_next/image?url=%2Fimages%2Fwebsite%2Fs4-a-workfloor-scale.jpg&w=384&q=75 384w, /_next/image?url=%2Fimages%2Fwebsite%2Fs4-a-workfloor-scale.jpg&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fwebsite%2",
+        "alt": "A complete open-floor fit-out across fou",
+        "width": 687,
+        "height": 309,
+        "naturalWidth": 0,
+        "naturalHeight": 0,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fwebsite%2Fs4-b-executive-floor-corridor.jpg&w=3840&q=75",
+        "srcAttr": "/_next/image?url=%2Fimages%2Fwebsite%2Fs4-b-executive-floor-corridor.jpg&w=3840&q=75",
+        "srcset": "/_next/image?url=%2Fimages%2Fwebsite%2Fs4-b-executive-floor-corridor.jpg&w=384&q=75 384w, /_next/image?url=%2Fimages%2Fwebsite%2Fs4-b-executive-floor-corridor.jpg&w=640&q=75 640w, /_next/image?url=%2F",
+        "alt": "A full executive floor for a regional he",
+        "width": 687,
+        "height": 309,
+        "naturalWidth": 0,
+        "naturalHeight": 0,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish-wenge.jpg&w=3840&q=75",
+        "srcAttr": "/_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish-wenge.jpg&w=3840&q=75",
+        "srcset": "/_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish-wenge.jpg&w=384&q=75 384w, /_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish-wenge.jpg&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish",
+        "alt": "Wenge",
+        "width": 795,
+        "height": 954,
+        "naturalWidth": 0,
+        "naturalHeight": 0,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish-walnut.jpg&w=3840&q=75",
+        "srcAttr": "/_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish-walnut.jpg&w=3840&q=75",
+        "srcset": "/_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish-walnut.jpg&w=384&q=75 384w, /_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish-walnut.jpg&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fwebsite%2Fs6-fini",
+        "alt": "Walnut",
+        "width": 795,
+        "height": 954,
+        "naturalWidth": 0,
+        "naturalHeight": 0,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish-oak.jpg&w=3840&q=75",
+        "srcAttr": "/_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish-oak.jpg&w=3840&q=75",
+        "srcset": "/_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish-oak.jpg&w=384&q=75 384w, /_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish-oak.jpg&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish-oak",
+        "alt": "Oak",
+        "width": 795,
+        "height": 954,
+        "naturalWidth": 0,
+        "naturalHeight": 0,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish-white.jpg&w=3840&q=75",
+        "srcAttr": "/_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish-white.jpg&w=3840&q=75",
+        "srcset": "/_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish-white.jpg&w=384&q=75 384w, /_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish-white.jpg&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish",
+        "alt": "White",
+        "width": 795,
+        "height": 954,
+        "naturalWidth": 0,
+        "naturalHeight": 0,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish-light-grey.jpg&w=3840&q=75",
+        "srcAttr": "/_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish-light-grey.jpg&w=3840&q=75",
+        "srcset": "/_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish-light-grey.jpg&w=384&q=75 384w, /_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish-light-grey.jpg&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fwebsite%2",
+        "alt": "Light Grey",
+        "width": 795,
+        "height": 954,
+        "naturalWidth": 0,
+        "naturalHeight": 0,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish-black-chrome.jpg&w=3840&q=75",
+        "srcAttr": "/_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish-black-chrome.jpg&w=3840&q=75",
+        "srcset": "/_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish-black-chrome.jpg&w=384&q=75 384w, /_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish-black-chrome.jpg&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fwebsi",
+        "alt": "Black Chrome",
+        "width": 795,
+        "height": 954,
+        "naturalWidth": 0,
+        "naturalHeight": 0,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish-warm-sand.jpg&w=3840&q=75",
+        "srcAttr": "/_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish-warm-sand.jpg&w=3840&q=75",
+        "srcset": "/_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish-warm-sand.jpg&w=384&q=75 384w, /_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish-warm-sand.jpg&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fwebsite%2Fs",
+        "alt": "Warm Sand",
+        "width": 795,
+        "height": 954,
+        "naturalWidth": 0,
+        "naturalHeight": 0,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish-graphite.jpg&w=3840&q=75",
+        "srcAttr": "/_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish-graphite.jpg&w=3840&q=75",
+        "srcset": "/_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish-graphite.jpg&w=384&q=75 384w, /_next/image?url=%2Fimages%2Fwebsite%2Fs6-finish-graphite.jpg&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fwebsite%2Fs6-",
+        "alt": "Graphite",
+        "width": 795,
+        "height": 954,
+        "naturalWidth": 0,
+        "naturalHeight": 0,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fwebsite%2Fs7-a-executive-floor-article.jpg&w=3840&q=75",
+        "srcAttr": "/_next/image?url=%2Fimages%2Fwebsite%2Fs7-a-executive-floor-article.jpg&w=3840&q=75",
+        "srcset": "/_next/image?url=%2Fimages%2Fwebsite%2Fs7-a-executive-floor-article.jpg&w=256&q=75 256w, /_next/image?url=%2Fimages%2Fwebsite%2Fs7-a-executive-floor-article.jpg&w=384&q=75 384w, /_next/image?url=%2Fim",
+        "alt": "Designing the Executive Floor: Standards for Saudi Corporate Offices",
+        "width": 441,
+        "height": 231,
+        "naturalWidth": 0,
+        "naturalHeight": 0,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fwebsite%2Fs7-b-height-adjustable-article.jpg&w=3840&q=75",
+        "srcAttr": "/_next/image?url=%2Fimages%2Fwebsite%2Fs7-b-height-adjustable-article.jpg&w=3840&q=75",
+        "srcset": "/_next/image?url=%2Fimages%2Fwebsite%2Fs7-b-height-adjustable-article.jpg&w=256&q=75 256w, /_next/image?url=%2Fimages%2Fwebsite%2Fs7-b-height-adjustable-article.jpg&w=384&q=75 384w, /_next/image?url=%",
+        "alt": "Why Height-Adjustable Desks Are Now a Specification Requirement",
+        "width": 441,
+        "height": 231,
+        "naturalWidth": 0,
+        "naturalHeight": 0,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fwebsite%2Fs7-c-fit-out-brief-article.jpg&w=3840&q=75",
+        "srcAttr": "/_next/image?url=%2Fimages%2Fwebsite%2Fs7-c-fit-out-brief-article.jpg&w=3840&q=75",
+        "srcset": "/_next/image?url=%2Fimages%2Fwebsite%2Fs7-c-fit-out-brief-article.jpg&w=256&q=75 256w, /_next/image?url=%2Fimages%2Fwebsite%2Fs7-c-fit-out-brief-article.jpg&w=384&q=75 384w, /_next/image?url=%2Fimages",
+        "alt": "Complete Workspace: How to Brief a Full Office Fit-Out",
+        "width": 441,
+        "height": 231,
+        "naturalWidth": 0,
+        "naturalHeight": 0,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fhero-tables.jpg&w=3840&q=75",
+        "srcAttr": "/_next/image?url=%2Fimages%2Fhero-tables.jpg&w=3840&q=75",
+        "srcset": "/_next/image?url=%2Fimages%2Fhero-tables.jpg&w=384&q=75 384w, /_next/image?url=%2Fimages%2Fhero-tables.jpg&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fhero-tables.jpg&w=750&q=75 750w, /_next/image?u",
+        "alt": "Office furniture showroom",
+        "width": 672,
+        "height": 504,
+        "naturalWidth": 0,
+        "naturalHeight": 0,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fhero-tables.jpg&w=3840&q=75",
+        "srcAttr": "/_next/image?url=%2Fimages%2Fhero-tables.jpg&w=3840&q=75",
+        "srcset": "/_next/image?url=%2Fimages%2Fhero-tables.jpg&w=384&q=75 384w, /_next/image?url=%2Fimages%2Fhero-tables.jpg&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fhero-tables.jpg&w=750&q=75 750w, /_next/image?u",
+        "alt": "Office space planning ideas",
+        "width": 640,
+        "height": 420,
+        "naturalWidth": 0,
+        "naturalHeight": 0,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fmajestic-logo-original.png&w=256&q=75",
+        "srcAttr": "/_next/image?url=%2Fimages%2Fmajestic-logo-original.png&w=256&q=75",
+        "srcset": "/_next/image?url=%2Fimages%2Fmajestic-logo-original.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2Fmajestic-logo-original.png&w=256&q=75 2x",
+        "alt": "Majestic Furniture",
+        "width": 113,
+        "height": 32,
+        "naturalWidth": 0,
+        "naturalHeight": 0,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      }
+    ],
+    "bgImages": [],
+    "computedBgImages": [],
+    "animations": [
+      {
+        "selector": "a.hover:text-[#0c0c0c].transition-colors.px-2",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "a.hover:text-[#0c0c0c].transition-colors.px-2",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "a.hover:text-[#0c0c0c].transition-colors.px-2",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "button.flex.p-2.md:p-2.5",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "a.p-2.md:p-2.5.text-[#0c0c0c]",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "a.p-2.md:p-2.5.text-[#0c0c0c]",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "a.flex.items-center.gap-1",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "a.flex.items-center.gap-1",
+        "animationName": "none",
+        "transitionProperty": "background-size",
+        "transitionDuration": "0.25s"
+      },
+      {
+        "selector": "svg.[object.SVGAnimatedString]",
+        "animationName": "none",
+        "transitionProperty": "transform, translate, scale, rotate",
+        "transitionDuration": "0.2s"
+      },
+      {
+        "selector": "a.flex.items-center.gap-1",
+        "animationName": "none",
+        "transitionProperty": "background-size",
+        "transitionDuration": "0.25s"
+      },
+      {
+        "selector": "svg.[object.SVGAnimatedString]",
+        "animationName": "none",
+        "transitionProperty": "transform, translate, scale, rotate",
+        "transitionDuration": "0.2s"
+      },
+      {
+        "selector": "a.text-sm.font-medium.px-3",
+        "animationName": "none",
+        "transitionProperty": "background-size",
+        "transitionDuration": "0.25s"
+      },
+      {
+        "selector": "a.text-sm.font-medium.px-3",
+        "animationName": "none",
+        "transitionProperty": "background-size",
+        "transitionDuration": "0.25s"
+      },
+      {
+        "selector": "a.text-sm.font-medium.px-3",
+        "animationName": "none",
+        "transitionProperty": "background-size",
+        "transitionDuration": "0.25s"
+      },
+      {
+        "selector": "a.text-sm.font-medium.px-3",
+        "animationName": "none",
+        "transitionProperty": "background-size",
+        "transitionDuration": "0.25s"
+      },
+      {
+        "selector": "a.flex.items-center.gap-1.5",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "a.flex.items-center.gap-1.5",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "div.fixed.inset-0.z-50",
+        "animationName": "none",
+        "transitionProperty": "opacity",
+        "transitionDuration": "0.3s"
+      },
+      {
+        "selector": "div.fixed.top-0.z-50",
+        "animationName": "none",
+        "transitionProperty": "transform, translate, scale, rotate",
+        "transitionDuration": "0.3s"
+      },
+      {
+        "selector": "button.w-full.flex.items-center",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "svg.[object.SVGAnimatedString]",
+        "animationName": "none",
+        "transitionProperty": "transform, translate, scale, rotate",
+        "transitionDuration": "0.2s"
+      },
+      {
+        "selector": "div.overflow-hidden.transition-all.duration-200",
+        "animationName": "none",
+        "transitionProperty": "all",
+        "transitionDuration": "0.2s"
+      },
+      {
+        "selector": "a.block.px-10.py-3",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "a.block.px-10.py-3",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "a.block.px-10.py-3",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "a.block.px-10.py-3",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "button.w-full.flex.items-center",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "svg.[object.SVGAnimatedString]",
+        "animationName": "none",
+        "transitionProperty": "transform, translate, scale, rotate",
+        "transitionDuration": "0.2s"
+      },
+      {
+        "selector": "div.overflow-hidden.transition-all.duration-200",
+        "animationName": "none",
+        "transitionProperty": "all",
+        "transitionDuration": "0.2s"
+      },
+      {
+        "selector": "a.block.px-10.py-3",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "a.block.px-10.py-3",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "a.block.px-10.py-3",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "a.block.px-10.py-3",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "a.block.px-10.py-3",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "a.block.px-10.py-3",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "a.block.px-6.py-4",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "a.block.px-6.py-4",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "a.block.px-6.py-4",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "a.block.px-6.py-4",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "a.block.px-6.py-4",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "a.block.px-6.py-4",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "a.flex.items-center.gap-2",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "a.flex.items-center.gap-1",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "a.mt-8.w-fit.self-start",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "svg.[object.SVGAnimatedString]",
+        "animationName": "none",
+        "transitionProperty": "transform, translate, scale, rotate",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "a.mt-8.w-fit.self-start",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "svg.[object.SVGAnimatedString]",
+        "animationName": "none",
+        "transitionProperty": "transform, translate, scale, rotate",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "button.h-1.5.rounded-full.transition-all",
+        "animationName": "none",
+        "transitionProperty": "all",
+        "transitionDuration": "0.3s"
+      },
+      {
+        "selector": "button.h-1.5.rounded-full.transition-all",
+        "animationName": "none",
+        "transitionProperty": "all",
+        "transitionDuration": "0.3s"
+      },
+      {
+        "selector": "button.h-1.5.rounded-full.transition-all",
+        "animationName": "none",
+        "transitionProperty": "all",
+        "transitionDuration": "0.3s"
+      },
+      {
+        "selector": "img.object-cover.w-full.h-full",
+        "animationName": "none",
+        "transitionProperty": "transform, translate, scale, rotate",
+        "transitionDuration": "0.2s"
+      },
+      {
+        "selector": "img.object-cover.w-full.h-full",
+        "animationName": "none",
+        "transitionProperty": "transform, translate, scale, rotate",
+        "transitionDuration": "0.2s"
+      },
+      {
+        "selector": "img.object-cover.w-full.h-full",
+        "animationName": "none",
+        "transitionProperty": "transform, translate, scale, rotate",
+        "transitionDuration": "0.2s"
+      },
+      {
+        "selector": "img.object-cover.w-full.h-full",
+        "animationName": "none",
+        "transitionProperty": "transform, translate, scale, rotate",
+        "transitionDuration": "0.2s"
+      },
+      {
+        "selector": "img.object-cover.w-full.h-full",
+        "animationName": "none",
+        "transitionProperty": "transform, translate, scale, rotate",
+        "transitionDuration": "0.2s"
+      },
+      {
+        "selector": "img.object-cover.w-full.h-full",
+        "animationName": "none",
+        "transitionProperty": "transform, translate, scale, rotate",
+        "transitionDuration": "0.2s"
+      },
+      {
+        "selector": "div.group.bg-white.border",
+        "animationName": "none",
+        "transitionProperty": "all",
+        "transitionDuration": "0.2s"
+      },
+      {
+        "selector": "img.object-cover.transition-transform.duration-300",
+        "animationName": "none",
+        "transitionProperty": "transform, translate, scale, rotate",
+        "transitionDuration": "0.3s"
+      },
+      {
+        "selector": "button.btn-press.w-full.bg-[#0c0c0c]",
+        "animationName": "none",
+        "transitionProperty": "transform",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "div.group.bg-white.border",
+        "animationName": "none",
+        "transitionProperty": "all",
+        "transitionDuration": "0.2s"
+      }
+    ],
+    "consoleErrors": [],
+    "networkErrors": [
+      "net::ERR_ABORTED — https://majestic-next.vercel.app/en/showrooms?_rsc=eqsiq",
+      "net::ERR_ABORTED — https://majestic-next.vercel.app/en/shop?category=lounge&_rsc=1a28h",
+      "net::ERR_ABORTED — https://majestic-next.vercel.app/en/materials?_rsc=eqsiq",
+      "net::ERR_ABORTED — https://majestic-next.vercel.app/en/shop?category=acoustics&_rsc=1a28h",
+      "net::ERR_ABORTED — https://majestic-next.vercel.app/en/shop?category=tables&_rsc=1a28h",
+      "net::ERR_ABORTED — https://majestic-next.vercel.app/en/shop?category=seating&_rsc=1a28h",
+      "net::ERR_ABORTED — https://majestic-next.vercel.app/en/shop?_rsc=1a28h",
+      "net::ERR_ABORTED — https://majestic-next.vercel.app/en/quotation?_rsc=1a28h",
+      "net::ERR_ABORTED — https://majestic-next.vercel.app/en/inspirations?_rsc=1a28h",
+      "net::ERR_ABORTED — https://majestic-next.vercel.app/en/account?_rsc=1a28h",
+      "net::ERR_ABORTED — https://majestic-next.vercel.app/en?_rsc=1a28h",
+      "net::ERR_ABORTED — https://majestic-next.vercel.app/en/materials?_rsc=1a28h",
+      "net::ERR_ABORTED — https://majestic-next.vercel.app/en/showrooms?_rsc=1a28h"
+    ],
+    "viewportWidth": 1440,
+    "viewportHeight": 900
+  },
+  "shop": {
+    "url": "https://majestic-next.vercel.app/en/shop",
+    "title": "All Products — Professional Office Furniture | Majestic | Majestic Furniture",
+    "metaDescription": "Browse our complete range of professional office furniture: executive desks, ergonomic chairs, workstations, meeting tables, and storage units. Delivery and assembly in Riyadh.",
+    "lang": "en",
+    "dir": "ltr",
+    "documentHeight": 3222,
+    "topLevelSections": [
+      {
+        "index": 0,
+        "tag": "script",
+        "id": "",
+        "classes": "",
+        "dataAttributes": {},
+        "innerTextSnippet": "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://thedeskco.net/en/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":",
+        "headings": [],
+        "links": [],
+        "imageCount": 0,
+        "images": [],
+        "boundingBox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "isVisible": false
+      },
+      {
+        "index": 1,
+        "tag": "div",
+        "id": "",
+        "classes": "max-w-screen-2xl mx-auto px-4 md:px-6 lg:px-8 pt-6 pb-16",
+        "dataAttributes": {},
+        "innerTextSnippet": "Home All Products FILTERS Reset all CATEGORY Seating Desks Storage Workstations Acoustics Lounge PRICE RANGE Min — Max SAR 0 — SAR 10,000 BRAND Majestic ChairLine Other IN STOCK ONLY All Products Maje",
+        "headings": [
+          {
+            "tag": "H2",
+            "text": "Filters"
+          },
+          {
+            "tag": "H1",
+            "text": "All Products"
+          },
+          {
+            "tag": "H3",
+            "text": "029 Seating"
+          },
+          {
+            "tag": "H3",
+            "text": "136 Seating"
+          },
+          {
+            "tag": "H3",
+            "text": "163 Seating"
+          },
+          {
+            "tag": "H3",
+            "text": "172 Seating"
+          },
+          {
+            "tag": "H3",
+            "text": "226 Seating"
+          },
+          {
+            "tag": "H3",
+            "text": "252 Seating"
+          },
+          {
+            "tag": "H3",
+            "text": "252 Seating"
+          },
+          {
+            "tag": "H3",
+            "text": "270 Seating"
+          },
+          {
+            "tag": "H3",
+            "text": "283 Task chair"
+          },
+          {
+            "tag": "H3",
+            "text": "319 Seating"
+          },
+          {
+            "tag": "H3",
+            "text": "357 Seating"
+          },
+          {
+            "tag": "H3",
+            "text": "523 Task chair"
+          },
+          {
+            "tag": "H3",
+            "text": "616 Seating"
+          },
+          {
+            "tag": "H3",
+            "text": "628 Seating side chairs"
+          },
+          {
+            "tag": "H3",
+            "text": "631 Seating"
+          },
+          {
+            "tag": "H3",
+            "text": "8010 Sofa Launge"
+          },
+          {
+            "tag": "H3",
+            "text": "8032 Sofa Launge"
+          },
+          {
+            "tag": "H3",
+            "text": "816 Seating"
+          },
+          {
+            "tag": "H3",
+            "text": "818 Seating"
+          },
+          {
+            "tag": "H3",
+            "text": "826 Seating"
+          },
+          {
+            "tag": "H3",
+            "text": "Acama task chair"
+          },
+          {
+            "tag": "H3",
+            "text": "Beauty Table"
+          },
+          {
+            "tag": "H3",
+            "text": "Buono"
+          },
+          {
+            "tag": "H3",
+            "text": "Cactus Seating"
+          }
+        ],
+        "links": [
+          {
+            "href": "/en",
+            "text": "Home"
+          },
+          {
+            "href": "/en/quotation",
+            "text": "Create a Quotation"
+          },
+          {
+            "href": "/en/shop/989421",
+            "text": "Ready029 SeatingSAR 319"
+          },
+          {
+            "href": "/en/shop/989422",
+            "text": "Executive chairs136 SeatingContact for price"
+          },
+          {
+            "href": "/en/shop/989423",
+            "text": "Ready163 SeatingContact for price"
+          },
+          {
+            "href": "/en/shop/989424",
+            "text": "Ready172 SeatingContact for price"
+          },
+          {
+            "href": "/en/shop/989425",
+            "text": "Ready226 SeatingContact for price"
+          },
+          {
+            "href": "/en/shop/989448",
+            "text": "Multi-purpose252 SeatingContact for price"
+          },
+          {
+            "href": "/en/shop/989438",
+            "text": "Ready252 SeatingContact for price"
+          },
+          {
+            "href": "/en/shop/989439",
+            "text": "Ready270 SeatingSAR 525"
+          }
+        ],
+        "imageCount": 24,
+        "images": [
+          {
+            "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF1.jpg&w=3840&q=75",
+            "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF1.jpg&w=3840&q=75",
+            "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF1.jpg&w=256&q=75 256w, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF1",
+            "alt": "029 Seating",
+            "width": 203,
+            "height": 257,
+            "naturalWidth": 328,
+            "naturalHeight": 562,
+            "isVisible": true,
+            "loading": "lazy",
+            "isNextImage": true
+          },
+          {
+            "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF2.jpg&w=3840&q=75",
+            "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF2.jpg&w=3840&q=75",
+            "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF2.jpg&w=256&q=75 256w, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF2",
+            "alt": "136 Seating",
+            "width": 203,
+            "height": 257,
+            "naturalWidth": 328,
+            "naturalHeight": 562,
+            "isVisible": true,
+            "loading": "lazy",
+            "isNextImage": true
+          },
+          {
+            "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF3.jpg&w=3840&q=75",
+            "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF3.jpg&w=3840&q=75",
+            "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF3.jpg&w=256&q=75 256w, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF3",
+            "alt": "163 Seating",
+            "width": 203,
+            "height": 257,
+            "naturalWidth": 328,
+            "naturalHeight": 562,
+            "isVisible": true,
+            "loading": "lazy",
+            "isNextImage": true
+          },
+          {
+            "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF4.jpg&w=3840&q=75",
+            "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF4.jpg&w=3840&q=75",
+            "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF4.jpg&w=256&q=75 256w, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF4",
+            "alt": "172 Seating",
+            "width": 203,
+            "height": 257,
+            "naturalWidth": 328,
+            "naturalHeight": 562,
+            "isVisible": true,
+            "loading": "lazy",
+            "isNextImage": true
+          },
+          {
+            "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF6.jpg&w=3840&q=75",
+            "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF6.jpg&w=3840&q=75",
+            "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF6.jpg&w=256&q=75 256w, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF6",
+            "alt": "226 Seating",
+            "width": 203,
+            "height": 257,
+            "naturalWidth": 328,
+            "naturalHeight": 562,
+            "isVisible": true,
+            "loading": "lazy",
+            "isNextImage": true
+          },
+          {
+            "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%B81.jpg&w=3840&q=75",
+            "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%B81.jpg&w=3840&q=75",
+            "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%B81.jpg&w=256&q=75 256w, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%B81",
+            "alt": "252 Seating",
+            "width": 203,
+            "height": 257,
+            "naturalWidth": 328,
+            "naturalHeight": 562,
+            "isVisible": true,
+            "loading": "lazy",
+            "isNextImage": true
+          },
+          {
+            "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AC2.jpg&w=3840&q=75",
+            "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AC2.jpg&w=3840&q=75",
+            "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AC2.jpg&w=256&q=75 256w, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AC2",
+            "alt": "252 Seating",
+            "width": 203,
+            "height": 257,
+            "naturalWidth": 328,
+            "naturalHeight": 562,
+            "isVisible": true,
+            "loading": "lazy",
+            "isNextImage": true
+          },
+          {
+            "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AC3.jpg&w=3840&q=75",
+            "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AC3.jpg&w=3840&q=75",
+            "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AC3.jpg&w=256&q=75 256w, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AC3",
+            "alt": "270 Seating",
+            "width": 203,
+            "height": 257,
+            "naturalWidth": 328,
+            "naturalHeight": 562,
+            "isVisible": true,
+            "loading": "lazy",
+            "isNextImage": true
+          },
+          {
+            "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D9%83%D8%B1%D8%B3%D9%8A-1.jpg&w=3840&q=75",
+            "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D9%83%D8%B1%D8%B3%D9%8A-1.jpg&w=3840&q=75",
+            "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D9%83%D8%B1%D8%B3%D9%8A-1.jpg&w=256&q=75 256w, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F",
+            "alt": "283 Task chair",
+            "width": 203,
+            "height": 257,
+            "naturalWidth": 328,
+            "naturalHeight": 562,
+            "isVisible": true,
+            "loading": "lazy",
+            "isNextImage": true
+          },
+          {
+            "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF7.jpg&w=3840&q=75",
+            "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF7.jpg&w=3840&q=75",
+            "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF7.jpg&w=256&q=75 256w, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF7",
+            "alt": "319 Seating",
+            "width": 203,
+            "height": 257,
+            "naturalWidth": 328,
+            "naturalHeight": 562,
+            "isVisible": true,
+            "loading": "lazy",
+            "isNextImage": true
+          },
+          {
+            "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF8.jpg&w=3840&q=75",
+            "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF8.jpg&w=3840&q=75",
+            "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF8.jpg&w=256&q=75 256w, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF8",
+            "alt": "357 Seating",
+            "width": 203,
+            "height": 257,
+            "naturalWidth": 328,
+            "naturalHeight": 562,
+            "isVisible": true,
+            "loading": "lazy",
+            "isNextImage": true
+          },
+          {
+            "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D9%83%D8%B1%D8%B3%D9%8A-2.jpg&w=3840&q=75",
+            "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D9%83%D8%B1%D8%B3%D9%8A-2.jpg&w=3840&q=75",
+            "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D9%83%D8%B1%D8%B3%D9%8A-2.jpg&w=256&q=75 256w, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F",
+            "alt": "523 Task chair",
+            "width": 203,
+            "height": 257,
+            "naturalWidth": 328,
+            "naturalHeight": 562,
+            "isVisible": true,
+            "loading": "lazy",
+            "isNextImage": true
+          },
+          {
+            "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF9.jpg&w=3840&q=75",
+            "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF9.jpg&w=3840&q=75",
+            "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF9.jpg&w=256&q=75 256w, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF9",
+            "alt": "616 Seating",
+            "width": 203,
+            "height": 257,
+            "naturalWidth": 328,
+            "naturalHeight": 562,
+            "isVisible": true,
+            "loading": "lazy",
+            "isNextImage": true
+          },
+          {
+            "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF10.jpg&w=3840&q=75",
+            "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF10.jpg&w=3840&q=75",
+            "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF10.jpg&w=256&q=75 256w, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF",
+            "alt": "628 Seating side chairs",
+            "width": 203,
+            "height": 257,
+            "naturalWidth": 328,
+            "naturalHeight": 562,
+            "isVisible": true,
+            "loading": "lazy",
+            "isNextImage": true
+          },
+          {
+            "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF11.jpg&w=3840&q=75",
+            "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF11.jpg&w=3840&q=75",
+            "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF11.jpg&w=256&q=75 256w, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF",
+            "alt": "631 Seating",
+            "width": 203,
+            "height": 257,
+            "naturalWidth": 328,
+            "naturalHeight": 562,
+            "isVisible": true,
+            "loading": "lazy",
+            "isNextImage": true
+          }
+        ],
+        "boundingBox": {
+          "x": 0,
+          "y": 196,
+          "width": 1440,
+          "height": 2554
+        },
+        "isVisible": true
+      }
+    ],
+    "semanticSections": [
+      {
+        "index": 0,
+        "tag": "header",
+        "id": "",
+        "classes": "fixed top-0 w-full z-50 bg-white",
+        "innerTextSnippet": "Showrooms | Material and Colors | Warranty 0 AR Chairs Desks Storage Lounge Acoustic Solutions Accessories Inspirations E-Quotation",
+        "headings": [],
+        "imageCount": 1,
+        "images": [
+          {
+            "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fmajestic-logo-original.png&w=640&q=75",
+            "srcAttr": "/_next/image?url=%2Fimages%2Fmajestic-logo-original.png&w=640&q=75",
+            "srcset": "/_next/image?url=%2Fimages%2Fmajestic-logo-original.png&w=256&q=75 1x, /_next/image?url=%2Fimages%2Fmajestic-logo-original.png&w=640&q=75 2x",
+            "alt": "Majestic Furniture",
+            "width": 176,
+            "height": 96,
+            "naturalWidth": 256,
+            "naturalHeight": 140,
+            "isVisible": true,
+            "loading": "auto",
+            "isNextImage": true
+          }
+        ],
+        "boundingBox": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 221
+        },
+        "isVisible": true
+      },
+      {
+        "index": 1,
+        "tag": "nav",
+        "id": "",
+        "classes": "flex items-center",
+        "innerTextSnippet": "Chairs Desks Storage Lounge Acoustic Solutions Accessories Inspirations E-Quotation",
+        "headings": [],
+        "imageCount": 0,
+        "images": [],
+        "boundingBox": {
+          "x": 112,
+          "y": 170,
+          "width": 1216,
+          "height": 50
+        },
+        "isVisible": true
+      },
+      {
+        "index": 2,
+        "tag": "nav",
+        "id": "",
+        "classes": "flex-1 overflow-y-auto py-2",
+        "innerTextSnippet": "ChairsExecutive ChairsTask ChairsMeeting ChairsLoungeView All DesksExecutive DesksWorkstationsHeight Adjustable DesksAccessoriesMeeting TablesReception DeskView All StorageLoungeAcoustic SolutionsAcce",
+        "headings": [],
+        "imageCount": 0,
+        "images": [],
+        "boundingBox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "isVisible": false
+      },
+      {
+        "index": 3,
+        "tag": "nav",
+        "id": "",
+        "classes": "flex items-center gap-1.5 text-xs text-[#484848] mb-6",
+        "innerTextSnippet": "Home All Products",
+        "headings": [],
+        "imageCount": 0,
+        "images": [],
+        "boundingBox": {
+          "x": 32,
+          "y": 220,
+          "width": 1376,
+          "height": 16
+        },
+        "isVisible": true
+      },
+      {
+        "index": 4,
+        "tag": "aside",
+        "id": "",
+        "classes": "hidden lg:block w-[260px] shrink-0 sticky top-[200px]",
+        "innerTextSnippet": "FILTERS Reset all CATEGORY Seating Desks Storage Workstations Acoustics Lounge PRICE RANGE Min — Max SAR 0 — SAR 10,000 BRAND Majestic ChairLine Other IN STOCK ONLY",
+        "headings": [
+          {
+            "tag": "H2",
+            "text": "Filters"
+          }
+        ],
+        "imageCount": 0,
+        "images": [],
+        "boundingBox": {
+          "x": 32,
+          "y": 260,
+          "width": 260,
+          "height": 592
+        },
+        "isVisible": true
+      },
+      {
+        "index": 5,
+        "tag": "nav",
+        "id": "",
+        "classes": "flex items-center justify-center gap-1 mt-12",
+        "innerTextSnippet": "Prev 1 2 … 13 Next",
+        "headings": [],
+        "imageCount": 0,
+        "images": [],
+        "boundingBox": {
+          "x": 324,
+          "y": 2684,
+          "width": 1084,
+          "height": 32
+        },
+        "isVisible": true
+      },
+      {
+        "index": 6,
+        "tag": "footer",
+        "id": "",
+        "classes": "bg-white border-t border-[rgba(0,0,0,0.08)]",
+        "innerTextSnippet": "Majestic Furniture supplies professional workspace environments to corporate and government clients across Saudi Arabia and the Gulf. Instagram LinkedIn Facebook X SHOP Seating Desks Storage Workstati",
+        "headings": [
+          {
+            "tag": "H3",
+            "text": "Shop"
+          },
+          {
+            "tag": "H3",
+            "text": "Company"
+          },
+          {
+            "tag": "H3",
+            "text": "Support"
+          },
+          {
+            "tag": "H3",
+            "text": "Contact"
+          }
+        ],
+        "imageCount": 1,
+        "images": [
+          {
+            "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fmajestic-logo-original.png&w=256&q=75",
+            "srcAttr": "/_next/image?url=%2Fimages%2Fmajestic-logo-original.png&w=256&q=75",
+            "srcset": "/_next/image?url=%2Fimages%2Fmajestic-logo-original.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2Fmajestic-logo-original.png&w=256&q=75 2x",
+            "alt": "Majestic Furniture",
+            "width": 59,
+            "height": 32,
+            "naturalWidth": 128,
+            "naturalHeight": 70,
+            "isVisible": true,
+            "loading": "lazy",
+            "isNextImage": true
+          }
+        ],
+        "boundingBox": {
+          "x": 0,
+          "y": 2750,
+          "width": 1440,
+          "height": 472
+        },
+        "isVisible": true
+      }
+    ],
+    "navLinks": [
+      {
+        "href": "/en/showrooms",
+        "text": "Showrooms",
+        "ariaLabel": ""
+      },
+      {
+        "href": "/en/materials",
+        "text": "Material and Colors",
+        "ariaLabel": ""
+      },
+      {
+        "href": "/en/warranty",
+        "text": "Warranty",
+        "ariaLabel": ""
+      },
+      {
+        "href": "/en",
+        "text": "",
+        "ariaLabel": ""
+      },
+      {
+        "href": "/en/account",
+        "text": "",
+        "ariaLabel": "Account"
+      },
+      {
+        "href": "/en/cart",
+        "text": "0",
+        "ariaLabel": "Cart, 0 items"
+      },
+      {
+        "href": "/ar/shop",
+        "text": "AR",
+        "ariaLabel": ""
+      },
+      {
+        "href": "/en/shop?category=seating",
+        "text": "Chairs",
+        "ariaLabel": ""
+      },
+      {
+        "href": "/en/shop?category=tables",
+        "text": "Desks",
+        "ariaLabel": ""
+      },
+      {
+        "href": "/en/shop?category=storage",
+        "text": "Storage",
+        "ariaLabel": ""
+      },
+      {
+        "href": "/en/shop?category=lounge",
+        "text": "Lounge",
+        "ariaLabel": ""
+      },
+      {
+        "href": "/en/shop?category=acoustics",
+        "text": "Acoustic Solutions",
+        "ariaLabel": ""
+      },
+      {
+        "href": "/en/shop?category=accessories",
+        "text": "Accessories",
+        "ariaLabel": ""
+      },
+      {
+        "href": "/en/inspirations",
+        "text": "Inspirations",
+        "ariaLabel": ""
+      },
+      {
+        "href": "/en/quotation",
+        "text": "E-Quotation",
+        "ariaLabel": ""
+      },
+      {
+        "href": "/en/shop?category=executive-chairs",
+        "text": "Executive Chairs",
+        "ariaLabel": ""
+      },
+      {
+        "href": "/en/shop?category=task-chairs",
+        "text": "Task Chairs",
+        "ariaLabel": ""
+      },
+      {
+        "href": "/en/shop?category=meeting-chairs",
+        "text": "Meeting Chairs",
+        "ariaLabel": ""
+      },
+      {
+        "href": "/en/shop?category=lounge-chairs",
+        "text": "Lounge",
+        "ariaLabel": ""
+      },
+      {
+        "href": "/en/shop?category=seating",
+        "text": "View All",
+        "ariaLabel": ""
+      },
+      {
+        "href": "/en/shop?category=executive-desks",
+        "text": "Executive Desks",
+        "ariaLabel": ""
+      },
+      {
+        "href": "/en/shop?category=workstations",
+        "text": "Workstations",
+        "ariaLabel": ""
+      },
+      {
+        "href": "/en/shop?category=height-adjustable",
+        "text": "Height Adjustable Desks",
+        "ariaLabel": ""
+      },
+      {
+        "href": "/en/shop?category=accessories",
+        "text": "Accessories",
+        "ariaLabel": ""
+      },
+      {
+        "href": "/en/shop?category=meeting-tables",
+        "text": "Meeting Tables",
+        "ariaLabel": ""
+      },
+      {
+        "href": "/en/shop?category=reception",
+        "text": "Reception Desk",
+        "ariaLabel": ""
+      },
+      {
+        "href": "/en/shop?category=tables",
+        "text": "View All",
+        "ariaLabel": ""
+      },
+      {
+        "href": "/en/shop?category=storage",
+        "text": "Storage",
+        "ariaLabel": ""
+      },
+      {
+        "href": "/en/shop?category=lounge",
+        "text": "Lounge",
+        "ariaLabel": ""
+      },
+      {
+        "href": "/en/shop?category=acoustics",
+        "text": "Acoustic Solutions",
+        "ariaLabel": ""
+      },
+      {
+        "href": "/en/shop?category=accessories",
+        "text": "Accessories",
+        "ariaLabel": ""
+      },
+      {
+        "href": "/en/inspirations",
+        "text": "Inspirations",
+        "ariaLabel": ""
+      },
+      {
+        "href": "/en/quotation",
+        "text": "E-Quotation",
+        "ariaLabel": ""
+      },
+      {
+        "href": "/en",
+        "text": "Home",
+        "ariaLabel": ""
+      },
+      {
+        "href": "/en/shop",
+        "text": "1",
+        "ariaLabel": ""
+      },
+      {
+        "href": "/en/shop?page=2",
+        "text": "2",
+        "ariaLabel": ""
+      },
+      {
+        "href": "/en/shop?page=13",
+        "text": "13",
+        "ariaLabel": ""
+      },
+      {
+        "href": "/en/shop?page=2",
+        "text": "Next",
+        "ariaLabel": ""
+      }
+    ],
+    "allImages": [
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fmajestic-logo-original.png&w=640&q=75",
+        "srcAttr": "/_next/image?url=%2Fimages%2Fmajestic-logo-original.png&w=640&q=75",
+        "srcset": "/_next/image?url=%2Fimages%2Fmajestic-logo-original.png&w=256&q=75 1x, /_next/image?url=%2Fimages%2Fmajestic-logo-original.png&w=640&q=75 2x",
+        "alt": "Majestic Furniture",
+        "width": 176,
+        "height": 96,
+        "naturalWidth": 256,
+        "naturalHeight": 140,
+        "isVisible": true,
+        "loading": "auto",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fmajestic-logo-original.png&w=256&q=75",
+        "srcAttr": "/_next/image?url=%2Fimages%2Fmajestic-logo-original.png&w=256&q=75",
+        "srcset": "/_next/image?url=%2Fimages%2Fmajestic-logo-original.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2Fmajestic-logo-original.png&w=256&q=75 2x",
+        "alt": "Majestic Furniture",
+        "width": 0,
+        "height": 0,
+        "naturalWidth": 128,
+        "naturalHeight": 70,
+        "isVisible": false,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF1.jpg&w=3840&q=75",
+        "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF1.jpg&w=3840&q=75",
+        "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF1.jpg&w=256&q=75 256w, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF1",
+        "alt": "029 Seating",
+        "width": 203,
+        "height": 257,
+        "naturalWidth": 328,
+        "naturalHeight": 562,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF2.jpg&w=3840&q=75",
+        "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF2.jpg&w=3840&q=75",
+        "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF2.jpg&w=256&q=75 256w, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF2",
+        "alt": "136 Seating",
+        "width": 203,
+        "height": 257,
+        "naturalWidth": 328,
+        "naturalHeight": 562,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF3.jpg&w=3840&q=75",
+        "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF3.jpg&w=3840&q=75",
+        "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF3.jpg&w=256&q=75 256w, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF3",
+        "alt": "163 Seating",
+        "width": 203,
+        "height": 257,
+        "naturalWidth": 328,
+        "naturalHeight": 562,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF4.jpg&w=3840&q=75",
+        "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF4.jpg&w=3840&q=75",
+        "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF4.jpg&w=256&q=75 256w, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF4",
+        "alt": "172 Seating",
+        "width": 203,
+        "height": 257,
+        "naturalWidth": 328,
+        "naturalHeight": 562,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF6.jpg&w=3840&q=75",
+        "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF6.jpg&w=3840&q=75",
+        "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF6.jpg&w=256&q=75 256w, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF6",
+        "alt": "226 Seating",
+        "width": 203,
+        "height": 257,
+        "naturalWidth": 328,
+        "naturalHeight": 562,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%B81.jpg&w=3840&q=75",
+        "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%B81.jpg&w=3840&q=75",
+        "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%B81.jpg&w=256&q=75 256w, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%B81",
+        "alt": "252 Seating",
+        "width": 203,
+        "height": 257,
+        "naturalWidth": 328,
+        "naturalHeight": 562,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AC2.jpg&w=3840&q=75",
+        "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AC2.jpg&w=3840&q=75",
+        "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AC2.jpg&w=256&q=75 256w, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AC2",
+        "alt": "252 Seating",
+        "width": 203,
+        "height": 257,
+        "naturalWidth": 328,
+        "naturalHeight": 562,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AC3.jpg&w=3840&q=75",
+        "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AC3.jpg&w=3840&q=75",
+        "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AC3.jpg&w=256&q=75 256w, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AC3",
+        "alt": "270 Seating",
+        "width": 203,
+        "height": 257,
+        "naturalWidth": 328,
+        "naturalHeight": 562,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D9%83%D8%B1%D8%B3%D9%8A-1.jpg&w=3840&q=75",
+        "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D9%83%D8%B1%D8%B3%D9%8A-1.jpg&w=3840&q=75",
+        "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D9%83%D8%B1%D8%B3%D9%8A-1.jpg&w=256&q=75 256w, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F",
+        "alt": "283 Task chair",
+        "width": 203,
+        "height": 257,
+        "naturalWidth": 328,
+        "naturalHeight": 562,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF7.jpg&w=3840&q=75",
+        "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF7.jpg&w=3840&q=75",
+        "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF7.jpg&w=256&q=75 256w, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF7",
+        "alt": "319 Seating",
+        "width": 203,
+        "height": 257,
+        "naturalWidth": 328,
+        "naturalHeight": 562,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF8.jpg&w=3840&q=75",
+        "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF8.jpg&w=3840&q=75",
+        "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF8.jpg&w=256&q=75 256w, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF8",
+        "alt": "357 Seating",
+        "width": 203,
+        "height": 257,
+        "naturalWidth": 328,
+        "naturalHeight": 562,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D9%83%D8%B1%D8%B3%D9%8A-2.jpg&w=3840&q=75",
+        "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D9%83%D8%B1%D8%B3%D9%8A-2.jpg&w=3840&q=75",
+        "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D9%83%D8%B1%D8%B3%D9%8A-2.jpg&w=256&q=75 256w, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F",
+        "alt": "523 Task chair",
+        "width": 203,
+        "height": 257,
+        "naturalWidth": 328,
+        "naturalHeight": 562,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF9.jpg&w=3840&q=75",
+        "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF9.jpg&w=3840&q=75",
+        "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF9.jpg&w=256&q=75 256w, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF9",
+        "alt": "616 Seating",
+        "width": 203,
+        "height": 257,
+        "naturalWidth": 328,
+        "naturalHeight": 562,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF10.jpg&w=3840&q=75",
+        "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF10.jpg&w=3840&q=75",
+        "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF10.jpg&w=256&q=75 256w, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF",
+        "alt": "628 Seating side chairs",
+        "width": 203,
+        "height": 257,
+        "naturalWidth": 328,
+        "naturalHeight": 562,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF11.jpg&w=3840&q=75",
+        "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF11.jpg&w=3840&q=75",
+        "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF11.jpg&w=256&q=75 256w, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF",
+        "alt": "631 Seating",
+        "width": 203,
+        "height": 257,
+        "naturalWidth": 328,
+        "naturalHeight": 562,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%B3%D9%88%D9%81%D8%A72.jpg&w=3840&q=75",
+        "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%B3%D9%88%D9%81%D8%A72.jpg&w=3840&q=75",
+        "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%B3%D9%88%D9%81%D8%A72.jpg&w=256&q=75 256w, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2",
+        "alt": "8010 Sofa Launge",
+        "width": 203,
+        "height": 257,
+        "naturalWidth": 359,
+        "naturalHeight": 224,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%B3%D9%88%D9%81%D8%A73.jpg&w=3840&q=75",
+        "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%B3%D9%88%D9%81%D8%A73.jpg&w=3840&q=75",
+        "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%B3%D9%88%D9%81%D8%A73.jpg&w=256&q=75 256w, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2",
+        "alt": "8032 Sofa Launge",
+        "width": 203,
+        "height": 257,
+        "naturalWidth": 359,
+        "naturalHeight": 224,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF12.jpg&w=3840&q=75",
+        "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF12.jpg&w=3840&q=75",
+        "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF12.jpg&w=256&q=75 256w, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%AF",
+        "alt": "816 Seating",
+        "width": 203,
+        "height": 257,
+        "naturalWidth": 328,
+        "naturalHeight": 562,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%B83.jpg&w=3840&q=75",
+        "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%B83.jpg&w=3840&q=75",
+        "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%B83.jpg&w=256&q=75 256w, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%B83",
+        "alt": "818 Seating",
+        "width": 203,
+        "height": 257,
+        "naturalWidth": 328,
+        "naturalHeight": 562,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D9%83%D8%B1%D8%B3-5.jpg&w=3840&q=75",
+        "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D9%83%D8%B1%D8%B3-5.jpg&w=3840&q=75",
+        "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D9%83%D8%B1%D8%B3-5.jpg&w=256&q=75 256w, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2",
+        "alt": "826 Seating",
+        "width": 203,
+        "height": 257,
+        "naturalWidth": 328,
+        "naturalHeight": 562,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D9%83%D8%B1%D8%B3-%D9%8A3.jpg&w=3840&q=75",
+        "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D9%83%D8%B1%D8%B3-%D9%8A3.jpg&w=3840&q=75",
+        "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D9%83%D8%B1%D8%B3-%D9%8A3.jpg&w=256&q=75 256w, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F",
+        "alt": "Acama task chair",
+        "width": 203,
+        "height": 257,
+        "naturalWidth": 328,
+        "naturalHeight": 562,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%A7%D8%B3%D8%AA%D9%82%D8%A8%D8%A7%D9%84.jpg&w=3840&q=75",
+        "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%A7%D8%B3%D8%AA%D9%82%D8%A8%D8%A7%D9%84.jpg&w=3840&q=75",
+        "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D8%A7%D8%B3%D8%AA%D9%82%D8%A8%D8%A7%D9%84.jpg&w=256&q=75 256w, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-cont",
+        "alt": "Beauty Table",
+        "width": 203,
+        "height": 257,
+        "naturalWidth": 359,
+        "naturalHeight": 224,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F01-37.jpg&w=3840&q=75",
+        "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F01-37.jpg&w=3840&q=75",
+        "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F01-37.jpg&w=256&q=75 256w, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F01-37.jpg",
+        "alt": "Buono",
+        "width": 203,
+        "height": 257,
+        "naturalWidth": 359,
+        "naturalHeight": 224,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D9%83%D8%B1%D8%B3-8.jpg&w=3840&q=75",
+        "srcAttr": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D9%83%D8%B1%D8%B3-8.jpg&w=3840&q=75",
+        "srcset": "/_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2F01%2F%D9%83%D8%B1%D8%B3-8.jpg&w=256&q=75 256w, /_next/image?url=https%3A%2F%2Fthedeskco.net%2Fwp-content%2Fuploads%2F2026%2",
+        "alt": "Cactus Seating",
+        "width": 203,
+        "height": 257,
+        "naturalWidth": 328,
+        "naturalHeight": 562,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      },
+      {
+        "src": "https://majestic-next.vercel.app/_next/image?url=%2Fimages%2Fmajestic-logo-original.png&w=256&q=75",
+        "srcAttr": "/_next/image?url=%2Fimages%2Fmajestic-logo-original.png&w=256&q=75",
+        "srcset": "/_next/image?url=%2Fimages%2Fmajestic-logo-original.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2Fmajestic-logo-original.png&w=256&q=75 2x",
+        "alt": "Majestic Furniture",
+        "width": 59,
+        "height": 32,
+        "naturalWidth": 128,
+        "naturalHeight": 70,
+        "isVisible": true,
+        "loading": "lazy",
+        "isNextImage": true
+      }
+    ],
+    "bgImages": [],
+    "computedBgImages": [],
+    "animations": [
+      {
+        "selector": "a.hover:text-[#0c0c0c].transition-colors.px-2",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "a.hover:text-[#0c0c0c].transition-colors.px-2",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "a.hover:text-[#0c0c0c].transition-colors.px-2",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "button.flex.p-2.md:p-2.5",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "a.p-2.md:p-2.5.text-[#0c0c0c]",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "a.p-2.md:p-2.5.text-[#0c0c0c]",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "a.flex.items-center.gap-1",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "a.flex.items-center.gap-1",
+        "animationName": "none",
+        "transitionProperty": "background-size",
+        "transitionDuration": "0.25s"
+      },
+      {
+        "selector": "svg.[object.SVGAnimatedString]",
+        "animationName": "none",
+        "transitionProperty": "transform, translate, scale, rotate",
+        "transitionDuration": "0.2s"
+      },
+      {
+        "selector": "a.flex.items-center.gap-1",
+        "animationName": "none",
+        "transitionProperty": "background-size",
+        "transitionDuration": "0.25s"
+      },
+      {
+        "selector": "svg.[object.SVGAnimatedString]",
+        "animationName": "none",
+        "transitionProperty": "transform, translate, scale, rotate",
+        "transitionDuration": "0.2s"
+      },
+      {
+        "selector": "a.text-sm.font-medium.px-3",
+        "animationName": "none",
+        "transitionProperty": "background-size",
+        "transitionDuration": "0.25s"
+      },
+      {
+        "selector": "a.text-sm.font-medium.px-3",
+        "animationName": "none",
+        "transitionProperty": "background-size",
+        "transitionDuration": "0.25s"
+      },
+      {
+        "selector": "a.text-sm.font-medium.px-3",
+        "animationName": "none",
+        "transitionProperty": "background-size",
+        "transitionDuration": "0.25s"
+      },
+      {
+        "selector": "a.text-sm.font-medium.px-3",
+        "animationName": "none",
+        "transitionProperty": "background-size",
+        "transitionDuration": "0.25s"
+      },
+      {
+        "selector": "a.flex.items-center.gap-1.5",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "a.flex.items-center.gap-1.5",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "div.fixed.inset-0.z-50",
+        "animationName": "none",
+        "transitionProperty": "opacity",
+        "transitionDuration": "0.3s"
+      },
+      {
+        "selector": "div.fixed.top-0.z-50",
+        "animationName": "none",
+        "transitionProperty": "transform, translate, scale, rotate",
+        "transitionDuration": "0.3s"
+      },
+      {
+        "selector": "button.w-full.flex.items-center",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "svg.[object.SVGAnimatedString]",
+        "animationName": "none",
+        "transitionProperty": "transform, translate, scale, rotate",
+        "transitionDuration": "0.2s"
+      },
+      {
+        "selector": "div.overflow-hidden.transition-all.duration-200",
+        "animationName": "none",
+        "transitionProperty": "all",
+        "transitionDuration": "0.2s"
+      },
+      {
+        "selector": "a.block.px-10.py-3",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "a.block.px-10.py-3",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "a.block.px-10.py-3",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "a.block.px-10.py-3",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "button.w-full.flex.items-center",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "svg.[object.SVGAnimatedString]",
+        "animationName": "none",
+        "transitionProperty": "transform, translate, scale, rotate",
+        "transitionDuration": "0.2s"
+      },
+      {
+        "selector": "div.overflow-hidden.transition-all.duration-200",
+        "animationName": "none",
+        "transitionProperty": "all",
+        "transitionDuration": "0.2s"
+      },
+      {
+        "selector": "a.block.px-10.py-3",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "a.block.px-10.py-3",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "a.block.px-10.py-3",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "a.block.px-10.py-3",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "a.block.px-10.py-3",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "a.block.px-10.py-3",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "a.block.px-6.py-4",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "a.block.px-6.py-4",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "a.block.px-6.py-4",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "a.block.px-6.py-4",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "a.block.px-6.py-4",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "a.block.px-6.py-4",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "a.flex.items-center.gap-2",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "a.flex.items-center.gap-1",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "a.hover:text-[#0c0c0c].transition-colors",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "button.text-xs.text-[#484848].hover:text-[#0c0c0c]",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "svg.[object.SVGAnimatedString]",
+        "animationName": "none",
+        "transitionProperty": "transform, translate, scale, rotate",
+        "transitionDuration": "0.2s"
+      },
+      {
+        "selector": "span.text-sm.transition-colors.group-hover/item:text-[#0c0c0c]",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "span.text-sm.transition-colors.group-hover/item:text-[#0c0c0c]",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "span.text-sm.transition-colors.group-hover/item:text-[#0c0c0c]",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "span.text-sm.transition-colors.group-hover/item:text-[#0c0c0c]",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "span.text-sm.transition-colors.group-hover/item:text-[#0c0c0c]",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "span.text-sm.transition-colors.group-hover/item:text-[#0c0c0c]",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "svg.[object.SVGAnimatedString]",
+        "animationName": "none",
+        "transitionProperty": "transform, translate, scale, rotate",
+        "transitionDuration": "0.2s"
+      },
+      {
+        "selector": "svg.[object.SVGAnimatedString]",
+        "animationName": "none",
+        "transitionProperty": "transform, translate, scale, rotate",
+        "transitionDuration": "0.2s"
+      },
+      {
+        "selector": "span.text-sm.text-[#484848].group-hover/item:text-[#0c0c0c]",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "span.text-sm.text-[#484848].group-hover/item:text-[#0c0c0c]",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "span.text-sm.text-[#484848].group-hover/item:text-[#0c0c0c]",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.15s"
+      },
+      {
+        "selector": "div.w-9.h-5.bg-[rgba(0,0,0,0.12)]",
+        "animationName": "none",
+        "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to",
+        "transitionDuration": "0.2s"
+      },
+      {
+        "selector": "div.absolute.top-0.5.start-0.5",
+        "animationName": "none",
+        "transitionProperty": "all",
+        "transitionDuration": "0.2s"
+      },
+      {
+        "selector": "button.lg:hidden.flex.items-center",
+        "animationName": "none",
+        "transitionProperty": "transform",
+        "transitionDuration": "0.15s"
+      }
+    ],
+    "consoleErrors": [],
+    "networkErrors": [
+      "net::ERR_ABORTED — https://majestic-next.vercel.app/en/shop/989439?_rsc=1tny8",
+      "net::ERR_ABORTED — https://majestic-next.vercel.app/en/quotation?_rsc=1tny8",
+      "net::ERR_ABORTED — https://majestic-next.vercel.app/en/cart?_rsc=1tny8",
+      "net::ERR_ABORTED — https://majestic-next.vercel.app/en/shop?category=tables&_rsc=1tny8",
+      "net::ERR_ABORTED — https://majestic-next.vercel.app/en/showrooms?_rsc=1tny8",
+      "net::ERR_ABORTED — https://majestic-next.vercel.app/en/shop/989404?_rsc=1lrpz",
+      "net::ERR_ABORTED — https://majestic-next.vercel.app/en/shop/989439?_rsc=1lrpz",
+      "net::ERR_ABORTED — https://majestic-next.vercel.app/en/shop/989426?_rsc=1lrpz",
+      "net::ERR_ABORTED — https://majestic-next.vercel.app/en/shop/989438?_rsc=1lrpz",
+      "net::ERR_ABORTED — https://majestic-next.vercel.app/en/shop/989425?_rsc=1lrpz",
+      "net::ERR_ABORTED — https://majestic-next.vercel.app/en/shop/989424?_rsc=1lrpz",
+      "net::ERR_ABORTED — https://majestic-next.vercel.app/en/shop/989448?_rsc=1lrpz",
+      "net::ERR_ABORTED — https://majestic-next.vercel.app/en/shop/989423?_rsc=1lrpz",
+      "net::ERR_ABORTED — https://majestic-next.vercel.app/en/shop/989422?_rsc=1lrpz",
+      "net::ERR_ABORTED — https://majestic-next.vercel.app/en/shop/989421?_rsc=1lrpz",
+      "net::ERR_ABORTED — https://majestic-next.vercel.app/en/cart?_rsc=1lrpz",
+      "net::ERR_ABORTED — https://majestic-next.vercel.app/en/showrooms?_rsc=1lrpz"
+    ],
+    "viewportWidth": 1440,
+    "viewportHeight": 900
+  },
+  "slider": {
+    "sliderInfo": {
+      "found": false
+    },
+    "clickResult": "no next button or slider found",
+    "autoAdvance": {
+      "detected": false,
+      "srcBefore": "",
+      "srcAfter": ""
+    }
+  },
+  "mobile": {
+    "mobileMenuState": "hamburger found ([aria-label*=\"menu\" i]), clicked — screenshot captured",
+    "overflowIssues": [
+      "div. overflows right by 82px",
+      "a.flex flex-col items-center gap-2 min-w-[72px] group overflows right by 82px",
+      "div.w-16 h-16 bg-[#fafafa] border border-[rgba(0,0,0,0.12)] over overflows right by 78px",
+      "img.object-cover w-full h-full group-hover:scale-[1.03] transiti overflows right by 77px",
+      "span.text-xs font-medium text-[#0c0c0c] text-center whitespace-no overflows right by 73px",
+      "div. overflows right by 178px",
+      "a.flex flex-col items-center gap-2 min-w-[72px] group overflows right by 178px",
+      "div.w-16 h-16 bg-[#fafafa] border border-[rgba(0,0,0,0.12)] over overflows right by 174px",
+      "img.object-cover w-full h-full group-hover:scale-[1.03] transiti overflows right by 173px",
+      "span.text-xs font-medium text-[#0c0c0c] text-center whitespace-no overflows right by 164px",
+      "div.relative flex-none w-[220px] md:w-[260px] aspect-[3/4] overf overflows right by 74px",
+      "img.object-cover overflows right by 74px",
+      "div.relative flex-none w-[220px] md:w-[260px] aspect-[3/4] overf overflows right by 302px",
+      "img.object-cover overflows right by 302px",
+      "div.relative flex-none w-[220px] md:w-[260px] aspect-[3/4] overf overflows right by 530px"
+    ],
+    "scrollMetrics": {
+      "bodyScrollHeight": 13957,
+      "viewportHeight": 844,
+      "viewportWidth": 390
+    }
+  }
+}

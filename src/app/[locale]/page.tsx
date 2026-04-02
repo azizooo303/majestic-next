@@ -163,11 +163,13 @@ export default async function HomePage({
       <LocalBusinessJsonLd />
       <WebSiteJsonLd />
       {/* Hero */}
-      <HeroBanner slides={heroSlides} />
+      <SectionReveal direction="up" distance={50} duration={0.8}>
+        <HeroBanner slides={heroSlides} />
+      </SectionReveal>
 
       {/* Category Navigation Strip */}
       <SectionReveal direction="up" distance={40} duration={0.6}>
-        <section className="w-full bg-white border-b border-[rgba(0,0,0,0.21)] py-6">
+        <section className="w-full bg-[rgba(255,255,255,0.88)] border-b border-[rgba(0,0,0,0.21)] py-6">
           <div className="max-w-screen-2xl mx-auto px-4 md:px-6 lg:px-8">
             <StaggerChildren
               staggerDelay={0.05}
@@ -181,7 +183,7 @@ export default async function HomePage({
 
       {/* Featured Products */}
       <SectionReveal direction="fade-scale" duration={0.75}>
-        <section className="bg-white py-12 md:py-16">
+        <section className="bg-[rgba(255,255,255,0.88)] py-12 md:py-16">
           <div className="max-w-screen-2xl mx-auto px-4 md:px-6 lg:px-8">
             <FadeUp>
               <div className="flex items-center justify-between mb-8">
@@ -260,7 +262,7 @@ export default async function HomePage({
 
       {/* Newsletter */}
       <FadeUp>
-        <section className="border-t border-[rgba(0,0,0,0.08)] py-12 bg-white">
+        <section className="border-t border-[rgba(0,0,0,0.08)] py-12 bg-[rgba(255,255,255,0.88)]">
           <div className="max-w-md mx-auto px-4 text-center">
             <h2 className="text-xl font-semibold text-[#0c0c0c]">
               {isAr ? "ابقَ على اطلاع" : "Stay Informed"}

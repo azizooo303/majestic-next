@@ -51,7 +51,7 @@ const PROJECTS: Project[] = [
 
 export function ProjectScale({ isAr }: { isAr: boolean }) {
   return (
-    <section className="relative w-full bg-white py-14 md:py-20 overflow-hidden">
+    <section className="relative w-full bg-[rgba(255,255,255,0.88)] py-14 md:py-20 overflow-hidden">
       <SectionArchOverlay variant="dimension" opacity={0.07} />
       <div className="max-w-screen-2xl mx-auto px-4 md:px-6 lg:px-8">
         <FadeDown>
@@ -76,7 +76,7 @@ export function ProjectScale({ isAr }: { isAr: boolean }) {
                 className="relative w-full md:w-1/2 aspect-[16/9] md:aspect-auto min-h-[280px]"
                 initial={{ opacity: 0, x: isAr ? 40 : -40 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
+                viewport={{ once: false, amount: 0.2 }}
                 transition={{ duration: 0.5, ease: ease.smooth }}
               >
                 <Image
@@ -90,10 +90,10 @@ export function ProjectScale({ isAr }: { isAr: boolean }) {
 
               {/* Text block — slides in from right (or left in RTL) */}
               <motion.div
-                className="w-full md:w-1/2 bg-[#f7f7f5] p-8 md:p-12 flex flex-col justify-center"
+                className="w-full md:w-1/2 bg-[rgba(247,247,245,0.9)] p-8 md:p-12 flex flex-col justify-center"
                 initial={{ opacity: 0, x: isAr ? -40 : 40 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
+                viewport={{ once: false, amount: 0.2 }}
                 transition={{ duration: 0.5, ease: ease.smooth, delay: 0.1 }}
               >
                 {/* Stats with CountUp */}

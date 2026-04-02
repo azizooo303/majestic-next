@@ -12,7 +12,7 @@ const IMAGES = [
 
 export function CraftsmanshipBand({ isAr }: { isAr: boolean }) {
   return (
-    <section className="w-full bg-[#0c0c0c] py-14 md:py-20 overflow-hidden">
+    <section className="w-full bg-[rgba(12,12,12,0.85)] py-14 md:py-20 overflow-hidden">
       {/* Overline */}
       <FadeUp>
         <div className="max-w-screen-2xl mx-auto px-4 md:px-6 lg:px-8 pb-8">

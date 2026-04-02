@@ -47,7 +47,7 @@ export function SectionReveal({
       variants={variants(direction, distance)}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.08 }}
+      viewport={{ once: false, amount: 0.08 }}
       transition={{
         duration,
         ease: [0.16, 1, 0.3, 1],

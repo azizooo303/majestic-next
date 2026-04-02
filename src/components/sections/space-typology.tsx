@@ -22,7 +22,7 @@ const PANELS: Panel[] = [
 
 export function SpaceTypology({ isAr }: { isAr: boolean }) {
   return (
-    <section className="relative w-full bg-[#0c0c0c] overflow-hidden">
+    <section className="relative w-full bg-[rgba(12,12,12,0.85)] overflow-hidden">
       <SectionArchOverlay variant="grid" color="rgba(255,255,255,1)" opacity={0.05} />
       <FadeDown>
         <div className="max-w-screen-2xl mx-auto px-4 md:px-6 lg:px-8 pt-10 pb-4">
