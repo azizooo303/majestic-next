@@ -183,6 +183,18 @@
   to   { width: 100%; }
 }
 
+/* Projects reel: infinite horizontal scroll — 30 cards × (320+16)px = 10080px */
+@keyframes projects-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-10080px); }
+}
+.projects-reel-track {
+  animation: projects-scroll 60s linear infinite;
+}
+.projects-reel-track.paused {
+  animation-play-state: paused;
+}
+
 /* Craftsmanship band: auto-scroll (LTR) */
 @keyframes majestic-autoscroll {
   0%   { transform: translateX(0); }

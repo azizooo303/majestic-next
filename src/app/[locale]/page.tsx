@@ -12,6 +12,7 @@ import { PromoBanner } from "@/components/common/promo-banner";
 import { ProductCard } from "@/components/shop/product-card";
 import { JsonLd, LocalBusinessJsonLd, WebSiteJsonLd } from "@/components/common/json-ld";
 import { SpaceTypology } from "@/components/sections/space-typology";
+import { ProjectsReel } from "@/components/sections/projects-reel";
 import { Collections } from "@/components/sections/collections";
 import { CraftsmanshipBand } from "@/components/sections/craftsmanship-band";
 import { ProjectScale } from "@/components/sections/project-scale";
@@ -222,6 +223,9 @@ export default async function HomePage({
       {/* New Sections — alternating directions for storytelling rhythm */}
       <SectionReveal direction="left" duration={0.8}>
         {siteContent.sections.spaceTypology && <SpaceTypology isAr={isAr} />}
+      </SectionReveal>
+      <SectionReveal direction="up" duration={0.8}>
+        <ProjectsReel isAr={isAr} />
       </SectionReveal>
       <SectionReveal direction="right" duration={0.8}>
         {siteContent.sections.collections && <Collections isAr={isAr} />}
