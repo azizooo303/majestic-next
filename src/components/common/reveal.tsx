@@ -6,20 +6,19 @@ interface RevealProps {
   children: React.ReactNode;
   className?: string;
   yIn?: number;
-  yOut?: number;
 }
 
-export function Reveal({ children, className, yIn = 30, yOut = -15 }: RevealProps) {
+export function Reveal({ children, className, yIn = 30 }: RevealProps) {
   const ref = useRef<HTMLDivElement>(null);
   const reducedMotion = useReducedMotion();
 
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start end", "end start"],
+    offset: ["start end", "start 0.2"],
   });
 
-  const opacity = useTransform(scrollYProgress, [0, 0.18, 0.82, 1], [0, 1, 1, 0]);
-  const y = useTransform(scrollYProgress, [0, 0.18, 0.82, 1], [yIn, 0, 0, yOut]);
+  const opacity = useTransform(scrollYProgress, [0, 0.6], [0, 1]);
+  const y = useTransform(scrollYProgress, [0, 0.6], [yIn, 0]);
 
   if (reducedMotion) {
     return <div ref={ref} className={className}>{children}</div>;

@@ -17,7 +17,7 @@ export async function generateMetadata({
       ? "تواصل مع فريق ماجيستيك للأثاث المكتبي. زيارة معارضنا في الرياض، أو أرسل لنا استفساراً. الأحد–الخميس، 9 صباحاً–6 مساءً."
       : "Get in touch with the Majestic Furniture team. Visit our Riyadh showrooms or send us an enquiry. Sunday–Thursday, 9am–6pm.",
     alternates: {
-      canonical: `https://thedeskco.net/en/contact`,
+      canonical: `https://thedeskco.net/${locale}/contact`,
       languages: {
         en: "https://thedeskco.net/en/contact",
         ar: "https://thedeskco.net/ar/contact",

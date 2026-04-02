@@ -1,5 +1,31 @@
+import type { Metadata } from "next";
 import { Reveal } from "@/components/common/reveal";
 import { Link } from "@/i18n/navigation";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const isAr = locale === "ar";
+  return {
+    title: isAr
+      ? "التوصيل والتركيب — ماجيستيك للأثاث"
+      : "Delivery & Installation — Majestic Furniture",
+    description: isAr
+      ? "توصيل وتركيب احترافي في جميع أنحاء المملكة العربية السعودية ودول الخليج. أثاث مكتبي يصل في موعده."
+      : "Nationwide delivery and professional installation across Saudi Arabia and the GCC. Office furniture delivered on time, every time.",
+    alternates: {
+      canonical: `https://thedeskco.net/${locale}/delivery`,
+      languages: {
+        en: "/en/delivery",
+        ar: "/ar/delivery",
+        "x-default": "/en/delivery",
+      },
+    },
+  };
+}
 
 export default async function DeliveryPage({
   params,

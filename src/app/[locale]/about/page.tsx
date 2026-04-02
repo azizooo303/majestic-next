@@ -14,10 +14,10 @@ export async function generateMetadata({
   return {
     title: isAr ? "عن ماجيستيك — قصتنا وقيمنا" : "About Majestic — Our Story and Values",
     description: isAr
-      ? "ماجيستيك علامة تجارية سعودية رائدة في أثاث المكاتب الراقي. أكثر من 15 عاماً من الخبرة، 500+ مشروع منجز، و3 معارض في الرياض."
-      : "Majestic is Saudi Arabia's leading premium office furniture brand. Over 15 years of experience, 500+ completed projects, and 3 showrooms in Riyadh.",
+      ? "ماجستيك للأثاث تورّد بيئات عمل للعملاء المؤسسيين والحكوميين في المملكة. تعرّف على تشكيلاتنا ومنهجنا في تجهيز المساحات."
+      : "Majestic Furniture supplies workspace environments to corporate and government clients across Saudi Arabia. Learn about our collections and approach.",
     alternates: {
-      canonical: `https://thedeskco.net/en/about`,
+      canonical: `https://thedeskco.net/${locale}/about`,
       languages: {
         en: "https://thedeskco.net/en/about",
         ar: "https://thedeskco.net/ar/about",
@@ -73,13 +73,13 @@ export default async function AboutPage({
                 </h2>
                 <p className="text-[#484848] leading-relaxed mb-4">
                   {isAr
-                    ? "ماجيستيك علامة تجارية سعودية رائدة في مجال أثاث المكاتب الراقي، تأسست بهدف رفع معايير بيئات العمل في المملكة العربية السعودية والمنطقة. انطلقنا من قناعة راسخة بأن الفضاء المصمم بعناية يعكس قيم المؤسسة ويُعزز إنتاجية الفريق."
-                    : "Majestic is a premium Saudi office furniture brand, founded to raise the standard of workspace environments across Saudi Arabia and the wider region. We started from a firm belief that a thoughtfully designed space reflects an organization's values and amplifies team productivity."}
+                    ? "تصمّم ماجستيك للأثاث وتورّد بيئات عمل احترافية في مختلف أنحاء المملكة العربية السعودية. تشمل تشكيلاتنا المكاتب التنفيذية، ومحطات العمل المشتركة، وأنظمة قاعات الاجتماعات، وصالات الاستقبال، والحلول الصوتية — تُنفَّذ وفق المواصفات وتُسلَّم بدقة."
+                    : "Majestic Furniture designs and supplies professional workspace environments across Saudi Arabia. Our range spans executive offices, collaborative workstations, conference systems, lounge areas, and acoustic solutions — built to specification and delivered with precision."}
                 </p>
                 <p className="text-[#484848] leading-relaxed">
                   {isAr
-                    ? "نعمل مع أبرز العلامات التجارية العالمية لنوفر حلولاً متكاملة للأثاث المكتبي تخدم الشركات والمؤسسات الحكومية وقطاع الضيافة. كل مشروع نُنجزه هو شراكة حقيقية تبدأ بفهم احتياجات العميل وتنتهي بفضاء يليق بطموحاته."
-                    : "We collaborate with the world's finest furniture brands to deliver complete workspace solutions for corporations, government entities, and the hospitality sector. Every project we deliver is a genuine partnership — beginning with understanding the client's needs and ending with a space worthy of their ambitions."}
+                    ? "مهمتنا تزويد المؤسسات السعودية بأنظمة أثاث ترقى إلى مستوى طموحاتها. نستورد من شركات تصنيع دولية راسخة، ونقرن ذلك بخبرتنا المحلية في السوق، والاستشارة التصميمية، ودعم ما بعد البيع."
+                    : "Our mission is to equip Saudi organizations with furniture systems that match the quality of their ambitions. We source from established international manufacturers and pair this with local market expertise, project consultation, and after-sales support."}
                 </p>
               </div>
               <div className="relative aspect-[4/3] rounded-sm overflow-hidden">
@@ -102,10 +102,9 @@ export default async function AboutPage({
           <Reveal>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
               {[
-                { number: "500+", label: isAr ? "مشروع منجز" : "Projects Completed" },
-                { number: "50+", label: isAr ? "علامة تجارية" : "Brands Carried" },
-                { number: "15+", label: isAr ? "سنة خبرة" : "Years of Experience" },
-                { number: "3", label: isAr ? "معارض" : "Showrooms" },
+                { number: "168", label: isAr ? "168 منتجًا" : "168 Products" },
+                { number: "6", label: isAr ? "6 فئات" : "6 Categories" },
+                { number: isAr ? "المملكة والخليج" : "KSA + GCC", label: isAr ? "مقرنا المملكة، ونخدم دول الخليج" : "Saudi-based, GCC-ready" },
               ].map((stat) => (
                 <div key={stat.label}>
                   <p className="text-4xl md:text-5xl font-extrabold text-[#0c0c0c] tracking-tight">
@@ -130,25 +129,25 @@ export default async function AboutPage({
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               {
-                icon: "Q",
-                title: isAr ? "الجودة" : "Quality",
+                icon: "P",
+                title: isAr ? "الدقة" : "Precision",
                 desc: isAr
-                  ? "نختار كل منتج بعناية بالغة لضمان أعلى معايير الجودة والمتانة. الجودة ليست خياراً، بل هي أساس كل ما نقدمه."
-                  : "Every product we carry is selected with exacting care to meet the highest standards of quality and durability. Quality is not an option — it is the foundation of everything we offer.",
-              },
-              {
-                icon: "I",
-                title: isAr ? "الابتكار" : "Innovation",
-                desc: isAr
-                  ? "نتبنى أحدث تصاميم الأثاث المكتبي العالمي لنوفر حلولاً تواكب متطلبات بيئات العمل الحديثة وتدعم مرونة الفرق."
-                  : "We embrace the latest global office furniture design to deliver solutions that keep pace with modern work environments and support team flexibility.",
+                  ? "كل منتج في كتالوجنا يستوفي معايير محددة للبنية والتشطيب. لا تنازل في المقاسات، أو المواد، أو جودة التجميع."
+                  : "Every product in our catalog meets defined structural and finish standards. We do not compromise on tolerances, materials, or assembly quality.",
               },
               {
                 icon: "S",
-                title: isAr ? "الاستدامة" : "Sustainability",
+                title: isAr ? "القدرة على التوسّع" : "Scale",
                 desc: isAr
-                  ? "نُولي الاستدامة أهمية محورية في اختياراتنا، ونفضل الموردين الملتزمين بمعايير الإنتاج المسؤول والمواد الصديقة للبيئة."
-                  : "Sustainability is central to our sourcing decisions. We prioritize suppliers committed to responsible production and environmentally conscious materials.",
+                  ? "من مكتب تنفيذي واحد إلى تجهيز مبنى مؤسسي متعدد الطوابق — أنظمتنا مصمَّمة لتنمو مع مؤسستك."
+                  : "From a single executive office to a multi-floor corporate fit-out, our systems are designed to grow with your organization.",
+              },
+              {
+                icon: "P",
+                title: isAr ? "الشراكة" : "Partnership",
+                desc: isAr
+                  ? "نعمل جنبًا إلى جنب مع المعماريين وفرق الشراء ومديري المرافق — من المتطلبات الأولية حتى التركيب. علاقتنا لا تنتهي عند التسليم."
+                  : "We work alongside architects, procurement teams, and facilities managers from brief to installation. The relationship does not end at delivery.",
               },
             ].map((value) => (
               <Reveal key={value.title}>

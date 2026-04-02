@@ -30,8 +30,8 @@ export async function Footer() {
       </div>
       <p className="text-sm text-[#484848] leading-relaxed max-w-[210px]">
         {isAr
-          ? "أثاث مكتبي احترافي لبيئة العمل الحديثة"
-          : "Premium Office Furniture for the Modern Workplace"}
+          ? "تورّد ماجستيك للأثاث بيئات عمل احترافية للعملاء في القطاعين الحكومي والخاص في المملكة العربية السعودية ودول الخليج."
+          : "Majestic Furniture supplies professional workspace environments to corporate and government clients across Saudi Arabia and the Gulf."}
       </p>
       {/* Social links */}
       <div className="flex gap-5 mt-6">
@@ -192,7 +192,7 @@ export async function Footer() {
       <div className="border-t border-[rgba(0,0,0,0.08)]">
         <div className="max-w-screen-xl mx-auto px-4 md:px-8 py-4 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-xs text-[#484848]">
-            &copy; {year} Majestic. {isAr ? "جميع الحقوق محفوظة." : "All rights reserved."}
+            &copy; {year} {isAr ? "ماجستيك للأثاث. جميع الحقوق محفوظة." : "Majestic Furniture. All rights reserved."}
           </p>
           <div className="flex items-center gap-4">
             <Link

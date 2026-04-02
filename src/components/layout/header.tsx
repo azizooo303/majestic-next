@@ -23,6 +23,7 @@ import { cn } from "@/lib/utils";
 interface NavChild {
   key: string;
   href: string;
+  image?: string;
 }
 
 interface NavItem {
@@ -37,10 +38,10 @@ const NAV_ITEMS: NavItem[] = [
     key: "chairs",
     href: "/shop?category=seating",
     children: [
-      { key: "executiveChairs", href: "/shop?category=executive-chairs" },
-      { key: "taskChairs", href: "/shop?category=task-chairs" },
-      { key: "meetingChairs", href: "/shop?category=meeting-chairs" },
-      { key: "lounge", href: "/shop?category=lounge-chairs" },
+      { key: "executiveChairs", href: "/shop?category=executive-chairs", image: "https://thedeskco.net/wp-content/uploads/2026/03/menu-seating.png" },
+      { key: "taskChairs", href: "/shop?category=task-chairs", image: "https://thedeskco.net/wp-content/uploads/2026/03/menu-seating.png" },
+      { key: "meetingChairs", href: "/shop?category=meeting-chairs", image: "https://thedeskco.net/wp-content/uploads/2026/03/menu-seating.png" },
+      { key: "lounge", href: "/shop?category=lounge-chairs", image: "https://thedeskco.net/wp-content/uploads/2026/03/menu-lounge.png" },
     ],
   },
   {
@@ -48,12 +49,12 @@ const NAV_ITEMS: NavItem[] = [
     href: "/shop?category=tables",
     mega: true,
     children: [
-      { key: "executiveDesks", href: "/shop?category=executive-desks" },
-      { key: "workstations", href: "/shop?category=workstations" },
-      { key: "heightAdjustable", href: "/shop?category=height-adjustable" },
-      { key: "accessories", href: "/shop?category=accessories" },
-      { key: "meetingTables", href: "/shop?category=meeting-tables" },
-      { key: "receptionDesk", href: "/shop?category=reception" },
+      { key: "executiveDesks", href: "/shop?category=executive-desks", image: "https://thedeskco.net/wp-content/uploads/2026/03/menu-tables.png" },
+      { key: "workstations", href: "/shop?category=workstations", image: "https://thedeskco.net/wp-content/uploads/2026/03/menu-workstations.png" },
+      { key: "heightAdjustable", href: "/shop?category=height-adjustable", image: "https://thedeskco.net/wp-content/uploads/2026/03/menu-tables.png" },
+      { key: "accessories", href: "/shop?category=accessories", image: "https://thedeskco.net/wp-content/uploads/2026/03/menu-storage.png" },
+      { key: "meetingTables", href: "/shop?category=meeting-tables", image: "https://thedeskco.net/wp-content/uploads/2026/03/menu-tables.png" },
+      { key: "receptionDesk", href: "/shop?category=reception", image: "https://thedeskco.net/wp-content/uploads/2026/03/menu-lounge.png" },
     ],
   },
   { key: "storage", href: "/shop?category=storage" },
@@ -158,6 +159,8 @@ export function Header() {
   const pathname = usePathname();
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [headerHeight, setHeaderHeight] = useState(HEADER_HEIGHT);
+  const headerRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     document.body.style.overflow = isMobileOpen ? "hidden" : "";
@@ -165,6 +168,18 @@ export function Header() {
       document.body.style.overflow = "";
     };
   }, [isMobileOpen]);
+
+  useEffect(() => {
+    const measure = () => {
+      if (headerRef.current) {
+        setHeaderHeight(headerRef.current.offsetHeight);
+      }
+    };
+    measure();
+    const ro = new ResizeObserver(measure);
+    if (headerRef.current) ro.observe(headerRef.current);
+    return () => ro.disconnect();
+  }, []);
 
   return (
     <>
@@ -176,7 +191,7 @@ export function Header() {
         Skip to content
       </a>
 
-      <header className="fixed top-0 w-full z-50 bg-white">
+      <header ref={headerRef} className="fixed top-0 w-full z-50 bg-white">
         {/* ── Row 1: Utility bar ── */}
         <div className="hidden md:block border-b border-[rgba(0,0,0,0.08)] bg-white">
           <div className="max-w-screen-xl mx-auto px-8 py-1.5 flex items-center gap-1 text-xs text-[#484848]">
@@ -282,7 +297,7 @@ export function Header() {
                   item={item}
                   pathname={pathname}
                   t={t}
-                  navRowOffset={HEADER_HEIGHT}
+                  navRowOffset={headerHeight}
                 />
               ))}
 
@@ -498,8 +513,18 @@ function MegaMenu({
                   href={child.href}
                   className="group block"
                 >
-                  <div className="aspect-[4/3] bg-[#f2f2f2] overflow-hidden mb-2">
-                    <div className="w-full h-full bg-[#ebebeb] group-hover:scale-[1.02] transition-transform duration-300" />
+                  <div className="aspect-[4/3] bg-[#f2f2f2] overflow-hidden mb-2 relative">
+                    {child.image ? (
+                      <Image
+                        src={child.image}
+                        alt={t(`nav.${child.key}`)}
+                        fill
+                        className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+                        sizes="200px"
+                      />
+                    ) : (
+                      <div className="w-full h-full bg-[#ebebeb]" />
+                    )}
                   </div>
                   <span className="text-xs font-medium text-[#0c0c0c] group-hover:text-[#484848] transition-colors">
                     {t(`nav.${child.key}`)}
@@ -570,7 +595,7 @@ function LanguageToggle() {
     <Link
       href={pathname}
       locale={isAr ? "en" : "ar"}
-      className="hidden sm:flex items-center gap-1 px-2.5 py-1.5 text-xs font-medium text-[#0c0c0c] hover:text-[#484848] transition-colors"
+      className="flex items-center gap-1 px-2.5 py-1.5 text-xs font-medium text-[#0c0c0c] hover:text-[#484848] transition-colors"
     >
       {isAr ? "EN" : "AR"}
     </Link>
@@ -747,7 +772,14 @@ function MobileDrawer({
             <User className="w-4 h-4" />
             {locale === "ar" ? "تسجيل الدخول" : "Sign In"}
           </Link>
-          <LanguageToggle />
+          <Link
+            href={drawerPathname}
+            locale={locale === "ar" ? "en" : "ar"}
+            onClick={onClose}
+            className="flex items-center gap-1 text-sm font-medium text-[#0c0c0c] hover:text-[#484848] transition-colors"
+          >
+            {locale === "ar" ? "EN" : "AR"}
+          </Link>
         </div>
       </div>
     </>

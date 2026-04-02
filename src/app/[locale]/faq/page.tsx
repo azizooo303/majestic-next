@@ -1,6 +1,7 @@
 import { Link } from "@/i18n/navigation";
 import { PageWrapper } from "@/components/common/page-wrapper";
 import { Reveal } from "@/components/common/reveal";
+import { FaqPageJsonLd } from "@/components/common/json-ld";
 import type { Metadata } from "next";
 
 export async function generateMetadata({
@@ -16,7 +17,7 @@ export async function generateMetadata({
       ? "إجابات على أكثر الأسئلة شيوعاً حول التوصيل، التركيب، سياسة الإرجاع، الضمان، وطرق الدفع في ماجيستيك للأثاث المكتبي."
       : "Answers to the most common questions about delivery, assembly, return policy, warranty, and payment methods at Majestic Furniture.",
     alternates: {
-      canonical: `https://thedeskco.net/en/faq`,
+      canonical: `https://thedeskco.net/${locale}/faq`,
       languages: {
         en: "https://thedeskco.net/en/faq",
         ar: "https://thedeskco.net/ar/faq",
@@ -105,8 +106,16 @@ export default async function FaqPage({
   const faqs = FAQS(isAr);
   const categories = CATEGORIES(isAr);
 
+  // Build EN FAQ list for JSON-LD schema (search engines prefer one language per schema block)
+  const enFaqs = FAQS(false);
+  const faqSchemaItems = enFaqs.map((faq) => ({
+    question: faq.q,
+    answer: faq.a,
+  }));
+
   return (
     <PageWrapper id="main-content" className="flex-1 bg-white">
+      <FaqPageJsonLd faqs={faqSchemaItems} />
       {/* Hero */}
       <section className="bg-[#fafafa] border-b border-[rgba(0,0,0,0.08)] py-12 md:py-16">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">

@@ -2,20 +2,12 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getMessages } from "next-intl/server";
-import localFont from "next/font/local";
 import { Raleway, Montserrat } from "next/font/google";
 import { routing } from "@/i18n/routing";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { AnimatePresenceWrapper } from "@/components/common/animate-presence-wrapper";
 import "../globals.css";
-
-const alyamama = localFont({
-  src: "../../../public/fonts/Alyamama-VariableFont_wght.ttf",
-  variable: "--font-alyamama",
-  weight: "300 900",
-  display: "swap",
-});
 
 const raleway = Raleway({
   subsets: ["latin"],
@@ -68,13 +60,13 @@ export default async function LocaleLayout({
     <html
       lang={locale}
       dir={isRTL ? "rtl" : "ltr"}
-      className={`${alyamama.variable} ${raleway.variable} ${montserrat.variable} h-full antialiased`}
+      className={`${raleway.variable} ${montserrat.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-white text-[#0c0c0c] font-sans pt-[196px]">
+      <body className="min-h-full flex flex-col bg-white text-[#0c0c0c] font-sans pt-[76px] md:pt-[196px]">
         <NextIntlClientProvider messages={messages}>
           <a
             href="#main-content"
-            className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:start-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-gold focus:text-primary focus:rounded-md focus:font-medium"
+            className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:start-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-[#0c0c0c] focus:text-white focus:rounded-md focus:font-medium"
           >
             Skip to content
           </a>

@@ -10,8 +10,17 @@ import { StaggerGrid } from "@/components/common/stagger-grid";
 import { Reveal } from "@/components/common/reveal";
 import { PromoBanner } from "@/components/common/promo-banner";
 import { ProductCard } from "@/components/shop/product-card";
-import { JsonLd } from "@/components/common/json-ld";
+import { JsonLd, LocalBusinessJsonLd, WebSiteJsonLd } from "@/components/common/json-ld";
+import { SpaceTypology } from "@/components/sections/space-typology";
+import { Collections } from "@/components/sections/collections";
+import { CraftsmanshipBand } from "@/components/sections/craftsmanship-band";
+import { ProjectScale } from "@/components/sections/project-scale";
+import { BrandStandard } from "@/components/sections/brand-standard";
+import { MaterialSelector } from "@/components/sections/material-selector";
+import { InsightEditorial } from "@/components/sections/insight-editorial";
+import { ConsultationCta } from "@/components/sections/consultation-cta";
 import type { HeroSlide } from "@/components/hero/hero-banner";
+import { getProducts, parsePrice, calcDiscount, PRODUCT_PLACEHOLDER } from "@/lib/woocommerce";
 
 export async function generateMetadata({
   params,
@@ -26,7 +35,7 @@ export async function generateMetadata({
       ? "ماجيستيك — الوجهة الأولى للأثاث المكتبي الاحترافي في المملكة العربية السعودية. مكاتب تنفيذية، كراسي مريحة، ومحطات عمل لبيئات العمل الراقية."
       : "Majestic Furniture — Saudi Arabia's premier destination for professional office furniture. Executive desks, ergonomic chairs, and workstations for elevated workspace environments.",
     alternates: {
-      canonical: `https://thedeskco.net/en`,
+      canonical: `https://thedeskco.net/${locale}`,
       languages: {
         en: "https://thedeskco.net/en",
         ar: "https://thedeskco.net/ar",
@@ -45,57 +54,16 @@ export async function generateMetadata({
   };
 }
 
-// Mock products — staging has no WC products yet
-const MOCK_PRODUCTS = [
-  {
-    id: 1,
-    name: "Enigma Executive Desk",
-    category: "Executive Desks",
-    brand: "Majestic",
-    price: 2850,
-    originalPrice: undefined as number | undefined,
-    discount: undefined as number | undefined,
-    image: "/images/wp-media/hero_office_desktop_en-1.png",
-  },
-  {
-    id: 2,
-    name: "ErgoMax Pro Chair",
-    category: "Ergonomic Chairs",
-    brand: "ChairLine",
-    price: 1250,
-    originalPrice: 1650 as number | undefined,
-    discount: 24 as number | undefined,
-    image: "/images/wp-media/hero_chairs_desktop_en-1.png",
-  },
-  {
-    id: 3,
-    name: "ModularFlex Workstation",
-    category: "Workstations",
-    brand: "Majestic",
-    price: 3400,
-    originalPrice: undefined as number | undefined,
-    discount: undefined as number | undefined,
-    image: "/images/wp-media/hero_cabinet_desktop_en-1.png",
-  },
-  {
-    id: 4,
-    name: "Conference Pro Table",
-    category: "Meeting Tables",
-    brand: "Majestic",
-    price: 4200,
-    originalPrice: undefined as number | undefined,
-    discount: undefined as number | undefined,
-    image: "/images/wp-media/hero_meeting_desktop_en-1.png",
-  },
-] as const;
+
+const CDN = "https://thedeskco.net/wp-content/uploads/2026/03";
 
 const CATEGORIES = [
-  { slug: "seating", key: "seating" as const, image: "/images/wp-media/category-seating.png" },
-  { slug: "tables", key: "tables" as const, image: "/images/wp-media/category-tables.png" },
-  { slug: "storage", key: "storage" as const, image: "/images/wp-media/category-storage.png" },
-  { slug: "workstations", key: "workstations" as const, image: "/images/wp-media/category-workstations.png" },
-  { slug: "acoustics", key: "acoustics" as const, image: "/images/wp-media/category-acoustics.png" },
-  { slug: "lounge", key: "lounge" as const, image: "/images/wp-media/category-lounge.png" },
+  { slug: "seating", key: "seating" as const, image: `${CDN}/category-seating.png` },
+  { slug: "tables", key: "tables" as const, image: `${CDN}/category-tables.png` },
+  { slug: "storage", key: "storage" as const, image: `${CDN}/category-storage.png` },
+  { slug: "workstations", key: "workstations" as const, image: `${CDN}/category-workstations.png` },
+  { slug: "acoustics", key: "acoustics" as const, image: `${CDN}/category-acoustics.png` },
+  { slug: "lounge", key: "lounge" as const, image: `${CDN}/category-lounge.png` },
 ];
 
 export default async function HomePage({
@@ -107,21 +75,49 @@ export default async function HomePage({
   const t = await getTranslations({ locale });
   const isAr = locale === "ar";
 
-  const heroSlide: HeroSlide = {
-    image: "/images/wp-media/hero_office_desktop_en-1.png",
-    mobileImage: "/images/wp-media/hero_chairs_mobile_en-1.png",
-    alt: isAr ? "مكاتب تنفيذية ماجيستيك" : "Majestic Executive Desks",
-    collection: isAr ? "مجموعة المكاتب التنفيذية" : "Executive Desk Collection",
-    headline: isAr
-      ? "دقة في كل تفصيل\nأثاث مكتبي راقي"
-      : "Precision in Every Cut\nPremium Office Furniture",
-    tagline: isAr
-      ? "مجموعة متكاملة من الأثاث المكتبي الاحترافي"
-      : "Complete range of professional office furniture",
-    cta: isAr ? "اكتشف المجموعة" : "Discover the collection",
-    href: "/shop",
-    locale,
-  };
+  const wcProducts = await getProducts({ lang: locale, per_page: 8 }).catch(() => [] as Awaited<ReturnType<typeof getProducts>>);
+
+  const heroSlides: HeroSlide[] = [
+    {
+      image: "/images/hero-desks.jpg",
+      mobileImage: "/images/hero-desks-mobile.jpg",
+      alt: isAr ? "مكاتب تنفيذية ماجيستيك" : "Majestic Executive Desks",
+      collection: isAr ? "تشكيلة المكاتب التنفيذية" : "Executive Desk Collection",
+      headline: isAr ? "المكاتب التنفيذية" : "Desks Built\nfor Authority",
+      tagline: isAr
+        ? "تشكيلات مكاتب تنفيذية لبيئات العمل المؤسسية السعودية."
+        : "Executive collections engineered for the modern Saudi workspace.",
+      cta: isAr ? "استعرض المكاتب التنفيذية" : "Explore Executive Desks",
+      href: "/shop",
+      locale,
+    },
+    {
+      image: "/images/hero-seating.jpg",
+      mobileImage: "/images/hero-seating-mobile.jpg",
+      alt: isAr ? "كراسي مريحة ماجيستيك" : "Majestic Ergonomic Seating",
+      collection: isAr ? "تشكيلة الكراسي" : "Seating Collection",
+      headline: isAr ? "كراسي المهام والجلسات" : "Seating That\nPerforms",
+      tagline: isAr
+        ? "كراسي مريحة وداعمة للجسم، مُصنَّعة للجلسات الطويلة والاستخدام المكثف."
+        : "Ergonomic chairs built for focused comfort and extensive use.",
+      cta: isAr ? "استعرض تشكيلة الكراسي" : "Explore Seating",
+      href: "/shop?category=seating",
+      locale,
+    },
+    {
+      image: "/images/hero-tables.jpg",
+      mobileImage: "/images/hero-tables-mobile.jpg",
+      alt: isAr ? "طاولات اجتماعات ماجيستيك" : "Majestic Meeting Tables",
+      collection: isAr ? "طاولات الاجتماعات" : "Meeting Tables",
+      headline: isAr ? "طاولات الاجتماعات والقاعات" : "Tables That\nCommand Rooms",
+      tagline: isAr
+        ? "طاولات اجتماعات وقاعات إدارة — من أربعة مقاعد حتى أربعين — لكل حجم ونوع فضاء."
+        : "Conference and boardroom tables sized for every setting — from four seats to forty.",
+      cta: isAr ? "استعرض طاولات الاجتماعات" : "Explore Meeting Tables",
+      href: "/shop?category=tables",
+      locale,
+    },
+  ];
 
   const categoryItems = CATEGORIES.map((cat) => (
     <Link
@@ -145,20 +141,27 @@ export default async function HomePage({
     </Link>
   ));
 
-  const productItems = MOCK_PRODUCTS.map((product) => (
-    <ProductCard
-      key={product.id}
-      id={product.id}
-      name={product.name}
-      category={product.category}
-      brand={product.brand}
-      price={product.price}
-      originalPrice={product.originalPrice}
-      discount={product.discount}
-      image={product.image}
-      isAr={isAr}
-    />
-  ));
+  const productItems = wcProducts.map((product) => {
+    const price = parsePrice(product.price);
+    const originalPrice = product.on_sale ? parsePrice(product.regular_price) : undefined;
+    const discount = product.on_sale ? calcDiscount(product.regular_price, product.price) : undefined;
+    const image = product.images[0]?.src || PRODUCT_PLACEHOLDER;
+    const category = product.categories[0]?.name || "";
+    return (
+      <ProductCard
+        key={product.id}
+        id={product.id}
+        name={product.name}
+        category={category}
+        brand=""
+        price={price}
+        originalPrice={originalPrice}
+        discount={discount}
+        image={image}
+        isAr={isAr}
+      />
+    );
+  });
 
   const organizationSchema = {
     "@context": "https://schema.org",
@@ -180,8 +183,10 @@ export default async function HomePage({
   return (
     <PageWrapper id="main-content" className="flex-1 bg-white">
       <JsonLd data={organizationSchema} />
+      <LocalBusinessJsonLd />
+      <WebSiteJsonLd />
       {/* Hero */}
-      <HeroBanner slide={heroSlide} />
+      <HeroBanner slides={heroSlides} />
 
       {/* Category Navigation Strip */}
       <section className="w-full bg-white border-b border-[rgba(0,0,0,0.21)] py-6">
@@ -202,7 +207,7 @@ export default async function HomePage({
           <Reveal>
             <div className="flex items-center justify-between mb-8">
               <h2 className="text-2xl md:text-3xl font-bold text-[#0c0c0c] tracking-tight">
-                {isAr ? "المنتجات المميزة" : "Featured Products"}
+                {isAr ? "مختارات هذا الموسم" : "Selected for This Season"}
               </h2>
               <Link
                 href="/shop"
@@ -233,14 +238,23 @@ export default async function HomePage({
         </div>
       </section>
 
+      {/* New Sections */}
+      <SpaceTypology isAr={isAr} />
+      <Collections isAr={isAr} />
+      <CraftsmanshipBand isAr={isAr} />
+      <ProjectScale isAr={isAr} />
+      <BrandStandard isAr={isAr} />
+      <MaterialSelector isAr={isAr} />
+      <InsightEditorial isAr={isAr} />
+
       {/* Promotional Banner */}
       <PromoBanner
         isAr={isAr}
-        headline={isAr ? "مصمم للمحترفين" : "Designed for Professionals"}
+        headline={isAr ? "توريد للقطاع الحكومي والمؤسسي — خدمة على مستوى المملكة" : "Corporate & Government Supply — Available Nationwide"}
         body={isAr
-          ? "مجموعة متكاملة من الأثاث المكتبي الاحترافي المصمم لتعزيز الإنتاجية والأناقة في بيئة العمل."
-          : "A complete range of professional office furniture engineered to enhance productivity and style in any workspace."}
-        cta={isAr ? "اكتشف القصة" : t("common.learnMore")}
+          ? "تورّد ماجستيك بيئات عمل متكاملة للمؤسسات في جميع أنحاء المملكة. اطلب استشارة للمشروع."
+          : "Majestic supplies complete workspace environments to organizations across the Kingdom. Request a project consultation."}
+        cta={isAr ? "طلب استشارة" : "Request a Consultation"}
         ctaHref="/about"
       />
 
@@ -252,12 +266,12 @@ export default async function HomePage({
         <section className="border-t border-[rgba(0,0,0,0.08)] py-12 bg-white">
           <div className="max-w-md mx-auto px-4 text-center">
             <h2 className="text-xl font-semibold text-[#0c0c0c]">
-              {isAr ? "اشترك في النشرة الإخبارية" : "Sign Up to Newsletter"}
+              {isAr ? "ابقَ على اطلاع" : "Stay Informed"}
             </h2>
             <p className="text-[#484848] text-sm mt-2">
               {isAr
-                ? "ابقَ على اطلاع بالمجموعات الجديدة"
-                : "Stay updated with new collections and ideas"}
+                ? "تشكيلات جديدة، ومشاريع منجزة، ومقالات بيئة العمل — مباشرةً إلى بريدك."
+                : "New collections, project stories, and workspace insights — delivered to your inbox."}
             </p>
             <NewsletterForm />
             {/* Social links */}
@@ -290,6 +304,7 @@ export default async function HomePage({
           </div>
         </section>
       </Reveal>
+      <ConsultationCta isAr={isAr} />
     </PageWrapper>
   );
 }

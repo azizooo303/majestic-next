@@ -1,6 +1,20 @@
+import type { Metadata } from "next";
 import { Reveal } from "@/components/common/reveal";
 import { Link } from "@/i18n/navigation";
 import { TrackForm } from "@/components/support/track-form";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const isAr = locale === "ar";
+  return {
+    title: isAr ? "تتبع طلبك" : "Track Your Order",
+    robots: { index: false, follow: false },
+  };
+}
 
 export default async function TrackOrderPage({
   params,

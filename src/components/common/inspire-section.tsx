@@ -14,18 +14,18 @@ export function InspireSection({ isAr }: { isAr: boolean }) {
     offset: ["start end", "end start"],
   });
 
-  // Image panel — slides in from left (LTR) / right (RTL)
+  // Image panel — slides in from left (LTR) / right (RTL), enter only
   const imageX = useTransform(
     scrollYProgress,
-    [0, 0.35, 0.75, 1],
-    [isAr ? 120 : -120, 0, 0, isAr ? 60 : -60]
+    [0, 0.5],
+    [isAr ? 30 : -30, 0]
   );
 
-  // Text panel — slides in from right (LTR) / left (RTL)
+  // Text panel — slides in from right (LTR) / left (RTL), enter only
   const textX = useTransform(
     scrollYProgress,
-    [0, 0.35, 0.75, 1],
-    [isAr ? -120 : 120, 0, 0, isAr ? 60 : -60]
+    [0, 0.5],
+    [isAr ? -30 : 30, 0]
   );
 
   return (

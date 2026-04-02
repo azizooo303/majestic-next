@@ -23,37 +23,42 @@ export function ProductGallery({ images, name }: ProductGalleryProps) {
   const activeImage = images[activeIndex];
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-3">
       {/* Main Image */}
-      <div className="relative aspect-square bg-white rounded-xl overflow-hidden">
+      <div className="relative aspect-[4/3] bg-[#fafafa] rounded-sm overflow-hidden border border-[rgba(0,0,0,0.08)]">
         <Image
           src={activeImage.src}
           alt={activeImage.alt || name}
           fill
-          className="object-contain"
-          sizes="(max-width: 1024px) 100vw, 60vw"
           priority
+          className="object-cover"
+          sizes="(max-width: 1024px) 100vw, 55vw"
         />
       </div>
 
       {/* Thumbnails */}
       {images.length > 1 && (
-        <div className="flex gap-3 overflow-x-auto no-scrollbar">
-          {images.map((img, i) => (
+        <div className="flex gap-2" role="list" aria-label={`${name} images`}>
+          {images.slice(0, 4).map((img, i) => (
             <button
               key={img.id}
+              role="listitem"
               onClick={() => setActiveIndex(i)}
+              aria-label={img.alt || `${name} view ${i + 1}`}
+              aria-pressed={i === activeIndex}
               className={cn(
-                "relative w-20 h-20 flex-shrink-0 rounded-lg overflow-hidden border-2 transition-colors cursor-pointer",
-                i === activeIndex ? "border-gold" : "border-transparent hover:border-border"
+                "relative w-16 h-16 shrink-0 rounded-sm overflow-hidden border-2 bg-[#fafafa] cursor-pointer transition-colors",
+                i === activeIndex
+                  ? "border-[#0c0c0c]"
+                  : "border-transparent hover:border-[rgba(0,0,0,0.21)]"
               )}
             >
               <Image
                 src={img.src}
-                alt={img.alt || `${name} view ${i + 1}`}
+                alt={img.alt || `${name} ${i + 1}`}
                 fill
                 className="object-cover"
-                sizes="80px"
+                sizes="64px"
               />
             </button>
           ))}

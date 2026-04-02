@@ -1,5 +1,31 @@
+import type { Metadata } from "next";
 import { Reveal } from "@/components/common/reveal";
 import { Link } from "@/i18n/navigation";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const isAr = locale === "ar";
+  return {
+    title: isAr
+      ? "الضمان وخدمة ما بعد البيع — ماجيستيك للأثاث"
+      : "Warranty & After-Sales — Majestic Furniture",
+    description: isAr
+      ? "شروط ضمان ماجيستيك للأثاث وخدمة ما بعد البيع. نقف خلف كل منتج نورّده ونركّبه."
+      : "Majestic Furniture warranty terms and after-sales service. We stand behind every product we supply and install.",
+    alternates: {
+      canonical: `https://thedeskco.net/${locale}/warranty`,
+      languages: {
+        en: "/en/warranty",
+        ar: "/ar/warranty",
+        "x-default": "/en/warranty",
+      },
+    },
+  };
+}
 
 export default async function WarrantyPage({
   params,

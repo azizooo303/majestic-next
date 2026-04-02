@@ -18,7 +18,7 @@ export async function generateMetadata({
       ? "زور أحد معارض ماجيستيك الثلاثة في الرياض وشاهد مجموعتنا من الأثاث المكتبي الراقي. مفتوح الأحد–الخميس من 9 صباحاً حتى 6 مساءً."
       : "Visit one of Majestic's three Riyadh showrooms and experience our premium office furniture collection in person. Open Sunday–Thursday, 9am–6pm.",
     alternates: {
-      canonical: `https://thedeskco.net/en/showrooms`,
+      canonical: `https://thedeskco.net/${locale}/showrooms`,
       languages: {
         en: "https://thedeskco.net/en/showrooms",
         ar: "https://thedeskco.net/ar/showrooms",

@@ -18,7 +18,7 @@ export async function generateMetadata({
       ? "انضم إلى فريق ماجيستيك للأثاث المكتبي في الرياض. استعرض الوظائف المتاحة وقدّم طلبك للانضمام إلى شركة رائدة في قطاع الأثاث المكتبي بالمملكة العربية السعودية."
       : "Join the Majestic Furniture team in Riyadh. Browse open positions and apply to work with Saudi Arabia's leading premium office furniture company.",
     alternates: {
-      canonical: `https://thedeskco.net/en/careers`,
+      canonical: `https://thedeskco.net/${locale}/careers`,
       languages: {
         en: "https://thedeskco.net/en/careers",
         ar: "https://thedeskco.net/ar/careers",

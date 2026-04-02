@@ -18,7 +18,7 @@ export async function generateMetadata({
       ? "استعرض مشاريع ماجيستيك في تأثيث المكاتب للشركات الكبرى، المستشفيات، الجامعات، والفنادق في المملكة العربية السعودية. 500+ مشروع منجز."
       : "Explore Majestic's completed furniture projects for major corporations, hospitals, universities, and hotels across Saudi Arabia. 500+ projects delivered.",
     alternates: {
-      canonical: `https://thedeskco.net/en/projects`,
+      canonical: `https://thedeskco.net/${locale}/projects`,
       languages: {
         en: "https://thedeskco.net/en/projects",
         ar: "https://thedeskco.net/ar/projects",

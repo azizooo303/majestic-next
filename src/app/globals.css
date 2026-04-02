@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'Alyamama';
+  src: url('/fonts/Alyamama-VariableFont_wght.woff2') format('woff2');
+  font-weight: 300 900;
+  font-display: swap;
+  font-style: normal;
+}
+
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
@@ -13,7 +21,7 @@
   --color-light: #fafafa;
   --color-white: #ffffff;
   --color-sage: #fafafa;
-  --color-gold: #0c0c0c;
+  --color-gold: #C1B167;
   --color-border: rgba(0,0,0,0.21);
   --color-sale: #e53e3e;
   --color-disabled: #E7E7E7;
@@ -115,10 +123,9 @@
     @apply font-sans;
   }
 
-  /* Arabic RTL: 10% larger text (scoped to text elements), zero letter-spacing */
-  [dir="rtl"] h1, [dir="rtl"] h2, [dir="rtl"] h3, [dir="rtl"] h4, [dir="rtl"] h5, [dir="rtl"] h6,
-  [dir="rtl"] p, [dir="rtl"] span, [dir="rtl"] a, [dir="rtl"] li, [dir="rtl"] label {
-    font-size: 110%;
+  /* Arabic: use Alyamama font, zero letter-spacing */
+  html[lang="ar"] {
+    font-family: 'Alyamama', sans-serif;
   }
   [dir="rtl"] * {
     letter-spacing: 0 !important;
@@ -151,4 +158,13 @@
 }
 .nav-underline:hover {
   background-size: 100% 1px;
+}
+[dir="rtl"] .nav-underline {
+  background-position: 100% 100%;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .btn-press, .btn-press:active { transform: none; transition: none; }
+  .nav-underline, .nav-underline:hover { transition: none; }
 }

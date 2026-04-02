@@ -17,7 +17,7 @@ export async function generateMetadata({
       ? "اكتشف مجموعة ماجيستيك من أفضل العلامات التجارية العالمية للأثاث المكتبي. نوفر أكثر من 50 علامة تجارية مختارة بعناية لتلبية أعلى معايير الجودة."
       : "Discover Majestic's curated selection of the world's leading office furniture brands. Over 50 premium labels chosen to meet the highest quality standards.",
     alternates: {
-      canonical: `https://thedeskco.net/en/brands`,
+      canonical: `https://thedeskco.net/${locale}/brands`,
       languages: {
         en: "https://thedeskco.net/en/brands",
         ar: "https://thedeskco.net/ar/brands",

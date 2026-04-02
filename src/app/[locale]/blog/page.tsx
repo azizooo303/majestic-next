@@ -19,7 +19,7 @@ export async function generateMetadata({
       ? "اكتشف أحدث الأفكار والنصائح حول تصميم بيئات العمل المكتبية، اتجاهات الأثاث، والإلهام للمساحات الاحترافية في المملكة العربية السعودية."
       : "Discover the latest ideas and tips on office workspace design, furniture trends, and inspiration for professional spaces across Saudi Arabia.",
     alternates: {
-      canonical: `https://thedeskco.net/en/blog`,
+      canonical: `https://thedeskco.net/${locale}/blog`,
       languages: {
         en: "https://thedeskco.net/en/blog",
         ar: "https://thedeskco.net/ar/blog",

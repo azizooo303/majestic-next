@@ -1,5 +1,31 @@
+import type { Metadata } from "next";
 import { Reveal } from "@/components/common/reveal";
 import { Link } from "@/i18n/navigation";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const isAr = locale === "ar";
+  return {
+    title: isAr
+      ? "العناية بالمنتجات والصيانة — ماجيستيك للأثاث"
+      : "Product Care & Maintenance — Majestic Furniture",
+    description: isAr
+      ? "أدلة العناية والصيانة لأثاث مكاتب ماجيستيك. حافظ على استثمارك في بيئة عملك."
+      : "Care and maintenance guides for Majestic office furniture. Keep your workspace investment in peak condition.",
+    alternates: {
+      canonical: `https://thedeskco.net/${locale}/product-care`,
+      languages: {
+        en: "/en/product-care",
+        ar: "/ar/product-care",
+        "x-default": "/en/product-care",
+      },
+    },
+  };
+}
 
 export default async function ProductCarePage({
   params,
