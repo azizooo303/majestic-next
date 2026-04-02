@@ -4,14 +4,14 @@
  */
 
 import type { SiteContent } from '@/config/content-schema'
+import { createClient } from '@vercel/edge-config'
 
-let edgeConfig: ReturnType<typeof import('@vercel/edge-config').createClient> | null = null
+type EdgeConfigClient = ReturnType<typeof createClient>
+let edgeConfig: EdgeConfigClient | null = null
 
-function getClient() {
+function getClient(): EdgeConfigClient | null {
   if (!process.env.EDGE_CONFIG) return null
   if (!edgeConfig) {
-    // Dynamic import to avoid build errors when EDGE_CONFIG is not set
-    const { createClient } = require('@vercel/edge-config')
     edgeConfig = createClient(process.env.EDGE_CONFIG)
   }
   return edgeConfig
