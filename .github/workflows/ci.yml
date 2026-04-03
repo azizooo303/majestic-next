@@ -7,7 +7,7 @@ on:
     branches: [main]
 
 env:
-  NODE_VERSION: '20'
+  NODE_VERSION: '22'
 
 jobs:
   # ── Job 1: Build & Lint ──────────────────────────────────────
@@ -25,7 +25,7 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       - name: Type check
         run: npm run type-check
