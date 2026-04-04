@@ -7,8 +7,10 @@
 import crypto from 'crypto'
 
 export function createAdminToken(password: string): string {
+  const secret = process.env.ADMIN_HMAC_SECRET
+  if (!secret) throw new Error('ADMIN_HMAC_SECRET env var is not set')
   return crypto
-    .createHmac('sha256', 'majestic-admin-2026')
+    .createHmac('sha256', secret)
     .update(password)
     .digest('hex')
 }

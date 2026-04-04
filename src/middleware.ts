@@ -6,10 +6,12 @@ import type { NextRequest } from 'next/server'
 const intlMiddleware = createMiddleware(routing)
 
 async function createAdminToken(password: string): Promise<string> {
+  const secret = process.env.ADMIN_HMAC_SECRET
+  if (!secret) throw new Error('ADMIN_HMAC_SECRET env var is not set')
   const encoder = new TextEncoder()
   const key = await globalThis.crypto.subtle.importKey(
     'raw',
-    encoder.encode('majestic-admin-2026'),
+    encoder.encode(secret),
     { name: 'HMAC', hash: 'SHA-256' },
     false,
     ['sign']
@@ -55,10 +57,23 @@ export default async function middleware(request: NextRequest) {
 
   // Skip intl for API routes
   if (pathname.startsWith('/api')) {
-    return NextResponse.next()
+    return withSecurityHeaders(NextResponse.next())
   }
 
-  return intlMiddleware(request)
+  return withSecurityHeaders(intlMiddleware(request))
+}
+
+function withSecurityHeaders(response: NextResponse): NextResponse {
+  response.headers.set('X-Content-Type-Options', 'nosniff')
+  response.headers.set('X-Frame-Options', 'DENY')
+  response.headers.set('X-XSS-Protection', '1; mode=block')
+  response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin')
+  response.headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=()')
+  response.headers.set(
+    'Strict-Transport-Security',
+    'max-age=63072000; includeSubDomains; preload'
+  )
+  return response
 }
 
 export const config = {
