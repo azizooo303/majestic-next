@@ -43,18 +43,18 @@ const PILLARS: Pillar[] = [
 
 export function BrandStandard({ isAr }: { isAr: boolean }) {
   return (
-    <section className="relative w-full bg-white,0.85)] py-16 md:py-24 overflow-hidden">
+    <section className="relative w-full bg-white py-16 md:py-24 overflow-hidden">
       <SectionArchOverlay variant="crosshair" color="rgba(255,255,255,1)" opacity={0.04} />
       <div className="max-w-screen-2xl mx-auto px-4 md:px-6 lg:px-8">
         <Reveal>
           <div className="mb-12 text-center">
-            <p className="text-xs uppercase tracking-widest text-[#aaaaaa] mb-3">
+            <p className="text-xs uppercase tracking-widest text-gray-500 mb-3">
               {isAr ? "معيار ماجيستيك" : "The Majestic Standard"}
             </p>
-            <h2 className="text-2xl md:text-3xl font-bold text-white tracking-tight">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 tracking-tight">
               {isAr ? "أسس عملنا" : "What We Are Built On"}
             </h2>
-            <p className="text-[#aaaaaa] text-sm mt-3">
+            <p className="text-gray-600 text-sm mt-3">
               {isAr ? "أربعة معايير تحكم كل مشروع نتولاه." : "Four commitments that define every project we take on."}
             </p>
           </div>
@@ -63,15 +63,15 @@ export function BrandStandard({ isAr }: { isAr: boolean }) {
         <StaggerGrid
           stagger={0.1}
           isRTL={isAr}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-[rgba(255,255,255,0.08)]"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"
         >
           {PILLARS.map((pillar) => (
-            <div key={pillar.number} className="bg-white,0.85)] p-8 md:p-10">
-              <p className="text-4xl font-bold text-[#C1B167] mb-5">{pillar.number}</p>
-              <h3 className="text-white font-bold text-base mb-3">
+            <div key={pillar.number} className="bg-white border border-gray-200 p-8 md:p-10">
+              <p className="text-4xl font-bold text-gray-800 mb-5">{pillar.number}</p>
+              <h3 className="text-gray-900 font-bold text-base mb-3">
                 {isAr ? pillar.headingAr : pillar.headingEn}
               </h3>
-              <p className="text-[#aaaaaa] text-sm leading-relaxed">
+              <p className="text-gray-600 text-sm leading-relaxed">
                 {isAr ? pillar.bodyAr : pillar.bodyEn}
               </p>
             </div>
