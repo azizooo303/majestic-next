@@ -118,7 +118,7 @@ export function HeroBanner({ slides, slide }: HeroBannerProps) {
   return (
     <section
       className={cn(
-        "relative w-full overflow-hidden bg-[#0c0c0c]",
+        "relative w-full overflow-hidden bg-white",
         "min-h-[100svh] md:min-h-[90vh]"
       )}
       style={{ minHeight: "640px" }}

@@ -34,7 +34,7 @@ export function TrackForm({ isAr }: TrackFormProps) {
   }
 
   const inputClass =
-    "w-full border border-[rgba(0,0,0,0.21)] rounded-sm px-4 py-3 text-sm text-[#0c0c0c] placeholder:text-[#999] focus:outline-none focus:border-[#0c0c0c] bg-white transition-colors";
+    "w-full border border-[rgba(0,0,0,0.21)] rounded-sm px-4 py-3 text-sm text-gray-900 placeholder:text-[#999] focus:outline-none focus:border-gray-900 bg-white transition-colors";
 
   if (submitted) {
     return (
@@ -56,10 +56,10 @@ export function TrackForm({ isAr }: TrackFormProps) {
         <div className="flex flex-col sm:flex-row gap-0 sm:gap-0" role="list" aria-label={isAr ? "حالة الطلب" : "Order status"}>
           {MOCK_STEPS.map((step, index) => {
             const bgClass = step.done
-              ? "bg-[#484848]"
+              ? "bg-gray-400"
               : step.active
-              ? "bg-[#0c0c0c]"
-              : "bg-[rgba(0,0,0,0.12)]";
+              ? "bg-gray-600"
+              : "bg-gray-200";
 
             return (
               <div
@@ -121,7 +121,7 @@ export function TrackForm({ isAr }: TrackFormProps) {
         <div>
           <label
             htmlFor="order-number"
-            className="block text-sm font-semibold text-[#0c0c0c] mb-1.5"
+            className="block text-sm font-semibold text-gray-900 mb-1.5"
           >
             {isAr ? "رقم الطلب" : "Order Number"}
           </label>
@@ -138,7 +138,7 @@ export function TrackForm({ isAr }: TrackFormProps) {
         <div>
           <label
             htmlFor="track-email"
-            className="block text-sm font-semibold text-[#0c0c0c] mb-1.5"
+            className="block text-sm font-semibold text-gray-900 mb-1.5"
           >
             {isAr ? "البريد الإلكتروني" : "Email Address"}
           </label>
@@ -161,8 +161,8 @@ export function TrackForm({ isAr }: TrackFormProps) {
 
         <button
           type="submit"
-          className="btn-press w-full bg-[#0c0c0c] text-white py-3.5 font-semibold text-sm
-            tracking-wide rounded-sm hover:bg-[#333] transition-colors"
+          className="btn-press w-full bg-white text-gray-900 border border-gray-900 py-3.5 font-semibold text-sm
+            tracking-wide rounded-sm hover:opacity-80 transition-opacity"
         >
           {isAr ? "تتبع الطلب" : "Track Order"}
         </button>
