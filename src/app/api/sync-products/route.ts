@@ -28,7 +28,9 @@ export async function GET(req: NextRequest) {
 
   try {
     const result = await syncProducts();
-    return NextResponse.json({ ok: true, ...result });
+    const res = NextResponse.json({ ok: true, ...result });
+    res.headers.set("Cache-Control", "no-store");
+    return res;
   } catch (err) {
     const message = err instanceof Error ? err.message : "Unknown error";
     console.error("[/api/sync-products]", message);

@@ -1,6 +1,11 @@
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
+import { z } from 'zod'
 import { createAdminToken } from '@/lib/admin-auth'
+
+const LoginSchema = z.object({
+  password: z.string().min(1).max(256),
+})
 
 // Simple in-memory rate limiter: max 5 attempts per IP per 15 minutes
 const attempts = new Map<string, { count: number; resetAt: number }>()
@@ -24,7 +29,12 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'Too many attempts. Try again later.' }, { status: 429 })
   }
 
-  const { password } = await request.json()
+  const body = await request.json().catch(() => null)
+  const parsed = LoginSchema.safeParse(body)
+  if (!parsed.success) {
+    return NextResponse.json({ error: 'Invalid request' }, { status: 400 })
+  }
+  const { password } = parsed.data
 
   const adminPassword = process.env.ADMIN_PASSWORD
   if (!adminPassword) {
@@ -38,6 +48,7 @@ export async function POST(request: NextRequest) {
   const token = createAdminToken(adminPassword)
 
   const response = NextResponse.json({ ok: true })
+  response.headers.set('Cache-Control', 'no-store')
   response.cookies.set('majestic_admin', token, {
     httpOnly: true,
     secure: process.env.NODE_ENV === 'production',
