@@ -21,7 +21,7 @@
   --color-foreground: #000000;
   --color-card: #ffffff;
   --color-card-foreground: #000000;
-  --color-border: #000000;
+  --color-border: rgba(0,0,0,0.12);
   
   /* Radius */
   --radius-sm: 2px;
@@ -51,8 +51,8 @@
   --accent: #000000;
   --accent-foreground: #ffffff;
   --destructive: #DC2626;
-  --border: #000000;
-  --input: #000000;
+  --border: rgba(0,0,0,0.12);
+  --input: rgba(0,0,0,0.12);
   --ring: #000000;
   --chart-1: #000000;
   --chart-2: #333333;
@@ -114,11 +114,10 @@
   }
   
   button {
-    @apply bg-white text-black px-8 py-3 border border-black transition;
+    @apply bg-transparent transition;
   }
-  
+
   button:hover {
-    @apply bg-white text-black border-black;
     opacity: 0.8;
   }
   
