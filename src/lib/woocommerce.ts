@@ -5,9 +5,10 @@
  * This module runs server-side only (API routes, Server Components, Server Actions).
  */
 
-const WC_URL = process.env.WC_URL || "https://lightyellow-mallard-240169.hostingersite.com";
-const WC_KEY = process.env.WC_CONSUMER_KEY || "";
-const WC_SECRET = process.env.WC_CONSUMER_SECRET || "";
+const WC_URL = process.env.WC_URL || "https://thedeskco.net";
+// Supports both WC consumer key/secret AND WordPress app password
+const WC_KEY = process.env.WC_CONSUMER_KEY || process.env.WP_USER || "";
+const WC_SECRET = process.env.WC_CONSUMER_SECRET || process.env.WP_APP_PASSWORD || "";
 
 
 interface WCRequestOptions {
