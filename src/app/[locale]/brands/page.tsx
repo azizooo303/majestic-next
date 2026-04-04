@@ -62,7 +62,7 @@ export default async function BrandsPage({
   const brandItems = BRANDS.map((brand) => (
     <div
       key={brand}
-      className="border border-[rgba(0,0,0,0.21)] rounded-sm p-8 flex items-center justify-center hover:bg-[#fafafa] transition-colors cursor-default min-h-[100px]"
+      className="border border-[rgba(0,0,0,0.21)] rounded-sm p-8 flex items-center justify-center hover:bg-white transition-colors cursor-default min-h-[100px]"
     >
       <span className="font-bold text-[#0c0c0c] text-sm md:text-base text-center leading-snug">
         {brand}
@@ -73,7 +73,7 @@ export default async function BrandsPage({
   return (
     <PageWrapper id="main-content" className="flex-1 bg-white">
       {/* Hero */}
-      <section className="bg-[#fafafa] border-b border-[rgba(0,0,0,0.08)] py-12 md:py-16">
+      <section className="bg-white border-b border-[rgba(0,0,0,0.08)] py-12 md:py-16">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
           <p className="text-xs uppercase tracking-widest text-[#484848] mb-3">
             <Link href="/" className="hover:text-[#0c0c0c] transition-colors">
@@ -116,7 +116,7 @@ export default async function BrandsPage({
       </section>
 
       {/* B2B CTA */}
-      <section className="bg-[#fafafa] border-t border-[rgba(0,0,0,0.08)] py-16">
+      <section className="bg-white border-t border-[rgba(0,0,0,0.08)] py-16">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
           <Reveal>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
@@ -133,7 +133,7 @@ export default async function BrandsPage({
               <div className={`flex ${isAr ? "md:justify-start" : "md:justify-end"}`}>
                 <Link
                   href="/contact"
-                  className="btn-press inline-block bg-[#0c0c0c] text-white px-10 py-3.5 font-semibold text-sm tracking-wide rounded-sm hover:bg-[#333] transition-colors"
+                  className="btn-press inline-block bg-white text-white px-10 py-3.5 font-semibold text-sm tracking-wide rounded-sm hover:bg-[#333] transition-colors"
                 >
                   {isAr ? "طلب عرض سعر" : "Request a Quote"}
                 </Link>

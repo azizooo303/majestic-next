@@ -182,7 +182,7 @@ export default async function ProjectsPage({
   return (
     <PageWrapper id="main-content" className="flex-1 bg-white">
       {/* Hero */}
-      <section className="bg-[#fafafa] border-b border-[rgba(0,0,0,0.08)] py-12 md:py-16">
+      <section className="bg-white border-b border-[rgba(0,0,0,0.08)] py-12 md:py-16">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
           <p className="text-xs uppercase tracking-widest text-[#484848] mb-3">
             <Link href="/" className="hover:text-[#0c0c0c] transition-colors">
@@ -211,7 +211,7 @@ export default async function ProjectsPage({
                   key={f.value}
                   className={`px-4 py-2 text-sm font-medium rounded-sm border transition-colors ${
                     i === 0
-                      ? "bg-[#0c0c0c] text-white border-[#0c0c0c]"
+                      ? "bg-white text-white border-[#0c0c0c]"
                       : "bg-white text-[#484848] border-[rgba(0,0,0,0.21)] hover:border-[#0c0c0c] hover:text-[#0c0c0c]"
                   }`}
                 >
@@ -240,7 +240,7 @@ export default async function ProjectsPage({
               </p>
               <Link
                 href="/contact"
-                className="btn-press inline-block bg-[#0c0c0c] text-white px-10 py-3.5 font-semibold text-sm tracking-wide rounded-sm hover:bg-[#333] transition-colors"
+                className="btn-press inline-block bg-white text-white px-10 py-3.5 font-semibold text-sm tracking-wide rounded-sm hover:bg-[#333] transition-colors"
               >
                 {isAr ? "ابدأ مشروعك معنا" : "Start a Project"}
               </Link>

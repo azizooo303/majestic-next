@@ -53,7 +53,7 @@ export default async function AccountPage({
                 text-[#0c0c0c] placeholder:text-[#484848]/60 focus:outline-none focus:border-[#0c0c0c]"
             />
             <button
-              className="w-full bg-[#0c0c0c] text-white py-3 text-sm font-semibold rounded-sm
+              className="w-full bg-white text-white py-3 text-sm font-semibold rounded-sm
                 hover:bg-[#333] transition-colors"
             >
               {isAr ? "دخول" : "Sign In"}

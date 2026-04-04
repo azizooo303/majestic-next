@@ -97,7 +97,7 @@ export default async function ShowroomsPage({
         />
         {/* Coming soon overlay */}
         {s.comingSoon && (
-          <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+          <div className="absolute inset-0 bg-white flex items-center justify-center">
             <span className="text-white font-bold text-lg tracking-wide uppercase">
               {isAr ? "قريباً" : "Coming Soon"}
             </span>
@@ -124,7 +124,7 @@ export default async function ShowroomsPage({
         {!s.comingSoon && (
           <a
             href="#"
-            className="btn-press inline-block border border-[#0c0c0c] text-[#0c0c0c] px-5 py-2.5 text-sm font-semibold rounded-sm hover:bg-[#0c0c0c] hover:text-white transition-colors"
+            className="btn-press inline-block border border-[#0c0c0c] text-[#0c0c0c] px-5 py-2.5 text-sm font-semibold rounded-sm hover:bg-white hover:text-white transition-colors"
             aria-label={isAr ? `الحصول على الاتجاهات — ${s.name}` : `Get directions — ${s.name}`}
           >
             {isAr ? "الحصول على الاتجاهات" : "Get Directions"}
@@ -137,7 +137,7 @@ export default async function ShowroomsPage({
   return (
     <PageWrapper id="main-content" className="flex-1 bg-white">
       {/* Hero */}
-      <section className="bg-[#fafafa] border-b border-[rgba(0,0,0,0.08)] py-12 md:py-16">
+      <section className="bg-white border-b border-[rgba(0,0,0,0.08)] py-12 md:py-16">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
           <p className="text-xs uppercase tracking-widest text-[#484848] mb-3">
             <Link href="/" className="hover:text-[#0c0c0c] transition-colors">
@@ -173,7 +173,7 @@ export default async function ShowroomsPage({
       </section>
 
       {/* Contact strip */}
-      <section className="bg-[#fafafa] border-t border-[rgba(0,0,0,0.08)] py-12">
+      <section className="bg-white border-t border-[rgba(0,0,0,0.08)] py-12">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8 text-center">
           <Reveal>
             <p className="text-[#484848] text-sm mb-4">

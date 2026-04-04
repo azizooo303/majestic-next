@@ -78,7 +78,7 @@ export default async function DeliveryPage({
   return (
     <main className="flex-1 pt-20 bg-white">
       {/* Hero */}
-      <section className="bg-[#fafafa] border-b border-[rgba(0,0,0,0.08)] py-12 md:py-16">
+      <section className="bg-white border-b border-[rgba(0,0,0,0.08)] py-12 md:py-16">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
           <p className="text-xs uppercase tracking-widest text-[#484848] mb-3">
             <Link href="/" className="hover:text-[#0c0c0c] transition-colors">
@@ -110,7 +110,7 @@ export default async function DeliveryPage({
                     className="w-10 h-10 rounded-full border border-[rgba(0,0,0,0.21)] flex items-center justify-center"
                     aria-hidden="true"
                   >
-                    <span className="w-3 h-3 rounded-full bg-[#0c0c0c] inline-block" />
+                    <span className="w-3 h-3 rounded-full bg-white inline-block" />
                   </div>
                   <h3 className="text-lg font-bold text-[#0c0c0c]">{zone.title}</h3>
                   <p className="text-[#484848] text-sm leading-relaxed">{zone.days}</p>
@@ -123,7 +123,7 @@ export default async function DeliveryPage({
       </section>
 
       {/* Section 2 — Delivery Process */}
-      <section className="py-12 bg-[#fafafa] border-y border-[rgba(0,0,0,0.08)]">
+      <section className="py-12 bg-white border-y border-[rgba(0,0,0,0.08)]">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
           <Reveal>
             <h2 className="text-2xl md:text-3xl font-bold text-[#0c0c0c] tracking-tight mb-10">
@@ -140,7 +140,7 @@ export default async function DeliveryPage({
                   <div className="flex flex-col md:flex-row items-center flex-1">
                     {/* Step number */}
                     <div className="flex flex-col items-center">
-                      <div className="w-9 h-9 rounded-full bg-[#0c0c0c] text-white flex items-center justify-center text-sm font-bold flex-shrink-0">
+                      <div className="w-9 h-9 rounded-full bg-white text-white flex items-center justify-center text-sm font-bold flex-shrink-0">
                         {index + 1}
                       </div>
                       <p className="text-xs font-medium text-[#0c0c0c] text-center mt-2 max-w-[80px] md:hidden">
@@ -211,14 +211,14 @@ export default async function DeliveryPage({
 
       {/* Section 4 — CTA */}
       <Reveal>
-        <section className="py-12 bg-[#fafafa] border-t border-[rgba(0,0,0,0.08)]">
+        <section className="py-12 bg-white border-t border-[rgba(0,0,0,0.08)]">
           <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8 text-center">
             <p className="text-lg font-semibold text-[#0c0c0c] mb-4">
               {isAr ? "هل لديك استفسار؟" : "Have a question?"}
             </p>
             <Link
               href="/contact"
-              className="btn-press inline-block bg-[#0c0c0c] text-white px-10 py-3.5 font-semibold
+              className="btn-press inline-block bg-white text-white px-10 py-3.5 font-semibold
                 text-sm tracking-wide rounded-sm hover:bg-[#333] transition-colors"
             >
               {isAr ? "تواصل معنا" : "Contact Us"}

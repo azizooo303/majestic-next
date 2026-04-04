@@ -93,7 +93,7 @@ export default async function BlogPage({
       key={post.slug}
       className="border border-[rgba(0,0,0,0.21)] rounded-sm overflow-hidden group"
     >
-      <div className="relative aspect-[16/9] overflow-hidden bg-[#fafafa]">
+      <div className="relative aspect-[16/9] overflow-hidden bg-white">
         <div className="w-full h-full bg-[#e5e7eb]" aria-hidden="true" />
       </div>
       <div className="p-6">
@@ -122,7 +122,7 @@ export default async function BlogPage({
   return (
     <PageWrapper id="main-content" className="flex-1 bg-white">
       {/* Hero */}
-      <section className="bg-[#fafafa] border-b border-[rgba(0,0,0,0.08)] py-12 md:py-16">
+      <section className="bg-white border-b border-[rgba(0,0,0,0.08)] py-12 md:py-16">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
           <p className="text-xs uppercase tracking-widest text-[#484848] mb-3">
             <Link href="/" className="hover:text-[#0c0c0c] transition-colors">

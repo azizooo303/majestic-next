@@ -52,7 +52,7 @@ export default async function DammamPage({
   return (
     <PageWrapper id="main-content" className="flex-1 bg-white">
       {/* Hero band */}
-      <section className="bg-[#0c0c0c] py-20 md:py-28">
+      <section className="bg-white py-20 md:py-28">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
           <Reveal>
             <p className="text-xs uppercase tracking-widest text-[#aaaaaa] mb-4">
@@ -91,7 +91,7 @@ export default async function DammamPage({
       </section>
 
       {/* Stats */}
-      <section className="bg-[#fafafa] border-y border-[rgba(0,0,0,0.08)] py-16">
+      <section className="bg-white border-y border-[rgba(0,0,0,0.08)] py-16">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
           <Reveal>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
@@ -111,7 +111,7 @@ export default async function DammamPage({
       <SpaceTypology isAr={isAr} />
 
       {/* CTA band */}
-      <section className="bg-[#0c0c0c] py-16 md:py-20">
+      <section className="bg-white py-16 md:py-20">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
           <Reveal>
             <div className={`flex flex-col md:flex-row items-center justify-between gap-8 ${isAr ? "md:flex-row-reverse" : ""}`}>
@@ -128,7 +128,7 @@ export default async function DammamPage({
               <div className={`flex flex-col sm:flex-row gap-4 ${isAr ? "sm:flex-row-reverse" : ""}`}>
                 <Link
                   href="/about"
-                  className="btn-press inline-block bg-white text-[#0c0c0c] px-8 py-3.5 font-semibold text-sm tracking-wide rounded-sm hover:bg-[#fafafa] transition-colors text-center"
+                  className="btn-press inline-block bg-white text-[#0c0c0c] px-8 py-3.5 font-semibold text-sm tracking-wide rounded-sm hover:bg-white transition-colors text-center"
                 >
                   {isAr ? "احجز استشارة" : "Book a Consultation"}
                 </Link>

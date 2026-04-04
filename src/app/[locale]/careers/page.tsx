@@ -70,7 +70,7 @@ export default async function CareersPage({
   return (
     <PageWrapper id="main-content" className="flex-1 bg-white">
       {/* Hero */}
-      <section className="bg-[#fafafa] border-b border-[rgba(0,0,0,0.08)] py-12 md:py-16">
+      <section className="bg-white border-b border-[rgba(0,0,0,0.08)] py-12 md:py-16">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
           <p className="text-xs uppercase tracking-widest text-[#484848] mb-3">
             <Link href="/" className="hover:text-[#0c0c0c] transition-colors">
@@ -111,7 +111,7 @@ export default async function CareersPage({
           <div className="space-y-3">
             {openings.map((job) => (
               <Reveal key={job.title}>
-                <div className="border border-[rgba(0,0,0,0.21)] rounded-sm p-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4 hover:bg-[#fafafa] transition-colors">
+                <div className="border border-[rgba(0,0,0,0.21)] rounded-sm p-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4 hover:bg-white transition-colors">
                   <div>
                     <h3 className="font-bold text-[#0c0c0c] text-base mb-1">
                       {job.title}
@@ -122,7 +122,7 @@ export default async function CareersPage({
                   </div>
                   <Link
                     href="/contact"
-                    className="btn-press shrink-0 inline-block border border-[#0c0c0c] text-[#0c0c0c] px-5 py-2.5 text-sm font-semibold rounded-sm hover:bg-[#0c0c0c] hover:text-white transition-colors whitespace-nowrap"
+                    className="btn-press shrink-0 inline-block border border-[#0c0c0c] text-[#0c0c0c] px-5 py-2.5 text-sm font-semibold rounded-sm hover:bg-white hover:text-white transition-colors whitespace-nowrap"
                   >
                     {isAr ? "تقديم الطلب" : "Apply Now"}
                   </Link>
@@ -144,7 +144,7 @@ export default async function CareersPage({
               </p>
               <Link
                 href="/contact"
-                className="btn-press inline-block bg-[#0c0c0c] text-white px-8 py-3 font-semibold text-sm tracking-wide rounded-sm hover:bg-[#333] transition-colors"
+                className="btn-press inline-block bg-white text-white px-8 py-3 font-semibold text-sm tracking-wide rounded-sm hover:bg-[#333] transition-colors"
               >
                 {isAr ? "تواصل معنا" : "Get in Touch"}
               </Link>

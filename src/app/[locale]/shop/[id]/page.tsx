@@ -191,14 +191,14 @@ export default async function ProductDetailPage({
               <div className="space-y-3">
                 <QuantitySelector isAr={isAr} />
                 <button
-                  className="btn-press w-full bg-[#0c0c0c] text-white py-4 font-semibold
+                  className="btn-press w-full bg-white text-white py-4 font-semibold
                     rounded-sm hover:bg-[#333] transition-colors cursor-pointer text-sm"
                 >
                   {isAr ? "أضف إلى السلة" : "Add to Cart"}
                 </button>
                 <button
                   className="btn-press w-full border border-[#0c0c0c] text-[#0c0c0c] py-4
-                    font-semibold rounded-sm hover:bg-[#fafafa] transition-colors cursor-pointer text-sm"
+                    font-semibold rounded-sm hover:bg-white transition-colors cursor-pointer text-sm"
                 >
                   {isAr ? "طلب عرض سعر" : "Request a Quote"}
                 </button>

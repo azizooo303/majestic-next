@@ -81,7 +81,7 @@ export default function AdminLoginPage() {
             <button
               type="submit"
               disabled={loading || !password}
-              className="w-full h-11 bg-[#0c0c0c] text-white text-sm font-medium tracking-wide hover:bg-[#2c2c2c] disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+              className="w-full h-11 bg-white text-white text-sm font-medium tracking-wide hover:bg-[#2c2c2c] disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
             >
               {loading ? 'Signing in…' : 'Sign In →'}
             </button>

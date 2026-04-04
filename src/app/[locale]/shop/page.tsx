@@ -214,7 +214,7 @@ export default async function ShopPage({
 
             {/* Quotation CTA banner */}
             <Reveal>
-              <div className="flex items-center justify-between gap-4 bg-[#0c0c0c] px-5 rounded-sm mb-5 min-h-[56px]">
+              <div className="flex items-center justify-between gap-4 bg-white px-5 rounded-sm mb-5 min-h-[56px]">
                 <p className="text-white text-xs font-medium">
                   {isAr ? "تحتاج أثاثاً مكتبياً لفريقك؟" : "Need office furniture for your team?"}
                 </p>
@@ -287,7 +287,7 @@ export default async function ShopPage({
                         className={`inline-flex items-center justify-center min-w-[32px] h-8 px-2
                           text-xs font-medium rounded-sm border transition-colors ${
                           p === page
-                            ? "bg-[#0c0c0c] text-white border-[#0c0c0c]"
+                            ? "bg-white text-white border-[#0c0c0c]"
                             : "border-[rgba(0,0,0,0.21)] text-[#484848] hover:border-[#0c0c0c] hover:text-[#0c0c0c]"
                         }`}
                       >

@@ -83,7 +83,7 @@ function Toggle({
     <label className="flex items-center gap-3 cursor-pointer select-none">
       <div
         onClick={() => onChange(!checked)}
-        className={`relative w-10 h-5 rounded-full transition-colors ${checked ? 'bg-[#0c0c0c]' : 'bg-[#ddd]'}`}
+        className={`relative w-10 h-5 rounded-full transition-colors ${checked ? 'bg-white' : 'bg-[#ddd]'}`}
       >
         <div
           className={`absolute top-0.5 w-4 h-4 rounded-full bg-white shadow transition-transform ${checked ? 'translate-x-5' : 'translate-x-0.5'}`}
@@ -236,7 +236,7 @@ function HeroTab({
             onClick={() => setActive(i)}
             className={`px-4 py-1.5 text-xs font-medium border transition-colors ${
               active === i
-                ? 'bg-[#0c0c0c] text-white border-[#0c0c0c]'
+                ? 'bg-white text-white border-[#0c0c0c]'
                 : 'bg-white text-[#484848] border-[rgba(0,0,0,0.12)] hover:border-[#0c0c0c]'
             }`}
           >
@@ -383,7 +383,7 @@ export default function AdminDashboard() {
           <button
             onClick={handleSave}
             disabled={saving}
-            className="text-xs px-4 py-1.5 bg-[#0c0c0c] text-white hover:bg-[#2c2c2c] disabled:opacity-50 transition-colors font-medium"
+            className="text-xs px-4 py-1.5 bg-white text-white hover:bg-[#2c2c2c] disabled:opacity-50 transition-colors font-medium"
           >
             {saving ? 'Saving…' : 'Save changes'}
           </button>
@@ -618,7 +618,7 @@ export default function AdminDashboard() {
                       onClick={() => setContent({ ...content, fontScale: scale })}
                       className={`px-4 py-1.5 text-sm border transition-colors ${
                         content.fontScale === scale
-                          ? 'bg-[#0c0c0c] text-white border-[#0c0c0c]'
+                          ? 'bg-white text-white border-[#0c0c0c]'
                           : 'bg-white text-[#484848] border-[rgba(0,0,0,0.12)]'
                       }`}
                     >

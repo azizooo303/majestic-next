@@ -80,7 +80,7 @@ export default async function WarrantyPage({
   return (
     <main className="flex-1 pt-20 bg-white">
       {/* Hero */}
-      <section className="bg-[#fafafa] border-b border-[rgba(0,0,0,0.08)] py-12 md:py-16">
+      <section className="bg-white border-b border-[rgba(0,0,0,0.08)] py-12 md:py-16">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
           <p className="text-xs uppercase tracking-widest text-[#484848] mb-3">
             <Link href="/" className="hover:text-[#0c0c0c] transition-colors">
@@ -127,7 +127,7 @@ export default async function WarrantyPage({
                     <tr
                       key={row.type}
                       className={`border-b border-[rgba(0,0,0,0.08)] ${
-                        index % 2 === 1 ? "bg-[#fafafa]" : "bg-white"
+                        index % 2 === 1 ? "bg-white" : "bg-white"
                       }`}
                     >
                       <td className="py-3 px-4 text-[#0c0c0c] font-medium">{row.type}</td>
@@ -143,7 +143,7 @@ export default async function WarrantyPage({
       </section>
 
       {/* Section 2 — Not Covered */}
-      <section className="py-12 bg-[#fafafa] border-y border-[rgba(0,0,0,0.08)]">
+      <section className="py-12 bg-white border-y border-[rgba(0,0,0,0.08)]">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
           <div className="max-w-2xl">
             <Reveal>
@@ -192,14 +192,14 @@ export default async function WarrantyPage({
 
       {/* Section 4 — CTA */}
       <Reveal>
-        <section className="py-12 bg-[#fafafa] border-t border-[rgba(0,0,0,0.08)]">
+        <section className="py-12 bg-white border-t border-[rgba(0,0,0,0.08)]">
           <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8 text-center">
             <p className="text-lg font-semibold text-[#0c0c0c] mb-4">
               {isAr ? "سجّل منتجك الآن" : "Register your product"}
             </p>
             <Link
               href="/contact"
-              className="btn-press inline-block bg-[#0c0c0c] text-white px-10 py-3.5 font-semibold
+              className="btn-press inline-block bg-white text-white px-10 py-3.5 font-semibold
                 text-sm tracking-wide rounded-sm hover:bg-[#333] transition-colors"
             >
               {isAr ? "تسجيل المنتج" : "Register Now"}

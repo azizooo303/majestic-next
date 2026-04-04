@@ -102,7 +102,7 @@ export default async function HomePage({
       href={`/shop?category=${cat.slug}`}
       className="flex flex-col items-center gap-2 min-w-[72px] group"
     >
-      <div className="w-16 h-16 bg-[#fafafa] border border-[rgba(0,0,0,0.12)] overflow-hidden rounded-sm">
+      <div className="w-16 h-16 bg-white border border-[rgba(0,0,0,0.12)] overflow-hidden rounded-sm">
         <Image
           src={cat.image}
           alt={t(`categories.${cat.key}`)}
@@ -210,7 +210,7 @@ export default async function HomePage({
             <div className="text-center mt-10">
               <Link
                 href="/shop"
-                className="btn-press inline-block bg-[#0c0c0c] text-white px-10 py-3.5 font-semibold
+                className="btn-press inline-block bg-white text-white px-10 py-3.5 font-semibold
                   text-sm tracking-wide rounded-sm hover:bg-[#333] transition-colors"
               >
                 {isAr ? "تسوق جميع المنتجات" : "Shop All Products"}

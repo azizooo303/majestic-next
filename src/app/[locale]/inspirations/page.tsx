@@ -40,7 +40,7 @@ export default async function InspirationsPage({
           </p>
           <Link
             href="/projects"
-            className="inline-block bg-[#0c0c0c] text-white px-8 py-3 text-sm font-semibold
+            className="inline-block bg-white text-white px-8 py-3 text-sm font-semibold
               rounded-sm hover:bg-[#333] transition-colors"
           >
             {isAr ? "تصفح مشاريعنا" : "Browse Our Projects"}

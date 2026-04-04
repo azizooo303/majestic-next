@@ -117,7 +117,7 @@ export default async function FaqPage({
     <PageWrapper id="main-content" className="flex-1 bg-white">
       <FaqPageJsonLd faqs={faqSchemaItems} />
       {/* Hero */}
-      <section className="bg-[#fafafa] border-b border-[rgba(0,0,0,0.08)] py-12 md:py-16">
+      <section className="bg-white border-b border-[rgba(0,0,0,0.08)] py-12 md:py-16">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
           <p className="text-xs uppercase tracking-widest text-[#484848] mb-3">
             <Link href="/" className="hover:text-[#0c0c0c] transition-colors">
@@ -173,7 +173,7 @@ export default async function FaqPage({
                   aria-selected={i === 0}
                   className={`px-4 py-2 text-sm font-medium rounded-sm border transition-colors ${
                     i === 0
-                      ? "bg-[#0c0c0c] text-white border-[#0c0c0c]"
+                      ? "bg-white text-white border-[#0c0c0c]"
                       : "bg-white text-[#484848] border-[rgba(0,0,0,0.21)] hover:border-[#0c0c0c] hover:text-[#0c0c0c]"
                   }`}
                 >
@@ -191,12 +191,12 @@ export default async function FaqPage({
                   className="group border border-[rgba(0,0,0,0.21)] rounded-sm overflow-hidden"
                   open={i === 0}
                 >
-                  <summary className="flex items-center justify-between px-6 py-4 cursor-pointer list-none select-none hover:bg-[#fafafa] transition-colors">
+                  <summary className="flex items-center justify-between px-6 py-4 cursor-pointer list-none select-none hover:bg-white transition-colors">
                     <span className="font-semibold text-[#0c0c0c] text-sm md:text-base pr-4">
                       {faq.q}
                     </span>
                     <span
-                      className="flex-shrink-0 w-6 h-6 border border-[rgba(0,0,0,0.21)] rounded-sm flex items-center justify-center text-xs font-bold text-[#484848] group-open:bg-[#0c0c0c] group-open:text-white group-open:border-[#0c0c0c] transition-colors"
+                      className="flex-shrink-0 w-6 h-6 border border-[rgba(0,0,0,0.21)] rounded-sm flex items-center justify-center text-xs font-bold text-[#484848] group-open:bg-white group-open:text-white group-open:border-[#0c0c0c] transition-colors"
                       aria-hidden="true"
                     >
                       +
@@ -223,7 +223,7 @@ export default async function FaqPage({
               </p>
               <Link
                 href="/contact"
-                className="btn-press inline-block bg-[#0c0c0c] text-white px-8 py-3 font-semibold text-sm tracking-wide rounded-sm hover:bg-[#333] transition-colors"
+                className="btn-press inline-block bg-white text-white px-8 py-3 font-semibold text-sm tracking-wide rounded-sm hover:bg-[#333] transition-colors"
               >
                 {isAr ? "تواصل معنا" : "Contact Us"}
               </Link>
