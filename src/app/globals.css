@@ -72,7 +72,7 @@
 
 @layer base {
   * {
-    @apply outline-ring/50;
+    box-sizing: border-box;
   }
   
   body {

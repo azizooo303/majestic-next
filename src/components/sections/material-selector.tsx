@@ -29,7 +29,7 @@ export function MaterialSelector({ isAr }: { isAr: boolean }) {
   const current = FINISHES.find((f) => f.key === selected)!;
 
   return (
-    <section className="w-full bg-[rgba(247,247,245,0.88)] py-14 md:py-20">
+    <section className="w-full bg-white py-14 md:py-20">
       <div className="max-w-screen-2xl mx-auto px-4 md:px-6 lg:px-8">
         {/* Header */}
         <FadeUp>
