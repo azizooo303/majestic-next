@@ -120,13 +120,13 @@ export default async function FaqPage({
       <section className="bg-white border-b border-[rgba(0,0,0,0.08)] py-12 md:py-16">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
           <p className="text-xs uppercase tracking-widest text-[#484848] mb-3">
-            <Link href="/" className="hover:text-[#0c0c0c] transition-colors">
+            <Link href="/" className="hover:text-gray-900] transition-colors">
               {isAr ? "الرئيسية" : "Home"}
             </Link>
             <span className="mx-2">/</span>
             {isAr ? "الأسئلة الشائعة" : "FAQ"}
           </p>
-          <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-[#0c0c0c]">
+          <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900]">
             {isAr ? "الأسئلة الشائعة" : "Frequently Asked Questions"}
           </h1>
         </div>
@@ -151,7 +151,7 @@ export default async function FaqPage({
                 <input
                   type="search"
                   placeholder={isAr ? "ابحث في الأسئلة..." : "Search questions..."}
-                  className="border border-[rgba(0,0,0,0.21)] rounded-sm px-4 py-3 pl-10 w-full text-sm text-[#0c0c0c] placeholder:text-[#9ca3af] focus:outline-none focus:border-[#0c0c0c] transition-colors"
+                  className="border border-[rgba(0,0,0,0.21)] rounded-sm px-4 py-3 pl-10 w-full text-sm text-gray-900] placeholder:text-[#9ca3af] focus:outline-none focus:border-[#0c0c0c] transition-colors"
                   readOnly
                   aria-label={isAr ? "بحث في الأسئلة الشائعة" : "Search FAQ"}
                 />
@@ -174,7 +174,7 @@ export default async function FaqPage({
                   className={`px-4 py-2 text-sm font-medium rounded-sm border transition-colors ${
                     i === 0
                       ? "bg-white text-white border-[#0c0c0c]"
-                      : "bg-white text-[#484848] border-[rgba(0,0,0,0.21)] hover:border-[#0c0c0c] hover:text-[#0c0c0c]"
+                      : "bg-white text-[#484848] border-[rgba(0,0,0,0.21)] hover:border-[#0c0c0c] hover:text-gray-900]"
                   }`}
                 >
                   {cat}
@@ -192,7 +192,7 @@ export default async function FaqPage({
                   open={i === 0}
                 >
                   <summary className="flex items-center justify-between px-6 py-4 cursor-pointer list-none select-none hover:bg-white transition-colors">
-                    <span className="font-semibold text-[#0c0c0c] text-sm md:text-base pr-4">
+                    <span className="font-semibold text-gray-900] text-sm md:text-base pr-4">
                       {faq.q}
                     </span>
                     <span
@@ -213,7 +213,7 @@ export default async function FaqPage({
           {/* Bottom CTA */}
           <Reveal>
             <div className="mt-16 text-center border border-[rgba(0,0,0,0.21)] rounded-sm p-10">
-              <h3 className="text-xl font-bold text-[#0c0c0c] mb-3">
+              <h3 className="text-xl font-bold text-gray-900] mb-3">
                 {isAr ? "لم تجد إجابتك؟" : "Didn't find your answer?"}
               </h3>
               <p className="text-[#484848] text-sm mb-6 max-w-sm mx-auto leading-relaxed">

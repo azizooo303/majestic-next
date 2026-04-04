@@ -169,7 +169,7 @@ export default async function ProjectsPage({
 
       {/* Always-visible footer */}
       <div className="p-4 bg-white">
-        <h3 className="font-bold text-[#0c0c0c] text-sm truncate">
+        <h3 className="font-bold text-gray-900] text-sm truncate">
           {isAr ? project.nameAr : project.name}
         </h3>
         <p className="text-[#484848] text-xs mt-0.5">
@@ -185,13 +185,13 @@ export default async function ProjectsPage({
       <section className="bg-white border-b border-[rgba(0,0,0,0.08)] py-12 md:py-16">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
           <p className="text-xs uppercase tracking-widest text-[#484848] mb-3">
-            <Link href="/" className="hover:text-[#0c0c0c] transition-colors">
+            <Link href="/" className="hover:text-gray-900] transition-colors">
               {isAr ? "الرئيسية" : "Home"}
             </Link>
             <span className="mx-2">/</span>
             {isAr ? "مشاريعنا" : "Projects"}
           </p>
-          <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-[#0c0c0c]">
+          <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900]">
             {isAr ? "مشاريعنا" : "Our Projects"}
           </h1>
         </div>
@@ -212,7 +212,7 @@ export default async function ProjectsPage({
                   className={`px-4 py-2 text-sm font-medium rounded-sm border transition-colors ${
                     i === 0
                       ? "bg-white text-white border-[#0c0c0c]"
-                      : "bg-white text-[#484848] border-[rgba(0,0,0,0.21)] hover:border-[#0c0c0c] hover:text-[#0c0c0c]"
+                      : "bg-white text-[#484848] border-[rgba(0,0,0,0.21)] hover:border-[#0c0c0c] hover:text-gray-900]"
                   }`}
                 >
                   {f.label}

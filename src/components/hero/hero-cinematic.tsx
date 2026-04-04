@@ -154,7 +154,7 @@ function DesktopSlide({
       </div>
 
       {/* Dark gradient for text readability */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/20 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-r from-gray-600/50 via-gray-500/20 to-transparent" />
 
       {/* Text overlay */}
       <motion.div
@@ -179,7 +179,7 @@ function DesktopSlide({
           className="inline-flex items-center gap-2 mt-6 px-8 py-3.5 border-2 border-gold
             bg-gold/10 text-white font-medium tracking-wider uppercase text-sm
             rounded-sm transition-all duration-300
-            hover:bg-gold hover:text-primary
+            hover:bg-gold hover:text-gray-900
             focus:outline-none focus:ring-2 focus:ring-gold/50"
         >
           <span className="w-1.5 h-1.5 bg-gold rounded-full" />
@@ -269,7 +269,7 @@ function MobileHero({ slides }: { slides: HeroSlide[] }) {
           />
 
           {/* Gradient */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-gray-600/60 via-gray-500/20 to-transparent" />
 
           {/* Content */}
           <div className="absolute bottom-20 start-6 end-6 z-10">
@@ -286,7 +286,7 @@ function MobileHero({ slides }: { slides: HeroSlide[] }) {
               className="inline-flex items-center gap-2 mt-4 px-6 py-3 border-2 border-gold
                 bg-gold/10 text-white font-medium tracking-wider uppercase text-sm
                 rounded-sm transition-all duration-300
-                hover:bg-gold hover:text-primary"
+                hover:bg-gold hover:text-gray-900"
             >
               <span className="w-1.5 h-1.5 bg-gold rounded-full" />
               {slide.cta}

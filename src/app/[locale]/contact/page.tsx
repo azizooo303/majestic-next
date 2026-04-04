@@ -65,13 +65,13 @@ export default async function ContactPage({
       <section className="bg-white border-b border-[rgba(0,0,0,0.08)] py-12 md:py-16">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
           <p className="text-xs uppercase tracking-widest text-[#484848] mb-3">
-            <Link href="/" className="hover:text-[#0c0c0c] transition-colors">
+            <Link href="/" className="hover:text-gray-900] transition-colors">
               {isAr ? "الرئيسية" : "Home"}
             </Link>
             <span className="mx-2">/</span>
             {isAr ? "تواصل معنا" : "Contact Us"}
           </p>
-          <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-[#0c0c0c]">
+          <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900]">
             {isAr ? "تواصل معنا" : "Contact Us"}
           </h1>
         </div>
@@ -84,7 +84,7 @@ export default async function ContactPage({
             {/* Left: Form */}
             <Reveal>
               <div>
-                <h2 className="text-2xl md:text-3xl font-bold text-[#0c0c0c] tracking-tight mb-8">
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900] tracking-tight mb-8">
                   {isAr ? "أرسل لنا رسالة" : "Send Us a Message"}
                 </h2>
                 <ContactForm isAr={isAr} />
@@ -95,7 +95,7 @@ export default async function ContactPage({
             <Reveal>
               <div className="space-y-8">
                 <div>
-                  <h2 className="text-2xl md:text-3xl font-bold text-[#0c0c0c] tracking-tight mb-8">
+                  <h2 className="text-2xl md:text-3xl font-bold text-gray-900] tracking-tight mb-8">
                     {isAr ? "معلومات التواصل" : "Contact Information"}
                   </h2>
 
@@ -114,7 +114,7 @@ export default async function ContactPage({
                         <p className="text-xs uppercase tracking-wider font-semibold text-[#484848] mb-1">
                           {isAr ? "العنوان" : "Address"}
                         </p>
-                        <p className="text-[#0c0c0c] text-sm leading-relaxed">
+                        <p className="text-gray-900] text-sm leading-relaxed">
                           {isAr
                             ? "الرياض، المملكة العربية السعودية"
                             : "Riyadh, Saudi Arabia"}
@@ -133,7 +133,7 @@ export default async function ContactPage({
                         </p>
                         <a
                           href="tel:+966112345678"
-                          className="text-[#0c0c0c] text-sm hover:text-[#484848] transition-colors"
+                          className="text-gray-900] text-sm hover:text-[#484848] transition-colors"
                           dir="ltr"
                         >
                           +966 11 234 5678
@@ -152,7 +152,7 @@ export default async function ContactPage({
                         </p>
                         <a
                           href="mailto:info@majesticfurniture.sa"
-                          className="text-[#0c0c0c] text-sm hover:text-[#484848] transition-colors"
+                          className="text-gray-900] text-sm hover:text-[#484848] transition-colors"
                         >
                           info@majesticfurniture.sa
                         </a>
@@ -168,7 +168,7 @@ export default async function ContactPage({
                         <p className="text-xs uppercase tracking-wider font-semibold text-[#484848] mb-1">
                           {isAr ? "ساعات العمل" : "Hours"}
                         </p>
-                        <p className="text-[#0c0c0c] text-sm">
+                        <p className="text-gray-900] text-sm">
                           {isAr
                             ? "الأحد – الخميس: 9 صباحاً – 6 مساءً"
                             : "Sun – Thu: 9am – 6pm"}
@@ -188,7 +188,7 @@ export default async function ContactPage({
                       <Link
                         key={s.name}
                         href={s.href}
-                        className="flex items-center justify-between py-2.5 border-b border-[rgba(0,0,0,0.08)] text-sm text-[#0c0c0c] hover:text-[#484848] transition-colors group"
+                        className="flex items-center justify-between py-2.5 border-b border-[rgba(0,0,0,0.08)] text-sm text-gray-900] hover:text-[#484848] transition-colors group"
                       >
                         <span>{s.name}</span>
                         <span className="text-[#484848] group-hover:translate-x-1 transition-transform text-xs">

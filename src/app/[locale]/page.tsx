@@ -112,7 +112,7 @@ export default async function HomePage({
           className="object-cover w-full h-full group-hover:scale-[1.03] transition-transform duration-200"
         />
       </div>
-      <span className="text-xs font-medium text-[#0c0c0c] text-center whitespace-nowrap group-hover:text-[#484848]">
+      <span className="text-xs font-medium text-gray-900] text-center whitespace-nowrap group-hover:text-[#484848]">
         {t(`categories.${cat.key}`)}
       </span>
     </Link>
@@ -188,12 +188,12 @@ export default async function HomePage({
           <div className="max-w-screen-2xl mx-auto px-4 md:px-6 lg:px-8">
             <FadeUp>
               <div className="flex items-center justify-between mb-8">
-                <h2 className="text-2xl md:text-3xl font-bold text-[#0c0c0c] tracking-tight">
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900] tracking-tight">
                   {isAr ? "مختارات هذا الموسم" : "Selected for This Season"}
                 </h2>
                 <Link
                   href="/shop"
-                  className="text-sm font-medium text-[#484848] hover:text-[#0c0c0c] border-b border-[#484848] pb-0.5"
+                  className="text-sm font-medium text-[#484848] hover:text-gray-900] border-b border-[#484848] pb-0.5"
                 >
                   {isAr ? "عرض الكل" : t("common.viewAll")}
                 </Link>
@@ -268,7 +268,7 @@ export default async function HomePage({
       <FadeUp>
         <section className="border-t border-[rgba(0,0,0,0.08)] py-12 bg-[rgba(255,255,255,0.88)]">
           <div className="max-w-md mx-auto px-4 text-center">
-            <h2 className="text-xl font-semibold text-[#0c0c0c]">
+            <h2 className="text-xl font-semibold text-gray-900]">
               {isAr ? "ابقَ على اطلاع" : "Stay Informed"}
             </h2>
             <p className="text-[#484848] text-sm mt-2">
@@ -283,7 +283,7 @@ export default async function HomePage({
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#484848] hover:text-[#0c0c0c] text-sm transition-colors"
+                className="text-[#484848] hover:text-gray-900] text-sm transition-colors"
               >
                 Instagram
               </a>
@@ -291,7 +291,7 @@ export default async function HomePage({
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#484848] hover:text-[#0c0c0c] text-sm transition-colors"
+                className="text-[#484848] hover:text-gray-900] text-sm transition-colors"
               >
                 LinkedIn
               </a>
@@ -299,7 +299,7 @@ export default async function HomePage({
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#484848] hover:text-[#0c0c0c] text-sm transition-colors"
+                className="text-[#484848] hover:text-gray-900] text-sm transition-colors"
               >
                 Facebook
               </a>

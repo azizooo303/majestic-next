@@ -51,7 +51,7 @@ export default function AdminLoginPage() {
 
         {/* Card */}
         <div className="bg-white border border-[rgba(0,0,0,0.08)] p-8">
-          <h1 className="text-sm font-semibold uppercase tracking-widest text-[#0c0c0c] mb-1">
+          <h1 className="text-sm font-semibold uppercase tracking-widest text-gray-900] mb-1">
             Admin Panel
           </h1>
           <p className="text-xs text-[#888] mb-8">Majestic Furniture — Internal Access</p>
@@ -67,7 +67,7 @@ export default function AdminLoginPage() {
                 onChange={(e) => setPassword(e.target.value)}
                 required
                 autoFocus
-                className="w-full h-11 px-3 border border-[rgba(0,0,0,0.15)] bg-white text-sm text-[#0c0c0c] outline-none focus:border-[#0c0c0c] transition-colors"
+                className="w-full h-11 px-3 border border-[rgba(0,0,0,0.15)] bg-white text-sm text-gray-900] outline-none focus:border-[#0c0c0c] transition-colors"
                 placeholder="Enter admin password"
               />
             </div>

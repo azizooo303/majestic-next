@@ -157,13 +157,13 @@ export default async function TermsPage({
       <section className="bg-white border-b border-[rgba(0,0,0,0.08)] py-12 md:py-16">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
           <p className="text-xs uppercase tracking-widest text-[#484848] mb-3">
-            <Link href="/" className="hover:text-[#0c0c0c] transition-colors">
+            <Link href="/" className="hover:text-gray-900] transition-colors">
               {isAr ? "الرئيسية" : "Home"}
             </Link>
             {" / "}
             {isAr ? "شروط الخدمة" : "Terms of Service"}
           </p>
-          <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight text-[#0c0c0c]">
+          <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight text-gray-900]">
             {isAr ? "شروط الخدمة" : "Terms of Service"}
           </h1>
           <p className="text-[#484848] text-sm mt-3">
@@ -184,7 +184,7 @@ export default async function TermsPage({
                     : ""
                 }
               >
-                <h2 className="text-2xl md:text-3xl font-bold text-[#0c0c0c] tracking-tight mb-4">
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900] tracking-tight mb-4">
                   {section.heading}
                 </h2>
                 {section.paragraphs.map((p, i) => (

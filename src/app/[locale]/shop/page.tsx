@@ -159,20 +159,20 @@ export default async function ShopPage({
             aria-label={isAr ? "مسار التنقل" : "Breadcrumb"}
             className="flex items-center gap-1.5 text-xs text-[#484848] mb-6"
           >
-            <Link href="/" className="hover:text-[#0c0c0c] transition-colors">
+            <Link href="/" className="hover:text-gray-900] transition-colors">
               {isAr ? "الرئيسية" : "Home"}
             </Link>
             <ChevronRight size={12} className={isAr ? "rotate-180" : ""} aria-hidden="true" />
             {categoryLabel ? (
               <>
-                <Link href="/shop" className="hover:text-[#0c0c0c] transition-colors">
+                <Link href="/shop" className="hover:text-gray-900] transition-colors">
                   {isAr ? "جميع المنتجات" : "All Products"}
                 </Link>
                 <ChevronRight size={12} className={isAr ? "rotate-180" : ""} aria-hidden="true" />
-                <span className="text-[#0c0c0c] font-medium">{categoryLabel}</span>
+                <span className="text-gray-900] font-medium">{categoryLabel}</span>
               </>
             ) : (
-              <span className="text-[#0c0c0c] font-medium">
+              <span className="text-gray-900] font-medium">
                 {isAr ? "جميع المنتجات" : "All Products"}
               </span>
             )}
@@ -189,7 +189,7 @@ export default async function ShopPage({
 
             {/* Page title */}
             <Reveal>
-              <h1 className="text-2xl md:text-3xl font-bold text-[#0c0c0c] tracking-tight mb-5">
+              <h1 className="text-2xl md:text-3xl font-bold text-gray-900] tracking-tight mb-5">
                 {pageTitle}
               </h1>
             </Reveal>
@@ -221,7 +221,7 @@ export default async function ShopPage({
                 <Link
                   href="/quotation"
                   className="btn-press shrink-0 border border-white text-white text-xs font-semibold
-                  px-4 py-1.5 rounded-sm hover:bg-white hover:text-[#0c0c0c] transition-colors whitespace-nowrap"
+                  px-4 py-1.5 rounded-sm hover:bg-white hover:text-gray-900] transition-colors whitespace-nowrap"
                 >
                   {isAr ? "إنشاء عرض سعر" : "Create a Quotation"}
                 </Link>
@@ -242,7 +242,7 @@ export default async function ShopPage({
                 <p className="text-lg font-medium">
                   {isAr ? "لا توجد منتجات" : "No products found"}
                 </p>
-                <Link href="/shop" className="mt-4 inline-block text-sm underline underline-offset-2 hover:text-[#0c0c0c]">
+                <Link href="/shop" className="mt-4 inline-block text-sm underline underline-offset-2 hover:text-gray-900]">
                   {isAr ? "عرض الكل" : "View all products"}
                 </Link>
               </div>
@@ -261,7 +261,7 @@ export default async function ShopPage({
                       href={pageHref(page - 1)}
                       className="inline-flex items-center justify-center gap-1 min-w-[32px] h-8 px-3
                         text-xs font-medium rounded-sm border border-[rgba(0,0,0,0.21)]
-                        text-[#484848] hover:border-[#0c0c0c] hover:text-[#0c0c0c] transition-colors"
+                        text-[#484848] hover:border-[#0c0c0c] hover:text-gray-900] transition-colors"
                     >
                       {isAr ? <ChevronRight size={12} /> : <ChevronLeft size={12} />}
                       {isAr ? "السابق" : "Prev"}
@@ -288,7 +288,7 @@ export default async function ShopPage({
                           text-xs font-medium rounded-sm border transition-colors ${
                           p === page
                             ? "bg-white text-white border-[#0c0c0c]"
-                            : "border-[rgba(0,0,0,0.21)] text-[#484848] hover:border-[#0c0c0c] hover:text-[#0c0c0c]"
+                            : "border-[rgba(0,0,0,0.21)] text-[#484848] hover:border-[#0c0c0c] hover:text-gray-900]"
                         }`}
                       >
                         {p}
@@ -302,7 +302,7 @@ export default async function ShopPage({
                       href={pageHref(page + 1)}
                       className="inline-flex items-center justify-center gap-1 min-w-[32px] h-8 px-3
                         text-xs font-medium rounded-sm border border-[rgba(0,0,0,0.21)]
-                        text-[#484848] hover:border-[#0c0c0c] hover:text-[#0c0c0c] transition-colors"
+                        text-[#484848] hover:border-[#0c0c0c] hover:text-gray-900] transition-colors"
                     >
                       {isAr ? "التالي" : "Next"}
                       {isAr ? <ChevronLeft size={12} /> : <ChevronRight size={12} />}

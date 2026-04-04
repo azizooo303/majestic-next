@@ -84,7 +84,7 @@ export function HeroSlider({
             />
 
             {/* Dark gradient overlay for text readability */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-gray-600/50 via-transparent to-transparent" />
 
             {/* Text overlay — bottom-start */}
             <div className="absolute bottom-8 start-8 md:bottom-16 md:start-16 max-w-lg z-20">
@@ -98,7 +98,7 @@ export function HeroSlider({
               )}
               <Link
                 href={slide.href}
-                className="inline-block mt-4 md:mt-6 px-8 py-3 bg-gold text-primary
+                className="inline-block mt-4 md:mt-6 px-8 py-3 bg-gold text-gray-900
                   font-medium rounded-md transition-all duration-200
                   hover:opacity-90 hover:-translate-y-0.5
                   focus:outline-none focus:ring-2 focus:ring-gold/50"

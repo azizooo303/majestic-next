@@ -3,7 +3,7 @@ import { Reveal } from "@/components/common/reveal";
 
 export function ConsultationCta({ isAr }: { isAr: boolean }) {
   return (
-    <section className="w-full bg-[rgba(12,12,12,0.85)] py-16 md:py-24">
+    <section className="w-full bg-white,0.85)] py-16 md:py-24">
       <div className="max-w-screen-2xl mx-auto px-4 md:px-6 lg:px-8">
         <Reveal>
           <div className="max-w-2xl mx-auto text-center">
@@ -18,7 +18,7 @@ export function ConsultationCta({ isAr }: { isAr: boolean }) {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
                 href="/about"
-                className="btn-press inline-block border border-[#C1B167] text-[#C1B167] px-8 py-3.5 text-sm font-semibold rounded-sm hover:bg-[#C1B167] hover:text-[#0c0c0c] transition-colors"
+                className="btn-press inline-block border border-[#C1B167] text-[#C1B167] px-8 py-3.5 text-sm font-semibold rounded-sm hover:bg-[#C1B167] hover:text-gray-900] transition-colors"
               >
                 {isAr ? "احجز استشارة" : "Book a Consultation"}
               </Link>

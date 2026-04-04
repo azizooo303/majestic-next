@@ -21,7 +21,7 @@ export function CategoryTabs({ categories }: CategoryTabsProps) {
           "px-3 py-1.5 text-sm font-medium rounded-full whitespace-nowrap transition-colors",
           !activeCategory
             ? "bg-primary text-white"
-            : "text-dark hover:text-primary"
+            : "text-gray-800 hover:text-gray-900"
         )}
       >
         All
@@ -34,7 +34,7 @@ export function CategoryTabs({ categories }: CategoryTabsProps) {
             "px-3 py-1.5 text-sm font-medium rounded-full whitespace-nowrap transition-colors",
             activeCategory === String(cat.id)
               ? "bg-primary text-white"
-              : "text-dark hover:text-primary"
+              : "text-gray-800 hover:text-gray-900"
           )}
         >
           {cat.name}

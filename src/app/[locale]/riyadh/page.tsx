@@ -97,7 +97,7 @@ export default async function RiyadhPage({
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
               {stats.map((stat) => (
                 <div key={stat.label} className="border-t-2 border-[#0c0c0c] pt-6">
-                  <p className="text-4xl md:text-5xl font-extrabold text-[#0c0c0c] tracking-tight mb-2">
+                  <p className="text-4xl md:text-5xl font-extrabold text-gray-900] tracking-tight mb-2">
                     {stat.value}
                   </p>
                   <p className="text-sm text-[#484848] font-medium">{stat.label}</p>
@@ -129,7 +129,7 @@ export default async function RiyadhPage({
               <div className={`flex flex-col sm:flex-row gap-4 ${isAr ? "sm:flex-row-reverse" : ""}`}>
                 <Link
                   href="/about"
-                  className="btn-press inline-block bg-white text-[#0c0c0c] px-8 py-3.5 font-semibold text-sm tracking-wide rounded-sm hover:bg-white transition-colors text-center"
+                  className="btn-press inline-block bg-white text-gray-900] px-8 py-3.5 font-semibold text-sm tracking-wide rounded-sm hover:bg-white transition-colors text-center"
                 >
                   {isAr ? "احجز استشارة" : "Book a Consultation"}
                 </Link>

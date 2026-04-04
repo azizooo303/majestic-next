@@ -33,7 +33,7 @@ export function NewsletterForm() {
       />
       <button
         type="submit"
-        className="px-6 py-3 bg-gold text-primary font-medium rounded-lg
+        className="px-6 py-3 bg-gold text-gray-900 font-medium rounded-lg
           transition-all duration-200 hover:opacity-90 cursor-pointer"
       >
         {t("common.subscribe")}

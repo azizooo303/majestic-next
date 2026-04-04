@@ -37,7 +37,7 @@ export function ShopTopBar({ productCount, activeSort = "featured" }: ShopTopBar
       <div className="flex items-center gap-3">
         <button
           className="lg:hidden flex items-center gap-1.5 border border-[rgba(0,0,0,0.21)]
-          rounded-sm px-3 py-2 text-xs font-medium text-[#0c0c0c] hover:bg-[#fafafa]
+          rounded-sm px-3 py-2 text-xs font-medium text-gray-900] hover:bg-[#fafafa]
           transition-colors btn-press"
           aria-label={isAr ? "فتح التصفية" : "Open filters"}
         >
@@ -55,7 +55,7 @@ export function ShopTopBar({ productCount, activeSort = "featured" }: ShopTopBar
           value={activeSort}
           onChange={(e) => handleSort(e.target.value)}
           className="text-xs border border-[rgba(0,0,0,0.21)] rounded-sm px-2.5 py-2
-          bg-white text-[#0c0c0c] focus:outline-none focus:border-[#0c0c0c] cursor-pointer"
+          bg-white text-gray-900] focus:outline-none focus:border-[#0c0c0c] cursor-pointer"
           aria-label={isAr ? "ترتيب المنتجات" : "Sort products"}
         >
           <option value="featured">{isAr ? "المميزة" : "Featured"}</option>
@@ -68,7 +68,7 @@ export function ShopTopBar({ productCount, activeSort = "featured" }: ShopTopBar
         <div className="flex border border-[rgba(0,0,0,0.21)] rounded-sm overflow-hidden">
           <button
             onClick={() => setView("grid")}
-            className={`p-2 transition-colors ${view === "grid" ? "bg-[#0c0c0c] text-white" : "bg-white text-[#484848] hover:bg-[#fafafa]"}`}
+            className={`p-2 transition-colors ${view === "grid" ? "bg-white] text-white" : "bg-white text-[#484848] hover:bg-[#fafafa]"}`}
             aria-label={isAr ? "عرض شبكي" : "Grid view"}
             aria-pressed={view === "grid"}
           >
@@ -76,7 +76,7 @@ export function ShopTopBar({ productCount, activeSort = "featured" }: ShopTopBar
           </button>
           <button
             onClick={() => setView("list")}
-            className={`p-2 transition-colors ${view === "list" ? "bg-[#0c0c0c] text-white" : "bg-white text-[#484848] hover:bg-[#fafafa]"}`}
+            className={`p-2 transition-colors ${view === "list" ? "bg-white] text-white" : "bg-white text-[#484848] hover:bg-[#fafafa]"}`}
             aria-label={isAr ? "عرض قائمة" : "List view"}
             aria-pressed={view === "list"}
           >

@@ -64,7 +64,7 @@ export default async function BrandsPage({
       key={brand}
       className="border border-[rgba(0,0,0,0.21)] rounded-sm p-8 flex items-center justify-center hover:bg-white transition-colors cursor-default min-h-[100px]"
     >
-      <span className="font-bold text-[#0c0c0c] text-sm md:text-base text-center leading-snug">
+      <span className="font-bold text-gray-900] text-sm md:text-base text-center leading-snug">
         {brand}
       </span>
     </div>
@@ -76,13 +76,13 @@ export default async function BrandsPage({
       <section className="bg-white border-b border-[rgba(0,0,0,0.08)] py-12 md:py-16">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
           <p className="text-xs uppercase tracking-widest text-[#484848] mb-3">
-            <Link href="/" className="hover:text-[#0c0c0c] transition-colors">
+            <Link href="/" className="hover:text-gray-900] transition-colors">
               {isAr ? "الرئيسية" : "Home"}
             </Link>
             <span className="mx-2">/</span>
             {isAr ? "علاماتنا التجارية" : "Brands"}
           </p>
-          <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-[#0c0c0c]">
+          <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900]">
             {isAr ? "علاماتنا التجارية" : "Our Brands"}
           </h1>
         </div>
@@ -93,7 +93,7 @@ export default async function BrandsPage({
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
           <Reveal>
             <div className="max-w-2xl mb-14">
-              <h2 className="text-2xl md:text-3xl font-bold text-[#0c0c0c] tracking-tight mb-4">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900] tracking-tight mb-4">
                 {isAr ? "شركاء عالميون، معايير استثنائية" : "Global Partners, Exceptional Standards"}
               </h2>
               <p className="text-[#484848] leading-relaxed">
@@ -121,7 +121,7 @@ export default async function BrandsPage({
           <Reveal>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               <div>
-                <h2 className="text-2xl md:text-3xl font-bold text-[#0c0c0c] tracking-tight mb-4">
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900] tracking-tight mb-4">
                   {isAr ? "هل أنت مشترٍ بالجملة؟" : "Are you a wholesale buyer?"}
                 </h2>
                 <p className="text-[#484848] leading-relaxed text-sm">

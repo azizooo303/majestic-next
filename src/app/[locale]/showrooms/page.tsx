@@ -107,14 +107,14 @@ export default async function ShowroomsPage({
 
       {/* Info */}
       <div className="p-6">
-        <h3 className="text-lg font-bold text-[#0c0c0c] mb-3">{s.name}</h3>
+        <h3 className="text-lg font-bold text-gray-900] mb-3">{s.name}</h3>
         <div className="space-y-2 mb-6">
           <p className="text-sm text-[#484848] leading-relaxed">{s.address}</p>
           <p className="text-sm text-[#484848]">{s.hours}</p>
           {s.phone !== "—" && (
             <a
               href={`tel:${s.phone.replace(/\s/g, "")}`}
-              className="text-sm text-[#0c0c0c] hover:text-[#484848] transition-colors font-medium"
+              className="text-sm text-gray-900] hover:text-[#484848] transition-colors font-medium"
               dir="ltr"
             >
               {s.phone}
@@ -124,7 +124,7 @@ export default async function ShowroomsPage({
         {!s.comingSoon && (
           <a
             href="#"
-            className="btn-press inline-block border border-[#0c0c0c] text-[#0c0c0c] px-5 py-2.5 text-sm font-semibold rounded-sm hover:bg-white hover:text-white transition-colors"
+            className="btn-press inline-block border border-[#0c0c0c] text-gray-900] px-5 py-2.5 text-sm font-semibold rounded-sm hover:bg-white hover:text-white transition-colors"
             aria-label={isAr ? `الحصول على الاتجاهات — ${s.name}` : `Get directions — ${s.name}`}
           >
             {isAr ? "الحصول على الاتجاهات" : "Get Directions"}
@@ -140,13 +140,13 @@ export default async function ShowroomsPage({
       <section className="bg-white border-b border-[rgba(0,0,0,0.08)] py-12 md:py-16">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
           <p className="text-xs uppercase tracking-widest text-[#484848] mb-3">
-            <Link href="/" className="hover:text-[#0c0c0c] transition-colors">
+            <Link href="/" className="hover:text-gray-900] transition-colors">
               {isAr ? "الرئيسية" : "Home"}
             </Link>
             <span className="mx-2">/</span>
             {isAr ? "معارضنا" : "Showrooms"}
           </p>
-          <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-[#0c0c0c]">
+          <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900]">
             {isAr ? "معارضنا" : "Our Showrooms"}
           </h1>
         </div>
@@ -183,7 +183,7 @@ export default async function ShowroomsPage({
             </p>
             <Link
               href="/contact"
-              className="text-sm font-semibold text-[#0c0c0c] border-b border-[#0c0c0c] pb-0.5 hover:text-[#484848] hover:border-[#484848] transition-colors"
+              className="text-sm font-semibold text-gray-900] border-b border-[#0c0c0c] pb-0.5 hover:text-[#484848] hover:border-[#484848] transition-colors"
             >
               {isAr ? "تواصل معنا" : "Get in touch"}
             </Link>

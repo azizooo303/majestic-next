@@ -66,7 +66,7 @@ export function InspireSection({ isAr }: { isAr: boolean }) {
             <p className="text-xs uppercase tracking-widest text-[#484848] font-medium mb-4">
               {isAr ? "إلهام التصميم" : "Design Inspiration"}
             </p>
-            <h2 className="text-[28px] lg:text-[36px] font-bold text-[#0c0c0c] leading-tight tracking-tight">
+            <h2 className="text-[28px] lg:text-[36px] font-bold text-gray-900] leading-tight tracking-tight">
               {isAr
                 ? "أفكار لتخطيط\nمساحة عملك"
                 : "Planning Ideas\nFor Your Workspace"}
@@ -78,7 +78,7 @@ export function InspireSection({ isAr }: { isAr: boolean }) {
             </p>
             <Link
               href="/inspirations"
-              className="mt-8 inline-flex items-center gap-1 text-sm font-semibold text-[#0c0c0c] hover:text-[#484848] transition-colors group"
+              className="mt-8 inline-flex items-center gap-1 text-sm font-semibold text-gray-900] hover:text-[#484848] transition-colors group"
             >
               {isAr ? "استكشف الإلهام" : "Explore the collection"}
               <span className="text-base transition-transform duration-200 ltr:group-hover:translate-x-0.5 rtl:group-hover:-translate-x-0.5 rtl:rotate-180">

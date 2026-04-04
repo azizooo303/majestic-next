@@ -43,7 +43,7 @@ function Input({
       value={value}
       onChange={(e) => onChange(e.target.value)}
       placeholder={placeholder}
-      className={`w-full h-9 px-3 border border-[rgba(0,0,0,0.12)] bg-white text-sm text-[#0c0c0c] outline-none focus:border-[#0c0c0c] transition-colors ${className}`}
+      className={`w-full h-9 px-3 border border-[rgba(0,0,0,0.12)] bg-white text-sm text-gray-900] outline-none focus:border-[#0c0c0c] transition-colors ${className}`}
     />
   )
 }
@@ -65,7 +65,7 @@ function Textarea({
       onChange={(e) => onChange(e.target.value)}
       placeholder={placeholder}
       rows={rows}
-      className="w-full px-3 py-2 border border-[rgba(0,0,0,0.12)] bg-white text-sm text-[#0c0c0c] outline-none focus:border-[#0c0c0c] transition-colors resize-none"
+      className="w-full px-3 py-2 border border-[rgba(0,0,0,0.12)] bg-white text-sm text-gray-900] outline-none focus:border-[#0c0c0c] transition-colors resize-none"
     />
   )
 }
@@ -89,7 +89,7 @@ function Toggle({
           className={`absolute top-0.5 w-4 h-4 rounded-full bg-white shadow transition-transform ${checked ? 'translate-x-5' : 'translate-x-0.5'}`}
         />
       </div>
-      <span className="text-sm text-[#0c0c0c]">{label}</span>
+      <span className="text-sm text-gray-900]">{label}</span>
     </label>
   )
 }
@@ -245,7 +245,7 @@ function HeroTab({
         ))}
         <button
           onClick={addSlide}
-          className="px-4 py-1.5 text-xs font-medium border border-dashed border-[rgba(0,0,0,0.2)] text-[#888] hover:border-[#0c0c0c] hover:text-[#0c0c0c] transition-colors"
+          className="px-4 py-1.5 text-xs font-medium border border-dashed border-[rgba(0,0,0,0.2)] text-[#888] hover:border-[#0c0c0c] hover:text-gray-900] transition-colors"
         >
           + Add slide
         </button>
@@ -389,7 +389,7 @@ export default function AdminDashboard() {
           </button>
           <button
             onClick={handleLogout}
-            className="text-xs text-[#aaa] hover:text-[#0c0c0c] transition-colors"
+            className="text-xs text-[#aaa] hover:text-gray-900] transition-colors"
           >
             Sign out
           </button>
@@ -406,7 +406,7 @@ export default function AdminDashboard() {
                 onClick={() => setTab(t.id)}
                 className={`w-full text-left px-3 py-2 text-sm transition-colors ${
                   tab === t.id
-                    ? 'bg-[#f0f0f0] text-[#0c0c0c] font-medium'
+                    ? 'bg-[#f0f0f0] text-gray-900] font-medium'
                     : 'text-[#484848] hover:bg-[#f7f7f5]'
                 }`}
               >

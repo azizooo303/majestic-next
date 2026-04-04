@@ -45,7 +45,7 @@ export function TrackForm({ isAr }: TrackFormProps) {
             <p className="text-xs text-[#484848] uppercase tracking-widest">
               {isAr ? "رقم الطلب" : "Order Number"}
             </p>
-            <p className="text-base font-bold text-[#0c0c0c] mt-0.5">{orderNumber}</p>
+            <p className="text-base font-bold text-gray-900] mt-0.5">{orderNumber}</p>
           </div>
           <span className="text-xs font-semibold uppercase tracking-wider border border-[rgba(0,0,0,0.21)] px-3 py-1 rounded-sm text-[#484848]">
             {isAr ? "في الطريق إليك" : "Out for Delivery"}
@@ -90,7 +90,7 @@ export function TrackForm({ isAr }: TrackFormProps) {
                     </>
                   )}
                 </div>
-                <p className={`text-xs font-medium mt-0 sm:mt-2 text-center ${step.active ? "text-[#0c0c0c]" : "text-[#484848]"}`}>
+                <p className={`text-xs font-medium mt-0 sm:mt-2 text-center ${step.active ? "text-gray-900]" : "text-[#484848]"}`}>
                   {isAr ? step.ar : step.en}
                 </p>
               </div>
@@ -102,7 +102,7 @@ export function TrackForm({ isAr }: TrackFormProps) {
         <button
           type="button"
           onClick={() => { setSubmitted(false); setOrderNumber(""); setEmail(""); }}
-          className="mt-8 text-sm text-[#484848] underline underline-offset-2 hover:text-[#0c0c0c] transition-colors"
+          className="mt-8 text-sm text-[#484848] underline underline-offset-2 hover:text-gray-900] transition-colors"
         >
           {isAr ? "البحث عن طلب آخر" : "Track another order"}
         </button>

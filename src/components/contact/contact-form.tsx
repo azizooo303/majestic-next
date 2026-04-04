@@ -55,7 +55,7 @@ export function ContactForm({ isAr, source = "contact" }: ContactFormProps) {
   }
 
   const fieldClass =
-    "w-full border border-[rgba(0,0,0,0.21)] rounded-sm px-4 py-3 text-sm text-[#0c0c0c] placeholder:text-[#9ca3af] focus:outline-none focus:border-[#0c0c0c] transition-colors bg-white";
+    "w-full border border-[rgba(0,0,0,0.21)] rounded-sm px-4 py-3 text-sm text-gray-900] placeholder:text-[#9ca3af] focus:outline-none focus:border-[#0c0c0c] transition-colors bg-white";
 
   const subjects = isAr
     ? [
@@ -77,7 +77,7 @@ export function ContactForm({ isAr, source = "contact" }: ContactFormProps) {
     return (
       <div className="rounded-sm border border-[rgba(0,0,0,0.12)] bg-[#fafafa] px-6 py-10 text-center space-y-3">
         <p className="text-2xl">✓</p>
-        <p className="font-semibold text-[#0c0c0c] text-base">
+        <p className="font-semibold text-gray-900] text-base">
           {isAr ? "تم إرسال رسالتك بنجاح" : "Message sent successfully"}
         </p>
         <p className="text-sm text-[#484848]">
@@ -87,7 +87,7 @@ export function ContactForm({ isAr, source = "contact" }: ContactFormProps) {
         </p>
         <button
           onClick={() => setStatus("idle")}
-          className="mt-2 text-sm text-[#484848] border-b border-[#484848] pb-0.5 hover:text-[#0c0c0c] transition-colors"
+          className="mt-2 text-sm text-[#484848] border-b border-[#484848] pb-0.5 hover:text-gray-900] transition-colors"
         >
           {isAr ? "إرسال رسالة أخرى" : "Send another message"}
         </button>
@@ -98,7 +98,7 @@ export function ContactForm({ isAr, source = "contact" }: ContactFormProps) {
   return (
     <form onSubmit={handleSubmit} className="space-y-4" noValidate>
       <div>
-        <label className="block text-xs font-semibold text-[#0c0c0c] uppercase tracking-wider mb-1.5">
+        <label className="block text-xs font-semibold text-gray-900] uppercase tracking-wider mb-1.5">
           {isAr ? "الاسم" : "Name"}
           <span className="text-[#e53e3e] ml-1">*</span>
         </label>
@@ -114,7 +114,7 @@ export function ContactForm({ isAr, source = "contact" }: ContactFormProps) {
       </div>
 
       <div>
-        <label className="block text-xs font-semibold text-[#0c0c0c] uppercase tracking-wider mb-1.5">
+        <label className="block text-xs font-semibold text-gray-900] uppercase tracking-wider mb-1.5">
           {isAr ? "البريد الإلكتروني" : "Email"}
           <span className="text-[#e53e3e] ml-1">*</span>
         </label>
@@ -130,7 +130,7 @@ export function ContactForm({ isAr, source = "contact" }: ContactFormProps) {
       </div>
 
       <div>
-        <label className="block text-xs font-semibold text-[#0c0c0c] uppercase tracking-wider mb-1.5">
+        <label className="block text-xs font-semibold text-gray-900] uppercase tracking-wider mb-1.5">
           {isAr ? "رقم الهاتف" : "Phone"}
           <span className="text-[#484848] ml-1 font-normal normal-case">
             ({isAr ? "اختياري" : "optional"})
@@ -147,7 +147,7 @@ export function ContactForm({ isAr, source = "contact" }: ContactFormProps) {
       </div>
 
       <div>
-        <label className="block text-xs font-semibold text-[#0c0c0c] uppercase tracking-wider mb-1.5">
+        <label className="block text-xs font-semibold text-gray-900] uppercase tracking-wider mb-1.5">
           {isAr ? "الموضوع" : "Subject"}
           <span className="text-[#e53e3e] ml-1">*</span>
         </label>
@@ -167,7 +167,7 @@ export function ContactForm({ isAr, source = "contact" }: ContactFormProps) {
       </div>
 
       <div>
-        <label className="block text-xs font-semibold text-[#0c0c0c] uppercase tracking-wider mb-1.5">
+        <label className="block text-xs font-semibold text-gray-900] uppercase tracking-wider mb-1.5">
           {isAr ? "الرسالة" : "Message"}
           <span className="text-[#e53e3e] ml-1">*</span>
         </label>
@@ -191,7 +191,7 @@ export function ContactForm({ isAr, source = "contact" }: ContactFormProps) {
       <button
         type="submit"
         disabled={status === "loading"}
-        className="btn-press w-full bg-[#0c0c0c] text-white px-8 py-3.5 font-semibold text-sm tracking-wide rounded-sm hover:bg-[#333] transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
+        className="btn-press w-full bg-white] text-white px-8 py-3.5 font-semibold text-sm tracking-wide rounded-sm hover:bg-[#333] transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
       >
         {status === "loading"
           ? isAr ? "جارٍ الإرسال..." : "Sending..."

@@ -60,16 +60,16 @@ export function ProductCard({
 
       {/* Info */}
       <div className="p-4">
-        <h3 className="text-sm md:text-base font-medium text-primary leading-snug line-clamp-2">
+        <h3 className="text-sm md:text-base font-medium text-gray-900 leading-snug line-clamp-2">
           {product.name}
         </h3>
         {product.categories[0] && (
-          <p className="text-xs text-dark/70 mt-1">
+          <p className="text-xs text-gray-800/70 mt-1">
             {product.categories[0].name}
           </p>
         )}
         {showPrice && product.price && (
-          <p className="text-sm font-semibold text-primary mt-2">
+          <p className="text-sm font-semibold text-gray-900 mt-2">
             {formatPrice(product.price, locale)}
           </p>
         )}

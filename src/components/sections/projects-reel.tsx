@@ -50,7 +50,7 @@ export function ProjectsReel({ isAr }: { isAr: boolean }) {
   const [paused, setPaused] = useState(false);
 
   return (
-    <section className="relative w-full bg-[rgba(12,12,12,0.85)] overflow-hidden py-10">
+    <section className="relative w-full bg-white,0.85)] overflow-hidden py-10">
       {/* Header */}
       <div className="max-w-screen-2xl mx-auto px-4 md:px-8 mb-6 flex items-end justify-between">
         <div>
@@ -105,7 +105,7 @@ export function ProjectsReel({ isAr }: { isAr: boolean }) {
                 sizes="320px"
                 unoptimized
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-gray-600/80 via-gray-500/20 to-transparent" />
               <div className="absolute inset-0 bg-black/30 opacity-0 group-hover/card:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-0 left-0 right-0 p-3">
                 <span className="block text-[10px] font-semibold uppercase tracking-[0.12em] text-[#C1B167] mb-0.5">

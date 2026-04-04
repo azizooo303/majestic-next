@@ -99,7 +99,7 @@ function StepIndicator({ step, isAr }: { step: Step; isAr: boolean }) {
                 className={[
                   "w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold transition-colors",
                   isActive
-                    ? "bg-[#0c0c0c] text-white"
+                    ? "bg-white] text-white"
                     : isComplete
                     ? "bg-[#484848] text-white"
                     : "border border-[rgba(0,0,0,0.21)] text-[#9ca3af]",
@@ -112,7 +112,7 @@ function StepIndicator({ step, isAr }: { step: Step; isAr: boolean }) {
                 className={[
                   "text-xs whitespace-nowrap",
                   isActive
-                    ? "font-bold text-[#0c0c0c]"
+                    ? "font-bold text-gray-900]"
                     : isComplete
                     ? "font-medium text-[#484848]"
                     : "text-[#9ca3af]",
@@ -148,7 +148,7 @@ function OrderSummary({ isAr }: { isAr: boolean }) {
       className="w-full lg:w-[40%] lg:sticky lg:top-[176px]"
     >
       <div className="border border-[rgba(0,0,0,0.21)] rounded-sm p-6 bg-white">
-        <h2 className="text-base font-bold text-[#0c0c0c] mb-5 pb-4 border-b border-[rgba(0,0,0,0.1)]">
+        <h2 className="text-base font-bold text-gray-900] mb-5 pb-4 border-b border-[rgba(0,0,0,0.1)]">
           {isAr ? "ملخص الطلب" : "Order Summary"}
         </h2>
 
@@ -165,11 +165,11 @@ function OrderSummary({ isAr }: { isAr: boolean }) {
                 />
               </div>
               <div className="flex-1 min-w-0">
-                <p className="text-sm font-medium text-[#0c0c0c] leading-snug truncate">
+                <p className="text-sm font-medium text-gray-900] leading-snug truncate">
                   {isAr ? item.nameAr : item.name}
                 </p>
               </div>
-              <p className="text-sm font-semibold text-[#0c0c0c] flex-shrink-0">
+              <p className="text-sm font-semibold text-gray-900] flex-shrink-0">
                 {fmt(item.price)}
               </p>
             </div>
@@ -183,7 +183,7 @@ function OrderSummary({ isAr }: { isAr: boolean }) {
           </div>
           <div className="flex justify-between text-[#484848]">
             <span>{isAr ? "الشحن" : "Shipping"}</span>
-            <span className="text-[#0c0c0c] font-medium">
+            <span className="text-gray-900] font-medium">
               {isAr ? "مجاناً" : "Free"}
             </span>
           </div>
@@ -191,7 +191,7 @@ function OrderSummary({ isAr }: { isAr: boolean }) {
             <span>{isAr ? "ضريبة القيمة المضافة (15%)" : "VAT (15%)"}</span>
             <span>{fmt(vat)}</span>
           </div>
-          <div className="flex justify-between text-base font-bold text-[#0c0c0c] pt-3 border-t border-[rgba(0,0,0,0.1)]">
+          <div className="flex justify-between text-base font-bold text-gray-900] pt-3 border-t border-[rgba(0,0,0,0.1)]">
             <span>{isAr ? "الإجمالي" : "Total"}</span>
             <span>{fmt(total)}</span>
           </div>
@@ -237,7 +237,7 @@ function Field({
 }
 
 const inputCls =
-  "border border-[rgba(0,0,0,0.21)] rounded-sm px-4 py-3 w-full text-sm text-[#0c0c0c] bg-white placeholder:text-[#9ca3af] focus:outline-none focus:border-[#0c0c0c] focus:ring-1 focus:ring-[#0c0c0c] transition-colors";
+  "border border-[rgba(0,0,0,0.21)] rounded-sm px-4 py-3 w-full text-sm text-gray-900] bg-white placeholder:text-[#9ca3af] focus:outline-none focus:border-[#0c0c0c] focus:ring-1 focus:ring-[#0c0c0c] transition-colors";
 
 function StepAddress({
   form,
@@ -252,7 +252,7 @@ function StepAddress({
 }) {
   return (
     <div className="flex flex-col gap-6">
-      <h2 className="text-xl font-bold text-[#0c0c0c]">
+      <h2 className="text-xl font-bold text-gray-900]">
         {isAr ? "عنوان التوصيل" : "Delivery Address"}
       </h2>
 
@@ -372,7 +372,7 @@ function StepAddress({
 
       <button
         onClick={onContinue}
-        className="btn-press w-full bg-[#0c0c0c] text-white py-4 font-semibold text-sm rounded-sm hover:bg-[#333] transition-colors mt-2"
+        className="btn-press w-full bg-white] text-white py-4 font-semibold text-sm rounded-sm hover:bg-[#333] transition-colors mt-2"
       >
         {isAr ? "المتابعة إلى الدفع" : "Continue to Payment"}
       </button>
@@ -426,7 +426,7 @@ function StepPayment({
 
   return (
     <div className="flex flex-col gap-6">
-      <h2 className="text-xl font-bold text-[#0c0c0c]">
+      <h2 className="text-xl font-bold text-gray-900]">
         {isAr ? "طريقة الدفع" : "Payment Method"}
       </h2>
 
@@ -437,7 +437,7 @@ function StepPayment({
           onClick={() => onChange("paymentMethod", "card")}
         >
           <div className="flex items-center justify-between">
-            <span className="text-sm font-semibold text-[#0c0c0c]">
+            <span className="text-sm font-semibold text-gray-900]">
               {isAr ? "بطاقة ائتمان / مدى" : "Credit / Debit Card"}
             </span>
             <div className="flex items-center gap-1.5">
@@ -535,7 +535,7 @@ function StepPayment({
               <span className="text-sm font-bold text-[#3d9970] bg-[#e8f5ee] px-2 py-0.5 rounded-sm">
                 tabby
               </span>
-              <span className="text-sm text-[#0c0c0c] font-medium">
+              <span className="text-sm text-gray-900] font-medium">
                 {isAr ? "اشترِ الآن، ادفع لاحقاً" : "Buy now, pay later"}
               </span>
             </div>
@@ -557,7 +557,7 @@ function StepPayment({
               <span className="text-sm font-bold text-[#ff6b35] bg-[#fff1ec] px-2 py-0.5 rounded-sm">
                 tamara
               </span>
-              <span className="text-sm text-[#0c0c0c] font-medium">
+              <span className="text-sm text-gray-900] font-medium">
                 {isAr ? "قسّم على 3 أشهر" : "Split into 3 months"}
               </span>
             </div>
@@ -579,7 +579,7 @@ function StepPayment({
 
       <button
         onClick={onPlace}
-        className="btn-press w-full bg-[#0c0c0c] text-white py-4 font-semibold text-sm rounded-sm hover:bg-[#333] transition-colors"
+        className="btn-press w-full bg-white] text-white py-4 font-semibold text-sm rounded-sm hover:bg-[#333] transition-colors"
       >
         {isAr ? "تأكيد الطلب" : "Place Order"}
       </button>
@@ -587,7 +587,7 @@ function StepPayment({
       <button
         onClick={onBack}
         type="button"
-        className="flex items-center gap-1 text-sm text-[#484848] hover:text-[#0c0c0c] transition-colors mx-auto"
+        className="flex items-center gap-1 text-sm text-[#484848] hover:text-gray-900] transition-colors mx-auto"
       >
         <ChevronLeft size={14} />
         {isAr ? "العودة إلى العنوان" : "Back to Address"}
@@ -607,12 +607,12 @@ function StepConfirmation({
 }) {
   return (
     <div className="flex flex-col items-center text-center py-12 px-4 gap-6 max-w-lg mx-auto">
-      <div className="w-16 h-16 bg-[#0c0c0c] rounded-full flex items-center justify-center text-white">
+      <div className="w-16 h-16 bg-white] rounded-full flex items-center justify-center text-white">
         <Check size={28} strokeWidth={2.5} />
       </div>
 
       <div className="flex flex-col gap-2">
-        <h1 className="text-2xl md:text-3xl font-bold text-[#0c0c0c] tracking-tight">
+        <h1 className="text-2xl md:text-3xl font-bold text-gray-900] tracking-tight">
           {isAr ? "تم تأكيد طلبك" : "Order Confirmed"}
         </h1>
         <p className="text-[#484848] text-sm">
@@ -628,13 +628,13 @@ function StepConfirmation({
             <span className="text-[#484848]">
               {isAr ? "رقم الطلب" : "Order number"}
             </span>
-            <span className="font-bold text-[#0c0c0c] font-mono">{orderNumber}</span>
+            <span className="font-bold text-gray-900] font-mono">{orderNumber}</span>
           </div>
           <div className="flex justify-between">
             <span className="text-[#484848]">
               {isAr ? "التوصيل المتوقع" : "Estimated delivery"}
             </span>
-            <span className="font-medium text-[#0c0c0c]">
+            <span className="font-medium text-gray-900]">
               {isAr ? "5–7 أيام عمل" : "5–7 business days"}
             </span>
           </div>
@@ -644,13 +644,13 @@ function StepConfirmation({
       <div className="flex flex-col sm:flex-row gap-3 w-full">
         <Link
           href="/shop"
-          className="btn-press flex-1 text-center border border-[rgba(0,0,0,0.21)] text-[#0c0c0c] py-3.5 font-semibold text-sm rounded-sm hover:bg-[#fafafa] transition-colors"
+          className="btn-press flex-1 text-center border border-[rgba(0,0,0,0.21)] text-gray-900] py-3.5 font-semibold text-sm rounded-sm hover:bg-[#fafafa] transition-colors"
         >
           {isAr ? "متابعة التسوق" : "Continue Shopping"}
         </Link>
         <Link
           href="/track-order"
-          className="btn-press flex-1 text-center bg-[#0c0c0c] text-white py-3.5 font-semibold text-sm rounded-sm hover:bg-[#333] transition-colors"
+          className="btn-press flex-1 text-center bg-white] text-white py-3.5 font-semibold text-sm rounded-sm hover:bg-[#333] transition-colors"
         >
           {isAr ? "تتبع طلبك" : "Track Your Order"}
         </Link>
@@ -684,7 +684,7 @@ export function CheckoutClient() {
       <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
 
         <div className="mb-8">
-          <h1 className="text-2xl md:text-3xl font-bold text-[#0c0c0c] tracking-tight">
+          <h1 className="text-2xl md:text-3xl font-bold text-gray-900] tracking-tight">
             {isAr ? "إتمام الطلب" : "Checkout"}
           </h1>
         </div>

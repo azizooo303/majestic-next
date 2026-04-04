@@ -44,13 +44,13 @@ export function AddToCartButton({ productId, locale, product }: AddToCartButtonP
     <div className="space-y-4">
       {/* Quantity Selector */}
       <div className="flex items-center gap-2">
-        <span className="text-sm font-medium text-dark me-2">
+        <span className="text-sm font-medium text-gray-800 me-2">
           {isAr ? "الكمية" : "Quantity"}
         </span>
         <div className="flex items-center border border-border rounded-lg">
           <button
             onClick={() => setQuantity(Math.max(1, quantity - 1))}
-            className="p-2.5 text-dark hover:text-primary transition-colors cursor-pointer"
+            className="p-2.5 text-gray-800 hover:text-gray-900 transition-colors cursor-pointer"
             disabled={quantity <= 1}
           >
             <Minus className="w-4 h-4" />
@@ -58,7 +58,7 @@ export function AddToCartButton({ productId, locale, product }: AddToCartButtonP
           <span className="w-10 text-center text-sm font-medium">{quantity}</span>
           <button
             onClick={() => setQuantity(Math.min(10, quantity + 1))}
-            className="p-2.5 text-dark hover:text-primary transition-colors cursor-pointer"
+            className="p-2.5 text-gray-800 hover:text-gray-900 transition-colors cursor-pointer"
           >
             <Plus className="w-4 h-4" />
           </button>
@@ -70,7 +70,7 @@ export function AddToCartButton({ productId, locale, product }: AddToCartButtonP
         onClick={handleAddToCart}
         disabled={added}
         className="w-full flex items-center justify-center gap-2 px-6 py-3.5
-          bg-gold text-primary font-medium rounded-md
+          bg-gold text-gray-900 font-medium rounded-md
           transition-all duration-200 hover:opacity-90 hover:-translate-y-0.5
           focus:outline-none focus:ring-2 focus:ring-gold/50
           disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
@@ -82,7 +82,7 @@ export function AddToCartButton({ productId, locale, product }: AddToCartButtonP
       </button>
 
       {/* Wishlist */}
-      <button className="w-full text-sm font-medium text-dark hover:text-primary
+      <button className="w-full text-sm font-medium text-gray-800 hover:text-gray-900
         transition-colors underline-offset-4 hover:underline cursor-pointer">
         {isAr ? "أضف إلى المفضلة" : "Add to Wishlist"}
       </button>

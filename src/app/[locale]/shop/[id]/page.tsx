@@ -124,17 +124,17 @@ export default async function ProductDetailPage({
           aria-label={isAr ? "مسار التنقل" : "Breadcrumb"}
           className="flex items-center gap-1.5 text-xs text-[#484848] mb-8 flex-wrap"
         >
-          <Link href="/" className="hover:text-[#0c0c0c] transition-colors">
+          <Link href="/" className="hover:text-gray-900] transition-colors">
             {isAr ? "الرئيسية" : "Home"}
           </Link>
           <ChevronRight size={12} className={isAr ? "rotate-180" : ""} aria-hidden="true" />
-          <Link href="/shop" className="hover:text-[#0c0c0c] transition-colors">
+          <Link href="/shop" className="hover:text-gray-900] transition-colors">
             {isAr ? "المتجر" : "Shop"}
           </Link>
           <ChevronRight size={12} className={isAr ? "rotate-180" : ""} aria-hidden="true" />
           <span className="text-[#484848]">{category}</span>
           <ChevronRight size={12} className={isAr ? "rotate-180" : ""} aria-hidden="true" />
-          <span className="text-[#0c0c0c] font-medium truncate max-w-[200px]">{product.name}</span>
+          <span className="text-gray-900] font-medium truncate max-w-[200px]">{product.name}</span>
         </nav>
 
         {/* ── Two-column layout ────────────────────────────────────────────── */}
@@ -155,13 +155,13 @@ export default async function ProductDetailPage({
               )}
 
               {/* Product name */}
-              <h1 className="text-3xl font-bold text-[#0c0c0c] leading-tight">{product.name}</h1>
+              <h1 className="text-3xl font-bold text-gray-900] leading-tight">{product.name}</h1>
 
               {/* Price row */}
               <div className="flex items-baseline gap-3 flex-wrap">
                 {price > 0 ? (
                   <>
-                    <span className="text-2xl font-bold text-[#0c0c0c]">
+                    <span className="text-2xl font-bold text-gray-900]">
                       {isAr ? `${price.toLocaleString("ar-SA")} ر.س` : `SAR ${price.toLocaleString()}`}
                     </span>
                     {originalPrice && (
@@ -197,7 +197,7 @@ export default async function ProductDetailPage({
                   {isAr ? "أضف إلى السلة" : "Add to Cart"}
                 </button>
                 <button
-                  className="btn-press w-full border border-[#0c0c0c] text-[#0c0c0c] py-4
+                  className="btn-press w-full border border-[#0c0c0c] text-gray-900] py-4
                     font-semibold rounded-sm hover:bg-white transition-colors cursor-pointer text-sm"
                 >
                   {isAr ? "طلب عرض سعر" : "Request a Quote"}
@@ -209,15 +209,15 @@ export default async function ProductDetailPage({
               {/* Delivery info */}
               <div className="flex flex-wrap gap-4">
                 <div className="flex items-center gap-2 text-xs text-[#484848]">
-                  <Truck size={14} aria-hidden="true" className="shrink-0 text-[#0c0c0c]" />
+                  <Truck size={14} aria-hidden="true" className="shrink-0 text-gray-900]" />
                   <span>{isAr ? "توصيل مجاني فوق 500 ريال" : "Free delivery over SAR 500"}</span>
                 </div>
                 <div className="flex items-center gap-2 text-xs text-[#484848]">
-                  <Clock size={14} aria-hidden="true" className="shrink-0 text-[#0c0c0c]" />
+                  <Clock size={14} aria-hidden="true" className="shrink-0 text-gray-900]" />
                   <span>{isAr ? "5-7 أيام عمل" : "5–7 business days"}</span>
                 </div>
                 <div className="flex items-center gap-2 text-xs text-[#484848]">
-                  <Wrench size={14} aria-hidden="true" className="shrink-0 text-[#0c0c0c]" />
+                  <Wrench size={14} aria-hidden="true" className="shrink-0 text-gray-900]" />
                   <span>{isAr ? "التركيب مشمول" : "Assembly included"}</span>
                 </div>
               </div>
@@ -230,7 +230,7 @@ export default async function ProductDetailPage({
         {relatedFiltered.length > 0 && (
           <section className="mt-20" aria-label={isAr ? "منتجات ذات صلة" : "Related products"}>
             <Reveal>
-              <h2 className="text-xl font-bold text-[#0c0c0c] mb-6 tracking-tight">
+              <h2 className="text-xl font-bold text-gray-900] mb-6 tracking-tight">
                 {isAr ? "منتجات ذات صلة" : "Related Products"}
               </h2>
             </Reveal>

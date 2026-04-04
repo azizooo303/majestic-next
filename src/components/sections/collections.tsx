@@ -45,7 +45,7 @@ export function Collections({ isAr }: { isAr: boolean }) {
               <p className="text-xs uppercase tracking-widest text-[#484848] mb-2">
                 {isAr ? "المجموعات" : "The Collections"}
               </p>
-              <h2 className="text-2xl md:text-3xl font-bold text-[#0c0c0c] tracking-tight">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900] tracking-tight">
                 {isAr ? "بيئات عمل متكاملة" : "Complete Workspace Environments"}
               </h2>
               <p className="text-sm text-[#484848] mt-2">
@@ -54,7 +54,7 @@ export function Collections({ isAr }: { isAr: boolean }) {
             </div>
             <Link
               href="/shop"
-              className="hidden md:block text-sm font-medium text-[#484848] hover:text-[#0c0c0c] border-b border-[#484848] pb-0.5 transition-colors"
+              className="hidden md:block text-sm font-medium text-[#484848] hover:text-gray-900] border-b border-[#484848] pb-0.5 transition-colors"
             >
               {isAr ? "عرض جميع التشكيلات" : "View All Collections"}
             </Link>
@@ -77,7 +77,7 @@ export function Collections({ isAr }: { isAr: boolean }) {
                 />
               </div>
               <div className="p-5">
-                <h3 className="font-bold text-[#0c0c0c] text-base">
+                <h3 className="font-bold text-gray-900] text-base">
                   {isAr ? col.nameAr : col.nameEn}
                 </h3>
                 <p className="text-sm text-[#484848] mt-2 leading-relaxed">
@@ -85,7 +85,7 @@ export function Collections({ isAr }: { isAr: boolean }) {
                 </p>
                 <Link
                   href="/shop"
-                  className="inline-flex items-center gap-1 mt-4 text-sm font-semibold text-[#0c0c0c] hover:text-[#484848] transition-colors group/link"
+                  className="inline-flex items-center gap-1 mt-4 text-sm font-semibold text-gray-900] hover:text-[#484848] transition-colors group/link"
                 >
                   {isAr ? "استعرض التشكيلة" : "Explore the collection"}
                   <span className="transition-transform duration-200 ltr:group-hover/link:translate-x-0.5 rtl:group-hover/link:-translate-x-0.5">›</span>

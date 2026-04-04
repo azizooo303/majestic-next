@@ -100,7 +100,7 @@ export default async function BlogPage({
         <p className="text-xs uppercase tracking-wider font-semibold text-[#484848] mb-2">
           {isAr ? post.categoryAr : post.category}
         </p>
-        <h2 className="text-base font-bold text-[#0c0c0c] leading-snug mb-3 group-hover:text-[#484848] transition-colors">
+        <h2 className="text-base font-bold text-gray-900] leading-snug mb-3 group-hover:text-[#484848] transition-colors">
           {isAr ? post.titleAr : post.title}
         </h2>
         <p className="text-sm text-[#484848] leading-relaxed mb-4">
@@ -110,7 +110,7 @@ export default async function BlogPage({
           <span className="text-xs text-[#9ca3af]">{post.date}</span>
           <Link
             href={`/blog/${post.slug}`}
-            className="text-xs font-semibold text-[#0c0c0c] border-b border-[#0c0c0c] pb-0.5 hover:text-[#484848] hover:border-[#484848] transition-colors"
+            className="text-xs font-semibold text-gray-900] border-b border-[#0c0c0c] pb-0.5 hover:text-[#484848] hover:border-[#484848] transition-colors"
           >
             {isAr ? "اقرأ المزيد" : "Read more"}
           </Link>
@@ -125,13 +125,13 @@ export default async function BlogPage({
       <section className="bg-white border-b border-[rgba(0,0,0,0.08)] py-12 md:py-16">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
           <p className="text-xs uppercase tracking-widest text-[#484848] mb-3">
-            <Link href="/" className="hover:text-[#0c0c0c] transition-colors">
+            <Link href="/" className="hover:text-gray-900] transition-colors">
               {isAr ? "الرئيسية" : "Home"}
             </Link>
             <span className="mx-2">/</span>
             {isAr ? "المدونة" : "Blog"}
           </p>
-          <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-[#0c0c0c]">
+          <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900]">
             {isAr ? "المدونة" : "Blog"}
           </h1>
         </div>

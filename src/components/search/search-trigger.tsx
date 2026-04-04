@@ -78,19 +78,19 @@ export function SearchTrigger() {
             onKeyDown={handleKeyDown}
           >
             <form onSubmit={handleSearch} className="flex items-center gap-3">
-              <Search className="w-5 h-5 text-dark flex-shrink-0" />
+              <Search className="w-5 h-5 text-gray-800 flex-shrink-0" />
               <input
                 ref={inputRef}
                 type="text"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder={t("common.searchPlaceholder")}
-                className="flex-1 text-lg text-primary placeholder:text-dark/50 outline-none"
+                className="flex-1 text-lg text-gray-900 placeholder:text-gray-800/50 outline-none"
               />
               <button
                 type="button"
                 onClick={() => setIsOpen(false)}
-                className="p-1 text-dark hover:text-primary cursor-pointer"
+                className="p-1 text-gray-800 hover:text-gray-900 cursor-pointer"
                 aria-label="Close search"
               >
                 <X className="w-5 h-5" />

@@ -50,7 +50,7 @@ export function SpaceTypology({ isAr }: { isAr: boolean }) {
                 sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 17vw"
               />
               {/* Light overlay for readability */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-gray-600/20 via-transparent to-transparent" />
               {/* Hover overlay */}
               <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               {/* Label */}

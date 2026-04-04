@@ -30,7 +30,7 @@ export default async function InspirationsPage({
     <PageWrapper id="main-content" className="flex-1 bg-white">
       <div className="max-w-screen-xl mx-auto px-4 md:px-8 py-20 text-center">
         <Reveal>
-          <h1 className="text-3xl md:text-4xl font-bold text-[#0c0c0c] tracking-tight mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-900] tracking-tight mb-4">
             {isAr ? "الإلهام" : "Inspirations"}
           </h1>
           <p className="text-[#484848] text-base max-w-md mx-auto mb-8">

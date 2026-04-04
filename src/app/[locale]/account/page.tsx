@@ -30,7 +30,7 @@ export default async function AccountPage({
           <div className="w-16 h-16 rounded-full bg-[#f2f2f2] flex items-center justify-center mx-auto mb-6">
             <User className="w-7 h-7 text-[#484848]" />
           </div>
-          <h1 className="text-2xl font-bold text-[#0c0c0c] tracking-tight mb-3">
+          <h1 className="text-2xl font-bold text-gray-900] tracking-tight mb-3">
             {isAr ? "تسجيل الدخول" : "Sign In"}
           </h1>
           <p className="text-[#484848] text-sm mb-8">
@@ -44,13 +44,13 @@ export default async function AccountPage({
               type="email"
               placeholder={isAr ? "البريد الإلكتروني" : "Email address"}
               className="w-full border border-[rgba(0,0,0,0.21)] rounded-sm px-4 py-3 text-sm
-                text-[#0c0c0c] placeholder:text-[#484848]/60 focus:outline-none focus:border-[#0c0c0c]"
+                text-gray-900] placeholder:text-[#484848]/60 focus:outline-none focus:border-[#0c0c0c]"
             />
             <input
               type="password"
               placeholder={isAr ? "كلمة المرور" : "Password"}
               className="w-full border border-[rgba(0,0,0,0.21)] rounded-sm px-4 py-3 text-sm
-                text-[#0c0c0c] placeholder:text-[#484848]/60 focus:outline-none focus:border-[#0c0c0c]"
+                text-gray-900] placeholder:text-[#484848]/60 focus:outline-none focus:border-[#0c0c0c]"
             />
             <button
               className="w-full bg-white text-white py-3 text-sm font-semibold rounded-sm
@@ -62,7 +62,7 @@ export default async function AccountPage({
 
           <p className="text-xs text-[#484848] mt-6">
             {isAr ? "ليس لديك حساب؟ " : "Don't have an account? "}
-            <span className="underline underline-offset-2 cursor-pointer hover:text-[#0c0c0c]">
+            <span className="underline underline-offset-2 cursor-pointer hover:text-gray-900]">
               {isAr ? "سجّل الآن" : "Register"}
             </span>
           </p>

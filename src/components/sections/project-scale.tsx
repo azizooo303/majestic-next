@@ -59,7 +59,7 @@ export function ProjectScale({ isAr }: { isAr: boolean }) {
             <p className="text-xs uppercase tracking-widest text-[#484848] mb-2">
               {isAr ? "مشاريع منجزة" : "Completed Projects"}
             </p>
-            <h2 className="text-2xl md:text-3xl font-bold text-[#0c0c0c] tracking-tight">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900] tracking-tight">
               {isAr ? "تجهيز على المستوى المؤسسي" : "Built for Institutional Scale"}
             </h2>
           </div>
@@ -116,7 +116,7 @@ export function ProjectScale({ isAr }: { isAr: boolean }) {
                 {/* CTA */}
                 <Link
                   href="/about"
-                  className="btn-press inline-block self-start bg-[#0c0c0c] text-white px-7 py-3 text-sm font-semibold rounded-sm hover:bg-[#333] transition-colors"
+                  className="btn-press inline-block self-start bg-white] text-white px-7 py-3 text-sm font-semibold rounded-sm hover:bg-[#333] transition-colors"
                 >
                   {isAr ? "اطلب استشارة مشروع" : "Request a Project Consultation"}
                 </Link>

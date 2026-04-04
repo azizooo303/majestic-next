@@ -67,7 +67,7 @@ export default async function LocaleLayout({
       dir={isRTL ? "rtl" : "ltr"}
       className={`${raleway.variable} ${montserrat.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-white text-[#0c0c0c] font-sans pt-[76px] md:pt-[196px]">
+      <body className="min-h-full flex flex-col bg-white text-gray-900] font-sans pt-[76px] md:pt-[196px]">
         <NextIntlClientProvider messages={messages}>
           <a
             href="#main-content"
