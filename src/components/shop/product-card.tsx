@@ -37,11 +37,12 @@ export function ProductCard({
             </span>
           )}
           <Image
-            src={image}
+            src={image || "https://thedeskco.net/wp-content/uploads/2026/03/hero_office_desktop_en-1.png"}
             alt={name}
             fill
             className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
             sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
+            onError={(e) => { (e.target as HTMLImageElement).src = "https://thedeskco.net/wp-content/uploads/2026/03/hero_office_desktop_en-1.png"; }}
           />
         </div>
         <div className="p-3 pb-2">
@@ -71,8 +72,8 @@ export function ProductCard({
       {/* Add to Cart — outside the Link */}
       <div className="px-3 pb-3">
         <button
-          className="btn-press w-full bg-white] text-white py-2 text-xs font-semibold
-            rounded-sm hover:bg-[#333] transition-colors cursor-pointer"
+          className="btn-press w-full bg-[#2C2C2C] text-white py-2 text-xs font-semibold
+            rounded-sm hover:bg-[#C1B167] transition-colors cursor-pointer"
           onClick={() => {/* cart integration coming */}}
         >
           {isAr ? "أضف إلى السلة" : "Add to Cart"}
