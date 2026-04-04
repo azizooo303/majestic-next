@@ -4,7 +4,7 @@ import { ProductGallery } from "@/components/product/product-gallery";
 import { Reveal } from "@/components/common/reveal";
 import { StaggerGrid } from "@/components/common/stagger-grid";
 import { ProductCard } from "@/components/shop/product-card";
-import { QuantitySelector } from "@/components/shop/quantity-selector";
+import { AddToCartButton } from "@/components/product/add-to-cart-button";
 import { JsonLd } from "@/components/common/json-ld";
 import { ChevronRight, Truck, Clock, Wrench } from "lucide-react";
 import type { Metadata } from "next";
@@ -189,16 +189,21 @@ export default async function ProductDetailPage({
 
               {/* Quantity + Add to Cart */}
               <div className="space-y-3">
-                <QuantitySelector isAr={isAr} />
+                <AddToCartButton
+                  productId={product.id}
+                  locale={locale}
+                  product={{
+                    name: product.name,
+                    nameAr: product.name,
+                    price,
+                    image: images[0]?.src ?? "",
+                    category,
+                    categoryAr: category,
+                  }}
+                />
                 <button
-                  className="btn-press w-full bg-white text-white py-4 font-semibold
-                    rounded-sm hover:bg-[#333] transition-colors cursor-pointer text-sm"
-                >
-                  {isAr ? "أضف إلى السلة" : "Add to Cart"}
-                </button>
-                <button
-                  className="btn-press w-full border border-[#0c0c0c] text-gray-900] py-4
-                    font-semibold rounded-sm hover:bg-white transition-colors cursor-pointer text-sm"
+                  className="btn-press w-full border border-[#0c0c0c] text-gray-900 py-4
+                    font-semibold rounded-sm hover:bg-gray-50 transition-colors cursor-pointer text-sm"
                 >
                   {isAr ? "طلب عرض سعر" : "Request a Quote"}
                 </button>
