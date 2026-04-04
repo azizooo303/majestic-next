@@ -117,12 +117,54 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-white text-black;
     overflow-x: hidden;
+    padding: 0;
+    margin: 0;
   }
   html {
     @apply font-sans;
     overflow-x: hidden;
+    background-color: #FFFFFF;
+    color: #000000;
+  }
+  
+  /* Proper spacing for readability */
+  h1, h2, h3, h4, h5, h6 {
+    @apply mb-6 mt-8;
+    font-weight: 600;
+    color: #000000;
+  }
+  
+  h1 { @apply text-4xl; }
+  h2 { @apply text-3xl; }
+  h3 { @apply text-2xl; }
+  h4 { @apply text-xl; }
+  h5, h6 { @apply text-lg; }
+  
+  p {
+    @apply mb-4 leading-relaxed;
+    color: #000000;
+  }
+  
+  section {
+    @apply py-12 px-6;
+  }
+  
+  button {
+    @apply bg-black text-white px-8 py-3 rounded transition;
+  }
+  
+  button:hover {
+    @apply bg-gray-800;
+  }
+  
+  a {
+    @apply text-black underline;
+  }
+  
+  a:hover {
+    @apply text-gray-700;
   }
 
   /* Arabic: use Alyamama font, zero letter-spacing */
