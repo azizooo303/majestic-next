@@ -58,7 +58,7 @@ export function TrackForm({ isAr }: TrackFormProps) {
             const bgClass = step.done
               ? "bg-[#484848]"
               : step.active
-              ? "bg-[#0c0c0c]"
+              ? "bg-white"
               : "bg-[rgba(0,0,0,0.12)]";
 
             return (
@@ -161,7 +161,7 @@ export function TrackForm({ isAr }: TrackFormProps) {
 
         <button
           type="submit"
-          className="btn-press w-full bg-[#0c0c0c] text-white py-3.5 font-semibold text-sm
+          className="btn-press w-full bg-white text-white py-3.5 font-semibold text-sm
             tracking-wide rounded-sm hover:bg-[#333] transition-colors"
         >
           {isAr ? "تتبع الطلب" : "Track Order"}
