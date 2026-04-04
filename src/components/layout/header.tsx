@@ -301,7 +301,7 @@ export function Header({ announcement }: HeaderProps) {
               {/* Search — desktop + tablet */}
               <button
                 onClick={() => setIsSearchOpen(true)}
-                className="flex p-2 md:p-2.5 text-gray-900] hover:text-[#484848] transition-colors cursor-pointer"
+                className="flex p-2 md:p-2.5 text-gray-900] hover:text-[#484848] transition-colors cursor-pointer outline-none"
                 aria-label={locale === "ar" ? "بحث" : "Search"}
               >
                 <Search className="w-5 h-5" />
