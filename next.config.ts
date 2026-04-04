@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 import createNextIntlPlugin from "next-intl/plugin";
 import withBundleAnalyzer from "@next/bundle-analyzer";
+import { withSentryConfig } from "@sentry/nextjs";
 
 const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 const withAnalyzer = withBundleAnalyzer({ enabled: process.env.ANALYZE === "true" });
@@ -29,5 +30,13 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default withAnalyzer(withNextIntl(nextConfig));
+const baseConfig = withAnalyzer(withNextIntl(nextConfig));
+
+export default withSentryConfig(baseConfig, {
+  org: "majestic-furniture",
+  project: "majestic-next",
+  silent: true,
+  widenClientFileUpload: true,
+  sourcemaps: { disable: true },
+});
 

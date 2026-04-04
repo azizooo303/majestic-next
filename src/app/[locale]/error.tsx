@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { useLocale } from "next-intl";
+import * as Sentry from "@sentry/nextjs";
 
 export default function Error({
   error,
@@ -14,7 +15,7 @@ export default function Error({
   const isAr = locale === "ar";
 
   useEffect(() => {
-    console.error("[Error Boundary]", error);
+    Sentry.captureException(error);
   }, [error]);
 
   return (

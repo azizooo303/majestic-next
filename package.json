@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
+    "@sentry/nextjs": "^10.47.0",
     "@supabase/supabase-js": "^2.101.1",
     "class-variance-authority": "^0.7.1",
     "cloudinary": "^2.9.0",
