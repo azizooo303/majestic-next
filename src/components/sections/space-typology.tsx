@@ -22,11 +22,11 @@ const PANELS: Panel[] = [
 
 export function SpaceTypology({ isAr }: { isAr: boolean }) {
   return (
-    <section className="relative w-full bg-[rgba(12,12,12,0.85)] overflow-hidden">
+    <section className="relative w-full bg-white overflow-hidden">
       <SectionArchOverlay variant="grid" color="rgba(255,255,255,1)" opacity={0.05} />
       <FadeDown>
         <div className="max-w-screen-2xl mx-auto px-4 md:px-6 lg:px-8 pt-10 pb-4">
-          <h2 className="text-xs uppercase tracking-widest text-[#aaaaaa] mb-6">
+          <h2 className="text-xs uppercase tracking-widest text-gray-600 mb-6">
             {isAr ? "حلول تجهيز لكل فضاء عمل" : "Every Space Has a Standard"}
           </h2>
         </div>
@@ -49,10 +49,10 @@ export function SpaceTypology({ isAr }: { isAr: boolean }) {
                 className="object-cover transition-transform duration-300 group-hover:scale-[1.04]"
                 sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 17vw"
               />
-              {/* Dark gradient overlay always present */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+              {/* Light overlay for readability */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
               {/* Hover overlay */}
-              <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               {/* Label */}
               <div className="absolute bottom-0 start-0 end-0 p-4">
                 <p className="text-white text-sm font-semibold leading-tight">

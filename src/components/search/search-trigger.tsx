@@ -58,10 +58,10 @@ export function SearchTrigger() {
     <>
       <button
         onClick={() => setIsOpen(true)}
-        className="p-2 text-primary hover:text-gold transition-colors cursor-pointer"
+        className="p-2 text-gray-700 hover:text-gray-900 transition-colors cursor-pointer"
         aria-label={t("common.search")}
       >
-        <Search className="w-5 h-5" />
+        <Search className="w-5 h-5 stroke-[2]" />
       </button>
 
       {isOpen && (
