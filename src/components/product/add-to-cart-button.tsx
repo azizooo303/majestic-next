@@ -69,10 +69,10 @@ export function AddToCartButton({ productId, locale, product }: AddToCartButtonP
       <button
         onClick={handleAddToCart}
         disabled={added}
-        className="w-full flex items-center justify-center gap-2 px-6 py-3.5
-          bg-gold text-gray-900 font-medium rounded-md
-          transition-all duration-200 hover:opacity-90 hover:-translate-y-0.5
-          focus:outline-none focus:ring-2 focus:ring-gold/50
+        className="w-full flex items-center justify-center gap-2 px-4 sm:px-6 py-3 sm:py-3.5
+          bg-gray-900 text-white font-semibold text-sm sm:text-base rounded-sm
+          transition-all duration-200 hover:opacity-90 active:scale-95
+          focus:outline-none focus:ring-2 focus:ring-gray-400
           disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
       >
         <ShoppingBag className="w-5 h-5" />
@@ -82,8 +82,8 @@ export function AddToCartButton({ productId, locale, product }: AddToCartButtonP
       </button>
 
       {/* Wishlist */}
-      <button className="w-full text-sm font-medium text-gray-800 hover:text-gray-900
-        transition-colors underline-offset-4 hover:underline cursor-pointer">
+      <button className="w-full px-4 py-2 text-sm font-medium text-gray-800 hover:text-gray-900 border border-gray-300 rounded-sm
+        transition-all duration-200 hover:border-gray-900 cursor-pointer">
         {isAr ? "أضف إلى المفضلة" : "Add to Wishlist"}
       </button>
     </div>
