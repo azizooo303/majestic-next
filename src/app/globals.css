@@ -148,23 +148,24 @@
   }
   
   section {
-    @apply py-12 px-6;
+    @apply py-12 px-6 bg-white;
   }
   
   button {
-    @apply bg-black text-white px-8 py-3 rounded transition;
+    @apply bg-white text-black px-8 py-3 border border-black transition;
   }
   
   button:hover {
-    @apply bg-gray-800;
+    @apply bg-white text-black border-black;
+    opacity: 0.8;
   }
   
   a {
-    @apply text-black underline;
+    @apply text-black;
   }
   
   a:hover {
-    @apply text-gray-700;
+    opacity: 0.7;
   }
 
   /* Arabic: use Alyamama font, zero letter-spacing */
