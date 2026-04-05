@@ -2,12 +2,8 @@ import { notFound } from "next/navigation";
 import { Link } from "@/i18n/navigation";
 import { PageWrapper } from "@/components/common/page-wrapper";
 import { ProjectGallery } from "@/components/sections/project-gallery";
-import { PROJECTS, getProjectBySlug } from "@/data/projects";
+import { getProjectBySlug } from "@/data/projects";
 import type { Metadata } from "next";
-
-export async function generateStaticParams() {
-  return PROJECTS.map((p) => ({ slug: p.slug }));
-}
 
 export async function generateMetadata({
   params,
