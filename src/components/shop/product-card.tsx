@@ -3,6 +3,15 @@
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 
+function parseCategory(raw: string): string {
+  return raw
+    .replace(/&amp;/gi, "&")
+    .replace(/&lt;/gi, "<")
+    .replace(/&gt;/gi, ">")
+    .replace(/&quot;/gi, '"')
+    .replace(/&#039;/gi, "'");
+}
+
 export interface ProductCardProps {
   id: number;
   name: string;
@@ -46,13 +55,13 @@ export function ProductCard({
           />
         </div>
         <div className="p-3 pb-2">
-          <p className="text-xs text-[#484848] uppercase tracking-wide">{category}</p>
-          <h3 className="text-sm font-bold text-gray-900] mt-1 leading-tight">{name}</h3>
+          <p className="text-xs text-[#484848] uppercase tracking-wide">{parseCategory(category)}</p>
+          <h3 className="text-sm font-bold text-[#0c0c0c] mt-1 leading-tight">{name}</h3>
           {brand && <p className="text-xs text-[#484848] mt-0.5">{brand}</p>}
           <div className="flex items-center gap-2 mt-2">
             {price > 0 ? (
               <>
-                <span className="font-bold text-gray-900] text-sm">
+                <span className="font-bold text-[#0c0c0c] text-sm">
                   {isAr ? `${price.toLocaleString("ar-SA")} ر.س` : `SAR ${price.toLocaleString()}`}
                 </span>
                 {originalPrice && (
@@ -72,8 +81,8 @@ export function ProductCard({
       {/* Add to Cart — outside the Link */}
       <div className="px-3 pb-3">
         <button
-          className="btn-press w-full bg-[#2C2C2C] text-white py-2 text-xs font-semibold
-            rounded-sm hover:bg-[#C1B167] transition-colors cursor-pointer"
+          className="w-full bg-[#0c0c0c] text-white py-2 text-xs font-semibold
+            rounded-none hover:bg-[#333] transition-colors cursor-pointer"
           onClick={() => {/* cart integration coming */}}
         >
           {isAr ? "أضف إلى السلة" : "Add to Cart"}

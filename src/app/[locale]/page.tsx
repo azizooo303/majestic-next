@@ -100,21 +100,24 @@ export default async function HomePage({
     <Link
       key={cat.slug}
       href={`/shop?category=${cat.slug}`}
-      className="flex flex-col items-center gap-2 min-w-[72px] group"
+      className="group relative flex flex-col overflow-hidden border border-[rgba(0,0,0,0.21)] hover:border-[rgba(0,0,0,0.38)] active:scale-[0.99] transition-all focus-visible:outline-2 focus-visible:outline-[#0c0c0c] focus-visible:outline-offset-2"
     >
-      <div className="w-16 h-16 bg-white border border-[rgba(0,0,0,0.12)] overflow-hidden rounded-sm">
+      <div className="relative aspect-[3/4] bg-[#fafafa] overflow-hidden">
         <Image
           src={cat.image}
           alt={t(`categories.${cat.key}`)}
-          width={64}
-          height={64}
+          fill
           loading="lazy"
-          className="object-cover w-full h-full group-hover:scale-[1.03] transition-transform duration-200"
+          className="object-cover group-hover:scale-[1.05] transition-transform duration-300"
+          sizes="(max-width: 768px) 33vw, 17vw"
         />
+        <div className="absolute inset-0 bg-black/15 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
       </div>
-      <span className="text-xs font-medium text-gray-900] text-center whitespace-nowrap group-hover:text-[#484848]">
-        {t(`categories.${cat.key}`)}
-      </span>
+      <div className="py-3 text-center">
+        <span className="text-[12px] font-semibold text-[#0c0c0c] uppercase tracking-[0.06em]">
+          {t(`categories.${cat.key}`)}
+        </span>
+      </div>
     </Link>
   ));
 
@@ -168,13 +171,16 @@ export default async function HomePage({
         <HeroBanner slides={heroSlides} />
       </SectionReveal>
 
-      {/* Category Navigation Strip */}
+      {/* Category Grid */}
       <SectionReveal direction="up" distance={40} duration={0.6}>
-        <section className="w-full bg-white border-b border-[rgba(0,0,0,0.21)] py-6">
+        <section className="w-full bg-white border-b border-[rgba(0,0,0,0.12)] pt-12">
           <div className="max-w-screen-2xl mx-auto px-4 md:px-6 lg:px-8">
+            <p className={`mb-6 uppercase text-[#484848] ${isAr ? "font-alyamama text-[14px] tracking-normal" : "text-[13px] tracking-[0.08em] font-bold"}`}>
+              {isAr ? "تصفح حسب الفئة" : "Browse by Category"}
+            </p>
             <StaggerChildren
               staggerDelay={0.05}
-              className="flex overflow-x-auto gap-6 no-scrollbar justify-start md:justify-center"
+              className="grid grid-cols-3 md:grid-cols-6 gap-[15px]"
             >
               {categoryItems}
             </StaggerChildren>
@@ -184,16 +190,16 @@ export default async function HomePage({
 
       {/* Featured Products */}
       <SectionReveal direction="fade-scale" duration={0.75}>
-        <section className="bg-white py-12 md:py-16">
+        <section className="bg-white py-20">
           <div className="max-w-screen-2xl mx-auto px-4 md:px-6 lg:px-8">
             <FadeUp>
-              <div className="flex items-center justify-between mb-8">
-                <h2 className="text-2xl md:text-3xl font-bold text-gray-900] tracking-tight">
+              <div className="flex items-baseline justify-between mb-10">
+                <h2 className={`font-bold text-[#0c0c0c] ${isAr ? "font-alyamama text-[31px] md:text-[46px] leading-[1.1em] tracking-normal" : "text-[28px] md:text-[42px] leading-[1.05em] tracking-[-0.02em]"}`}>
                   {isAr ? "مختارات هذا الموسم" : "Selected for This Season"}
                 </h2>
                 <Link
                   href="/shop"
-                  className="text-sm font-medium text-[#484848] hover:text-gray-900] border-b border-[#484848] pb-0.5"
+                  className="text-[13px] font-medium text-[#484848] hover:text-[#0c0c0c] border-b border-[#484848] hover:border-[#0c0c0c] pb-0.5 whitespace-nowrap"
                 >
                   {isAr ? "عرض الكل" : t("common.viewAll")}
                 </Link>
@@ -210,8 +216,8 @@ export default async function HomePage({
             <div className="text-center mt-10">
               <Link
                 href="/shop"
-                className="btn-press inline-block bg-white text-white px-10 py-3.5 font-semibold
-                  text-sm tracking-wide rounded-sm hover:bg-[#333] transition-colors"
+                className="inline-block bg-[#0c0c0c] text-white px-10 py-3.5 min-h-[48px] font-semibold
+                  text-sm tracking-wide rounded-none hover:bg-[#333] transition-colors"
               >
                 {isAr ? "تسوق جميع المنتجات" : "Shop All Products"}
               </Link>
@@ -268,7 +274,7 @@ export default async function HomePage({
       <FadeUp>
         <section className="border-t border-[rgba(0,0,0,0.08)] py-12 bg-white">
           <div className="max-w-md mx-auto px-4 text-center">
-            <h2 className="text-xl font-semibold text-gray-900]">
+            <h2 className="text-xl font-semibold text-[#0c0c0c]">
               {isAr ? "ابقَ على اطلاع" : "Stay Informed"}
             </h2>
             <p className="text-[#484848] text-sm mt-2">
@@ -283,7 +289,7 @@ export default async function HomePage({
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#484848] hover:text-gray-900] text-sm transition-colors"
+                className="text-[#484848] hover:text-[#0c0c0c] text-sm transition-colors"
               >
                 Instagram
               </a>
@@ -291,7 +297,7 @@ export default async function HomePage({
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#484848] hover:text-gray-900] text-sm transition-colors"
+                className="text-[#484848] hover:text-[#0c0c0c] text-sm transition-colors"
               >
                 LinkedIn
               </a>
@@ -299,7 +305,7 @@ export default async function HomePage({
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#484848] hover:text-gray-900] text-sm transition-colors"
+                className="text-[#484848] hover:text-[#0c0c0c] text-sm transition-colors"
               >
                 Facebook
               </a>

@@ -12,11 +12,11 @@ const IMAGES = [
 
 export function CraftsmanshipBand({ isAr }: { isAr: boolean }) {
   return (
-    <section className="w-full bg-white,0.85)] py-14 md:py-20 overflow-hidden">
+    <section className="w-full bg-white py-16 overflow-hidden">
       {/* Overline */}
       <FadeUp>
         <div className="max-w-screen-2xl mx-auto px-4 md:px-6 lg:px-8 pb-8">
-          <p className="text-xs uppercase tracking-widest text-[#aaaaaa]">
+          <p className="text-xs uppercase tracking-widest text-[#484848]">
             {isAr ? "تفاصيل التصنيع والتشطيب" : "Construction Detail"}
           </p>
         </div>
@@ -42,8 +42,8 @@ export function CraftsmanshipBand({ isAr }: { isAr: boolean }) {
 
       {/* Centered bilingual tagline */}
       <FadeUp>
-        <div className="text-center mt-10 px-4">
-          <p className="text-white text-lg font-semibold tracking-widest uppercase">
+        <div className="text-center mt-12 px-4">
+          <p className="text-[#0c0c0c] text-lg font-semibold tracking-widest uppercase">
             {isAr ? "كل سطح. وفق مواصفة." : "Every surface. Considered."}
           </p>
         </div>

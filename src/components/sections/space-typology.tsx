@@ -2,7 +2,6 @@ import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { FadeDown } from "@/components/common/fade-down";
 import { SlideIn } from "@/components/common/slide-in";
-import { SectionArchOverlay } from "@/components/sections/section-arch-overlay";
 
 interface Panel {
   image: string;
@@ -23,7 +22,6 @@ const PANELS: Panel[] = [
 export function SpaceTypology({ isAr }: { isAr: boolean }) {
   return (
     <section className="relative w-full bg-white overflow-hidden">
-      <SectionArchOverlay variant="grid" color="rgba(255,255,255,1)" opacity={0.05} />
       <FadeDown>
         <div className="max-w-screen-2xl mx-auto px-4 md:px-6 lg:px-8 pt-10 pb-4">
           <h2 className="text-xs uppercase tracking-widest text-gray-600 mb-6">

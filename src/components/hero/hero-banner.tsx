@@ -118,10 +118,9 @@ export function HeroBanner({ slides, slide }: HeroBannerProps) {
   return (
     <section
       className={cn(
-        "relative w-full overflow-hidden bg-white",
-        "min-h-[100svh] md:min-h-[90vh]"
+        "relative w-full overflow-hidden bg-white border-b border-[rgba(0,0,0,0.12)]",
+        "min-h-[640px] md:min-h-[715px]"
       )}
-      style={{ minHeight: "640px" }}
       aria-label="Featured collections"
       aria-live="polite"
       role="region"
@@ -214,8 +213,8 @@ export function HeroBanner({ slides, slide }: HeroBannerProps) {
       )}
 
       {/* ── Text content — slides in per slide ── */}
-      <div className="absolute bottom-0 start-0 end-0 z-20 ps-4 pe-4 pb-16 sm:ps-6 sm:pb-16 md:ps-10 md:pe-10 md:pb-16 lg:ps-16 lg:pb-20">
-        <div style={{ maxWidth: "540px" }}>
+      <div className="absolute bottom-0 start-0 end-0 z-20 ps-4 pe-4 pb-14 sm:ps-6 sm:pb-16 md:ps-10 md:pe-[120px] md:pb-[72px] lg:ps-16 lg:pe-[200px] lg:pb-20">
+        <div style={{ maxWidth: "600px" }}>
           <AnimatePresence mode="wait">
             <motion.div
               key={`text-${activeIdx}`}
@@ -322,7 +321,7 @@ export function HeroBanner({ slides, slide }: HeroBannerProps) {
       {/* ── Slide indicators — numbered architectural lines ── */}
       {total > 1 && (
         <div
-          className="absolute bottom-5 md:bottom-10 start-1/2 -translate-x-1/2 z-30 flex gap-4 items-end"
+          className="absolute bottom-6 md:bottom-8 start-1/2 -translate-x-1/2 z-30 flex gap-4 items-end"
           role="tablist"
           aria-label={isAr ? "شرائح البانر" : "Hero slides"}
         >

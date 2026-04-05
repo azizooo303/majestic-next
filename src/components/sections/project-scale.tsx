@@ -4,7 +4,6 @@ import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { motion } from "framer-motion";
 import { FadeDown } from "@/components/common/fade-down";
-import { SectionArchOverlay } from "@/components/sections/section-arch-overlay";
 import { CountUp } from "@/components/common/count-up";
 import { ease } from "@/lib/motion";
 
@@ -51,15 +50,14 @@ const PROJECTS: Project[] = [
 
 export function ProjectScale({ isAr }: { isAr: boolean }) {
   return (
-    <section className="relative w-full bg-white py-14 md:py-20 overflow-hidden">
-      <SectionArchOverlay variant="dimension" opacity={0.07} />
+    <section className="relative w-full bg-white py-16 overflow-hidden">
       <div className="max-w-screen-2xl mx-auto px-4 md:px-6 lg:px-8">
         <FadeDown>
           <div className="mb-10">
             <p className="text-xs uppercase tracking-widest text-[#484848] mb-2">
               {isAr ? "مشاريع منجزة" : "Completed Projects"}
             </p>
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900] tracking-tight">
+            <h2 className="text-2xl md:text-[36px] font-bold text-[#0c0c0c] tracking-[-0.02em]">
               {isAr ? "تجهيز على المستوى المؤسسي" : "Built for Institutional Scale"}
             </h2>
           </div>
@@ -69,11 +67,11 @@ export function ProjectScale({ isAr }: { isAr: boolean }) {
           {PROJECTS.map((project, i) => (
             <div
               key={i}
-              className={`flex flex-col md:flex-row gap-0 overflow-hidden border border-[rgba(0,0,0,0.12)] ${isAr ? "md:flex-row-reverse" : ""}`}
+              className={`flex flex-col md:flex-row gap-0 overflow-hidden border border-[rgba(0,0,0,0.21)] ${isAr ? "md:flex-row-reverse" : ""}`}
             >
               {/* Image — slides in from left (or right in RTL) */}
               <motion.div
-                className="relative w-full md:w-1/2 aspect-[16/9] md:aspect-auto min-h-[280px]"
+                className="relative w-full md:w-1/2 aspect-[16/9] md:aspect-auto min-h-[320px]"
                 initial={{ opacity: 0, x: isAr ? 40 : -40 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: false, amount: 0.2 }}
@@ -116,7 +114,7 @@ export function ProjectScale({ isAr }: { isAr: boolean }) {
                 {/* CTA */}
                 <Link
                   href="/about"
-                  className="btn-press inline-block self-start bg-white] text-white px-7 py-3 text-sm font-semibold rounded-sm hover:bg-[#333] transition-colors"
+                  className="inline-block self-start bg-[#0c0c0c] text-white px-7 py-3 min-h-[44px] text-sm font-semibold rounded-none hover:bg-[#333] transition-colors"
                 >
                   {isAr ? "اطلب استشارة مشروع" : "Request a Project Consultation"}
                 </Link>

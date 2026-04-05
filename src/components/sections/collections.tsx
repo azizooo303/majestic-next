@@ -37,7 +37,7 @@ const COLLECTIONS: Collection[] = [
 
 export function Collections({ isAr }: { isAr: boolean }) {
   return (
-    <section className="w-full bg-white py-14 md:py-20">
+    <section className="w-full bg-white py-20">
       <div className="max-w-screen-2xl mx-auto px-4 md:px-6 lg:px-8">
         <FadeUp>
           <div className="flex items-end justify-between mb-10">

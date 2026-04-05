@@ -12,7 +12,15 @@
     "ship": "node scripts/majestic.js ship",
     "deploy": "node scripts/majestic.js deploy",
     "status": "node scripts/majestic.js status",
-    "majestic": "node scripts/majestic.js"
+    "majestic": "node scripts/majestic.js",
+    "screenshot": "npx playwright test visual-scan.spec.ts --reporter=list",
+    "screenshot:regression": "npx playwright test tests/visual-regression.spec.ts",
+    "screenshot:update": "npx playwright test tests/visual-regression.spec.ts --update-snapshots",
+    "tokens:sync": "node scripts/sync-tokens.js",
+    "tokens:check": "node scripts/sync-tokens.js --check",
+    "tokens:watch": "node scripts/sync-tokens.js --watch",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
@@ -38,6 +46,9 @@
   "devDependencies": {
     "@next/bundle-analyzer": "^16.2.2",
     "@playwright/test": "^1.59.1",
+    "@storybook/addon-a11y": "^10.3.4",
+    "@storybook/addon-interactions": "^8.6.14",
+    "@storybook/nextjs": "^10.3.4",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
@@ -45,6 +56,8 @@
     "eslint": "^9",
     "eslint-config-next": "16.2.2",
     "pg": "^8.20.0",
+    "storybook": "^10.3.4",
+    "storybook-addon-rtl": "^3.0.1",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
