@@ -3,6 +3,7 @@ import { Link } from "@/i18n/navigation";
 import { PageWrapper } from "@/components/common/page-wrapper";
 import { Reveal } from "@/components/common/reveal";
 import { StaggerGrid } from "@/components/common/stagger-grid";
+import { PROJECTS } from "@/data/projects";
 import type { Metadata } from "next";
 
 export async function generateMetadata({
@@ -13,10 +14,12 @@ export async function generateMetadata({
   const { locale } = await params;
   const isAr = locale === "ar";
   return {
-    title: isAr ? "مشاريعنا — حلول الأثاث للشركات والمؤسسات | ماجيستيك" : "Our Projects — Corporate & Institutional Furniture Solutions | Majestic",
+    title: isAr
+      ? "مشاريعنا — حلول الأثاث للشركات والمؤسسات | ماجيستيك"
+      : "Our Projects — Corporate & Institutional Furniture Solutions | Majestic",
     description: isAr
-      ? "استعرض مشاريع ماجيستيك في تأثيث المكاتب للشركات الكبرى، المستشفيات، الجامعات، والفنادق في المملكة العربية السعودية. 500+ مشروع منجز."
-      : "Explore Majestic's completed furniture projects for major corporations, hospitals, universities, and hotels across Saudi Arabia. 500+ projects delivered.",
+      ? "استعرض مشاريع ماجيستيك في تأثيث المكاتب للشركات الكبرى، المستشفيات، الجامعات، والفنادق في المملكة العربية السعودية."
+      : "Explore Majestic's completed furniture projects for major corporations, hospitals, and government institutions across Saudi Arabia.",
     alternates: {
       canonical: `https://thedeskco.net/${locale}/projects`,
       languages: {
@@ -25,99 +28,20 @@ export async function generateMetadata({
         "x-default": "https://thedeskco.net/en/projects",
       },
     },
-    openGraph: {
-      title: isAr ? "مشاريعنا | ماجيستيك" : "Our Projects | Majestic Furniture",
-      description: isAr
-        ? "مشاريع أثاث مكتبي للشركات والمؤسسات في السعودية."
-        : "Office furniture projects for corporations and institutions across Saudi Arabia.",
-      type: "website",
-      locale: isAr ? "ar_SA" : "en_US",
-      siteName: "Majestic Furniture",
-    },
   };
 }
 
-interface Project {
-  name: string;
-  nameAr: string;
-  client: string;
-  clientAr: string;
-  year: number;
-  category: "Corporate" | "Education" | "Hospitality" | "Healthcare";
-  categoryAr: string;
-  image: string;
-}
-
-const PROJECTS: Project[] = [
-  {
-    name: "Al Rajhi Bank HQ",
-    nameAr: "مقر بنك الراجحي",
-    client: "Al Rajhi Bank",
-    clientAr: "بنك الراجحي",
-    year: 2024,
-    category: "Corporate",
-    categoryAr: "شركات",
-    image: "/images/hero-desks.jpg",
-  },
-  {
-    name: "King Saud University Faculty",
-    nameAr: "كلية جامعة الملك سعود",
-    client: "King Saud University",
-    clientAr: "جامعة الملك سعود",
-    year: 2023,
-    category: "Education",
-    categoryAr: "تعليم",
-    image: "/images/hero-tables.jpg",
-  },
-  {
-    name: "Nobu Hotel Riyadh",
-    nameAr: "فندق نوبو الرياض",
-    client: "Nobu Hospitality",
-    clientAr: "نوبو هوسبيتالتي",
-    year: 2024,
-    category: "Hospitality",
-    categoryAr: "ضيافة",
-    image: "/images/hero-seating.jpg",
-  },
-  {
-    name: "Saudi Aramco Office",
-    nameAr: "مكاتب أرامكو السعودية",
-    client: "Saudi Aramco",
-    clientAr: "أرامكو السعودية",
-    year: 2023,
-    category: "Corporate",
-    categoryAr: "شركات",
-    image: "/images/hero-storage.jpg",
-  },
-  {
-    name: "Mouwasat Medical Center",
-    nameAr: "مركز موواسات الطبي",
-    client: "Mouwasat",
-    clientAr: "موواسات",
-    year: 2024,
-    category: "Healthcare",
-    categoryAr: "رعاية صحية",
-    image: "/images/hero-tables.jpg",
-  },
-  {
-    name: "SABIC Innovation Hub",
-    nameAr: "مركز ابتكار سابك",
-    client: "SABIC",
-    clientAr: "سابك",
-    year: 2022,
-    category: "Corporate",
-    categoryAr: "شركات",
-    image: "/images/hero-desks.jpg",
-  },
-];
-
-const FILTER_LABELS = (isAr: boolean) => [
-  { label: isAr ? "الكل" : "All", value: "all" },
-  { label: isAr ? "شركات" : "Corporate", value: "Corporate" },
-  { label: isAr ? "رعاية صحية" : "Healthcare", value: "Healthcare" },
-  { label: isAr ? "تعليم" : "Education", value: "Education" },
-  { label: isAr ? "ضيافة" : "Hospitality", value: "Hospitality" },
-];
+const CATEGORIES = ["All", "Commercial", "Government", "Finance", "Airlines", "Healthcare", "Residential", "Logistics"];
+const CATEGORIES_AR: Record<string, string> = {
+  All: "الكل",
+  Commercial: "تجاري",
+  Government: "حكومي",
+  Finance: "مالي",
+  Airlines: "طيران",
+  Healthcare: "صحة",
+  Residential: "سكني",
+  Logistics: "لوجستي",
+};
 
 export default async function ProjectsPage({
   params,
@@ -126,58 +50,6 @@ export default async function ProjectsPage({
 }) {
   const { locale } = await params;
   const isAr = locale === "ar";
-  const filters = FILTER_LABELS(isAr);
-
-  const projectItems = PROJECTS.map((project) => (
-    <div
-      key={project.name}
-      className="relative group overflow-hidden rounded-sm border border-[rgba(0,0,0,0.21)] cursor-pointer"
-    >
-      {/* Image */}
-      <div className="relative aspect-[4/3] overflow-hidden">
-        <Image
-          src={project.image}
-          alt={isAr ? project.nameAr : project.name}
-          fill
-          className="object-cover group-hover:scale-[1.03] transition-transform duration-500"
-          sizes="(max-width: 768px) 50vw, 33vw"
-        />
-      </div>
-
-      {/* Hover overlay */}
-      <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4 text-white">
-        <span
-          className={`inline-block text-xs font-semibold uppercase tracking-wider px-2 py-1 rounded-sm mb-2 w-fit ${
-            project.category === "Corporate"
-              ? "bg-white/20"
-              : project.category === "Healthcare"
-              ? "bg-white/20"
-              : project.category === "Education"
-              ? "bg-white/20"
-              : "bg-white/20"
-          }`}
-        >
-          {isAr ? project.categoryAr : project.category}
-        </span>
-        <h3 className="font-bold text-base leading-tight mb-1">
-          {isAr ? project.nameAr : project.name}
-        </h3>
-        <p className="text-white/70 text-xs">
-          {isAr ? project.clientAr : project.client} · {project.year}
-        </p>
-      </div>
-
-      {/* Always-visible footer */}
-      <div className="p-4 bg-white">
-        <h3 className="font-bold text-gray-900] text-sm truncate">
-          {isAr ? project.nameAr : project.name}
-        </h3>
-        <p className="text-[#484848] text-xs mt-0.5">
-          {isAr ? project.clientAr : project.client} · {project.year}
-        </p>
-      </div>
-    </div>
-  ));
 
   return (
     <PageWrapper id="main-content" className="flex-1 bg-white">
@@ -185,49 +57,94 @@ export default async function ProjectsPage({
       <section className="bg-white border-b border-[rgba(0,0,0,0.08)] py-12 md:py-16">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
           <p className="text-xs uppercase tracking-widest text-[#484848] mb-3">
-            <Link href="/" className="hover:text-gray-900] transition-colors">
+            <Link href="/" className="hover:text-gray-900 transition-colors">
               {isAr ? "الرئيسية" : "Home"}
             </Link>
             <span className="mx-2">/</span>
             {isAr ? "مشاريعنا" : "Projects"}
           </p>
-          <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900]">
+          <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900">
             {isAr ? "مشاريعنا" : "Our Projects"}
           </h1>
+          <p className="mt-3 text-[#484848] text-sm">
+            {isAr
+              ? `${PROJECTS.length}+ مشروع منجز في المملكة العربية السعودية`
+              : `${PROJECTS.length}+ completed projects across Saudi Arabia`}
+          </p>
         </div>
       </section>
 
       <section className="py-16 md:py-24">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
-          {/* Filter bar */}
+          {/* Filter bar — decorative only (SSR), JS filter can be added later */}
           <Reveal>
             <div
               className="flex gap-2 flex-wrap mb-10"
               role="group"
               aria-label={isAr ? "تصفية المشاريع" : "Filter projects"}
             >
-              {filters.map((f, i) => (
-                <button
-                  key={f.value}
-                  className={`px-4 py-2 text-sm font-medium rounded-sm border transition-colors ${
+              {CATEGORIES.map((cat, i) => (
+                <span
+                  key={cat}
+                  className={`px-4 py-2 text-sm font-medium rounded-sm border ${
                     i === 0
-                      ? "bg-white text-white border-[#0c0c0c]"
-                      : "bg-white text-[#484848] border-[rgba(0,0,0,0.21)] hover:border-[#0c0c0c] hover:text-gray-900]"
+                      ? "bg-[#0c0c0c] text-white border-[#0c0c0c]"
+                      : "bg-white text-[#484848] border-[rgba(0,0,0,0.21)]"
                   }`}
                 >
-                  {f.label}
-                </button>
+                  {isAr ? CATEGORIES_AR[cat] : cat}
+                </span>
               ))}
             </div>
           </Reveal>
 
           {/* Project grid */}
           <StaggerGrid
-            stagger={0.08}
+            stagger={0.06}
             isRTL={isAr}
             className="grid grid-cols-2 md:grid-cols-3 gap-5"
           >
-            {projectItems}
+            {PROJECTS.map((project) => {
+              const displayName = isAr && project.nameAr ? project.nameAr : project.name;
+              return (
+                <Link
+                  key={project.slug}
+                  href={`/projects/${project.slug}`}
+                  className="relative group overflow-hidden rounded-sm border border-[rgba(0,0,0,0.1)] block"
+                >
+                  {/* Image */}
+                  <div className="relative aspect-[4/3] overflow-hidden bg-gray-100">
+                    <Image
+                      src={project.images[0]}
+                      alt={displayName}
+                      fill
+                      className="object-cover group-hover:scale-[1.04] transition-transform duration-500"
+                      sizes="(max-width: 768px) 50vw, 33vw"
+                      unoptimized
+                    />
+                  </div>
+
+                  {/* Hover overlay */}
+                  <div className="absolute inset-0 bg-black/55 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4 text-white">
+                    <span className="inline-block text-xs font-semibold uppercase tracking-wider px-2 py-1 bg-white/20 rounded-sm mb-2 w-fit">
+                      {project.category}
+                    </span>
+                    <h3 className="font-bold text-base leading-tight">{displayName}</h3>
+                    <p className="text-white/70 text-xs mt-1">
+                      {isAr ? "عرض المشروع" : "View project"} →
+                    </p>
+                  </div>
+
+                  {/* Always-visible footer */}
+                  <div className="p-4 bg-white">
+                    <h3 className="font-bold text-gray-900 text-sm truncate">{displayName}</h3>
+                    <p className="text-[#C1B167] text-xs mt-0.5 uppercase tracking-wider font-semibold">
+                      {project.category}
+                    </p>
+                  </div>
+                </Link>
+              );
+            })}
           </StaggerGrid>
 
           {/* CTA */}
@@ -240,7 +157,7 @@ export default async function ProjectsPage({
               </p>
               <Link
                 href="/contact"
-                className="btn-press inline-block bg-white text-white px-10 py-3.5 font-semibold text-sm tracking-wide rounded-sm hover:bg-[#333] transition-colors"
+                className="inline-block bg-[#0c0c0c] text-white px-10 py-3.5 font-semibold text-sm tracking-wide rounded-sm hover:bg-[#333] transition-colors"
               >
                 {isAr ? "ابدأ مشروعك معنا" : "Start a Project"}
               </Link>
