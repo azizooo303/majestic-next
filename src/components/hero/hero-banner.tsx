@@ -50,6 +50,7 @@ export function HeroBanner({ slides, slide }: HeroBannerProps) {
   const bracketTR = useRef<SVGPathElement>(null);
   const dimLine = useRef<SVGPathElement>(null);
   const headlineRef = useRef<HTMLHeadingElement>(null);
+  const taglineRef = useRef<HTMLParagraphElement>(null);
 
   // DrawSVG bracket animation on mount
   useEffect(() => {
@@ -60,20 +61,44 @@ export function HeroBanner({ slides, slide }: HeroBannerProps) {
     if (dimLine.current)   { gsap.set(dimLine.current,   { drawSVG: "0%" }); gsap.to(dimLine.current,   { drawSVG: "100%", duration: 1.8, ease: "power1.out", delay: 1.2 }); }
   }, [reduced]);
 
-  // SplitText headline reveal on each slide change
+  // SplitText headline reveal on each slide change — premium editorial mask reveal
   useEffect(() => {
     if (reduced || !headlineRef.current) return;
     if (typeof window !== "undefined" && window.innerWidth < 768) return;
-    const split = new SplitText(headlineRef.current, { type: "words,chars" });
-    const tl = gsap.timeline({ delay: 0.35 });
+
+    // Chars slide up from behind overflow:clip mask — premium magazine feel
+    const split = new SplitText(headlineRef.current, {
+      type: "words,chars",
+      mask: "chars",
+    });
+
+    const tl = gsap.timeline({ delay: 0.3 });
+
     tl.from(split.chars, {
-      opacity: 0,
-      y: 18,
-      stagger: 0.025,
-      duration: 0.45,
-      ease: "power3.out",
+      yPercent: 110,
+      stagger: { each: 0.028, from: "start" },
+      duration: 0.65,
+      ease: "power4.out",
       onComplete: () => split.revert(),
     });
+
+    // Tagline: word-by-word fade-up after headline finishes
+    if (taglineRef.current) {
+      const splitTagline = new SplitText(taglineRef.current, { type: "words" });
+      tl.from(
+        splitTagline.words,
+        {
+          opacity: 0,
+          y: 10,
+          stagger: 0.05,
+          duration: 0.4,
+          ease: "power2.out",
+          onComplete: () => splitTagline.revert(),
+        },
+        "-=0.25"
+      );
+    }
+
     return () => { tl.kill(); split.revert(); };
   }, [activeIdx, reduced]);
 
@@ -258,6 +283,7 @@ export function HeroBanner({ slides, slide }: HeroBannerProps) {
               {/* Tagline */}
               {currentSlide.tagline && (
                 <p
+                  ref={taglineRef}
                   className={cn(
                     "font-normal leading-[1.55] mb-6",
                     isAr

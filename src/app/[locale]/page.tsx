@@ -6,7 +6,7 @@ import { HeroBanner } from "@/components/hero/hero-banner";
 import { NewsletterForm } from "@/components/ui/newsletter-form";
 import { InspireSection } from "@/components/common/inspire-section";
 import { PageWrapper } from "@/components/common/page-wrapper";
-import { StaggerChildren } from "@/components/common/stagger-children";
+import { GsapBatchReveal } from "@/components/common/gsap-batch-reveal";
 import { FadeUp } from "@/components/common/fade-up";
 import { PromoBanner } from "@/components/common/promo-banner";
 import { ProductCard } from "@/components/shop/product-card";
@@ -176,12 +176,14 @@ export default async function HomePage({
             <p className={`mb-6 uppercase text-[#484848] ${isAr ? "font-alyamama text-[14px] tracking-normal" : "text-[13px] tracking-[0.08em] font-bold"}`}>
               {isAr ? "تصفح حسب الفئة" : "Browse by Category"}
             </p>
-            <StaggerChildren
-              staggerDelay={0.05}
+            <GsapBatchReveal
+              batchMax={6}
+              stagger={0.06}
+              yOffset={28}
               className="grid grid-cols-3 md:grid-cols-6 gap-[15px]"
             >
               {categoryItems}
-            </StaggerChildren>
+            </GsapBatchReveal>
           </div>
         </section>
       </SectionReveal>
@@ -204,12 +206,14 @@ export default async function HomePage({
               </div>
             </FadeUp>
 
-            <StaggerChildren
-              staggerDelay={0.06}
+            <GsapBatchReveal
+              batchMax={4}
+              stagger={0.07}
+              yOffset={36}
               className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[15px]"
             >
               {productItems}
-            </StaggerChildren>
+            </GsapBatchReveal>
 
             <div className="text-center mt-10">
               <Link
