@@ -14,6 +14,7 @@ import { ProductCard } from "@/components/shop/product-card";
 import { ShopSidebar } from "@/components/shop/shop-sidebar";
 import { ShopTopBar } from "@/components/shop/shop-top-bar";
 import { ChevronRight, ChevronLeft } from "lucide-react";
+import { siteUrl } from "@/lib/site-url";
 import type { Metadata } from "next";
 
 export async function generateMetadata({
@@ -25,17 +26,17 @@ export async function generateMetadata({
   const isAr = locale === "ar";
   return {
     title: isAr
-      ? "تشكيلة الأثاث المكتبي — ماجستيك | السعودية والخليج"
-      : "Office Furniture Collection — Majestic | Saudi Arabia & Gulf",
+      ? "تشكيلة الأثاث المكتبي — ماجستيك | السعودية"
+      : "Office Furniture Collection — Majestic | Saudi Arabia",
     description: isAr
       ? "كراسي تنفيذية، محطات عمل، أنظمة اجتماعات، تخزين، استقبال، وحلول صوتية. وفق معايير العمارة الحديثة — للمملكة ودول الخليج."
       : "Executive seating, workstations, conference systems, storage, lounge, and acoustic solutions. Built to modern architectural standards — supplied across Saudi Arabia and the Gulf.",
     alternates: {
-      canonical: `https://lightyellow-mallard-240169.hostingersite.com/${locale}/shop`,
+      canonical: siteUrl(`/${locale}/shop`),
       languages: {
-        en: "https://lightyellow-mallard-240169.hostingersite.com/en/shop",
-        ar: "https://lightyellow-mallard-240169.hostingersite.com/ar/shop",
-        "x-default": "https://lightyellow-mallard-240169.hostingersite.com/en/shop",
+        en: siteUrl("/en/shop"),
+        ar: siteUrl("/ar/shop"),
+        "x-default": siteUrl("/en/shop"),
       },
     },
   };

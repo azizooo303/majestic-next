@@ -38,9 +38,9 @@ const NAV_ITEMS: NavItem[] = [
     key: "chairs",
     href: "/shop?category=seating",
     children: [
-      { key: "executiveChairs", href: "/shop?category=executive-chairs", image: "/images/category-seating.png" },
-      { key: "taskChairs",      href: "/shop?category=task-chairs",      image: "/images/category-seating.png" },
-      { key: "meetingChairs",   href: "/shop?category=meeting-chairs",   image: "/images/category-seating.png" },
+      { key: "executiveChairs", href: "/shop?category=executive-chairs", image: "/images/website/nav-executive-chairs.jpg" },
+      { key: "taskChairs",      href: "/shop?category=task-chairs",      image: "/images/website/nav-task-chairs.jpg" },
+      { key: "meetingChairs",   href: "/shop?category=meeting-chairs",   image: "/images/website/nav-meeting-chairs.jpg" },
       { key: "lounge",          href: "/shop?category=lounge-chairs",    image: "/images/category-lounge.png" },
     ],
   },
@@ -56,9 +56,33 @@ const NAV_ITEMS: NavItem[] = [
       { key: "receptionDesk",    href: "/shop?category=reception",        image: "/images/category-lounge.png" },
     ],
   },
-  { key: "storage",     href: "/shop?category=storage" },
-  { key: "lounge",      href: "/shop?category=lounge" },
-  { key: "acoustics",   href: "/shop?category=acoustics" },
+  {
+    key: "storage",
+    href: "/shop?category=storage",
+    children: [
+      { key: "filingCabinets", href: "/shop?category=filing-cabinets", image: "/images/website/nav-storage.jpg" },
+      { key: "credenzas",      href: "/shop?category=credenzas",       image: "/images/website/nav-storage.jpg" },
+      { key: "bookcases",      href: "/shop?category=bookcases",       image: "/images/category-storage.png" },
+    ],
+  },
+  {
+    key: "lounge",
+    href: "/shop?category=lounge",
+    children: [
+      { key: "sofas",          href: "/shop?category=sofas",           image: "/images/website/nav-lounge.jpg" },
+      { key: "armchairs",      href: "/shop?category=armchairs",       image: "/images/website/nav-lounge.jpg" },
+      { key: "coffeeTables",   href: "/shop?category=coffee-tables",   image: "/images/category-lounge.png" },
+    ],
+  },
+  {
+    key: "acoustics",
+    href: "/shop?category=acoustics",
+    children: [
+      { key: "phoneBooth",     href: "/shop?category=phone-booths",    image: "/images/website/nav-acoustics.jpg" },
+      { key: "meetingPod",     href: "/shop?category=meeting-pods",    image: "/images/website/nav-acoustics.jpg" },
+      { key: "acousticPanels", href: "/shop?category=acoustic-panels", image: "/images/category-acoustics.png" },
+    ],
+  },
   { key: "accessories", href: "/shop?category=accessories" },
 ];
 

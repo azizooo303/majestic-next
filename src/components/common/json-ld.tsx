@@ -1,3 +1,5 @@
+import { siteUrl } from "@/lib/site-url";
+
 interface JsonLdProps {
   data: Record<string, unknown>;
 }
@@ -70,12 +72,12 @@ export function WebSiteJsonLd() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "Majestic Furniture",
-    url: "https://lightyellow-mallard-240169.hostingersite.com",
+    url: siteUrl(),
     potentialAction: {
       "@type": "SearchAction",
       target: {
         "@type": "EntryPoint",
-        urlTemplate: "https://lightyellow-mallard-240169.hostingersite.com/en/shop?q={search_term_string}",
+        urlTemplate: `${siteUrl("/en/shop")}?q={search_term_string}`,
       },
       "query-input": "required name=search_term_string",
     },
@@ -90,14 +92,13 @@ export function LocalBusinessJsonLd() {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: "Majestic Furniture",
-    url: "https://lightyellow-mallard-240169.hostingersite.com",
-    // TODO: fill in real telephone number
-    telephone: "+966-XX-XXXXXXX",
+    url: siteUrl(),
+    email: "a.alahmadi@majestic.com.sa",
     address: {
       "@type": "PostalAddress",
-      // TODO: fill in real street address
-      streetAddress: "TBD",
+      streetAddress: "Al Olaya District",
       addressLocality: "Riyadh",
+      addressRegion: "Riyadh Region",
       addressCountry: "SA",
     },
     geo: {

@@ -12,7 +12,7 @@ export function ConsultationCta({ isAr }: { isAr: boolean }) {
             </h2>
             <p className="text-[#aaaaaa] text-base leading-relaxed mb-10">
               {isAr
-                ? "من مكتب واحد إلى تجهيز طوابق متعددة — ماجيستيك تُنجز مشاريع بيئات العمل في المملكة العربية السعودية ودول الخليج."
+                ? "من مكتب واحد إلى تجهيز طوابق متعددة — ماجستيك تُنجز مشاريع بيئات العمل في المملكة العربية السعودية ودول الخليج."
                 : "From a single office to a multi-floor fit-out — Majestic delivers complete workspace environments across Saudi Arabia and the GCC."}
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

@@ -72,7 +72,7 @@ export function MaterialSelector({ isAr }: { isAr: boolean }) {
           <div className="w-full md:w-[40%] flex flex-col justify-center">
             <p className="text-sm text-[#484848] mb-5">
               {isAr
-                ? "اختر من تشكيلة أسطح ماجيستيك — أخشاب، ألواح لاميناتية، ومعادن — لتحديد التشطيب الأنسب لمواصفات مشروعك."
+                ? "اختر من تشكيلة أسطح ماجستيك — أخشاب، ألواح لاميناتية، ومعادن — لتحديد التشطيب الأنسب لمواصفات مشروعك."
                 : "Choose from Majestic's surface range — wood tones, laminates, and metals — to identify the right finish for your project."}
             </p>
 

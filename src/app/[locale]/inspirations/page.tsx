@@ -1,6 +1,7 @@
 import { Link } from "@/i18n/navigation";
 import { PageWrapper } from "@/components/common/page-wrapper";
 import { Reveal } from "@/components/common/reveal";
+import { siteUrl } from "@/lib/site-url";
 import type { Metadata } from "next";
 
 export async function generateMetadata({
@@ -11,10 +12,19 @@ export async function generateMetadata({
   const { locale } = await params;
   const isAr = locale === "ar";
   return {
-    title: isAr ? "الإلهام — ماجيستيك للأثاث" : "Inspirations — Majestic Furniture",
+    title: isAr ? "الإلهام — ماجستيك للأثاث" : "Inspirations — Majestic Furniture",
     description: isAr
       ? "استلهم أفكاراً لبيئة عملك من مشاريعنا المنجزة وتصاميمنا الداخلية."
       : "Get inspired by our completed projects and interior design ideas for your workspace.",
+    robots: { index: false, follow: true },
+    alternates: {
+      canonical: siteUrl(`/${locale}/inspirations`),
+      languages: {
+        en: siteUrl("/en/inspirations"),
+        ar: siteUrl("/ar/inspirations"),
+        "x-default": siteUrl("/en/inspirations"),
+      },
+    },
   };
 }
 

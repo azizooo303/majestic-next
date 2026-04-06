@@ -15,7 +15,7 @@ const SIDEBAR_CATEGORIES = [
 ];
 
 const BRANDS = [
-  { value: "majestic",   en: "Majestic",   ar: "ماجيستيك" },
+  { value: "majestic",   en: "Majestic",   ar: "ماجستيك" },
   { value: "chairline",  en: "ChairLine",  ar: "شيرلاين" },
   { value: "other",      en: "Other",      ar: "أخرى" },
 ];

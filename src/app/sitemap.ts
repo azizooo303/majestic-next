@@ -18,11 +18,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/dammam', priority: 0.7 },
     { path: '/khobar', priority: 0.7 },
     { path: '/brands', priority: 0.6 },
-    { path: '/blog', priority: 0.6 },
     { path: '/faq', priority: 0.6 },
     { path: '/delivery', priority: 0.6 },
     { path: '/warranty', priority: 0.5 },
     { path: '/careers', priority: 0.5 },
+    { path: '/materials', priority: 0.5 },
+    { path: '/product-care', priority: 0.5 },
   ]
 
   // Static product slug placeholders — replace with dynamic WooCommerce fetch when API is connected

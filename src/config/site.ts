@@ -19,13 +19,13 @@
 export const BRAND = {
   name: {
     en: "Majestic Furniture",
-    ar: "ماجيستيك للأثاث",
+    ar: "ماجستيك للأثاث",
   },
   tagline: {
     en: "Saudi Arabia's premier workspace furniture brand.",
     ar: "العلامة التجارية الرائدة في أثاث المكاتب بالمملكة العربية السعودية.",
   },
-  domain: "https://lightyellow-mallard-240169.hostingersite.com",
+  domain: "https://majestic-next.vercel.app",
   logoPath: "/images/majestic-logo-original.png",
   logoWhitePath: "/images/majestic-logo-white.png",
   logoBlackPath: "/images/majestic-logo-black.png",
@@ -55,7 +55,7 @@ export const CONTACT = {
     country: "SA",
   },
   hours: {
-    en: "Sun–Thu 9am–5pm",
+    en: "Sun–Thu 9am–6pm",
     ar: "الأحد–الخميس، ٩ص–٥م",
   },
 } as const;
@@ -177,7 +177,7 @@ export const NAV = {
       { en: "Lounge", ar: "الاستقبال", href: "/shop?category=lounge" },
     ],
     company: [
-      { en: "About", ar: "عن ماجيستيك", href: "/about" },
+      { en: "About", ar: "عن ماجستيك", href: "/about" },
       { en: "Projects", ar: "المشاريع", href: "/projects" },
       { en: "Showrooms", ar: "المعارض", href: "/showrooms" },
       { en: "Blog", ar: "المدونة", href: "/blog" },
@@ -198,7 +198,7 @@ export const NAV = {
 export const SEO = {
   defaultTitle: {
     en: "Majestic Furniture — Premium Office Furniture Saudi Arabia",
-    ar: "ماجيستيك للأثاث — أثاث مكاتب فاخر في السعودية",
+    ar: "ماجستيك للأثاث — أثاث مكاتب فاخر في السعودية",
   },
   defaultDescription: {
     en: "Saudi Arabia's premier destination for professional office furniture. Executive desks, ergonomic chairs, and workstations for elevated workspace environments.",

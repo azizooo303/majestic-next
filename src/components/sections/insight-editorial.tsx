@@ -9,7 +9,8 @@ interface Article {
   tagAr: string;
   titleEn: string;
   titleAr: string;
-  date: string;
+  dateEn: string;
+  dateAr: string;
 }
 
 const ARTICLES: Article[] = [
@@ -19,7 +20,8 @@ const ARTICLES: Article[] = [
     tagAr: "معايير التصميم",
     titleEn: "Designing the Executive Floor: Standards for Saudi Corporate Offices",
     titleAr: "تصميم الطابق التنفيذي: معايير المكاتب المؤسسية السعودية",
-    date: "April 2026",
+    dateEn: "April 2026",
+    dateAr: "أبريل ٢٠٢٦",
   },
   {
     image: "/images/website/s7-b-height-adjustable-article.jpg",
@@ -27,7 +29,8 @@ const ARTICLES: Article[] = [
     tagAr: "الإرغونوميا",
     titleEn: "Why Height-Adjustable Desks Are Now a Specification Requirement",
     titleAr: "لماذا أصبحت المكاتب القابلة للضبط متطلباً رسمياً في مواصفات التجهيز",
-    date: "March 2026",
+    dateEn: "March 2026",
+    dateAr: "مارس ٢٠٢٦",
   },
   {
     image: "/images/website/s7-c-fit-out-brief-article.jpg",
@@ -35,7 +38,8 @@ const ARTICLES: Article[] = [
     tagAr: "تخطيط المشاريع",
     titleEn: "Complete Workspace: How to Brief a Full Office Fit-Out",
     titleAr: "بيئة العمل المتكاملة: كيف تُعدّ كراسة الإحاطة لمشروع تجهيز مكاتب كامل",
-    date: "March 2026",
+    dateEn: "March 2026",
+    dateAr: "مارس ٢٠٢٦",
   },
 ];
 
@@ -79,7 +83,7 @@ export function InsightEditorial({ isAr }: { isAr: boolean }) {
                   <span className="text-[10px] uppercase tracking-widest text-[#484848] font-medium">
                     {isAr ? article.tagAr : article.tagEn}
                   </span>
-                  <span className="text-[10px] text-[#aaaaaa]">{article.date}</span>
+                  <span className="text-[10px] text-[#aaaaaa]">{isAr ? article.dateAr : article.dateEn}</span>
                 </div>
                 <h3 className="text-sm font-bold text-gray-900] leading-snug mb-4">
                   {isAr ? article.titleAr : article.titleEn}

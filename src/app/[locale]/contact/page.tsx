@@ -2,6 +2,7 @@ import { Link } from "@/i18n/navigation";
 import { PageWrapper } from "@/components/common/page-wrapper";
 import { Reveal } from "@/components/common/reveal";
 import { ContactForm } from "@/components/contact/contact-form";
+import { siteUrl } from "@/lib/site-url";
 import type { Metadata } from "next";
 
 export async function generateMetadata({
@@ -17,11 +18,11 @@ export async function generateMetadata({
       ? "تواصل مع ماجستيك لمشاريع الأثاث المكتبي وعروض الأسعار وزيارة المعرض في السعودية ودول الخليج. الأحد–الخميس."
       : "Contact Majestic for office furniture projects, quotations, and showroom visits across Saudi Arabia and the Gulf. Sunday–Thursday.",
     alternates: {
-      canonical: `https://lightyellow-mallard-240169.hostingersite.com/${locale}/contact`,
+      canonical: siteUrl(`/${locale}/contact`),
       languages: {
-        en: "https://lightyellow-mallard-240169.hostingersite.com/en/contact",
-        ar: "https://lightyellow-mallard-240169.hostingersite.com/ar/contact",
-        "x-default": "https://lightyellow-mallard-240169.hostingersite.com/en/contact",
+        en: siteUrl("/en/contact"),
+        ar: siteUrl("/ar/contact"),
+        "x-default": siteUrl("/en/contact"),
       },
     },
     openGraph: {

@@ -1,6 +1,7 @@
 import { PageWrapper } from "@/components/common/page-wrapper";
 import { Reveal } from "@/components/common/reveal";
 import { Link } from "@/i18n/navigation";
+import { siteUrl } from "@/lib/site-url";
 import type { Metadata } from "next";
 
 export async function generateMetadata({
@@ -11,10 +12,18 @@ export async function generateMetadata({
   const { locale } = await params;
   const isAr = locale === "ar";
   return {
-    title: isAr ? "المواد والألوان — ماجيستيك للأثاث" : "Materials & Colors — Majestic Furniture",
+    title: isAr ? "المواد والألوان — ماجستيك للأثاث" : "Materials & Colors — Majestic Furniture",
     description: isAr
       ? "استعرض مجموعة المواد والألوان المتوفرة لتخصيص أثاثك المكتبي."
       : "Explore our range of materials and finishes available for customising your office furniture.",
+    alternates: {
+      canonical: siteUrl(`/${locale}/materials`),
+      languages: {
+        en: siteUrl("/en/materials"),
+        ar: siteUrl("/ar/materials"),
+        "x-default": siteUrl("/en/materials"),
+      },
+    },
   };
 }
 

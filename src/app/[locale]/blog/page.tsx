@@ -1,7 +1,9 @@
+import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { PageWrapper } from "@/components/common/page-wrapper";
 import { Reveal } from "@/components/common/reveal";
 import { StaggerGrid } from "@/components/common/stagger-grid";
+import { siteUrl } from "@/lib/site-url";
 import type { Metadata } from "next";
 
 export async function generateMetadata({
@@ -13,21 +15,22 @@ export async function generateMetadata({
   const isAr = locale === "ar";
   return {
     title: isAr
-      ? "المدونة — أفكار وإلهام لبيئات العمل | ماجيستيك"
+      ? "المدونة — أفكار وإلهام لبيئات العمل | ماجستيك"
       : "Blog — Workspace Ideas & Inspiration | Majestic Furniture",
     description: isAr
       ? "اكتشف أحدث الأفكار والنصائح حول تصميم بيئات العمل المكتبية، اتجاهات الأثاث، والإلهام للمساحات الاحترافية في المملكة العربية السعودية."
       : "Discover the latest ideas and tips on office workspace design, furniture trends, and inspiration for professional spaces across Saudi Arabia.",
+    robots: { index: false, follow: true },
     alternates: {
-      canonical: `https://lightyellow-mallard-240169.hostingersite.com/${locale}/blog`,
+      canonical: siteUrl(`/${locale}/blog`),
       languages: {
-        en: "https://lightyellow-mallard-240169.hostingersite.com/en/blog",
-        ar: "https://lightyellow-mallard-240169.hostingersite.com/ar/blog",
-        "x-default": "https://lightyellow-mallard-240169.hostingersite.com/en/blog",
+        en: siteUrl("/en/blog"),
+        ar: siteUrl("/ar/blog"),
+        "x-default": siteUrl("/en/blog"),
       },
     },
     openGraph: {
-      title: isAr ? "المدونة | ماجيستيك" : "Blog | Majestic Furniture",
+      title: isAr ? "المدونة | ماجستيك" : "Blog | Majestic Furniture",
       description: isAr
         ? "أفكار ونصائح حول تصميم بيئات العمل المكتبية."
         : "Ideas and tips on office workspace design and furniture trends.",
@@ -50,7 +53,7 @@ const POSTS = [
     date: "2024-03-15",
     category: "Ergonomics",
     categoryAr: "الإرغونوميكس",
-    image: "/images/hero-seating.jpg",
+    image: "/images/website/blog-ergonomics.jpg",
   },
   {
     slug: "executive-desk-buying-guide",
@@ -63,7 +66,7 @@ const POSTS = [
     date: "2024-02-20",
     category: "Buying Guide",
     categoryAr: "دليل الشراء",
-    image: "/images/hero-desks.jpg",
+    image: "/images/website/blog-executive-design.jpg",
   },
   {
     slug: "office-design-trends-2024",
@@ -76,7 +79,7 @@ const POSTS = [
     date: "2024-01-10",
     category: "Design Trends",
     categoryAr: "اتجاهات التصميم",
-    image: "/images/hero-tables.jpg",
+    image: "/images/website/blog-fitout.jpg",
   },
 ];
 
@@ -93,8 +96,14 @@ export default async function BlogPage({
       key={post.slug}
       className="border border-[rgba(0,0,0,0.21)] rounded-sm overflow-hidden group"
     >
-      <div className="relative aspect-[16/9] overflow-hidden bg-white">
-        <div className="w-full h-full bg-[#e5e7eb]" aria-hidden="true" />
+      <div className="relative aspect-[16/9] overflow-hidden bg-[#fafafa]">
+        <Image
+          src={post.image}
+          alt={isAr ? post.titleAr : post.title}
+          fill
+          className="object-cover group-hover:scale-[1.03] transition-transform duration-500"
+          sizes="(max-width: 768px) 100vw, 33vw"
+        />
       </div>
       <div className="p-6">
         <p className="text-xs uppercase tracking-wider font-semibold text-[#484848] mb-2">

@@ -4,7 +4,7 @@
     "learnMore": "Learn More",
     "viewMore": "View More",
     "viewAll": "View All",
-    "shopNow": "Shop Now",
+    "shopNow": "Browse Catalog",
     "explore": "Explore",
     "discover": "Discover",
     "viewCollection": "View Collection",
@@ -41,7 +41,7 @@
     "description": "Description",
     "specifications": "Specifications",
     "delivery": "Delivery",
-    "addToWishlist": "Add to Wishlist",
+    "addToWishlist": "Save to Project List",
     "quantity": "Quantity",
     "search": "Search",
     "noResults": "No results found",
@@ -86,7 +86,16 @@
     "receptionDesk": "Reception Desk",
     "executiveChairs": "Executive Chairs",
     "taskChairs": "Task Chairs",
-    "meetingChairs": "Meeting Chairs"
+    "meetingChairs": "Meeting Chairs",
+    "filingCabinets": "Filing Cabinets",
+    "credenzas": "Credenzas",
+    "bookcases": "Bookcases",
+    "sofas": "Sofas",
+    "armchairs": "Armchairs",
+    "coffeeTables": "Coffee Tables",
+    "phoneBooth": "Phone Booths",
+    "meetingPod": "Meeting Pods",
+    "acousticPanels": "Acoustic Panels"
   },
   "categories": {
     "seating": "Seating",
@@ -114,12 +123,12 @@
     "philosophy": "Crafted for spaces that inspire"
   },
   "trust": {
-    "authentic": "Authentic product guarantee",
+    "authentic": "International manufacturer sourcing",
     "delivery": "Delivery across Saudi Arabia",
     "warranty": "Warranty included",
     "ssl": "256-bit SSL encryption",
     "freeShipping": "Free delivery on qualifying orders",
-    "easyReturns": "Easy returns within 14 days"
+    "easyReturns": "Return policy: 14 days, unused condition"
   },
   "checkout": {
     "contactInfo": "Contact Information",

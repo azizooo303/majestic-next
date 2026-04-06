@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Reveal } from "@/components/common/reveal";
 import { Link } from "@/i18n/navigation";
+import { siteUrl } from "@/lib/site-url";
 
 export async function generateMetadata({
   params,
@@ -11,17 +12,17 @@ export async function generateMetadata({
   const isAr = locale === "ar";
   return {
     title: isAr
-      ? "العناية بالمنتجات والصيانة — ماجيستيك للأثاث"
+      ? "العناية بالمنتجات والصيانة — ماجستيك للأثاث"
       : "Product Care & Maintenance — Majestic Furniture",
     description: isAr
-      ? "أدلة العناية والصيانة لأثاث مكاتب ماجيستيك. حافظ على استثمارك في بيئة عملك."
+      ? "أدلة العناية والصيانة لأثاث مكاتب ماجستيك. حافظ على استثمارك في بيئة عملك."
       : "Care and maintenance guides for Majestic office furniture. Keep your workspace investment in peak condition.",
     alternates: {
-      canonical: `https://lightyellow-mallard-240169.hostingersite.com/${locale}/product-care`,
+      canonical: siteUrl(`/${locale}/product-care`),
       languages: {
-        en: "/en/product-care",
-        ar: "/ar/product-care",
-        "x-default": "/en/product-care",
+        en: siteUrl("/en/product-care"),
+        ar: siteUrl("/ar/product-care"),
+        "x-default": siteUrl("/en/product-care"),
       },
     },
   };

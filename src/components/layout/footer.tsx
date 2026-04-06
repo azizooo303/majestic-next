@@ -167,7 +167,7 @@ export async function Footer() {
           info@majestic.com.sa
         </a>
         <p className="text-sm text-[#484848]">
-          {isAr ? "الأحد–الخميس، ٩ص–٥م" : "Sun–Thu 9am–5pm"}
+          {isAr ? "الأحد–الخميس، ٩ص–٦م" : "Sun–Thu 9am–6pm"}
         </p>
       </address>
     </div>

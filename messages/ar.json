@@ -4,7 +4,7 @@
     "learnMore": "اعرف المزيد",
     "viewMore": "عرض المزيد",
     "viewAll": "عرض الكل",
-    "shopNow": "تسوق الآن",
+    "shopNow": "استعرض التشكيلة",
     "explore": "استكشف",
     "discover": "اكتشف",
     "viewCollection": "عرض المجموعة",
@@ -41,7 +41,7 @@
     "description": "الوصف",
     "specifications": "المواصفات",
     "delivery": "التوصيل",
-    "addToWishlist": "أضف إلى المفضلة",
+    "addToWishlist": "حفظ في قائمة المشروع",
     "quantity": "الكمية",
     "search": "بحث",
     "noResults": "لم يتم العثور على نتائج",
@@ -86,7 +86,16 @@
     "receptionDesk": "مكتب الاستقبال",
     "executiveChairs": "الكراسي التنفيذية",
     "taskChairs": "كراسي المهام",
-    "meetingChairs": "كراسي الاجتماعات"
+    "meetingChairs": "كراسي الاجتماعات",
+    "filingCabinets": "خزائن الملفات",
+    "credenzas": "كريدنزا",
+    "bookcases": "مكتبات",
+    "sofas": "أرائك",
+    "armchairs": "كراسي مريحة",
+    "coffeeTables": "طاولات قهوة",
+    "phoneBooth": "كبائن هاتف",
+    "meetingPod": "كبائن اجتماعات",
+    "acousticPanels": "ألواح صوتية"
   },
   "categories": {
     "seating": "المقاعد",
@@ -114,12 +123,12 @@
     "philosophy": "مصمم لمساحات تُلهم"
   },
   "trust": {
-    "authentic": "ضمان أصالة المنتج",
+    "authentic": "توريد من مصنّعين عالميين",
     "delivery": "توصيل في جميع أنحاء المملكة",
     "warranty": "ضمان شامل",
     "ssl": "تشفير SSL بـ 256 بت",
     "freeShipping": "توصيل مجاني للطلبات المؤهلة",
-    "easyReturns": "إرجاع سهل خلال 14 يومًا"
+    "easyReturns": "سياسة الإرجاع: 14 يومًا، حالة غير مستخدمة"
   },
   "checkout": {
     "contactInfo": "معلومات التواصل",

@@ -1,0 +1,73 @@
+# Majestic Furniture
+
+> Premium office furniture supplier serving corporate and government organizations across Saudi Arabia and the Gulf (GCC).
+
+## Company Overview
+
+Majestic Furniture is a B2B office furniture company headquartered in Riyadh, Saudi Arabia. We source from established international manufacturers and pair that with local market expertise, project consultation, and after-sales support.
+
+We serve ministries, corporate headquarters, financial institutions, healthcare facilities, and regional offices across Saudi Arabia, UAE, Kuwait, Bahrain, Qatar, and Oman.
+
+## Product Categories
+
+- Executive Desks: Executive offices and management suites
+- Workstations: Open-plan systems and height-adjustable desks
+- Seating: Executive chairs, task chairs, meeting chairs, ergonomic seating
+- Conference Systems: Meeting tables, boardroom furniture
+- Storage: Pedestals, credenzas, filing cabinets
+- Acoustic Solutions: Acoustic panels and privacy pods
+- Lounge: Waiting areas, breakout zones, collaboration furniture
+- Reception: Front desk and lobby furniture
+
+## Brands We Carry
+
+Interstuhl, Haworth, Kinnarps, Vitra, Herman Miller, Steelcase, Narbutas, Nurus, Forma 5, Sitag, Profim, and more.
+
+## Showrooms
+
+3 showrooms in Riyadh:
+- Riyadh Al Olaya
+- Riyadh Al Malaz
+- Jeddah (coming soon)
+
+Open Sunday through Thursday, 9am to 6pm.
+
+## Key Services
+
+- Full office fit-out (single office to multi-floor)
+- Project consultation and space planning
+- Supply and professional installation
+- After-sales support and warranty service
+
+## Coverage
+
+- Primary market: Saudi Arabia (Riyadh, Jeddah, Dammam, Khobar, Eastern Province)
+- Extended coverage: UAE, Kuwait, Bahrain, Qatar, Oman
+
+## Contact
+
+- Email: a.alahmadi@majestic.com.sa
+- Website: https://majestic-next.vercel.app
+- Languages: English, Arabic
+
+## Page Index
+
+- /en — Homepage (English)
+- /ar — Homepage (Arabic)
+- /en/shop — Product catalog
+- /en/about — Company overview
+- /en/projects — Completed project portfolio
+- /en/quotation — Request a quotation
+- /en/contact — Contact information
+- /en/showrooms — Showroom locations and hours
+- /en/brands — International brands we carry
+- /en/riyadh — Office furniture in Riyadh
+- /en/jeddah — Office furniture in Jeddah
+- /en/dammam — Office furniture in Dammam
+- /en/khobar — Office furniture in Khobar
+- /en/faq — Frequently asked questions
+- /en/delivery — Delivery and installation policy
+- /en/warranty — Warranty terms
+- /en/product-care — Furniture care guides
+- /en/materials — Materials and finishes
+- /en/careers — Open positions

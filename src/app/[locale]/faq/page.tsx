@@ -2,6 +2,7 @@ import { Link } from "@/i18n/navigation";
 import { PageWrapper } from "@/components/common/page-wrapper";
 import { Reveal } from "@/components/common/reveal";
 import { FaqPageJsonLd } from "@/components/common/json-ld";
+import { siteUrl } from "@/lib/site-url";
 import type { Metadata } from "next";
 
 export async function generateMetadata({
@@ -12,20 +13,20 @@ export async function generateMetadata({
   const { locale } = await params;
   const isAr = locale === "ar";
   return {
-    title: isAr ? "الأسئلة الشائعة — التوصيل والإرجاع والضمان | ماجيستيك" : "FAQ — Delivery, Returns & Warranty | Majestic Furniture",
+    title: isAr ? "الأسئلة الشائعة — التوصيل والإرجاع والضمان | ماجستيك" : "FAQ — Delivery, Returns & Warranty | Majestic Furniture",
     description: isAr
-      ? "إجابات على أكثر الأسئلة شيوعاً حول التوصيل، التركيب، سياسة الإرجاع، الضمان، وطرق الدفع في ماجيستيك للأثاث المكتبي."
+      ? "إجابات على أكثر الأسئلة شيوعاً حول التوصيل، التركيب، سياسة الإرجاع، الضمان، وطرق الدفع في ماجستيك للأثاث المكتبي."
       : "Answers to the most common questions about delivery, assembly, return policy, warranty, and payment methods at Majestic Furniture.",
     alternates: {
-      canonical: `https://lightyellow-mallard-240169.hostingersite.com/${locale}/faq`,
+      canonical: siteUrl(`/${locale}/faq`),
       languages: {
-        en: "https://lightyellow-mallard-240169.hostingersite.com/en/faq",
-        ar: "https://lightyellow-mallard-240169.hostingersite.com/ar/faq",
-        "x-default": "https://lightyellow-mallard-240169.hostingersite.com/en/faq",
+        en: siteUrl("/en/faq"),
+        ar: siteUrl("/ar/faq"),
+        "x-default": siteUrl("/en/faq"),
       },
     },
     openGraph: {
-      title: isAr ? "الأسئلة الشائعة | ماجيستيك" : "FAQ | Majestic Furniture",
+      title: isAr ? "الأسئلة الشائعة | ماجستيك" : "FAQ | Majestic Furniture",
       description: isAr
         ? "إجابات على أسئلتكم حول التوصيل والإرجاع والضمان."
         : "Answers to your questions about delivery, returns, and warranty.",
@@ -76,7 +77,7 @@ const FAQS = (isAr: boolean) => [
   {
     q: isAr ? "ما طرق الدفع المتاحة؟" : "What payment methods do you accept?",
     a: isAr
-      ? "نقبل: مدى، Visa، Mastercard، Apple Pay، STC Pay، Tabby، وتمارة."
+      ? "نقبل: مدى، Visa، Mastercard، Apple Pay، STC Pay، Tabby، وتمارا."
       : "We accept: mada, Visa, Mastercard, Apple Pay, STC Pay, Tabby, and Tamara.",
   },
   {
@@ -151,7 +152,7 @@ export default async function FaqPage({
                 <input
                   type="search"
                   placeholder={isAr ? "ابحث في الأسئلة..." : "Search questions..."}
-                  className="border border-[rgba(0,0,0,0.21)] rounded-sm px-4 py-3 pl-10 w-full text-sm text-gray-900] placeholder:text-[#9ca3af] focus:outline-none focus:border-[#0c0c0c] transition-colors"
+                  className="border border-[rgba(0,0,0,0.21)] rounded-sm px-4 py-3 ps-10 w-full text-sm text-gray-900] placeholder:text-[#9ca3af] focus:outline-none focus:border-[#0c0c0c] transition-colors"
                   readOnly
                   aria-label={isAr ? "بحث في الأسئلة الشائعة" : "Search FAQ"}
                 />

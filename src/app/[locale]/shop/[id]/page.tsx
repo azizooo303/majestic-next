@@ -7,6 +7,7 @@ import { ProductCard } from "@/components/shop/product-card";
 import { AddToCartButton } from "@/components/product/add-to-cart-button";
 import { JsonLd } from "@/components/common/json-ld";
 import { ChevronRight, Truck, Clock, Wrench } from "lucide-react";
+import { siteUrl } from "@/lib/site-url";
 import type { Metadata } from "next";
 import { getProduct, getProducts, parsePrice, calcDiscount, PRODUCT_PLACEHOLDER } from "@/lib/woocommerce";
 
@@ -28,15 +29,15 @@ export async function generateMetadata({
   const image = product.images[0]?.src || "";
   return {
     title: isAr
-      ? `${product.name} | ماجيستيك`
+      ? `${product.name} | ماجستيك`
       : `${product.name} | Majestic Furniture`,
     description: product.short_description?.replace(/<[^>]+>/g, "").slice(0, 160) || product.name,
     alternates: {
-      canonical: `https://lightyellow-mallard-240169.hostingersite.com/${locale}/shop/${id}`,
+      canonical: siteUrl(`/${locale}/shop/${id}`),
       languages: {
-        en: `https://lightyellow-mallard-240169.hostingersite.com/en/shop/${id}`,
-        ar: `https://lightyellow-mallard-240169.hostingersite.com/ar/shop/${id}`,
-        "x-default": `https://lightyellow-mallard-240169.hostingersite.com/en/shop/${id}`,
+        en: siteUrl(`/en/shop/${id}`),
+        ar: siteUrl(`/ar/shop/${id}`),
+        "x-default": siteUrl(`/en/shop/${id}`),
       },
     },
     openGraph: {

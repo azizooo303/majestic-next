@@ -3,6 +3,7 @@ import { Link } from "@/i18n/navigation";
 import { PageWrapper } from "@/components/common/page-wrapper";
 import { Reveal } from "@/components/common/reveal";
 import { StaggerGrid } from "@/components/common/stagger-grid";
+import { siteUrl } from "@/lib/site-url";
 import type { Metadata } from "next";
 
 export async function generateMetadata({
@@ -13,20 +14,20 @@ export async function generateMetadata({
   const { locale } = await params;
   const isAr = locale === "ar";
   return {
-    title: isAr ? "معارضنا — معارض أثاث مكتبي في الرياض | ماجيستيك" : "Our Showrooms — Office Furniture Showrooms in Riyadh | Majestic",
+    title: isAr ? "معارض أثاث مكتبي الرياض | ماجستيك" : "Office Furniture Showrooms Riyadh | Majestic",
     description: isAr
-      ? "زور أحد معارض ماجيستيك الثلاثة في الرياض وشاهد مجموعتنا من الأثاث المكتبي الراقي. مفتوح الأحد–الخميس من 9 صباحاً حتى 6 مساءً."
+      ? "زور أحد معارض ماجستيك الثلاثة في الرياض وشاهد مجموعتنا من الأثاث المكتبي الراقي. مفتوح الأحد–الخميس من 9 صباحاً حتى 6 مساءً."
       : "Visit one of Majestic's three Riyadh showrooms and experience our premium office furniture collection in person. Open Sunday–Thursday, 9am–6pm.",
     alternates: {
-      canonical: `https://lightyellow-mallard-240169.hostingersite.com/${locale}/showrooms`,
+      canonical: siteUrl(`/${locale}/showrooms`),
       languages: {
-        en: "https://lightyellow-mallard-240169.hostingersite.com/en/showrooms",
-        ar: "https://lightyellow-mallard-240169.hostingersite.com/ar/showrooms",
-        "x-default": "https://lightyellow-mallard-240169.hostingersite.com/en/showrooms",
+        en: siteUrl("/en/showrooms"),
+        ar: siteUrl("/ar/showrooms"),
+        "x-default": siteUrl("/en/showrooms"),
       },
     },
     openGraph: {
-      title: isAr ? "معارضنا في الرياض | ماجيستيك" : "Our Riyadh Showrooms | Majestic Furniture",
+      title: isAr ? "معارضنا في الرياض | ماجستيك" : "Our Riyadh Showrooms | Majestic Furniture",
       description: isAr
         ? "3 معارض في الرياض، مفتوحة الأحد–الخميس."
         : "3 showrooms in Riyadh, open Sunday–Thursday.",
@@ -43,6 +44,7 @@ interface Showroom {
   hours: string;
   phone: string;
   comingSoon: boolean;
+  image: string;
 }
 
 export default async function ShowroomsPage({
@@ -62,6 +64,7 @@ export default async function ShowroomsPage({
       hours: isAr ? "الأحد – الخميس: 9 ص – 6 م" : "Sun – Thu: 9am – 6pm",
       phone: "+966 11 234 5678",
       comingSoon: false,
+      image: "/images/website/showroom-riyadh.jpg",
     },
     {
       name: isAr ? "الرياض — الملز" : "Riyadh — Al Malaz",
@@ -71,6 +74,7 @@ export default async function ShowroomsPage({
       hours: isAr ? "الأحد – الخميس: 9 ص – 6 م" : "Sun – Thu: 9am – 6pm",
       phone: "+966 11 345 6789",
       comingSoon: false,
+      image: "/images/website/showroom-jeddah.jpg",
     },
     {
       name: isAr ? "جدة — قريباً" : "Jeddah — Coming Soon",
@@ -78,6 +82,7 @@ export default async function ShowroomsPage({
       hours: isAr ? "قريباً" : "Opening Soon",
       phone: "—",
       comingSoon: true,
+      image: "/images/website/showroom-dammam.jpg",
     },
   ];
 
@@ -89,7 +94,7 @@ export default async function ShowroomsPage({
       {/* Image */}
       <div className="relative aspect-[16/9] overflow-hidden">
         <Image
-          src="/images/hero-tables.jpg"
+          src={s.image}
           alt={s.name}
           fill
           className="object-cover group-hover:scale-[1.02] transition-transform duration-500"

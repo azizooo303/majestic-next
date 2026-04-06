@@ -100,7 +100,7 @@ export function ContactForm({ isAr, source = "contact" }: ContactFormProps) {
       <div>
         <label className="block text-xs font-semibold text-gray-900] uppercase tracking-wider mb-1.5">
           {isAr ? "الاسم" : "Name"}
-          <span className="text-[#e53e3e] ml-1">*</span>
+          <span className="text-[#e53e3e] ms-1">*</span>
         </label>
         <input
           type="text"
@@ -116,7 +116,7 @@ export function ContactForm({ isAr, source = "contact" }: ContactFormProps) {
       <div>
         <label className="block text-xs font-semibold text-gray-900] uppercase tracking-wider mb-1.5">
           {isAr ? "البريد الإلكتروني" : "Email"}
-          <span className="text-[#e53e3e] ml-1">*</span>
+          <span className="text-[#e53e3e] ms-1">*</span>
         </label>
         <input
           type="email"
@@ -132,7 +132,7 @@ export function ContactForm({ isAr, source = "contact" }: ContactFormProps) {
       <div>
         <label className="block text-xs font-semibold text-gray-900] uppercase tracking-wider mb-1.5">
           {isAr ? "رقم الهاتف" : "Phone"}
-          <span className="text-[#484848] ml-1 font-normal normal-case">
+          <span className="text-[#484848] ms-1 font-normal normal-case">
             ({isAr ? "اختياري" : "optional"})
           </span>
         </label>
@@ -149,7 +149,7 @@ export function ContactForm({ isAr, source = "contact" }: ContactFormProps) {
       <div>
         <label className="block text-xs font-semibold text-gray-900] uppercase tracking-wider mb-1.5">
           {isAr ? "الموضوع" : "Subject"}
-          <span className="text-[#e53e3e] ml-1">*</span>
+          <span className="text-[#e53e3e] ms-1">*</span>
         </label>
         <select
           name="subject"
@@ -169,7 +169,7 @@ export function ContactForm({ isAr, source = "contact" }: ContactFormProps) {
       <div>
         <label className="block text-xs font-semibold text-gray-900] uppercase tracking-wider mb-1.5">
           {isAr ? "الرسالة" : "Message"}
-          <span className="text-[#e53e3e] ml-1">*</span>
+          <span className="text-[#e53e3e] ms-1">*</span>
         </label>
         <textarea
           name="message"

@@ -2,6 +2,7 @@ import { Link } from "@/i18n/navigation";
 import { PageWrapper } from "@/components/common/page-wrapper";
 import { Reveal } from "@/components/common/reveal";
 import { StaggerGrid } from "@/components/common/stagger-grid";
+import { siteUrl } from "@/lib/site-url";
 import type { Metadata } from "next";
 
 export async function generateMetadata({
@@ -12,20 +13,20 @@ export async function generateMetadata({
   const { locale } = await params;
   const isAr = locale === "ar";
   return {
-    title: isAr ? "علاماتنا التجارية — أفضل ماركات الأثاث المكتبي العالمية | ماجيستيك" : "Our Brands — World's Leading Office Furniture Labels | Majestic",
+    title: isAr ? "العلامات التجارية للأثاث المكتبي | ماجستيك" : "Office Furniture Brands | Majestic",
     description: isAr
-      ? "اكتشف مجموعة ماجيستيك من أفضل العلامات التجارية العالمية للأثاث المكتبي. نوفر أكثر من 50 علامة تجارية مختارة بعناية لتلبية أعلى معايير الجودة."
+      ? "اكتشف مجموعة ماجستيك من أفضل العلامات التجارية العالمية للأثاث المكتبي. نوفر أكثر من 50 علامة تجارية مختارة بعناية لتلبية أعلى معايير الجودة."
       : "Discover Majestic's curated selection of the world's leading office furniture brands. Over 50 premium labels chosen to meet the highest quality standards.",
     alternates: {
-      canonical: `https://lightyellow-mallard-240169.hostingersite.com/${locale}/brands`,
+      canonical: siteUrl(`/${locale}/brands`),
       languages: {
-        en: "https://lightyellow-mallard-240169.hostingersite.com/en/brands",
-        ar: "https://lightyellow-mallard-240169.hostingersite.com/ar/brands",
-        "x-default": "https://lightyellow-mallard-240169.hostingersite.com/en/brands",
+        en: siteUrl("/en/brands"),
+        ar: siteUrl("/ar/brands"),
+        "x-default": siteUrl("/en/brands"),
       },
     },
     openGraph: {
-      title: isAr ? "علاماتنا التجارية | ماجيستيك" : "Our Brands | Majestic Furniture",
+      title: isAr ? "علاماتنا التجارية | ماجستيك" : "Our Brands | Majestic Furniture",
       description: isAr
         ? "أفضل العلامات التجارية العالمية للأثاث المكتبي."
         : "The world's leading office furniture brands, available at Majestic.",

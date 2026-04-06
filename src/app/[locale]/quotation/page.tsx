@@ -1,6 +1,7 @@
 import { PageWrapper } from "@/components/common/page-wrapper";
 import { Reveal } from "@/components/common/reveal";
 import { ContactForm } from "@/components/contact/contact-form";
+import { siteUrl } from "@/lib/site-url";
 import type { Metadata } from "next";
 
 export async function generateMetadata({
@@ -11,10 +12,18 @@ export async function generateMetadata({
   const { locale } = await params;
   const isAr = locale === "ar";
   return {
-    title: isAr ? "طلب عرض سعر — ماجيستيك للأثاث" : "Request a Quotation — Majestic Furniture",
+    title: isAr ? "طلب عرض سعر — ماجستيك للأثاث" : "Request a Quotation — Majestic Furniture",
     description: isAr
       ? "احصل على عرض سعر مخصص لمشروع أثاثك المكتبي. نخدم المؤسسات الحكومية والخاصة في المملكة."
       : "Get a custom quotation for your office furniture project. We serve government and private organisations across Saudi Arabia.",
+    alternates: {
+      canonical: siteUrl(`/${locale}/quotation`),
+      languages: {
+        en: siteUrl("/en/quotation"),
+        ar: siteUrl("/ar/quotation"),
+        "x-default": siteUrl("/en/quotation"),
+      },
+    },
   };
 }
 

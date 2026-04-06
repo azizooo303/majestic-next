@@ -47,7 +47,7 @@ export function BrandStandard({ isAr }: { isAr: boolean }) {
         <Reveal>
           <div className="mb-12 text-center">
             <p className="text-xs uppercase tracking-widest text-[#484848] mb-3">
-              {isAr ? "معيار ماجيستيك" : "The Majestic Standard"}
+              {isAr ? "معيار ماجستيك" : "The Majestic Standard"}
             </p>
             <h2 className="text-2xl md:text-[36px] font-bold text-[#0c0c0c] tracking-[-0.02em]">
               {isAr ? "أسس عملنا" : "What We Are Built On"}

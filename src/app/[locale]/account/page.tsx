@@ -11,7 +11,8 @@ export async function generateMetadata({
   const { locale } = await params;
   const isAr = locale === "ar";
   return {
-    title: isAr ? "حسابي — ماجيستيك للأثاث" : "My Account — Majestic Furniture",
+    title: isAr ? "حسابي — ماجستيك للأثاث" : "My Account — Majestic Furniture",
+    robots: { index: false, follow: false },
   };
 }
 

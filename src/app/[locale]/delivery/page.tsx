@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Reveal } from "@/components/common/reveal";
 import { Link } from "@/i18n/navigation";
+import { siteUrl } from "@/lib/site-url";
 
 export async function generateMetadata({
   params,
@@ -11,17 +12,17 @@ export async function generateMetadata({
   const isAr = locale === "ar";
   return {
     title: isAr
-      ? "التوصيل والتركيب — ماجيستيك للأثاث"
+      ? "التوصيل والتركيب — ماجستيك للأثاث"
       : "Delivery & Installation — Majestic Furniture",
     description: isAr
       ? "توصيل وتركيب احترافي في جميع أنحاء المملكة العربية السعودية ودول الخليج. أثاث مكتبي يصل في موعده."
       : "Nationwide delivery and professional installation across Saudi Arabia and the GCC. Office furniture delivered on time, every time.",
     alternates: {
-      canonical: `https://lightyellow-mallard-240169.hostingersite.com/${locale}/delivery`,
+      canonical: siteUrl(`/${locale}/delivery`),
       languages: {
-        en: "/en/delivery",
-        ar: "/ar/delivery",
-        "x-default": "/en/delivery",
+        en: siteUrl("/en/delivery"),
+        ar: siteUrl("/ar/delivery"),
+        "x-default": siteUrl("/en/delivery"),
       },
     },
   };
@@ -40,7 +41,7 @@ export default async function DeliveryPage({
         {
           title: "الرياض",
           days: "5–7 أيام عمل",
-          fee: "مجاني فوق 500 ريال",
+          fee: "مجاني للطلبات التي تتجاوز 500 ريال",
         },
         {
           title: "مدن المملكة الأخرى",

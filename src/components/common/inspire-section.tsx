@@ -67,9 +67,11 @@ export function InspireSection({ isAr }: { isAr: boolean }) {
               {isAr ? "إلهام التصميم" : "Design Inspiration"}
             </p>
             <h2 className="text-[28px] lg:text-[36px] font-bold text-gray-900] leading-tight tracking-tight">
-              {isAr
-                ? "أفكار لتخطيط\nمساحة عملك"
-                : "Planning Ideas\nFor Your Workspace"}
+              {isAr ? (
+                <>أفكار لتخطيط<br />مساحة عملك</>
+              ) : (
+                <>Planning Ideas<br />For Your Workspace</>
+              )}
             </h2>
             <p className="mt-4 text-[#484848] text-base leading-relaxed max-w-sm">
               {isAr

@@ -2,6 +2,7 @@ import { Link } from "@/i18n/navigation";
 import { Reveal } from "@/components/common/reveal";
 import { PageWrapper } from "@/components/common/page-wrapper";
 import { SpaceTypology } from "@/components/sections/space-typology";
+import { siteUrl } from "@/lib/site-url";
 import type { Metadata } from "next";
 
 export async function generateMetadata({
@@ -16,15 +17,14 @@ export async function generateMetadata({
       ? "أثاث مكتبي الرياض — ماجستيك"
       : "Office Furniture Riyadh — Majestic",
     description: isAr
-      ? "كراسي تنفيذية، محطات عمل، وأنظمة اجتماعات — للقطاعين الحكومي والخاص في الرياض. بُنيت وفق معايير العمارة الحديثة."
+      ? "أثاث مكتبي الرياض — كراسي تنفيذية، محطات عمل، مكاتب تنفيذية، وطاولات اجتماعات للقطاعين الحكومي والخاص. توريد وتركيب."
       : "Executive seating, workstations, and conference systems — supplied to corporate and government organizations across Riyadh. Built to modern architectural standards.",
     alternates: {
-      canonical: `https://lightyellow-mallard-240169.hostingersite.com/${locale}/riyadh`,
+      canonical: siteUrl(`/${locale}/riyadh`),
       languages: {
-        en: "https://lightyellow-mallard-240169.hostingersite.com/en/riyadh",
-        ar: "https://lightyellow-mallard-240169.hostingersite.com/ar/riyadh",
-        "ar-SA": "https://lightyellow-mallard-240169.hostingersite.com/ar/riyadh",
-        "x-default": "https://lightyellow-mallard-240169.hostingersite.com/en/riyadh",
+        en: siteUrl("/en/riyadh"),
+        ar: siteUrl("/ar/riyadh"),
+        "x-default": siteUrl("/en/riyadh"),
       },
     },
   };
@@ -42,7 +42,7 @@ export default async function RiyadhPage({
     ? [
         { value: "320", label: "محطة عمل" },
         { value: "14", label: "مشروعًا منجزًا" },
-        { value: "100%", label: "تركيب وتسليم ماجيستيك الكامل" },
+        { value: "100%", label: "تركيب وتسليم ماجستيك الكامل" },
       ]
     : [
         { value: "320", label: "Workstations" },
@@ -53,11 +53,11 @@ export default async function RiyadhPage({
   return (
     <PageWrapper id="main-content" className="flex-1 bg-white">
       {/* Hero band */}
-      <section className="bg-white py-20 md:py-28">
+      <section className="bg-[#0c0c0c] py-20 md:py-28">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
           <Reveal>
             <p className="text-xs uppercase tracking-widest text-[#aaaaaa] mb-4">
-              {isAr ? "ماجيستيك للأثاث المكتبي — الرياض" : "Majestic Furniture — Riyadh"}
+              {isAr ? "ماجستيك للأثاث المكتبي — الرياض" : "Majestic Furniture — Riyadh"}
             </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-6 max-w-3xl">
               {isAr ? "أثاث مكتبي. الرياض." : "Office Furniture. Riyadh."}
@@ -81,7 +81,7 @@ export default async function RiyadhPage({
               </p>
               <p className="text-[#484848] text-base md:text-lg leading-relaxed">
                 {isAr
-                  ? "ماجيستيك توفر وتركب بيئات أثاث مكتبي متكاملة في الرياض — من المكاتب التنفيذية إلى تجهيز الطوابق المؤسسية الكاملة. نعمل مع الشركات والجهات الحكومية والمقرات الإقليمية في مختلف أحياء الرياض، ونضمن تسليمًا كاملًا وفق المواصفات."
+                  ? "ماجستيك توفر وتركب بيئات أثاث مكتبي متكاملة في الرياض — من المكاتب التنفيذية إلى تجهيز الطوابق المؤسسية الكاملة. نعمل مع الشركات والجهات الحكومية والمقرات الإقليمية في مختلف أحياء الرياض، ونضمن تسليمًا كاملًا وفق المواصفات."
                   : "Majestic supplies and installs complete office furniture environments in Riyadh — from single executive offices to full-floor corporate fit-outs. We work with corporations, government entities, and regional headquarters across all districts of Riyadh, delivering to specification on every project."}
               </p>
             </div>
@@ -111,7 +111,7 @@ export default async function RiyadhPage({
       <SpaceTypology isAr={isAr} />
 
       {/* CTA band */}
-      <section className="bg-white py-16 md:py-20">
+      <section className="bg-[#0c0c0c] py-16 md:py-20">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
           <Reveal>
             <div className={`flex flex-col md:flex-row items-center justify-between gap-8 ${isAr ? "md:flex-row-reverse" : ""}`}>
@@ -121,19 +121,19 @@ export default async function RiyadhPage({
                 </h2>
                 <p className="text-white/60 text-sm max-w-md">
                   {isAr
-                    ? "فريق ماجيستيك يتولى التخطيط والتوريد والتركيب من أول يوم حتى التسليم."
+                    ? "فريق ماجستيك يتولى التخطيط والتوريد والتركيب من أول يوم حتى التسليم."
                     : "Majestic handles planning, supply, and installation from brief to handover."}
                 </p>
               </div>
               <div className={`flex flex-col sm:flex-row gap-4 ${isAr ? "sm:flex-row-reverse" : ""}`}>
                 <Link
-                  href="/about"
-                  className="btn-press inline-block bg-white text-gray-900] px-8 py-3.5 font-semibold text-sm tracking-wide rounded-sm hover:bg-white transition-colors text-center"
+                  href="/contact"
+                  className="btn-press inline-block bg-white text-[#0c0c0c] px-8 py-3.5 font-semibold text-sm tracking-wide rounded-sm hover:bg-gray-100 transition-colors text-center"
                 >
                   {isAr ? "احجز استشارة" : "Book a Consultation"}
                 </Link>
                 <Link
-                  href="/about"
+                  href="/showrooms"
                   className="btn-press inline-block bg-transparent border border-white text-white px-8 py-3.5 font-semibold text-sm tracking-wide rounded-sm hover:bg-white/10 transition-colors text-center"
                 >
                   {isAr ? "زيارة المعرض" : "Visit the Showroom"}

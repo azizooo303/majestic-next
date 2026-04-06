@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Reveal } from "@/components/common/reveal";
 import { Link } from "@/i18n/navigation";
+import { siteUrl } from "@/lib/site-url";
 
 export async function generateMetadata({
   params,
@@ -11,17 +12,17 @@ export async function generateMetadata({
   const isAr = locale === "ar";
   return {
     title: isAr
-      ? "الضمان وخدمة ما بعد البيع — ماجيستيك للأثاث"
+      ? "الضمان وخدمة ما بعد البيع — ماجستيك للأثاث"
       : "Warranty & After-Sales — Majestic Furniture",
     description: isAr
-      ? "شروط ضمان ماجيستيك للأثاث وخدمة ما بعد البيع. نقف خلف كل منتج نورّده ونركّبه."
+      ? "شروط ضمان ماجستيك للأثاث وخدمة ما بعد البيع. نقف خلف كل منتج نورّده ونركّبه."
       : "Majestic Furniture warranty terms and after-sales service. We stand behind every product we supply and install.",
     alternates: {
-      canonical: `https://lightyellow-mallard-240169.hostingersite.com/${locale}/warranty`,
+      canonical: siteUrl(`/${locale}/warranty`),
       languages: {
-        en: "/en/warranty",
-        ar: "/ar/warranty",
-        "x-default": "/en/warranty",
+        en: siteUrl("/en/warranty"),
+        ar: siteUrl("/ar/warranty"),
+        "x-default": siteUrl("/en/warranty"),
       },
     },
   };
@@ -38,7 +39,7 @@ export default async function WarrantyPage({
   const coverageRows = isAr
     ? [
         { type: "المكاتب التنفيذية", period: "5 سنوات", coverage: "الهيكل والسطح" },
-        { type: "الكراسي المريحة", period: "3 سنوات", coverage: "الآلية والقماش" },
+        { type: "الكراسي الإرغونومية", period: "3 سنوات", coverage: "الآلية والقماش" },
         { type: "وحدات التخزين", period: "5 سنوات", coverage: "الهيكل" },
         { type: "محطات العمل", period: "3 سنوات", coverage: "الهيكل الكامل" },
         { type: "الإكسسوارات", period: "سنة واحدة", coverage: "عيوب التصنيع" },

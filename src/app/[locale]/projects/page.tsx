@@ -4,6 +4,7 @@ import { PageWrapper } from "@/components/common/page-wrapper";
 import { Reveal } from "@/components/common/reveal";
 import { StaggerGrid } from "@/components/common/stagger-grid";
 import { PROJECTS } from "@/data/projects";
+import { siteUrl } from "@/lib/site-url";
 import type { Metadata } from "next";
 
 export async function generateMetadata({
@@ -21,11 +22,11 @@ export async function generateMetadata({
       ? "مشاريع أثاث مكتبي مُنجزة للشركات والجهات الحكومية والمؤسسات في السعودية ودول الخليج. من التصميم إلى التسليم الكامل."
       : "Office furniture projects delivered to corporations, government entities, and institutions across Saudi Arabia and the Gulf. From brief to full installation.",
     alternates: {
-      canonical: `https://lightyellow-mallard-240169.hostingersite.com/${locale}/projects`,
+      canonical: siteUrl(`/${locale}/projects`),
       languages: {
-        en: "https://lightyellow-mallard-240169.hostingersite.com/en/projects",
-        ar: "https://lightyellow-mallard-240169.hostingersite.com/ar/projects",
-        "x-default": "https://lightyellow-mallard-240169.hostingersite.com/en/projects",
+        en: siteUrl("/en/projects"),
+        ar: siteUrl("/ar/projects"),
+        "x-default": siteUrl("/en/projects"),
       },
     },
   };

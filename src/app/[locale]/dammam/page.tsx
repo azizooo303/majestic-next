@@ -2,6 +2,7 @@ import { Link } from "@/i18n/navigation";
 import { Reveal } from "@/components/common/reveal";
 import { PageWrapper } from "@/components/common/page-wrapper";
 import { SpaceTypology } from "@/components/sections/space-typology";
+import { siteUrl } from "@/lib/site-url";
 import type { Metadata } from "next";
 
 export async function generateMetadata({
@@ -16,15 +17,14 @@ export async function generateMetadata({
       ? "أثاث مكتبي الدمام — ماجستيك"
       : "Office Furniture Dammam — Majestic",
     description: isAr
-      ? "بيئات عمل للقطاعين الحكومي والخاص في الدمام والمنطقة الشرقية. توريد مباشر للمؤسسات."
+      ? "أثاث مكتبي الدمام والمنطقة الشرقية — مكاتب تنفيذية، محطات عمل، طاولات اجتماعات. توريد مباشر لقطاع الطاقة والمؤسسات الحكومية."
       : "Workspace environments supplied to corporate and government organizations in Dammam and the Eastern Province. Direct B2B supply.",
     alternates: {
-      canonical: `https://lightyellow-mallard-240169.hostingersite.com/${locale}/dammam`,
+      canonical: siteUrl(`/${locale}/dammam`),
       languages: {
-        en: "https://lightyellow-mallard-240169.hostingersite.com/en/dammam",
-        ar: "https://lightyellow-mallard-240169.hostingersite.com/ar/dammam",
-        "ar-SA": "https://lightyellow-mallard-240169.hostingersite.com/ar/dammam",
-        "x-default": "https://lightyellow-mallard-240169.hostingersite.com/en/dammam",
+        en: siteUrl("/en/dammam"),
+        ar: siteUrl("/ar/dammam"),
+        "x-default": siteUrl("/en/dammam"),
       },
     },
   };
@@ -53,11 +53,11 @@ export default async function DammamPage({
   return (
     <PageWrapper id="main-content" className="flex-1 bg-white">
       {/* Hero band */}
-      <section className="bg-white py-20 md:py-28">
+      <section className="bg-[#0c0c0c] py-20 md:py-28">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
           <Reveal>
             <p className="text-xs uppercase tracking-widest text-[#aaaaaa] mb-4">
-              {isAr ? "ماجيستيك للأثاث المكتبي — الدمام" : "Majestic Furniture — Dammam"}
+              {isAr ? "ماجستيك للأثاث المكتبي — الدمام" : "Majestic Furniture — Dammam"}
             </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-6 max-w-3xl">
               {isAr ? "أثاث مكتبي. الدمام." : "Office Furniture. Dammam."}
@@ -81,7 +81,7 @@ export default async function DammamPage({
               </p>
               <p className="text-[#484848] text-base md:text-lg leading-relaxed">
                 {isAr
-                  ? "ماجيستيك توفر أثاثًا مكتبيًا للدمام والمنطقة الشرقية — لقطاع الطاقة والمكاتب الحكومية والمقرات المؤسسية. نوفّر حلولًا مكتبية متكاملة تشمل التصميم والتوريد والتركيب لكل أنواع البيئات المكتبية."
+                  ? "ماجستيك توفر أثاثًا مكتبيًا للدمام والمنطقة الشرقية — لقطاع الطاقة والمكاتب الحكومية والمقرات المؤسسية. نوفّر حلولًا مكتبية متكاملة تشمل التصميم والتوريد والتركيب لكل أنواع البيئات المكتبية."
                   : "Majestic supplies office furniture to Dammam and the Eastern Province — serving the energy sector, government offices, and corporate headquarters. We provide complete workspace solutions covering design, supply, and installation across all office environment types."}
               </p>
             </div>
@@ -110,7 +110,7 @@ export default async function DammamPage({
       <SpaceTypology isAr={isAr} />
 
       {/* CTA band */}
-      <section className="bg-white py-16 md:py-20">
+      <section className="bg-[#0c0c0c] py-16 md:py-20">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
           <Reveal>
             <div className={`flex flex-col md:flex-row items-center justify-between gap-8 ${isAr ? "md:flex-row-reverse" : ""}`}>
@@ -120,19 +120,19 @@ export default async function DammamPage({
                 </h2>
                 <p className="text-white/60 text-sm max-w-md">
                   {isAr
-                    ? "فريق ماجيستيك يتولى التخطيط والتوريد والتركيب من أول يوم حتى التسليم."
+                    ? "فريق ماجستيك يتولى التخطيط والتوريد والتركيب من أول يوم حتى التسليم."
                     : "Majestic handles planning, supply, and installation from brief to handover."}
                 </p>
               </div>
               <div className={`flex flex-col sm:flex-row gap-4 ${isAr ? "sm:flex-row-reverse" : ""}`}>
                 <Link
-                  href="/about"
-                  className="btn-press inline-block bg-white text-gray-900] px-8 py-3.5 font-semibold text-sm tracking-wide rounded-sm hover:bg-white transition-colors text-center"
+                  href="/contact"
+                  className="btn-press inline-block bg-white text-[#0c0c0c] px-8 py-3.5 font-semibold text-sm tracking-wide rounded-sm hover:bg-gray-100 transition-colors text-center"
                 >
                   {isAr ? "احجز استشارة" : "Book a Consultation"}
                 </Link>
                 <Link
-                  href="/about"
+                  href="/showrooms"
                   className="btn-press inline-block bg-transparent border border-white text-white px-8 py-3.5 font-semibold text-sm tracking-wide rounded-sm hover:bg-white/10 transition-colors text-center"
                 >
                   {isAr ? "زيارة المعرض" : "Visit the Showroom"}

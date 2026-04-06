@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { Reveal } from "@/components/common/reveal";
 import { PageWrapper } from "@/components/common/page-wrapper";
+import { siteUrl } from "@/lib/site-url";
 import type { Metadata } from "next";
 
 export async function generateMetadata({
@@ -17,11 +18,11 @@ export async function generateMetadata({
       ? "ماجستيك تورد بيئات عمل احترافية للقطاعين الحكومي والخاص في المملكة ودول الخليج. دقة في التصنيع. ثقة مؤسسية."
       : "Majestic supplies professional workspace environments to corporate and government organizations across Saudi Arabia and the Gulf. Precision-built. Institutionally trusted.",
     alternates: {
-      canonical: `https://lightyellow-mallard-240169.hostingersite.com/${locale}/about`,
+      canonical: siteUrl(`/${locale}/about`),
       languages: {
-        en: "https://lightyellow-mallard-240169.hostingersite.com/en/about",
-        ar: "https://lightyellow-mallard-240169.hostingersite.com/ar/about",
-        "x-default": "https://lightyellow-mallard-240169.hostingersite.com/en/about",
+        en: siteUrl("/en/about"),
+        ar: siteUrl("/ar/about"),
+        "x-default": siteUrl("/en/about"),
       },
     },
     openGraph: {
@@ -54,7 +55,7 @@ export default async function AboutPage({
               {isAr ? "الرئيسية" : "Home"}
             </Link>
             <span className="mx-2">/</span>
-            {isAr ? "عن ماجيستيك" : "About"}
+            {isAr ? "عن ماجستيك" : "About"}
           </p>
           <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900]">
             {isAr ? "بيئات عمل. تدوم." : "Workspaces Built to Last."}
@@ -73,7 +74,7 @@ export default async function AboutPage({
                 </h2>
                 <p className="text-[#484848] leading-relaxed mb-4">
                   {isAr
-                    ? "ماجستيك تصمم وتورد بيئات عمل احترافية في المملكة ودول الخليج. مكاتب تنفيذية، محطات عمل، أنظمة اجتماعات، وصالات استقبال — بُنيت وفق معايير العمارة الحديثة وسُلِّمت بدقة."
+                    ? "ماجستيك تورّد وتجهّز بيئات عمل احترافية في المملكة ودول الخليج. مكاتب تنفيذية، محطات عمل، أنظمة اجتماعات، وصالات استقبال — بُنيت وفق معايير العمارة الحديثة وسُلِّمت بدقة."
                     : "Majestic designs and supplies professional workspace environments across Saudi Arabia and the Gulf. Executive offices, workstations, conference systems, lounge areas — built to modern architectural standards and delivered with precision."}
                 </p>
                 <p className="text-[#484848] leading-relaxed">
@@ -84,8 +85,8 @@ export default async function AboutPage({
               </div>
               <div className="relative aspect-[4/3] rounded-sm overflow-hidden">
                 <Image
-                  src="/images/hero-desks.jpg"
-                  alt={isAr ? "معرض ماجيستيك" : "Majestic Showroom"}
+                  src="/images/website/about-story.jpg"
+                  alt={isAr ? "استوديو تصميم ماجستيك" : "Majestic Design Studio"}
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -102,8 +103,9 @@ export default async function AboutPage({
           <Reveal>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
               {[
-                { number: "168", label: isAr ? "168 منتجًا" : "168 Products" },
-                { number: "6", label: isAr ? "6 فئات" : "6 Categories" },
+                { number: "168", label: isAr ? "منتجًا" : "Products" },
+                { number: "6", label: isAr ? "فئات" : "Categories" },
+                { number: "3", label: isAr ? "معارض في الرياض" : "Riyadh Showrooms" },
                 { number: isAr ? "المملكة والخليج" : "KSA + GCC", label: isAr ? "مقرنا المملكة، ونخدم دول الخليج" : "Saudi-based, GCC-ready" },
               ].map((stat) => (
                 <div key={stat.label}>
@@ -143,7 +145,7 @@ export default async function AboutPage({
                   : "From a single executive office to a multi-floor fit-out. Our systems are built to grow with your organization.",
               },
               {
-                icon: "P",
+                icon: "T",
                 title: isAr ? "الشراكة" : "Partnership",
                 desc: isAr
                   ? "من المتطلبات الأولية حتى التركيب — نعمل مع المهندسين وفرق المشتريات ومديري المرافق. العلاقة لا تنتهي عند التسليم."
@@ -165,7 +167,7 @@ export default async function AboutPage({
       </section>
 
       {/* CTA */}
-      <section className="bg-white py-16">
+      <section className="bg-[#0c0c0c] py-16">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8 text-center">
           <Reveal>
             <h2 className="text-2xl md:text-3xl font-bold text-white tracking-tight mb-4">

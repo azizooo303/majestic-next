@@ -31,7 +31,7 @@ const PROJECTS: Project[] = [
     descEn:
       "A complete open-floor fit-out across four levels for a financial services firm in Riyadh. Every workstation, every partition, every ergonomic detail — supplied and installed by Majestic.",
     descAr:
-      "تجهيز كامل لأربعة طوابق بنظام المكاتب المفتوحة لشركة خدمات مالية في الرياض. كل محطة عمل، كل وحدة تقسيم، كل تفصيل هندسي — توريد وتركيب من ماجيستيك.",
+      "تجهيز كامل لأربعة طوابق بنظام المكاتب المفتوحة لشركة خدمات مالية في الرياض. كل محطة عمل، كل وحدة تقسيم، كل تفصيل هندسي — توريد وتركيب من ماجستيك.",
   },
   {
     image: "/images/website/s4-b-executive-floor-corridor.jpg",

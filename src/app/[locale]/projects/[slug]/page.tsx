@@ -3,6 +3,7 @@ import { Link } from "@/i18n/navigation";
 import { PageWrapper } from "@/components/common/page-wrapper";
 import { ProjectGallery } from "@/components/sections/project-gallery";
 import { getProjectBySlug } from "@/data/projects";
+import { siteUrl } from "@/lib/site-url";
 import type { Metadata } from "next";
 
 export async function generateMetadata({
@@ -16,8 +17,16 @@ export async function generateMetadata({
   const isAr = locale === "ar";
   const name = isAr && project.nameAr ? project.nameAr : project.name;
   return {
-    title: `${name} | ${isAr ? "ماجيستيك" : "Majestic Furniture"}`,
-    description: project.description ?? undefined,
+    title: `${name} | ${isAr ? "ماجستيك" : "Majestic Furniture"}`,
+    description: project.description ?? (isAr ? "مشروع أثاث مكتبي منجز بواسطة ماجستيك." : "Office furniture project delivered by Majestic."),
+    alternates: {
+      canonical: siteUrl(`/${locale}/projects/${slug}`),
+      languages: {
+        en: siteUrl(`/en/projects/${slug}`),
+        ar: siteUrl(`/ar/projects/${slug}`),
+        "x-default": siteUrl(`/en/projects/${slug}`),
+      },
+    },
   };
 }
 

@@ -1,6 +1,7 @@
 import { Link } from "@/i18n/navigation";
 import { PageWrapper } from "@/components/common/page-wrapper";
 import { Reveal } from "@/components/common/reveal";
+import { siteUrl } from "@/lib/site-url";
 import type { Metadata } from "next";
 
 export async function generateMetadata({
@@ -12,23 +13,23 @@ export async function generateMetadata({
   const isAr = locale === "ar";
   return {
     title: isAr
-      ? "وظائف — انضم إلى فريق ماجيستيك للأثاث"
+      ? "وظائف — انضم إلى فريق ماجستيك للأثاث"
       : "Careers — Join the Majestic Furniture Team",
     description: isAr
-      ? "انضم إلى فريق ماجيستيك للأثاث المكتبي في الرياض. استعرض الوظائف المتاحة وقدّم طلبك للانضمام إلى شركة رائدة في قطاع الأثاث المكتبي بالمملكة العربية السعودية."
+      ? "انضم إلى فريق ماجستيك للأثاث المكتبي في الرياض. استعرض الوظائف المتاحة وقدّم طلبك للانضمام إلى شركة رائدة في قطاع الأثاث المكتبي بالمملكة العربية السعودية."
       : "Join the Majestic Furniture team in Riyadh. Browse open positions and apply to work with Saudi Arabia's leading premium office furniture company.",
     alternates: {
-      canonical: `https://lightyellow-mallard-240169.hostingersite.com/${locale}/careers`,
+      canonical: siteUrl(`/${locale}/careers`),
       languages: {
-        en: "https://lightyellow-mallard-240169.hostingersite.com/en/careers",
-        ar: "https://lightyellow-mallard-240169.hostingersite.com/ar/careers",
-        "x-default": "https://lightyellow-mallard-240169.hostingersite.com/en/careers",
+        en: siteUrl("/en/careers"),
+        ar: siteUrl("/ar/careers"),
+        "x-default": siteUrl("/en/careers"),
       },
     },
     openGraph: {
-      title: isAr ? "وظائف | ماجيستيك" : "Careers | Majestic Furniture",
+      title: isAr ? "وظائف | ماجستيك" : "Careers | Majestic Furniture",
       description: isAr
-        ? "انضم إلى فريق ماجيستيك للأثاث المكتبي في الرياض."
+        ? "انضم إلى فريق ماجستيك للأثاث المكتبي في الرياض."
         : "Join the Majestic Furniture team in Riyadh.",
       type: "website",
       locale: isAr ? "ar_SA" : "en_SA",
@@ -95,8 +96,8 @@ export default async function CareersPage({
               </h2>
               <p className="text-[#484848] leading-relaxed">
                 {isAr
-                  ? "نؤمن بأن الموهبة تصنع الفارق. نبحث عن أفراد طموحين يشاركوننا شغفنا بالتصميم والجودة والتميز في خدمة العملاء. إذا كنت تريد أن تكون جزءاً من قصة نجاح سعودية رائدة، فنحن نرحب بك."
-                  : "We believe talent makes the difference. We look for ambitious individuals who share our passion for design, quality, and exceptional client service. If you want to be part of a leading Saudi success story, we welcome you."}
+                  ? "ماجستيك تعمل عند تقاطع العمارة والمشتريات والتجهيز التجاري. نبحث عن مصممين ومديري مشاريع ومتخصصين في المبيعات يعملون بدقة ويفكرون بمنهجية."
+                  : "Majestic operates at the intersection of architecture, procurement, and commercial fit-out. We look for designers, project managers, and sales professionals who work with precision and think in systems."}
               </p>
             </div>
           </Reveal>

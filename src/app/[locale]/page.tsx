@@ -11,6 +11,7 @@ import { FadeUp } from "@/components/common/fade-up";
 import { PromoBanner } from "@/components/common/promo-banner";
 import { ProductCard } from "@/components/shop/product-card";
 import { JsonLd, LocalBusinessJsonLd, WebSiteJsonLd } from "@/components/common/json-ld";
+import { siteUrl } from "@/lib/site-url";
 import { SpaceTypology } from "@/components/sections/space-typology";
 import { ProjectsReel } from "@/components/sections/projects-reel";
 import { Collections } from "@/components/sections/collections";
@@ -146,16 +147,17 @@ export default async function HomePage({
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "Majestic Furniture",
-    url: "https://lightyellow-mallard-240169.hostingersite.com",
-    logo: "https://lightyellow-mallard-240169.hostingersite.com/images/majestic-logo-original.png",
+    url: siteUrl(),
+    logo: siteUrl("/images/majestic-logo-original.png"),
     address: {
       "@type": "PostalAddress",
+      streetAddress: "Al Olaya District",
       addressLocality: "Riyadh",
       addressCountry: "SA",
     },
     contactPoint: {
       "@type": "ContactPoint",
-      email: "hello@majestic.com.sa",
+      email: "a.alahmadi@majestic.com.sa",
     },
   };
 
@@ -164,6 +166,11 @@ export default async function HomePage({
       <JsonLd data={organizationSchema} />
       <LocalBusinessJsonLd />
       <WebSiteJsonLd />
+      {/* SR-only H1 for SEO — visible hero headline is inside HeroBanner */}
+      <h1 className="sr-only">
+        {isAr ? "أثاث مكتبي للقطاعين الحكومي والخاص — المملكة العربية السعودية"
+              : "Premium Office Furniture for Corporate & Government — Saudi Arabia"}
+      </h1>
       {/* Hero */}
       <SectionReveal direction="up" distance={50} duration={0.8}>
         <HeroBanner slides={heroSlides} />
@@ -195,7 +202,7 @@ export default async function HomePage({
             <FadeUp>
               <div className="flex items-baseline justify-between mb-10">
                 <h2 className={`font-bold text-[#0c0c0c] ${isAr ? "font-alyamama text-[31px] md:text-[46px] leading-[1.1em] tracking-normal" : "text-[28px] md:text-[42px] leading-[1.05em] tracking-[-0.02em]"}`}>
-                  {isAr ? "مختارات هذا الموسم" : "Selected for This Season"}
+                  {isAr ? "المنتجات المختارة" : "Featured Products"}
                 </h2>
                 <Link
                   href="/shop"
@@ -221,7 +228,7 @@ export default async function HomePage({
                 className="inline-block bg-[#0c0c0c] text-white px-10 py-3.5 min-h-[48px] font-semibold
                   text-sm tracking-wide rounded-none hover:bg-[#333] transition-colors"
               >
-                {isAr ? "تسوق جميع المنتجات" : "Shop All Products"}
+                {isAr ? "استعرض جميع المنتجات" : "Browse the Catalog"}
               </Link>
             </div>
           </div>
