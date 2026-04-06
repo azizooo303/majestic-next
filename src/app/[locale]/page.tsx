@@ -86,6 +86,8 @@ export default async function HomePage({
   const heroSlides: HeroSlide[] = siteContent.heroSlides.map((s) => ({
     image: s.image,
     mobileImage: s.mobileImage,
+    imageAr: s.imageAr,
+    mobileImageAr: s.mobileImageAr,
     alt: isAr ? s.collection.ar : s.collection.en,
     collection: isAr ? s.collection.ar : s.collection.en,
     headline: isAr ? s.headline.ar : s.headline.en,

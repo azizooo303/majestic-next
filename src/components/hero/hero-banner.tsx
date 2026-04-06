@@ -15,6 +15,8 @@ gsap.registerPlugin(DrawSVGPlugin, SplitText);
 export interface HeroSlide {
   image: string;
   mobileImage?: string;
+  imageAr?: string;
+  mobileImageAr?: string;
   alt: string;
   headline: string;
   tagline?: string;
@@ -140,7 +142,7 @@ export function HeroBanner({ slides, slide }: HeroBannerProps) {
         >
           {/* Desktop image */}
           <Image
-            src={s.image}
+            src={(isAr && s.imageAr) ? s.imageAr : s.image}
             alt={s.alt}
             fill
             priority={i === 0}
@@ -155,7 +157,7 @@ export function HeroBanner({ slides, slide }: HeroBannerProps) {
           />
           {/* Mobile image */}
           <Image
-            src={s.mobileImage ?? s.image}
+            src={(isAr && s.mobileImageAr) ? s.mobileImageAr : (s.mobileImage ?? s.image)}
             alt={s.alt}
             fill
             priority={i === 0}

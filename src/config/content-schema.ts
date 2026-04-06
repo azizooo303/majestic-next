@@ -11,6 +11,8 @@ export interface BilingualText {
 export interface HeroSlideContent {
   image: string
   mobileImage: string
+  imageAr?: string
+  mobileImageAr?: string
   collection: BilingualText
   headline: BilingualText
   tagline: BilingualText
@@ -74,8 +76,10 @@ export interface SiteContent {
 export const SITE_DEFAULTS: SiteContent = {
   heroSlides: [
     {
-      image: '/images/hero-desks.jpg',
-      mobileImage: '/images/hero-desks-mobile.jpg',
+      image: '/images/hero_office_desktop_en.png',
+      mobileImage: '/images/hero_office_mobile_en.png',
+      imageAr: '/images/hero_office_desktop_ar.png',
+      mobileImageAr: '/images/hero_office_mobile_ar.png',
       collection: { en: 'Executive Desk Collection', ar: 'تشكيلة المكاتب التنفيذية' },
       headline: { en: 'Desks Built\nfor Authority', ar: 'المكاتب التنفيذية' },
       tagline: {
@@ -86,8 +90,10 @@ export const SITE_DEFAULTS: SiteContent = {
       href: '/shop',
     },
     {
-      image: '/images/hero-seating.jpg',
-      mobileImage: '/images/hero-seating-mobile.jpg',
+      image: '/images/hero_chairs_desktop_en.png',
+      mobileImage: '/images/hero_chairs_mobile_en.png',
+      imageAr: '/images/hero_chairs_desktop_ar.png',
+      mobileImageAr: '/images/hero_chairs_mobile_ar.png',
       collection: { en: 'Seating Collection', ar: 'تشكيلة الكراسي' },
       headline: { en: 'Seating That\nPerforms', ar: 'كراسي المهام والجلسات' },
       tagline: {
@@ -98,8 +104,10 @@ export const SITE_DEFAULTS: SiteContent = {
       href: '/shop?category=seating',
     },
     {
-      image: '/images/hero-tables.jpg',
-      mobileImage: '/images/hero-tables-mobile.jpg',
+      image: '/images/hero_meeting_desktop_en.png',
+      mobileImage: '/images/hero_meeting_mobile_en.png',
+      imageAr: '/images/hero_meeting_desktop_ar.png',
+      mobileImageAr: '/images/hero_meeting_mobile_ar.png',
       collection: { en: 'Meeting Tables', ar: 'طاولات الاجتماعات' },
       headline: { en: 'Tables That\nCommand Rooms', ar: 'طاولات الاجتماعات والقاعات' },
       tagline: {
@@ -108,6 +116,20 @@ export const SITE_DEFAULTS: SiteContent = {
       },
       cta: { en: 'Explore Meeting Tables', ar: 'استعرض طاولات الاجتماعات' },
       href: '/shop?category=tables',
+    },
+    {
+      image: '/images/hero_cabinet_desktop_en.png',
+      mobileImage: '/images/hero_cabinet_mobile_en.png',
+      imageAr: '/images/hero_cabinet_desktop_ar.png',
+      mobileImageAr: '/images/hero_cabinet_mobile_ar.png',
+      collection: { en: 'Storage Collection', ar: 'تشكيلة التخزين' },
+      headline: { en: 'Storage Built\nfor Order', ar: 'حلول التخزين المكتبي' },
+      tagline: {
+        en: 'Filing cabinets and storage systems for organized, productive workspaces.',
+        ar: 'أنظمة تخزين وحلول أرشفة لبيئات عمل منظمة وفعّالة.',
+      },
+      cta: { en: 'Explore Storage', ar: 'استعرض تشكيلة التخزين' },
+      href: '/shop?category=storage',
     },
   ],
   announcement: {
