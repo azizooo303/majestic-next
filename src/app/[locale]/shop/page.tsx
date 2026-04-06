@@ -25,11 +25,11 @@ export async function generateMetadata({
   const isAr = locale === "ar";
   return {
     title: isAr
-      ? "جميع المنتجات — أثاث مكتبي احترافي | ماجيستيك"
-      : "All Products — Professional Office Furniture | Majestic",
+      ? "تشكيلة الأثاث المكتبي — ماجستيك | السعودية والخليج"
+      : "Office Furniture Collection — Majestic | Saudi Arabia & Gulf",
     description: isAr
-      ? "تصفح مجموعتنا الكاملة من الأثاث المكتبي الاحترافي: مكاتب تنفيذية، كراسي مريحة، محطات عمل، طاولات اجتماعات، ووحدات تخزين. توصيل وتركيب في الرياض."
-      : "Browse our complete range of professional office furniture: executive desks, ergonomic chairs, workstations, meeting tables, and storage units. Delivery and assembly in Riyadh.",
+      ? "كراسي تنفيذية، محطات عمل، أنظمة اجتماعات، تخزين، استقبال، وحلول صوتية. وفق معايير العمارة الحديثة — للمملكة ودول الخليج."
+      : "Executive seating, workstations, conference systems, storage, lounge, and acoustic solutions. Built to modern architectural standards — supplied across Saudi Arabia and the Gulf.",
     alternates: {
       canonical: `https://lightyellow-mallard-240169.hostingersite.com/${locale}/shop`,
       languages: {
@@ -140,8 +140,8 @@ export default async function ShopPage({
     : search
     ? (isAr ? `نتائج: "${search}"` : `Results: "${search}"`)
     : isAr
-    ? "جميع المنتجات"
-    : "All Products";
+    ? "المجموعة."
+    : "The Collection.";
 
   return (
     <main className="flex-1 bg-white min-h-screen">
@@ -200,8 +200,8 @@ export default async function ShopPage({
                 <div className="max-w-screen-lg mx-auto px-0 pt-0 pb-8">
                   <p className="text-[#484848] text-base leading-relaxed">
                     {isAr
-                      ? "ماجيستيك توفّر بيئات أثاث مكتبي متكاملة للمؤسسات في المملكة العربية السعودية ودول الخليج. تشمل تشكيلتنا جميع أنواع فضاءات العمل — من المكاتب التنفيذية وقاعات الاجتماعات إلى أرضيات العمل المفتوحة ومناطق الاستقبال وقاعات التدريب. كل منتج في كتالوجنا يستوفي معايير بنية وتشطيب محددة: المقاسات والمواد وجودة التجميع ثوابت لا تقبل التنازل. سواء كنت تحدد مواصفات مكتب تنفيذي واحد أو تجهيز حكومي متعدد الطوابق، يعمل فريقنا معك من كراسة المتطلبات حتى التركيب. تصفح حسب التصنيف أدناه، أو تواصل معنا لمناقشة استشارة مشروع."
-                      : "Majestic supplies complete office furniture environments to organisations across Saudi Arabia and the GCC. Our range covers every workspace typology — from executive offices and boardrooms to open workfloors, reception areas, and training facilities. Every product in our catalogue meets defined structural and finish standards: tolerances, materials, and assembly quality are not negotiable. Whether you are specifying a single executive office or a multi-floor government fit-out, our team works from brief to installation. Browse by category below, or contact us to discuss a project consultation."}
+                      ? "كراسي تنفيذية، محطات عمل، أنظمة اجتماعات، تخزين، استقبال، وحلول صوتية. وفق معايير العمارة الحديثة — للمملكة ودول الخليج."
+                      : "Executive seating, workstations, conference systems, storage, lounge, and acoustic solutions. Built to modern architectural standards — supplied across Saudi Arabia and the Gulf."}
                   </p>
                 </div>
               </Reveal>

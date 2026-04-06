@@ -30,7 +30,7 @@ export async function generateMetadata({
         ? "إجابات على أسئلتكم حول التوصيل والإرجاع والضمان."
         : "Answers to your questions about delivery, returns, and warranty.",
       type: "website",
-      locale: isAr ? "ar_SA" : "en_US",
+      locale: isAr ? "ar_SA" : "en_SA",
       siteName: "Majestic Furniture",
     },
   };
@@ -127,7 +127,7 @@ export default async function FaqPage({
             {isAr ? "الأسئلة الشائعة" : "FAQ"}
           </p>
           <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900]">
-            {isAr ? "الأسئلة الشائعة" : "Frequently Asked Questions"}
+            {isAr ? "أسئلة. وإجابات." : "Questions. Answered."}
           </h1>
         </div>
       </section>

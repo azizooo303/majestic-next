@@ -12,10 +12,10 @@ export async function generateMetadata({
   const { locale } = await params;
   const isAr = locale === "ar";
   return {
-    title: isAr ? "تواصل معنا — ماجيستيك للأثاث" : "Contact Us — Majestic Furniture",
+    title: isAr ? "تواصل مع ماجستيك — أثاث مكتبي السعودية" : "Contact Majestic — Office Furniture Saudi Arabia",
     description: isAr
-      ? "تواصل مع فريق ماجيستيك للأثاث المكتبي. زيارة معارضنا في الرياض، أو أرسل لنا استفساراً. الأحد–الخميس، 9 صباحاً–6 مساءً."
-      : "Get in touch with the Majestic Furniture team. Visit our Riyadh showrooms or send us an enquiry. Sunday–Thursday, 9am–6pm.",
+      ? "تواصل مع ماجستيك لمشاريع الأثاث المكتبي وعروض الأسعار وزيارة المعرض في السعودية ودول الخليج. الأحد–الخميس."
+      : "Contact Majestic for office furniture projects, quotations, and showroom visits across Saudi Arabia and the Gulf. Sunday–Thursday.",
     alternates: {
       canonical: `https://lightyellow-mallard-240169.hostingersite.com/${locale}/contact`,
       languages: {
@@ -25,12 +25,12 @@ export async function generateMetadata({
       },
     },
     openGraph: {
-      title: isAr ? "تواصل معنا | ماجيستيك" : "Contact Us | Majestic Furniture",
+      title: isAr ? "تواصل مع ماجستيك | أثاث مكتبي" : "Contact Majestic | Office Furniture",
       description: isAr
-        ? "تواصل مع فريق ماجيستيك للأثاث المكتبي."
-        : "Get in touch with the Majestic Furniture team.",
+        ? "تواصل مع ماجستيك لمشاريع الأثاث المكتبي وعروض الأسعار وزيارة المعرض."
+        : "Contact Majestic for office furniture projects, quotations, and showroom visits.",
       type: "website",
-      locale: isAr ? "ar_SA" : "en_US",
+      locale: isAr ? "ar_SA" : "en_SA",
       siteName: "Majestic Furniture",
     },
   };
@@ -72,7 +72,7 @@ export default async function ContactPage({
             {isAr ? "تواصل معنا" : "Contact Us"}
           </p>
           <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900]">
-            {isAr ? "تواصل معنا" : "Contact Us"}
+            {isAr ? "تواصل معنا." : "Get in Touch."}
           </h1>
         </div>
       </section>
@@ -85,7 +85,7 @@ export default async function ContactPage({
             <Reveal>
               <div>
                 <h2 className="text-2xl md:text-3xl font-bold text-gray-900] tracking-tight mb-8">
-                  {isAr ? "أرسل لنا رسالة" : "Send Us a Message"}
+                  {isAr ? "أرسل رسالة." : "Send a Message."}
                 </h2>
                 <ContactForm isAr={isAr} />
               </div>
@@ -96,7 +96,7 @@ export default async function ContactPage({
               <div className="space-y-8">
                 <div>
                   <h2 className="text-2xl md:text-3xl font-bold text-gray-900] tracking-tight mb-8">
-                    {isAr ? "معلومات التواصل" : "Contact Information"}
+                    {isAr ? "أين نحن." : "Find Us."}
                   </h2>
 
                   {/* Map placeholder */}

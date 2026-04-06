@@ -24,6 +24,7 @@ export async function generateMetadata({
         en: "https://lightyellow-mallard-240169.hostingersite.com/en/khobar",
         ar: "https://lightyellow-mallard-240169.hostingersite.com/ar/khobar",
         "ar-SA": "https://lightyellow-mallard-240169.hostingersite.com/ar/khobar",
+        "x-default": "https://lightyellow-mallard-240169.hostingersite.com/en/khobar",
       },
     },
   };

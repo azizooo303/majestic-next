@@ -15,11 +15,11 @@ export async function generateMetadata({
   const isAr = locale === "ar";
   return {
     title: isAr
-      ? "مشاريعنا — حلول الأثاث للشركات والمؤسسات | ماجيستيك"
-      : "Our Projects — Corporate & Institutional Furniture Solutions | Majestic",
+      ? "المشاريع — ماجستيك | أثاث مكتبي السعودية والخليج"
+      : "Projects — Majestic | Office Furniture Saudi Arabia & Gulf",
     description: isAr
-      ? "استعرض مشاريع ماجيستيك في تأثيث المكاتب للشركات الكبرى، المستشفيات، الجامعات، والفنادق في المملكة العربية السعودية."
-      : "Explore Majestic's completed furniture projects for major corporations, hospitals, and government institutions across Saudi Arabia.",
+      ? "مشاريع أثاث مكتبي مُنجزة للشركات والجهات الحكومية والمؤسسات في السعودية ودول الخليج. من التصميم إلى التسليم الكامل."
+      : "Office furniture projects delivered to corporations, government entities, and institutions across Saudi Arabia and the Gulf. From brief to full installation.",
     alternates: {
       canonical: `https://lightyellow-mallard-240169.hostingersite.com/${locale}/projects`,
       languages: {
@@ -64,12 +64,12 @@ export default async function ProjectsPage({
             {isAr ? "مشاريعنا" : "Projects"}
           </p>
           <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900">
-            {isAr ? "مشاريعنا" : "Our Projects"}
+            {isAr ? "المشاريع." : "Projects."}
           </h1>
           <p className="mt-3 text-[#484848] text-sm">
             {isAr
-              ? `${PROJECTS.length}+ مشروع منجز في المملكة العربية السعودية`
-              : `${PROJECTS.length}+ completed projects across Saudi Arabia`}
+              ? `${PROJECTS.length}+ مشروع منجز في السعودية ودول الخليج`
+              : `${PROJECTS.length}+ completed projects across Saudi Arabia and the Gulf`}
           </p>
         </div>
       </section>
@@ -152,14 +152,14 @@ export default async function ProjectsPage({
             <div className="mt-16 text-center">
               <p className="text-[#484848] text-sm mb-6 max-w-md mx-auto leading-relaxed">
                 {isAr
-                  ? "هل تبحث عن شريك موثوق لمشروع أثاث مكتبي؟ تواصل معنا لمناقشة متطلبات مشروعك."
-                  : "Looking for a reliable partner for an office furniture project? Contact us to discuss your requirements."}
+                  ? "مشروع أثاث مكتبي في السعودية أو الخليج؟ فريق ماجستيك يتولى من المواصفة إلى التركيب."
+                  : "An office furniture project in Saudi Arabia or the Gulf? Majestic handles from specification to installation."}
               </p>
               <Link
                 href="/contact"
                 className="inline-block bg-[#0c0c0c] text-white px-10 py-3.5 font-semibold text-sm tracking-wide rounded-sm hover:bg-[#333] transition-colors"
               >
-                {isAr ? "ابدأ مشروعك معنا" : "Start a Project"}
+                {isAr ? "ابدأ مشروعك." : "Start a Project."}
               </Link>
             </div>
           </Reveal>

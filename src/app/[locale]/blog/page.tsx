@@ -32,7 +32,7 @@ export async function generateMetadata({
         ? "أفكار ونصائح حول تصميم بيئات العمل المكتبية."
         : "Ideas and tips on office workspace design and furniture trends.",
       type: "website",
-      locale: isAr ? "ar_SA" : "en_US",
+      locale: isAr ? "ar_SA" : "en_SA",
       siteName: "Majestic Furniture",
     },
   };

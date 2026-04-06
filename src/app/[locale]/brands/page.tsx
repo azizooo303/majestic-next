@@ -30,7 +30,7 @@ export async function generateMetadata({
         ? "أفضل العلامات التجارية العالمية للأثاث المكتبي."
         : "The world's leading office furniture brands, available at Majestic.",
       type: "website",
-      locale: isAr ? "ar_SA" : "en_US",
+      locale: isAr ? "ar_SA" : "en_SA",
       siteName: "Majestic Furniture",
     },
   };

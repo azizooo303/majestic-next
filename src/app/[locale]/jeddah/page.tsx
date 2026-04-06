@@ -24,6 +24,7 @@ export async function generateMetadata({
         en: "https://lightyellow-mallard-240169.hostingersite.com/en/jeddah",
         ar: "https://lightyellow-mallard-240169.hostingersite.com/ar/jeddah",
         "ar-SA": "https://lightyellow-mallard-240169.hostingersite.com/ar/jeddah",
+        "x-default": "https://lightyellow-mallard-240169.hostingersite.com/en/jeddah",
       },
     },
   };

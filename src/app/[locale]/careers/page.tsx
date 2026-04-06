@@ -31,7 +31,7 @@ export async function generateMetadata({
         ? "انضم إلى فريق ماجيستيك للأثاث المكتبي في الرياض."
         : "Join the Majestic Furniture team in Riyadh.",
       type: "website",
-      locale: isAr ? "ar_SA" : "en_US",
+      locale: isAr ? "ar_SA" : "en_SA",
       siteName: "Majestic Furniture",
     },
   };

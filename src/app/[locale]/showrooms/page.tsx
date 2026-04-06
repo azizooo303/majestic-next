@@ -31,7 +31,7 @@ export async function generateMetadata({
         ? "3 معارض في الرياض، مفتوحة الأحد–الخميس."
         : "3 showrooms in Riyadh, open Sunday–Thursday.",
       type: "website",
-      locale: isAr ? "ar_SA" : "en_US",
+      locale: isAr ? "ar_SA" : "en_SA",
       siteName: "Majestic Furniture",
     },
   };

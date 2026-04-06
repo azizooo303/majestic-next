@@ -42,7 +42,7 @@ export async function generateMetadata({
     openGraph: {
       title: `${product.name} | Majestic Furniture`,
       type: "website",
-      locale: isAr ? "ar_SA" : "en_US",
+      locale: isAr ? "ar_SA" : "en_SA",
       siteName: "Majestic Furniture",
       images: image ? [{ url: image, width: 1200, height: 630, alt: product.name }] : [],
     },

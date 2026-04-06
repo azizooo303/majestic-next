@@ -24,6 +24,7 @@ export async function generateMetadata({
         en: "https://lightyellow-mallard-240169.hostingersite.com/en/riyadh",
         ar: "https://lightyellow-mallard-240169.hostingersite.com/ar/riyadh",
         "ar-SA": "https://lightyellow-mallard-240169.hostingersite.com/ar/riyadh",
+        "x-default": "https://lightyellow-mallard-240169.hostingersite.com/en/riyadh",
       },
     },
   };
