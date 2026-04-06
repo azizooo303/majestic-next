@@ -58,15 +58,13 @@ export async function generateMetadata({
 }
 
 
-const CDN = "https://lightyellow-mallard-240169.hostingersite.com/wp-content/uploads/2026/03";
-
 const CATEGORIES = [
-  { slug: "seating", key: "seating" as const, image: `${CDN}/category-seating.png` },
-  { slug: "tables", key: "tables" as const, image: `${CDN}/category-tables.png` },
-  { slug: "storage", key: "storage" as const, image: `${CDN}/category-storage.png` },
-  { slug: "workstations", key: "workstations" as const, image: `${CDN}/category-workstations.png` },
-  { slug: "acoustics", key: "acoustics" as const, image: `${CDN}/category-acoustics.png` },
-  { slug: "lounge", key: "lounge" as const, image: `${CDN}/category-lounge.png` },
+  { slug: "seating", key: "seating" as const, image: "/images/category-seating.png" },
+  { slug: "tables", key: "tables" as const, image: "/images/category-tables.png" },
+  { slug: "storage", key: "storage" as const, image: "/images/category-storage.png" },
+  { slug: "workstations", key: "workstations" as const, image: "/images/category-workstations.png" },
+  { slug: "acoustics", key: "acoustics" as const, image: "/images/category-acoustics.png" },
+  { slug: "lounge", key: "lounge" as const, image: "/images/category-lounge.png" },
 ];
 
 export default async function HomePage({
