@@ -30,7 +30,6 @@ interface NavChild {
 interface NavItem {
   key: string;
   href: string;
-  mega?: boolean;
   children?: NavChild[];
 }
 
@@ -39,28 +38,27 @@ const NAV_ITEMS: NavItem[] = [
     key: "chairs",
     href: "/shop?category=seating",
     children: [
-      { key: "executiveChairs", href: "/shop?category=executive-chairs", image: "https://lightyellow-mallard-240169.hostingersite.com/wp-content/uploads/2026/03/menu-seating.png" },
-      { key: "taskChairs", href: "/shop?category=task-chairs", image: "https://lightyellow-mallard-240169.hostingersite.com/wp-content/uploads/2026/03/menu-seating.png" },
-      { key: "meetingChairs", href: "/shop?category=meeting-chairs", image: "https://lightyellow-mallard-240169.hostingersite.com/wp-content/uploads/2026/03/menu-seating.png" },
-      { key: "lounge", href: "/shop?category=lounge-chairs", image: "https://lightyellow-mallard-240169.hostingersite.com/wp-content/uploads/2026/03/menu-lounge.png" },
+      { key: "executiveChairs", href: "/shop?category=executive-chairs", image: "/images/category-seating.png" },
+      { key: "taskChairs",      href: "/shop?category=task-chairs",      image: "/images/category-seating.png" },
+      { key: "meetingChairs",   href: "/shop?category=meeting-chairs",   image: "/images/category-seating.png" },
+      { key: "lounge",          href: "/shop?category=lounge-chairs",    image: "/images/category-lounge.png" },
     ],
   },
   {
     key: "desks",
     href: "/shop?category=tables",
-    mega: true,
     children: [
-      { key: "executiveDesks", href: "/shop?category=executive-desks", image: "https://lightyellow-mallard-240169.hostingersite.com/wp-content/uploads/2026/03/menu-tables.png" },
-      { key: "workstations", href: "/shop?category=workstations", image: "https://lightyellow-mallard-240169.hostingersite.com/wp-content/uploads/2026/03/menu-workstations.png" },
-      { key: "heightAdjustable", href: "/shop?category=height-adjustable", image: "https://lightyellow-mallard-240169.hostingersite.com/wp-content/uploads/2026/03/menu-tables.png" },
-      { key: "accessories", href: "/shop?category=accessories", image: "https://lightyellow-mallard-240169.hostingersite.com/wp-content/uploads/2026/03/menu-storage.png" },
-      { key: "meetingTables", href: "/shop?category=meeting-tables", image: "https://lightyellow-mallard-240169.hostingersite.com/wp-content/uploads/2026/03/menu-tables.png" },
-      { key: "receptionDesk", href: "/shop?category=reception", image: "https://lightyellow-mallard-240169.hostingersite.com/wp-content/uploads/2026/03/menu-lounge.png" },
+      { key: "executiveDesks",   href: "/shop?category=executive-desks",  image: "/images/category-tables.png" },
+      { key: "workstations",     href: "/shop?category=workstations",     image: "/images/category-workstations.png" },
+      { key: "heightAdjustable", href: "/shop?category=height-adjustable",image: "/images/category-tables.png" },
+      { key: "accessories",      href: "/shop?category=accessories",      image: "/images/category-storage.png" },
+      { key: "meetingTables",    href: "/shop?category=meeting-tables",   image: "/images/category-tables.png" },
+      { key: "receptionDesk",    href: "/shop?category=reception",        image: "/images/category-lounge.png" },
     ],
   },
-  { key: "storage", href: "/shop?category=storage" },
-  { key: "lounge", href: "/shop?category=lounge" },
-  { key: "acoustics", href: "/shop?category=acoustics" },
+  { key: "storage",     href: "/shop?category=storage" },
+  { key: "lounge",      href: "/shop?category=lounge" },
+  { key: "acoustics",   href: "/shop?category=acoustics" },
   { key: "accessories", href: "/shop?category=accessories" },
 ];
 
@@ -477,154 +475,113 @@ function DesktopNavItem({
         />
       </Link>
 
-      {isOpen &&
-        (item.mega ? (
-          <MegaMenu
-            item={item}
-            t={t}
-            onMouseEnter={open}
-            onMouseLeave={close}
-            topOffset={navRowOffset}
-          />
-        ) : (
-          <SimpleDropdown
-            item={item}
-            t={t}
-            pathname={pathname}
-            onMouseEnter={open}
-            onMouseLeave={close}
-          />
-        ))}
+      {isOpen && hasChildren && (
+        <NavMegaPanel
+          item={item}
+          t={t}
+          pathname={pathname}
+          onMouseEnter={open}
+          onMouseLeave={close}
+          topOffset={navRowOffset}
+        />
+      )}
     </div>
   );
 }
 
 /* ------------------------------------------------------------------ */
-/*  MEGA MENU                                                          */
+/*  NAV MEGA PANEL — unified thumbnail dropdown for all categories    */
 /* ------------------------------------------------------------------ */
 
-function MegaMenu({
+function NavMegaPanel({
   item,
   t,
+  pathname,
   onMouseEnter,
   onMouseLeave,
   topOffset,
 }: {
   item: NavItem;
   t: ReturnType<typeof useTranslations>;
+  pathname: string;
   onMouseEnter: () => void;
   onMouseLeave: () => void;
   topOffset: number;
 }) {
+  const count = item.children!.length;
+  // ≤4 items → portrait cards; 5–6 → landscape cards in 3-col grid
+  const cols = count <= 4 ? count : 3;
+  const isPortrait = count <= 4;
+
   return (
     <div
-      className="fixed inset-x-0 z-50 animate-in fade-in slide-in-from-top-1 duration-200"
+      className="fixed inset-x-0 z-50 animate-in fade-in slide-in-from-top-1 duration-150"
       style={{ top: `${topOffset}px` }}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
-      <div className="bg-white border-b border-[rgba(0,0,0,0.12)] shadow-md">
-        <div className="max-w-screen-xl mx-auto px-8 py-8">
-          <div className="flex gap-12">
-            {/* Left: Subcategory links */}
-            <div className="w-52 flex-shrink-0">
-              <p className="text-xs font-semibold uppercase tracking-widest text-[#484848] mb-4">
-                {t(`nav.${item.key}`)}
-              </p>
-              <ul className="space-y-1">
-                {item.children!.map((child) => (
-                  <li key={child.key}>
-                    <Link
-                      href={child.href}
-                      className="block text-sm text-gray-900] hover:text-[#484848] py-1.5 transition-colors"
-                    >
-                      {t(`nav.${child.key}`)}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-              <div className="mt-6 pt-4 border-t border-[rgba(0,0,0,0.08)]">
-                <Link
-                  href={item.href}
-                  className="text-xs font-semibold text-gray-900] hover:text-[#484848] inline-flex items-center gap-1 transition-colors"
-                >
-                  {t("common.viewAll")} <ChevronRight className="w-3 h-3" />
-                </Link>
-              </div>
-            </div>
+      <div className="bg-white border-b border-[rgba(0,0,0,0.12)] shadow-lg">
+        <div className="max-w-screen-xl mx-auto px-8 py-6">
 
-            {/* Right: Featured product cards */}
-            <div className="flex-1 grid grid-cols-3 gap-4">
-              {item.children!.slice(0, 3).map((child) => (
-                <Link
-                  key={child.key}
-                  href={child.href}
-                  className="group block"
-                >
-                  <div className="aspect-[4/3] bg-[#f2f2f2] overflow-hidden mb-2 relative">
-                    {child.image ? (
-                      <Image
-                        src={child.image}
-                        alt={t(`nav.${child.key}`)}
-                        fill
-                        className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
-                        sizes="200px"
-                      />
-                    ) : (
-                      <div className="w-full h-full bg-[#ebebeb]" />
-                    )}
-                  </div>
-                  <span className="text-xs font-medium text-gray-900] group-hover:text-[#484848] transition-colors">
-                    {t(`nav.${child.key}`)}
-                  </span>
-                </Link>
-              ))}
-            </div>
+          {/* Panel header */}
+          <div className="flex items-center justify-between mb-5">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#484848]">
+              {t(`nav.${item.key}`)}
+            </p>
+            <Link
+              href={item.href}
+              className="text-[11px] font-semibold text-[#0c0c0c] hover:text-[#484848] inline-flex items-center gap-1 transition-colors"
+            >
+              {t("common.viewAll")}
+              <ChevronRight className="w-3 h-3" />
+            </Link>
           </div>
-        </div>
-      </div>
-    </div>
-  );
-}
 
-/* ------------------------------------------------------------------ */
-/*  SIMPLE DROPDOWN                                                    */
-/* ------------------------------------------------------------------ */
-
-function SimpleDropdown({
-  item,
-  t,
-  pathname,
-  onMouseEnter,
-  onMouseLeave,
-}: {
-  item: NavItem;
-  t: ReturnType<typeof useTranslations>;
-  pathname: string;
-  onMouseEnter: () => void;
-  onMouseLeave: () => void;
-}) {
-  return (
-    <div
-      className="absolute top-full start-0 pt-1 z-50 animate-in fade-in slide-in-from-top-1 duration-200"
-      onMouseEnter={onMouseEnter}
-      onMouseLeave={onMouseLeave}
-    >
-      <div className="bg-white shadow-md border border-[rgba(0,0,0,0.08)] w-52 py-2">
-        {item.children!.map((child) => (
-          <Link
-            key={child.key}
-            href={child.href}
-            className={cn(
-              "block px-4 py-2.5 text-sm transition-colors hover:bg-[#fafafa] hover:text-gray-900]",
-              pathname === child.href
-                ? "text-gray-900] font-semibold"
-                : "text-[#484848]"
-            )}
+          {/* Thumbnail grid */}
+          <div
+            className="grid gap-3"
+            style={{ gridTemplateColumns: `repeat(${cols}, minmax(0, 1fr))` }}
           >
-            {t(`nav.${child.key}`)}
-          </Link>
-        ))}
+            {item.children!.map((child) => (
+              <Link
+                key={child.key}
+                href={child.href}
+                className="group block"
+              >
+                <div
+                  className={cn(
+                    "relative bg-[#f5f5f5] overflow-hidden mb-2",
+                    isPortrait ? "aspect-[3/4]" : "aspect-[4/3]"
+                  )}
+                >
+                  {child.image ? (
+                    <Image
+                      src={child.image}
+                      alt={t(`nav.${child.key}`)}
+                      fill
+                      className="object-cover transition-transform duration-300 group-hover:scale-[1.04]"
+                      sizes="(max-width: 1280px) 20vw, 220px"
+                    />
+                  ) : (
+                    <div className="w-full h-full bg-[#ebebeb]" />
+                  )}
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/8 transition-colors duration-200" />
+                </div>
+                <span
+                  className={cn(
+                    "text-[12px] font-medium leading-tight block transition-colors",
+                    pathname === child.href
+                      ? "text-[#0c0c0c] font-semibold"
+                      : "text-[#484848] group-hover:text-[#0c0c0c]"
+                  )}
+                >
+                  {t(`nav.${child.key}`)}
+                </span>
+              </Link>
+            ))}
+          </div>
+
+        </div>
       </div>
     </div>
   );
