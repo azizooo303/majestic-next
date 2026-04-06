@@ -2,7 +2,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = 'https://thedeskco.net'
+  const base = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://majestic-next.vercel.app'
   const locales = ['en', 'ar']
 
   const pages = [

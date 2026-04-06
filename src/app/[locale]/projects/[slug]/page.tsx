@@ -53,7 +53,7 @@ export default async function ProjectDetailPage({
           <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight text-gray-900">
             {displayName}
           </h1>
-          <p className="mt-2 text-sm text-[#C1B167] uppercase tracking-widest font-semibold">
+          <p className="mt-2 text-sm text-[#484848] uppercase tracking-widest font-semibold">
             {project.category}
           </p>
         </div>

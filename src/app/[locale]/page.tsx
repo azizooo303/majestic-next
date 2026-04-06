@@ -20,7 +20,6 @@ import { BrandStandard } from "@/components/sections/brand-standard";
 import { MaterialSelector } from "@/components/sections/material-selector";
 import { InsightEditorial } from "@/components/sections/insight-editorial";
 import { ConsultationCta } from "@/components/sections/consultation-cta";
-import { ArchitecturalBackground } from "@/components/common/architectural-background";
 import { SectionReveal } from "@/components/common/section-reveal";
 import type { HeroSlide } from "@/components/hero/hero-banner";
 import { getProducts, parsePrice, calcDiscount, PRODUCT_PLACEHOLDER } from "@/lib/woocommerce";
@@ -39,11 +38,11 @@ export async function generateMetadata({
       ? "ماجيستيك — الوجهة الأولى للأثاث المكتبي الاحترافي في المملكة العربية السعودية. مكاتب تنفيذية، كراسي مريحة، ومحطات عمل لبيئات العمل الراقية."
       : "Majestic Furniture — Saudi Arabia's premier destination for professional office furniture. Executive desks, ergonomic chairs, and workstations for elevated workspace environments.",
     alternates: {
-      canonical: `https://thedeskco.net/${locale}`,
+      canonical: `${process.env.NEXT_PUBLIC_SITE_URL ?? "https://majestic-next.vercel.app"}/${locale}`,
       languages: {
-        en: "https://thedeskco.net/en",
-        ar: "https://thedeskco.net/ar",
-        "x-default": "https://thedeskco.net/en",
+        en: `${process.env.NEXT_PUBLIC_SITE_URL ?? "https://majestic-next.vercel.app"}/en`,
+        ar: `${process.env.NEXT_PUBLIC_SITE_URL ?? "https://majestic-next.vercel.app"}/ar`,
+        "x-default": `${process.env.NEXT_PUBLIC_SITE_URL ?? "https://majestic-next.vercel.app"}/en`,
       },
     },
     openGraph: {
@@ -161,8 +160,7 @@ export default async function HomePage({
   };
 
   return (
-    <PageWrapper id="main-content" className="flex-1 bg-white relative z-10">
-      <ArchitecturalBackground />
+    <PageWrapper id="main-content" className="flex-1 bg-white">
       <JsonLd data={organizationSchema} />
       <LocalBusinessJsonLd />
       <WebSiteJsonLd />

@@ -27,7 +27,7 @@ export function ProjectGallery({ images, name }: { images: string[]; name: strin
               key={i}
               onClick={() => setActive(i)}
               className={`relative aspect-square overflow-hidden rounded-sm border-2 transition-colors ${
-                i === active ? "border-[#C1B167]" : "border-transparent hover:border-gray-300"
+                i === active ? "border-[#0c0c0c]" : "border-transparent hover:border-gray-300"
               }`}
             >
               <Image

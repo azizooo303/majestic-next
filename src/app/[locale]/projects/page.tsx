@@ -138,7 +138,7 @@ export default async function ProjectsPage({
                   {/* Always-visible footer */}
                   <div className="p-4 bg-white">
                     <h3 className="font-bold text-gray-900 text-sm truncate">{displayName}</h3>
-                    <p className="text-[#C1B167] text-xs mt-0.5 uppercase tracking-wider font-semibold">
+                    <p className="text-[#484848] text-xs mt-0.5 uppercase tracking-wider font-semibold">
                       {project.category}
                     </p>
                   </div>

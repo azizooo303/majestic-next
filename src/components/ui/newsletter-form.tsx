@@ -29,17 +29,17 @@ export function NewsletterForm() {
         required
         className="flex-1 px-4 py-3 rounded-lg bg-white/10 text-white
           placeholder:text-white/50 border border-white/20
-          focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/30"
+          focus:border-[#0c0c0c] focus:outline-none focus:ring-2 focus:ring-[#0c0c0c]/30"
       />
       <button
         type="submit"
-        className="px-6 py-3 bg-gold text-gray-900 font-medium rounded-lg
+        className="px-6 py-3 bg-[#0c0c0c] text-white font-medium rounded-lg
           transition-all duration-200 hover:opacity-90 cursor-pointer"
       >
         {t("common.subscribe")}
       </button>
       {status === "success" && (
-        <p className="sm:absolute sm:top-full sm:mt-2 text-sm text-gold mt-2">
+        <p className="sm:absolute sm:top-full sm:mt-2 text-sm text-[#0c0c0c] mt-2">
           {t("common.subscribeThankYou")}
         </p>
       )}

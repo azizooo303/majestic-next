@@ -15,7 +15,7 @@ export function ProjectsReel({ isAr }: { isAr: boolean }) {
       {/* Header */}
       <div className="max-w-screen-2xl mx-auto px-4 md:px-8 mb-8 flex items-end justify-between">
         <div>
-          <p className="text-[11px] uppercase tracking-[0.16em] text-[#C1B167] mb-1">
+          <p className="text-[11px] uppercase tracking-[0.16em] text-white/60 mb-1">
             {isAr ? "مشاريعنا المنجزة" : "Delivered Projects"}
           </p>
           <h2 className="text-2xl md:text-3xl font-bold text-white tracking-tight leading-tight">
@@ -67,7 +67,7 @@ export function ProjectsReel({ isAr }: { isAr: boolean }) {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                 <div className="absolute inset-0 bg-black/30 opacity-0 group-hover/card:opacity-100 transition-opacity duration-300" />
                 <div className="absolute bottom-0 left-0 right-0 p-4">
-                  <span className="block text-[10px] font-semibold uppercase tracking-[0.12em] text-[#C1B167] mb-0.5">
+                  <span className="block text-[10px] font-semibold uppercase tracking-[0.12em] text-white/60 mb-0.5">
                     {project.category}
                   </span>
                   <p className="text-white text-sm font-semibold leading-tight line-clamp-1">

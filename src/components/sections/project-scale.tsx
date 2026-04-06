@@ -98,7 +98,7 @@ export function ProjectScale({ isAr }: { isAr: boolean }) {
                 <div className="flex gap-8 mb-8">
                   {project.stats.map((stat) => (
                     <div key={stat.labelEn}>
-                      <p className="text-4xl font-bold text-[#C1B167]">
+                      <p className="text-4xl font-bold text-[#0c0c0c]">
                         <CountUp value={stat.value} duration={1500} />
                       </p>
                       <p className="text-xs text-[#484848] mt-1 leading-tight">

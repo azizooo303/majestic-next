@@ -5,6 +5,6 @@ export default function robots(): MetadataRoute.Robots {
     rules: [
       { userAgent: '*', allow: '/', disallow: ['/api/', '/cart', '/checkout'] }
     ],
-    sitemap: 'https://thedeskco.net/sitemap.xml',
+    sitemap: `${process.env.NEXT_PUBLIC_SITE_URL ?? 'https://majestic-next.vercel.app'}/sitemap.xml`,
   }
 }

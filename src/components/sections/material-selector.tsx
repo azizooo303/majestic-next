@@ -90,7 +90,7 @@ export function MaterialSelector({ isAr }: { isAr: boolean }) {
                     className={`w-full aspect-square border-2 transition-all duration-150 ${
                       selected === finish.key
                         ? "border-[#0c0c0c] scale-105"
-                        : "border-transparent hover:border-[#C1B167] hover:scale-110"
+                        : "border-transparent hover:border-[#0c0c0c] hover:scale-110"
                     }`}
                     style={{ backgroundColor: finish.swatch }}
                   />

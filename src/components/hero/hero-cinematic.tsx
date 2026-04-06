@@ -162,7 +162,7 @@ function DesktopSlide({
         style={{ opacity: textOpacity, y: textY }}
       >
         {slide.subheadline && (
-          <p className="text-sm md:text-base font-medium text-gold tracking-widest uppercase mb-3">
+          <p className="text-sm md:text-base font-medium text-white/65 tracking-widest uppercase mb-3">
             {slide.subheadline}
           </p>
         )}
@@ -176,13 +176,13 @@ function DesktopSlide({
         )}
         <Link
           href={slide.href}
-          className="inline-flex items-center gap-2 mt-6 px-8 py-3.5 border-2 border-gold
-            bg-gold/10 text-white font-medium tracking-wider uppercase text-sm
+          className="inline-flex items-center gap-2 mt-6 px-8 py-3.5 border-2 border-white
+            bg-white/10 text-white font-medium tracking-wider uppercase text-sm
             rounded-sm transition-all duration-300
-            hover:bg-gold hover:text-gray-900
-            focus:outline-none focus:ring-2 focus:ring-gold/50"
+            hover:bg-white hover:text-[#0c0c0c]
+            focus:outline-none focus:ring-2 focus:ring-white/50"
         >
-          <span className="w-1.5 h-1.5 bg-gold rounded-full" />
+          <span className="w-1.5 h-1.5 bg-white rounded-full" />
           {slide.cta}
         </Link>
       </motion.div>
@@ -283,12 +283,12 @@ function MobileHero({ slides }: { slides: HeroSlide[] }) {
             )}
             <Link
               href={slide.href}
-              className="inline-flex items-center gap-2 mt-4 px-6 py-3 border-2 border-gold
-                bg-gold/10 text-white font-medium tracking-wider uppercase text-sm
+              className="inline-flex items-center gap-2 mt-4 px-6 py-3 border-2 border-white
+                bg-white/10 text-white font-medium tracking-wider uppercase text-sm
                 rounded-sm transition-all duration-300
-                hover:bg-gold hover:text-gray-900"
+                hover:bg-white hover:text-[#0c0c0c]"
             >
-              <span className="w-1.5 h-1.5 bg-gold rounded-full" />
+              <span className="w-1.5 h-1.5 bg-white rounded-full" />
               {slide.cta}
             </Link>
           </div>

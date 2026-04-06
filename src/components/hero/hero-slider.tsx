@@ -98,10 +98,10 @@ export function HeroSlider({
               )}
               <Link
                 href={slide.href}
-                className="inline-block mt-4 md:mt-6 px-8 py-3 bg-gold text-gray-900
+                className="inline-block mt-4 md:mt-6 px-8 py-3 bg-white text-[#0c0c0c]
                   font-medium rounded-md transition-all duration-200
                   hover:opacity-90 hover:-translate-y-0.5
-                  focus:outline-none focus:ring-2 focus:ring-gold/50"
+                  focus:outline-none focus:ring-2 focus:ring-white/50"
               >
                 {slide.cta}
               </Link>
@@ -120,7 +120,7 @@ export function HeroSlider({
               className={cn(
                 "w-2.5 h-2.5 rounded-full transition-all duration-300 cursor-pointer",
                 i === current
-                  ? "bg-gold w-8"
+                  ? "bg-white w-8"
                   : "bg-white/50 hover:bg-white/80"
               )}
               aria-label={`Go to slide ${i + 1}`}

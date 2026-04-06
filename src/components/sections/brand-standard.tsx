@@ -65,7 +65,7 @@ export function BrandStandard({ isAr }: { isAr: boolean }) {
         >
           {PILLARS.map((pillar) => (
             <div key={pillar.number} className="bg-white border border-[rgba(0,0,0,0.21)] p-8 md:p-10">
-              <p className="text-4xl font-bold text-[#C1B167] mb-5">{pillar.number}</p>
+              <p className="text-4xl font-bold text-[#0c0c0c] mb-5">{pillar.number}</p>
               <h3 className="text-[#0c0c0c] font-bold text-base mb-3">
                 {isAr ? pillar.headingAr : pillar.headingEn}
               </h3>

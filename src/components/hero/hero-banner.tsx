@@ -232,7 +232,7 @@ export function HeroBanner({ slides, slide }: HeroBannerProps) {
                       ? "font-alyamama text-[12px] tracking-normal"
                       : "text-[11px] uppercase tracking-[0.14em]"
                   )}
-                  style={{ color: "#C1B167" }}
+                  style={{ color: "rgba(255,255,255,0.65)" }}
                   data-hero-label
                 >
                   {currentSlide.collection}
@@ -282,7 +282,7 @@ export function HeroBanner({ slides, slide }: HeroBannerProps) {
                   "transition-all duration-200",
                   "hover:bg-white/[0.12]",
                   "active:scale-[0.98] active:bg-white/[0.20]",
-                  "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#C1B167]",
+                  "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white",
                   "w-full max-w-[280px] justify-center sm:w-auto sm:max-w-none sm:justify-start"
                 )}
                 style={{ borderColor: "rgba(255,255,255,0.85)" }}

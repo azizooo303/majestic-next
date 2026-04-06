@@ -8,8 +8,8 @@ Sentry.init({
   replaysSessionSampleRate: 0.05, // 5% of sessions
   integrations: [
     Sentry.replayIntegration({
-      maskAllText: false,
-      blockAllMedia: false,
+      maskAllText: true,
+      blockAllMedia: true,
     }),
   ],
   enabled: process.env.NODE_ENV === "production",
