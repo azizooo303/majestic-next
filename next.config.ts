@@ -18,14 +18,6 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "lightyellow-mallard-240169.hostingersite.com",
       },
-      {
-        protocol: "https",
-        hostname: "thedeskco.net",
-      },
-      {
-        protocol: "https",
-        hostname: "*.cloudways.com",
-      },
     ],
   },
 };

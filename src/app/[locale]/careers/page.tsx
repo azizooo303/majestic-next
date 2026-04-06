@@ -18,11 +18,11 @@ export async function generateMetadata({
       ? "انضم إلى فريق ماجيستيك للأثاث المكتبي في الرياض. استعرض الوظائف المتاحة وقدّم طلبك للانضمام إلى شركة رائدة في قطاع الأثاث المكتبي بالمملكة العربية السعودية."
       : "Join the Majestic Furniture team in Riyadh. Browse open positions and apply to work with Saudi Arabia's leading premium office furniture company.",
     alternates: {
-      canonical: `https://thedeskco.net/${locale}/careers`,
+      canonical: `https://lightyellow-mallard-240169.hostingersite.com/${locale}/careers`,
       languages: {
-        en: "https://thedeskco.net/en/careers",
-        ar: "https://thedeskco.net/ar/careers",
-        "x-default": "https://thedeskco.net/en/careers",
+        en: "https://lightyellow-mallard-240169.hostingersite.com/en/careers",
+        ar: "https://lightyellow-mallard-240169.hostingersite.com/ar/careers",
+        "x-default": "https://lightyellow-mallard-240169.hostingersite.com/en/careers",
       },
     },
     openGraph: {

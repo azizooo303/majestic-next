@@ -18,11 +18,11 @@ export async function generateMetadata({
       ? "زور أحد معارض ماجيستيك الثلاثة في الرياض وشاهد مجموعتنا من الأثاث المكتبي الراقي. مفتوح الأحد–الخميس من 9 صباحاً حتى 6 مساءً."
       : "Visit one of Majestic's three Riyadh showrooms and experience our premium office furniture collection in person. Open Sunday–Thursday, 9am–6pm.",
     alternates: {
-      canonical: `https://thedeskco.net/${locale}/showrooms`,
+      canonical: `https://lightyellow-mallard-240169.hostingersite.com/${locale}/showrooms`,
       languages: {
-        en: "https://thedeskco.net/en/showrooms",
-        ar: "https://thedeskco.net/ar/showrooms",
-        "x-default": "https://thedeskco.net/en/showrooms",
+        en: "https://lightyellow-mallard-240169.hostingersite.com/en/showrooms",
+        ar: "https://lightyellow-mallard-240169.hostingersite.com/ar/showrooms",
+        "x-default": "https://lightyellow-mallard-240169.hostingersite.com/en/showrooms",
       },
     },
     openGraph: {

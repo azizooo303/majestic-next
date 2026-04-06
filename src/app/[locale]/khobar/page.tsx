@@ -13,17 +13,17 @@ export async function generateMetadata({
   const isAr = locale === "ar";
   return {
     title: isAr
-      ? "أثاث مكتبي الخبر — ماجيستيك للأثاث المكتبي"
-      : "Office Furniture Al Khobar — Majestic Furniture",
+      ? "أثاث مكتبي الخبر — ماجستيك"
+      : "Office Furniture Khobar — Majestic",
     description: isAr
-      ? "توريد وتركيب أثاث مكتبي في الخبر — لمكاتب الشركات والمعارض ومجمعات الأعمال في المنطقة الشرقية."
-      : "Office furniture supply and installation in Al Khobar — serving corporate offices, showrooms, and multi-tenant business parks in the Eastern Province.",
+      ? "أثاث مكتبي تنفيذي موّرد مباشرة للمؤسسات في الخبر. كراسي، محطات عمل، وأنظمة اجتماعات — وفق المواصفات."
+      : "Executive office furniture supplied directly to organizations in Khobar. Chairs, workstations, conference systems — delivered to specification.",
     alternates: {
-      canonical: `https://thedeskco.net/${locale}/khobar`,
+      canonical: `https://lightyellow-mallard-240169.hostingersite.com/${locale}/khobar`,
       languages: {
-        en: "https://thedeskco.net/en/khobar",
-        ar: "https://thedeskco.net/ar/khobar",
-        "ar-SA": "https://thedeskco.net/ar/khobar",
+        en: "https://lightyellow-mallard-240169.hostingersite.com/en/khobar",
+        ar: "https://lightyellow-mallard-240169.hostingersite.com/ar/khobar",
+        "ar-SA": "https://lightyellow-mallard-240169.hostingersite.com/ar/khobar",
       },
     },
   };
@@ -59,14 +59,12 @@ export default async function KhobarPage({
               {isAr ? "ماجيستيك للأثاث المكتبي — الخبر" : "Majestic Furniture — Al Khobar"}
             </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-6 max-w-3xl">
-              {isAr
-                ? "تجهيزات مكتبية للشركات في الخبر"
-                : "Corporate Office Furniture in Al Khobar"}
+              {isAr ? "أثاث مكتبي. الخبر." : "Office Furniture. Khobar."}
             </h1>
             <p className="text-white/60 text-base md:text-lg leading-relaxed max-w-2xl">
               {isAr
-                ? "بيئات عمل متكاملة لمجمعات الأعمال والمكاتب الساحلية ومراكز الشركات في الخبر."
-                : "Complete workspace environments for Al Khobar's business parks, waterfront offices, and corporate hubs."}
+                ? "أثاث مكتبي تنفيذي موّرد مباشرة للمؤسسات في الخبر. كراسي، محطات عمل، وأنظمة اجتماعات — وفق المواصفات."
+                : "Executive office furniture supplied directly to organizations in Khobar. Chairs, workstations, conference systems — delivered to specification."}
             </p>
           </Reveal>
         </div>

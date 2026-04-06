@@ -61,10 +61,10 @@ export default async function TrackOrderPage({
                 <p className="text-sm text-[#484848]">
                   {isAr ? "هل تحتاج مساعدة بشأن طلبك؟ " : "Need help with your order? "}
                   <a
-                    href="mailto:support@thedeskco.net"
+                    href="mailto:support@majestic.com.sa"
                     className="text-gray-900] font-semibold underline underline-offset-2 hover:text-[#484848] transition-colors"
                   >
-                    support@thedeskco.net
+                    support@majestic.com.sa
                   </a>
                 </p>
               </div>

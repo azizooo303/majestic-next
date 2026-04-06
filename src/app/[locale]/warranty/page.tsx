@@ -17,7 +17,7 @@ export async function generateMetadata({
       ? "شروط ضمان ماجيستيك للأثاث وخدمة ما بعد البيع. نقف خلف كل منتج نورّده ونركّبه."
       : "Majestic Furniture warranty terms and after-sales service. We stand behind every product we supply and install.",
     alternates: {
-      canonical: `https://thedeskco.net/${locale}/warranty`,
+      canonical: `https://lightyellow-mallard-240169.hostingersite.com/${locale}/warranty`,
       languages: {
         en: "/en/warranty",
         ar: "/ar/warranty",
@@ -67,12 +67,12 @@ export default async function WarrantyPage({
 
   const claimSteps = isAr
     ? [
-        { title: "تواصل معنا", desc: "أرسل بريداً إلكترونياً إلى warranty@thedeskco.net مع وصف المشكلة." },
+        { title: "تواصل معنا", desc: "أرسل بريداً إلكترونياً إلى warranty@majestic.com.sa مع وصف المشكلة." },
         { title: "قدم دليل الشراء", desc: "أرفق الفاتورة أو إيصال الشراء الأصلي." },
         { title: "نرتب الاستلام أو الإصلاح", desc: "سنتواصل معك لترتيب استلام المنتج أو إرسال فني إلى موقعك." },
       ]
     : [
-        { title: "Contact Us", desc: "Email warranty@thedeskco.net with a description of the issue." },
+        { title: "Contact Us", desc: "Email warranty@majestic.com.sa with a description of the issue." },
         { title: "Provide Proof of Purchase", desc: "Attach your original invoice or purchase receipt." },
         { title: "We Arrange Collection or Repair", desc: "We will contact you to arrange collection of the item or dispatch a technician to your location." },
       ];

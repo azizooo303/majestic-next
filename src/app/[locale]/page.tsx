@@ -33,10 +33,10 @@ export async function generateMetadata({
   const { locale } = await params;
   const isAr = locale === "ar";
   return {
-    title: isAr ? "ماجيستيك للأثاث | أثاث مكتبي راقٍ في الرياض" : "Majestic Furniture | Premium Office Furniture in Riyadh",
+    title: isAr ? "أثاث مكتبي في السعودية والخليج — ماجستيك" : "Office Furniture Saudi Arabia & Gulf — Majestic",
     description: isAr
-      ? "ماجيستيك — الوجهة الأولى للأثاث المكتبي الاحترافي في المملكة العربية السعودية. مكاتب تنفيذية، كراسي مريحة، ومحطات عمل لبيئات العمل الراقية."
-      : "Majestic Furniture — Saudi Arabia's premier destination for professional office furniture. Executive desks, ergonomic chairs, and workstations for elevated workspace environments.",
+      ? "أثاث مكتبي تنفيذي راقٍ للقطاعين الحكومي والخاص في المملكة العربية السعودية ودول الخليج. كراسي، طاولات، وأنظمة اجتماعات."
+      : "Premium executive office furniture across Saudi Arabia and the Gulf. Chairs, workstations, and conference systems for corporate and government spaces.",
     alternates: {
       canonical: `${process.env.NEXT_PUBLIC_SITE_URL ?? "https://majestic-next.vercel.app"}/${locale}`,
       languages: {
@@ -46,19 +46,19 @@ export async function generateMetadata({
       },
     },
     openGraph: {
-      title: isAr ? "ماجيستيك للأثاث | أثاث مكتبي راقٍ في الرياض" : "Majestic Furniture | Premium Office Furniture in Riyadh",
+      title: isAr ? "أثاث مكتبي في السعودية والخليج — ماجستيك" : "Office Furniture Saudi Arabia & Gulf — Majestic",
       description: isAr
-        ? "ماجيستيك — الوجهة الأولى للأثاث المكتبي الاحترافي في المملكة العربية السعودية."
-        : "Majestic Furniture — Saudi Arabia's premier destination for professional office furniture.",
+        ? "أثاث مكتبي تنفيذي راقٍ للقطاعين الحكومي والخاص في المملكة العربية السعودية ودول الخليج."
+        : "Premium executive office furniture across Saudi Arabia and the Gulf. Chairs, workstations, and conference systems for corporate and government spaces.",
       type: "website",
-      locale: isAr ? "ar_SA" : "en_US",
+      locale: isAr ? "ar_SA" : "en_SA",
       siteName: "Majestic Furniture",
     },
   };
 }
 
 
-const CDN = "https://thedeskco.net/wp-content/uploads/2026/03";
+const CDN = "https://lightyellow-mallard-240169.hostingersite.com/wp-content/uploads/2026/03";
 
 const CATEGORIES = [
   { slug: "seating", key: "seating" as const, image: `${CDN}/category-seating.png` },
@@ -146,8 +146,8 @@ export default async function HomePage({
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "Majestic Furniture",
-    url: "https://thedeskco.net",
-    logo: "https://thedeskco.net/images/majestic-logo-original.png",
+    url: "https://lightyellow-mallard-240169.hostingersite.com",
+    logo: "https://lightyellow-mallard-240169.hostingersite.com/images/majestic-logo-original.png",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Riyadh",
@@ -155,7 +155,7 @@ export default async function HomePage({
     },
     contactPoint: {
       "@type": "ContactPoint",
-      email: "hello@thedeskco.net",
+      email: "hello@majestic.com.sa",
     },
   };
 
@@ -254,10 +254,10 @@ export default async function HomePage({
       <SectionReveal direction="fade-scale" duration={0.7}>
         <PromoBanner
           isAr={isAr}
-          headline={isAr ? "توريد للقطاع الحكومي والمؤسسي — خدمة على مستوى المملكة" : "Corporate & Government Supply — Available Nationwide"}
+          headline={isAr ? "صُنع للعمل المؤسسي." : "Built for Institutional Scale."}
           body={isAr
-            ? "تورّد ماجستيك بيئات عمل متكاملة للمؤسسات في جميع أنحاء المملكة. اطلب استشارة للمشروع."
-            : "Majestic supplies complete workspace environments to organizations across the Kingdom. Request a project consultation."}
+            ? "وزارات. مقرات. مؤسسات. في المملكة ودول الخليج."
+            : "Ministries. Headquarters. Institutions. Across Saudi Arabia and the Gulf."}
           cta={isAr ? "طلب استشارة" : "Request a Consultation"}
           ctaHref="/about"
         />

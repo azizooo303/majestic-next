@@ -5,7 +5,7 @@
  * This module runs server-side only (API routes, Server Components, Server Actions).
  */
 
-const WC_URL = process.env.WC_URL || "https://thedeskco.net";
+const WC_URL = process.env.WC_URL || "https://lightyellow-mallard-240169.hostingersite.com";
 // Supports both WC consumer key/secret AND WordPress app password
 const WC_KEY = process.env.WC_CONSUMER_KEY || process.env.WP_USER || "";
 const WC_SECRET = process.env.WC_CONSUMER_SECRET || process.env.WP_APP_PASSWORD || "";
@@ -89,7 +89,7 @@ export interface WCProduct {
   translations: Record<string, number>;
 }
 
-export const PRODUCT_PLACEHOLDER = "https://thedeskco.net/wp-content/uploads/2026/03/hero_office_desktop_en-1.png";
+export const PRODUCT_PLACEHOLDER = "https://lightyellow-mallard-240169.hostingersite.com/wp-content/uploads/2026/03/hero_office_desktop_en-1.png";
 
 export function parsePrice(price: string): number {
   const n = parseFloat(price);

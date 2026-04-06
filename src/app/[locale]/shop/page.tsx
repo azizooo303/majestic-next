@@ -31,11 +31,11 @@ export async function generateMetadata({
       ? "تصفح مجموعتنا الكاملة من الأثاث المكتبي الاحترافي: مكاتب تنفيذية، كراسي مريحة، محطات عمل، طاولات اجتماعات، ووحدات تخزين. توصيل وتركيب في الرياض."
       : "Browse our complete range of professional office furniture: executive desks, ergonomic chairs, workstations, meeting tables, and storage units. Delivery and assembly in Riyadh.",
     alternates: {
-      canonical: `https://thedeskco.net/${locale}/shop`,
+      canonical: `https://lightyellow-mallard-240169.hostingersite.com/${locale}/shop`,
       languages: {
-        en: "https://thedeskco.net/en/shop",
-        ar: "https://thedeskco.net/ar/shop",
-        "x-default": "https://thedeskco.net/en/shop",
+        en: "https://lightyellow-mallard-240169.hostingersite.com/en/shop",
+        ar: "https://lightyellow-mallard-240169.hostingersite.com/ar/shop",
+        "x-default": "https://lightyellow-mallard-240169.hostingersite.com/en/shop",
       },
     },
   };
@@ -147,8 +147,8 @@ export default async function ShopPage({
     <main className="flex-1 bg-white min-h-screen">
       <BreadcrumbListJsonLd
         items={[
-          { name: isAr ? "الرئيسية" : "Home", item: `https://thedeskco.net/${locale}/` },
-          { name: isAr ? "جميع المنتجات" : "Shop", item: `https://thedeskco.net/${locale}/shop` },
+          { name: isAr ? "الرئيسية" : "Home", item: `https://lightyellow-mallard-240169.hostingersite.com/${locale}/` },
+          { name: isAr ? "جميع المنتجات" : "Shop", item: `https://lightyellow-mallard-240169.hostingersite.com/${locale}/shop` },
         ]}
       />
       <div className="max-w-screen-2xl mx-auto px-4 md:px-6 lg:px-8 pt-6 pb-16">

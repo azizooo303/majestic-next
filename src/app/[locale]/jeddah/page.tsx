@@ -13,17 +13,17 @@ export async function generateMetadata({
   const isAr = locale === "ar";
   return {
     title: isAr
-      ? "أثاث مكتبي جدة — ماجيستيك للأثاث المكتبي"
-      : "Office Furniture Jeddah — Majestic Furniture",
+      ? "أثاث مكتبي جدة — ماجستيك"
+      : "Office Furniture Jeddah — Majestic",
     description: isAr
-      ? "توريد وتركيب أثاث مكتبي في جدة — مكاتب تنفيذية وأرضيات عمل مفتوحة ومناطق استقبال للمؤسسات في المنطقة الغربية."
-      : "Office furniture supply and installation in Jeddah — executive offices, open workfloors, and reception environments for organisations across the Western Region.",
+      ? "بيئات عمل احترافية للمؤسسات في جدة. مكاتب تنفيذية، محطات عمل، وأنظمة اجتماعات — تُسلَّم بدقة."
+      : "Professional workspace environments for organizations in Jeddah. Executive offices, workstations, and conference systems — delivered with precision.",
     alternates: {
-      canonical: `https://thedeskco.net/${locale}/jeddah`,
+      canonical: `https://lightyellow-mallard-240169.hostingersite.com/${locale}/jeddah`,
       languages: {
-        en: "https://thedeskco.net/en/jeddah",
-        ar: "https://thedeskco.net/ar/jeddah",
-        "ar-SA": "https://thedeskco.net/ar/jeddah",
+        en: "https://lightyellow-mallard-240169.hostingersite.com/en/jeddah",
+        ar: "https://lightyellow-mallard-240169.hostingersite.com/ar/jeddah",
+        "ar-SA": "https://lightyellow-mallard-240169.hostingersite.com/ar/jeddah",
       },
     },
   };
@@ -59,14 +59,12 @@ export default async function JeddahPage({
               {isAr ? "ماجيستيك للأثاث المكتبي — جدة" : "Majestic Furniture — Jeddah"}
             </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-6 max-w-3xl">
-              {isAr
-                ? "تجهيزات مكتبية متكاملة لمؤسسات جدة"
-                : "Complete Office Fit-Outs for Jeddah Organisations"}
+              {isAr ? "أثاث مكتبي. جدة." : "Office Furniture. Jeddah."}
             </h1>
             <p className="text-white/60 text-base md:text-lg leading-relaxed max-w-2xl">
               {isAr
-                ? "من مدينة الملك عبدالله الاقتصادية إلى وسط جدة — ماجيستيك تجهّز بيئات عمل متكاملة في المنطقة الغربية."
-                : "From King Abdullah Economic City to central Jeddah — Majestic delivers complete workspace environments across the Western Region."}
+                ? "بيئات عمل احترافية للمؤسسات في جدة. مكاتب تنفيذية، محطات عمل، وأنظمة اجتماعات — تُسلَّم بدقة."
+                : "Professional workspace environments for organizations in Jeddah. Executive offices, workstations, and conference systems — delivered with precision."}
             </p>
           </Reveal>
         </div>

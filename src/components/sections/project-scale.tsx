@@ -58,7 +58,7 @@ export function ProjectScale({ isAr }: { isAr: boolean }) {
               {isAr ? "مشاريع منجزة" : "Completed Projects"}
             </p>
             <h2 className="text-2xl md:text-[36px] font-bold text-[#0c0c0c] tracking-[-0.02em]">
-              {isAr ? "تجهيز على المستوى المؤسسي" : "Built for Institutional Scale"}
+              {isAr ? "صُنع للعمل المؤسسي." : "Built for Institutional Scale."}
             </h2>
           </div>
         </FadeDown>

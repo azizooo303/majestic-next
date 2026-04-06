@@ -17,11 +17,11 @@ export async function generateMetadata({
       ? "إجابات على أكثر الأسئلة شيوعاً حول التوصيل، التركيب، سياسة الإرجاع، الضمان، وطرق الدفع في ماجيستيك للأثاث المكتبي."
       : "Answers to the most common questions about delivery, assembly, return policy, warranty, and payment methods at Majestic Furniture.",
     alternates: {
-      canonical: `https://thedeskco.net/${locale}/faq`,
+      canonical: `https://lightyellow-mallard-240169.hostingersite.com/${locale}/faq`,
       languages: {
-        en: "https://thedeskco.net/en/faq",
-        ar: "https://thedeskco.net/ar/faq",
-        "x-default": "https://thedeskco.net/en/faq",
+        en: "https://lightyellow-mallard-240169.hostingersite.com/en/faq",
+        ar: "https://lightyellow-mallard-240169.hostingersite.com/ar/faq",
+        "x-default": "https://lightyellow-mallard-240169.hostingersite.com/en/faq",
       },
     },
     openGraph: {

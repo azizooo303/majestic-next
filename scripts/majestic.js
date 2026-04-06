@@ -14,9 +14,9 @@
  *   env check            verify all required env vars are set
  *   wc test              test WooCommerce API connection
  *   wc products          list first 10 products from WC API
- *   images pull          download all images from thedeskco.net
- *   images list          list all images found on thedeskco.net (no download)
- *   products migrate     pull products from thedeskco.net WC, push to staging WC
+ *   images pull          download all images from lightyellow-mallard-240169.hostingersite.com
+ *   images list          list all images found on lightyellow-mallard-240169.hostingersite.com (no download)
+ *   products migrate     pull products from lightyellow-mallard-240169.hostingersite.com WC, push to staging WC
  */
 
 import { execSync, exec } from "child_process";
@@ -289,13 +289,13 @@ async function cmdWcProducts() {
 // ── images list ───────────────────────────────────────────────────────────────
 async function cmdImagesList() {
   head("majestic images list");
-  info("Scanning thedeskco.net for images...");
+  info("Scanning lightyellow-mallard-240169.hostingersite.com for images...");
 
   const pages = [
-    "https://thedeskco.net",
-    "https://thedeskco.net/shop",
-    "https://thedeskco.net/about",
-    "https://thedeskco.net/contact",
+    "https://lightyellow-mallard-240169.hostingersite.com",
+    "https://lightyellow-mallard-240169.hostingersite.com/shop",
+    "https://lightyellow-mallard-240169.hostingersite.com/about",
+    "https://lightyellow-mallard-240169.hostingersite.com/contact",
   ];
 
   const found = new Set();
@@ -368,7 +368,7 @@ async function cmdProductsMigrate() {
   head("majestic products migrate");
 
   const env = loadEnv();
-  const sourceUrl = "https://thedeskco.net";
+  const sourceUrl = "https://lightyellow-mallard-240169.hostingersite.com";
   const destUrl = env.NEXT_PUBLIC_WC_URL || env.WC_URL;
   const destKey = env.WC_CONSUMER_KEY || "";
   const destSecret = env.WC_CONSUMER_SECRET || "";
@@ -378,12 +378,12 @@ async function cmdProductsMigrate() {
     process.exit(1);
   }
 
-  warn("This will read products from thedeskco.net (public WC API) and create them on staging.");
+  warn("This will read products from lightyellow-mallard-240169.hostingersite.com (public WC API) and create them on staging.");
   warn("It will NOT overwrite existing products — duplicates are skipped by SKU.");
   const confirm = await prompt("Continue? (y/N): ");
   if (confirm.toLowerCase() !== "y") { info("Aborted."); return; }
 
-  info("Fetching products from thedeskco.net...");
+  info("Fetching products from lightyellow-mallard-240169.hostingersite.com...");
   let sourceProduts = [];
   try {
     // Try public WC API (no auth needed for published products)
@@ -393,12 +393,12 @@ async function cmdProductsMigrate() {
       ok(`Found ${sourceProduts.length} products on source`);
     } else {
       warn(`Source API returned ${res.status}. The site may require authentication.`);
-      info("Manual migration: Export from thedeskco.net WP Admin → Tools → Export → Products");
+      info("Manual migration: Export from lightyellow-mallard-240169.hostingersite.com WP Admin → Tools → Export → Products");
       return;
     }
   } catch (e) {
     err(`Could not reach source API: ${e.message}`);
-    info("Manual migration: Export from thedeskco.net WP Admin → Tools → Export → Products");
+    info("Manual migration: Export from lightyellow-mallard-240169.hostingersite.com WP Admin → Tools → Export → Products");
     return;
   }
 
@@ -493,9 +493,9 @@ ${c.bold}Commands:${c.reset}
   ${c.cyan}env check${c.reset}           verify all env vars are configured
   ${c.cyan}wc test${c.reset}             test WooCommerce API connection
   ${c.cyan}wc products${c.reset}         list products from staging WC
-  ${c.cyan}images list${c.reset}         list images on thedeskco.net
-  ${c.cyan}images pull${c.reset}         download images from thedeskco.net
-  ${c.cyan}products migrate${c.reset}    migrate products from thedeskco.net → staging
+  ${c.cyan}images list${c.reset}         list images on lightyellow-mallard-240169.hostingersite.com
+  ${c.cyan}images pull${c.reset}         download images from lightyellow-mallard-240169.hostingersite.com
+  ${c.cyan}products migrate${c.reset}    migrate products from lightyellow-mallard-240169.hostingersite.com → staging
 
 ${c.bold}Examples:${c.reset}
   npm run majestic -- ship "Update hero copy"

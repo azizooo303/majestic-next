@@ -75,7 +75,7 @@ export default async function PrivacyPage({
           heading: "التواصل معنا",
           paragraphs: [
             "إذا كانت لديك أي استفسارات حول سياسة الخصوصية أو رغبت في ممارسة حقوقك، يمكنك التواصل مع فريق الخصوصية لدينا.",
-            "البريد الإلكتروني: privacy@thedeskco.net — نلتزم بالرد على جميع الاستفسارات خلال يومي عمل.",
+            "البريد الإلكتروني: privacy@majestic.com.sa — نلتزم بالرد على جميع الاستفسارات خلال يومي عمل.",
           ],
         },
       ]
@@ -130,7 +130,7 @@ export default async function PrivacyPage({
           heading: "Contact",
           paragraphs: [
             "If you have any questions about this privacy policy or wish to exercise your rights, please reach out to our privacy team.",
-            "Email: privacy@thedeskco.net — We are committed to responding to all inquiries within two business days.",
+            "Email: privacy@majestic.com.sa — We are committed to responding to all inquiries within two business days.",
           ],
         },
       ];

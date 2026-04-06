@@ -13,17 +13,17 @@ export async function generateMetadata({
   const isAr = locale === "ar";
   return {
     title: isAr
-      ? "أثاث مكتبي الدمام — ماجيستيك للأثاث المكتبي"
-      : "Office Furniture Dammam — Majestic Furniture",
+      ? "أثاث مكتبي الدمام — ماجستيك"
+      : "Office Furniture Dammam — Majestic",
     description: isAr
-      ? "ماجيستيك توفر أثاثًا مكتبيًا للدمام والمنطقة الشرقية — لقطاع الطاقة والمكاتب الحكومية والمقرات المؤسسية."
-      : "Majestic supplies office furniture to Dammam and the Eastern Province — serving the energy sector, government offices, and corporate headquarters.",
+      ? "بيئات عمل للقطاعين الحكومي والخاص في الدمام والمنطقة الشرقية. توريد مباشر للمؤسسات."
+      : "Workspace environments supplied to corporate and government organizations in Dammam and the Eastern Province. Direct B2B supply.",
     alternates: {
-      canonical: `https://thedeskco.net/${locale}/dammam`,
+      canonical: `https://lightyellow-mallard-240169.hostingersite.com/${locale}/dammam`,
       languages: {
-        en: "https://thedeskco.net/en/dammam",
-        ar: "https://thedeskco.net/ar/dammam",
-        "ar-SA": "https://thedeskco.net/ar/dammam",
+        en: "https://lightyellow-mallard-240169.hostingersite.com/en/dammam",
+        ar: "https://lightyellow-mallard-240169.hostingersite.com/ar/dammam",
+        "ar-SA": "https://lightyellow-mallard-240169.hostingersite.com/ar/dammam",
       },
     },
   };
@@ -59,14 +59,12 @@ export default async function DammamPage({
               {isAr ? "ماجيستيك للأثاث المكتبي — الدمام" : "Majestic Furniture — Dammam"}
             </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-6 max-w-3xl">
-              {isAr
-                ? "أثاث مكتبي للمنطقة الشرقية"
-                : "Office Furniture for the Eastern Province"}
+              {isAr ? "أثاث مكتبي. الدمام." : "Office Furniture. Dammam."}
             </h1>
             <p className="text-white/60 text-base md:text-lg leading-relaxed max-w-2xl">
               {isAr
-                ? "بيئات عمل مصمّمة لقطاع الطاقة والجهات الحكومية والمكاتب المؤسسية في الدمام."
-                : "Workspace environments built for Dammam's energy sector, government agencies, and corporate offices."}
+                ? "بيئات عمل للقطاعين الحكومي والخاص في الدمام والمنطقة الشرقية. توريد مباشر للمؤسسات."
+                : "Workspace environments supplied to corporate and government organizations in Dammam and the Eastern Province. Direct B2B supply."}
             </p>
           </Reveal>
         </div>

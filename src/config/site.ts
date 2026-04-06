@@ -25,7 +25,7 @@ export const BRAND = {
     en: "Saudi Arabia's premier workspace furniture brand.",
     ar: "العلامة التجارية الرائدة في أثاث المكاتب بالمملكة العربية السعودية.",
   },
-  domain: "https://thedeskco.net",
+  domain: "https://lightyellow-mallard-240169.hostingersite.com",
   logoPath: "/images/majestic-logo-original.png",
   logoWhitePath: "/images/majestic-logo-white.png",
   logoBlackPath: "/images/majestic-logo-black.png",
@@ -46,7 +46,7 @@ export const CONTACT = {
   },
   email: {
     main: "info@majestic.com.sa",
-    support: "hello@thedeskco.net",
+    support: "hello@majestic.com.sa",
   },
   address: {
     en: "Arcade Centre, Al Rashidiah, Riyadh",

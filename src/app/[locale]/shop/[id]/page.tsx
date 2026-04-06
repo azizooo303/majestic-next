@@ -32,11 +32,11 @@ export async function generateMetadata({
       : `${product.name} | Majestic Furniture`,
     description: product.short_description?.replace(/<[^>]+>/g, "").slice(0, 160) || product.name,
     alternates: {
-      canonical: `https://thedeskco.net/${locale}/shop/${id}`,
+      canonical: `https://lightyellow-mallard-240169.hostingersite.com/${locale}/shop/${id}`,
       languages: {
-        en: `https://thedeskco.net/en/shop/${id}`,
-        ar: `https://thedeskco.net/ar/shop/${id}`,
-        "x-default": `https://thedeskco.net/en/shop/${id}`,
+        en: `https://lightyellow-mallard-240169.hostingersite.com/en/shop/${id}`,
+        ar: `https://lightyellow-mallard-240169.hostingersite.com/ar/shop/${id}`,
+        "x-default": `https://lightyellow-mallard-240169.hostingersite.com/en/shop/${id}`,
       },
     },
     openGraph: {
@@ -110,7 +110,7 @@ export default async function ProductDetailPage({
       availability: product.stock_status === "instock"
         ? "https://schema.org/InStock"
         : "https://schema.org/OutOfStock",
-      url: `https://thedeskco.net/${locale}/shop/${product.id}`,
+      url: `https://lightyellow-mallard-240169.hostingersite.com/${locale}/shop/${product.id}`,
     },
   };
 

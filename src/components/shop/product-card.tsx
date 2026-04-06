@@ -46,12 +46,12 @@ export function ProductCard({
             </span>
           )}
           <Image
-            src={image || "https://thedeskco.net/wp-content/uploads/2026/03/hero_office_desktop_en-1.png"}
+            src={image || "https://lightyellow-mallard-240169.hostingersite.com/wp-content/uploads/2026/03/hero_office_desktop_en-1.png"}
             alt={name}
             fill
             className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
             sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
-            onError={(e) => { (e.target as HTMLImageElement).src = "https://thedeskco.net/wp-content/uploads/2026/03/hero_office_desktop_en-1.png"; }}
+            onError={(e) => { (e.target as HTMLImageElement).src = "https://lightyellow-mallard-240169.hostingersite.com/wp-content/uploads/2026/03/hero_office_desktop_en-1.png"; }}
           />
         </div>
         <div className="p-3 pb-2">

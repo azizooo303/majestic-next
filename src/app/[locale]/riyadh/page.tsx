@@ -13,17 +13,17 @@ export async function generateMetadata({
   const isAr = locale === "ar";
   return {
     title: isAr
-      ? "أثاث مكتبي الرياض — ماجيستيك للأثاث المكتبي"
-      : "Office Furniture Riyadh — Majestic Furniture",
+      ? "أثاث مكتبي الرياض — ماجستيك"
+      : "Office Furniture Riyadh — Majestic",
     description: isAr
-      ? "ماجيستيك توفر وتركب بيئات أثاث مكتبي متكاملة في الرياض — من المكاتب التنفيذية إلى تجهيز الطوابق المؤسسية الكاملة."
-      : "Majestic supplies and installs complete office furniture environments in Riyadh — from single executive offices to full-floor corporate fit-outs.",
+      ? "كراسي تنفيذية، محطات عمل، وأنظمة اجتماعات — للقطاعين الحكومي والخاص في الرياض. بُنيت وفق معايير العمارة الحديثة."
+      : "Executive seating, workstations, and conference systems — supplied to corporate and government organizations across Riyadh. Built to modern architectural standards.",
     alternates: {
-      canonical: `https://thedeskco.net/${locale}/riyadh`,
+      canonical: `https://lightyellow-mallard-240169.hostingersite.com/${locale}/riyadh`,
       languages: {
-        en: "https://thedeskco.net/en/riyadh",
-        ar: "https://thedeskco.net/ar/riyadh",
-        "ar-SA": "https://thedeskco.net/ar/riyadh",
+        en: "https://lightyellow-mallard-240169.hostingersite.com/en/riyadh",
+        ar: "https://lightyellow-mallard-240169.hostingersite.com/ar/riyadh",
+        "ar-SA": "https://lightyellow-mallard-240169.hostingersite.com/ar/riyadh",
       },
     },
   };
@@ -59,14 +59,12 @@ export default async function RiyadhPage({
               {isAr ? "ماجيستيك للأثاث المكتبي — الرياض" : "Majestic Furniture — Riyadh"}
             </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-6 max-w-3xl">
-              {isAr
-                ? "تجهيزات مكتبية لمعيار الرياض المؤسسي"
-                : "Office Furniture for Riyadh's Corporate Standard"}
+              {isAr ? "أثاث مكتبي. الرياض." : "Office Furniture. Riyadh."}
             </h1>
             <p className="text-white/60 text-base md:text-lg leading-relaxed max-w-2xl">
               {isAr
-                ? "نوفّر بيئات عمل متكاملة للحي المالي والمنطقة الحكومية ومراكز الأعمال في الرياض."
-                : "Supplying complete workspace environments to Riyadh's financial district, government quarter, and business hubs."}
+                ? "كراسي تنفيذية، محطات عمل، وأنظمة اجتماعات — للقطاعين الحكومي والخاص في الرياض. بُنيت وفق معايير العمارة الحديثة."
+                : "Executive seating, workstations, and conference systems — supplied to corporate and government organizations across Riyadh. Built to modern architectural standards."}
             </p>
           </Reveal>
         </div>

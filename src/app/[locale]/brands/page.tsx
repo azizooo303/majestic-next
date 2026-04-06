@@ -17,11 +17,11 @@ export async function generateMetadata({
       ? "اكتشف مجموعة ماجيستيك من أفضل العلامات التجارية العالمية للأثاث المكتبي. نوفر أكثر من 50 علامة تجارية مختارة بعناية لتلبية أعلى معايير الجودة."
       : "Discover Majestic's curated selection of the world's leading office furniture brands. Over 50 premium labels chosen to meet the highest quality standards.",
     alternates: {
-      canonical: `https://thedeskco.net/${locale}/brands`,
+      canonical: `https://lightyellow-mallard-240169.hostingersite.com/${locale}/brands`,
       languages: {
-        en: "https://thedeskco.net/en/brands",
-        ar: "https://thedeskco.net/ar/brands",
-        "x-default": "https://thedeskco.net/en/brands",
+        en: "https://lightyellow-mallard-240169.hostingersite.com/en/brands",
+        ar: "https://lightyellow-mallard-240169.hostingersite.com/ar/brands",
+        "x-default": "https://lightyellow-mallard-240169.hostingersite.com/en/brands",
       },
     },
     openGraph: {

@@ -17,7 +17,7 @@ export async function generateMetadata({
       ? "أدلة العناية والصيانة لأثاث مكاتب ماجيستيك. حافظ على استثمارك في بيئة عملك."
       : "Care and maintenance guides for Majestic office furniture. Keep your workspace investment in peak condition.",
     alternates: {
-      canonical: `https://thedeskco.net/${locale}/product-care`,
+      canonical: `https://lightyellow-mallard-240169.hostingersite.com/${locale}/product-care`,
       languages: {
         en: "/en/product-care",
         ar: "/ar/product-care",

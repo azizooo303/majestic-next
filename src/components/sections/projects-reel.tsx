@@ -19,7 +19,7 @@ export function ProjectsReel({ isAr }: { isAr: boolean }) {
             {isAr ? "مشاريعنا المنجزة" : "Delivered Projects"}
           </p>
           <h2 className="text-2xl md:text-3xl font-bold text-white tracking-tight leading-tight">
-            {isAr ? "بيئات عمل راقية في أرجاء المملكة" : "Workspace Excellence Across the Kingdom"}
+            {isAr ? "وزارات. مقرات. مؤسسات. في المملكة ودول الخليج." : "Ministries. Headquarters. Institutions. Across Saudi Arabia and the Gulf."}
           </h2>
         </div>
         <Link

@@ -17,11 +17,11 @@ export async function generateMetadata({
       ? "تواصل مع فريق ماجيستيك للأثاث المكتبي. زيارة معارضنا في الرياض، أو أرسل لنا استفساراً. الأحد–الخميس، 9 صباحاً–6 مساءً."
       : "Get in touch with the Majestic Furniture team. Visit our Riyadh showrooms or send us an enquiry. Sunday–Thursday, 9am–6pm.",
     alternates: {
-      canonical: `https://thedeskco.net/${locale}/contact`,
+      canonical: `https://lightyellow-mallard-240169.hostingersite.com/${locale}/contact`,
       languages: {
-        en: "https://thedeskco.net/en/contact",
-        ar: "https://thedeskco.net/ar/contact",
-        "x-default": "https://thedeskco.net/en/contact",
+        en: "https://lightyellow-mallard-240169.hostingersite.com/en/contact",
+        ar: "https://lightyellow-mallard-240169.hostingersite.com/ar/contact",
+        "x-default": "https://lightyellow-mallard-240169.hostingersite.com/en/contact",
       },
     },
     openGraph: {

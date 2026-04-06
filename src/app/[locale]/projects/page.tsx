@@ -21,11 +21,11 @@ export async function generateMetadata({
       ? "استعرض مشاريع ماجيستيك في تأثيث المكاتب للشركات الكبرى، المستشفيات، الجامعات، والفنادق في المملكة العربية السعودية."
       : "Explore Majestic's completed furniture projects for major corporations, hospitals, and government institutions across Saudi Arabia.",
     alternates: {
-      canonical: `https://thedeskco.net/${locale}/projects`,
+      canonical: `https://lightyellow-mallard-240169.hostingersite.com/${locale}/projects`,
       languages: {
-        en: "https://thedeskco.net/en/projects",
-        ar: "https://thedeskco.net/ar/projects",
-        "x-default": "https://thedeskco.net/en/projects",
+        en: "https://lightyellow-mallard-240169.hostingersite.com/en/projects",
+        ar: "https://lightyellow-mallard-240169.hostingersite.com/ar/projects",
+        "x-default": "https://lightyellow-mallard-240169.hostingersite.com/en/projects",
       },
     },
   };

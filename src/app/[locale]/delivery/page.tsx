@@ -17,7 +17,7 @@ export async function generateMetadata({
       ? "توصيل وتركيب احترافي في جميع أنحاء المملكة العربية السعودية ودول الخليج. أثاث مكتبي يصل في موعده."
       : "Nationwide delivery and professional installation across Saudi Arabia and the GCC. Office furniture delivered on time, every time.",
     alternates: {
-      canonical: `https://thedeskco.net/${locale}/delivery`,
+      canonical: `https://lightyellow-mallard-240169.hostingersite.com/${locale}/delivery`,
       languages: {
         en: "/en/delivery",
         ar: "/ar/delivery",
@@ -195,8 +195,8 @@ export default async function DeliveryPage({
                 </p>
                 <p>
                   {isAr
-                    ? "لبدء عملية الإرجاع، تواصل معنا عبر البريد الإلكتروني: returns@thedeskco.net"
-                    : "To initiate a return, contact us at: returns@thedeskco.net"}
+                    ? "لبدء عملية الإرجاع، تواصل معنا عبر البريد الإلكتروني: returns@majestic.com.sa"
+                    : "To initiate a return, contact us at: returns@majestic.com.sa"}
                 </p>
                 <p>
                   {isAr

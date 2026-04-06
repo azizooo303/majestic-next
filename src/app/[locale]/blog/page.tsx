@@ -19,11 +19,11 @@ export async function generateMetadata({
       ? "اكتشف أحدث الأفكار والنصائح حول تصميم بيئات العمل المكتبية، اتجاهات الأثاث، والإلهام للمساحات الاحترافية في المملكة العربية السعودية."
       : "Discover the latest ideas and tips on office workspace design, furniture trends, and inspiration for professional spaces across Saudi Arabia.",
     alternates: {
-      canonical: `https://thedeskco.net/${locale}/blog`,
+      canonical: `https://lightyellow-mallard-240169.hostingersite.com/${locale}/blog`,
       languages: {
-        en: "https://thedeskco.net/en/blog",
-        ar: "https://thedeskco.net/ar/blog",
-        "x-default": "https://thedeskco.net/en/blog",
+        en: "https://lightyellow-mallard-240169.hostingersite.com/en/blog",
+        ar: "https://lightyellow-mallard-240169.hostingersite.com/ar/blog",
+        "x-default": "https://lightyellow-mallard-240169.hostingersite.com/en/blog",
       },
     },
     openGraph: {

@@ -70,12 +70,12 @@ export function WebSiteJsonLd() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "Majestic Furniture",
-    url: "https://thedeskco.net",
+    url: "https://lightyellow-mallard-240169.hostingersite.com",
     potentialAction: {
       "@type": "SearchAction",
       target: {
         "@type": "EntryPoint",
-        urlTemplate: "https://thedeskco.net/en/shop?q={search_term_string}",
+        urlTemplate: "https://lightyellow-mallard-240169.hostingersite.com/en/shop?q={search_term_string}",
       },
       "query-input": "required name=search_term_string",
     },
@@ -90,7 +90,7 @@ export function LocalBusinessJsonLd() {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: "Majestic Furniture",
-    url: "https://thedeskco.net",
+    url: "https://lightyellow-mallard-240169.hostingersite.com",
     // TODO: fill in real telephone number
     telephone: "+966-XX-XXXXXXX",
     address: {

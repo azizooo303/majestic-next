@@ -12,25 +12,25 @@ export async function generateMetadata({
   const { locale } = await params;
   const isAr = locale === "ar";
   return {
-    title: isAr ? "عن ماجيستيك — قصتنا وقيمنا" : "About Majestic — Our Story and Values",
+    title: isAr ? "عن ماجستيك — أثاث مكتبي في السعودية والخليج" : "About Majestic — Office Furniture Saudi Arabia & Gulf",
     description: isAr
-      ? "ماجستيك للأثاث تورّد بيئات عمل للعملاء المؤسسيين والحكوميين في المملكة. تعرّف على تشكيلاتنا ومنهجنا في تجهيز المساحات."
-      : "Majestic Furniture supplies workspace environments to corporate and government clients across Saudi Arabia. Learn about our collections and approach.",
+      ? "ماجستيك تورد بيئات عمل احترافية للقطاعين الحكومي والخاص في المملكة ودول الخليج. دقة في التصنيع. ثقة مؤسسية."
+      : "Majestic supplies professional workspace environments to corporate and government organizations across Saudi Arabia and the Gulf. Precision-built. Institutionally trusted.",
     alternates: {
-      canonical: `https://thedeskco.net/${locale}/about`,
+      canonical: `https://lightyellow-mallard-240169.hostingersite.com/${locale}/about`,
       languages: {
-        en: "https://thedeskco.net/en/about",
-        ar: "https://thedeskco.net/ar/about",
-        "x-default": "https://thedeskco.net/en/about",
+        en: "https://lightyellow-mallard-240169.hostingersite.com/en/about",
+        ar: "https://lightyellow-mallard-240169.hostingersite.com/ar/about",
+        "x-default": "https://lightyellow-mallard-240169.hostingersite.com/en/about",
       },
     },
     openGraph: {
-      title: isAr ? "عن ماجيستيك" : "About Majestic Furniture",
+      title: isAr ? "عن ماجستيك — أثاث مكتبي في السعودية والخليج" : "About Majestic — Office Furniture Saudi Arabia & Gulf",
       description: isAr
-        ? "علامة تجارية سعودية رائدة في أثاث المكاتب الراقي."
-        : "Saudi Arabia's leading premium office furniture brand.",
+        ? "ماجستيك تورد بيئات عمل احترافية للقطاعين الحكومي والخاص في المملكة ودول الخليج."
+        : "Majestic supplies professional workspace environments to corporate and government organizations across Saudi Arabia and the Gulf.",
       type: "website",
-      locale: isAr ? "ar_SA" : "en_US",
+      locale: isAr ? "ar_SA" : "en_SA",
       siteName: "Majestic Furniture",
     },
   };
@@ -57,7 +57,7 @@ export default async function AboutPage({
             {isAr ? "عن ماجيستيك" : "About"}
           </p>
           <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900]">
-            {isAr ? "عن ماجيستيك" : "About Majestic"}
+            {isAr ? "بيئات عمل. تدوم." : "Workspaces Built to Last."}
           </h1>
         </div>
       </section>
@@ -69,17 +69,17 @@ export default async function AboutPage({
             <div className={`grid grid-cols-1 md:grid-cols-2 gap-12 items-center ${isAr ? "md:flex-row-reverse" : ""}`}>
               <div>
                 <h2 className="text-2xl md:text-3xl font-bold text-gray-900] tracking-tight mb-6">
-                  {isAr ? "قصتنا" : "Our Story"}
+                  {isAr ? "أثاث مكتبي للمؤسسات الرائدة." : "Office Furniture for Organizations That Lead."}
                 </h2>
                 <p className="text-[#484848] leading-relaxed mb-4">
                   {isAr
-                    ? "تصمّم ماجستيك للأثاث وتورّد بيئات عمل احترافية في مختلف أنحاء المملكة العربية السعودية. تشمل تشكيلاتنا المكاتب التنفيذية، ومحطات العمل المشتركة، وأنظمة قاعات الاجتماعات، وصالات الاستقبال، والحلول الصوتية — تُنفَّذ وفق المواصفات وتُسلَّم بدقة."
-                    : "Majestic Furniture designs and supplies professional workspace environments across Saudi Arabia. Our range spans executive offices, collaborative workstations, conference systems, lounge areas, and acoustic solutions — built to specification and delivered with precision."}
+                    ? "ماجستيك تصمم وتورد بيئات عمل احترافية في المملكة ودول الخليج. مكاتب تنفيذية، محطات عمل، أنظمة اجتماعات، وصالات استقبال — بُنيت وفق معايير العمارة الحديثة وسُلِّمت بدقة."
+                    : "Majestic designs and supplies professional workspace environments across Saudi Arabia and the Gulf. Executive offices, workstations, conference systems, lounge areas — built to modern architectural standards and delivered with precision."}
                 </p>
                 <p className="text-[#484848] leading-relaxed">
                   {isAr
-                    ? "مهمتنا تزويد المؤسسات السعودية بأنظمة أثاث ترقى إلى مستوى طموحاتها. نستورد من شركات تصنيع دولية راسخة، ونقرن ذلك بخبرتنا المحلية في السوق، والاستشارة التصميمية، ودعم ما بعد البيع."
-                    : "Our mission is to equip Saudi organizations with furniture systems that match the quality of their ambitions. We source from established international manufacturers and pair this with local market expertise, project consultation, and after-sales support."}
+                    ? "نستورد من شركات تصنيع دولية راسخة، ونقرن ذلك بخبرة محلية في السوق، واستشارة تصميمية، ودعم ما بعد البيع."
+                    : "We source from established international manufacturers — paired with local market expertise, project consultation, and after-sales support."}
                 </p>
               </div>
               <div className="relative aspect-[4/3] rounded-sm overflow-hidden">
@@ -139,15 +139,15 @@ export default async function AboutPage({
                 icon: "S",
                 title: isAr ? "القدرة على التوسّع" : "Scale",
                 desc: isAr
-                  ? "من مكتب تنفيذي واحد إلى تجهيز مبنى مؤسسي متعدد الطوابق — أنظمتنا مصمَّمة لتنمو مع مؤسستك."
-                  : "From a single executive office to a multi-floor corporate fit-out, our systems are designed to grow with your organization.",
+                  ? "من مكتب واحد إلى مبنى كامل. الأنظمة تناسب كل نطاق."
+                  : "From a single executive office to a multi-floor fit-out. Our systems are built to grow with your organization.",
               },
               {
                 icon: "P",
                 title: isAr ? "الشراكة" : "Partnership",
                 desc: isAr
-                  ? "نعمل جنبًا إلى جنب مع المعماريين وفرق الشراء ومديري المرافق — من المتطلبات الأولية حتى التركيب. علاقتنا لا تنتهي عند التسليم."
-                  : "We work alongside architects, procurement teams, and facilities managers from brief to installation. The relationship does not end at delivery.",
+                  ? "من المتطلبات الأولية حتى التركيب — نعمل مع المهندسين وفرق المشتريات ومديري المرافق. العلاقة لا تنتهي عند التسليم."
+                  : "From brief to installation — we work alongside architects, procurement teams, and facilities managers. The relationship does not end at delivery.",
               },
             ].map((value) => (
               <Reveal key={value.title}>
@@ -169,12 +169,12 @@ export default async function AboutPage({
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8 text-center">
           <Reveal>
             <h2 className="text-2xl md:text-3xl font-bold text-white tracking-tight mb-4">
-              {isAr ? "تفضل بزيارتنا" : "Come See Us in Person"}
+              {isAr ? "تفضل بزيارة المعرض." : "See the Showroom."}
             </h2>
             <p className="text-white/60 mb-8 max-w-lg mx-auto">
               {isAr
-                ? "معارضنا مفتوحة لاستقبالكم من الأحد إلى الخميس. فريقنا جاهز لمساعدتكم في إيجاد الحل المثالي لمساحتكم."
-                : "Our showrooms are open Sunday through Thursday. Our team is ready to help you find the right solution for your space."}
+                ? "مفتوح من الأحد إلى الخميس. فريقنا في انتظارك."
+                : "Open Sunday through Thursday. Our team is ready."}
             </p>
             <Link
               href="/showrooms"
