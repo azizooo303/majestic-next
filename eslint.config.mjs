@@ -12,7 +12,26 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Node.js utility scripts — not part of the Next.js app bundle
+    "audit-script.js",
+    "audit.mjs",
+    "scripts/**",
+    "supabase/**",
+    "tests/**",
   ]),
+  {
+    rules: {
+      // Allow underscore-prefixed parameters/variables as intentionally unused
+      "@typescript-eslint/no-unused-vars": [
+        "warn",
+        {
+          argsIgnorePattern: "^_",
+          varsIgnorePattern: "^_",
+          caughtErrorsIgnorePattern: "^_",
+        },
+      ],
+    },
+  },
 ]);
 
 export default eslintConfig;
