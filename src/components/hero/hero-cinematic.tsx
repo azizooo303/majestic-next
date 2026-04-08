@@ -4,7 +4,6 @@ import { useRef } from "react";
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { cn } from "@/lib/utils";
 
 export interface HeroSlide {
   id: number;

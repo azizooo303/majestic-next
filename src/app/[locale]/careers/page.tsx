@@ -74,13 +74,13 @@ export default async function CareersPage({
       <section className="bg-white border-b border-[rgba(0,0,0,0.08)] py-12 md:py-16">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
           <p className="text-xs uppercase tracking-widest text-[#484848] mb-3">
-            <Link href="/" className="hover:text-gray-900] transition-colors">
+            <Link href="/" className="hover:text-gray-900 transition-colors">
               {isAr ? "الرئيسية" : "Home"}
             </Link>
             <span className="mx-2">/</span>
             {isAr ? "وظائف" : "Careers"}
           </p>
-          <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900]">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-gray-900">
             {isAr ? "وظائف" : "Careers"}
           </h1>
         </div>
@@ -91,7 +91,7 @@ export default async function CareersPage({
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
           <Reveal>
             <div className="max-w-2xl mb-14">
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900] tracking-tight mb-4">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 tracking-tight mb-4">
                 {isAr ? "انضم إلى فريقنا" : "Join Our Team"}
               </h2>
               <p className="text-[#484848] leading-relaxed">
@@ -104,7 +104,7 @@ export default async function CareersPage({
 
           {/* Open positions */}
           <Reveal>
-            <h2 className="text-lg font-bold text-gray-900] uppercase tracking-wide mb-6">
+            <h2 className="text-lg font-bold text-gray-900 uppercase tracking-wide mb-6">
               {isAr ? "الوظائف المتاحة" : "Open Positions"}
             </h2>
           </Reveal>
@@ -114,7 +114,7 @@ export default async function CareersPage({
               <Reveal key={job.title}>
                 <div className="border border-[rgba(0,0,0,0.21)] rounded-sm p-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4 hover:bg-white transition-colors">
                   <div>
-                    <h3 className="font-bold text-gray-900] text-base mb-1">
+                    <h3 className="font-bold text-gray-900 text-base mb-1">
                       {job.title}
                     </h3>
                     <p className="text-sm text-[#484848]">
@@ -123,7 +123,7 @@ export default async function CareersPage({
                   </div>
                   <Link
                     href="/contact"
-                    className="btn-press shrink-0 inline-block border border-[#0c0c0c] text-gray-900] px-5 py-2.5 text-sm font-semibold rounded-sm hover:bg-white hover:text-white transition-colors whitespace-nowrap"
+                    className="btn-press shrink-0 inline-block border border-[#0c0c0c] text-gray-900 px-5 py-2.5 text-sm font-semibold rounded-sm hover:bg-white hover:text-white transition-colors whitespace-nowrap"
                   >
                     {isAr ? "تقديم الطلب" : "Apply Now"}
                   </Link>
@@ -135,7 +135,7 @@ export default async function CareersPage({
           {/* Speculative application */}
           <Reveal>
             <div className="mt-16 border border-[rgba(0,0,0,0.21)] rounded-sm p-10 text-center">
-              <h3 className="text-xl font-bold text-gray-900] mb-3">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
                 {isAr ? "لم تجد الوظيفة المناسبة؟" : "Don't see the right role?"}
               </h3>
               <p className="text-[#484848] text-sm mb-6 max-w-sm mx-auto leading-relaxed">

@@ -18,13 +18,15 @@ export function CountUp({ value, duration = 1500, className }: CountUpProps) {
   const suffix = isNaN(numeric) ? value : value.replace(String(numeric), "");
   const isNumeric = !isNaN(numeric);
 
+  // When animation won't run, show value directly; otherwise start from "0"
+  const shouldAnimate = isInView && !reduced && isNumeric;
   const [display, setDisplay] = useState(isNumeric ? "0" : value);
 
+  // Show final value immediately when not animating (non-numeric or reduced motion)
+  const displayValue = shouldAnimate ? display : value;
+
   useEffect(() => {
-    if (!isInView || reduced || !isNumeric) {
-      setDisplay(value);
-      return;
-    }
+    if (!shouldAnimate) return;
 
     const start = performance.now();
 
@@ -39,11 +41,11 @@ export function CountUp({ value, duration = 1500, className }: CountUpProps) {
     };
 
     requestAnimationFrame(tick);
-  }, [isInView, reduced, isNumeric, numeric, suffix, value, duration]);
+  }, [shouldAnimate, numeric, suffix, duration]);
 
   return (
     <span ref={ref} className={className}>
-      {display}
+      {displayValue}
     </span>
   );
 }

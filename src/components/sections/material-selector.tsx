@@ -37,7 +37,7 @@ export function MaterialSelector({ isAr }: { isAr: boolean }) {
             <p className="text-xs uppercase tracking-widest text-[#484848] mb-2">
               {isAr ? "الأسطح والتشطيبات" : "Materials & Finishes"}
             </p>
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900] tracking-tight">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 tracking-tight">
               {isAr ? "حدّد التشطيب المناسب لمشروعك" : "Find the Right Finish"}
             </h2>
           </div>
@@ -62,7 +62,7 @@ export function MaterialSelector({ isAr }: { isAr: boolean }) {
             ))}
             {/* Selected finish label overlay */}
             <div className="absolute bottom-4 start-4 bg-white/90 px-3 py-1.5">
-              <p className="text-xs font-semibold text-gray-900]">
+              <p className="text-xs font-semibold text-gray-900">
                 {isAr ? current.labelAr : current.labelEn}
               </p>
             </div>
@@ -103,7 +103,7 @@ export function MaterialSelector({ isAr }: { isAr: boolean }) {
 
             <Link
               href="/about"
-              className="btn-press inline-block self-start bg-white] text-white px-7 py-3 text-sm font-semibold rounded-sm hover:bg-[#333] transition-colors"
+              className="btn-press inline-block self-start bg-[#0c0c0c] text-white px-7 py-3 text-sm font-semibold rounded-sm hover:bg-[#333] transition-colors"
             >
               {isAr ? "اطلب عيّنات المواد" : "Request Material Samples"}
             </Link>

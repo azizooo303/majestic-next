@@ -3,7 +3,6 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
-import { useLocale } from "next-intl";
 
 interface PromoBannerProps {
   isAr: boolean;
@@ -48,7 +47,7 @@ export function PromoBanner({ isAr, headline, body, cta, ctaHref }: PromoBannerP
           <motion.div
             style={reducedMotion ? {} : { x: textX }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900] leading-tight tracking-tight">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight tracking-tight">
               {headline}
             </h2>
             <p className="text-[#484848] mt-4 text-base leading-relaxed max-w-md">
@@ -56,8 +55,8 @@ export function PromoBanner({ isAr, headline, body, cta, ctaHref }: PromoBannerP
             </p>
             <Link
               href={ctaHref}
-              className="inline-block mt-6 border-2 border-[#0c0c0c] text-gray-900] px-8 py-3
-                font-semibold text-sm rounded-sm hover:bg-white] hover:text-white transition-all"
+              className="inline-block mt-6 border-2 border-[#0c0c0c] text-gray-900 px-8 py-3
+                font-semibold text-sm rounded-sm hover:bg-[#0c0c0c] hover:text-white transition-all"
             >
               {cta}
             </Link>

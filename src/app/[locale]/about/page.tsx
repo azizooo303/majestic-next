@@ -51,13 +51,13 @@ export default async function AboutPage({
       <section className="bg-white border-b border-[rgba(0,0,0,0.08)] py-12 md:py-16">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
           <p className="text-xs uppercase tracking-widest text-[#484848] mb-3">
-            <Link href="/" className="hover:text-gray-900] transition-colors">
+            <Link href="/" className="hover:text-gray-900 transition-colors">
               {isAr ? "الرئيسية" : "Home"}
             </Link>
             <span className="mx-2">/</span>
             {isAr ? "عن ماجستيك" : "About"}
           </p>
-          <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900]">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-gray-900">
             {isAr ? "بيئات عمل. تدوم." : "Workspaces Built to Last."}
           </h1>
         </div>
@@ -69,7 +69,7 @@ export default async function AboutPage({
           <Reveal>
             <div className={`grid grid-cols-1 md:grid-cols-2 gap-12 items-center ${isAr ? "md:flex-row-reverse" : ""}`}>
               <div>
-                <h2 className="text-2xl md:text-3xl font-bold text-gray-900] tracking-tight mb-6">
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 tracking-tight mb-6">
                   {isAr ? "أثاث مكتبي للمؤسسات الرائدة." : "Office Furniture for Organizations That Lead."}
                 </h2>
                 <p className="text-[#484848] leading-relaxed mb-4">
@@ -109,7 +109,7 @@ export default async function AboutPage({
                 { number: isAr ? "المملكة والخليج" : "KSA + GCC", label: isAr ? "مقرنا المملكة، ونخدم دول الخليج" : "Saudi-based, GCC-ready" },
               ].map((stat) => (
                 <div key={stat.label}>
-                  <p className="text-4xl md:text-5xl font-extrabold text-gray-900] tracking-tight">
+                  <p className="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight">
                     {stat.number}
                   </p>
                   <p className="text-sm text-[#484848] mt-2 font-medium">{stat.label}</p>
@@ -124,7 +124,7 @@ export default async function AboutPage({
       <section className="py-16 md:py-24">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
           <Reveal>
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900] tracking-tight mb-10 text-center">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 tracking-tight mb-10 text-center">
               {isAr ? "قيمنا" : "Our Values"}
             </h2>
           </Reveal>
@@ -154,10 +154,10 @@ export default async function AboutPage({
             ].map((value) => (
               <Reveal key={value.title}>
                 <div className="border border-[rgba(0,0,0,0.21)] rounded-sm p-6">
-                  <div className="w-10 h-10 border border-[rgba(0,0,0,0.21)] rounded-sm flex items-center justify-center text-sm font-bold text-gray-900] mb-4">
+                  <div className="w-10 h-10 border border-[rgba(0,0,0,0.21)] rounded-sm flex items-center justify-center text-sm font-bold text-gray-900 mb-4">
                     {value.icon}
                   </div>
-                  <h3 className="text-lg font-bold text-gray-900] mb-3">{value.title}</h3>
+                  <h3 className="text-lg font-bold text-gray-900 mb-3">{value.title}</h3>
                   <p className="text-[#484848] leading-relaxed text-sm">{value.desc}</p>
                 </div>
               </Reveal>
@@ -180,7 +180,7 @@ export default async function AboutPage({
             </p>
             <Link
               href="/showrooms"
-              className="btn-press inline-block bg-white text-gray-900] px-10 py-3.5 font-semibold text-sm tracking-wide rounded-sm hover:bg-white transition-colors"
+              className="btn-press inline-block bg-white text-gray-900 px-10 py-3.5 font-semibold text-sm tracking-wide rounded-sm hover:bg-white transition-colors"
             >
               {isAr ? "تصفح معارضنا" : "Visit Our Showroom"}
             </Link>

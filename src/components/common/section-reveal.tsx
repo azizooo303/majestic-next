@@ -21,9 +21,6 @@ interface SectionRevealProps {
 export function SectionReveal({
   children,
   direction = "up",
-  distance = 50,
-  duration = 0.7,
-  delay = 0,
   className,
 }: SectionRevealProps) {
   const ref = useRef<HTMLDivElement>(null);

@@ -187,7 +187,7 @@ export default async function HomePage({
               batchMax={6}
               stagger={0.06}
               yOffset={28}
-              className="grid grid-cols-3 md:grid-cols-6 gap-[15px]"
+              className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-[15px]"
             >
               {categoryItems}
             </GsapBatchReveal>

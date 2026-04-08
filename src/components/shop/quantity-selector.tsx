@@ -23,7 +23,7 @@ export function QuantitySelector({ isAr, min = 1, max = 99 }: QuantitySelectorPr
       <button
         onClick={decrement}
         disabled={qty <= min}
-        className="w-10 h-10 flex items-center justify-center text-gray-900]
+        className="w-10 h-10 flex items-center justify-center text-gray-900
           hover:bg-[#fafafa] transition-colors disabled:opacity-30 disabled:cursor-not-allowed
           border-e border-[rgba(0,0,0,0.21)] cursor-pointer"
         aria-label={isAr ? "تقليل الكمية" : "Decrease quantity"}
@@ -40,7 +40,7 @@ export function QuantitySelector({ isAr, min = 1, max = 99 }: QuantitySelectorPr
           const val = parseInt(e.target.value, 10);
           if (!isNaN(val)) setQty(Math.min(max, Math.max(min, val)));
         }}
-        className="w-12 h-10 text-center text-sm font-semibold text-gray-900] bg-transparent
+        className="w-12 h-10 text-center text-sm font-semibold text-gray-900 bg-transparent
           focus:outline-none [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none
           [&::-webkit-inner-spin-button]:appearance-none"
         aria-label={isAr ? "الكمية" : "Quantity"}
@@ -49,7 +49,7 @@ export function QuantitySelector({ isAr, min = 1, max = 99 }: QuantitySelectorPr
       <button
         onClick={increment}
         disabled={qty >= max}
-        className="w-10 h-10 flex items-center justify-center text-gray-900]
+        className="w-10 h-10 flex items-center justify-center text-gray-900
           hover:bg-[#fafafa] transition-colors disabled:opacity-30 disabled:cursor-not-allowed
           border-s border-[rgba(0,0,0,0.21)] cursor-pointer"
         aria-label={isAr ? "زيادة الكمية" : "Increase quantity"}

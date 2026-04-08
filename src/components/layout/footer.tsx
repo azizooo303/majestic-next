@@ -47,7 +47,7 @@ export async function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label={s.label}
-            className="text-xs text-[#484848] hover:text-gray-900] transition-colors font-medium"
+            className="text-xs text-[#484848] hover:text-gray-900 transition-colors font-medium"
           >
             {s.label}
           </a>
@@ -76,7 +76,7 @@ export async function Footer() {
           <li key={link.href}>
             <Link
               href={link.href}
-              className="text-sm text-[#484848] hover:text-gray-900] transition-colors"
+              className="text-sm text-[#484848] hover:text-gray-900 transition-colors"
             >
               {link.label}
             </Link>
@@ -104,7 +104,7 @@ export async function Footer() {
           <li key={link.href}>
             <Link
               href={link.href}
-              className="text-sm text-[#484848] hover:text-gray-900] transition-colors"
+              className="text-sm text-[#484848] hover:text-gray-900 transition-colors"
             >
               {link.label}
             </Link>
@@ -132,7 +132,7 @@ export async function Footer() {
           <li key={link.href}>
             <Link
               href={link.href}
-              className="text-sm text-[#484848] hover:text-gray-900] transition-colors"
+              className="text-sm text-[#484848] hover:text-gray-900 transition-colors"
             >
               {link.label}
             </Link>
@@ -156,13 +156,13 @@ export async function Footer() {
         </p>
         <a
           href="tel:+96692001219"
-          className="block text-sm text-[#484848] hover:text-gray-900] transition-colors"
+          className="block text-sm text-[#484848] hover:text-gray-900 transition-colors"
         >
           +966 9200 12019
         </a>
         <a
           href="mailto:info@majestic.com.sa"
-          className="block text-sm text-[#484848] hover:text-gray-900] transition-colors"
+          className="block text-sm text-[#484848] hover:text-gray-900 transition-colors"
         >
           info@majestic.com.sa
         </a>
@@ -197,14 +197,14 @@ export async function Footer() {
           <div className="flex items-center gap-4">
             <Link
               href="/privacy"
-              className="text-xs text-[#484848] hover:text-gray-900] transition-colors"
+              className="text-xs text-[#484848] hover:text-gray-900 transition-colors"
             >
               {isAr ? "سياسة الخصوصية" : "Privacy Policy"}
             </Link>
             <span className="text-[rgba(0,0,0,0.2)] text-xs">|</span>
             <Link
               href="/terms"
-              className="text-xs text-[#484848] hover:text-gray-900] transition-colors"
+              className="text-xs text-[#484848] hover:text-gray-900 transition-colors"
             >
               {isAr ? "شروط الخدمة" : "Terms of Service"}
             </Link>

@@ -141,13 +141,13 @@ export default async function PrivacyPage({
       <section className="bg-white border-b border-[rgba(0,0,0,0.08)] py-12 md:py-16">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
           <p className="text-xs uppercase tracking-widest text-[#484848] mb-3">
-            <Link href="/" className="hover:text-gray-900] transition-colors">
+            <Link href="/" className="hover:text-gray-900 transition-colors">
               {isAr ? "الرئيسية" : "Home"}
             </Link>
             {" / "}
             {isAr ? "سياسة الخصوصية" : "Privacy Policy"}
           </p>
-          <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight text-gray-900]">
+          <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight text-gray-900">
             {isAr ? "سياسة الخصوصية" : "Privacy Policy"}
           </h1>
           <p className="text-[#484848] text-sm mt-3">
@@ -168,7 +168,7 @@ export default async function PrivacyPage({
                     : ""
                 }
               >
-                <h2 className="text-2xl md:text-3xl font-bold text-gray-900] tracking-tight mb-4">
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 tracking-tight mb-4">
                   {section.heading}
                 </h2>
                 {section.paragraphs.map((p, i) => (

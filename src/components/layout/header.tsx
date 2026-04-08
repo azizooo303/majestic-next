@@ -107,28 +107,31 @@ function SearchModal({
   const [query, setQuery] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
 
+  const handleClose = useCallback(() => {
+    setQuery("");
+    onClose();
+  }, [onClose]);
+
   useEffect(() => {
     if (isOpen) {
       setTimeout(() => inputRef.current?.focus(), 50);
-    } else {
-      setQuery("");
     }
   }, [isOpen]);
 
   useEffect(() => {
     if (!isOpen) return;
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") onClose();
+      if (e.key === "Escape") handleClose();
     };
     document.addEventListener("keydown", onKey);
     return () => document.removeEventListener("keydown", onKey);
-  }, [isOpen, onClose]);
+  }, [isOpen, handleClose]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (query.trim()) {
       router.push(`/shop?search=${encodeURIComponent(query.trim())}`);
-      onClose();
+      handleClose();
     }
   };
 
@@ -138,7 +141,7 @@ function SearchModal({
     <>
       <div
         className="fixed inset-0 z-[60] bg-black/40"
-        onClick={onClose}
+        onClick={handleClose}
         aria-hidden="true"
       />
       <div className="fixed top-0 inset-x-0 z-[61] bg-white border-b border-[rgba(0,0,0,0.12)] py-5 px-4 md:px-8">
@@ -153,12 +156,12 @@ function SearchModal({
               placeholder={
                 locale === "ar" ? "ابحث عن المنتجات..." : "Search products..."
               }
-              className="flex-1 text-base text-gray-900] bg-transparent outline-none placeholder:text-[#484848]/50"
+              className="flex-1 text-base text-gray-900 bg-transparent outline-none placeholder:text-[#484848]/50"
             />
           </form>
           <button
-            onClick={onClose}
-            className="p-2 text-gray-900] hover:text-[#484848] cursor-pointer"
+            onClick={handleClose}
+            className="p-2 text-gray-900 hover:text-[#484848] cursor-pointer"
             aria-label="Close search"
           >
             <X className="w-5 h-5" />
@@ -228,7 +231,7 @@ export function Header({ announcement }: HeaderProps) {
       {/* Skip link */}
       <a
         href="#main-content"
-        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:start-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-white] focus:text-white focus:rounded-sm focus:font-medium"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:start-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-[#0c0c0c] focus:text-white focus:rounded-sm focus:font-medium"
       >
         Skip to content
       </a>
@@ -267,21 +270,21 @@ export function Header({ announcement }: HeaderProps) {
           <div className="max-w-screen-xl mx-auto px-8 py-1.5 flex items-center gap-1 text-xs text-[#484848]">
             <Link
               href="/showrooms"
-              className="hover:text-gray-900] transition-colors px-2 py-0.5"
+              className="hover:text-gray-900 transition-colors px-2 py-0.5"
             >
               {t("nav.showrooms")}
             </Link>
             <span className="text-[rgba(0,0,0,0.2)]">|</span>
             <Link
               href="/materials"
-              className="hover:text-gray-900] transition-colors px-2 py-0.5"
+              className="hover:text-gray-900 transition-colors px-2 py-0.5"
             >
               {t("nav.materialColors")}
             </Link>
             <span className="text-[rgba(0,0,0,0.2)]">|</span>
             <Link
               href="/warranty"
-              className="hover:text-gray-900] transition-colors px-2 py-0.5"
+              className="hover:text-gray-900 transition-colors px-2 py-0.5"
             >
               {t("nav.warranty")}
             </Link>
@@ -295,7 +298,7 @@ export function Header({ announcement }: HeaderProps) {
             {/* Left: hamburger on mobile, spacer on desktop */}
             <div className="flex items-center">
               <button
-                className="lg:hidden p-2 text-gray-900] cursor-pointer"
+                className="lg:hidden p-2 min-w-[44px] min-h-[44px] flex items-center justify-center text-gray-900 cursor-pointer"
                 onClick={() => setIsMobileOpen(true)}
                 aria-label="Open menu"
               >
@@ -323,7 +326,7 @@ export function Header({ announcement }: HeaderProps) {
               {/* Search — desktop + tablet */}
               <button
                 onClick={() => setIsSearchOpen(true)}
-                className="flex p-2 md:p-2.5 text-gray-900] hover:text-[#484848] transition-colors cursor-pointer outline-none"
+                className="flex p-2 md:p-2.5 min-w-[44px] min-h-[44px] items-center justify-center text-gray-900 hover:text-[#484848] transition-colors cursor-pointer outline-none"
                 aria-label={locale === "ar" ? "بحث" : "Search"}
               >
                 <Search className="w-5 h-5" />
@@ -332,7 +335,7 @@ export function Header({ announcement }: HeaderProps) {
               {/* Account — desktop only */}
               <Link
                 href="/account"
-                className="p-2 md:p-2.5 text-gray-900] hover:text-[#484848] transition-colors hidden sm:flex"
+                className="p-2 md:p-2.5 min-w-[44px] min-h-[44px] flex items-center justify-center text-gray-900 hover:text-[#484848] transition-colors hidden sm:flex"
                 aria-label={locale === "ar" ? "حسابي" : "Account"}
               >
                 <User className="w-5 h-5" />
@@ -341,11 +344,11 @@ export function Header({ announcement }: HeaderProps) {
               {/* Cart — always visible */}
               <Link
                 href="/cart"
-                className="p-2 md:p-2.5 text-gray-900] hover:text-[#484848] transition-colors relative"
+                className="p-2 md:p-2.5 min-w-[44px] min-h-[44px] flex items-center justify-center text-gray-900 hover:text-[#484848] transition-colors relative"
                 aria-label={locale === "ar" ? "سلة التسوق" : `Cart, ${itemCount} items`}
               >
                 <ShoppingBag className="w-5 h-5" />
-                <span className="absolute top-1 end-1 w-3.5 h-3.5 bg-white] text-white text-[9px] font-bold rounded-full flex items-center justify-center">
+                <span className="absolute top-1 end-1 w-3.5 h-3.5 bg-[#0c0c0c] text-white text-[9px] font-bold rounded-full flex items-center justify-center">
                   {itemCount}
                 </span>
               </Link>
@@ -385,8 +388,8 @@ export function Header({ announcement }: HeaderProps) {
                       ? "border border-[rgba(0,0,0,0.38)] rounded-sm mx-1 my-2 py-2 px-3 text-xs"
                       : "",
                     pathname === item.href
-                      ? "text-gray-900] border-b-2 border-[#0c0c0c]"
-                      : "text-gray-900]"
+                      ? "text-gray-900 border-b-2 border-[#0c0c0c]"
+                      : "text-gray-900"
                   )}
                 >
                   {item.key === "eQuotation" && (
@@ -468,8 +471,8 @@ function DesktopNavItem({
         className={cn(
           "text-sm font-medium px-3 py-3.5 transition-colors duration-200 hover:text-[#484848] whitespace-nowrap",
           isActive
-            ? "text-gray-900] border-b-2 border-[#0c0c0c]"
-            : "text-gray-900] nav-underline"
+            ? "text-gray-900 border-b-2 border-[#0c0c0c]"
+            : "text-gray-900 nav-underline"
         )}
       >
         {label}
@@ -484,8 +487,8 @@ function DesktopNavItem({
         className={cn(
           "flex items-center gap-1 text-sm font-medium px-3 py-3.5 transition-colors duration-200 hover:text-[#484848] whitespace-nowrap",
           isActive
-            ? "text-gray-900] border-b-2 border-[#0c0c0c]"
-            : "text-gray-900] nav-underline"
+            ? "text-gray-900 border-b-2 border-[#0c0c0c]"
+            : "text-gray-900 nav-underline"
         )}
         aria-expanded={isOpen}
         aria-haspopup="true"
@@ -624,7 +627,7 @@ function LanguageToggle() {
     <Link
       href={pathname}
       locale={isAr ? "en" : "ar"}
-      className="flex items-center gap-1 px-2.5 py-1.5 text-xs font-medium text-gray-900] hover:text-[#484848] transition-colors"
+      className="flex items-center gap-1 px-2.5 py-1.5 text-xs font-medium text-gray-900 hover:text-[#484848] transition-colors"
     >
       {isAr ? "EN" : "AR"}
     </Link>
@@ -691,7 +694,7 @@ function MobileDrawer({
           />
           <button
             onClick={onClose}
-            className="p-2 text-gray-900] hover:text-[#484848] cursor-pointer"
+            className="p-2 text-gray-900 hover:text-[#484848] cursor-pointer"
             aria-label="Close menu"
           >
             <X className="w-5 h-5" />
@@ -700,11 +703,15 @@ function MobileDrawer({
 
         {/* Utility links — mobile */}
         <div className="px-6 py-3 border-b border-[rgba(0,0,0,0.06)] flex gap-4">
-          <Link href="/showrooms" onClick={onClose} className="text-xs text-[#484848] hover:text-gray-900]">
+          <Link href="/showrooms" onClick={onClose} className="text-xs text-[#484848] hover:text-gray-900">
             {t("nav.showrooms")}
           </Link>
           <span className="text-[rgba(0,0,0,0.2)] text-xs">|</span>
-          <Link href="/warranty" onClick={onClose} className="text-xs text-[#484848] hover:text-gray-900]">
+          <Link href="/materials" onClick={onClose} className="text-xs text-[#484848] hover:text-gray-900">
+            {t("nav.materialColors")}
+          </Link>
+          <span className="text-[rgba(0,0,0,0.2)] text-xs">|</span>
+          <Link href="/warranty" onClick={onClose} className="text-xs text-[#484848] hover:text-gray-900">
             {t("nav.warranty")}
           </Link>
         </div>
@@ -725,7 +732,7 @@ function MobileDrawer({
                   <>
                     <button
                       onClick={() => toggleExpand(item.key)}
-                      className="w-full flex items-center justify-between px-6 py-4 text-base font-medium text-gray-900] hover:text-[#484848] transition-colors cursor-pointer"
+                      className="w-full flex items-center justify-between px-6 py-4 text-base font-medium text-gray-900 hover:text-[#484848] transition-colors cursor-pointer"
                       aria-expanded={isExpanded}
                     >
                       {label}
@@ -752,9 +759,9 @@ function MobileDrawer({
                             href={child.href}
                             onClick={onClose}
                             className={cn(
-                              "block px-10 py-3 text-sm transition-colors hover:text-gray-900]",
+                              "block px-10 py-3 text-sm transition-colors hover:text-gray-900",
                               drawerPathname === child.href
-                                ? "text-gray-900] font-semibold"
+                                ? "text-gray-900 font-semibold"
                                 : "text-[#484848]"
                             )}
                           >
@@ -764,7 +771,7 @@ function MobileDrawer({
                         <Link
                           href={item.href}
                           onClick={onClose}
-                          className="block px-10 py-3 text-sm font-semibold text-gray-900] inline-flex items-center gap-1"
+                          className="block px-10 py-3 text-sm font-semibold text-gray-900 inline-flex items-center gap-1"
                         >
                           {t("common.viewAll")}{" "}
                           <ChevronRight className="w-3.5 h-3.5" />
@@ -779,8 +786,8 @@ function MobileDrawer({
                     className={cn(
                       "block px-6 py-4 text-base font-medium transition-colors hover:text-[#484848]",
                       pathname === item.href
-                        ? "text-gray-900] border-s-2 border-[#0c0c0c]"
-                        : "text-gray-900]"
+                        ? "text-gray-900 border-s-2 border-[#0c0c0c]"
+                        : "text-gray-900"
                     )}
                   >
                     {label}
@@ -796,7 +803,7 @@ function MobileDrawer({
           <Link
             href="/account"
             onClick={onClose}
-            className="flex items-center gap-2 text-sm font-medium text-gray-900] hover:text-[#484848] transition-colors"
+            className="flex items-center gap-2 text-sm font-medium text-gray-900 hover:text-[#484848] transition-colors"
           >
             <User className="w-4 h-4" />
             {locale === "ar" ? "تسجيل الدخول" : "Sign In"}
@@ -805,7 +812,7 @@ function MobileDrawer({
             href={drawerPathname}
             locale={locale === "ar" ? "en" : "ar"}
             onClick={onClose}
-            className="flex items-center gap-1 text-sm font-medium text-gray-900] hover:text-[#484848] transition-colors"
+            className="flex items-center gap-1 text-sm font-medium text-gray-900 hover:text-[#484848] transition-colors"
           >
             {locale === "ar" ? "EN" : "AR"}
           </Link>

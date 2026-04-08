@@ -5,21 +5,30 @@ interface TrackFormProps {
   isAr: boolean;
 }
 
-const MOCK_STEPS = [
-  { key: "received", en: "Order Received", ar: "تم استلام الطلب", done: true, active: false },
-  { key: "confirmed", en: "Confirmed", ar: "تم التأكيد", done: true, active: false },
-  { key: "dispatched", en: "Dispatched", ar: "تم الشحن", done: true, active: false },
-  { key: "outfordelivery", en: "Out for Delivery", ar: "في الطريق إليك", done: false, active: true },
-  { key: "delivered", en: "Delivered", ar: "تم التسليم", done: false, active: false },
-];
+interface TrackStep {
+  key: string;
+  label: string;
+  done: boolean;
+  active: boolean;
+}
+
+interface TrackResult {
+  found: boolean;
+  orderNumber?: string;
+  status?: string;
+  statusLabel?: string;
+  date_created?: string;
+  steps?: TrackStep[];
+}
 
 export function TrackForm({ isAr }: TrackFormProps) {
   const [orderNumber, setOrderNumber] = useState("");
   const [email, setEmail] = useState("");
-  const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [result, setResult] = useState<TrackResult | null>(null);
   const [error, setError] = useState("");
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (!orderNumber.trim() || !email.trim()) {
       setError(
@@ -30,31 +39,54 @@ export function TrackForm({ isAr }: TrackFormProps) {
       return;
     }
     setError("");
-    setSubmitted(true);
+    setLoading(true);
+
+    try {
+      const res = await fetch(
+        `/api/orders/track?number=${encodeURIComponent(orderNumber.trim())}&email=${encodeURIComponent(email.trim())}`
+      );
+      const data: TrackResult = await res.json();
+
+      if (!data.found) {
+        setError(
+          isAr
+            ? "لم يتم العثور على الطلب. يرجى التحقق من رقم الطلب والبريد الإلكتروني."
+            : "Order not found. Please check your order number and email."
+        );
+      } else {
+        setResult(data);
+      }
+    } catch {
+      setError(
+        isAr
+          ? "حدث خطأ. يرجى المحاولة لاحقاً."
+          : "Something went wrong. Please try again later."
+      );
+    } finally {
+      setLoading(false);
+    }
   }
 
   const inputClass =
     "w-full border border-[rgba(0,0,0,0.21)] rounded-sm px-4 py-3 text-sm text-gray-900 placeholder:text-[#999] focus:outline-none focus:border-gray-900 bg-white transition-colors";
 
-  if (submitted) {
+  if (result?.found && result.steps) {
     return (
       <div className="border border-[rgba(0,0,0,0.21)] rounded-sm p-6 md:p-8">
-        {/* Mock order info */}
         <div className="flex items-center justify-between mb-6 flex-wrap gap-2">
           <div>
             <p className="text-xs text-[#484848] uppercase tracking-widest">
               {isAr ? "رقم الطلب" : "Order Number"}
             </p>
-            <p className="text-base font-bold text-gray-900] mt-0.5">{orderNumber}</p>
+            <p className="text-base font-bold text-gray-900 mt-0.5">{result.orderNumber}</p>
           </div>
           <span className="text-xs font-semibold uppercase tracking-wider border border-[rgba(0,0,0,0.21)] px-3 py-1 rounded-sm text-[#484848]">
-            {isAr ? "في الطريق إليك" : "Out for Delivery"}
+            {result.statusLabel}
           </span>
         </div>
 
-        {/* Status steps */}
         <div className="flex flex-col sm:flex-row gap-0 sm:gap-0" role="list" aria-label={isAr ? "حالة الطلب" : "Order status"}>
-          {MOCK_STEPS.map((step, index) => {
+          {result.steps.map((step, index) => {
             const bgClass = step.done
               ? "bg-gray-400"
               : step.active
@@ -68,7 +100,6 @@ export function TrackForm({ isAr }: TrackFormProps) {
                 className="flex sm:flex-1 flex-row sm:flex-col items-center gap-3 sm:gap-0"
               >
                 <div className="flex sm:flex-col items-center flex-shrink-0">
-                  {/* Circle */}
                   <div
                     className={`relative w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${bgClass}`}
                     aria-current={step.active ? "step" : undefined}
@@ -82,27 +113,25 @@ export function TrackForm({ isAr }: TrackFormProps) {
                       <span className="w-2.5 h-2.5 rounded-full bg-white animate-pulse" aria-hidden="true" />
                     )}
                   </div>
-                  {/* Connector */}
-                  {index < MOCK_STEPS.length - 1 && (
+                  {index < result.steps!.length - 1 && (
                     <>
                       <div className="sm:hidden w-px h-6 bg-[rgba(0,0,0,0.12)] mx-auto" />
                       <div className="hidden sm:block flex-1 h-px bg-[rgba(0,0,0,0.12)] w-full mt-4" />
                     </>
                   )}
                 </div>
-                <p className={`text-xs font-medium mt-0 sm:mt-2 text-center ${step.active ? "text-gray-900]" : "text-[#484848]"}`}>
-                  {isAr ? step.ar : step.en}
+                <p className={`text-xs font-medium mt-0 sm:mt-2 text-center ${step.active ? "text-gray-900" : "text-[#484848]"}`}>
+                  {step.label}
                 </p>
               </div>
             );
           })}
         </div>
 
-        {/* Reset */}
         <button
           type="button"
-          onClick={() => { setSubmitted(false); setOrderNumber(""); setEmail(""); }}
-          className="mt-8 text-sm text-[#484848] underline underline-offset-2 hover:text-gray-900] transition-colors"
+          onClick={() => { setResult(null); setOrderNumber(""); setEmail(""); }}
+          className="mt-8 text-sm text-[#484848] underline underline-offset-2 hover:text-gray-900 transition-colors"
         >
           {isAr ? "البحث عن طلب آخر" : "Track another order"}
         </button>
@@ -161,10 +190,13 @@ export function TrackForm({ isAr }: TrackFormProps) {
 
         <button
           type="submit"
+          disabled={loading}
           className="btn-press w-full bg-white text-gray-900 border border-gray-900 py-3.5 font-semibold text-sm
-            tracking-wide rounded-sm hover:opacity-80 transition-opacity"
+            tracking-wide rounded-sm hover:opacity-80 transition-opacity disabled:opacity-50"
         >
-          {isAr ? "تتبع الطلب" : "Track Order"}
+          {loading
+            ? (isAr ? "جارٍ البحث..." : "Tracking...")
+            : (isAr ? "تتبع الطلب" : "Track Order")}
         </button>
       </div>
     </form>

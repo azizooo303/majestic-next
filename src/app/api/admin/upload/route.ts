@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
+import crypto from 'crypto'
 import { isValidAdminToken } from '@/lib/admin-auth'
 
 export async function POST(request: NextRequest) {
@@ -34,7 +35,6 @@ export async function POST(request: NextRequest) {
   const folder = 'majestic-admin'
 
   // Generate Cloudinary signature
-  const crypto = require('crypto')
   const signature = crypto
     .createHash('sha1')
     .update(`folder=${folder}&timestamp=${timestamp}${apiSecret}`)

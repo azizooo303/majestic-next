@@ -77,8 +77,7 @@ export function ProjectsReel({ isAr }: { isAr: boolean }) {
               <Link
                 key={`${project.slug}-${i}`}
                 href={`/projects/${project.slug}`}
-                className="group/card relative flex-shrink-0 overflow-hidden"
-                style={{ width: "360px", height: "240px" }}
+                className="group/card relative flex-shrink-0 overflow-hidden w-[280px] h-[187px] sm:w-[320px] sm:h-[213px] md:w-[360px] md:h-[240px]"
                 tabIndex={i >= PROJECTS.length ? -1 : 0}
                 aria-hidden={i >= PROJECTS.length ? true : undefined}
               >

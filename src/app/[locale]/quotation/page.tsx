@@ -24,6 +24,16 @@ export async function generateMetadata({
         "x-default": siteUrl("/en/quotation"),
       },
     },
+    openGraph: {
+      title: isAr ? "طلب عرض سعر — ماجستيك للأثاث" : "Request a Quotation — Majestic Furniture",
+      description: isAr
+        ? "احصل على عرض سعر مخصص لمشروع أثاثك المكتبي. نخدم المؤسسات الحكومية والخاصة في المملكة."
+        : "Get a custom quotation for your office furniture project. We serve government and private organisations across Saudi Arabia.",
+      type: "website",
+      locale: isAr ? "ar_SA" : "en_SA",
+      siteName: "Majestic Furniture",
+      images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
+    },
   };
 }
 
@@ -39,7 +49,7 @@ export default async function QuotationPage({
     <PageWrapper id="main-content" className="flex-1 bg-white">
       <div className="max-w-screen-md mx-auto px-4 md:px-8 py-16">
         <Reveal>
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900] tracking-tight mb-3">
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight mb-3">
             {isAr ? "طلب عرض سعر" : "Request a Quotation"}
           </h1>
           <p className="text-[#484848] text-base mb-10">

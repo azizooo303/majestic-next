@@ -38,14 +38,13 @@ export function ProductGallery({ images, name }: ProductGalleryProps) {
 
       {/* Thumbnails */}
       {images.length > 1 && (
-        <div className="flex gap-2" role="list" aria-label={`${name} images`}>
+        <div className="flex gap-2" role="group" aria-label={`${name} images`}>
           {images.slice(0, 4).map((img, i) => (
             <button
               key={img.id}
-              role="listitem"
               onClick={() => setActiveIndex(i)}
               aria-label={img.alt || `${name} view ${i + 1}`}
-              aria-pressed={i === activeIndex}
+              aria-current={i === activeIndex ? true : undefined}
               className={cn(
                 "relative w-16 h-16 shrink-0 rounded-sm overflow-hidden border-2 bg-[#fafafa] cursor-pointer transition-colors",
                 i === activeIndex

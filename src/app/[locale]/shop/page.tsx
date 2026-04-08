@@ -93,7 +93,7 @@ export default async function ShopPage({
 
   const { orderby, order } = SORT_MAP[sort] ?? SORT_MAP.featured;
 
-  const { products: wcProducts, total, totalPages } = await getProductPage({
+  const result = await getProductPage({
     lang: locale,
     per_page: PER_PAGE,
     page,
@@ -101,7 +101,9 @@ export default async function ShopPage({
     ...(search ? { search } : {}),
     orderby,
     order,
-  }).catch(() => ({ products: [], total: 0, totalPages: 1 }));
+  }).catch(() => ({ products: [] as import("@/lib/woocommerce").WCProduct[], total: 0, totalPages: 1, failed: true as const }));
+  const { products: wcProducts, total, totalPages } = result;
+  const apiFailed = "failed" in result;
 
   const productItems = wcProducts.map((p) => {
     const price = parsePrice(p.price);
@@ -148,8 +150,8 @@ export default async function ShopPage({
     <main className="flex-1 bg-white min-h-screen">
       <BreadcrumbListJsonLd
         items={[
-          { name: isAr ? "الرئيسية" : "Home", item: `https://lightyellow-mallard-240169.hostingersite.com/${locale}/` },
-          { name: isAr ? "جميع المنتجات" : "Shop", item: `https://lightyellow-mallard-240169.hostingersite.com/${locale}/shop` },
+          { name: isAr ? "الرئيسية" : "Home", item: siteUrl(`/${locale}/`) },
+          { name: isAr ? "جميع المنتجات" : "Shop", item: siteUrl(`/${locale}/shop`) },
         ]}
       />
       <div className="max-w-screen-2xl mx-auto px-4 md:px-6 lg:px-8 pt-6 pb-16">
@@ -160,20 +162,20 @@ export default async function ShopPage({
             aria-label={isAr ? "مسار التنقل" : "Breadcrumb"}
             className="flex items-center gap-1.5 text-xs text-[#484848] mb-6"
           >
-            <Link href="/" className="hover:text-gray-900] transition-colors">
+            <Link href="/" className="hover:text-gray-900 transition-colors">
               {isAr ? "الرئيسية" : "Home"}
             </Link>
             <ChevronRight size={12} className={isAr ? "rotate-180" : ""} aria-hidden="true" />
             {categoryLabel ? (
               <>
-                <Link href="/shop" className="hover:text-gray-900] transition-colors">
+                <Link href="/shop" className="hover:text-gray-900 transition-colors">
                   {isAr ? "جميع المنتجات" : "All Products"}
                 </Link>
                 <ChevronRight size={12} className={isAr ? "rotate-180" : ""} aria-hidden="true" />
-                <span className="text-gray-900] font-medium">{categoryLabel}</span>
+                <span className="text-gray-900 font-medium">{categoryLabel}</span>
               </>
             ) : (
-              <span className="text-gray-900] font-medium">
+              <span className="text-gray-900 font-medium">
                 {isAr ? "جميع المنتجات" : "All Products"}
               </span>
             )}
@@ -190,7 +192,7 @@ export default async function ShopPage({
 
             {/* Page title */}
             <Reveal>
-              <h1 className="text-2xl md:text-3xl font-bold text-gray-900] tracking-tight mb-5">
+              <h1 className="text-2xl md:text-3xl font-bold text-gray-900 tracking-tight mb-5">
                 {pageTitle}
               </h1>
             </Reveal>
@@ -222,7 +224,7 @@ export default async function ShopPage({
                 <Link
                   href="/quotation"
                   className="btn-press shrink-0 border border-white text-white text-xs font-semibold
-                  px-4 py-1.5 rounded-sm hover:bg-white hover:text-gray-900] transition-colors whitespace-nowrap"
+                  px-4 py-1.5 rounded-sm hover:bg-white hover:text-gray-900 transition-colors whitespace-nowrap"
                 >
                   {isAr ? "إنشاء عرض سعر" : "Create a Quotation"}
                 </Link>
@@ -238,12 +240,21 @@ export default async function ShopPage({
               >
                 {productItems}
               </StaggerGrid>
+            ) : apiFailed ? (
+              <div className="py-24 text-center text-[#484848]">
+                <p className="text-lg font-medium">
+                  {isAr ? "المتجر غير متاح مؤقتاً" : "Catalog temporarily unavailable"}
+                </p>
+                <p className="text-sm mt-2">
+                  {isAr ? "يرجى المحاولة مرة أخرى لاحقاً" : "Please try again later"}
+                </p>
+              </div>
             ) : (
               <div className="py-24 text-center text-[#484848]">
                 <p className="text-lg font-medium">
                   {isAr ? "لا توجد منتجات" : "No products found"}
                 </p>
-                <Link href="/shop" className="mt-4 inline-block text-sm underline underline-offset-2 hover:text-gray-900]">
+                <Link href="/shop" className="mt-4 inline-block text-sm underline underline-offset-2 hover:text-gray-900">
                   {isAr ? "عرض الكل" : "View all products"}
                 </Link>
               </div>
@@ -262,7 +273,7 @@ export default async function ShopPage({
                       href={pageHref(page - 1)}
                       className="inline-flex items-center justify-center gap-1 min-w-[32px] h-8 px-3
                         text-xs font-medium rounded-sm border border-[rgba(0,0,0,0.21)]
-                        text-[#484848] hover:border-[#0c0c0c] hover:text-gray-900] transition-colors"
+                        text-[#484848] hover:border-[#0c0c0c] hover:text-gray-900 transition-colors"
                     >
                       {isAr ? <ChevronRight size={12} /> : <ChevronLeft size={12} />}
                       {isAr ? "السابق" : "Prev"}
@@ -289,7 +300,7 @@ export default async function ShopPage({
                           text-xs font-medium rounded-sm border transition-colors ${
                           p === page
                             ? "bg-white text-white border-[#0c0c0c]"
-                            : "border-[rgba(0,0,0,0.21)] text-[#484848] hover:border-[#0c0c0c] hover:text-gray-900]"
+                            : "border-[rgba(0,0,0,0.21)] text-[#484848] hover:border-[#0c0c0c] hover:text-gray-900"
                         }`}
                       >
                         {p}
@@ -303,7 +314,7 @@ export default async function ShopPage({
                       href={pageHref(page + 1)}
                       className="inline-flex items-center justify-center gap-1 min-w-[32px] h-8 px-3
                         text-xs font-medium rounded-sm border border-[rgba(0,0,0,0.21)]
-                        text-[#484848] hover:border-[#0c0c0c] hover:text-gray-900] transition-colors"
+                        text-[#484848] hover:border-[#0c0c0c] hover:text-gray-900 transition-colors"
                     >
                       {isAr ? "التالي" : "Next"}
                       {isAr ? <ChevronLeft size={12} /> : <ChevronRight size={12} />}

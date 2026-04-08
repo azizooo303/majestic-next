@@ -120,14 +120,14 @@ export function HeroBanner({ slides, slide }: HeroBannerProps) {
     };
   }, [startTimer]);
 
-  const goTo = (idx: number) => {
+  const goTo = useCallback((idx: number) => {
     setActiveIdx(idx);
     // Reset timer on manual navigation
     if (intervalRef.current) clearInterval(intervalRef.current);
     if (!paused && total > 1 && !reduced) {
       intervalRef.current = setInterval(advance, AUTO_ADVANCE_MS);
     }
-  };
+  }, [paused, total, reduced, advance]);
 
   // Keyboard navigation
   const handleKeyDown = useCallback(
@@ -135,7 +135,7 @@ export function HeroBanner({ slides, slide }: HeroBannerProps) {
       if (e.key === "ArrowRight") goTo((activeIdx + 1) % total);
       if (e.key === "ArrowLeft") goTo((activeIdx - 1 + total) % total);
     },
-    [activeIdx, total] // eslint-disable-line react-hooks/exhaustive-deps
+    [goTo, activeIdx, total]
   );
 
   if (allSlides.length === 0) return null;

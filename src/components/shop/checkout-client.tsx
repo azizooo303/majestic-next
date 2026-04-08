@@ -1,10 +1,12 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { Link } from "@/i18n/navigation";
 import { useLocale } from "next-intl";
 import { Check, ShieldCheck, ChevronLeft } from "lucide-react";
 import Image from "next/image";
+import { useCart } from "@/context/cart-context";
+import { useRouter } from "@/i18n/navigation";
 
 type Step = 1 | 2 | 3;
 type PaymentMethod = "card" | "applepay" | "tabby" | "tamara";
@@ -45,23 +47,6 @@ const INITIAL_FORM: FormState = {
 
 const VAT_RATE = 0.15;
 
-const ORDER_ITEMS = [
-  {
-    id: 1,
-    name: "Enigma Executive Desk",
-    nameAr: "مكتب إنيجما التنفيذي",
-    price: 2850,
-    image: "/images/hero-desks.jpg",
-  },
-  {
-    id: 2,
-    name: "ErgoMax Pro Chair",
-    nameAr: "كرسي إرجوماكس برو",
-    price: 1250,
-    image: "/images/hero-seating.jpg",
-  },
-];
-
 const REGIONS = [
   { value: "riyadh", en: "Riyadh", ar: "الرياض" },
   { value: "jeddah", en: "Jeddah", ar: "جدة" },
@@ -99,7 +84,7 @@ function StepIndicator({ step, isAr }: { step: Step; isAr: boolean }) {
                 className={[
                   "w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold transition-colors",
                   isActive
-                    ? "bg-white] text-white"
+                    ? "bg-[#0c0c0c] text-white"
                     : isComplete
                     ? "bg-[#484848] text-white"
                     : "border border-[rgba(0,0,0,0.21)] text-[#9ca3af]",
@@ -112,7 +97,7 @@ function StepIndicator({ step, isAr }: { step: Step; isAr: boolean }) {
                 className={[
                   "text-xs whitespace-nowrap",
                   isActive
-                    ? "font-bold text-gray-900]"
+                    ? "font-bold text-gray-900"
                     : isComplete
                     ? "font-medium text-[#484848]"
                     : "text-[#9ca3af]",
@@ -137,8 +122,8 @@ function StepIndicator({ step, isAr }: { step: Step; isAr: boolean }) {
   );
 }
 
-function OrderSummary({ isAr }: { isAr: boolean }) {
-  const subtotal = ORDER_ITEMS.reduce((s, i) => s + i.price, 0);
+function OrderSummary({ isAr, items }: { isAr: boolean; items: import("@/lib/cart").CartItem[] }) {
+  const subtotal = items.reduce((s, i) => s + i.price * i.quantity, 0);
   const vat = subtotal * VAT_RATE;
   const total = subtotal + vat;
 
@@ -148,16 +133,16 @@ function OrderSummary({ isAr }: { isAr: boolean }) {
       className="w-full lg:w-[40%] lg:sticky lg:top-[176px]"
     >
       <div className="border border-[rgba(0,0,0,0.21)] rounded-sm p-6 bg-white">
-        <h2 className="text-base font-bold text-gray-900] mb-5 pb-4 border-b border-[rgba(0,0,0,0.1)]">
+        <h2 className="text-base font-bold text-gray-900 mb-5 pb-4 border-b border-[rgba(0,0,0,0.1)]">
           {isAr ? "ملخص الطلب" : "Order Summary"}
         </h2>
 
         <div className="flex flex-col gap-4 mb-5 pb-5 border-b border-[rgba(0,0,0,0.08)]">
-          {ORDER_ITEMS.map((item) => (
+          {items.map((item) => (
             <div key={item.id} className="flex items-center gap-3">
               <div className="w-12 h-12 flex-shrink-0 border border-[rgba(0,0,0,0.1)] rounded-sm overflow-hidden">
                 <Image
-                  src={item.image}
+                  src={item.image || "/images/hero-desks.jpg"}
                   alt={isAr ? item.nameAr : item.name}
                   width={48}
                   height={48}
@@ -165,12 +150,15 @@ function OrderSummary({ isAr }: { isAr: boolean }) {
                 />
               </div>
               <div className="flex-1 min-w-0">
-                <p className="text-sm font-medium text-gray-900] leading-snug truncate">
+                <p className="text-sm font-medium text-gray-900 leading-snug truncate">
                   {isAr ? item.nameAr : item.name}
                 </p>
+                {item.quantity > 1 && (
+                  <p className="text-xs text-[#484848]">x{item.quantity}</p>
+                )}
               </div>
-              <p className="text-sm font-semibold text-gray-900] flex-shrink-0">
-                {fmt(item.price)}
+              <p className="text-sm font-semibold text-gray-900 flex-shrink-0">
+                {fmt(item.price * item.quantity)}
               </p>
             </div>
           ))}
@@ -183,7 +171,7 @@ function OrderSummary({ isAr }: { isAr: boolean }) {
           </div>
           <div className="flex justify-between text-[#484848]">
             <span>{isAr ? "الشحن" : "Shipping"}</span>
-            <span className="text-gray-900] font-medium">
+            <span className="text-gray-900 font-medium">
               {isAr ? "مجاناً" : "Free"}
             </span>
           </div>
@@ -191,7 +179,7 @@ function OrderSummary({ isAr }: { isAr: boolean }) {
             <span>{isAr ? "ضريبة القيمة المضافة (15%)" : "VAT (15%)"}</span>
             <span>{fmt(vat)}</span>
           </div>
-          <div className="flex justify-between text-base font-bold text-gray-900] pt-3 border-t border-[rgba(0,0,0,0.1)]">
+          <div className="flex justify-between text-base font-bold text-gray-900 pt-3 border-t border-[rgba(0,0,0,0.1)]">
             <span>{isAr ? "الإجمالي" : "Total"}</span>
             <span>{fmt(total)}</span>
           </div>
@@ -208,17 +196,52 @@ function OrderSummary({ isAr }: { isAr: boolean }) {
   );
 }
 
+type FormErrors = Partial<Record<keyof FormState, string>>;
+
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const PHONE_RE = /^(\+?966|05)\d{8,}$/;
+
+function validateAddress(form: FormState, isAr: boolean): FormErrors {
+  const errors: FormErrors = {};
+  if (!form.firstName.trim()) errors.firstName = isAr ? "الاسم الأول مطلوب" : "First name is required";
+  if (!form.lastName.trim()) errors.lastName = isAr ? "اسم العائلة مطلوب" : "Last name is required";
+  if (!form.email.trim()) errors.email = isAr ? "البريد الإلكتروني مطلوب" : "Email is required";
+  else if (!EMAIL_RE.test(form.email)) errors.email = isAr ? "بريد إلكتروني غير صحيح" : "Invalid email address";
+  if (!form.phone.trim()) errors.phone = isAr ? "رقم الجوال مطلوب" : "Phone number is required";
+  else if (!PHONE_RE.test(form.phone.replace(/[\s-]/g, ""))) errors.phone = isAr ? "رقم جوال غير صحيح" : "Invalid phone number";
+  if (!form.address1.trim()) errors.address1 = isAr ? "العنوان مطلوب" : "Address is required";
+  if (!form.city.trim()) errors.city = isAr ? "المدينة مطلوبة" : "City is required";
+  if (!form.region) errors.region = isAr ? "المنطقة مطلوبة" : "Region is required";
+  return errors;
+}
+
+function validatePayment(form: FormState, isAr: boolean): FormErrors {
+  const errors: FormErrors = {};
+  if (form.paymentMethod !== "card") return errors;
+  const digits = form.cardNumber.replace(/\s/g, "");
+  if (!digits) errors.cardNumber = isAr ? "رقم البطاقة مطلوب" : "Card number is required";
+  else if (!/^\d{16}$/.test(digits)) errors.cardNumber = isAr ? "رقم البطاقة يجب أن يكون 16 رقماً" : "Card number must be 16 digits";
+  if (!form.expiry.trim()) errors.expiry = isAr ? "تاريخ الانتهاء مطلوب" : "Expiry date is required";
+  else if (!/^\d{2}\/\d{2}$/.test(form.expiry)) errors.expiry = isAr ? "الصيغة: MM/YY" : "Format: MM/YY";
+  if (!form.cvv.trim()) errors.cvv = isAr ? "CVV مطلوب" : "CVV is required";
+  else if (!/^\d{3,4}$/.test(form.cvv)) errors.cvv = isAr ? "CVV غير صحيح" : "Invalid CVV";
+  if (!form.cardName.trim()) errors.cardName = isAr ? "اسم حامل البطاقة مطلوب" : "Cardholder name is required";
+  return errors;
+}
+
 function Field({
   label,
   labelAr,
   isAr,
   required,
+  error,
   children,
 }: {
   label: string;
   labelAr: string;
   isAr: boolean;
   required?: boolean;
+  error?: string;
   children: React.ReactNode;
 }) {
   return (
@@ -232,32 +255,35 @@ function Field({
         )}
       </label>
       {children}
+      {error && <p className="text-xs text-[#e53e3e] mt-0.5">{error}</p>}
     </div>
   );
 }
 
 const inputCls =
-  "border border-[rgba(0,0,0,0.21)] rounded-sm px-4 py-3 w-full text-sm text-gray-900] bg-white placeholder:text-[#9ca3af] focus:outline-none focus:border-[#0c0c0c] focus:ring-1 focus:ring-[#0c0c0c] transition-colors";
+  "border border-[rgba(0,0,0,0.21)] rounded-sm px-4 py-3 w-full text-sm text-gray-900 bg-white placeholder:text-[#9ca3af] focus:outline-none focus:border-[#0c0c0c] focus:ring-1 focus:ring-[#0c0c0c] transition-colors";
 
 function StepAddress({
   form,
   onChange,
   onContinue,
+  errors,
   isAr,
 }: {
   form: FormState;
   onChange: (k: keyof FormState, v: string) => void;
   onContinue: () => void;
+  errors: FormErrors;
   isAr: boolean;
 }) {
   return (
     <div className="flex flex-col gap-6">
-      <h2 className="text-xl font-bold text-gray-900]">
+      <h2 className="text-xl font-bold text-gray-900">
         {isAr ? "عنوان التوصيل" : "Delivery Address"}
       </h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <Field label="First Name" labelAr="الاسم الأول" isAr={isAr} required>
+        <Field label="First Name" labelAr="الاسم الأول" isAr={isAr} required error={errors.firstName}>
           <input
             type="text"
             value={form.firstName}
@@ -267,7 +293,7 @@ function StepAddress({
             autoComplete="given-name"
           />
         </Field>
-        <Field label="Last Name" labelAr="اسم العائلة" isAr={isAr} required>
+        <Field label="Last Name" labelAr="اسم العائلة" isAr={isAr} required error={errors.lastName}>
           <input
             type="text"
             value={form.lastName}
@@ -280,7 +306,7 @@ function StepAddress({
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <Field label="Email" labelAr="البريد الإلكتروني" isAr={isAr} required>
+        <Field label="Email" labelAr="البريد الإلكتروني" isAr={isAr} required error={errors.email}>
           <input
             type="email"
             value={form.email}
@@ -291,7 +317,7 @@ function StepAddress({
             dir="ltr"
           />
         </Field>
-        <Field label="Phone" labelAr="رقم الجوال" isAr={isAr} required>
+        <Field label="Phone" labelAr="رقم الجوال" isAr={isAr} required error={errors.phone}>
           <input
             type="tel"
             value={form.phone}
@@ -304,7 +330,7 @@ function StepAddress({
         </Field>
       </div>
 
-      <Field label="Address Line 1" labelAr="العنوان" isAr={isAr} required>
+      <Field label="Address Line 1" labelAr="العنوان" isAr={isAr} required error={errors.address1}>
         <input
           type="text"
           value={form.address1}
@@ -327,7 +353,7 @@ function StepAddress({
       </Field>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <Field label="City" labelAr="المدينة" isAr={isAr} required>
+        <Field label="City" labelAr="المدينة" isAr={isAr} required error={errors.city}>
           <input
             type="text"
             value={form.city}
@@ -337,7 +363,7 @@ function StepAddress({
             autoComplete="address-level2"
           />
         </Field>
-        <Field label="Region" labelAr="المنطقة" isAr={isAr} required>
+        <Field label="Region" labelAr="المنطقة" isAr={isAr} required error={errors.region}>
           <select
             value={form.region}
             onChange={(e) => onChange("region", e.target.value)}
@@ -372,7 +398,7 @@ function StepAddress({
 
       <button
         onClick={onContinue}
-        className="btn-press w-full bg-white] text-white py-4 font-semibold text-sm rounded-sm hover:bg-[#333] transition-colors mt-2"
+        className="btn-press w-full bg-[#0c0c0c] text-white py-4 font-semibold text-sm rounded-sm hover:bg-[#333] transition-colors mt-2"
       >
         {isAr ? "المتابعة إلى الدفع" : "Continue to Payment"}
       </button>
@@ -410,15 +436,21 @@ function StepPayment({
   onChange,
   onPlace,
   onBack,
+  errors,
   isAr,
+  items,
+  submitting,
 }: {
   form: FormState;
   onChange: (k: keyof FormState, v: string) => void;
   onPlace: () => void;
   onBack: () => void;
+  errors: FormErrors;
   isAr: boolean;
+  items: import("@/lib/cart").CartItem[];
+  submitting: boolean;
 }) {
-  const subtotal = ORDER_ITEMS.reduce((s, i) => s + i.price, 0);
+  const subtotal = items.reduce((s, i) => s + i.price * i.quantity, 0);
   const vat = subtotal * VAT_RATE;
   const total = subtotal + vat;
   const installment4 = Math.ceil(total / 4);
@@ -426,7 +458,7 @@ function StepPayment({
 
   return (
     <div className="flex flex-col gap-6">
-      <h2 className="text-xl font-bold text-gray-900]">
+      <h2 className="text-xl font-bold text-gray-900">
         {isAr ? "طريقة الدفع" : "Payment Method"}
       </h2>
 
@@ -437,7 +469,7 @@ function StepPayment({
           onClick={() => onChange("paymentMethod", "card")}
         >
           <div className="flex items-center justify-between">
-            <span className="text-sm font-semibold text-gray-900]">
+            <span className="text-sm font-semibold text-gray-900">
               {isAr ? "بطاقة ائتمان / مدى" : "Credit / Debit Card"}
             </span>
             <div className="flex items-center gap-1.5">
@@ -455,7 +487,7 @@ function StepPayment({
 
         {form.paymentMethod === "card" && (
           <div className="border border-[rgba(0,0,0,0.1)] rounded-sm p-4 flex flex-col gap-4 -mt-1 bg-[#fafafa]">
-            <Field label="Card Number" labelAr="رقم البطاقة" isAr={isAr} required>
+            <Field label="Card Number" labelAr="رقم البطاقة" isAr={isAr} required error={errors.cardNumber}>
               <input
                 type="text"
                 inputMode="numeric"
@@ -469,7 +501,7 @@ function StepPayment({
               />
             </Field>
             <div className="grid grid-cols-2 gap-4">
-              <Field label="Expiry (MM/YY)" labelAr="تاريخ الانتهاء" isAr={isAr} required>
+              <Field label="Expiry (MM/YY)" labelAr="تاريخ الانتهاء" isAr={isAr} required error={errors.expiry}>
                 <input
                   type="text"
                   inputMode="numeric"
@@ -482,7 +514,7 @@ function StepPayment({
                   dir="ltr"
                 />
               </Field>
-              <Field label="CVV" labelAr="CVV" isAr={isAr} required>
+              <Field label="CVV" labelAr="CVV" isAr={isAr} required error={errors.cvv}>
                 <input
                   type="password"
                   inputMode="numeric"
@@ -496,7 +528,7 @@ function StepPayment({
                 />
               </Field>
             </div>
-            <Field label="Cardholder Name" labelAr="اسم حامل البطاقة" isAr={isAr} required>
+            <Field label="Cardholder Name" labelAr="اسم حامل البطاقة" isAr={isAr} required error={errors.cardName}>
               <input
                 type="text"
                 value={form.cardName}
@@ -535,7 +567,7 @@ function StepPayment({
               <span className="text-sm font-bold text-[#3d9970] bg-[#e8f5ee] px-2 py-0.5 rounded-sm">
                 tabby
               </span>
-              <span className="text-sm text-gray-900] font-medium">
+              <span className="text-sm text-gray-900 font-medium">
                 {isAr ? "اشترِ الآن، ادفع لاحقاً" : "Buy now, pay later"}
               </span>
             </div>
@@ -557,7 +589,7 @@ function StepPayment({
               <span className="text-sm font-bold text-[#ff6b35] bg-[#fff1ec] px-2 py-0.5 rounded-sm">
                 tamara
               </span>
-              <span className="text-sm text-gray-900] font-medium">
+              <span className="text-sm text-gray-900 font-medium">
                 {isAr ? "قسّم على 3 أشهر" : "Split into 3 months"}
               </span>
             </div>
@@ -579,15 +611,18 @@ function StepPayment({
 
       <button
         onClick={onPlace}
-        className="btn-press w-full bg-white] text-white py-4 font-semibold text-sm rounded-sm hover:bg-[#333] transition-colors"
+        disabled={submitting}
+        className="btn-press w-full bg-[#0c0c0c] text-white py-4 font-semibold text-sm rounded-sm hover:bg-[#333] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
       >
-        {isAr ? "تأكيد الطلب" : "Place Order"}
+        {submitting
+          ? (isAr ? "جارٍ تقديم الطلب..." : "Placing Order...")
+          : (isAr ? "تأكيد الطلب" : "Place Order")}
       </button>
 
       <button
         onClick={onBack}
         type="button"
-        className="flex items-center gap-1 text-sm text-[#484848] hover:text-gray-900] transition-colors mx-auto"
+        className="flex items-center gap-1 text-sm text-[#484848] hover:text-gray-900 transition-colors mx-auto"
       >
         <ChevronLeft size={14} />
         {isAr ? "العودة إلى العنوان" : "Back to Address"}
@@ -607,12 +642,12 @@ function StepConfirmation({
 }) {
   return (
     <div className="flex flex-col items-center text-center py-12 px-4 gap-6 max-w-lg mx-auto">
-      <div className="w-16 h-16 bg-white] rounded-full flex items-center justify-center text-white">
+      <div className="w-16 h-16 bg-[#0c0c0c] rounded-full flex items-center justify-center text-white">
         <Check size={28} strokeWidth={2.5} />
       </div>
 
       <div className="flex flex-col gap-2">
-        <h1 className="text-2xl md:text-3xl font-bold text-gray-900] tracking-tight">
+        <h1 className="text-2xl md:text-3xl font-bold text-gray-900 tracking-tight">
           {isAr ? "تم تأكيد طلبك" : "Order Confirmed"}
         </h1>
         <p className="text-[#484848] text-sm">
@@ -628,13 +663,13 @@ function StepConfirmation({
             <span className="text-[#484848]">
               {isAr ? "رقم الطلب" : "Order number"}
             </span>
-            <span className="font-bold text-gray-900] font-mono">{orderNumber}</span>
+            <span className="font-bold text-gray-900 font-mono">{orderNumber}</span>
           </div>
           <div className="flex justify-between">
             <span className="text-[#484848]">
               {isAr ? "التوصيل المتوقع" : "Estimated delivery"}
             </span>
-            <span className="font-medium text-gray-900]">
+            <span className="font-medium text-gray-900">
               {isAr ? "5–7 أيام عمل" : "5–7 business days"}
             </span>
           </div>
@@ -644,13 +679,13 @@ function StepConfirmation({
       <div className="flex flex-col sm:flex-row gap-3 w-full">
         <Link
           href="/shop"
-          className="btn-press flex-1 text-center border border-[rgba(0,0,0,0.21)] text-gray-900] py-3.5 font-semibold text-sm rounded-sm hover:bg-[#fafafa] transition-colors"
+          className="btn-press flex-1 text-center border border-[rgba(0,0,0,0.21)] text-gray-900 py-3.5 font-semibold text-sm rounded-sm hover:bg-[#fafafa] transition-colors"
         >
           {isAr ? "متابعة التسوق" : "Continue Shopping"}
         </Link>
         <Link
           href="/track-order"
-          className="btn-press flex-1 text-center bg-white] text-white py-3.5 font-semibold text-sm rounded-sm hover:bg-[#333] transition-colors"
+          className="btn-press flex-1 text-center bg-[#0c0c0c] text-white py-3.5 font-semibold text-sm rounded-sm hover:bg-[#333] transition-colors"
         >
           {isAr ? "تتبع طلبك" : "Track Your Order"}
         </Link>
@@ -662,20 +697,87 @@ function StepConfirmation({
 export function CheckoutClient() {
   const locale = useLocale();
   const isAr = locale === "ar";
+  const router = useRouter();
+  const { items, clearCart, itemCount } = useCart();
 
   const [step, setStep] = useState<Step>(1);
   const [form, setForm] = useState<FormState>(INITIAL_FORM);
+  const [errors, setErrors] = useState<FormErrors>({});
+  const [submitting, setSubmitting] = useState(false);
+  const [orderNumber, setOrderNumber] = useState("");
+  const [orderError, setOrderError] = useState("");
 
-  const orderNumber = useRef(
-    `MAJ-${String(Math.floor(10000 + Math.random() * 90000))}`
-  );
+  // Redirect to cart if empty (only after hydration)
+  const { hydrated } = useCart();
+  if (hydrated && itemCount === 0 && step !== 3) {
+    router.push("/cart");
+    return null;
+  }
 
-  const updateField = (key: keyof FormState, value: string) =>
+  const updateField = (key: keyof FormState, value: string) => {
     setForm((prev) => ({ ...prev, [key]: value }));
+    if (errors[key]) setErrors((prev) => { const next = { ...prev }; delete next[key]; return next; });
+  };
 
-  const handleContinueToPayment = () => setStep(2);
-  const handleBackToAddress = () => setStep(1);
-  const handlePlaceOrder = () => setStep(3);
+  const handleContinueToPayment = () => {
+    const errs = validateAddress(form, isAr);
+    setErrors(errs);
+    if (Object.keys(errs).length === 0) setStep(2);
+  };
+  const handleBackToAddress = () => { setErrors({}); setStep(1); };
+
+  const handlePlaceOrder = async () => {
+    const errs = validatePayment(form, isAr);
+    setErrors(errs);
+    if (Object.keys(errs).length > 0) return;
+
+    setSubmitting(true);
+    setOrderError("");
+
+    try {
+      const res = await fetch("/api/orders", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          billing: {
+            first_name: form.firstName,
+            last_name: form.lastName,
+            email: form.email,
+            phone: form.phone,
+            address_1: form.address1,
+            address_2: form.address2,
+            city: form.city,
+            state: form.region,
+            country: "SA",
+          },
+          line_items: items.map((item) => ({
+            product_id: item.id,
+            quantity: item.quantity,
+          })),
+          payment_method: form.paymentMethod,
+          customer_note: form.instructions,
+        }),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(data.error || "Order creation failed");
+      }
+
+      setOrderNumber(data.number || `MAJ-${data.id}`);
+      clearCart();
+      setStep(3);
+    } catch (err) {
+      setOrderError(
+        err instanceof Error
+          ? err.message
+          : (isAr ? "حدث خطأ. يرجى المحاولة مرة أخرى." : "Something went wrong. Please try again.")
+      );
+    } finally {
+      setSubmitting(false);
+    }
+  };
 
   const isConfirmation = step === 3;
 
@@ -684,7 +786,7 @@ export function CheckoutClient() {
       <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
 
         <div className="mb-8">
-          <h1 className="text-2xl md:text-3xl font-bold text-gray-900] tracking-tight">
+          <h1 className="text-2xl md:text-3xl font-bold text-gray-900 tracking-tight">
             {isAr ? "إتمام الطلب" : "Checkout"}
           </h1>
         </div>
@@ -694,7 +796,7 @@ export function CheckoutClient() {
         {isConfirmation ? (
           <StepConfirmation
             email={form.email}
-            orderNumber={orderNumber.current}
+            orderNumber={orderNumber}
             isAr={isAr}
           />
         ) : (
@@ -716,21 +818,32 @@ export function CheckoutClient() {
                   form={form}
                   onChange={updateField}
                   onContinue={handleContinueToPayment}
+                  errors={errors}
                   isAr={isAr}
                 />
               )}
               {step === 2 && (
-                <StepPayment
-                  form={form}
-                  onChange={updateField}
-                  onPlace={handlePlaceOrder}
-                  onBack={handleBackToAddress}
-                  isAr={isAr}
-                />
+                <>
+                  <StepPayment
+                    form={form}
+                    onChange={updateField}
+                    onPlace={handlePlaceOrder}
+                    onBack={handleBackToAddress}
+                    errors={errors}
+                    isAr={isAr}
+                    items={items}
+                    submitting={submitting}
+                  />
+                  {orderError && (
+                    <p className="mt-4 text-sm text-[#e53e3e] text-center" role="alert">
+                      {orderError}
+                    </p>
+                  )}
+                </>
               )}
             </section>
 
-            <OrderSummary isAr={isAr} />
+            <OrderSummary isAr={isAr} items={items} />
           </div>
         )}
       </div>

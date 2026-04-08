@@ -24,6 +24,16 @@ export async function generateMetadata({
         "x-default": siteUrl("/en/materials"),
       },
     },
+    openGraph: {
+      title: isAr ? "المواد والألوان — ماجستيك للأثاث" : "Materials & Colors — Majestic Furniture",
+      description: isAr
+        ? "استعرض مجموعة المواد والألوان المتوفرة لتخصيص أثاثك المكتبي."
+        : "Explore our range of materials and finishes available for customising your office furniture.",
+      type: "website",
+      locale: isAr ? "ar_SA" : "en_SA",
+      siteName: "Majestic Furniture",
+      images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
+    },
   };
 }
 
@@ -54,7 +64,7 @@ export default async function MaterialsPage({
     <PageWrapper id="main-content" className="flex-1 bg-white">
       <div className="max-w-screen-xl mx-auto px-4 md:px-8 py-16">
         <Reveal>
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900] tracking-tight mb-3">
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight mb-3">
             {isAr ? "المواد والألوان" : "Materials & Colors"}
           </h1>
           <p className="text-[#484848] text-base max-w-xl mb-12">

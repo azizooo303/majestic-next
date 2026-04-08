@@ -20,17 +20,17 @@ function QuantityControl({
       <button
         aria-label="Decrease quantity"
         onClick={() => onChange(Math.max(1, value - 1))}
-        className="w-8 h-8 flex items-center justify-center text-[#484848] hover:text-gray-900] hover:bg-[#fafafa] transition-colors text-lg leading-none select-none"
+        className="w-8 h-8 flex items-center justify-center text-[#484848] hover:text-gray-900 hover:bg-[#fafafa] transition-colors text-lg leading-none select-none"
       >
         −
       </button>
-      <span className="w-8 text-center text-sm font-semibold text-gray-900] select-none">
+      <span className="w-8 text-center text-sm font-semibold text-gray-900 select-none">
         {value}
       </span>
       <button
         aria-label="Increase quantity"
         onClick={() => onChange(value + 1)}
-        className="w-8 h-8 flex items-center justify-center text-[#484848] hover:text-gray-900] hover:bg-[#fafafa] transition-colors text-lg leading-none select-none"
+        className="w-8 h-8 flex items-center justify-center text-[#484848] hover:text-gray-900 hover:bg-[#fafafa] transition-colors text-lg leading-none select-none"
       >
         +
       </button>
@@ -74,11 +74,11 @@ export function CartClient() {
 
         {/* Page heading */}
         <div className="mb-8 flex items-center gap-3">
-          <h1 className="text-2xl md:text-3xl font-bold text-gray-900] tracking-tight">
+          <h1 className="text-2xl md:text-3xl font-bold text-gray-900 tracking-tight">
             {isAr ? "سلة التسوق" : "Shopping Cart"}
           </h1>
           {!isEmpty && (
-            <span className="inline-flex items-center justify-center min-w-[24px] h-6 px-1.5 rounded-sm bg-white] text-white text-xs font-semibold">
+            <span className="inline-flex items-center justify-center min-w-[24px] h-6 px-1.5 rounded-sm bg-[#0c0c0c] text-white text-xs font-semibold">
               {totalQty}
             </span>
           )}
@@ -91,7 +91,7 @@ export function CartClient() {
             </p>
             <Link
               href="/shop"
-              className="btn-press inline-block bg-white] text-white px-8 py-3 text-sm font-semibold rounded-sm hover:bg-[#333] transition-colors"
+              className="btn-press inline-block bg-[#0c0c0c] text-white px-8 py-3 text-sm font-semibold rounded-sm hover:bg-[#333] transition-colors"
             >
               {isAr ? "متابعة التسوق" : "Continue Shopping"}
             </Link>
@@ -119,7 +119,7 @@ export function CartClient() {
                     <div className="flex flex-1 min-w-0 flex-col gap-1.5">
                       <div className="flex items-start justify-between gap-2">
                         <div className="min-w-0">
-                          <p className="font-bold text-gray-900] text-sm leading-snug">
+                          <p className="font-bold text-gray-900 text-sm leading-snug">
                             {isAr ? item.nameAr : item.name}
                           </p>
                           <p className="text-xs text-[#484848] mt-0.5">
@@ -140,7 +140,7 @@ export function CartClient() {
                           value={item.quantity}
                           onChange={(v) => updateQuantity(item.id, v)}
                         />
-                        <p className="font-bold text-gray-900] text-sm">
+                        <p className="font-bold text-gray-900 text-sm">
                           {fmt(item.price * item.quantity)}
                         </p>
                       </div>
@@ -152,7 +152,7 @@ export function CartClient() {
               <div className="mt-4">
                 <Link
                   href="/shop"
-                  className="text-sm text-[#484848] hover:text-gray-900] border-b border-[#484848] pb-0.5 transition-colors"
+                  className="text-sm text-[#484848] hover:text-gray-900 border-b border-[#484848] pb-0.5 transition-colors"
                 >
                   {isAr ? "متابعة التسوق" : "Continue Shopping"}
                 </Link>
@@ -164,7 +164,7 @@ export function CartClient() {
               className="w-full lg:w-[35%] lg:sticky lg:top-[176px]"
             >
               <div className="border border-[rgba(0,0,0,0.21)] rounded-sm p-6 bg-white">
-                <h2 className="text-base font-bold text-gray-900] mb-5 pb-4 border-b border-[rgba(0,0,0,0.1)]">
+                <h2 className="text-base font-bold text-gray-900 mb-5 pb-4 border-b border-[rgba(0,0,0,0.1)]">
                   {isAr ? "ملخص الطلب" : "Order Summary"}
                 </h2>
 
@@ -175,7 +175,7 @@ export function CartClient() {
                   </div>
                   <div className="flex justify-between text-[#484848]">
                     <span>{isAr ? "الشحن" : "Shipping"}</span>
-                    <span className="text-gray-900] font-medium">
+                    <span className="text-gray-900 font-medium">
                       {isAr ? "مجاناً" : "Free"}
                     </span>
                   </div>
@@ -186,17 +186,17 @@ export function CartClient() {
                     <span>{fmt(vat)}</span>
                   </div>
 
-                  <div className="flex justify-between text-base font-bold text-gray-900] pt-3 border-t border-[rgba(0,0,0,0.1)]">
+                  <div className="flex justify-between text-base font-bold text-gray-900 pt-3 border-t border-[rgba(0,0,0,0.1)]">
                     <span>{isAr ? "الإجمالي" : "Total"}</span>
                     <span>{fmt(total)}</span>
                   </div>
                 </div>
 
-                <button className="btn-press w-full mt-6 bg-white] text-white py-4 font-semibold text-sm rounded-sm hover:bg-[#333] transition-colors">
+                <button className="btn-press w-full mt-6 bg-[#0c0c0c] text-white py-4 font-semibold text-sm rounded-sm hover:bg-[#333] transition-colors">
                   {isAr ? "المتابعة إلى الدفع" : "Proceed to Checkout"}
                 </button>
 
-                <button className="btn-press w-full mt-3 border border-[rgba(0,0,0,0.21)] text-gray-900] py-3.5 font-semibold text-sm rounded-sm hover:bg-[#fafafa] transition-colors">
+                <button className="btn-press w-full mt-3 border border-[rgba(0,0,0,0.21)] text-gray-900 py-3.5 font-semibold text-sm rounded-sm hover:bg-[#fafafa] transition-colors">
                   {isAr ? "طلب عرض سعر" : "Request a Quote instead"}
                 </button>
 

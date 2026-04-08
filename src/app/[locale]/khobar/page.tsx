@@ -2,6 +2,7 @@ import { Link } from "@/i18n/navigation";
 import { Reveal } from "@/components/common/reveal";
 import { PageWrapper } from "@/components/common/page-wrapper";
 import { SpaceTypology } from "@/components/sections/space-typology";
+import { BreadcrumbListJsonLd } from "@/components/common/json-ld";
 import { siteUrl } from "@/lib/site-url";
 import type { Metadata } from "next";
 
@@ -52,6 +53,10 @@ export default async function KhobarPage({
 
   return (
     <PageWrapper id="main-content" className="flex-1 bg-white">
+      <BreadcrumbListJsonLd items={[
+        { name: isAr ? "الرئيسية" : "Home", item: siteUrl(`/${locale}/`) },
+        { name: isAr ? "الخبر" : "Khobar", item: siteUrl(`/${locale}/khobar`) },
+      ]} />
       {/* Hero band */}
       <section className="bg-[#0c0c0c] py-20 md:py-28">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
@@ -59,7 +64,7 @@ export default async function KhobarPage({
             <p className="text-xs uppercase tracking-widest text-[#aaaaaa] mb-4">
               {isAr ? "ماجستيك للأثاث المكتبي — الخبر" : "Majestic Furniture — Al Khobar"}
             </p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-6 max-w-3xl">
+            <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-6 max-w-3xl">
               {isAr ? "أثاث مكتبي. الخبر." : "Office Furniture. Khobar."}
             </h1>
             <p className="text-white/60 text-base md:text-lg leading-relaxed max-w-2xl">
@@ -96,7 +101,7 @@ export default async function KhobarPage({
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
               {stats.map((stat) => (
                 <div key={stat.label} className="border-t-2 border-[#0c0c0c] pt-6">
-                  <p className="text-xl md:text-2xl font-extrabold text-gray-900] tracking-tight mb-2">
+                  <p className="text-xl md:text-2xl font-extrabold text-gray-900 tracking-tight mb-2">
                     {stat.label}
                   </p>
                 </div>

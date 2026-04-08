@@ -64,7 +64,7 @@ export default async function ProjectsPage({
             <span className="mx-2">/</span>
             {isAr ? "مشاريعنا" : "Projects"}
           </p>
-          <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-gray-900">
             {isAr ? "المشاريع." : "Projects."}
           </h1>
           <p className="mt-3 text-[#484848] text-sm">

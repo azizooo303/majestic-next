@@ -9,6 +9,8 @@ import { getSiteContent } from "@/lib/edge-config";
 import { Footer } from "@/components/layout/footer";
 import { AnimatePresenceWrapper } from "@/components/common/animate-presence-wrapper";
 import { CartProvider } from "@/context/cart-context";
+import { CookieConsent } from "@/components/common/cookie-consent";
+import { BackToTop } from "@/components/common/back-to-top";
 import "../globals.css";
 
 const raleway = Raleway({
@@ -67,11 +69,11 @@ export default async function LocaleLayout({
       dir={isRTL ? "rtl" : "ltr"}
       className={`${raleway.variable} ${montserrat.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-white text-gray-900] font-sans pt-[76px] md:pt-[196px]">
+      <body className="min-h-full flex flex-col bg-white text-gray-900 font-sans pt-[76px] md:pt-[196px]">
         <NextIntlClientProvider messages={messages}>
           <a
             href="#main-content"
-            className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:start-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-white focus:text-white focus:rounded-md focus:font-medium"
+            className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:start-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-[#0c0c0c] focus:text-white focus:rounded-sm focus:font-medium"
           >
             Skip to content
           </a>
@@ -81,6 +83,8 @@ export default async function LocaleLayout({
               {children}
             </AnimatePresenceWrapper>
             <Footer />
+            <BackToTop />
+            <CookieConsent />
           </CartProvider>
         </NextIntlClientProvider>
       </body>

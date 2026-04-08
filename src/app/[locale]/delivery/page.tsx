@@ -25,6 +25,18 @@ export async function generateMetadata({
         "x-default": siteUrl("/en/delivery"),
       },
     },
+    openGraph: {
+      title: isAr
+        ? "التوصيل والتركيب — ماجستيك للأثاث"
+        : "Delivery & Installation — Majestic Furniture",
+      description: isAr
+        ? "توصيل وتركيب احترافي في جميع أنحاء المملكة العربية السعودية ودول الخليج. أثاث مكتبي يصل في موعده."
+        : "Nationwide delivery and professional installation across Saudi Arabia and the GCC. Office furniture delivered on time, every time.",
+      type: "website",
+      locale: isAr ? "ar_SA" : "en_SA",
+      siteName: "Majestic Furniture",
+      images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
+    },
   };
 }
 
@@ -82,13 +94,13 @@ export default async function DeliveryPage({
       <section className="bg-white border-b border-[rgba(0,0,0,0.08)] py-12 md:py-16">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
           <p className="text-xs uppercase tracking-widest text-[#484848] mb-3">
-            <Link href="/" className="hover:text-gray-900] transition-colors">
+            <Link href="/" className="hover:text-gray-900 transition-colors">
               {isAr ? "الرئيسية" : "Home"}
             </Link>
             {" / "}
             {isAr ? "التوصيل والإرجاع" : "Delivery and Returns"}
           </p>
-          <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight text-gray-900]">
+          <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight text-gray-900">
             {isAr ? "التوصيل والإرجاع" : "Delivery and Returns"}
           </h1>
         </div>
@@ -98,7 +110,7 @@ export default async function DeliveryPage({
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
           <Reveal>
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900] tracking-tight mb-10">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 tracking-tight mb-10">
               {isAr ? "مناطق التوصيل" : "Delivery Zones"}
             </h2>
           </Reveal>
@@ -113,9 +125,9 @@ export default async function DeliveryPage({
                   >
                     <span className="w-3 h-3 rounded-full bg-white inline-block" />
                   </div>
-                  <h3 className="text-lg font-bold text-gray-900]">{zone.title}</h3>
+                  <h3 className="text-lg font-bold text-gray-900">{zone.title}</h3>
                   <p className="text-[#484848] text-sm leading-relaxed">{zone.days}</p>
-                  <p className="text-sm font-semibold text-gray-900]">{zone.fee}</p>
+                  <p className="text-sm font-semibold text-gray-900">{zone.fee}</p>
                 </div>
               </Reveal>
             ))}
@@ -127,7 +139,7 @@ export default async function DeliveryPage({
       <section className="py-12 bg-white border-y border-[rgba(0,0,0,0.08)]">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
           <Reveal>
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900] tracking-tight mb-10">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 tracking-tight mb-10">
               {isAr ? "مراحل التوصيل" : "Delivery Process"}
             </h2>
           </Reveal>
@@ -144,7 +156,7 @@ export default async function DeliveryPage({
                       <div className="w-9 h-9 rounded-full bg-white text-white flex items-center justify-center text-sm font-bold flex-shrink-0">
                         {index + 1}
                       </div>
-                      <p className="text-xs font-medium text-gray-900] text-center mt-2 max-w-[80px] md:hidden">
+                      <p className="text-xs font-medium text-gray-900 text-center mt-2 max-w-[80px] md:hidden">
                         {step}
                       </p>
                     </div>
@@ -159,7 +171,7 @@ export default async function DeliveryPage({
                     )}
                   </div>
                   {/* Desktop label under step */}
-                  <p className="hidden md:block absolute text-xs font-medium text-gray-900] text-center" />
+                  <p className="hidden md:block absolute text-xs font-medium text-gray-900 text-center" />
                 </li>
               ))}
             </ol>
@@ -180,7 +192,7 @@ export default async function DeliveryPage({
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
           <div className="max-w-3xl">
             <Reveal>
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900] tracking-tight mb-6">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 tracking-tight mb-6">
                 {isAr ? "سياسة الإرجاع" : "Return Policy"}
               </h2>
               <div className="space-y-4 text-[#484848] leading-relaxed">
@@ -214,7 +226,7 @@ export default async function DeliveryPage({
       <Reveal>
         <section className="py-12 bg-white border-t border-[rgba(0,0,0,0.08)]">
           <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8 text-center">
-            <p className="text-lg font-semibold text-gray-900] mb-4">
+            <p className="text-lg font-semibold text-gray-900 mb-4">
               {isAr ? "هل لديك استفسار؟" : "Have a question?"}
             </p>
             <Link
