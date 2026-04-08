@@ -6,21 +6,18 @@ import {
   useContext,
   useEffect,
   useReducer,
-  useRef,
 } from "react";
-import { supabaseClient } from "@/lib/supabase-client";
 import type { CartItem } from "@/lib/cart";
 
 // ── State ──────────────────────────────────────────────────────────────────
 
 interface CartState {
   items: CartItem[];
-  sessionKey: string;
   hydrated: boolean;
 }
 
 type CartAction =
-  | { type: "HYDRATE"; items: CartItem[]; sessionKey: string }
+  | { type: "HYDRATE"; items: CartItem[] }
   | { type: "ADD_ITEM"; item: CartItem }
   | { type: "REMOVE_ITEM"; id: number }
   | { type: "UPDATE_QUANTITY"; id: number; quantity: number }
@@ -29,7 +26,7 @@ type CartAction =
 function cartReducer(state: CartState, action: CartAction): CartState {
   switch (action.type) {
     case "HYDRATE":
-      return { ...state, items: action.items, sessionKey: action.sessionKey, hydrated: true };
+      return { items: action.items, hydrated: true };
 
     case "ADD_ITEM": {
       const existing = state.items.find((i) => i.id === action.item.id);
@@ -47,11 +44,17 @@ function cartReducer(state: CartState, action: CartAction): CartState {
     }
 
     case "REMOVE_ITEM":
-      return { ...state, items: state.items.filter((i) => i.id !== action.id) };
+      return {
+        ...state,
+        items: state.items.filter((i) => i.id !== action.id),
+      };
 
     case "UPDATE_QUANTITY":
-      if (action.quantity <= 0) {
-        return { ...state, items: state.items.filter((i) => i.id !== action.id) };
+      if (action.quantity < 1) {
+        return {
+          ...state,
+          items: state.items.filter((i) => i.id !== action.id),
+        };
       }
       return {
         ...state,
@@ -68,13 +71,39 @@ function cartReducer(state: CartState, action: CartAction): CartState {
   }
 }
 
+// ── Persistence ────────────────────────────────────────────────────────────
+
+const STORAGE_KEY = "majestic_cart";
+
+function loadFromStorage(): CartItem[] {
+  if (typeof window === "undefined") return [];
+  try {
+    const raw = window.localStorage.getItem(STORAGE_KEY);
+    if (!raw) return [];
+    const parsed = JSON.parse(raw);
+    if (!Array.isArray(parsed)) return [];
+    return parsed as CartItem[];
+  } catch {
+    return [];
+  }
+}
+
+function saveToStorage(items: CartItem[]): void {
+  try {
+    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(items));
+  } catch {
+    // Storage quota exceeded or private browsing - ignore
+  }
+}
+
 // ── Context ────────────────────────────────────────────────────────────────
 
 interface CartContextValue {
   items: CartItem[];
   hydrated: boolean;
   itemCount: number;
-  addItem: (item: Omit<CartItem, "quantity"> & { quantity?: number }) => void;
+  subtotal: number;
+  addItem: (item: CartItem) => void;
   removeItem: (id: number) => void;
   updateQuantity: (id: number, quantity: number) => void;
   clearCart: () => void;
@@ -84,65 +113,28 @@ const CartContext = createContext<CartContextValue | null>(null);
 
 // ── Provider ───────────────────────────────────────────────────────────────
 
-const SESSION_KEY_STORAGE = "mj_cart_session";
-
 export function CartProvider({ children }: { children: React.ReactNode }) {
   const [state, dispatch] = useReducer(cartReducer, {
     items: [],
-    sessionKey: "",
     hydrated: false,
   });
 
-  // Persist to Supabase on every items change (skip before hydration)
-  const persistRef = useRef(false);
-
+  // Hydrate from localStorage on mount
   useEffect(() => {
-    if (!state.hydrated) return;
-
-    // Debounce — avoid hammering Supabase on rapid changes
-    const timer = setTimeout(async () => {
-      if (!state.sessionKey) return;
-      await supabaseClient.from("cart_sessions").upsert(
-        {
-          session_key: state.sessionKey,
-          items: state.items,
-          updated_at: new Date().toISOString(),
-        },
-        { onConflict: "session_key" }
-      );
-    }, 400);
-
-    return () => clearTimeout(timer);
-  }, [state.items, state.hydrated, state.sessionKey]);
-
-  // Hydrate on mount
-  useEffect(() => {
-    async function hydrate() {
-      let sessionKey = localStorage.getItem(SESSION_KEY_STORAGE);
-      if (!sessionKey) {
-        sessionKey = crypto.randomUUID();
-        localStorage.setItem(SESSION_KEY_STORAGE, sessionKey);
-      }
-
-      const { data } = await supabaseClient
-        .from("cart_sessions")
-        .select("items")
-        .eq("session_key", sessionKey)
-        .maybeSingle();
-
-      const items: CartItem[] = Array.isArray(data?.items) ? data.items : [];
-      dispatch({ type: "HYDRATE", items, sessionKey });
-      persistRef.current = true;
-    }
-    hydrate();
+    const stored = loadFromStorage();
+    dispatch({ type: "HYDRATE", items: stored });
   }, []);
 
-  const addItem = useCallback(
-    (item: Omit<CartItem, "quantity"> & { quantity?: number }) => {
-      dispatch({ type: "ADD_ITEM", item: { ...item, quantity: item.quantity ?? 1 } });
-    },
-    []
-  );
+  // Persist to localStorage whenever items change (after hydration)
+  useEffect(() => {
+    if (state.hydrated) {
+      saveToStorage(state.items);
+    }
+  }, [state.items, state.hydrated]);
+
+  const addItem = useCallback((item: CartItem) => {
+    dispatch({ type: "ADD_ITEM", item });
+  }, []);
 
   const removeItem = useCallback((id: number) => {
     dispatch({ type: "REMOVE_ITEM", id });
@@ -157,6 +149,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   const itemCount = state.items.reduce((s, i) => s + i.quantity, 0);
+  const subtotal = state.items.reduce((s, i) => s + i.price * i.quantity, 0);
 
   return (
     <CartContext.Provider
@@ -164,6 +157,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
         items: state.items,
         hydrated: state.hydrated,
         itemCount,
+        subtotal,
         addItem,
         removeItem,
         updateQuantity,

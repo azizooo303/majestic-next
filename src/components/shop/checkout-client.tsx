@@ -7,6 +7,7 @@ import { Check, ShieldCheck, ChevronLeft } from "lucide-react";
 import Image from "next/image";
 import { useCart } from "@/context/cart-context";
 import { useRouter } from "@/i18n/navigation";
+import type { CartItem } from "@/lib/cart";
 
 type Step = 1 | 2 | 3;
 type PaymentMethod = "card" | "applepay" | "tabby" | "tamara";
@@ -122,7 +123,7 @@ function StepIndicator({ step, isAr }: { step: Step; isAr: boolean }) {
   );
 }
 
-function OrderSummary({ isAr, items }: { isAr: boolean; items: import("@/lib/cart").CartItem[] }) {
+function OrderSummary({ isAr, items }: { isAr: boolean; items: CartItem[] }) {
   const subtotal = items.reduce((s, i) => s + i.price * i.quantity, 0);
   const vat = subtotal * VAT_RATE;
   const total = subtotal + vat;
@@ -447,7 +448,7 @@ function StepPayment({
   onBack: () => void;
   errors: FormErrors;
   isAr: boolean;
-  items: import("@/lib/cart").CartItem[];
+  items: CartItem[];
   submitting: boolean;
 }) {
   const subtotal = items.reduce((s, i) => s + i.price * i.quantity, 0);
@@ -663,7 +664,9 @@ function StepConfirmation({
             <span className="text-[#484848]">
               {isAr ? "رقم الطلب" : "Order number"}
             </span>
-            <span className="font-bold text-gray-900 font-mono">{orderNumber}</span>
+            <span className="font-bold text-gray-900 font-mono">
+              {orderNumber || (isAr ? "جاري المعالجة..." : "Processing...")}
+            </span>
           </div>
           <div className="flex justify-between">
             <span className="text-[#484848]">
@@ -698,7 +701,7 @@ export function CheckoutClient() {
   const locale = useLocale();
   const isAr = locale === "ar";
   const router = useRouter();
-  const { items, clearCart, itemCount } = useCart();
+  const { items, clearCart, itemCount, hydrated } = useCart();
 
   const [step, setStep] = useState<Step>(1);
   const [form, setForm] = useState<FormState>(INITIAL_FORM);
@@ -708,7 +711,6 @@ export function CheckoutClient() {
   const [orderError, setOrderError] = useState("");
 
   // Redirect to cart if empty (only after hydration)
-  const { hydrated } = useCart();
   if (hydrated && itemCount === 0 && step !== 3) {
     router.push("/cart");
     return null;

@@ -6,8 +6,6 @@ import { useLocale } from "next-intl";
 import { X, ShieldCheck } from "lucide-react";
 import { useCart } from "@/context/cart-context";
 
-const VAT_RATE = 0.15;
-
 function QuantityControl({
   value,
   onChange,
@@ -38,25 +36,25 @@ function QuantityControl({
   );
 }
 
+function fmt(n: number) {
+  return `SAR ${n.toLocaleString("en-SA", {
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0,
+  })}`;
+}
+
+const VAT_RATE = 0.15;
+
 export function CartClient() {
   const locale = useLocale();
   const isAr = locale === "ar";
-  const { items, removeItem, updateQuantity, hydrated } = useCart();
-
-  const subtotal = items.reduce((sum, item) => sum + item.price * item.quantity, 0);
-  const vat = subtotal * VAT_RATE;
-  const total = subtotal + vat;
-
-  const fmt = (n: number) =>
-    `SAR ${n.toLocaleString("en-SA", {
-      minimumFractionDigits: 0,
-      maximumFractionDigits: 0,
-    })}`;
+  const { items, subtotal, removeItem, updateQuantity, hydrated } = useCart();
 
   const isEmpty = items.length === 0;
   const totalQty = items.reduce((s, i) => s + i.quantity, 0);
+  const vat = subtotal * VAT_RATE;
+  const total = subtotal + vat;
 
-  // While Supabase session is loading, show a neutral skeleton to avoid flash
   if (!hydrated) {
     return (
       <main id="main-content" className="bg-white min-h-screen py-10 md:py-14">
@@ -72,7 +70,6 @@ export function CartClient() {
     <main id="main-content" className="bg-white min-h-screen py-10 md:py-14">
       <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
 
-        {/* Page heading */}
         <div className="mb-8 flex items-center gap-3">
           <h1 className="text-2xl md:text-3xl font-bold text-gray-900 tracking-tight">
             {isAr ? "سلة التسوق" : "Shopping Cart"}
@@ -108,7 +105,7 @@ export function CartClient() {
                   <div key={item.id} className="flex gap-4 p-5">
                     <div className="flex-shrink-0 w-20 h-20 overflow-hidden rounded-sm border border-[rgba(0,0,0,0.1)]">
                       <Image
-                        src={item.image}
+                        src={item.image || "/images/hero-desks.jpg"}
                         alt={isAr ? item.nameAr : item.name}
                         width={80}
                         height={80}
@@ -123,11 +120,14 @@ export function CartClient() {
                             {isAr ? item.nameAr : item.name}
                           </p>
                           <p className="text-xs text-[#484848] mt-0.5">
-                            {isAr ? item.categoryAr : item.category}
+                            {fmt(item.price)}{" "}
+                            {isAr ? "للقطعة" : "each"}
                           </p>
                         </div>
                         <button
-                          aria-label={isAr ? "إزالة العنصر" : "Remove item"}
+                          aria-label={
+                            isAr ? "إزالة العنصر" : "Remove item"
+                          }
                           onClick={() => removeItem(item.id)}
                           className="flex-shrink-0 text-[#484848] hover:text-red-600 transition-colors p-0.5 -mt-0.5"
                         >
@@ -170,35 +170,52 @@ export function CartClient() {
 
                 <div className="flex flex-col gap-3 text-sm">
                   <div className="flex justify-between text-[#484848]">
-                    <span>{isAr ? "المجموع الفرعي" : "Subtotal"}</span>
+                    <span>
+                      {isAr ? "المجموع الفرعي" : "Subtotal"}
+                    </span>
                     <span>{fmt(subtotal)}</span>
                   </div>
                   <div className="flex justify-between text-[#484848]">
-                    <span>{isAr ? "الشحن" : "Shipping"}</span>
+                    <span>
+                      {isAr ? "الشحن" : "Shipping"}
+                    </span>
                     <span className="text-gray-900 font-medium">
                       {isAr ? "مجاناً" : "Free"}
                     </span>
                   </div>
                   <div className="flex justify-between text-[#484848]">
                     <span>
-                      {isAr ? "ضريبة القيمة المضافة (15%)" : "VAT (15%)"}
+                      {isAr
+                        ? "ضريبة القيمة المضافة (15%)"
+                        : "VAT (15%)"}
                     </span>
                     <span>{fmt(vat)}</span>
                   </div>
-
                   <div className="flex justify-between text-base font-bold text-gray-900 pt-3 border-t border-[rgba(0,0,0,0.1)]">
-                    <span>{isAr ? "الإجمالي" : "Total"}</span>
+                    <span>
+                      {isAr ? "الإجمالي" : "Total"}
+                    </span>
                     <span>{fmt(total)}</span>
                   </div>
                 </div>
 
-                <button className="btn-press w-full mt-6 bg-[#0c0c0c] text-white py-4 font-semibold text-sm rounded-sm hover:bg-[#333] transition-colors">
-                  {isAr ? "المتابعة إلى الدفع" : "Proceed to Checkout"}
-                </button>
+                <Link
+                  href="/checkout"
+                  className="btn-press block w-full mt-6 bg-[#0c0c0c] text-white py-4 font-semibold text-sm rounded-sm hover:bg-[#333] transition-colors text-center"
+                >
+                  {isAr
+                    ? "المتابعة إلى الدفع"
+                    : "Proceed to Checkout"}
+                </Link>
 
-                <button className="btn-press w-full mt-3 border border-[rgba(0,0,0,0.21)] text-gray-900 py-3.5 font-semibold text-sm rounded-sm hover:bg-[#fafafa] transition-colors">
-                  {isAr ? "طلب عرض سعر" : "Request a Quote instead"}
-                </button>
+                <Link
+                  href="/quotation"
+                  className="btn-press block w-full mt-3 border border-[rgba(0,0,0,0.21)] text-gray-900 py-3.5 font-semibold text-sm rounded-sm hover:bg-[#fafafa] transition-colors text-center"
+                >
+                  {isAr
+                    ? "طلب عرض سعر"
+                    : "Request a Quote instead"}
+                </Link>
 
                 <div className="mt-5 pt-4 border-t border-[rgba(0,0,0,0.08)]">
                   <div className="flex items-center gap-2 justify-center mb-2">
@@ -208,12 +225,11 @@ export function CartClient() {
                     </span>
                   </div>
                   <p className="text-center text-xs text-[#9ca3af]">
-                    mada&nbsp;·&nbsp;Visa&nbsp;·&nbsp;Mastercard&nbsp;·&nbsp;Apple Pay
+                    mada · Visa · Mastercard · Apple Pay
                   </p>
                 </div>
               </div>
             </aside>
-
           </div>
         )}
       </div>
