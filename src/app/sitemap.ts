@@ -1,7 +1,7 @@
-// TODO: Replace with dynamic WooCommerce product fetch when API is connected
 import { MetadataRoute } from 'next'
+import { getProducts, WCProduct } from '@/lib/woocommerce'
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const base = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://majestic-next.vercel.app').trim().replace(/\/$/, '')
   const locales = ['en', 'ar']
 
@@ -26,15 +26,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/product-care', priority: 0.5 },
   ]
 
-  // Static product slug placeholders — replace with dynamic WooCommerce fetch when API is connected
-  const productSlugs: string[] = [
-    // e.g. 'enigma-executive-desk', 'ergomax-pro-chair'
-    // These will be populated once the WooCommerce API is connected
-  ]
+  let products: WCProduct[] = []
+  try {
+    products = await getProducts({ per_page: 100 })
+  } catch (err) {
+    console.error('[sitemap] Failed to fetch products, generating sitemap without product entries:', err)
+  }
 
   const productEntries: MetadataRoute.Sitemap = locales.flatMap(locale =>
-    productSlugs.map(slug => ({
-      url: `${base}/${locale}/products/${slug}`,
+    products.map(product => ({
+      url: `${base}/${locale}/shop/${product.id}`,
       lastModified: new Date(),
       changeFrequency: 'weekly' as const,
       priority: 0.7,

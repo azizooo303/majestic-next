@@ -38,6 +38,7 @@ export async function storeApiFetch<T>({
     headers,
     body: body ? JSON.stringify(body) : undefined,
     cache: "no-store",
+    signal: AbortSignal.timeout(10_000),
   });
 
   if (!res.ok) {

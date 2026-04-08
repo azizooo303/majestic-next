@@ -29,11 +29,9 @@ jobs:
 
       - name: Type check
         run: npm run type-check
-        continue-on-error: true
 
       - name: Lint
         run: npm run lint
-        continue-on-error: true
 
       - name: Build
         run: npm run build
@@ -45,6 +43,7 @@ jobs:
           WC_CONSUMER_KEY: ${{ secrets.WC_CONSUMER_KEY }}
           WC_CONSUMER_SECRET: ${{ secrets.WC_CONSUMER_SECRET }}
           ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
+          ADMIN_HMAC_SECRET: ${{ secrets.ADMIN_HMAC_SECRET }}
 
   # ── Job 2: Deploy Preview (every push to main) ───────────────
   deploy-preview:
@@ -85,6 +84,7 @@ jobs:
           WC_CONSUMER_KEY: ${{ secrets.WC_CONSUMER_KEY }}
           WC_CONSUMER_SECRET: ${{ secrets.WC_CONSUMER_SECRET }}
           ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
+          ADMIN_HMAC_SECRET: ${{ secrets.ADMIN_HMAC_SECRET }}
 
       - name: Deploy Preview
         id: deploy
@@ -125,4 +125,3 @@ jobs:
             ${{ needs.deploy-preview.outputs.preview_url }}
           budgetPath: .github/lighthouse-budget.json
           uploadArtifacts: true
-        continue-on-error: true

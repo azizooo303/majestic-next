@@ -9,6 +9,7 @@ const WC_URL = process.env.WC_URL || "https://lightyellow-mallard-240169.hosting
 // Supports both WC consumer key/secret AND WordPress app password
 const WC_KEY = process.env.WC_CONSUMER_KEY || process.env.WP_USER || "";
 const WC_SECRET = process.env.WC_CONSUMER_SECRET || process.env.WP_APP_PASSWORD || "";
+const API_TIMEOUT = 10_000; // 10 seconds
 
 
 interface WCRequestOptions {
@@ -42,6 +43,7 @@ export async function wcFetch<T>({
         headers,
         body: body ? JSON.stringify(body) : undefined,
         next: { revalidate: method === "GET" ? 60 : 0 },
+        signal: AbortSignal.timeout(API_TIMEOUT),
       });
 
       if (!res.ok) {
@@ -142,15 +144,6 @@ export interface ProductPage {
 
 // ── Supabase cache imports (lazy to avoid circular deps) ──────────────────
 
-async function trySupabaseProducts() {
-  try {
-    const { getProductsFromSupabase } = await import("./sync-products");
-    return await getProductsFromSupabase();
-  } catch {
-    return [];
-  }
-}
-
 async function trySupabaseCategories() {
   try {
     const { getCategoriesFromSupabase } = await import("./sync-products");
@@ -185,6 +178,7 @@ export async function getProductPage(params: {
       const res = await fetch(url.toString(), {
         headers,
         next: { revalidate: 60 },
+        signal: AbortSignal.timeout(API_TIMEOUT),
       });
       if (!res.ok) throw new Error(`WC API ${res.status}`);
       const products = (await res.json()) as WCProduct[];
