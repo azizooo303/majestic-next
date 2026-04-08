@@ -1,0 +1,21 @@
+{
+  "name": "Majestic Furniture",
+  "short_name": "Majestic",
+  "description": "Premium office furniture in Saudi Arabia",
+  "start_url": "/en",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0c0c0c",
+  "icons": [
+    {
+      "src": "/images/majestic-logo-black.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/majestic-logo-black.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
