@@ -53,13 +53,19 @@ export async function POST(request: NextRequest) {
 
     const { billing, line_items, payment_method, customer_note } = parsed.data;
 
-    // Derive a human-readable payment method title from the method slug
+    // Derive a human-readable payment method title from the method slug.
+    // Includes both WC gateway slugs (moyasar_*) and the UI-facing values
+    // sent by checkout-client ("card", "applepay", "tabby", "tamara").
     const paymentMethodTitles: Record<string, string> = {
+      // UI-facing values (from checkout-client PaymentMethod type)
+      card: "Credit / Debit Card",
+      applepay: "Apple Pay",
+      tabby: "Tabby — Pay in 4",
+      tamara: "Tamara — Pay in 3",
+      // WC gateway slugs (used once Moyasar integration is live)
       moyasar_credit: "Credit / Debit Card",
       moyasar_applepay: "Apple Pay",
       moyasar_stcpay: "STC Pay",
-      tabby: "Tabby — Pay in 4",
-      tamara: "Tamara — Pay in 3",
       cod: "Cash on Delivery",
     };
     const payment_method_title =
@@ -69,8 +75,9 @@ export async function POST(request: NextRequest) {
       endpoint: "orders",
       method: "POST",
       body: {
+        status: "pending",
         billing,
-        shipping: billing, // mirror billing → shipping
+        shipping: billing, // mirror billing → shipping until separate shipping is needed
         line_items,
         payment_method,
         payment_method_title,
