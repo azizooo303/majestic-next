@@ -33,6 +33,7 @@ const alyamama = localFont({
   variable: '--font-alyamama',
   weight: '300 900',
   display: 'swap',
+  adjustFontFallback: false,
 });
 
 export const metadata: Metadata = {
