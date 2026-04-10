@@ -117,8 +117,8 @@ export const HERO_SLIDES = [
     href: "/shop",
   },
   {
-    image: "/images/hero-seating.jpg",
-    mobileImage: "/images/hero-seating-mobile.jpg",
+    image: "/images/hero_chairs_desktop_ar.png",
+    mobileImage: "/images/hero_chairs_mobile_ar.png",
     collection: { en: "Seating Collection", ar: "تشكيلة الكراسي" },
     headline: { en: "Seating That\nPerforms", ar: "كراسي المهام والجلسات" },
     tagline: {
@@ -129,8 +129,8 @@ export const HERO_SLIDES = [
     href: "/shop?category=seating",
   },
   {
-    image: "/images/hero-tables.jpg",
-    mobileImage: "/images/hero-tables-mobile.jpg",
+    image: "/images/hero_meeting_desktop_en.png",
+    mobileImage: "/images/hero_meeting_mobile_en.png",
     collection: { en: "Meeting Tables", ar: "طاولات الاجتماعات" },
     headline: { en: "Tables That\nCommand Rooms", ar: "طاولات الاجتماعات والقاعات" },
     tagline: {
@@ -139,6 +139,18 @@ export const HERO_SLIDES = [
     },
     cta: { en: "Explore Meeting Tables", ar: "استعرض طاولات الاجتماعات" },
     href: "/shop?category=tables",
+  },
+  {
+    image: "/images/hero_cabinet_desktop_en.png",
+    mobileImage: "/images/hero_cabinet_mobile_en.png",
+    collection: { en: "Storage Collection", ar: "تشكيلة التخزين" },
+    headline: { en: "Storage Built\nto Last", ar: "أنظمة التخزين" },
+    tagline: {
+      en: "Modular storage systems engineered for executive and open-plan environments.",
+      ar: "أنظمة تخزين معيارية مُصمَّمة للمكاتب التنفيذية وبيئات العمل المفتوحة.",
+    },
+    cta: { en: "Explore Storage", ar: "استعرض تشكيلة التخزين" },
+    href: "/shop?category=storage",
   },
 ] as const;
 
