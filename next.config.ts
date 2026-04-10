@@ -7,7 +7,6 @@ const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 const withAnalyzer = withBundleAnalyzer({ enabled: process.env.ANALYZE === "true" });
 
 const nextConfig: NextConfig = {
-  serverExternalPackages: ['@vercel/edge-config'],
   compress: true,
   poweredByHeader: false,
   images: {
