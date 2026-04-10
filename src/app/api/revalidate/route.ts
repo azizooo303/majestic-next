@@ -1,4 +1,4 @@
-import { revalidateTag } from 'next/cache'
+import { revalidatePath } from 'next/cache'
 import { NextRequest, NextResponse } from 'next/server'
 
 export async function POST(req: NextRequest) {
@@ -6,6 +6,6 @@ export async function POST(req: NextRequest) {
   if (!secret || secret !== process.env.REVALIDATE_SECRET) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
   }
-  revalidateTag('site-content')
+  revalidatePath('/', 'layout')
   return NextResponse.json({ revalidated: true, ts: Date.now() })
 }

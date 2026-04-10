@@ -14,7 +14,7 @@ const WP_API = process.env.WP_API_URL ?? 'https://lightyellow-mallard-240169.hos
 export async function getSiteContent(): Promise<SiteContent> {
   try {
     const res = await fetch(`${WP_API}/wp-json/majestic/v1/settings`, {
-      next: { tags: ['site-content'], revalidate: 3600 },
+      next: { revalidate: 3600 },
     })
     if (!res.ok) {
       console.warn(`[wp-settings] API returned ${res.status} — using defaults`)
