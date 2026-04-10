@@ -24,7 +24,7 @@ import { ConsultationCta } from "@/components/sections/consultation-cta";
 import { SectionReveal } from "@/components/common/section-reveal";
 import type { HeroSlide } from "@/components/hero/hero-banner";
 import { getProducts, parsePrice, calcDiscount, PRODUCT_PLACEHOLDER } from "@/lib/woocommerce";
-import { getSiteContent } from "@/lib/edge-config";
+import { getSiteContent } from "@/lib/wp-settings";
 
 export async function generateMetadata({
   params,
