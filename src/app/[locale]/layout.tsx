@@ -3,9 +3,10 @@ import { notFound } from "next/navigation";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { Raleway, Montserrat } from "next/font/google";
+import localFont from 'next/font/local';
 import { routing } from "@/i18n/routing";
 import { Header } from "@/components/layout/header";
-import { getSiteContent } from "@/lib/edge-config";
+import { getSiteContent } from "@/lib/wp-settings";
 import { Footer } from "@/components/layout/footer";
 import { AnimatePresenceWrapper } from "@/components/common/animate-presence-wrapper";
 import { CartProvider } from "@/context/cart-context";
@@ -25,6 +26,13 @@ const montserrat = Montserrat({
   variable: "--font-montserrat",
   weight: ["400", "500", "600", "700"],
   display: "swap",
+});
+
+const alyamama = localFont({
+  src: '../../fonts/Alyamama-VariableFont_wght.woff2',
+  variable: '--font-alyamama',
+  weight: '300 900',
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
@@ -67,7 +75,7 @@ export default async function LocaleLayout({
     <html
       lang={locale}
       dir={isRTL ? "rtl" : "ltr"}
-      className={`${raleway.variable} ${montserrat.variable} h-full antialiased`}
+      className={`${raleway.variable} ${montserrat.variable} ${alyamama.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-white text-gray-900 font-sans pt-[76px] md:pt-[196px]">
         <NextIntlClientProvider messages={messages}>
