@@ -6,4 +6,3 @@ README.md
 .env.local
 .env.*.local
 wordpress-next
-wp-*
