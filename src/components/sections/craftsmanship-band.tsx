@@ -34,19 +34,19 @@ export function CraftsmanshipBand({
       <AutoScroll duration={60} gap="8px" isRTL={isAr}>
         {images.map((img) => {
           const imageUrl = img.image
-            ? urlFor(img.image).width(260).height(350).url()
+            ? urlFor(img.image).width(480).height(320).url()
             : `/images/website/s3-a-desk-edge-detail.jpg`;
           return (
             <div
               key={img._id}
-              className="relative flex-none w-[220px] md:w-[260px] aspect-[3/4] overflow-hidden transition-transform duration-300 hover:scale-[1.05] hover:rotate-[0.5deg]"
+              className="relative flex-none w-[300px] md:w-[360px] aspect-[3/2] overflow-hidden transition-transform duration-300 hover:scale-[1.05] hover:rotate-[0.5deg]"
             >
               <Image
                 src={imageUrl}
                 alt={isAr ? (img.altAr ?? "") : (img.altEn ?? "")}
                 fill
                 className="object-cover"
-                sizes="260px"
+                sizes="(min-width: 768px) 360px, 300px"
               />
             </div>
           );
