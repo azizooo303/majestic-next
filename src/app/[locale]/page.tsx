@@ -4,21 +4,15 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import { HeroBanner } from "@/components/hero/hero-banner";
 import { NewsletterForm } from "@/components/ui/newsletter-form";
-import { InspireSection } from "@/components/common/inspire-section";
 import { PageWrapper } from "@/components/common/page-wrapper";
 import { GsapBatchReveal } from "@/components/common/gsap-batch-reveal";
 import { FadeUp } from "@/components/common/fade-up";
-import { PromoBanner } from "@/components/common/promo-banner";
 import { ProductCard } from "@/components/shop/product-card";
 import { JsonLd, LocalBusinessJsonLd, WebSiteJsonLd } from "@/components/common/json-ld";
 import { siteUrl } from "@/lib/site-url";
 import { ProjectsReel } from "@/components/sections/projects-reel";
 import { Collections } from "@/components/sections/collections";
 import { CraftsmanshipBand } from "@/components/sections/craftsmanship-band";
-import { ProjectScale } from "@/components/sections/project-scale";
-import { BrandStandard } from "@/components/sections/brand-standard";
-import { MaterialSelector } from "@/components/sections/material-selector";
-import { InsightEditorial } from "@/components/sections/insight-editorial";
 import { ConsultationCta } from "@/components/sections/consultation-cta";
 import { SectionReveal } from "@/components/common/section-reveal";
 import type { HeroSlide } from "@/components/hero/hero-banner";
@@ -28,19 +22,11 @@ import {
   client,
   COLLECTION_CARDS_QUERY,
   CRAFTSMANSHIP_IMAGES_QUERY,
-  PROJECT_CASE_STUDIES_QUERY,
-  BRAND_PILLARS_QUERY,
-  MATERIAL_FINISHES_QUERY,
-  INSIGHT_CARDS_QUERY,
   SITE_STATS_QUERY,
 } from "@/lib/sanity";
 import type {
   SanityCollectionCard,
   SanityCraftsmanshipImage,
-  SanityProjectCaseStudy,
-  SanityBrandPillar,
-  SanityMaterialFinish,
-  SanityInsightCard,
   SanitySiteStat,
 } from "@/lib/sanity";
 
@@ -102,20 +88,12 @@ export default async function HomePage({
     siteContent,
     collectionCards,
     craftsmanshipImages,
-    projectCaseStudies,
-    brandPillars,
-    materialFinishes,
-    insightCards,
     siteStats,
   ] = await Promise.all([
     getProducts({ lang: locale, per_page: 8 }).catch(() => [] as Awaited<ReturnType<typeof getProducts>>),
     getSiteContent(),
     client.fetch<SanityCollectionCard[]>(COLLECTION_CARDS_QUERY).catch(() => [] as SanityCollectionCard[]),
     client.fetch<SanityCraftsmanshipImage[]>(CRAFTSMANSHIP_IMAGES_QUERY).catch(() => [] as SanityCraftsmanshipImage[]),
-    client.fetch<SanityProjectCaseStudy[]>(PROJECT_CASE_STUDIES_QUERY).catch(() => [] as SanityProjectCaseStudy[]),
-    client.fetch<SanityBrandPillar[]>(BRAND_PILLARS_QUERY).catch(() => [] as SanityBrandPillar[]),
-    client.fetch<SanityMaterialFinish[]>(MATERIAL_FINISHES_QUERY).catch(() => [] as SanityMaterialFinish[]),
-    client.fetch<SanityInsightCard[]>(INSIGHT_CARDS_QUERY).catch(() => [] as SanityInsightCard[]),
     client.fetch<SanitySiteStat[]>(SITE_STATS_QUERY).catch(() => [] as SanitySiteStat[]),
   ]);
 
@@ -272,7 +250,7 @@ export default async function HomePage({
         </section>
       </SectionReveal>
 
-      {/* New Sections — alternating directions for storytelling rhythm */}
+      {/* Homepage sections */}
       <SectionReveal direction="up" duration={0.8}>
         <ProjectsReel isAr={isAr} stats={siteStats} />
       </SectionReveal>
@@ -281,36 +259,6 @@ export default async function HomePage({
       </SectionReveal>
       <SectionReveal direction="up" duration={0.7}>
         {siteContent.sections.craftsmanshipBand && <CraftsmanshipBand isAr={isAr} images={craftsmanshipImages} />}
-      </SectionReveal>
-      <SectionReveal direction="left" duration={0.8}>
-        {siteContent.sections.projectScale && <ProjectScale isAr={isAr} projects={projectCaseStudies} />}
-      </SectionReveal>
-      <SectionReveal direction="right" duration={0.8}>
-        <BrandStandard isAr={isAr} pillars={brandPillars} />
-      </SectionReveal>
-      <SectionReveal direction="up" duration={0.7}>
-        {siteContent.sections.materialSelector && <MaterialSelector isAr={isAr} finishes={materialFinishes} />}
-      </SectionReveal>
-      <SectionReveal direction="left" duration={0.8}>
-        {siteContent.sections.insightEditorial && <InsightEditorial isAr={isAr} cards={insightCards} />}
-      </SectionReveal>
-
-      {/* Promotional Banner */}
-      <SectionReveal direction="fade-scale" duration={0.7}>
-        <PromoBanner
-          isAr={isAr}
-          headline={isAr ? "صُنع للعمل المؤسسي." : "Built for Institutional Scale."}
-          body={isAr
-            ? "وزارات. مقرات. مؤسسات. في المملكة ودول الخليج."
-            : "Ministries. Headquarters. Institutions. Across Saudi Arabia and the Gulf."}
-          cta={isAr ? "طلب استشارة" : "Request a Consultation"}
-          ctaHref="/about"
-        />
-      </SectionReveal>
-
-      {/* Planning Ideas / Get Inspired */}
-      <SectionReveal direction="right" duration={0.8}>
-        <InspireSection isAr={isAr} />
       </SectionReveal>
 
       {/* Newsletter */}
