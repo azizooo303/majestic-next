@@ -536,9 +536,8 @@ function NavMegaPanel({
   topOffset: number;
 }) {
   const count = item.children!.length;
-  // ≤4 items → portrait cards; 5–6 → landscape cards in 3-col grid
+  // ≤4 items → one row of N; 5–6 → two rows of 3
   const cols = count <= 4 ? count : 3;
-  const isPortrait = count <= 4;
 
   return (
     <div
@@ -548,10 +547,10 @@ function NavMegaPanel({
       onMouseLeave={onMouseLeave}
     >
       <div className="bg-white border-b border-[#D4D4D4]" style={{ boxShadow: "0 8px 24px rgba(0,0,0,0.12)" }}>
-        <div className="max-w-screen-xl mx-auto px-8 py-6">
+        <div className="max-w-4xl mx-auto px-8 py-4">
 
           {/* Panel header */}
-          <div className="flex items-center justify-between mb-5">
+          <div className="flex items-center justify-between mb-3">
             <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#3A3A3A]">
               {t(`nav.${item.key}`)}
             </p>
@@ -577,8 +576,7 @@ function NavMegaPanel({
               >
                 <div
                   className={cn(
-                    "relative bg-[#f5f5f5] overflow-hidden mb-2",
-                    isPortrait ? "aspect-[3/4]" : "aspect-[4/3]"
+                    "relative bg-white overflow-hidden mb-2 aspect-square"
                   )}
                 >
                   {child.image ? (
@@ -586,8 +584,8 @@ function NavMegaPanel({
                       src={child.image}
                       alt={t(`nav.${child.key}`)}
                       fill
-                      className="object-cover transition-transform duration-300 group-hover:scale-[1.04]"
-                      sizes="(max-width: 1280px) 20vw, 220px"
+                      className="object-contain transition-transform duration-300 group-hover:scale-[1.04]"
+                      sizes="(max-width: 896px) 22vw, 200px"
                     />
                   ) : (
                     <div className="w-full h-full bg-[#ebebeb]" />
