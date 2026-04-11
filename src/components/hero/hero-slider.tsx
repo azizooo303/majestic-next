@@ -83,12 +83,12 @@ export function HeroSlider({
               sizes="100vw"
             />
 
-            {/* Dark gradient overlay for text readability */}
-            <div className="absolute inset-0 bg-gradient-to-t from-gray-600/50 via-transparent to-transparent" />
+            {/* Dark flat overlay for text readability */}
+            <div className="absolute inset-0 bg-black/25" />
 
             {/* Text overlay — bottom-start */}
             <div className="absolute bottom-8 start-8 md:bottom-16 md:start-16 max-w-lg z-20">
-              <h2 className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight drop-shadow-lg">
+              <h2 className="text-3xl md:text-4xl font-extrabold text-white leading-tight">
                 {slide.headline}
               </h2>
               {slide.description && (
@@ -99,7 +99,7 @@ export function HeroSlider({
               <Link
                 href={slide.href}
                 className="inline-block mt-4 md:mt-6 px-8 py-3 bg-white text-[#0c0c0c]
-                  font-medium rounded-md transition-all duration-200
+                  font-medium rounded-none transition-all duration-200
                   hover:opacity-90 hover:-translate-y-0.5
                   focus:outline-none focus:ring-2 focus:ring-white/50"
               >
@@ -118,7 +118,7 @@ export function HeroSlider({
               key={i}
               onClick={() => setCurrent(i)}
               className={cn(
-                "w-2.5 h-2.5 rounded-full transition-all duration-300 cursor-pointer",
+                "w-2.5 h-2.5 rounded-none transition-all duration-300 cursor-pointer",
                 i === current
                   ? "bg-white w-8"
                   : "bg-white/50 hover:bg-white/80"

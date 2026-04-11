@@ -41,7 +41,7 @@ export function ProductCard({
       <Link href={`/shop/${id}`} className="block">
         <div className="relative aspect-square bg-[#fafafa] overflow-hidden">
           {discount && (
-            <span className="absolute top-2 start-2 z-10 bg-[#e53e3e] text-white text-xs font-bold px-2 py-0.5 rounded-sm">
+            <span className="absolute top-2 start-2 z-10 bg-[#2C2C2C] text-white text-xs font-bold px-2 py-0.5 rounded-sm">
               -{discount}%
             </span>
           )}
@@ -55,23 +55,23 @@ export function ProductCard({
           />
         </div>
         <div className="p-3 pb-2">
-          <p className="text-xs text-[#484848] uppercase tracking-wide">{parseCategory(category)}</p>
-          <h3 className="text-sm font-bold text-[#0c0c0c] mt-1 leading-tight">{name}</h3>
-          {brand && <p className="text-xs text-[#484848] mt-0.5">{brand}</p>}
+          <p className="text-xs text-[#3A3A3A] uppercase tracking-wide">{parseCategory(category)}</p>
+          <h3 className="text-sm font-bold text-[#2C2C2C] mt-1 leading-tight">{name}</h3>
+          {brand && <p className="text-xs text-[#3A3A3A] mt-0.5">{brand}</p>}
           <div className="flex items-center gap-2 mt-2">
             {price > 0 ? (
               <>
-                <span className="font-bold text-[#0c0c0c] text-sm">
+                <span className="font-bold text-[#2C2C2C] text-sm">
                   {isAr ? `${price.toLocaleString("ar-SA")} ر.س` : `SAR ${price.toLocaleString()}`}
                 </span>
                 {originalPrice && (
-                  <span className="text-xs text-[#484848] line-through">
+                  <span className="text-xs text-[#3A3A3A] line-through">
                     {isAr ? `${originalPrice.toLocaleString("ar-SA")} ر.س` : `SAR ${originalPrice.toLocaleString()}`}
                   </span>
                 )}
               </>
             ) : (
-              <span className="text-xs text-[#484848]">
+              <span className="text-xs text-[#3A3A3A]">
                 {isAr ? "اتصل للسعر" : "Contact for price"}
               </span>
             )}
@@ -81,7 +81,7 @@ export function ProductCard({
       {/* Add to Cart — outside the Link */}
       <div className="px-3 pb-3">
         <button
-          className="w-full bg-[#0c0c0c] text-white py-2 text-xs font-semibold
+          className="w-full bg-[#2C2C2C] text-white py-2 text-xs font-semibold
             rounded-none hover:bg-[#333] transition-colors cursor-pointer"
           onClick={() => {/* cart integration coming */}}
         >

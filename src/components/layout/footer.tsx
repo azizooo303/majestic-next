@@ -28,7 +28,7 @@ export async function Footer() {
           onError={undefined}
         />
       </div>
-      <p className="text-sm text-[#484848] leading-relaxed max-w-[210px]">
+      <p className="text-sm text-[#3A3A3A] leading-relaxed max-w-[210px]">
         {isAr
           ? "تورّد ماجستيك للأثاث بيئات عمل احترافية للعملاء في القطاعين الحكومي والخاص في المملكة العربية السعودية ودول الخليج."
           : "Majestic Furniture supplies professional workspace environments to corporate and government clients across Saudi Arabia and the Gulf."}
@@ -47,7 +47,7 @@ export async function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label={s.label}
-            className="text-xs text-[#484848] hover:text-gray-900 transition-colors font-medium"
+            className="text-xs text-[#3A3A3A] hover:text-[#2C2C2C] transition-colors font-medium"
           >
             {s.label}
           </a>
@@ -59,7 +59,7 @@ export async function Footer() {
   /* ── Column 2 — Shop ── */
   const colShop = (
     <div>
-      <h3 className="text-xs uppercase tracking-widest text-[#484848] mb-4 font-medium">
+      <h3 className="text-xs uppercase tracking-widest text-[#3A3A3A] mb-4 font-medium">
         {isAr ? "تسوق" : "Shop"}
       </h3>
       <ul className="space-y-2.5">
@@ -76,7 +76,7 @@ export async function Footer() {
           <li key={link.href}>
             <Link
               href={link.href}
-              className="text-sm text-[#484848] hover:text-gray-900 transition-colors"
+              className="text-sm text-[#3A3A3A] hover:text-[#2C2C2C] transition-colors"
             >
               {link.label}
             </Link>
@@ -89,7 +89,7 @@ export async function Footer() {
   /* ── Column 3 — Company ── */
   const colCompany = (
     <div>
-      <h3 className="text-xs uppercase tracking-widest text-[#484848] mb-4 font-medium">
+      <h3 className="text-xs uppercase tracking-widest text-[#3A3A3A] mb-4 font-medium">
         {isAr ? "الشركة" : "Company"}
       </h3>
       <ul className="space-y-2.5">
@@ -104,7 +104,7 @@ export async function Footer() {
           <li key={link.href}>
             <Link
               href={link.href}
-              className="text-sm text-[#484848] hover:text-gray-900 transition-colors"
+              className="text-sm text-[#3A3A3A] hover:text-[#2C2C2C] transition-colors"
             >
               {link.label}
             </Link>
@@ -117,7 +117,7 @@ export async function Footer() {
   /* ── Column 4 — Support ── */
   const colSupport = (
     <div>
-      <h3 className="text-xs uppercase tracking-widest text-[#484848] mb-4 font-medium">
+      <h3 className="text-xs uppercase tracking-widest text-[#3A3A3A] mb-4 font-medium">
         {isAr ? "الدعم" : "Support"}
       </h3>
       <ul className="space-y-2.5">
@@ -132,7 +132,7 @@ export async function Footer() {
           <li key={link.href}>
             <Link
               href={link.href}
-              className="text-sm text-[#484848] hover:text-gray-900 transition-colors"
+              className="text-sm text-[#3A3A3A] hover:text-[#2C2C2C] transition-colors"
             >
               {link.label}
             </Link>
@@ -145,28 +145,28 @@ export async function Footer() {
   /* ── Column 5 — Contact ── */
   const colContact = (
     <div>
-      <h3 className="text-xs uppercase tracking-widest text-[#484848] mb-4 font-medium">
+      <h3 className="text-xs uppercase tracking-widest text-[#3A3A3A] mb-4 font-medium">
         {isAr ? "تواصل" : "Contact"}
       </h3>
       <address className="not-italic space-y-2.5">
-        <p className="text-sm text-[#484848]">
+        <p className="text-sm text-[#3A3A3A]">
           {isAr
             ? "أركيد سنتر، الرشيدية، الرياض"
             : "Arcade Centre, Al Rashidiah, Riyadh"}
         </p>
         <a
           href="tel:+96692001219"
-          className="block text-sm text-[#484848] hover:text-gray-900 transition-colors"
+          className="block text-sm text-[#3A3A3A] hover:text-[#2C2C2C] transition-colors"
         >
           +966 9200 12019
         </a>
         <a
           href="mailto:info@majestic.com.sa"
-          className="block text-sm text-[#484848] hover:text-gray-900 transition-colors"
+          className="block text-sm text-[#3A3A3A] hover:text-[#2C2C2C] transition-colors"
         >
           info@majestic.com.sa
         </a>
-        <p className="text-sm text-[#484848]">
+        <p className="text-sm text-[#3A3A3A]">
           {isAr ? "الأحد–الخميس، ٩ص–٦م" : "Sun–Thu 9am–6pm"}
         </p>
       </address>
@@ -176,7 +176,7 @@ export async function Footer() {
   const columns = [colBrand, colShop, colCompany, colSupport, colContact];
 
   return (
-    <footer className="bg-white border-t border-[rgba(0,0,0,0.08)]">
+    <footer className="bg-white border-t border-[#D4D4D4]">
       {/* Main grid */}
       <div className="max-w-screen-xl mx-auto px-4 md:px-8 py-14 md:py-16">
         <StaggerGrid
@@ -189,22 +189,22 @@ export async function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="border-t border-[rgba(0,0,0,0.08)]">
+      <div className="border-t border-[#D4D4D4]">
         <div className="max-w-screen-xl mx-auto px-4 md:px-8 py-4 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-xs text-[#484848]">
+          <p className="text-xs text-[#3A3A3A]">
             &copy; {year} {isAr ? "ماجستيك للأثاث. جميع الحقوق محفوظة." : "Majestic Furniture. All rights reserved."}
           </p>
           <div className="flex items-center gap-4">
             <Link
               href="/privacy"
-              className="text-xs text-[#484848] hover:text-gray-900 transition-colors"
+              className="text-xs text-[#3A3A3A] hover:text-[#2C2C2C] transition-colors"
             >
               {isAr ? "سياسة الخصوصية" : "Privacy Policy"}
             </Link>
-            <span className="text-[rgba(0,0,0,0.2)] text-xs">|</span>
+            <span className="text-[#D4D4D4] text-xs">|</span>
             <Link
               href="/terms"
-              className="text-xs text-[#484848] hover:text-gray-900 transition-colors"
+              className="text-xs text-[#3A3A3A] hover:text-[#2C2C2C] transition-colors"
             >
               {isAr ? "شروط الخدمة" : "Terms of Service"}
             </Link>

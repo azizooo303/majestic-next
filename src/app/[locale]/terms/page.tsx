@@ -152,21 +152,21 @@ export default async function TermsPage({
       ];
 
   return (
-    <main className="flex-1 pt-20 bg-white">
+    <main id="main-content" className="flex-1 pt-24 bg-white">
       {/* Hero */}
-      <section className="bg-white border-b border-[rgba(0,0,0,0.08)] py-12 md:py-16">
+      <section className="bg-white border-b border-[#D4D4D4] py-12 md:py-16">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
-          <p className="text-xs uppercase tracking-widest text-[#484848] mb-3">
-            <Link href="/" className="hover:text-gray-900 transition-colors">
+          <p className="text-xs uppercase tracking-widest text-[#3A3A3A] mb-3">
+            <Link href="/" className="hover:text-[#2C2C2C] transition-colors">
               {isAr ? "الرئيسية" : "Home"}
             </Link>
             {" / "}
             {isAr ? "شروط الخدمة" : "Terms of Service"}
           </p>
-          <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight text-gray-900">
+          <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight text-[#2C2C2C]">
             {isAr ? "شروط الخدمة" : "Terms of Service"}
           </h1>
-          <p className="text-[#484848] text-sm mt-3">
+          <p className="text-[#3A3A3A] text-sm mt-3">
             {isAr ? "آخر تحديث: أبريل 2025" : "Last updated: April 2025"}
           </p>
         </div>
@@ -180,15 +180,15 @@ export default async function TermsPage({
               <div
                 className={
                   index < sections.length - 1
-                    ? "border-b border-[rgba(0,0,0,0.08)] pb-8 mb-8"
+                    ? "border-b border-[#D4D4D4] pb-8 mb-8"
                     : ""
                 }
               >
-                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 tracking-tight mb-4">
+                <h2 className="text-2xl md:text-3xl font-bold text-[#2C2C2C] tracking-tight mb-4">
                   {section.heading}
                 </h2>
                 {section.paragraphs.map((p, i) => (
-                  <p key={i} className="text-[#484848] leading-relaxed mb-3 last:mb-0">
+                  <p key={i} className="text-[#3A3A3A] leading-relaxed mb-3 last:mb-0">
                     {p}
                   </p>
                 ))}

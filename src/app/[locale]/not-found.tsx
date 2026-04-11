@@ -8,7 +8,7 @@ export default function NotFound() {
   const isAr = locale === "ar";
 
   return (
-    <main className="min-h-[60vh] flex flex-col items-center justify-center px-4 text-center">
+    <main id="main-content" className="min-h-[60vh] flex flex-col items-center justify-center px-4 text-center">
       <p className="text-7xl font-extrabold text-[#0c0c0c] mb-4">404</p>
       <h1 className="text-2xl font-bold text-gray-900 mb-2">
         {isAr ? "الصفحة غير موجودة" : "Page not found"}

@@ -140,14 +140,14 @@ function SearchModal({
   return (
     <>
       <div
-        className="fixed inset-0 z-[60] bg-black/40"
+        className="fixed inset-0 z-[60] bg-[#2C2C2C]/40"
         onClick={handleClose}
         aria-hidden="true"
       />
-      <div className="fixed top-0 inset-x-0 z-[61] bg-white border-b border-[rgba(0,0,0,0.12)] py-5 px-4 md:px-8">
+      <div className="fixed top-0 inset-x-0 z-[61] bg-white border-b border-[#D4D4D4] py-5 px-4 md:px-8">
         <div className="max-w-screen-xl mx-auto flex items-center gap-4">
           <form onSubmit={handleSubmit} className="flex-1 flex items-center gap-3">
-            <Search className="w-5 h-5 text-[#484848] flex-shrink-0" />
+            <Search className="w-5 h-5 text-[#3A3A3A] flex-shrink-0" />
             <input
               ref={inputRef}
               type="text"
@@ -156,12 +156,12 @@ function SearchModal({
               placeholder={
                 locale === "ar" ? "ابحث عن المنتجات..." : "Search products..."
               }
-              className="flex-1 text-base text-gray-900 bg-transparent outline-none placeholder:text-[#484848]/50"
+              className="flex-1 text-base text-[#2C2C2C] bg-transparent outline-none placeholder:text-[#3A3A3A]/50"
             />
           </form>
           <button
             onClick={handleClose}
-            className="p-2 text-gray-900 hover:text-[#484848] cursor-pointer"
+            className="p-2 text-[#2C2C2C] hover:text-[#3A3A3A] cursor-pointer"
             aria-label="Close search"
           >
             <X className="w-5 h-5" />
@@ -231,7 +231,7 @@ export function Header({ announcement }: HeaderProps) {
       {/* Skip link */}
       <a
         href="#main-content"
-        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:start-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-[#0c0c0c] focus:text-white focus:rounded-sm focus:font-medium"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:start-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-[#2C2C2C] focus:text-white focus:rounded-sm focus:font-medium"
       >
         Skip to content
       </a>
@@ -264,27 +264,27 @@ export function Header({ announcement }: HeaderProps) {
 
         {/* ── Row 1: Utility bar — hidden when scrolled ── */}
         <div className={cn(
-          "hidden md:block border-b border-[rgba(0,0,0,0.08)] bg-white overflow-hidden transition-all duration-300",
+          "hidden md:block border-b border-[#D4D4D4] bg-white overflow-hidden transition-all duration-300",
           scrolled ? "max-h-0 border-b-0" : "max-h-[40px]"
         )}>
-          <div className="max-w-screen-xl mx-auto px-8 py-1.5 flex items-center gap-1 text-xs text-[#484848]">
+          <div className="max-w-screen-xl mx-auto px-8 py-1.5 flex items-center gap-1 text-xs text-[#3A3A3A]">
             <Link
               href="/showrooms"
-              className="hover:text-gray-900 transition-colors px-2 py-0.5"
+              className="hover:text-[#2C2C2C] transition-colors px-2 py-0.5"
             >
               {t("nav.showrooms")}
             </Link>
-            <span className="text-[rgba(0,0,0,0.2)]">|</span>
+            <span className="text-[#D4D4D4]">|</span>
             <Link
               href="/materials"
-              className="hover:text-gray-900 transition-colors px-2 py-0.5"
+              className="hover:text-[#2C2C2C] transition-colors px-2 py-0.5"
             >
               {t("nav.materialColors")}
             </Link>
-            <span className="text-[rgba(0,0,0,0.2)]">|</span>
+            <span className="text-[#D4D4D4]">|</span>
             <Link
               href="/warranty"
-              className="hover:text-gray-900 transition-colors px-2 py-0.5"
+              className="hover:text-[#2C2C2C] transition-colors px-2 py-0.5"
             >
               {t("nav.warranty")}
             </Link>
@@ -292,13 +292,13 @@ export function Header({ announcement }: HeaderProps) {
         </div>
 
         {/* ── Row 2: Logo + icons ── */}
-        <div className="border-b border-[rgba(0,0,0,0.12)]">
+        <div className="border-b border-[#D4D4D4]">
           <div className="max-w-screen-xl mx-auto px-4 md:px-8 py-4 md:py-5 grid grid-cols-3 items-center">
 
             {/* Left: hamburger on mobile, spacer on desktop */}
             <div className="flex items-center">
               <button
-                className="lg:hidden p-2 min-w-[44px] min-h-[44px] flex items-center justify-center text-gray-900 cursor-pointer"
+                className="lg:hidden p-2 min-w-[44px] min-h-[44px] flex items-center justify-center text-[#2C2C2C] cursor-pointer"
                 onClick={() => setIsMobileOpen(true)}
                 aria-label="Open menu"
               >
@@ -326,7 +326,7 @@ export function Header({ announcement }: HeaderProps) {
               {/* Search — desktop + tablet */}
               <button
                 onClick={() => setIsSearchOpen(true)}
-                className="flex p-2 md:p-2.5 min-w-[44px] min-h-[44px] items-center justify-center text-gray-900 hover:text-[#484848] transition-colors cursor-pointer outline-none"
+                className="flex p-2 md:p-2.5 min-w-[44px] min-h-[44px] items-center justify-center text-[#2C2C2C] hover:text-[#3A3A3A] transition-colors cursor-pointer outline-none"
                 aria-label={locale === "ar" ? "بحث" : "Search"}
               >
                 <Search className="w-5 h-5" />
@@ -335,7 +335,7 @@ export function Header({ announcement }: HeaderProps) {
               {/* Account — desktop only */}
               <Link
                 href="/account"
-                className="p-2 md:p-2.5 min-w-[44px] min-h-[44px] flex items-center justify-center text-gray-900 hover:text-[#484848] transition-colors hidden sm:flex"
+                className="p-2 md:p-2.5 min-w-[44px] min-h-[44px] flex items-center justify-center text-[#2C2C2C] hover:text-[#3A3A3A] transition-colors hidden sm:flex"
                 aria-label={locale === "ar" ? "حسابي" : "Account"}
               >
                 <User className="w-5 h-5" />
@@ -344,11 +344,11 @@ export function Header({ announcement }: HeaderProps) {
               {/* Cart — always visible */}
               <Link
                 href="/cart"
-                className="p-2 md:p-2.5 min-w-[44px] min-h-[44px] flex items-center justify-center text-gray-900 hover:text-[#484848] transition-colors relative"
+                className="p-2 md:p-2.5 min-w-[44px] min-h-[44px] flex items-center justify-center text-[#2C2C2C] hover:text-[#3A3A3A] transition-colors relative"
                 aria-label={locale === "ar" ? "سلة التسوق" : `Cart, ${itemCount} items`}
               >
                 <ShoppingBag className="w-5 h-5" />
-                <span className="absolute top-1 end-1 w-3.5 h-3.5 bg-[#0c0c0c] text-white text-[9px] font-bold rounded-full flex items-center justify-center">
+                <span className="absolute top-1 end-1 w-3.5 h-3.5 bg-[#2C2C2C] text-white text-[9px] font-bold rounded-none flex items-center justify-center">
                   {itemCount}
                 </span>
               </Link>
@@ -360,7 +360,7 @@ export function Header({ announcement }: HeaderProps) {
         </div>
 
         {/* ── Row 3: Category nav (desktop only) ── */}
-        <div className="hidden lg:block border-b border-[rgba(0,0,0,0.12)] bg-white">
+        <div className="hidden lg:block border-b border-[#D4D4D4] bg-white">
           <div className="max-w-screen-xl mx-auto px-8">
             <nav className="flex items-center">
               {/* Primary nav items */}
@@ -383,13 +383,13 @@ export function Header({ announcement }: HeaderProps) {
                   key={item.key}
                   href={item.href}
                   className={cn(
-                    "flex items-center gap-1.5 text-sm font-medium px-3 py-3.5 transition-colors hover:text-[#484848] whitespace-nowrap",
+                    "flex items-center gap-1.5 text-sm font-medium px-3 py-3.5 transition-colors hover:text-[#3A3A3A] whitespace-nowrap",
                     item.key === "eQuotation"
-                      ? "border border-[rgba(0,0,0,0.38)] rounded-sm mx-1 my-2 py-2 px-3 text-xs"
+                      ? "border border-[#3A3A3A]/40 rounded-sm mx-1 my-2 py-2 px-3 text-xs"
                       : "",
                     pathname === item.href
-                      ? "text-gray-900 border-b-2 border-[#0c0c0c]"
-                      : "text-gray-900"
+                      ? "text-[#2C2C2C] border-b-2 border-[#2C2C2C]"
+                      : "text-[#2C2C2C]"
                   )}
                 >
                   {item.key === "eQuotation" && (
@@ -469,10 +469,10 @@ function DesktopNavItem({
       <Link
         href={item.href}
         className={cn(
-          "text-sm font-medium px-3 py-3.5 transition-colors duration-200 hover:text-[#484848] whitespace-nowrap",
+          "text-sm font-medium px-3 py-3.5 transition-colors duration-200 hover:text-[#3A3A3A] whitespace-nowrap",
           isActive
-            ? "text-gray-900 border-b-2 border-[#0c0c0c]"
-            : "text-gray-900 nav-underline"
+            ? "text-[#2C2C2C] border-b-2 border-[#2C2C2C]"
+            : "text-[#2C2C2C] nav-underline"
         )}
       >
         {label}
@@ -485,10 +485,10 @@ function DesktopNavItem({
       <Link
         href={item.href}
         className={cn(
-          "flex items-center gap-1 text-sm font-medium px-3 py-3.5 transition-colors duration-200 hover:text-[#484848] whitespace-nowrap",
+          "flex items-center gap-1 text-sm font-medium px-3 py-3.5 transition-colors duration-200 hover:text-[#3A3A3A] whitespace-nowrap",
           isActive
-            ? "text-gray-900 border-b-2 border-[#0c0c0c]"
-            : "text-gray-900 nav-underline"
+            ? "text-[#2C2C2C] border-b-2 border-[#2C2C2C]"
+            : "text-[#2C2C2C] nav-underline"
         )}
         aria-expanded={isOpen}
         aria-haspopup="true"
@@ -547,17 +547,17 @@ function NavMegaPanel({
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
-      <div className="bg-white border-b border-[rgba(0,0,0,0.12)] shadow-lg">
+      <div className="bg-white border-b border-[#D4D4D4]" style={{ boxShadow: "0 8px 24px rgba(0,0,0,0.12)" }}>
         <div className="max-w-screen-xl mx-auto px-8 py-6">
 
           {/* Panel header */}
           <div className="flex items-center justify-between mb-5">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#484848]">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#3A3A3A]">
               {t(`nav.${item.key}`)}
             </p>
             <Link
               href={item.href}
-              className="text-[11px] font-semibold text-[#0c0c0c] hover:text-[#484848] inline-flex items-center gap-1 transition-colors"
+              className="text-[11px] font-semibold text-[#2C2C2C] hover:text-[#3A3A3A] inline-flex items-center gap-1 transition-colors"
             >
               {t("common.viewAll")}
               <ChevronRight className="w-3 h-3" />
@@ -592,14 +592,14 @@ function NavMegaPanel({
                   ) : (
                     <div className="w-full h-full bg-[#ebebeb]" />
                   )}
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/8 transition-colors duration-200" />
+                  <div className="absolute inset-0 bg-[#2C2C2C]/0 group-hover:bg-[#2C2C2C]/8 transition-colors duration-200" />
                 </div>
                 <span
                   className={cn(
                     "text-[12px] font-medium leading-tight block transition-colors",
                     pathname === child.href
-                      ? "text-[#0c0c0c] font-semibold"
-                      : "text-[#484848] group-hover:text-[#0c0c0c]"
+                      ? "text-[#2C2C2C] font-semibold"
+                      : "text-[#3A3A3A] group-hover:text-[#2C2C2C]"
                   )}
                 >
                   {t(`nav.${child.key}`)}
@@ -627,7 +627,7 @@ function LanguageToggle() {
     <Link
       href={pathname}
       locale={isAr ? "en" : "ar"}
-      className="flex items-center gap-1 px-2.5 py-1.5 text-xs font-medium text-gray-900 hover:text-[#484848] transition-colors"
+      className="flex items-center gap-1 px-2.5 py-1.5 text-xs font-medium text-[#2C2C2C] hover:text-[#3A3A3A] transition-colors"
     >
       {isAr ? "EN" : "AR"}
     </Link>
@@ -665,7 +665,7 @@ function MobileDrawer({
       {/* Backdrop */}
       <div
         className={cn(
-          "fixed inset-0 z-50 bg-black/40 transition-opacity duration-300 lg:hidden",
+          "fixed inset-0 z-50 bg-[#2C2C2C]/40 transition-opacity duration-300 lg:hidden",
           isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
         )}
         onClick={onClose}
@@ -675,15 +675,16 @@ function MobileDrawer({
       {/* Drawer */}
       <div
         className={cn(
-          "fixed top-0 z-50 h-full w-80 max-w-[85vw] bg-white shadow-xl transition-transform duration-300 ease-out lg:hidden flex flex-col",
+          "fixed top-0 z-50 h-full w-80 max-w-[85vw] bg-white transition-transform duration-300 ease-out lg:hidden flex flex-col",
           "end-0",
           isOpen
             ? "translate-x-0"
             : "ltr:translate-x-full rtl:-translate-x-full"
         )}
+        style={{ boxShadow: "0 16px 48px rgba(0,0,0,0.16)" }}
       >
         {/* Drawer Header */}
-        <div className="flex items-center justify-between p-4 border-b border-[rgba(0,0,0,0.08)]">
+        <div className="flex items-center justify-between p-4 border-b border-[#D4D4D4]">
           <Image
             src="/images/majestic-logo-original.png"
             alt="Majestic Furniture"
@@ -694,7 +695,7 @@ function MobileDrawer({
           />
           <button
             onClick={onClose}
-            className="p-2 text-gray-900 hover:text-[#484848] cursor-pointer"
+            className="p-2 text-[#2C2C2C] hover:text-[#3A3A3A] cursor-pointer"
             aria-label="Close menu"
           >
             <X className="w-5 h-5" />
@@ -702,16 +703,16 @@ function MobileDrawer({
         </div>
 
         {/* Utility links — mobile */}
-        <div className="px-6 py-3 border-b border-[rgba(0,0,0,0.06)] flex gap-4">
-          <Link href="/showrooms" onClick={onClose} className="text-xs text-[#484848] hover:text-gray-900">
+        <div className="px-6 py-3 border-b border-[#D4D4D4] flex gap-4">
+          <Link href="/showrooms" onClick={onClose} className="text-xs text-[#3A3A3A] hover:text-[#2C2C2C]">
             {t("nav.showrooms")}
           </Link>
-          <span className="text-[rgba(0,0,0,0.2)] text-xs">|</span>
-          <Link href="/materials" onClick={onClose} className="text-xs text-[#484848] hover:text-gray-900">
+          <span className="text-[#D4D4D4] text-xs">|</span>
+          <Link href="/materials" onClick={onClose} className="text-xs text-[#3A3A3A] hover:text-[#2C2C2C]">
             {t("nav.materialColors")}
           </Link>
-          <span className="text-[rgba(0,0,0,0.2)] text-xs">|</span>
-          <Link href="/warranty" onClick={onClose} className="text-xs text-[#484848] hover:text-gray-900">
+          <span className="text-[#D4D4D4] text-xs">|</span>
+          <Link href="/warranty" onClick={onClose} className="text-xs text-[#3A3A3A] hover:text-[#2C2C2C]">
             {t("nav.warranty")}
           </Link>
         </div>
@@ -726,13 +727,13 @@ function MobileDrawer({
             return (
               <div
                 key={item.key}
-                className="border-b border-[rgba(0,0,0,0.06)]"
+                className="border-b border-[#D4D4D4]"
               >
                 {hasChildren ? (
                   <>
                     <button
                       onClick={() => toggleExpand(item.key)}
-                      className="w-full flex items-center justify-between px-6 py-4 text-base font-medium text-gray-900 hover:text-[#484848] transition-colors cursor-pointer"
+                      className="w-full flex items-center justify-between px-6 py-4 text-base font-medium text-[#2C2C2C] hover:text-[#3A3A3A] transition-colors cursor-pointer"
                       aria-expanded={isExpanded}
                     >
                       {label}
@@ -752,17 +753,17 @@ function MobileDrawer({
                           : "max-h-0 opacity-0"
                       )}
                     >
-                      <div className="bg-[#fafafa] py-2">
+                      <div className="bg-white py-2">
                         {item.children!.map((child) => (
                           <Link
                             key={child.key}
                             href={child.href}
                             onClick={onClose}
                             className={cn(
-                              "block px-10 py-3 text-sm transition-colors hover:text-gray-900",
+                              "block px-10 py-3 text-sm transition-colors hover:text-[#2C2C2C]",
                               drawerPathname === child.href
-                                ? "text-gray-900 font-semibold"
-                                : "text-[#484848]"
+                                ? "text-[#2C2C2C] font-semibold"
+                                : "text-[#3A3A3A]"
                             )}
                           >
                             {t(`nav.${child.key}`)}
@@ -771,7 +772,7 @@ function MobileDrawer({
                         <Link
                           href={item.href}
                           onClick={onClose}
-                          className="block px-10 py-3 text-sm font-semibold text-gray-900 inline-flex items-center gap-1"
+                          className="block px-10 py-3 text-sm font-semibold text-[#2C2C2C] inline-flex items-center gap-1"
                         >
                           {t("common.viewAll")}{" "}
                           <ChevronRight className="w-3.5 h-3.5" />
@@ -784,10 +785,10 @@ function MobileDrawer({
                     href={item.href}
                     onClick={onClose}
                     className={cn(
-                      "block px-6 py-4 text-base font-medium transition-colors hover:text-[#484848]",
+                      "block px-6 py-4 text-base font-medium transition-colors hover:text-[#3A3A3A]",
                       pathname === item.href
-                        ? "text-gray-900 border-s-2 border-[#0c0c0c]"
-                        : "text-gray-900"
+                        ? "text-[#2C2C2C] border-s-2 border-[#2C2C2C]"
+                        : "text-[#2C2C2C]"
                     )}
                   >
                     {label}
@@ -799,11 +800,11 @@ function MobileDrawer({
         </nav>
 
         {/* Bottom: Language + Account */}
-        <div className="border-t border-[rgba(0,0,0,0.08)] p-4 space-y-3">
+        <div className="border-t border-[#D4D4D4] p-4 space-y-3">
           <Link
             href="/account"
             onClick={onClose}
-            className="flex items-center gap-2 text-sm font-medium text-gray-900 hover:text-[#484848] transition-colors"
+            className="flex items-center gap-2 text-sm font-medium text-[#2C2C2C] hover:text-[#3A3A3A] transition-colors"
           >
             <User className="w-4 h-4" />
             {locale === "ar" ? "تسجيل الدخول" : "Sign In"}
@@ -812,7 +813,7 @@ function MobileDrawer({
             href={drawerPathname}
             locale={locale === "ar" ? "en" : "ar"}
             onClick={onClose}
-            className="flex items-center gap-1 text-sm font-medium text-gray-900 hover:text-[#484848] transition-colors"
+            className="flex items-center gap-1 text-sm font-medium text-[#2C2C2C] hover:text-[#3A3A3A] transition-colors"
           >
             {locale === "ar" ? "EN" : "AR"}
           </Link>

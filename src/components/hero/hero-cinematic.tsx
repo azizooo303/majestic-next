@@ -152,8 +152,8 @@ function DesktopSlide({
         />
       </div>
 
-      {/* Dark gradient for text readability */}
-      <div className="absolute inset-0 bg-gradient-to-r from-gray-600/50 via-gray-500/20 to-transparent" />
+      {/* Dark overlay for text readability */}
+      <div className="absolute inset-0 bg-black/30" />
 
       {/* Text overlay */}
       <motion.div
@@ -161,27 +161,27 @@ function DesktopSlide({
         style={{ opacity: textOpacity, y: textY }}
       >
         {slide.subheadline && (
-          <p className="text-sm md:text-base font-medium text-white/65 tracking-widest uppercase mb-3">
+          <p className="text-sm md:text-base font-medium text-white/65 tracking-widest mb-3">
             {slide.subheadline}
           </p>
         )}
-        <h2 className="text-4xl lg:text-6xl font-extrabold text-white leading-[1.1] drop-shadow-lg">
+        <h2 className="text-4xl font-bold text-white leading-[1.1]">
           {slide.headline}
         </h2>
         {slide.description && (
-          <p className="text-base lg:text-lg text-white/85 mt-3 leading-relaxed drop-shadow max-w-md">
+          <p className="text-base lg:text-lg text-white/85 mt-3 leading-relaxed max-w-md">
             {slide.description}
           </p>
         )}
         <Link
           href={slide.href}
           className="inline-flex items-center gap-2 mt-6 px-8 py-3.5 border-2 border-white
-            bg-white/10 text-white font-medium tracking-wider uppercase text-sm
-            rounded-sm transition-all duration-300
-            hover:bg-white hover:text-[#0c0c0c]
+            bg-white/10 text-white font-medium tracking-wider text-sm
+            rounded-none transition-all duration-300
+            hover:bg-white hover:text-[#2C2C2C]
             focus:outline-none focus:ring-2 focus:ring-white/50"
         >
-          <span className="w-1.5 h-1.5 bg-white rounded-full" />
+          <span className="w-1.5 h-1.5 bg-white" />
           {slide.cta}
         </Link>
       </motion.div>
@@ -237,7 +237,7 @@ function DotIndicator({
 
   return (
     <motion.div
-      className="h-2.5 rounded-full bg-white transition-all duration-300"
+      className="h-2.5 rounded-none bg-white transition-all duration-300"
       style={{ width, opacity }}
     />
   );
@@ -267,27 +267,27 @@ function MobileHero({ slides }: { slides: HeroSlide[] }) {
             sizes="100vw"
           />
 
-          {/* Gradient */}
-          <div className="absolute inset-0 bg-gradient-to-t from-gray-600/60 via-gray-500/20 to-transparent" />
+          {/* Dark overlay */}
+          <div className="absolute inset-0 bg-black/30" />
 
           {/* Content */}
           <div className="absolute bottom-20 start-6 end-6 z-10">
-            <h2 className="text-3xl font-extrabold text-white leading-tight drop-shadow-lg">
+            <h2 className="text-3xl font-bold text-white leading-tight">
               {slide.headline}
             </h2>
             {slide.description && (
-              <p className="text-sm text-white/85 mt-2 drop-shadow">
+              <p className="text-sm text-white/85 mt-2">
                 {slide.description}
               </p>
             )}
             <Link
               href={slide.href}
               className="inline-flex items-center gap-2 mt-4 px-6 py-3 border-2 border-white
-                bg-white/10 text-white font-medium tracking-wider uppercase text-sm
-                rounded-sm transition-all duration-300
-                hover:bg-white hover:text-[#0c0c0c]"
+                bg-white/10 text-white font-medium tracking-wider text-sm
+                rounded-none transition-all duration-300
+                hover:bg-white hover:text-[#2C2C2C]"
             >
-              <span className="w-1.5 h-1.5 bg-white rounded-full" />
+              <span className="w-1.5 h-1.5 bg-white" />
               {slide.cta}
             </Link>
           </div>

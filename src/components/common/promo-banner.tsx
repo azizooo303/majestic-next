@@ -38,7 +38,7 @@ export function PromoBanner({ isAr, headline, body, cta, ctaHref }: PromoBannerP
   return (
     <section
       ref={sectionRef}
-      className="relative w-full bg-[#fafafa] border-t border-b border-[rgba(0,0,0,0.12)] overflow-hidden"
+      className="relative w-full bg-white border-t border-b border-[#D4D4D4] overflow-hidden"
     >
       <div className="max-w-screen-2xl mx-auto px-4 md:px-6 lg:px-8 py-16 md:py-20">
         <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -47,16 +47,16 @@ export function PromoBanner({ isAr, headline, body, cta, ctaHref }: PromoBannerP
           <motion.div
             style={reducedMotion ? {} : { x: textX }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight tracking-tight">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#2C2C2C] leading-tight tracking-tight">
               {headline}
             </h2>
-            <p className="text-[#484848] mt-4 text-base leading-relaxed max-w-md">
+            <p className="text-[#3A3A3A] mt-4 text-base leading-relaxed max-w-md">
               {body}
             </p>
             <Link
               href={ctaHref}
-              className="inline-block mt-6 border-2 border-[#0c0c0c] text-gray-900 px-8 py-3
-                font-semibold text-sm rounded-sm hover:bg-[#0c0c0c] hover:text-white transition-all"
+              className="inline-block mt-6 border-2 border-[#2C2C2C] text-[#2C2C2C] px-8 py-3
+                font-semibold text-sm rounded-sm hover:bg-[#2C2C2C] hover:text-white transition-all"
             >
               {cta}
             </Link>

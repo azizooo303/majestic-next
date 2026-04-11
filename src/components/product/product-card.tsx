@@ -7,6 +7,7 @@ interface ProductCardProps {
     id: number;
     slug: string;
     name: string;
+    nameAr?: string;
     price: string;
     images: { src: string; alt: string }[];
     categories: { name: string }[];
@@ -25,8 +26,8 @@ export function ProductCard({
   return (
     <Link
       href={`/shop/${product.slug}`}
-      className="group block bg-white rounded-xl overflow-hidden shadow-sm
-        transition-all duration-300 hover:shadow-lg hover:-translate-y-1 cursor-pointer"
+      className="group block bg-white rounded-none overflow-hidden border border-transparent
+        transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border hover:border-[#D4D4D4] cursor-pointer"
     >
       {/* Image */}
       <div className="aspect-[4/5] overflow-hidden bg-light relative">
@@ -60,6 +61,9 @@ export function ProductCard({
 
       {/* Info */}
       <div className="p-4">
+        {product.nameAr && (
+          <p className="text-sm text-[#2C2C2C] font-alyamama">{product.nameAr}</p>
+        )}
         <h3 className="text-sm md:text-base font-medium text-gray-900 leading-snug line-clamp-2">
           {product.name}
         </h3>

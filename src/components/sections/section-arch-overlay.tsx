@@ -20,7 +20,7 @@ const pathTransition = (delay: number) => ({
 export function SectionArchOverlay({
   variant,
   opacity = 0.06,
-  color = "#0c0c0c",
+  color = "#2C2C2C",
   className,
 }: SectionArchOverlayProps) {
   const reduced = useReducedMotion();

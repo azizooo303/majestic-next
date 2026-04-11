@@ -35,30 +35,34 @@ export function NewsletterForm() {
 
   return (
     <form onSubmit={handleSubmit} className="mt-6 flex flex-col sm:flex-row gap-3 relative">
+      <label htmlFor="newsletter-email" className="sr-only">
+        {t("common.emailLabel")}
+      </label>
       <input
+        id="newsletter-email"
         type="email"
         value={email}
         onChange={(e) => { setEmail(e.target.value); setStatus("idle"); }}
         placeholder={t("checkout.email")}
         required
-        className="flex-1 px-4 py-3 rounded-lg bg-white/10 text-white
-          placeholder:text-white/50 border border-white/20
-          focus:border-[#0c0c0c] focus:outline-none focus:ring-2 focus:ring-[#0c0c0c]/30"
+        className="flex-1 px-4 py-3 rounded-none bg-white text-[#2C2C2C]
+          placeholder:text-[#3A3A3A] border border-[#D4D4D4]
+          focus:border-[#2C2C2C] focus:outline-none focus:ring-2 focus:ring-[#2C2C2C]/30"
       />
       <button
         type="submit"
-        className="px-6 py-3 bg-[#0c0c0c] text-white font-medium rounded-lg
-          transition-all duration-200 hover:opacity-90 cursor-pointer"
+        className="px-6 py-3 bg-[#2C2C2C] text-white font-medium rounded-none
+          transition-all duration-200 hover:bg-[#3A3A3A] cursor-pointer"
       >
         {t("common.subscribe")}
       </button>
       {status === "success" && (
-        <p className="sm:absolute sm:top-full sm:mt-2 text-sm text-[#0c0c0c] mt-2">
+        <p className="sm:absolute sm:top-full sm:mt-2 text-sm text-[#2C2C2C] mt-2">
           {t("common.subscribeThankYou")}
         </p>
       )}
       {status === "error" && (
-        <p className="sm:absolute sm:top-full sm:mt-2 text-sm text-red-400 mt-2">
+        <p className="sm:absolute sm:top-full sm:mt-2 text-sm text-[#2C2C2C] font-medium mt-2">
           {t("common.invalidEmail")}
         </p>
       )}

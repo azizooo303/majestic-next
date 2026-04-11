@@ -14,21 +14,21 @@ function QuantityControl({
   onChange: (v: number) => void;
 }) {
   return (
-    <div className="flex items-center border border-[rgba(0,0,0,0.21)] rounded-sm">
+    <div className="flex items-center border border-[#D4D4D4] rounded-sm">
       <button
         aria-label="Decrease quantity"
         onClick={() => onChange(Math.max(1, value - 1))}
-        className="w-8 h-8 flex items-center justify-center text-[#484848] hover:text-gray-900 hover:bg-[#fafafa] transition-colors text-lg leading-none select-none"
+        className="w-8 h-8 flex items-center justify-center text-[#3A3A3A] hover:text-[#2C2C2C] hover:bg-[#FFFFFF] transition-colors text-lg leading-none select-none"
       >
         −
       </button>
-      <span className="w-8 text-center text-sm font-semibold text-gray-900 select-none">
+      <span className="w-8 text-center text-sm font-semibold text-[#2C2C2C] select-none">
         {value}
       </span>
       <button
         aria-label="Increase quantity"
         onClick={() => onChange(value + 1)}
-        className="w-8 h-8 flex items-center justify-center text-[#484848] hover:text-gray-900 hover:bg-[#fafafa] transition-colors text-lg leading-none select-none"
+        className="w-8 h-8 flex items-center justify-center text-[#3A3A3A] hover:text-[#2C2C2C] hover:bg-[#FFFFFF] transition-colors text-lg leading-none select-none"
       >
         +
       </button>
@@ -71,11 +71,11 @@ export function CartClient() {
       <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
 
         <div className="mb-8 flex items-center gap-3">
-          <h1 className="text-2xl md:text-3xl font-bold text-gray-900 tracking-tight">
+          <h1 className="text-2xl md:text-3xl font-bold text-[#2C2C2C] tracking-tight">
             {isAr ? "سلة التسوق" : "Shopping Cart"}
           </h1>
           {!isEmpty && (
-            <span className="inline-flex items-center justify-center min-w-[24px] h-6 px-1.5 rounded-sm bg-[#0c0c0c] text-white text-xs font-semibold">
+            <span className="inline-flex items-center justify-center min-w-[24px] h-6 px-1.5 rounded-sm bg-[#2C2C2C] text-white text-xs font-semibold">
               {totalQty}
             </span>
           )}
@@ -83,12 +83,12 @@ export function CartClient() {
 
         {isEmpty ? (
           <div className="flex flex-col items-center justify-center py-24 gap-6 text-center">
-            <p className="text-lg text-[#484848]">
+            <p className="text-lg text-[#3A3A3A]">
               {isAr ? "سلة التسوق فارغة" : "Your cart is empty"}
             </p>
             <Link
               href="/shop"
-              className="btn-press inline-block bg-[#0c0c0c] text-white px-8 py-3 text-sm font-semibold rounded-sm hover:bg-[#333] transition-colors"
+              className="btn-press inline-block bg-[#2C2C2C] text-white px-8 py-3 text-sm font-semibold rounded-sm hover:bg-[#3A3A3A] transition-colors"
             >
               {isAr ? "متابعة التسوق" : "Continue Shopping"}
             </Link>
@@ -100,10 +100,10 @@ export function CartClient() {
               aria-label={isAr ? "عناصر السلة" : "Cart items"}
               className="w-full lg:w-[65%]"
             >
-              <div className="border border-[rgba(0,0,0,0.21)] rounded-sm divide-y divide-[rgba(0,0,0,0.1)]">
+              <div className="border border-[#D4D4D4] rounded-sm divide-y divide-[#D4D4D4]">
                 {items.map((item) => (
                   <div key={item.id} className="flex gap-4 p-5">
-                    <div className="flex-shrink-0 w-20 h-20 overflow-hidden rounded-sm border border-[rgba(0,0,0,0.1)]">
+                    <div className="flex-shrink-0 w-20 h-20 overflow-hidden rounded-sm border border-[#D4D4D4]">
                       <Image
                         src={item.image || "/images/hero-desks.jpg"}
                         alt={isAr ? item.nameAr : item.name}
@@ -116,10 +116,10 @@ export function CartClient() {
                     <div className="flex flex-1 min-w-0 flex-col gap-1.5">
                       <div className="flex items-start justify-between gap-2">
                         <div className="min-w-0">
-                          <p className="font-bold text-gray-900 text-sm leading-snug">
+                          <p className="font-bold text-[#2C2C2C] text-sm leading-snug">
                             {isAr ? item.nameAr : item.name}
                           </p>
-                          <p className="text-xs text-[#484848] mt-0.5">
+                          <p className="text-xs text-[#3A3A3A] mt-0.5">
                             {fmt(item.price)}{" "}
                             {isAr ? "للقطعة" : "each"}
                           </p>
@@ -129,7 +129,7 @@ export function CartClient() {
                             isAr ? "إزالة العنصر" : "Remove item"
                           }
                           onClick={() => removeItem(item.id)}
-                          className="flex-shrink-0 text-[#484848] hover:text-red-600 transition-colors p-0.5 -mt-0.5"
+                          className="flex-shrink-0 text-[#3A3A3A] hover:text-[#2C2C2C] transition-colors p-0.5 -mt-0.5"
                         >
                           <X size={16} />
                         </button>
@@ -140,7 +140,7 @@ export function CartClient() {
                           value={item.quantity}
                           onChange={(v) => updateQuantity(item.id, v)}
                         />
-                        <p className="font-bold text-gray-900 text-sm">
+                        <p className="font-bold text-[#2C2C2C] text-sm">
                           {fmt(item.price * item.quantity)}
                         </p>
                       </div>
@@ -152,7 +152,7 @@ export function CartClient() {
               <div className="mt-4">
                 <Link
                   href="/shop"
-                  className="text-sm text-[#484848] hover:text-gray-900 border-b border-[#484848] pb-0.5 transition-colors"
+                  className="text-sm text-[#3A3A3A] hover:text-[#2C2C2C] border-b border-[#3A3A3A] pb-0.5 transition-colors"
                 >
                   {isAr ? "متابعة التسوق" : "Continue Shopping"}
                 </Link>
@@ -163,27 +163,27 @@ export function CartClient() {
               aria-label={isAr ? "ملخص الطلب" : "Order summary"}
               className="w-full lg:w-[35%] lg:sticky lg:top-[176px]"
             >
-              <div className="border border-[rgba(0,0,0,0.21)] rounded-sm p-6 bg-white">
-                <h2 className="text-base font-bold text-gray-900 mb-5 pb-4 border-b border-[rgba(0,0,0,0.1)]">
+              <div className="border border-[#D4D4D4] rounded-sm p-6 bg-white">
+                <h2 className="text-base font-bold text-[#2C2C2C] mb-5 pb-4 border-b border-[#D4D4D4]">
                   {isAr ? "ملخص الطلب" : "Order Summary"}
                 </h2>
 
                 <div className="flex flex-col gap-3 text-sm">
-                  <div className="flex justify-between text-[#484848]">
+                  <div className="flex justify-between text-[#3A3A3A]">
                     <span>
                       {isAr ? "المجموع الفرعي" : "Subtotal"}
                     </span>
                     <span>{fmt(subtotal)}</span>
                   </div>
-                  <div className="flex justify-between text-[#484848]">
+                  <div className="flex justify-between text-[#3A3A3A]">
                     <span>
                       {isAr ? "الشحن" : "Shipping"}
                     </span>
-                    <span className="text-gray-900 font-medium">
+                    <span className="text-[#2C2C2C] font-medium">
                       {isAr ? "مجاناً" : "Free"}
                     </span>
                   </div>
-                  <div className="flex justify-between text-[#484848]">
+                  <div className="flex justify-between text-[#3A3A3A]">
                     <span>
                       {isAr
                         ? "ضريبة القيمة المضافة (15%)"
@@ -191,7 +191,7 @@ export function CartClient() {
                     </span>
                     <span>{fmt(vat)}</span>
                   </div>
-                  <div className="flex justify-between text-base font-bold text-gray-900 pt-3 border-t border-[rgba(0,0,0,0.1)]">
+                  <div className="flex justify-between text-base font-bold text-[#2C2C2C] pt-3 border-t border-[#D4D4D4]">
                     <span>
                       {isAr ? "الإجمالي" : "Total"}
                     </span>
@@ -201,7 +201,7 @@ export function CartClient() {
 
                 <Link
                   href="/checkout"
-                  className="btn-press block w-full mt-6 bg-[#0c0c0c] text-white py-4 font-semibold text-sm rounded-sm hover:bg-[#333] transition-colors text-center"
+                  className="btn-press block w-full mt-6 bg-[#2C2C2C] text-white py-4 font-semibold text-sm rounded-sm hover:bg-[#3A3A3A] transition-colors text-center"
                 >
                   {isAr
                     ? "المتابعة إلى الدفع"
@@ -210,22 +210,22 @@ export function CartClient() {
 
                 <Link
                   href="/quotation"
-                  className="btn-press block w-full mt-3 border border-[rgba(0,0,0,0.21)] text-gray-900 py-3.5 font-semibold text-sm rounded-sm hover:bg-[#fafafa] transition-colors text-center"
+                  className="btn-press block w-full mt-3 border border-[#D4D4D4] text-[#2C2C2C] py-3.5 font-semibold text-sm rounded-sm hover:bg-[#FFFFFF] transition-colors text-center"
                 >
                   {isAr
                     ? "طلب عرض سعر"
                     : "Request a Quote instead"}
                 </Link>
 
-                <div className="mt-5 pt-4 border-t border-[rgba(0,0,0,0.08)]">
+                <div className="mt-5 pt-4 border-t border-[#D4D4D4]">
                   <div className="flex items-center gap-2 justify-center mb-2">
-                    <ShieldCheck size={14} className="text-[#484848]" />
-                    <span className="text-xs text-[#484848]">
+                    <ShieldCheck size={14} className="text-[#3A3A3A]" />
+                    <span className="text-xs text-[#3A3A3A]">
                       {isAr ? "مؤمّن بـ SSL" : "Secured by SSL"}
                     </span>
                   </div>
-                  <p className="text-center text-xs text-[#9ca3af]">
-                    mada · Visa · Mastercard · Apple Pay
+                  <p className="text-center text-xs text-[#3A3A3A]">
+                    mada · Visa · Mastercard · Apple Pay
                   </p>
                 </div>
               </div>

@@ -21,6 +21,11 @@ const config: Config = {
       colors: {
         white: '#FFFFFF',
         black: '#000000',
+        charcoal: '#2C2C2C',
+        'dark-gray': '#3A3A3A',
+        'brand-border': '#D4D4D4',
+        disabled: '#E7E7E7',
+        'hover-bg': '#F5F5F5',
         gray: {
           50: '#F9F9F9',
           100: '#F0F0F0',
@@ -55,11 +60,19 @@ const config: Config = {
         normal: '0',
         tight: '-0.02em',
       },
+      fontFamily: {
+        alyamama: ['var(--font-alyamama)', 'sans-serif'],
+      },
+      boxShadow: {
+        'elev-1': '0 4px 16px rgba(0,0,0,0.08)',
+        'elev-2': '0 8px 24px rgba(0,0,0,0.12)',
+        'elev-3': '0 16px 48px rgba(0,0,0,0.16)',
+      },
       borderRadius: {
         none: '0',
         sm: '2px',
-        base: '4px',
-        lg: '8px',
+        base: '2px',
+        lg: '2px',
       },
     },
   },

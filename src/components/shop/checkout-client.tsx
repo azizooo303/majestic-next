@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "@/i18n/navigation";
 import { useLocale } from "next-intl";
 import { Check, ShieldCheck, ChevronLeft } from "lucide-react";
@@ -83,12 +83,12 @@ function StepIndicator({ step, isAr }: { step: Step; isAr: boolean }) {
             <div className="flex flex-col items-center gap-1.5">
               <div
                 className={[
-                  "w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold transition-colors",
+                  "w-8 h-8 rounded-none flex items-center justify-center text-sm font-bold transition-colors",
                   isActive
-                    ? "bg-[#0c0c0c] text-white"
+                    ? "bg-[#2C2C2C] text-white"
                     : isComplete
-                    ? "bg-[#484848] text-white"
-                    : "border border-[rgba(0,0,0,0.21)] text-[#9ca3af]",
+                    ? "bg-[#3A3A3A] text-white"
+                    : "border border-[#D4D4D4] text-[#3A3A3A]",
                 ].join(" ")}
                 aria-current={isActive ? "step" : undefined}
               >
@@ -98,10 +98,10 @@ function StepIndicator({ step, isAr }: { step: Step; isAr: boolean }) {
                 className={[
                   "text-xs whitespace-nowrap",
                   isActive
-                    ? "font-bold text-gray-900"
+                    ? "font-bold text-[#2C2C2C]"
                     : isComplete
-                    ? "font-medium text-[#484848]"
-                    : "text-[#9ca3af]",
+                    ? "font-medium text-[#3A3A3A]"
+                    : "text-[#3A3A3A]",
                 ].join(" ")}
               >
                 {isAr ? s.ar : s.en}
@@ -112,7 +112,7 @@ function StepIndicator({ step, isAr }: { step: Step; isAr: boolean }) {
               <div
                 className={[
                   "h-px w-16 md:w-24 mx-2 mb-5 transition-colors",
-                  step > s.num ? "bg-[#484848]" : "bg-[rgba(0,0,0,0.12)]",
+                  step > s.num ? "bg-[#3A3A3A]" : "bg-[#D4D4D4]",
                 ].join(" ")}
               />
             )}
@@ -133,15 +133,15 @@ function OrderSummary({ isAr, items }: { isAr: boolean; items: CartItem[] }) {
       aria-label={isAr ? "ملخص الطلب" : "Order summary"}
       className="w-full lg:w-[40%] lg:sticky lg:top-[176px]"
     >
-      <div className="border border-[rgba(0,0,0,0.21)] rounded-sm p-6 bg-white">
-        <h2 className="text-base font-bold text-gray-900 mb-5 pb-4 border-b border-[rgba(0,0,0,0.1)]">
+      <div className="border border-[#D4D4D4] rounded-sm p-6 bg-white">
+        <h2 className="text-base font-bold text-[#2C2C2C] mb-5 pb-4 border-b border-[#D4D4D4]">
           {isAr ? "ملخص الطلب" : "Order Summary"}
         </h2>
 
-        <div className="flex flex-col gap-4 mb-5 pb-5 border-b border-[rgba(0,0,0,0.08)]">
+        <div className="flex flex-col gap-4 mb-5 pb-5 border-b border-[#D4D4D4]">
           {items.map((item) => (
             <div key={item.id} className="flex items-center gap-3">
-              <div className="w-12 h-12 flex-shrink-0 border border-[rgba(0,0,0,0.1)] rounded-sm overflow-hidden">
+              <div className="w-12 h-12 flex-shrink-0 border border-[#D4D4D4] rounded-sm overflow-hidden">
                 <Image
                   src={item.image || "/images/hero-desks.jpg"}
                   alt={isAr ? item.nameAr : item.name}
@@ -151,14 +151,14 @@ function OrderSummary({ isAr, items }: { isAr: boolean; items: CartItem[] }) {
                 />
               </div>
               <div className="flex-1 min-w-0">
-                <p className="text-sm font-medium text-gray-900 leading-snug truncate">
+                <p className="text-sm font-medium text-[#2C2C2C] leading-snug truncate">
                   {isAr ? item.nameAr : item.name}
                 </p>
                 {item.quantity > 1 && (
-                  <p className="text-xs text-[#484848]">x{item.quantity}</p>
+                  <p className="text-xs text-[#3A3A3A]">x{item.quantity}</p>
                 )}
               </div>
-              <p className="text-sm font-semibold text-gray-900 flex-shrink-0">
+              <p className="text-sm font-semibold text-[#2C2C2C] flex-shrink-0">
                 {fmt(item.price * item.quantity)}
               </p>
             </div>
@@ -166,29 +166,29 @@ function OrderSummary({ isAr, items }: { isAr: boolean; items: CartItem[] }) {
         </div>
 
         <div className="flex flex-col gap-3 text-sm">
-          <div className="flex justify-between text-[#484848]">
+          <div className="flex justify-between text-[#3A3A3A]">
             <span>{isAr ? "المجموع الفرعي" : "Subtotal"}</span>
             <span>{fmt(subtotal)}</span>
           </div>
-          <div className="flex justify-between text-[#484848]">
+          <div className="flex justify-between text-[#3A3A3A]">
             <span>{isAr ? "الشحن" : "Shipping"}</span>
-            <span className="text-gray-900 font-medium">
+            <span className="text-[#2C2C2C] font-medium">
               {isAr ? "مجاناً" : "Free"}
             </span>
           </div>
-          <div className="flex justify-between text-[#484848]">
+          <div className="flex justify-between text-[#3A3A3A]">
             <span>{isAr ? "ضريبة القيمة المضافة (15%)" : "VAT (15%)"}</span>
             <span>{fmt(vat)}</span>
           </div>
-          <div className="flex justify-between text-base font-bold text-gray-900 pt-3 border-t border-[rgba(0,0,0,0.1)]">
+          <div className="flex justify-between text-base font-bold text-[#2C2C2C] pt-3 border-t border-[#D4D4D4]">
             <span>{isAr ? "الإجمالي" : "Total"}</span>
             <span>{fmt(total)}</span>
           </div>
         </div>
 
-        <div className="mt-5 pt-4 border-t border-[rgba(0,0,0,0.08)] flex items-center gap-2 justify-center">
-          <ShieldCheck size={13} className="text-[#484848] flex-shrink-0" />
-          <span className="text-xs text-[#484848]">
+        <div className="mt-5 pt-4 border-t border-[#D4D4D4] flex items-center gap-2 justify-center">
+          <ShieldCheck size={13} className="text-[#3A3A3A] flex-shrink-0" />
+          <span className="text-xs text-[#3A3A3A]">
             {isAr ? "مؤمّن بـ SSL" : "Secured by SSL"}
           </span>
         </div>
@@ -247,22 +247,22 @@ function Field({
 }) {
   return (
     <div className="flex flex-col gap-1.5">
-      <label className="text-xs font-semibold text-[#484848] uppercase tracking-wide">
+      <label className="text-xs font-semibold text-[#3A3A3A] uppercase tracking-wide">
         {isAr ? labelAr : label}
         {required && (
-          <span className="text-[#e53e3e] ms-1" aria-hidden="true">
+          <span className="text-[#2C2C2C] font-medium ms-1" aria-hidden="true">
             *
           </span>
         )}
       </label>
       {children}
-      {error && <p className="text-xs text-[#e53e3e] mt-0.5">{error}</p>}
+      {error && <p className="text-xs text-[#2C2C2C] font-medium mt-0.5">{error}</p>}
     </div>
   );
 }
 
 const inputCls =
-  "border border-[rgba(0,0,0,0.21)] rounded-sm px-4 py-3 w-full text-sm text-gray-900 bg-white placeholder:text-[#9ca3af] focus:outline-none focus:border-[#0c0c0c] focus:ring-1 focus:ring-[#0c0c0c] transition-colors";
+  "border border-[#D4D4D4] rounded-sm px-4 py-3 w-full text-sm text-[#2C2C2C] bg-white placeholder:text-[#3A3A3A] focus:outline-none focus:border-[#2C2C2C] focus:ring-1 focus:ring-[#2C2C2C] transition-colors";
 
 function StepAddress({
   form,
@@ -279,7 +279,7 @@ function StepAddress({
 }) {
   return (
     <div className="flex flex-col gap-6">
-      <h2 className="text-xl font-bold text-gray-900">
+      <h2 className="text-xl font-bold text-[#2C2C2C]">
         {isAr ? "عنوان التوصيل" : "Delivery Address"}
       </h2>
 
@@ -399,7 +399,7 @@ function StepAddress({
 
       <button
         onClick={onContinue}
-        className="btn-press w-full bg-[#0c0c0c] text-white py-4 font-semibold text-sm rounded-sm hover:bg-[#333] transition-colors mt-2"
+        className="btn-press w-full bg-[#2C2C2C] text-white py-4 font-semibold text-sm rounded-sm hover:bg-[#3A3A3A] transition-colors mt-2"
       >
         {isAr ? "المتابعة إلى الدفع" : "Continue to Payment"}
       </button>
@@ -423,8 +423,8 @@ function PaymentTab({ active, onClick, children }: PaymentTabProps) {
       className={[
         "w-full text-start p-4 rounded-sm transition-colors",
         active
-          ? "border-2 border-[#0c0c0c]"
-          : "border border-[rgba(0,0,0,0.21)] hover:border-[rgba(0,0,0,0.4)]",
+          ? "border-2 border-[#2C2C2C]"
+          : "border border-[#D4D4D4] hover:border-[#3A3A3A]",
       ].join(" ")}
     >
       {children}
@@ -459,7 +459,7 @@ function StepPayment({
 
   return (
     <div className="flex flex-col gap-6">
-      <h2 className="text-xl font-bold text-gray-900">
+      <h2 className="text-xl font-bold text-[#2C2C2C]">
         {isAr ? "طريقة الدفع" : "Payment Method"}
       </h2>
 
@@ -470,14 +470,14 @@ function StepPayment({
           onClick={() => onChange("paymentMethod", "card")}
         >
           <div className="flex items-center justify-between">
-            <span className="text-sm font-semibold text-gray-900">
+            <span className="text-sm font-semibold text-[#2C2C2C]">
               {isAr ? "بطاقة ائتمان / مدى" : "Credit / Debit Card"}
             </span>
             <div className="flex items-center gap-1.5">
               {["Visa", "Mastercard", "mada"].map((brand) => (
                 <span
                   key={brand}
-                  className="text-[10px] font-bold border border-[rgba(0,0,0,0.15)] rounded-sm px-1.5 py-0.5 text-[#484848] bg-[#fafafa]"
+                  className="text-[10px] font-bold border border-[#D4D4D4] rounded-sm px-1.5 py-0.5 text-[#3A3A3A] bg-[#FFFFFF]"
                 >
                   {brand}
                 </span>
@@ -487,7 +487,7 @@ function StepPayment({
         </PaymentTab>
 
         {form.paymentMethod === "card" && (
-          <div className="border border-[rgba(0,0,0,0.1)] rounded-sm p-4 flex flex-col gap-4 -mt-1 bg-[#fafafa]">
+          <div className="border border-[#D4D4D4] rounded-sm p-4 flex flex-col gap-4 -mt-1 bg-[#FFFFFF]">
             <Field label="Card Number" labelAr="رقم البطاقة" isAr={isAr} required error={errors.cardNumber}>
               <input
                 type="text"
@@ -548,11 +548,11 @@ function StepPayment({
           onClick={() => onChange("paymentMethod", "applepay")}
         >
           <div className="flex items-center gap-3">
-            <div className="bg-black text-white text-xs font-bold px-3 py-1.5 rounded-sm flex items-center gap-1">
+            <div className="bg-[#2C2C2C] text-white text-xs font-bold px-3 py-1.5 rounded-sm flex items-center gap-1">
               <span className="text-base leading-none"></span>
               <span>Pay</span>
             </div>
-            <span className="text-sm text-[#484848]">
+            <span className="text-sm text-[#3A3A3A]">
               {isAr ? "ادفع بسرعة وأمان" : "Fast and secure checkout"}
             </span>
           </div>
@@ -565,14 +565,14 @@ function StepPayment({
         >
           <div className="flex items-center justify-between flex-wrap gap-2">
             <div className="flex items-center gap-2">
-              <span className="text-sm font-bold text-[#3d9970] bg-[#e8f5ee] px-2 py-0.5 rounded-sm">
+              <span className="text-sm font-bold text-[#2C2C2C] bg-[#F5F5F5] border border-[#D4D4D4] px-2 py-0.5 rounded-sm">
                 tabby
               </span>
-              <span className="text-sm text-gray-900 font-medium">
+              <span className="text-sm text-[#2C2C2C] font-medium">
                 {isAr ? "اشترِ الآن، ادفع لاحقاً" : "Buy now, pay later"}
               </span>
             </div>
-            <span className="text-xs text-[#484848]">
+            <span className="text-xs text-[#3A3A3A]">
               {isAr
                 ? `4 دفعات × ${fmt(installment4)}`
                 : `4 payments of ${fmt(installment4)}`}
@@ -587,14 +587,14 @@ function StepPayment({
         >
           <div className="flex items-center justify-between flex-wrap gap-2">
             <div className="flex items-center gap-2">
-              <span className="text-sm font-bold text-[#ff6b35] bg-[#fff1ec] px-2 py-0.5 rounded-sm">
+              <span className="text-sm font-bold text-[#2C2C2C] bg-[#F5F5F5] border border-[#D4D4D4] px-2 py-0.5 rounded-sm">
                 tamara
               </span>
-              <span className="text-sm text-gray-900 font-medium">
+              <span className="text-sm text-[#2C2C2C] font-medium">
                 {isAr ? "قسّم على 3 أشهر" : "Split into 3 months"}
               </span>
             </div>
-            <span className="text-xs text-[#484848]">
+            <span className="text-xs text-[#3A3A3A]">
               {isAr
                 ? `3 دفعات × ${fmt(installment3)}`
                 : `3 payments of ${fmt(installment3)}`}
@@ -603,7 +603,7 @@ function StepPayment({
         </PaymentTab>
       </div>
 
-      <p className="text-xs text-[#484848] flex items-center gap-1.5">
+      <p className="text-xs text-[#3A3A3A] flex items-center gap-1.5">
         <ShieldCheck size={13} className="flex-shrink-0" />
         {isAr
           ? "مؤمّن بـ SSL. معلومات الدفع مشفّرة بالكامل."
@@ -613,7 +613,7 @@ function StepPayment({
       <button
         onClick={onPlace}
         disabled={submitting}
-        className="btn-press w-full bg-[#0c0c0c] text-white py-4 font-semibold text-sm rounded-sm hover:bg-[#333] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+        className="btn-press w-full bg-[#2C2C2C] text-white py-4 font-semibold text-sm rounded-sm hover:bg-[#3A3A3A] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
       >
         {submitting
           ? (isAr ? "جارٍ تقديم الطلب..." : "Placing Order...")
@@ -623,7 +623,7 @@ function StepPayment({
       <button
         onClick={onBack}
         type="button"
-        className="flex items-center gap-1 text-sm text-[#484848] hover:text-gray-900 transition-colors mx-auto"
+        className="flex items-center gap-1 text-sm text-[#3A3A3A] hover:text-[#2C2C2C] transition-colors mx-auto"
       >
         <ChevronLeft size={14} />
         {isAr ? "العودة إلى العنوان" : "Back to Address"}
@@ -643,36 +643,36 @@ function StepConfirmation({
 }) {
   return (
     <div className="flex flex-col items-center text-center py-12 px-4 gap-6 max-w-lg mx-auto">
-      <div className="w-16 h-16 bg-[#0c0c0c] rounded-full flex items-center justify-center text-white">
+      <div className="w-16 h-16 bg-[#2C2C2C] rounded-none flex items-center justify-center text-white">
         <Check size={28} strokeWidth={2.5} />
       </div>
 
       <div className="flex flex-col gap-2">
-        <h1 className="text-2xl md:text-3xl font-bold text-gray-900 tracking-tight">
+        <h1 className="text-2xl md:text-3xl font-bold text-[#2C2C2C] tracking-tight">
           {isAr ? "تم تأكيد طلبك" : "Order Confirmed"}
         </h1>
-        <p className="text-[#484848] text-sm">
+        <p className="text-[#3A3A3A] text-sm">
           {isAr
             ? `سيصلك بريد إلكتروني على ${email || "بريدك الإلكتروني"}`
             : `You will receive a confirmation email at ${email || "your email address"}`}
         </p>
       </div>
 
-      <div className="w-full border border-[rgba(0,0,0,0.21)] rounded-sm p-5 text-start">
+      <div className="w-full border border-[#D4D4D4] rounded-sm p-5 text-start">
         <div className="flex flex-col gap-3 text-sm">
           <div className="flex justify-between">
-            <span className="text-[#484848]">
+            <span className="text-[#3A3A3A]">
               {isAr ? "رقم الطلب" : "Order number"}
             </span>
-            <span className="font-bold text-gray-900 font-mono">
+            <span className="font-bold text-[#2C2C2C] font-mono">
               {orderNumber || (isAr ? "جاري المعالجة..." : "Processing...")}
             </span>
           </div>
           <div className="flex justify-between">
-            <span className="text-[#484848]">
+            <span className="text-[#3A3A3A]">
               {isAr ? "التوصيل المتوقع" : "Estimated delivery"}
             </span>
-            <span className="font-medium text-gray-900">
+            <span className="font-medium text-[#2C2C2C]">
               {isAr ? "5–7 أيام عمل" : "5–7 business days"}
             </span>
           </div>
@@ -682,13 +682,13 @@ function StepConfirmation({
       <div className="flex flex-col sm:flex-row gap-3 w-full">
         <Link
           href="/shop"
-          className="btn-press flex-1 text-center border border-[rgba(0,0,0,0.21)] text-gray-900 py-3.5 font-semibold text-sm rounded-sm hover:bg-[#fafafa] transition-colors"
+          className="btn-press flex-1 text-center border border-[#D4D4D4] text-[#2C2C2C] py-3.5 font-semibold text-sm rounded-sm hover:bg-[#FFFFFF] transition-colors"
         >
           {isAr ? "متابعة التسوق" : "Continue Shopping"}
         </Link>
         <Link
           href="/track-order"
-          className="btn-press flex-1 text-center bg-[#0c0c0c] text-white py-3.5 font-semibold text-sm rounded-sm hover:bg-[#333] transition-colors"
+          className="btn-press flex-1 text-center bg-[#2C2C2C] text-white py-3.5 font-semibold text-sm rounded-sm hover:bg-[#3A3A3A] transition-colors"
         >
           {isAr ? "تتبع طلبك" : "Track Your Order"}
         </Link>
@@ -711,10 +711,11 @@ export function CheckoutClient() {
   const [orderError, setOrderError] = useState("");
 
   // Redirect to cart if empty (only after hydration)
-  if (hydrated && itemCount === 0 && step !== 3) {
-    router.push("/cart");
-    return null;
-  }
+  useEffect(() => {
+    if (hydrated && itemCount === 0 && step !== 3) {
+      router.push("/cart");
+    }
+  }, [hydrated, itemCount, step, router]);
 
   const updateField = (key: keyof FormState, value: string) => {
     setForm((prev) => ({ ...prev, [key]: value }));
@@ -781,6 +782,11 @@ export function CheckoutClient() {
     }
   };
 
+  // Show nothing while redirecting (hydrated + empty cart + not confirmation)
+  if (hydrated && itemCount === 0 && step !== 3) {
+    return null;
+  }
+
   const isConfirmation = step === 3;
 
   return (
@@ -788,7 +794,7 @@ export function CheckoutClient() {
       <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
 
         <div className="mb-8">
-          <h1 className="text-2xl md:text-3xl font-bold text-gray-900 tracking-tight">
+          <h1 className="text-2xl md:text-3xl font-bold text-[#2C2C2C] tracking-tight">
             {isAr ? "إتمام الطلب" : "Checkout"}
           </h1>
         </div>
@@ -837,7 +843,7 @@ export function CheckoutClient() {
                     submitting={submitting}
                   />
                   {orderError && (
-                    <p className="mt-4 text-sm text-[#e53e3e] text-center" role="alert">
+                    <p className="mt-4 text-sm text-[#2C2C2C] font-medium text-center" role="alert">
                       {orderError}
                     </p>
                   )}

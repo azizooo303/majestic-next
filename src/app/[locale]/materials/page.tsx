@@ -64,10 +64,10 @@ export default async function MaterialsPage({
     <PageWrapper id="main-content" className="flex-1 bg-white">
       <div className="max-w-screen-xl mx-auto px-4 md:px-8 py-16">
         <Reveal>
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight mb-3">
+          <h1 className="text-3xl md:text-4xl font-bold text-[#2C2C2C] tracking-tight mb-3">
             {isAr ? "المواد والألوان" : "Materials & Colors"}
           </h1>
-          <p className="text-[#484848] text-base max-w-xl mb-12">
+          <p className="text-[#3A3A3A] text-base max-w-xl mb-12">
             {isAr
               ? "نقدم مجموعة واسعة من المواد والتشطيبات لتتناسب مع هوية مساحة عملك."
               : "We offer a wide range of materials and finishes to match your workspace identity."}
@@ -80,10 +80,10 @@ export default async function MaterialsPage({
             {SWATCHES.map((s) => (
               <div key={s.name} className="flex flex-col items-center gap-2">
                 <div
-                  className="w-full aspect-square rounded-sm border border-[rgba(0,0,0,0.1)] shadow-sm"
+                  className="w-full aspect-square rounded-none border border-[#D4D4D4]"
                   style={{ backgroundColor: s.hex }}
                 />
-                <span className="text-xs text-[#484848] text-center">
+                <span className="text-xs text-[#3A3A3A] text-center">
                   {isAr ? s.nameAr : s.name}
                 </span>
               </div>
@@ -92,16 +92,16 @@ export default async function MaterialsPage({
         </Reveal>
 
         <Reveal>
-          <div className="border-t border-[rgba(0,0,0,0.08)] pt-10 text-center">
-            <p className="text-[#484848] text-sm mb-4">
+          <div className="border-t border-[#D4D4D4] pt-10 text-center">
+            <p className="text-[#3A3A3A] text-sm mb-4">
               {isAr
                 ? "هل تحتاج إلى لون أو مادة غير موجودة هنا؟ تواصل معنا لخيارات التخصيص."
                 : "Need a finish not listed here? Contact us for custom options."}
             </p>
             <Link
               href="/contact"
-              className="inline-block bg-white text-white px-8 py-3 text-sm font-semibold
-                rounded-sm hover:bg-[#333] transition-colors"
+              className="inline-block bg-[#2C2C2C] text-white px-8 py-3 text-sm font-semibold
+                rounded-none hover:bg-[#3A3A3A] transition-colors"
             >
               {isAr ? "تواصل معنا" : "Contact Us"}
             </Link>

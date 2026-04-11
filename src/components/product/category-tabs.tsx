@@ -7,39 +7,51 @@ import type { WCCategory } from "@/lib/woocommerce";
 
 interface CategoryTabsProps {
   categories: WCCategory[];
+  locale?: string;
 }
 
-export function CategoryTabs({ categories }: CategoryTabsProps) {
+export function CategoryTabs({ categories, locale }: CategoryTabsProps) {
   const searchParams = useSearchParams();
   const activeCategory = searchParams.get("category");
+  const isAr = locale === "ar";
 
   return (
-    <div className="flex items-center gap-2 overflow-x-auto no-scrollbar">
+    <div
+      role="tablist"
+      className="flex items-center gap-2 overflow-x-auto no-scrollbar"
+    >
       <Link
         href="/shop"
+        role="tab"
+        aria-selected={!activeCategory}
         className={cn(
-          "px-3 py-1.5 text-sm font-medium rounded-full whitespace-nowrap transition-colors",
+          "px-3 py-1.5 text-sm font-medium rounded-none whitespace-nowrap transition-colors",
           !activeCategory
             ? "bg-primary text-white"
             : "text-gray-800 hover:text-gray-900"
         )}
       >
-        All
+        {isAr ? "الكل" : "All"}
       </Link>
-      {categories.slice(0, 8).map((cat) => (
-        <Link
-          key={cat.id}
-          href={`/shop?category=${cat.id}`}
-          className={cn(
-            "px-3 py-1.5 text-sm font-medium rounded-full whitespace-nowrap transition-colors",
-            activeCategory === String(cat.id)
-              ? "bg-primary text-white"
-              : "text-gray-800 hover:text-gray-900"
-          )}
-        >
-          {cat.name}
-        </Link>
-      ))}
+      {categories.slice(0, 8).map((cat) => {
+        const isActive = activeCategory === String(cat.id);
+        return (
+          <Link
+            key={cat.id}
+            href={`/shop?category=${cat.id}`}
+            role="tab"
+            aria-selected={isActive}
+            className={cn(
+              "px-3 py-1.5 text-sm font-medium rounded-none whitespace-nowrap transition-colors",
+              isActive
+                ? "bg-primary text-white"
+                : "text-gray-800 hover:text-gray-900"
+            )}
+          >
+            {cat.name}
+          </Link>
+        );
+      })}
     </div>
   );
 }

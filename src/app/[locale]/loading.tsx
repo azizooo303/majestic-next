@@ -1,6 +1,6 @@
 export default function Loading() {
   return (
-    <main className="min-h-[60vh] bg-white">
+    <main id="main-content" className="min-h-[60vh] bg-white">
       {/* Hero skeleton */}
       <div className="border-b border-[rgba(0,0,0,0.08)] py-12 md:py-16">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">

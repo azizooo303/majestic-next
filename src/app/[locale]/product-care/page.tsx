@@ -161,7 +161,7 @@ export default async function ProductCarePage({
       ];
 
   return (
-    <main className="flex-1 pt-20 bg-white">
+    <main id="main-content" className="flex-1 pt-20 bg-white">
       {/* Hero */}
       <section className="bg-white border-b border-[rgba(0,0,0,0.08)] py-12 md:py-16">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">

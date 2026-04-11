@@ -19,7 +19,7 @@ export default function Error({
   }, [error]);
 
   return (
-    <main className="min-h-[60vh] flex flex-col items-center justify-center px-4 text-center">
+    <main id="main-content" className="min-h-[60vh] flex flex-col items-center justify-center px-4 text-center">
       <h1 className="text-2xl font-bold text-gray-900 mb-2">
         {isAr ? "حدث خطأ ما" : "Something went wrong"}
       </h1>

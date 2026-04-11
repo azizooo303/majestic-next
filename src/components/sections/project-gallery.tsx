@@ -8,7 +8,7 @@ export function ProjectGallery({ images, name }: { images: string[]; name: strin
 
   return (
     <div>
-      <div className="relative w-full aspect-[16/9] overflow-hidden rounded-sm bg-gray-100 mb-4">
+      <div className="relative w-full aspect-[16/9] overflow-hidden rounded-sm bg-[#F5F5F5] mb-4">
         <Image
           key={active}
           src={images[active]}
@@ -27,7 +27,7 @@ export function ProjectGallery({ images, name }: { images: string[]; name: strin
               key={i}
               onClick={() => setActive(i)}
               className={`relative aspect-square overflow-hidden rounded-sm border-2 transition-colors ${
-                i === active ? "border-[#0c0c0c]" : "border-transparent hover:border-gray-300"
+                i === active ? "border-[#2C2C2C]" : "border-transparent hover:border-[#D4D4D4]"
               }`}
             >
               <Image

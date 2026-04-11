@@ -28,13 +28,13 @@ export default async function AccountPage({
     <PageWrapper id="main-content" className="flex-1 bg-white">
       <div className="max-w-sm mx-auto px-4 py-20 text-center">
         <Reveal>
-          <div className="w-16 h-16 rounded-full bg-[#f2f2f2] flex items-center justify-center mx-auto mb-6">
-            <User className="w-7 h-7 text-[#484848]" />
+          <div className="w-16 h-16 rounded-none bg-[#F5F5F5] flex items-center justify-center mx-auto mb-6">
+            <User className="w-7 h-7 text-[#3A3A3A]" />
           </div>
-          <h1 className="text-2xl font-bold text-gray-900 tracking-tight mb-3">
+          <h1 className="text-2xl font-bold text-[#2C2C2C] tracking-tight mb-3">
             {isAr ? "تسجيل الدخول" : "Sign In"}
           </h1>
-          <p className="text-[#484848] text-sm mb-8">
+          <p className="text-[#3A3A3A] text-sm mb-8">
             {isAr
               ? "يمكنك تتبع طلباتك وإدارة حسابك بعد تسجيل الدخول."
               : "Sign in to track your orders and manage your account."}
@@ -44,26 +44,26 @@ export default async function AccountPage({
             <input
               type="email"
               placeholder={isAr ? "البريد الإلكتروني" : "Email address"}
-              className="w-full border border-[rgba(0,0,0,0.21)] rounded-sm px-4 py-3 text-sm
-                text-gray-900 placeholder:text-[#484848]/60 focus:outline-none focus:border-[#0c0c0c]"
+              className="w-full border border-[#D4D4D4] rounded-none px-4 py-3 text-sm
+                text-[#2C2C2C] placeholder:text-[#3A3A3A]/60 focus:outline-none focus:border-[#2C2C2C]"
             />
             <input
               type="password"
               placeholder={isAr ? "كلمة المرور" : "Password"}
-              className="w-full border border-[rgba(0,0,0,0.21)] rounded-sm px-4 py-3 text-sm
-                text-gray-900 placeholder:text-[#484848]/60 focus:outline-none focus:border-[#0c0c0c]"
+              className="w-full border border-[#D4D4D4] rounded-none px-4 py-3 text-sm
+                text-[#2C2C2C] placeholder:text-[#3A3A3A]/60 focus:outline-none focus:border-[#2C2C2C]"
             />
             <button
-              className="w-full bg-white text-white py-3 text-sm font-semibold rounded-sm
+              className="w-full bg-[#2C2C2C] text-white py-3 text-sm font-semibold rounded-none
                 hover:bg-[#333] transition-colors"
             >
               {isAr ? "دخول" : "Sign In"}
             </button>
           </div>
 
-          <p className="text-xs text-[#484848] mt-6">
+          <p className="text-xs text-[#3A3A3A] mt-6">
             {isAr ? "ليس لديك حساب؟ " : "Don't have an account? "}
-            <span className="underline underline-offset-2 cursor-pointer hover:text-gray-900">
+            <span className="underline underline-offset-2 cursor-pointer hover:text-[#2C2C2C]">
               {isAr ? "سجّل الآن" : "Register"}
             </span>
           </p>

@@ -111,31 +111,31 @@ export default async function ProductDetailPage({
       availability: product.stock_status === "instock"
         ? "https://schema.org/InStock"
         : "https://schema.org/OutOfStock",
-      url: `https://lightyellow-mallard-240169.hostingersite.com/${locale}/shop/${product.id}`,
+      url: siteUrl(`/${locale}/shop/${product.id}`),
     },
   };
 
   return (
-    <main className="flex-1 bg-white min-h-screen">
+    <main id="main-content" className="flex-1 bg-white min-h-screen">
       <JsonLd data={productSchema} />
       <div className="max-w-screen-2xl mx-auto px-4 md:px-6 lg:px-8 pt-6 pb-16">
 
         {/* ── Breadcrumb ──────────────────────────────────────────────────── */}
         <nav
           aria-label={isAr ? "مسار التنقل" : "Breadcrumb"}
-          className="flex items-center gap-1.5 text-xs text-[#484848] mb-8 flex-wrap"
+          className="flex items-center gap-1.5 text-xs text-[#3A3A3A] mb-8 flex-wrap"
         >
-          <Link href="/" className="hover:text-gray-900 transition-colors">
+          <Link href="/" className="hover:text-[#2C2C2C] transition-colors">
             {isAr ? "الرئيسية" : "Home"}
           </Link>
           <ChevronRight size={12} className={isAr ? "rotate-180" : ""} aria-hidden="true" />
-          <Link href="/shop" className="hover:text-gray-900 transition-colors">
+          <Link href="/shop" className="hover:text-[#2C2C2C] transition-colors">
             {isAr ? "المتجر" : "Shop"}
           </Link>
           <ChevronRight size={12} className={isAr ? "rotate-180" : ""} aria-hidden="true" />
-          <span className="text-[#484848]">{category}</span>
+          <span className="text-[#3A3A3A]">{category}</span>
           <ChevronRight size={12} className={isAr ? "rotate-180" : ""} aria-hidden="true" />
-          <span className="text-gray-900 font-medium truncate max-w-[200px]">{product.name}</span>
+          <span className="text-[#2C2C2C] font-medium truncate max-w-[200px]">{product.name}</span>
         </nav>
 
         {/* ── Two-column layout ────────────────────────────────────────────── */}
@@ -152,32 +152,32 @@ export default async function ProductDetailPage({
 
               {/* Category label */}
               {category && (
-                <p className="text-xs uppercase tracking-widest text-[#484848]">{category}</p>
+                <p className="text-xs uppercase tracking-widest text-[#3A3A3A]">{category}</p>
               )}
 
               {/* Product name */}
-              <h1 className="text-3xl font-bold text-gray-900 leading-tight">{product.name}</h1>
+              <h1 className="text-3xl font-bold text-[#2C2C2C] leading-tight">{product.name}</h1>
 
               {/* Price row */}
               <div className="flex items-baseline gap-3 flex-wrap">
                 {price > 0 ? (
                   <>
-                    <span className="text-2xl font-bold text-gray-900">
+                    <span className="text-2xl font-bold text-[#2C2C2C]">
                       {isAr ? `${price.toLocaleString("ar-SA")} ر.س` : `SAR ${price.toLocaleString()}`}
                     </span>
                     {originalPrice && (
-                      <span className="text-base text-[#484848] line-through">
+                      <span className="text-base text-[#3A3A3A] line-through">
                         {isAr ? `${originalPrice.toLocaleString("ar-SA")} ر.س` : `SAR ${originalPrice.toLocaleString()}`}
                       </span>
                     )}
                     {discount && (
-                      <span className="text-xs font-bold bg-[#e53e3e] text-white px-2 py-0.5 rounded-sm">
+                      <span className="text-xs font-bold bg-[#2C2C2C] text-white px-2 py-0.5 rounded-none">
                         -{discount}%
                       </span>
                     )}
                   </>
                 ) : (
-                  <span className="text-lg text-[#484848]">
+                  <span className="text-lg text-[#3A3A3A]">
                     {isAr ? "اتصل للسعر" : "Contact for price"}
                   </span>
                 )}
@@ -185,7 +185,7 @@ export default async function ProductDetailPage({
 
               {/* Short description */}
               {shortDesc && (
-                <p className="text-sm text-[#484848] leading-relaxed">{shortDesc}</p>
+                <p className="text-sm text-[#3A3A3A] leading-relaxed">{shortDesc}</p>
               )}
 
               {/* Quantity + Add to Cart */}
@@ -203,27 +203,27 @@ export default async function ProductDetailPage({
                   }}
                 />
                 <button
-                  className="btn-press w-full border border-[#0c0c0c] text-gray-900 py-4
-                    font-semibold rounded-sm hover:bg-gray-50 transition-colors cursor-pointer text-sm"
+                  className="btn-press w-full border border-[#2C2C2C] text-[#2C2C2C] py-4
+                    font-semibold rounded-none hover:bg-[#F5F5F5] transition-colors cursor-pointer text-sm"
                 >
                   {isAr ? "طلب عرض سعر" : "Request a Quote"}
                 </button>
               </div>
 
-              <hr className="border-[rgba(0,0,0,0.08)]" />
+              <hr className="border-[#D4D4D4]" />
 
               {/* Delivery info */}
               <div className="flex flex-wrap gap-4">
-                <div className="flex items-center gap-2 text-xs text-[#484848]">
-                  <Truck size={14} aria-hidden="true" className="shrink-0 text-gray-900" />
+                <div className="flex items-center gap-2 text-xs text-[#3A3A3A]">
+                  <Truck size={14} aria-hidden="true" className="shrink-0 text-[#2C2C2C]" />
                   <span>{isAr ? "توصيل مجاني فوق 500 ريال" : "Free delivery over SAR 500"}</span>
                 </div>
-                <div className="flex items-center gap-2 text-xs text-[#484848]">
-                  <Clock size={14} aria-hidden="true" className="shrink-0 text-gray-900" />
+                <div className="flex items-center gap-2 text-xs text-[#3A3A3A]">
+                  <Clock size={14} aria-hidden="true" className="shrink-0 text-[#2C2C2C]" />
                   <span>{isAr ? "5-7 أيام عمل" : "5–7 business days"}</span>
                 </div>
-                <div className="flex items-center gap-2 text-xs text-[#484848]">
-                  <Wrench size={14} aria-hidden="true" className="shrink-0 text-gray-900" />
+                <div className="flex items-center gap-2 text-xs text-[#3A3A3A]">
+                  <Wrench size={14} aria-hidden="true" className="shrink-0 text-[#2C2C2C]" />
                   <span>{isAr ? "التركيب مشمول" : "Assembly included"}</span>
                 </div>
               </div>
@@ -236,7 +236,7 @@ export default async function ProductDetailPage({
         {relatedFiltered.length > 0 && (
           <section className="mt-20" aria-label={isAr ? "منتجات ذات صلة" : "Related products"}>
             <Reveal>
-              <h2 className="text-xl font-bold text-gray-900 mb-6 tracking-tight">
+              <h2 className="text-xl font-bold text-[#2C2C2C] mb-6 tracking-tight">
                 {isAr ? "منتجات ذات صلة" : "Related Products"}
               </h2>
             </Reveal>

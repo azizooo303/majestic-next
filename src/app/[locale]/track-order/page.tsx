@@ -25,21 +25,21 @@ export default async function TrackOrderPage({
   const isAr = locale === "ar";
 
   return (
-    <main className="flex-1 pt-20 bg-white">
+    <main id="main-content" className="flex-1 pt-20 bg-white">
       {/* Hero */}
-      <section className="bg-white border-b border-[rgba(0,0,0,0.08)] py-12 md:py-16">
+      <section className="bg-white border-b border-[#D4D4D4] py-12 md:py-16">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
-          <p className="text-xs uppercase tracking-widest text-[#484848] mb-3">
-            <Link href="/" className="hover:text-gray-900 transition-colors">
+          <p className="text-xs uppercase tracking-widest text-[#3A3A3A] mb-3">
+            <Link href="/" className="hover:text-[#2C2C2C] transition-colors">
               {isAr ? "الرئيسية" : "Home"}
             </Link>
             {" / "}
             {isAr ? "تتبع طلبك" : "Track Your Order"}
           </p>
-          <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight text-gray-900">
+          <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight text-[#2C2C2C]">
             {isAr ? "تتبع طلبك" : "Track Your Order"}
           </h1>
-          <p className="text-[#484848] text-sm mt-3 max-w-md">
+          <p className="text-[#3A3A3A] text-sm mt-3 max-w-md">
             {isAr
               ? "أدخل رقم طلبك وبريدك الإلكتروني لمتابعة حالة توصيلك."
               : "Enter your order number and email to check the status of your delivery."}
@@ -58,11 +58,11 @@ export default async function TrackOrderPage({
             {/* Help text */}
             <Reveal>
               <div className="mt-8 text-center">
-                <p className="text-sm text-[#484848]">
+                <p className="text-sm text-[#3A3A3A]">
                   {isAr ? "هل تحتاج مساعدة بشأن طلبك؟ " : "Need help with your order? "}
                   <a
                     href="mailto:support@majestic.com.sa"
-                    className="text-gray-900 font-semibold underline underline-offset-2 hover:text-[#484848] transition-colors"
+                    className="text-[#2C2C2C] font-semibold underline underline-offset-2 hover:text-[#3A3A3A] transition-colors"
                   >
                     support@majestic.com.sa
                   </a>

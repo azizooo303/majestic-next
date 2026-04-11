@@ -79,18 +79,18 @@ export default async function WarrantyPage({
       ];
 
   return (
-    <main className="flex-1 pt-20 bg-white">
+    <main id="main-content" className="flex-1 pt-24 bg-white">
       {/* Hero */}
-      <section className="bg-white border-b border-[rgba(0,0,0,0.08)] py-12 md:py-16">
+      <section className="bg-white border-b border-[#D4D4D4] py-12 md:py-16">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
-          <p className="text-xs uppercase tracking-widest text-[#484848] mb-3">
-            <Link href="/" className="hover:text-gray-900 transition-colors">
+          <p className="text-xs uppercase tracking-widest text-[#3A3A3A] mb-3">
+            <Link href="/" className="hover:text-[#2C2C2C] transition-colors">
               {isAr ? "الرئيسية" : "Home"}
             </Link>
             {" / "}
             {isAr ? "معلومات الضمان" : "Warranty Information"}
           </p>
-          <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight text-gray-900">
+          <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight text-[#2C2C2C]">
             {isAr ? "معلومات الضمان" : "Warranty Information"}
           </h1>
         </div>
@@ -100,7 +100,7 @@ export default async function WarrantyPage({
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
           <Reveal>
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 tracking-tight mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#2C2C2C] tracking-tight mb-8">
               {isAr ? "تغطية الضمان" : "Warranty Coverage"}
             </h2>
           </Reveal>
@@ -111,14 +111,14 @@ export default async function WarrantyPage({
                 aria-label={isAr ? "جدول تغطية الضمان" : "Warranty coverage table"}
               >
                 <thead>
-                  <tr className="border-b-2 border-[#0c0c0c]">
-                    <th className="text-start py-3 px-4 font-semibold text-gray-900">
+                  <tr className="border-b-2 border-[#2C2C2C]">
+                    <th className="text-start py-3 px-4 font-semibold text-[#2C2C2C]">
                       {isAr ? "نوع المنتج" : "Product Type"}
                     </th>
-                    <th className="text-start py-3 px-4 font-semibold text-gray-900">
+                    <th className="text-start py-3 px-4 font-semibold text-[#2C2C2C]">
                       {isAr ? "مدة الضمان" : "Warranty Period"}
                     </th>
-                    <th className="text-start py-3 px-4 font-semibold text-gray-900">
+                    <th className="text-start py-3 px-4 font-semibold text-[#2C2C2C]">
                       {isAr ? "التغطية" : "Coverage"}
                     </th>
                   </tr>
@@ -127,13 +127,13 @@ export default async function WarrantyPage({
                   {coverageRows.map((row, index) => (
                     <tr
                       key={row.type}
-                      className={`border-b border-[rgba(0,0,0,0.08)] ${
-                        index % 2 === 1 ? "bg-white" : "bg-white"
+                      className={`border-b border-[#D4D4D4] ${
+                        index % 2 === 1 ? "bg-[#F5F5F5]" : "bg-white"
                       }`}
                     >
-                      <td className="py-3 px-4 text-gray-900 font-medium">{row.type}</td>
-                      <td className="py-3 px-4 text-[#484848]">{row.period}</td>
-                      <td className="py-3 px-4 text-[#484848]">{row.coverage}</td>
+                      <td className="py-3 px-4 text-[#2C2C2C] font-medium">{row.type}</td>
+                      <td className="py-3 px-4 text-[#3A3A3A]">{row.period}</td>
+                      <td className="py-3 px-4 text-[#3A3A3A]">{row.coverage}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -144,18 +144,18 @@ export default async function WarrantyPage({
       </section>
 
       {/* Section 2 — Not Covered */}
-      <section className="py-12 bg-white border-y border-[rgba(0,0,0,0.08)]">
+      <section className="py-12 bg-white border-y border-[#D4D4D4]">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
           <div className="max-w-2xl">
             <Reveal>
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 tracking-tight mb-6">
+              <h2 className="text-2xl md:text-3xl font-bold text-[#2C2C2C] tracking-tight mb-6">
                 {isAr ? "ما لا يشمله الضمان" : "What Is Not Covered"}
               </h2>
               <ul className="space-y-3">
                 {notCovered.map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-[#484848] leading-relaxed">
+                  <li key={item} className="flex items-start gap-3 text-[#3A3A3A] leading-relaxed">
                     <span
-                      className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#484848] flex-shrink-0"
+                      className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#3A3A3A] flex-shrink-0"
                       aria-hidden="true"
                     />
                     {item}
@@ -171,19 +171,19 @@ export default async function WarrantyPage({
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
           <Reveal>
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 tracking-tight mb-10">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#2C2C2C] tracking-tight mb-10">
               {isAr ? "كيفية تقديم طلب ضمان" : "How to Make a Warranty Claim"}
             </h2>
           </Reveal>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {claimSteps.map((step, index) => (
               <Reveal key={step.title}>
-                <div className="border border-[rgba(0,0,0,0.21)] rounded-sm p-6">
-                  <span className="text-3xl font-extrabold text-[rgba(0,0,0,0.08)] select-none">
+                <div className="border border-[rgba(0,0,0,0.21)] rounded-none p-6">
+                  <span className="text-3xl font-extrabold text-[#D4D4D4] select-none">
                     0{index + 1}
                   </span>
-                  <h3 className="text-base font-bold text-gray-900 mt-2 mb-2">{step.title}</h3>
-                  <p className="text-sm text-[#484848] leading-relaxed">{step.desc}</p>
+                  <h3 className="text-base font-bold text-[#2C2C2C] mt-2 mb-2">{step.title}</h3>
+                  <p className="text-sm text-[#3A3A3A] leading-relaxed">{step.desc}</p>
                 </div>
               </Reveal>
             ))}
@@ -193,15 +193,15 @@ export default async function WarrantyPage({
 
       {/* Section 4 — CTA */}
       <Reveal>
-        <section className="py-12 bg-white border-t border-[rgba(0,0,0,0.08)]">
+        <section className="py-12 bg-white border-t border-[#D4D4D4]">
           <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8 text-center">
-            <p className="text-lg font-semibold text-gray-900 mb-4">
+            <p className="text-lg font-semibold text-[#2C2C2C] mb-4">
               {isAr ? "سجّل منتجك الآن" : "Register your product"}
             </p>
             <Link
               href="/contact"
-              className="btn-press inline-block bg-white text-white px-10 py-3.5 font-semibold
-                text-sm tracking-wide rounded-sm hover:bg-[#333] transition-colors"
+              className="btn-press inline-block bg-[#2C2C2C] text-white px-10 py-3.5 font-semibold
+                text-sm tracking-wide rounded-none hover:bg-[#3A3A3A] transition-colors"
             >
               {isAr ? "تسجيل المنتج" : "Register Now"}
             </Link>

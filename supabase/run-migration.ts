@@ -10,9 +10,13 @@ import { createClient } from "@supabase/supabase-js";
 import { readFileSync } from "fs";
 import { join } from "path";
 
-const SUPABASE_URL = "https://mdaogykmjeulxteokeon.supabase.co";
-const SERVICE_KEY =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1kYW9neWttamV1bHh0ZW9rZW9uIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3NTE0ODY2NiwiZXhwIjoyMDkwNzI0NjY2fQ.Wbc6h8PZ9jUpq5HV0ECMadcYSkEWRrb0k130ljY4tFo";
+const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const SERVICE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
+
+if (!SUPABASE_URL || !SERVICE_KEY) {
+  console.error("Missing NEXT_PUBLIC_SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY env vars");
+  process.exit(1);
+}
 
 const sb = createClient(SUPABASE_URL, SERVICE_KEY, {
   auth: { persistSession: false },

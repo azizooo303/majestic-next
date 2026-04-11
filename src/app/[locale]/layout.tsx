@@ -29,11 +29,13 @@ const montserrat = Montserrat({
 });
 
 const alyamama = localFont({
-  src: '../../fonts/Alyamama-VariableFont_wght.woff2',
+  src: '../fonts/Alyamama-VariableFont_wght.woff2',
   variable: '--font-alyamama',
   weight: '300 900',
   display: 'swap',
+  preload: true,
   adjustFontFallback: false,
+  fallback: ['system-ui', 'sans-serif'],
 });
 
 export const metadata: Metadata = {

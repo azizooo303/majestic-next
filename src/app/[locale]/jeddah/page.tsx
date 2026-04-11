@@ -58,16 +58,16 @@ export default async function JeddahPage({
         { name: isAr ? "جدة" : "Jeddah", item: siteUrl(`/${locale}/jeddah`) },
       ]} />
       {/* Hero band */}
-      <section className="bg-[#0c0c0c] py-20 md:py-28">
+      <section className="bg-white border-b border-[#D4D4D4] py-20 md:py-28">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
           <Reveal>
-            <p className="text-xs uppercase tracking-widest text-[#aaaaaa] mb-4">
+            <p className="text-xs uppercase tracking-widest text-[#3A3A3A] mb-4">
               {isAr ? "ماجستيك للأثاث المكتبي — جدة" : "Majestic Furniture — Jeddah"}
             </p>
-            <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-6 max-w-3xl">
+            <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#2C2C2C] mb-6 max-w-3xl">
               {isAr ? "أثاث مكتبي. جدة." : "Office Furniture. Jeddah."}
             </h1>
-            <p className="text-white/60 text-base md:text-lg leading-relaxed max-w-2xl">
+            <p className="text-[#3A3A3A] text-base md:text-lg leading-relaxed max-w-2xl">
               {isAr
                 ? "بيئات عمل احترافية للمؤسسات في جدة. مكاتب تنفيذية، محطات عمل، وأنظمة اجتماعات — تُسلَّم بدقة."
                 : "Professional workspace environments for organizations in Jeddah. Executive offices, workstations, and conference systems — delivered with precision."}
@@ -100,7 +100,7 @@ export default async function JeddahPage({
           <Reveal>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
               {stats.map((stat) => (
-                <div key={stat.label} className="border-t-2 border-[#0c0c0c] pt-6">
+                <div key={stat.label} className="border-t-2 border-[#2C2C2C] pt-6">
                   <p className="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight mb-2">
                     {stat.value}
                   </p>
@@ -116,15 +116,15 @@ export default async function JeddahPage({
       <SpaceTypology isAr={isAr} />
 
       {/* CTA band */}
-      <section className="bg-[#0c0c0c] py-16 md:py-20">
+      <section className="bg-[#F5F5F5] py-16 md:py-20">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
           <Reveal>
             <div className={`flex flex-col md:flex-row items-center justify-between gap-8 ${isAr ? "md:flex-row-reverse" : ""}`}>
               <div>
-                <h2 className="text-2xl md:text-3xl font-bold text-white tracking-tight mb-3">
+                <h2 className="text-2xl md:text-3xl font-bold text-[#2C2C2C] tracking-tight mb-3">
                   {isAr ? "ابدأ مشروعك في جدة" : "Start Your Jeddah Project"}
                 </h2>
-                <p className="text-white/60 text-sm max-w-md">
+                <p className="text-[#3A3A3A] text-sm max-w-md">
                   {isAr
                     ? "فريق ماجستيك يتولى التخطيط والتوريد والتركيب من أول يوم حتى التسليم."
                     : "Majestic handles planning, supply, and installation from brief to handover."}
@@ -133,13 +133,13 @@ export default async function JeddahPage({
               <div className={`flex flex-col sm:flex-row gap-4 ${isAr ? "sm:flex-row-reverse" : ""}`}>
                 <Link
                   href="/contact"
-                  className="btn-press inline-block bg-white text-[#0c0c0c] px-8 py-3.5 font-semibold text-sm tracking-wide rounded-sm hover:bg-gray-100 transition-colors text-center"
+                  className="btn-press inline-block bg-[#2C2C2C] text-white px-8 py-3.5 font-semibold text-sm tracking-wide rounded-none hover:bg-[#3A3A3A] transition-colors text-center"
                 >
                   {isAr ? "احجز استشارة" : "Book a Consultation"}
                 </Link>
                 <Link
                   href="/showrooms"
-                  className="btn-press inline-block bg-transparent border border-white text-white px-8 py-3.5 font-semibold text-sm tracking-wide rounded-sm hover:bg-white/10 transition-colors text-center"
+                  className="btn-press inline-block bg-white border border-[#2C2C2C] text-[#2C2C2C] px-8 py-3.5 font-semibold text-sm tracking-wide rounded-none hover:bg-[#F5F5F5] transition-colors text-center"
                 >
                   {isAr ? "زيارة المعرض" : "Visit the Showroom"}
                 </Link>

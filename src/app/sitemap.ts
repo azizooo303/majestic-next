@@ -24,6 +24,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { path: '/careers', priority: 0.5 },
     { path: '/materials', priority: 0.5 },
     { path: '/product-care', priority: 0.5 },
+    { path: '/inspirations', priority: 0.6 },
+    { path: '/blog', priority: 0.6 },
+    { path: '/privacy', priority: 0.3 },
+    { path: '/terms', priority: 0.3 },
   ]
 
   let products: WCProduct[] = []
@@ -42,6 +46,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }))
   )
 
+  const blogSlugs = ['ergonomic-workspace-guide', 'executive-desk-buying-guide', 'office-design-trends-2024']
+  const blogEntries: MetadataRoute.Sitemap = locales.flatMap(locale =>
+    blogSlugs.map(slug => ({
+      url: `${base}/${locale}/blog/${slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.5,
+    }))
+  )
+
   return [
     ...locales.flatMap(locale =>
       pages.map(({ path, priority }) => ({
@@ -51,6 +65,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         priority,
       }))
     ),
+    ...blogEntries,
     ...productEntries,
   ]
 }

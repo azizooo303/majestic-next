@@ -55,27 +55,27 @@ export function ShopSidebar({ activeCategory }: ShopSidebarProps) {
     >
       {/* Heading + Reset */}
       <div className="flex items-center justify-between mb-4">
-        <h2 className="text-sm font-bold text-gray-900 uppercase tracking-wide">
+        <h2 className="text-sm font-bold text-[#2C2C2C] uppercase tracking-wide">
           {isAr ? "تصفية" : "Filters"}
         </h2>
         <button
           onClick={resetAll}
-          className="text-xs text-[#484848] hover:text-gray-900 transition-colors underline underline-offset-2"
+          className="text-xs text-[#3A3A3A] hover:text-[#2C2C2C] transition-colors underline underline-offset-2"
         >
           {isAr ? "إعادة تعيين" : "Reset all"}
         </button>
       </div>
 
       {/* Category */}
-      <div className="border-t border-[rgba(0,0,0,0.08)] pt-4 pb-4">
+      <div className="border-t border-[#D4D4D4] pt-4 pb-4">
         <details open className="group">
           <summary className="flex items-center justify-between cursor-pointer list-none mb-3">
-            <span className="text-xs font-semibold text-gray-900 uppercase tracking-wide">
+            <span className="text-xs font-semibold text-[#2C2C2C] uppercase tracking-wide">
               {isAr ? "الفئة" : "Category"}
             </span>
             <ChevronRight
               size={13}
-              className="text-[#484848] group-open:rotate-90 transition-transform duration-200"
+              className="text-[#3A3A3A] group-open:rotate-90 transition-transform duration-200"
               aria-hidden="true"
             />
           </summary>
@@ -89,11 +89,11 @@ export function ShopSidebar({ activeCategory }: ShopSidebarProps) {
                       type="checkbox"
                       checked={isActive}
                       onChange={() => setCategory(cat.slug)}
-                      className="w-3.5 h-3.5 rounded-sm border border-[rgba(0,0,0,0.21)] accent-[#0c0c0c] cursor-pointer"
+                      className="w-3.5 h-3.5 rounded-sm border border-[#D4D4D4] accent-[#2C2C2C] cursor-pointer"
                     />
                     <span
-                      className={`text-sm transition-colors group-hover/item:text-gray-900 ${
-                        isActive ? "text-gray-900 font-semibold" : "text-[#484848]"
+                      className={`text-sm transition-colors group-hover/item:text-[#2C2C2C] ${
+                        isActive ? "text-[#2C2C2C] font-semibold" : "text-[#3A3A3A]"
                       }`}
                     >
                       {isAr ? cat.ar : cat.en}
@@ -107,21 +107,21 @@ export function ShopSidebar({ activeCategory }: ShopSidebarProps) {
       </div>
 
       {/* Price range */}
-      <div className="border-t border-[rgba(0,0,0,0.08)] pt-4 pb-4">
+      <div className="border-t border-[#D4D4D4] pt-4 pb-4">
         <details open className="group">
           <summary className="flex items-center justify-between cursor-pointer list-none mb-3">
-            <span className="text-xs font-semibold text-gray-900 uppercase tracking-wide">
+            <span className="text-xs font-semibold text-[#2C2C2C] uppercase tracking-wide">
               {isAr ? "نطاق السعر" : "Price Range"}
             </span>
             <ChevronRight
               size={13}
-              className="text-[#484848] group-open:rotate-90 transition-transform duration-200"
+              className="text-[#3A3A3A] group-open:rotate-90 transition-transform duration-200"
               aria-hidden="true"
             />
           </summary>
           <div className="flex items-center gap-2">
             <div className="flex-1">
-              <label className="text-[10px] text-[#484848] block mb-1">
+              <label className="text-[10px] text-[#3A3A3A] block mb-1">
                 {isAr ? "من" : "Min"}
               </label>
               <input
@@ -129,13 +129,13 @@ export function ShopSidebar({ activeCategory }: ShopSidebarProps) {
                 placeholder="0"
                 min={0}
                 max={10000}
-                className="w-full border border-[rgba(0,0,0,0.21)] rounded-sm px-2 py-1.5 text-xs
-                  text-gray-900 placeholder:text-[#484848] focus:outline-none focus:border-[#0c0c0c] bg-white"
+                className="w-full border border-[#D4D4D4] rounded-sm px-2 py-1.5 text-xs
+                  text-[#2C2C2C] placeholder:text-[#3A3A3A] focus:outline-none focus:border-[#2C2C2C] bg-white"
               />
             </div>
-            <span className="text-[#484848] text-xs mt-4">—</span>
+            <span className="text-[#3A3A3A] text-xs mt-4">—</span>
             <div className="flex-1">
-              <label className="text-[10px] text-[#484848] block mb-1">
+              <label className="text-[10px] text-[#3A3A3A] block mb-1">
                 {isAr ? "إلى" : "Max"}
               </label>
               <input
@@ -143,25 +143,25 @@ export function ShopSidebar({ activeCategory }: ShopSidebarProps) {
                 placeholder="10,000"
                 min={0}
                 max={10000}
-                className="w-full border border-[rgba(0,0,0,0.21)] rounded-sm px-2 py-1.5 text-xs
-                  text-gray-900 placeholder:text-[#484848] focus:outline-none focus:border-[#0c0c0c] bg-white"
+                className="w-full border border-[#D4D4D4] rounded-sm px-2 py-1.5 text-xs
+                  text-[#2C2C2C] placeholder:text-[#3A3A3A] focus:outline-none focus:border-[#2C2C2C] bg-white"
               />
             </div>
           </div>
-          <p className="text-[10px] text-[#484848] mt-1.5">SAR 0 — SAR 10,000</p>
+          <p className="text-[10px] text-[#3A3A3A] mt-1.5">SAR 0 — SAR 10,000</p>
         </details>
       </div>
 
       {/* Brand */}
-      <div className="border-t border-[rgba(0,0,0,0.08)] pt-4 pb-4">
+      <div className="border-t border-[#D4D4D4] pt-4 pb-4">
         <details open className="group">
           <summary className="flex items-center justify-between cursor-pointer list-none mb-3">
-            <span className="text-xs font-semibold text-gray-900 uppercase tracking-wide">
+            <span className="text-xs font-semibold text-[#2C2C2C] uppercase tracking-wide">
               {isAr ? "العلامة التجارية" : "Brand"}
             </span>
             <ChevronRight
               size={13}
-              className="text-[#484848] group-open:rotate-90 transition-transform duration-200"
+              className="text-[#3A3A3A] group-open:rotate-90 transition-transform duration-200"
               aria-hidden="true"
             />
           </summary>
@@ -171,9 +171,9 @@ export function ShopSidebar({ activeCategory }: ShopSidebarProps) {
                 <label className="flex items-center gap-2.5 cursor-pointer group/item">
                   <input
                     type="checkbox"
-                    className="w-3.5 h-3.5 rounded-sm border border-[rgba(0,0,0,0.21)] accent-[#0c0c0c] cursor-pointer"
+                    className="w-3.5 h-3.5 rounded-sm border border-[#D4D4D4] accent-[#2C2C2C] cursor-pointer"
                   />
-                  <span className="text-sm text-[#484848] group-hover/item:text-gray-900 transition-colors">
+                  <span className="text-sm text-[#3A3A3A] group-hover/item:text-[#2C2C2C] transition-colors">
                     {isAr ? b.ar : b.en}
                   </span>
                 </label>
@@ -184,15 +184,15 @@ export function ShopSidebar({ activeCategory }: ShopSidebarProps) {
       </div>
 
       {/* In Stock toggle */}
-      <div className="border-t border-[rgba(0,0,0,0.08)] pt-4 pb-4">
+      <div className="border-t border-[#D4D4D4] pt-4 pb-4">
         <label className="flex items-center justify-between cursor-pointer">
-          <span className="text-xs font-semibold text-gray-900 uppercase tracking-wide">
+          <span className="text-xs font-semibold text-[#2C2C2C] uppercase tracking-wide">
             {isAr ? "متوفر في المخزون" : "In Stock Only"}
           </span>
           <div className="relative w-9 h-5">
             <input type="checkbox" className="sr-only peer" />
-            <div className="w-9 h-5 bg-[rgba(0,0,0,0.12)] peer-checked:bg-[#0c0c0c] rounded-full transition-colors duration-200 cursor-pointer" />
-            <div className="absolute top-0.5 start-0.5 w-4 h-4 bg-white rounded-full shadow-sm transition-all duration-200 peer-checked:translate-x-4" />
+            <div className="w-9 h-5 bg-[#D4D4D4] peer-checked:bg-[#2C2C2C] rounded-sm transition-colors duration-200 cursor-pointer" />
+            <div className="absolute top-0.5 start-0.5 w-4 h-4 bg-white rounded-sm shadow-sm transition-all duration-200 peer-checked:translate-x-4" />
           </div>
         </label>
       </div>

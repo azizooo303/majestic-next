@@ -50,18 +50,18 @@ export default async function InspirationsPage({
     <PageWrapper id="main-content" className="flex-1 bg-white">
       <div className="max-w-screen-xl mx-auto px-4 md:px-8 py-20 text-center">
         <Reveal>
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold text-[#2C2C2C] tracking-tight mb-4">
             {isAr ? "الإلهام" : "Inspirations"}
           </h1>
-          <p className="text-[#484848] text-base max-w-md mx-auto mb-8">
+          <p className="text-[#3A3A3A] text-base max-w-md mx-auto mb-8">
             {isAr
               ? "نعمل على تجميع أجمل مشاريعنا لإلهامك. عد قريباً."
               : "We're curating our best projects to inspire you. Check back soon."}
           </p>
           <Link
             href="/projects"
-            className="inline-block bg-white text-white px-8 py-3 text-sm font-semibold
-              rounded-sm hover:bg-[#333] transition-colors"
+            className="inline-block bg-[#2C2C2C] text-white px-8 py-3 text-sm font-semibold
+              rounded-none hover:bg-[#3A3A3A] transition-colors"
           >
             {isAr ? "تصفح مشاريعنا" : "Browse Our Projects"}
           </Link>

@@ -63,9 +63,9 @@ export default async function BrandsPage({
   const brandItems = BRANDS.map((brand) => (
     <div
       key={brand}
-      className="border border-[rgba(0,0,0,0.21)] rounded-sm p-8 flex items-center justify-center hover:bg-white transition-colors cursor-default min-h-[100px]"
+      className="border border-[rgba(0,0,0,0.21)] rounded-none p-8 flex items-center justify-center hover:bg-white transition-colors cursor-default min-h-[100px]"
     >
-      <span className="font-bold text-gray-900 text-sm md:text-base text-center leading-snug">
+      <span className="font-bold text-[#2C2C2C] text-sm md:text-base text-center leading-snug">
         {brand}
       </span>
     </div>
@@ -74,16 +74,16 @@ export default async function BrandsPage({
   return (
     <PageWrapper id="main-content" className="flex-1 bg-white">
       {/* Hero */}
-      <section className="bg-white border-b border-[rgba(0,0,0,0.08)] py-12 md:py-16">
+      <section className="bg-white border-b border-[#D4D4D4] py-12 md:py-16">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
-          <p className="text-xs uppercase tracking-widest text-[#484848] mb-3">
-            <Link href="/" className="hover:text-gray-900 transition-colors">
+          <p className="text-xs uppercase tracking-widest text-[#3A3A3A] mb-3">
+            <Link href="/" className="hover:text-[#2C2C2C] transition-colors">
               {isAr ? "الرئيسية" : "Home"}
             </Link>
             <span className="mx-2">/</span>
             {isAr ? "علاماتنا التجارية" : "Brands"}
           </p>
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-gray-900">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#2C2C2C]">
             {isAr ? "علاماتنا التجارية" : "Our Brands"}
           </h1>
         </div>
@@ -94,10 +94,10 @@ export default async function BrandsPage({
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
           <Reveal>
             <div className="max-w-2xl mb-14">
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 tracking-tight mb-4">
+              <h2 className="text-2xl md:text-3xl font-bold text-[#2C2C2C] tracking-tight mb-4">
                 {isAr ? "شركاء عالميون، معايير استثنائية" : "Global Partners, Exceptional Standards"}
               </h2>
-              <p className="text-[#484848] leading-relaxed">
+              <p className="text-[#3A3A3A] leading-relaxed">
                 {isAr
                   ? "نحمل أرقى العلامات التجارية للأثاث المكتبي من حول العالم. كل علامة تجارية في محفظتنا اجتازت معايير صارمة للجودة والتصميم والاستدامة، لنضمن لعملائنا خياراتٍ تليق بمعايير الأعمال الاحترافية."
                   : "We carry the finest office furniture brands from around the world. Every brand in our portfolio has met our strict criteria for quality, design, and sustainability — ensuring our clients have access to choices that meet the highest professional standards."}
@@ -117,15 +117,15 @@ export default async function BrandsPage({
       </section>
 
       {/* B2B CTA */}
-      <section className="bg-white border-t border-[rgba(0,0,0,0.08)] py-16">
+      <section className="bg-white border-t border-[#D4D4D4] py-16">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
           <Reveal>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               <div>
-                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 tracking-tight mb-4">
+                <h2 className="text-2xl md:text-3xl font-bold text-[#2C2C2C] tracking-tight mb-4">
                   {isAr ? "هل أنت مشترٍ بالجملة؟" : "Are you a wholesale buyer?"}
                 </h2>
-                <p className="text-[#484848] leading-relaxed text-sm">
+                <p className="text-[#3A3A3A] leading-relaxed text-sm">
                   {isAr
                     ? "نوفر شروطاً خاصة للشركات والمؤسسات التي تبحث عن حلول متكاملة. تواصل مع فريق المبيعات B2B لدينا للحصول على عرض سعر."
                     : "We offer special terms for companies and organizations seeking comprehensive solutions. Contact our B2B sales team to receive a tailored quote."}
@@ -134,7 +134,7 @@ export default async function BrandsPage({
               <div className={`flex ${isAr ? "md:justify-start" : "md:justify-end"}`}>
                 <Link
                   href="/contact"
-                  className="btn-press inline-block bg-white text-white px-10 py-3.5 font-semibold text-sm tracking-wide rounded-sm hover:bg-[#333] transition-colors"
+                  className="btn-press inline-block bg-[#2C2C2C] text-white px-10 py-3.5 font-semibold text-sm tracking-wide rounded-none hover:bg-[#3A3A3A] transition-colors"
                 >
                   {isAr ? "طلب عرض سعر" : "Request a Quote"}
                 </Link>
