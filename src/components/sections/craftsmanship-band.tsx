@@ -74,26 +74,26 @@ export function CraftsmanshipBand({
   overlineAr = "صُنع ليدوم",
   headingEn = "The best the world makes. Chosen once, built to last.",
   headingAr = "أفضل ما يُصنع في العالم. خيارٌ واحد، يدوم طويلاً.",
-  subheadEn = "Every panel, frame, tray, mechanism and fibre is sourced from the top of its category — and chosen for how it is grown, milled, finished, and one day returned. Nothing extravagant. Nothing disposable.",
-  subheadAr = "كل لوح، وهيكل، ومسار، وآلية، ونسيج — مختار من أفضل ما يُصنع في العالم، ومختار لأصله ومآله. لا إسراف. لا استهلاك عابر.",
+  subheadEn = "A material library assembled from the top of each category — chosen for how it is grown, milled, finished, and one day returned. Nothing extravagant. Nothing disposable.",
+  subheadAr = "مكتبة مواد جُمعت من أفضل ما يُصنع في العالم — مختارة لأصلها، وتصنيعها، وتشطيبها، ومآلها. لا إسراف. لا استهلاك عابر.",
 }: Props) {
   return (
-    <section className="w-full bg-white py-20 overflow-hidden">
+    <section className="w-full bg-[#FAFAF8] py-20 overflow-hidden">
       <FadeUp>
         <div className="max-w-screen-lg mx-auto px-4 md:px-6 lg:px-8 pb-12 text-center">
-          <p className="text-xs tracking-[0.3em] uppercase text-[#3A3A3A] mb-5">
+          <p className="text-xs tracking-[0.3em] uppercase text-[#6A6A6A] mb-5">
             {isAr ? overlineAr : overlineEn}
           </p>
           <h2 className="text-[#2C2C2C] text-2xl md:text-4xl font-light leading-tight mb-5 max-w-2xl mx-auto">
             {isAr ? headingAr : headingEn}
           </h2>
-          <p className="text-[#3A3A3A] text-sm md:text-base leading-relaxed max-w-2xl mx-auto">
+          <p className="text-[#5A5A5A] text-sm md:text-base leading-relaxed max-w-2xl mx-auto">
             {isAr ? subheadAr : subheadEn}
           </p>
         </div>
       </FadeUp>
 
-      <AutoScroll duration={80} gap="12px" isRTL={isAr}>
+      <AutoScroll duration={80} gap="32px" isRTL={isAr}>
         {images.map((img) => {
           const imageUrl = img.image
             ? urlFor(img.image).width(600).height(400).url()
@@ -104,34 +104,30 @@ export function CraftsmanshipBand({
           return (
             <div
               key={img._id}
-              className="relative flex-none w-[320px] md:w-[400px] aspect-[3/2] overflow-hidden group"
+              className="flex-none w-[320px] md:w-[400px] group"
+              dir={isAr ? "rtl" : "ltr"}
             >
-              <Image
-                src={imageUrl}
-                alt={isAr ? (img.altAr ?? "") : (img.altEn ?? "")}
-                fill
-                className="object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.04]"
-                sizes="(min-width: 768px) 400px, 320px"
-              />
+              <div className="relative w-full aspect-[3/2] overflow-hidden bg-[#F4F2EE]">
+                <Image
+                  src={imageUrl}
+                  alt={isAr ? (img.altAr ?? "") : (img.altEn ?? "")}
+                  fill
+                  className="object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.03]"
+                  sizes="(min-width: 768px) 400px, 320px"
+                />
+              </div>
               {caption && (
-                <div
-                  className="absolute inset-x-0 bottom-0 pt-16 pb-5 px-5 text-white pointer-events-none"
-                  style={{
-                    background:
-                      "linear-gradient(to top, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.45) 50%, rgba(0,0,0,0) 100%)",
-                  }}
-                  dir={isAr ? "rtl" : "ltr"}
-                >
+                <div className="pt-4 px-1">
                   <p
                     className={
                       isAr
-                        ? "text-[11px] md:text-sm opacity-95 mb-1"
-                        : "text-[10px] md:text-[11px] tracking-[0.25em] uppercase opacity-90 mb-1"
+                        ? "text-sm text-[#2C2C2C] mb-1"
+                        : "text-[11px] md:text-xs tracking-[0.22em] uppercase text-[#2C2C2C] mb-1.5"
                     }
                   >
                     {label}
                   </p>
-                  <p className="text-xs md:text-sm leading-snug opacity-95">
+                  <p className="text-xs md:text-[13px] text-[#6A6A6A] leading-snug">
                     {claim}
                   </p>
                 </div>
