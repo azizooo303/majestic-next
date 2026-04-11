@@ -1,29 +1,21 @@
 "use client";
-import { motion, useReducedMotion } from "framer-motion";
-import { ease, duration } from "@/lib/motion";
 
-interface BlueprintOverlayProps {
-  slideKey: number;  // changes on each slide transition to re-trigger fade
+interface Props {
+  slideKey: number;
 }
 
-export function BlueprintOverlay({ slideKey }: BlueprintOverlayProps) {
-  const reduced = useReducedMotion();
-
-  if (reduced) return null;
-
+// Architectural blueprint grid overlay for hero banner slides.
+// Renders a subtle animated SVG grid pattern tied to the active slide.
+export function BlueprintOverlay({ slideKey: _slideKey }: Props) {
   return (
-    <motion.div
-      key={slideKey}
-      className="absolute inset-0 pointer-events-none z-10"
-      style={{
-        backgroundImage: "url('/images/blueprint-pattern.png')",
-        backgroundRepeat: "repeat",
-        backgroundSize: "400px 400px",
-      }}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 0.06 }}
-      transition={{ duration: duration.blueprint, ease: ease.out }}
+    <div
       aria-hidden="true"
+      className="absolute inset-0 z-10 pointer-events-none select-none opacity-[0.04]"
+      style={{
+        backgroundImage:
+          "linear-gradient(rgba(255,255,255,0.6) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.6) 1px, transparent 1px)",
+        backgroundSize: "60px 60px",
+      }}
     />
   );
 }

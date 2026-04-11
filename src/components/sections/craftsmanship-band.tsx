@@ -1,50 +1,62 @@
 import Image from "next/image";
 import { FadeUp } from "@/components/common/fade-up";
 import { AutoScroll } from "@/components/common/auto-scroll";
+import type { SanityCraftsmanshipImage } from "@/lib/sanity";
+import { urlFor } from "@/lib/sanity";
 
-const IMAGES = [
-  { src: "/images/website/s3-a-desk-edge-detail.jpg", alt: "Desk edge detail" },
-  { src: "/images/website/s3-b-height-adjustment-mechanism.jpg", alt: "Height adjustment mechanism" },
-  { src: "/images/website/s3-c-leather-armrest-seam.jpg", alt: "Leather armrest seam" },
-  { src: "/images/website/s3-d-conference-table-joinery.jpg", alt: "Conference table joinery" },
-  { src: "/images/website/s3-e-acoustic-fabric-weave.jpg", alt: "Acoustic fabric weave" },
-];
+interface Props {
+  isAr: boolean;
+  images: SanityCraftsmanshipImage[];
+  overlineEn?: string;
+  overlineAr?: string;
+  taglineEn?: string;
+  taglineAr?: string;
+}
 
-export function CraftsmanshipBand({ isAr }: { isAr: boolean }) {
+export function CraftsmanshipBand({
+  isAr,
+  images,
+  overlineEn = "Construction Detail",
+  overlineAr = "تفاصيل التصنيع والتشطيب",
+  taglineEn = "Every surface. Considered.",
+  taglineAr = "كل سطح. وفق مواصفة.",
+}: Props) {
   return (
     <section className="w-full bg-white py-16 overflow-hidden">
-      {/* Overline */}
       <FadeUp>
         <div className="max-w-screen-2xl mx-auto px-4 md:px-6 lg:px-8 pb-8">
-          <p className="text-xs uppercase tracking-widest text-[#484848]">
-            {isAr ? "تفاصيل التصنيع والتشطيب" : "Construction Detail"}
+          <p className="text-xs tracking-widest text-[#3A3A3A]">
+            {isAr ? overlineAr : overlineEn}
           </p>
         </div>
       </FadeUp>
 
-      {/* Auto-scrolling image strip */}
       <AutoScroll duration={60} gap="8px" isRTL={isAr}>
-        {IMAGES.map((img) => (
-          <div
-            key={img.src}
-            className="relative flex-none w-[220px] md:w-[260px] aspect-[3/4] overflow-hidden transition-transform duration-300 hover:scale-[1.05] hover:rotate-[0.5deg]"
-          >
-            <Image
-              src={img.src}
-              alt={img.alt}
-              fill
-              className="object-cover"
-              sizes="260px"
-            />
-          </div>
-        ))}
+        {images.map((img) => {
+          const imageUrl = img.image
+            ? urlFor(img.image).width(260).height(350).url()
+            : `/images/website/s3-a-desk-edge-detail.jpg`;
+          return (
+            <div
+              key={img._id}
+              className="relative flex-none w-[220px] md:w-[260px] aspect-[3/4] overflow-hidden transition-transform duration-300 hover:scale-[1.05] hover:rotate-[0.5deg]"
+            >
+              <Image
+                src={imageUrl}
+                alt={isAr ? (img.altAr ?? "") : (img.altEn ?? "")}
+                fill
+                className="object-cover"
+                sizes="260px"
+              />
+            </div>
+          );
+        })}
       </AutoScroll>
 
-      {/* Centered bilingual tagline */}
       <FadeUp>
         <div className="text-center mt-12 px-4">
-          <p className="text-[#0c0c0c] text-lg font-semibold tracking-widest uppercase">
-            {isAr ? "كل سطح. وفق مواصفة." : "Every surface. Considered."}
+          <p className="text-[#2C2C2C] text-lg font-semibold tracking-widest">
+            {isAr ? taglineAr : taglineEn}
           </p>
         </div>
       </FadeUp>

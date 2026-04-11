@@ -5,6 +5,10 @@ import { Reveal } from "@/components/common/reveal";
 import { StaggerGrid } from "@/components/common/stagger-grid";
 import { siteUrl } from "@/lib/site-url";
 import type { Metadata } from "next";
+import { client, SHOWROOMS_QUERY, urlFor } from "@/lib/sanity";
+import type { SanityShowroom } from "@/lib/sanity";
+
+export const revalidate = 3600;
 
 export async function generateMetadata({
   params,
@@ -38,16 +42,6 @@ export async function generateMetadata({
   };
 }
 
-interface Showroom {
-  name: string;
-  address: string;
-  hours: string;
-  phone: string;
-  comingSoon: boolean;
-  image: string;
-  mapsUrl?: string;
-}
-
 export default async function ShowroomsPage({
   params,
 }: {
@@ -56,59 +50,35 @@ export default async function ShowroomsPage({
   const { locale } = await params;
   const isAr = locale === "ar";
 
-  const showrooms: Showroom[] = [
-    {
-      name: isAr ? "الرياض — العليا" : "Riyadh — Al Olaya",
-      address: isAr
-        ? "شارع العليا العام، برج المملكة، الرياض"
-        : "King Fahad Road, Al Olaya District, Riyadh",
-      hours: isAr ? "الأحد – الخميس: 9 ص – 6 م" : "Sun – Thu: 9am – 6pm",
-      phone: "+966 11 234 5678",
-      comingSoon: false,
-      image: "/images/website/showroom-riyadh.jpg",
-      mapsUrl:
-        "https://www.google.com/maps/search/?api=1&query=Majestic+Furniture+Al+Olaya+King+Fahad+Road+Riyadh",
-    },
-    {
-      name: isAr ? "الرياض — الملز" : "Riyadh — Al Malaz",
-      address: isAr
-        ? "شارع الملز، حي الملز، الرياض"
-        : "Al Malaz Street, Al Malaz District, Riyadh",
-      hours: isAr ? "الأحد – الخميس: 9 ص – 6 م" : "Sun – Thu: 9am – 6pm",
-      phone: "+966 11 345 6789",
-      comingSoon: false,
-      image: "/images/website/showroom-jeddah.jpg",
-      mapsUrl:
-        "https://www.google.com/maps/search/?api=1&query=Majestic+Furniture+Al+Malaz+Riyadh",
-    },
-    {
-      name: isAr ? "جدة — قريباً" : "Jeddah — Coming Soon",
-      address: isAr ? "جدة، المملكة العربية السعودية" : "Jeddah, Saudi Arabia",
-      hours: isAr ? "قريباً" : "Opening Soon",
-      phone: "—",
-      comingSoon: true,
-      image: "/images/website/showroom-dammam.jpg",
-    },
-  ];
+  const showroomsData: SanityShowroom[] = await client
+    .fetch<SanityShowroom[]>(SHOWROOMS_QUERY)
+    .catch(() => [] as SanityShowroom[]);
 
-  const showroomItems = showrooms.map((s) => (
+  const showroomItems = showroomsData.map((s) => {
+    const name = isAr ? s.nameAr : s.nameEn;
+    const address = isAr ? (s.addressAr ?? s.addressEn ?? "") : (s.addressEn ?? "");
+    const hours = isAr ? (s.hoursAr ?? s.hoursEn ?? "") : (s.hoursEn ?? "");
+    const imageUrl = s.image
+      ? urlFor(s.image).width(800).height(450).url()
+      : "/images/website/showroom-riyadh.jpg";
+    return (
     <div
-      key={s.name}
-      className="border border-[rgba(0,0,0,0.21)] rounded-sm overflow-hidden group relative"
+      key={s._id}
+      className="border border-[rgba(0,0,0,0.21)] rounded-none overflow-hidden group relative"
     >
       {/* Image */}
       <div className="relative aspect-[16/9] overflow-hidden">
         <Image
-          src={s.image}
-          alt={s.name}
+          src={imageUrl}
+          alt={name}
           fill
           className="object-cover group-hover:scale-[1.02] transition-transform duration-500"
           sizes="(max-width: 768px) 100vw, 33vw"
         />
         {/* Coming soon overlay */}
-        {s.comingSoon && (
+        {s.isComingSoon && (
           <div className="absolute inset-0 bg-white flex items-center justify-center">
-            <span className="text-white font-bold text-lg tracking-wide uppercase">
+            <span className="text-[#2C2C2C] font-bold text-lg tracking-wide uppercase">
               {isAr ? "قريباً" : "Coming Soon"}
             </span>
           </div>
@@ -117,48 +87,49 @@ export default async function ShowroomsPage({
 
       {/* Info */}
       <div className="p-6">
-        <h3 className="text-lg font-bold text-gray-900 mb-3">{s.name}</h3>
+        <h3 className="text-lg font-bold text-[#2C2C2C] mb-3">{name}</h3>
         <div className="space-y-2 mb-6">
-          <p className="text-sm text-[#484848] leading-relaxed">{s.address}</p>
-          <p className="text-sm text-[#484848]">{s.hours}</p>
-          {s.phone !== "—" && (
+          <p className="text-sm text-[#3A3A3A] leading-relaxed">{address}</p>
+          <p className="text-sm text-[#3A3A3A]">{hours}</p>
+          {s.phone && s.phone !== "—" && (
             <a
               href={`tel:${s.phone.replace(/\s/g, "")}`}
-              className="text-sm text-gray-900 hover:text-[#484848] transition-colors font-medium"
+              className="text-sm text-[#2C2C2C] hover:text-[#3A3A3A] transition-colors font-medium"
               dir="ltr"
             >
               {s.phone}
             </a>
           )}
         </div>
-        {!s.comingSoon && s.mapsUrl && (
+        {!s.isComingSoon && s.mapsUrl && (
           <a
             href={s.mapsUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-press inline-block border border-[#0c0c0c] text-gray-900 px-5 py-2.5 text-sm font-semibold rounded-sm hover:bg-white hover:text-white transition-colors"
-            aria-label={isAr ? `الحصول على الاتجاهات — ${s.name}` : `Get directions — ${s.name}`}
+            className="btn-press inline-block border border-[#2C2C2C] text-[#2C2C2C] px-5 py-2.5 text-sm font-semibold rounded-none hover:bg-[#F5F5F5] hover:text-[#2C2C2C] transition-colors"
+            aria-label={isAr ? `الحصول على الاتجاهات — ${name}` : `Get directions — ${name}`}
           >
             {isAr ? "الحصول على الاتجاهات" : "Get Directions"}
           </a>
         )}
       </div>
     </div>
-  ));
+    );
+  });
 
   return (
     <PageWrapper id="main-content" className="flex-1 bg-white">
       {/* Hero */}
-      <section className="bg-white border-b border-[rgba(0,0,0,0.08)] py-12 md:py-16">
+      <section className="bg-white border-b border-[#D4D4D4] py-12 md:py-16">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
-          <p className="text-xs uppercase tracking-widest text-[#484848] mb-3">
-            <Link href="/" className="hover:text-gray-900 transition-colors">
+          <p className="text-xs uppercase tracking-widest text-[#3A3A3A] mb-3">
+            <Link href="/" className="hover:text-[#2C2C2C] transition-colors">
               {isAr ? "الرئيسية" : "Home"}
             </Link>
             <span className="mx-2">/</span>
             {isAr ? "معارضنا" : "Showrooms"}
           </p>
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-gray-900">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#2C2C2C]">
             {isAr ? "معارضنا" : "Our Showrooms"}
           </h1>
         </div>
@@ -168,7 +139,7 @@ export default async function ShowroomsPage({
       <section className="py-16 md:py-24">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
           <Reveal>
-            <p className="text-[#484848] leading-relaxed max-w-xl mb-12">
+            <p className="text-[#3A3A3A] leading-relaxed max-w-xl mb-12">
               {isAr
                 ? "تفضل بزيارة أحد معارضنا لتجربة مجموعاتنا الكاملة من الأثاث المكتبي الراقي بنفسك. فريقنا جاهز لمساعدتك في اختيار الحل المثالي."
                 : "Visit one of our showrooms to experience our full range of premium office furniture in person. Our team is on hand to help you find the right solution."}
@@ -185,17 +156,17 @@ export default async function ShowroomsPage({
       </section>
 
       {/* Contact strip */}
-      <section className="bg-white border-t border-[rgba(0,0,0,0.08)] py-12">
+      <section className="bg-white border-t border-[#D4D4D4] py-12">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8 text-center">
           <Reveal>
-            <p className="text-[#484848] text-sm mb-4">
+            <p className="text-[#3A3A3A] text-sm mb-4">
               {isAr
                 ? "هل لديك استفسار قبل زيارتنا؟"
                 : "Have a question before visiting us?"}
             </p>
             <Link
               href="/contact"
-              className="text-sm font-semibold text-gray-900 border-b border-[#0c0c0c] pb-0.5 hover:text-[#484848] hover:border-[#484848] transition-colors"
+              className="text-sm font-semibold text-[#2C2C2C] border-b border-[#2C2C2C] pb-0.5 hover:text-[#3A3A3A] hover:border-[#3A3A3A] transition-colors"
             >
               {isAr ? "تواصل معنا" : "Get in touch"}
             </Link>

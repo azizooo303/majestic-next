@@ -25,6 +25,29 @@ import { SectionReveal } from "@/components/common/section-reveal";
 import type { HeroSlide } from "@/components/hero/hero-banner";
 import { getProducts, parsePrice, calcDiscount, PRODUCT_PLACEHOLDER } from "@/lib/woocommerce";
 import { getSiteContent } from "@/lib/wp-settings";
+import {
+  client,
+  SPACE_PANELS_QUERY,
+  COLLECTION_CARDS_QUERY,
+  CRAFTSMANSHIP_IMAGES_QUERY,
+  PROJECT_CASE_STUDIES_QUERY,
+  BRAND_PILLARS_QUERY,
+  MATERIAL_FINISHES_QUERY,
+  INSIGHT_CARDS_QUERY,
+  SITE_STATS_QUERY,
+} from "@/lib/sanity";
+import type {
+  SanitySpacePanel,
+  SanityCollectionCard,
+  SanityCraftsmanshipImage,
+  SanityProjectCaseStudy,
+  SanityBrandPillar,
+  SanityMaterialFinish,
+  SanityInsightCard,
+  SanitySiteStat,
+} from "@/lib/sanity";
+
+export const revalidate = 3600;
 
 export async function generateMetadata({
   params,
@@ -77,9 +100,28 @@ export default async function HomePage({
   const t = await getTranslations({ locale });
   const isAr = locale === "ar";
 
-  const [wcProducts, siteContent] = await Promise.all([
+  const [
+    wcProducts,
+    siteContent,
+    spacePanels,
+    collectionCards,
+    craftsmanshipImages,
+    projectCaseStudies,
+    brandPillars,
+    materialFinishes,
+    insightCards,
+    siteStats,
+  ] = await Promise.all([
     getProducts({ lang: locale, per_page: 8 }).catch(() => [] as Awaited<ReturnType<typeof getProducts>>),
     getSiteContent(),
+    client.fetch<SanitySpacePanel[]>(SPACE_PANELS_QUERY).catch(() => [] as SanitySpacePanel[]),
+    client.fetch<SanityCollectionCard[]>(COLLECTION_CARDS_QUERY).catch(() => [] as SanityCollectionCard[]),
+    client.fetch<SanityCraftsmanshipImage[]>(CRAFTSMANSHIP_IMAGES_QUERY).catch(() => [] as SanityCraftsmanshipImage[]),
+    client.fetch<SanityProjectCaseStudy[]>(PROJECT_CASE_STUDIES_QUERY).catch(() => [] as SanityProjectCaseStudy[]),
+    client.fetch<SanityBrandPillar[]>(BRAND_PILLARS_QUERY).catch(() => [] as SanityBrandPillar[]),
+    client.fetch<SanityMaterialFinish[]>(MATERIAL_FINISHES_QUERY).catch(() => [] as SanityMaterialFinish[]),
+    client.fetch<SanityInsightCard[]>(INSIGHT_CARDS_QUERY).catch(() => [] as SanityInsightCard[]),
+    client.fetch<SanitySiteStat[]>(SITE_STATS_QUERY).catch(() => [] as SanitySiteStat[]),
   ]);
 
   const heroSlides: HeroSlide[] = siteContent.heroSlides.map((s) => ({
@@ -237,28 +279,28 @@ export default async function HomePage({
 
       {/* New Sections — alternating directions for storytelling rhythm */}
       <SectionReveal direction="left" duration={0.8}>
-        {siteContent.sections.spaceTypology && <SpaceTypology isAr={isAr} />}
+        {siteContent.sections.spaceTypology && <SpaceTypology isAr={isAr} panels={spacePanels} />}
       </SectionReveal>
       <SectionReveal direction="up" duration={0.8}>
-        <ProjectsReel isAr={isAr} />
+        <ProjectsReel isAr={isAr} stats={siteStats} />
       </SectionReveal>
       <SectionReveal direction="right" duration={0.8}>
-        {siteContent.sections.collections && <Collections isAr={isAr} />}
+        {siteContent.sections.collections && <Collections isAr={isAr} collections={collectionCards} />}
       </SectionReveal>
       <SectionReveal direction="up" duration={0.7}>
-        {siteContent.sections.craftsmanshipBand && <CraftsmanshipBand isAr={isAr} />}
+        {siteContent.sections.craftsmanshipBand && <CraftsmanshipBand isAr={isAr} images={craftsmanshipImages} />}
       </SectionReveal>
       <SectionReveal direction="left" duration={0.8}>
-        {siteContent.sections.projectScale && <ProjectScale isAr={isAr} />}
+        {siteContent.sections.projectScale && <ProjectScale isAr={isAr} projects={projectCaseStudies} />}
       </SectionReveal>
       <SectionReveal direction="right" duration={0.8}>
-        <BrandStandard isAr={isAr} />
+        <BrandStandard isAr={isAr} pillars={brandPillars} />
       </SectionReveal>
       <SectionReveal direction="up" duration={0.7}>
-        {siteContent.sections.materialSelector && <MaterialSelector isAr={isAr} />}
+        {siteContent.sections.materialSelector && <MaterialSelector isAr={isAr} finishes={materialFinishes} />}
       </SectionReveal>
       <SectionReveal direction="left" duration={0.8}>
-        {siteContent.sections.insightEditorial && <InsightEditorial isAr={isAr} />}
+        {siteContent.sections.insightEditorial && <InsightEditorial isAr={isAr} cards={insightCards} />}
       </SectionReveal>
 
       {/* Promotional Banner */}

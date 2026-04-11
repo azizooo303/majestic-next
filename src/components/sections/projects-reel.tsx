@@ -9,32 +9,50 @@ import { PROJECTS } from "@/data/projects";
 
 const TRACK = [...PROJECTS, ...PROJECTS];
 
-const STATS = [
-  { value: "500+", labelEn: "Projects Delivered", labelAr: "مشروع منجز" },
-  { value: "12+",  labelEn: "Years of Excellence", labelAr: "عاماً من الخبرة" },
-  { value: "6",    labelEn: "GCC Markets", labelAr: "أسواق خليجية" },
-  { value: "100+", labelEn: "Premium Brands", labelAr: "علامة تجارية راقية" },
+import type { SanitySiteStat } from "@/lib/sanity";
+
+interface ProjectsReelProps {
+  isAr: boolean;
+  stats?: SanitySiteStat[];
+  labelEn?: string;
+  labelAr?: string;
+  headingEn?: string;
+  headingAr?: string;
+}
+
+const DEFAULT_STATS = [
+  { _id: "s1", order: 1, value: "500+", labelEn: "Projects Delivered", labelAr: "مشروع منجز" },
+  { _id: "s2", order: 2, value: "12+",  labelEn: "Years of Excellence", labelAr: "عاماً من الخبرة" },
+  { _id: "s3", order: 3, value: "6",    labelEn: "GCC Markets", labelAr: "أسواق خليجية" },
+  { _id: "s4", order: 4, value: "100+", labelEn: "Premium Brands", labelAr: "علامة تجارية راقية" },
 ];
 
-export function ProjectsReel({ isAr }: { isAr: boolean }) {
+export function ProjectsReel({
+  isAr,
+  stats = DEFAULT_STATS,
+  labelEn = "Delivered Projects",
+  labelAr = "مشاريعنا المنجزة",
+  headingEn = "Ministries. Headquarters. Institutions. Across Saudi Arabia and the Gulf.",
+  headingAr = "وزارات. مقرات. مؤسسات. في المملكة ودول الخليج.",
+}: ProjectsReelProps) {
   const [paused, setPaused] = useState(false);
   const reduced = useReducedMotion();
 
   return (
-    <section className="relative w-full bg-[#0c0c0c] overflow-hidden py-12">
+    <section className="relative w-full bg-white border-y border-[#D4D4D4] overflow-hidden py-12">
       {/* Header */}
       <div className="max-w-screen-2xl mx-auto px-4 md:px-8 mb-8 flex items-end justify-between">
         <div>
-          <p className="text-[11px] uppercase tracking-[0.16em] text-white/60 mb-1">
-            {isAr ? "مشاريعنا المنجزة" : "Delivered Projects"}
+          <p className="text-[11px] uppercase tracking-[0.16em] text-[#3A3A3A]/60 mb-1">
+            {isAr ? labelAr : labelEn}
           </p>
-          <h2 className="text-2xl md:text-3xl font-bold text-white tracking-tight leading-tight">
-            {isAr ? "وزارات. مقرات. مؤسسات. في المملكة ودول الخليج." : "Ministries. Headquarters. Institutions. Across Saudi Arabia and the Gulf."}
+          <h2 className="text-2xl md:text-3xl font-bold text-[#2C2C2C] tracking-tight leading-tight">
+            {isAr ? headingAr : headingEn}
           </h2>
         </div>
         <Link
           href="/projects"
-          className="hidden md:flex items-center gap-1.5 text-[13px] text-white/60 hover:text-white transition-colors border-b border-white/20 hover:border-white/60 pb-0.5 whitespace-nowrap"
+          className="hidden md:flex items-center gap-1.5 text-[13px] text-[#3A3A3A]/60 hover:text-[#2C2C2C] transition-colors border-b border-[#D4D4D4] hover:border-[#2C2C2C] pb-0.5 whitespace-nowrap"
         >
           {isAr ? "جميع المشاريع" : "View all projects"}
           <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
@@ -45,13 +63,13 @@ export function ProjectsReel({ isAr }: { isAr: boolean }) {
 
       {/* Trust Metrics */}
       <div className="max-w-screen-2xl mx-auto px-4 md:px-8 mb-8">
-        <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-white/10 border border-white/10">
-          {STATS.map((stat) => (
+        <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-[#D4D4D4] border border-[#D4D4D4]">
+          {stats.map((stat) => (
             <div key={stat.labelEn} className="flex flex-col items-center justify-center py-5 px-4 text-center">
-              <p className="text-2xl md:text-[28px] font-extrabold text-white tracking-tight leading-none">
+              <p className="text-2xl md:text-[28px] font-extrabold text-[#2C2C2C] tracking-tight leading-none">
                 <CountUp value={stat.value} duration={1200} />
               </p>
-              <p className={`mt-1.5 text-white/50 ${isAr ? "text-[12px]" : "text-[10px] uppercase tracking-[0.13em]"}`}>
+              <p className={`mt-1.5 text-[#3A3A3A]/60 ${isAr ? "text-[12px]" : "text-[10px] uppercase tracking-[0.13em]"}`}>
                 {isAr ? stat.labelAr : stat.labelEn}
               </p>
             </div>
@@ -89,8 +107,8 @@ export function ProjectsReel({ isAr }: { isAr: boolean }) {
                   sizes="320px"
                   unoptimized
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-                <div className="absolute inset-0 bg-black/30 opacity-0 group-hover/card:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-[#2C2C2C]/40" />
+                <div className="absolute inset-0 bg-[#2C2C2C]/30 opacity-0 group-hover/card:opacity-100 transition-opacity duration-300" />
                 <div className="absolute bottom-0 left-0 right-0 p-4">
                   <span className="block text-[10px] font-semibold uppercase tracking-[0.12em] text-white/60 mb-0.5">
                     {project.category}
