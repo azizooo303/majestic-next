@@ -12,7 +12,6 @@ import { PromoBanner } from "@/components/common/promo-banner";
 import { ProductCard } from "@/components/shop/product-card";
 import { JsonLd, LocalBusinessJsonLd, WebSiteJsonLd } from "@/components/common/json-ld";
 import { siteUrl } from "@/lib/site-url";
-import { SpaceTypology } from "@/components/sections/space-typology";
 import { ProjectsReel } from "@/components/sections/projects-reel";
 import { Collections } from "@/components/sections/collections";
 import { CraftsmanshipBand } from "@/components/sections/craftsmanship-band";
@@ -27,7 +26,6 @@ import { getProducts, parsePrice, calcDiscount, PRODUCT_PLACEHOLDER } from "@/li
 import { getSiteContent } from "@/lib/wp-settings";
 import {
   client,
-  SPACE_PANELS_QUERY,
   COLLECTION_CARDS_QUERY,
   CRAFTSMANSHIP_IMAGES_QUERY,
   PROJECT_CASE_STUDIES_QUERY,
@@ -37,7 +35,6 @@ import {
   SITE_STATS_QUERY,
 } from "@/lib/sanity";
 import type {
-  SanitySpacePanel,
   SanityCollectionCard,
   SanityCraftsmanshipImage,
   SanityProjectCaseStudy,
@@ -103,7 +100,6 @@ export default async function HomePage({
   const [
     wcProducts,
     siteContent,
-    spacePanels,
     collectionCards,
     craftsmanshipImages,
     projectCaseStudies,
@@ -114,7 +110,6 @@ export default async function HomePage({
   ] = await Promise.all([
     getProducts({ lang: locale, per_page: 8 }).catch(() => [] as Awaited<ReturnType<typeof getProducts>>),
     getSiteContent(),
-    client.fetch<SanitySpacePanel[]>(SPACE_PANELS_QUERY).catch(() => [] as SanitySpacePanel[]),
     client.fetch<SanityCollectionCard[]>(COLLECTION_CARDS_QUERY).catch(() => [] as SanityCollectionCard[]),
     client.fetch<SanityCraftsmanshipImage[]>(CRAFTSMANSHIP_IMAGES_QUERY).catch(() => [] as SanityCraftsmanshipImage[]),
     client.fetch<SanityProjectCaseStudy[]>(PROJECT_CASE_STUDIES_QUERY).catch(() => [] as SanityProjectCaseStudy[]),
@@ -278,9 +273,6 @@ export default async function HomePage({
       </SectionReveal>
 
       {/* New Sections — alternating directions for storytelling rhythm */}
-      <SectionReveal direction="left" duration={0.8}>
-        {siteContent.sections.spaceTypology && <SpaceTypology isAr={isAr} panels={spacePanels} />}
-      </SectionReveal>
       <SectionReveal direction="up" duration={0.8}>
         <ProjectsReel isAr={isAr} stats={siteStats} />
       </SectionReveal>
