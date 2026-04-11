@@ -48,10 +48,16 @@ export function Collections({
         </FadeUp>
 
         <StaggerChildren staggerDelay={0.08} yOffset={24} className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {collections.map((col) => {
+          {collections.map((col, idx) => {
+            // Per-card fallback if Sanity image is missing (3 cards max, by order)
+            const fallbackImages = [
+              "/images/website/s2-a-directorial-suite.jpg",
+              "/images/website/s2-b-collaborative-floor.jpg",
+              "/images/website/s2-c-reception-statement.jpg",
+            ];
             const imageUrl = col.image
-              ? urlFor(col.image).width(600).height(400).url()
-              : `/images/website/s2-a-directorial-suite.jpg`;
+              ? urlFor(col.image).width(1200).height(800).url()
+              : fallbackImages[idx] ?? fallbackImages[0];
             return (
               <div
                 key={col._id}
