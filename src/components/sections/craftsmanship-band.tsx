@@ -122,7 +122,13 @@ export function CraftsmanshipBand({
                   }}
                   dir={isAr ? "rtl" : "ltr"}
                 >
-                  <p className="text-[10px] md:text-[11px] tracking-[0.25em] uppercase opacity-90 mb-1">
+                  <p
+                    className={
+                      isAr
+                        ? "text-[11px] md:text-sm opacity-95 mb-1"
+                        : "text-[10px] md:text-[11px] tracking-[0.25em] uppercase opacity-90 mb-1"
+                    }
+                  >
                     {label}
                   </p>
                   <p className="text-xs md:text-sm leading-snug opacity-95">
