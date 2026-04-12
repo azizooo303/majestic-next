@@ -30,9 +30,9 @@ export const BRAND = {
   logoWhitePath: "/images/majestic-logo-white.png",
   logoBlackPath: "/images/majestic-logo-black.png",
   social: {
-    instagram: "https://www.instagram.com/majestic.furniture.sa",
-    linkedin: "",
-    twitter: "",
+    instagram: "https://www.instagram.com/majesticarabia/",
+    linkedin: "https://www.linkedin.com/company/majestic-office-for-furniture/",
+    whatsapp: "https://wa.me/96692001219",
   },
 } as const;
 
@@ -55,8 +55,8 @@ export const CONTACT = {
     country: "SA",
   },
   hours: {
-    en: "Sun–Thu 9am–6pm",
-    ar: "الأحد–الخميس، ٩ص–٥م",
+    en: "Sun–Thu 9am–9pm",
+    ar: "الأحد–الخميس، ٩ص–٩م",
   },
 } as const;
 
@@ -71,7 +71,7 @@ export const SHOWROOMS = [
       en: "King Fahad Road, Al Olaya District, Riyadh",
       ar: "طريق الملك فهد، حي العليا، الرياض",
     },
-    phone: "+966 11 234 5678",
+    phone: "+966 9200 12019",
     mapsUrl: "",
     image: "/images/hero-tables.jpg",
     comingSoon: false,
@@ -83,7 +83,7 @@ export const SHOWROOMS = [
       en: "Al Malaz Street, Al Malaz District, Riyadh",
       ar: "شارع الملز، حي الملز، الرياض",
     },
-    phone: "+966 11 345 6789",
+    phone: "+966 9200 12019",
     mapsUrl: "",
     image: "/images/hero-tables.jpg",
     comingSoon: false,
@@ -216,6 +216,6 @@ export const SEO = {
     en: "Saudi Arabia's premier destination for professional office furniture. Executive desks, ergonomic chairs, and workstations for elevated workspace environments.",
     ar: "الوجهة الأولى في المملكة العربية السعودية للأثاث المكتبي الاحترافي.",
   },
-  twitterHandle: "@majesticsa",
+  twitterHandle: "",
   ogImage: "/images/og-image.jpg",
 } as const;

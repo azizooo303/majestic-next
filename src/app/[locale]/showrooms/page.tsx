@@ -20,8 +20,8 @@ export async function generateMetadata({
   return {
     title: isAr ? "معارض أثاث مكتبي الرياض | ماجستيك" : "Office Furniture Showrooms Riyadh | Majestic",
     description: isAr
-      ? "زور أحد معارض ماجستيك الثلاثة في الرياض وشاهد مجموعتنا من الأثاث المكتبي الراقي. مفتوح الأحد–الخميس من 9 صباحاً حتى 6 مساءً."
-      : "Visit one of Majestic's three Riyadh showrooms and experience our premium office furniture collection in person. Open Sunday–Thursday, 9am–6pm.",
+      ? "زور أحد معارض ماجستيك الثلاثة في الرياض وشاهد مجموعتنا من الأثاث المكتبي الراقي. مفتوح الأحد–الخميس من 9 صباحاً حتى 9 مساءً."
+      : "Visit one of Majestic's three Riyadh showrooms and experience our premium office furniture collection in person. Open Sunday–Thursday, 9am–9pm.",
     alternates: {
       canonical: siteUrl(`/${locale}/showrooms`),
       languages: {

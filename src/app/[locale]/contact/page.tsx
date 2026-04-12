@@ -142,11 +142,11 @@ export default async function ContactPage({
                           {isAr ? "الهاتف" : "Phone"}
                         </p>
                         <a
-                          href="tel:+966112345678"
+                          href="tel:+96692001219"
                           className="text-[#2C2C2C] text-sm hover:text-[#3A3A3A] transition-colors"
                           dir="ltr"
                         >
-                          +966 11 234 5678
+                          +966 9200 12019
                         </a>
                       </div>
                     </div>
@@ -161,10 +161,10 @@ export default async function ContactPage({
                           {isAr ? "البريد الإلكتروني" : "Email"}
                         </p>
                         <a
-                          href="mailto:info@majesticfurniture.sa"
+                          href="mailto:info@majestic.com.sa"
                           className="text-[#2C2C2C] text-sm hover:text-[#3A3A3A] transition-colors"
                         >
-                          info@majesticfurniture.sa
+                          info@majestic.com.sa
                         </a>
                       </div>
                     </div>
@@ -180,9 +180,30 @@ export default async function ContactPage({
                         </p>
                         <p className="text-[#2C2C2C] text-sm">
                           {isAr
-                            ? "الأحد – الخميس: 9 صباحاً – 6 مساءً"
-                            : "Sun – Thu: 9am – 6pm"}
+                            ? "الأحد – الخميس: 9 صباحاً – 9 مساءً"
+                            : "Sun – Thu: 9am – 9pm"}
                         </p>
+                      </div>
+                    </div>
+
+                    {/* WhatsApp */}
+                    <div className="flex gap-4">
+                      <div className="w-8 h-8 border border-[#D4D4D4] rounded-none flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <span className="text-xs font-bold">W</span>
+                      </div>
+                      <div>
+                        <p className="text-xs uppercase tracking-wider font-semibold text-[#3A3A3A] mb-1">
+                          WhatsApp
+                        </p>
+                        <a
+                          href="https://wa.me/96692001219"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-[#2C2C2C] text-sm hover:text-[#3A3A3A] transition-colors"
+                          dir="ltr"
+                        >
+                          +966 9200 12019
+                        </a>
                       </div>
                     </div>
                   </div>

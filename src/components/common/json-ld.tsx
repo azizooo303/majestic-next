@@ -93,7 +93,7 @@ export function LocalBusinessJsonLd() {
     "@type": "LocalBusiness",
     name: "Majestic Furniture",
     url: siteUrl(),
-    email: "a.alahmadi@majestic.com.sa",
+    email: "info@majestic.com.sa",
     address: {
       "@type": "PostalAddress",
       streetAddress: "Al Olaya District",
@@ -117,7 +117,7 @@ export function LocalBusinessJsonLd() {
           "Thursday",
         ],
         opens: "09:00",
-        closes: "18:00",
+        closes: "21:00",
       },
     ],
     priceCurrency: "SAR",

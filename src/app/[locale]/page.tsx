@@ -172,7 +172,7 @@ export default async function HomePage({
     },
     contactPoint: {
       "@type": "ContactPoint",
-      email: "a.alahmadi@majestic.com.sa",
+      email: "info@majestic.com.sa",
     },
   };
 
@@ -277,7 +277,7 @@ export default async function HomePage({
             {/* Social links */}
             <div className="flex justify-center gap-6 mt-6">
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/majesticarabia/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[#484848] hover:text-[#0c0c0c] text-sm transition-colors"
@@ -285,7 +285,7 @@ export default async function HomePage({
                 Instagram
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/company/majestic-office-for-furniture/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[#484848] hover:text-[#0c0c0c] text-sm transition-colors"
@@ -293,12 +293,12 @@ export default async function HomePage({
                 LinkedIn
               </a>
               <a
-                href="https://facebook.com"
+                href="https://wa.me/96692001219"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[#484848] hover:text-[#0c0c0c] text-sm transition-colors"
               >
-                Facebook
+                WhatsApp
               </a>
             </div>
           </div>

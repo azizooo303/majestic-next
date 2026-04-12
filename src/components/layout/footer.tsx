@@ -36,10 +36,9 @@ export async function Footer() {
       {/* Social links */}
       <div className="flex gap-5 mt-6">
         {[
-          { label: "Instagram", href: "https://instagram.com" },
-          { label: "LinkedIn", href: "https://linkedin.com" },
-          { label: "Facebook", href: "https://facebook.com" },
-          { label: "X", href: "https://x.com" },
+          { label: "Instagram", href: "https://www.instagram.com/majesticarabia/" },
+          { label: "LinkedIn", href: "https://www.linkedin.com/company/majestic-office-for-furniture/" },
+          { label: "WhatsApp", href: "https://wa.me/96692001219" },
         ].map((s) => (
           <a
             key={s.label}
@@ -167,7 +166,7 @@ export async function Footer() {
           info@majestic.com.sa
         </a>
         <p className="text-sm text-[#3A3A3A]">
-          {isAr ? "الأحد–الخميس، ٩ص–٦م" : "Sun–Thu 9am–6pm"}
+          {isAr ? "الأحد–الخميس، ٩ص–٩م" : "Sun–Thu 9am–9pm"}
         </p>
       </address>
     </div>
