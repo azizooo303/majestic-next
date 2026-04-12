@@ -6,12 +6,12 @@ import { useLocale } from "next-intl";
 import { ChevronRight } from "lucide-react";
 
 const SIDEBAR_CATEGORIES = [
-  { slug: "seating",     en: "Seating",      ar: "الجلوس" },
-  { slug: "tables",      en: "Desks",         ar: "المكاتب" },
-  { slug: "storage",     en: "Storage",       ar: "التخزين" },
-  { slug: "workstations",en: "Workstations",  ar: "محطات العمل" },
-  { slug: "acoustics",   en: "Acoustics",     ar: "العوازل" },
-  { slug: "lounge",      en: "Lounge",        ar: "الاسترخاء" },
+  { slugEn: "seating",             slugAr: "%d8%a7%d9%84%d9%85%d9%82%d8%a7%d8%b9%d8%af",       en: "Seating",      ar: "المقاعد" },
+  { slugEn: "tables-en",           slugAr: "%d8%a7%d9%84%d8%b7%d8%a7%d9%88%d9%84%d8%a7%d8%aa",  en: "Desks",        ar: "الطاولات" },
+  { slugEn: "storage",             slugAr: "%d8%a7%d9%84%d8%aa%d8%ae%d8%b2%d9%8a%d9%86",        en: "Storage",      ar: "التخزين" },
+  { slugEn: "workstations",        slugAr: "workstations",                                       en: "Workstations", ar: "محطات العمل" },
+  { slugEn: "acoustics-solutions", slugAr: "acoustics-solutions",                                en: "Acoustics",    ar: "العوازل" },
+  { slugEn: "lounge",              slugAr: "%d8%a7%d9%84%d8%b5%d8%a7%d9%84%d8%a9",              en: "Lounge",       ar: "الاسترخاء" },
 ];
 
 const BRANDS = [
@@ -81,14 +81,14 @@ export function ShopSidebar({ activeCategory }: ShopSidebarProps) {
           </summary>
           <ul className="space-y-2.5">
             {SIDEBAR_CATEGORIES.map((cat) => {
-              const isActive = activeCategory === cat.slug;
+              const isActive = activeCategory === cat.slugEn || activeCategory === cat.slugAr;
               return (
-                <li key={cat.slug}>
+                <li key={cat.slugEn}>
                   <label className="flex items-center gap-2.5 cursor-pointer group/item">
                     <input
                       type="checkbox"
                       checked={isActive}
-                      onChange={() => setCategory(cat.slug)}
+                      onChange={() => setCategory(isAr ? cat.slugAr : cat.slugEn)}
                       className="w-3.5 h-3.5 rounded-sm border border-[#D4D4D4] accent-[#2C2C2C] cursor-pointer"
                     />
                     <span

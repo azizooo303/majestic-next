@@ -42,13 +42,6 @@ export async function generateMetadata({
   };
 }
 
-// Maps friendly nav slugs → actual WC slugs on staging
-const SLUG_MAP: Record<string, string> = {
-  tables: "tables-en",
-  acoustics: "acoustics-solutions",
-  chairs: "seating",
-};
-
 const SORT_MAP: Record<string, { orderby: string; order: "asc" | "desc" }> = {
   "price-asc": { orderby: "price", order: "asc" },
   "price-desc": { orderby: "price", order: "desc" },
@@ -74,7 +67,7 @@ export default async function ShopPage({
 
   // Parse URL params
   const categorySlugRaw = typeof sp.category === "string" ? sp.category : undefined;
-  const categorySlug = categorySlugRaw ? (SLUG_MAP[categorySlugRaw] ?? categorySlugRaw) : undefined;
+  const categorySlug = categorySlugRaw ?? undefined;
   const search = typeof sp.search === "string" ? sp.search : undefined;
   const page = Math.max(1, parseInt(typeof sp.page === "string" ? sp.page : "1", 10));
   const sort = typeof sp.sort === "string" ? sp.sort : "featured";
