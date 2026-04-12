@@ -49,7 +49,7 @@ const SORT_MAP: Record<string, { orderby: string; order: "asc" | "desc" }> = {
   featured: { orderby: "menu_order", order: "asc" },
 };
 
-const PER_PAGE = 24;
+const PER_PAGE = 48;
 
 // ── Page ──────────────────────────────────────────────────────────────────────
 
