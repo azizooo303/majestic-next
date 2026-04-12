@@ -66,12 +66,12 @@ export async function generateMetadata({
 
 
 const CATEGORIES = [
-  { slug: "seating", key: "seating" as const, image: "/images/category-seating.png" },
-  { slug: "tables", key: "tables" as const, image: "/images/category-tables.png" },
-  { slug: "storage", key: "storage" as const, image: "/images/category-storage.png" },
-  { slug: "workstations", key: "workstations" as const, image: "/images/category-workstations.png" },
-  { slug: "acoustics", key: "acoustics" as const, image: "/images/category-acoustics.png" },
-  { slug: "lounge", key: "lounge" as const, image: "/images/category-lounge.png" },
+  { slugEn: "seating",             slugAr: "%d8%a7%d9%84%d9%85%d9%82%d8%a7%d8%b9%d8%af",       key: "seating" as const,      image: "/images/category-seating.png" },
+  { slugEn: "tables-en",           slugAr: "%d8%a7%d9%84%d8%b7%d8%a7%d9%88%d9%84%d8%a7%d8%aa",  key: "tables" as const,       image: "/images/category-tables.png" },
+  { slugEn: "storage",             slugAr: "%d8%a7%d9%84%d8%aa%d8%ae%d8%b2%d9%8a%d9%86",        key: "storage" as const,      image: "/images/category-storage.png" },
+  { slugEn: "workstations",        slugAr: "workstations",                                       key: "workstations" as const, image: "/images/category-workstations.png" },
+  { slugEn: "acoustics-solutions", slugAr: "acoustics-solutions",                                key: "acoustics" as const,    image: "/images/category-acoustics.png" },
+  { slugEn: "lounge",              slugAr: "%d8%a7%d9%84%d8%b5%d8%a7%d9%84%d8%a9",              key: "lounge" as const,       image: "/images/category-lounge.png" },
 ];
 
 export default async function HomePage({
@@ -113,8 +113,8 @@ export default async function HomePage({
 
   const categoryItems = CATEGORIES.map((cat) => (
     <Link
-      key={cat.slug}
-      href={`/shop?category=${cat.slug}`}
+      key={cat.key}
+      href={`/shop?category=${isAr ? cat.slugAr : cat.slugEn}`}
       className="group relative flex flex-col overflow-hidden border border-[rgba(0,0,0,0.21)] hover:border-[rgba(0,0,0,0.38)] active:scale-[0.99] transition-all focus-visible:outline-2 focus-visible:outline-[#0c0c0c] focus-visible:outline-offset-2"
     >
       <div className="relative aspect-[3/4] bg-[#fafafa] overflow-hidden">
