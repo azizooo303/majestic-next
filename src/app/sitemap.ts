@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next'
 import { getProducts, WCProduct } from '@/lib/woocommerce'
+import { client, ALL_SLUGS_QUERY } from '@/lib/sanity'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const base = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://majestic-next.vercel.app').trim().replace(/\/$/, '')
@@ -46,7 +47,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }))
   )
 
-  const blogSlugs = ['ergonomic-workspace-guide', 'executive-desk-buying-guide', 'office-design-trends-2024']
+  let blogSlugs: string[] = []
+  try {
+    const slugResults: { slug: string }[] = await client.fetch(ALL_SLUGS_QUERY)
+    blogSlugs = slugResults.map(s => s.slug)
+  } catch (err) {
+    console.error('[sitemap] Failed to fetch blog slugs from Sanity:', err)
+    blogSlugs = ['ergonomic-workspace-guide', 'executive-desk-buying-guide', 'office-design-trends-2024']
+  }
   const blogEntries: MetadataRoute.Sitemap = locales.flatMap(locale =>
     blogSlugs.map(slug => ({
       url: `${base}/${locale}/blog/${slug}`,

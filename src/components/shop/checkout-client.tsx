@@ -458,7 +458,7 @@ function StepPayment({
   const installment3 = Math.ceil(total / 3);
 
   return (
-    <div className="flex flex-col gap-6">
+    <fieldset disabled={submitting} className="flex flex-col gap-6">
       <h2 className="text-xl font-bold text-[#2C2C2C]">
         {isAr ? "طريقة الدفع" : "Payment Method"}
       </h2>
@@ -628,7 +628,7 @@ function StepPayment({
         <ChevronLeft size={14} />
         {isAr ? "العودة إلى العنوان" : "Back to Address"}
       </button>
-    </div>
+    </fieldset>
   );
 }
 
@@ -843,9 +843,11 @@ export function CheckoutClient() {
                     submitting={submitting}
                   />
                   {orderError && (
-                    <p className="mt-4 text-sm text-[#2C2C2C] font-medium text-center" role="alert">
-                      {orderError}
-                    </p>
+                    <div className="mt-4 p-4 border border-red-300 bg-red-50 rounded-sm" role="alert">
+                      <p className="text-sm text-red-700 font-medium text-center">
+                        {orderError}
+                      </p>
+                    </div>
                   )}
                 </>
               )}

@@ -36,7 +36,7 @@ export function InsightEditorial({
               </h2>
             </div>
             <Link
-              href="/insights"
+              href="/inspirations"
               className="hidden md:block text-sm font-medium text-[#3A3A3A] hover:text-gray-900 border-b border-[#3A3A3A] pb-0.5 transition-colors"
             >
               {isAr ? "جميع المقالات" : "All Articles"}
@@ -71,7 +71,7 @@ export function InsightEditorial({
                     {isAr ? card.titleAr : card.titleEn}
                   </h3>
                   <Link
-                    href={card.link ?? "/insights"}
+                    href={card.link ?? "/inspirations"}
                     className="text-xs font-semibold text-gray-900 hover:text-[#3A3A3A] transition-colors inline-flex items-center gap-1 group/link"
                   >
                     {isAr ? "اقرأ" : "Read"}

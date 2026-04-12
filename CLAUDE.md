@@ -2,6 +2,15 @@
 
 # Majestic Next.js — Headless Rebuild
 
+> **MANDATORY FIRST STEP — EVERY SESSION, EVERY AGENT**
+> Before doing ANY work, read the HQ knowledge base:
+> 1. `HQ/Home.md` — the full org dashboard
+> 2. The relevant `HQ/Projects/` page for this project
+> 3. Only then proceed to project files
+>
+> HQ vault path: `C:/Users/Admin/Desktop/Majestic-HQ/HQ/`
+
+
 ## What This Is
 The Next.js headless frontend for **Majestic Furniture** (TheDeskCo) — Saudi Arabia's premier workspace furniture brand. This repo is the full website rebuild, replacing the old WordPress/Elementor frontend with a modern, bilingual (EN/AR) Next.js app deployed on Vercel.
 

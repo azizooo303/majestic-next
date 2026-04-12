@@ -52,7 +52,12 @@ export default async function BlogPage({
   const { locale } = await params;
   const isAr = locale === "ar";
 
-  const posts: SanityBlogPost[] = await client.fetch(POSTS_QUERY);
+  let posts: SanityBlogPost[] = [];
+  try {
+    posts = await client.fetch(POSTS_QUERY);
+  } catch (err) {
+    console.error("[blog] Failed to fetch posts from Sanity:", err);
+  }
 
   const postItems = posts.map((post) => {
     const imageUrl = post.mainImage

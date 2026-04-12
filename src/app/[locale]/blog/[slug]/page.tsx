@@ -17,8 +17,13 @@ import type { Metadata } from "next";
 export const revalidate = 3600;
 
 export async function generateStaticParams() {
-  const slugs: { slug: string }[] = await client.fetch(ALL_SLUGS_QUERY);
-  return slugs.map(({ slug }) => ({ slug }));
+  try {
+    const slugs: { slug: string }[] = await client.fetch(ALL_SLUGS_QUERY);
+    return slugs.map(({ slug }) => ({ slug }));
+  } catch (err) {
+    console.error("[blog] Failed to fetch slugs from Sanity:", err);
+    return [];
+  }
 }
 
 export async function generateMetadata({
