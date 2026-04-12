@@ -2,9 +2,19 @@ import { createClient } from "@sanity/client";
 import { readFile } from "node:fs/promises";
 import { basename } from "node:path";
 
+// Load .env.local automatically (no dependency needed)
+import { readFile as rf } from "node:fs/promises";
+try {
+  const envText = await rf(new URL("../.env.local", import.meta.url), "utf8");
+  for (const line of envText.split("\n")) {
+    const match = line.match(/^([A-Z_]+)=(.+)$/);
+    if (match) process.env[match[1]] ??= match[2].trim();
+  }
+} catch { /* .env.local not found — rely on shell env */ }
+
 const TOKEN = process.env.SANITY_TOKEN;
 if (!TOKEN) {
-  console.error("Missing SANITY_TOKEN env variable. Run with:\n  SANITY_TOKEN=sk... node scripts/upload-construction-detail.mjs");
+  console.error("Missing SANITY_TOKEN. Add it to .env.local or run with:\n  SANITY_TOKEN=sk... node scripts/upload-construction-detail.mjs");
   process.exit(1);
 }
 
