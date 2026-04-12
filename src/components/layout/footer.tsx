@@ -38,7 +38,7 @@ export async function Footer() {
         {[
           { label: "Instagram", href: "https://www.instagram.com/majesticarabia/" },
           { label: "LinkedIn", href: "https://www.linkedin.com/company/majestic-office-for-furniture/" },
-          { label: "WhatsApp", href: "https://wa.me/96692001219" },
+          { label: "WhatsApp", href: "https://wa.me/966920012019" },
         ].map((s) => (
           <a
             key={s.label}
@@ -154,7 +154,7 @@ export async function Footer() {
             : "Arcade Centre, Al Rashidiah, Riyadh"}
         </p>
         <a
-          href="tel:+96692001219"
+          href="tel:+966920012019"
           className="block text-sm text-[#3A3A3A] hover:text-[#2C2C2C] transition-colors"
         >
           +966 9200 12019

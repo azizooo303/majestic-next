@@ -2,12 +2,13 @@ import { Link } from "@/i18n/navigation";
 import { PageWrapper } from "@/components/common/page-wrapper";
 import { Reveal } from "@/components/common/reveal";
 import { FaqPageJsonLd } from "@/components/common/json-ld";
+import { FaqClient } from "@/components/faq/faq-client";
 import { siteUrl } from "@/lib/site-url";
 import type { Metadata } from "next";
 import { client, FAQ_QUERY } from "@/lib/sanity";
 import type { SanityFaqItem } from "@/lib/sanity";
 
-export const revalidate = 3600;
+export const revalidate = 86400;
 
 export async function generateMetadata({
   params,
@@ -41,6 +42,7 @@ export async function generateMetadata({
   };
 }
 
+// Category labels shown in the UI (localized)
 const CATEGORY_LABELS = (isAr: boolean) => [
   isAr ? "الكل" : "All",
   isAr ? "الطلبات" : "Ordering",
@@ -49,6 +51,9 @@ const CATEGORY_LABELS = (isAr: boolean) => [
   isAr ? "الضمان" : "Warranty",
   isAr ? "الإرجاع" : "Returns",
 ];
+
+// English values used to match against faqItem.category from Sanity
+const CATEGORY_VALUES = ["all", "ordering", "delivery", "products", "warranty", "returns"];
 
 export default async function FaqPage({
   params,
@@ -66,6 +71,7 @@ export default async function FaqPage({
   const faqs = faqItems.map((item) => ({
     q: isAr ? item.questionAr : item.questionEn,
     a: isAr ? item.answerAr : item.answerEn,
+    category: item.category,
   }));
 
   // Build EN FAQ list for JSON-LD schema
@@ -95,82 +101,19 @@ export default async function FaqPage({
 
       <section className="py-16 md:py-24">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
-          {/* Search bar (visual only) */}
-          <Reveal>
-            <div className="flex justify-center mb-12">
-              <div className="relative w-full max-w-lg">
-                <svg
-                  className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-[#3A3A3A] pointer-events-none"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <circle cx="11" cy="11" r="8" strokeWidth="2" />
-                  <path d="m21 21-4.35-4.35" strokeWidth="2" strokeLinecap="round" />
-                </svg>
-                {/* TODO: wire search */}
-                <input
-                  type="search"
-                  placeholder={isAr ? "ابحث في الأسئلة..." : "Search questions..."}
-                  className="border border-[#D4D4D4] rounded-none px-4 py-3 ps-10 w-full text-sm text-[#2C2C2C] placeholder:text-[#3A3A3A] focus:outline-none focus:border-[#2C2C2C] transition-colors cursor-not-allowed opacity-50"
-                  readOnly
-                  aria-label={isAr ? "بحث في الأسئلة الشائعة" : "Search FAQ"}
-                />
-              </div>
-            </div>
-          </Reveal>
+          {/*
+           * TODO: FAQ search bar — implement full-text search once FAQ volume justifies it.
+           * Client-side filtering over the faqs array is the simplest approach.
+           * Do not re-add a readOnly/disabled input — it is worse than no input.
+           */}
 
-          {/* Category tabs — first tab visually active */}
-          <Reveal>
-            <div
-              className="flex gap-2 flex-wrap mb-10"
-              role="tablist"
-              aria-label={isAr ? "تصفية الأسئلة" : "FAQ categories"}
-            >
-              {categories.map((cat, i) => (
-                <button
-                  key={cat}
-                  role="tab"
-                  aria-selected={i === 0}
-                  className={`px-4 py-2 text-sm font-medium rounded-none border transition-colors ${
-                    i === 0
-                      ? "bg-[#2C2C2C] text-white border-[#2C2C2C]"
-                      : "bg-white text-[#3A3A3A] border-[rgba(0,0,0,0.21)] hover:border-[#2C2C2C] hover:text-[#2C2C2C]"
-                  }`}
-                >
-                  {cat}
-                </button>
-              ))}
-            </div>
-          </Reveal>
-
-          {/* Accordion */}
-          <div className="space-y-2">
-            {faqs.map((faq, i) => (
-              <Reveal key={i}>
-                <details
-                  className="group border border-[rgba(0,0,0,0.21)] rounded-none overflow-hidden"
-                  open={i === 0}
-                >
-                  <summary className="flex items-center justify-between px-6 py-4 cursor-pointer list-none select-none hover:bg-white transition-colors">
-                    <span className="font-semibold text-[#2C2C2C] text-sm md:text-base pr-4">
-                      {faq.q}
-                    </span>
-                    <span
-                      className="flex-shrink-0 w-6 h-6 border border-[rgba(0,0,0,0.21)] rounded-none flex items-center justify-center text-xs font-bold text-[#3A3A3A] group-open:bg-[#2C2C2C] group-open:text-white group-open:border-[#2C2C2C] transition-colors"
-                      aria-hidden="true"
-                    >
-                      +
-                    </span>
-                  </summary>
-                  <div className="px-6 pb-5 pt-1 border-t border-[#D4D4D4]">
-                    <p className="text-[#3A3A3A] leading-relaxed text-sm">{faq.a}</p>
-                  </div>
-                </details>
-              </Reveal>
-            ))}
-          </div>
+          {/* Interactive tabs + filtered accordion (client component) */}
+          <FaqClient
+            faqs={faqs}
+            categories={categories}
+            categoryValues={CATEGORY_VALUES}
+            isAr={isAr}
+          />
 
           {/* Bottom CTA */}
           <Reveal>

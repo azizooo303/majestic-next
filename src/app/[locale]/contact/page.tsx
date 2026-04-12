@@ -2,8 +2,11 @@ import { Link } from "@/i18n/navigation";
 import { PageWrapper } from "@/components/common/page-wrapper";
 import { Reveal } from "@/components/common/reveal";
 import { ContactForm } from "@/components/contact/contact-form";
+import { JsonLd } from "@/components/common/json-ld";
 import { siteUrl } from "@/lib/site-url";
 import type { Metadata } from "next";
+
+export const revalidate = 86400;
 
 export async function generateMetadata({
   params,
@@ -60,8 +63,31 @@ export default async function ContactPage({
     },
   ];
 
+  const contactPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "@id": siteUrl("/en/contact"),
+    url: siteUrl(`/${locale}/contact`),
+    name: isAr
+      ? "تواصل مع ماجستيك — أثاث مكتبي السعودية"
+      : "Contact Majestic — Office Furniture Saudi Arabia",
+    description: isAr
+      ? "تواصل مع ماجستيك لمشاريع الأثاث المكتبي وعروض الأسعار وزيارة المعرض."
+      : "Contact Majestic for office furniture projects, quotations, and showroom visits.",
+    mainEntity: {
+      "@id": "https://majestic-next.vercel.app/#organization",
+    },
+    isPartOf: {
+      "@type": "WebSite",
+      url: siteUrl(),
+      name: "Majestic Furniture",
+    },
+  };
+
   return (
-    <PageWrapper id="main-content" className="flex-1 bg-white">
+    <>
+      <JsonLd data={contactPageSchema} />
+      <PageWrapper id="main-content" className="flex-1 bg-white">
       {/* Hero */}
       <section className="bg-white border-b border-[#D4D4D4] py-12 md:py-16">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
@@ -142,11 +168,11 @@ export default async function ContactPage({
                           {isAr ? "الهاتف" : "Phone"}
                         </p>
                         <a
-                          href="tel:+96692001219"
+                          href="tel:+966920012019"
                           className="text-[#2C2C2C] text-sm hover:text-[#3A3A3A] transition-colors"
                           dir="ltr"
                         >
-                          +966 9200 12019
+                          +966 920 012019
                         </a>
                       </div>
                     </div>
@@ -196,7 +222,7 @@ export default async function ContactPage({
                           WhatsApp
                         </p>
                         <a
-                          href="https://wa.me/96692001219"
+                          href="https://wa.me/966920012019"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="text-[#2C2C2C] text-sm hover:text-[#3A3A3A] transition-colors"
@@ -235,5 +261,6 @@ export default async function ContactPage({
         </div>
       </section>
     </PageWrapper>
+    </>
   );
 }

@@ -3,12 +3,13 @@ import { Link } from "@/i18n/navigation";
 import { PageWrapper } from "@/components/common/page-wrapper";
 import { Reveal } from "@/components/common/reveal";
 import { StaggerGrid } from "@/components/common/stagger-grid";
+import { ShowroomLocalBusinessJsonLd } from "@/components/common/json-ld";
 import { siteUrl } from "@/lib/site-url";
 import type { Metadata } from "next";
 import { client, SHOWROOMS_QUERY, urlFor } from "@/lib/sanity";
 import type { SanityShowroom } from "@/lib/sanity";
 
-export const revalidate = 3600;
+export const revalidate = 86400;
 
 export async function generateMetadata({
   params,
@@ -117,8 +118,24 @@ export default async function ShowroomsPage({
     );
   });
 
+  // Only emit schema for showrooms that are not "coming soon" — they have real
+  // address data and map links. Coming-soon locations lack structured data value.
+  const liveShowrooms = showroomsData.filter((s) => !s.isComingSoon);
+
   return (
-    <PageWrapper id="main-content" className="flex-1 bg-white">
+    <>
+      {liveShowrooms.map((s) => (
+        <ShowroomLocalBusinessJsonLd
+          key={s._id}
+          id={s._id}
+          name={s.nameEn}
+          address={s.addressEn ?? "Al Olaya District"}
+          city="Riyadh"
+          telephone={s.phone ?? undefined}
+          mapsUrl={s.mapsUrl ?? undefined}
+        />
+      ))}
+      <PageWrapper id="main-content" className="flex-1 bg-white">
       {/* Hero */}
       <section className="bg-white border-b border-[#D4D4D4] py-12 md:py-16">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
@@ -174,5 +191,6 @@ export default async function ShowroomsPage({
         </div>
       </section>
     </PageWrapper>
+    </>
   );
 }

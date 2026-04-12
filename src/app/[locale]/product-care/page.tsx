@@ -3,6 +3,8 @@ import { Reveal } from "@/components/common/reveal";
 import { Link } from "@/i18n/navigation";
 import { siteUrl } from "@/lib/site-url";
 
+export const revalidate = 86400;
+
 export async function generateMetadata({
   params,
 }: {

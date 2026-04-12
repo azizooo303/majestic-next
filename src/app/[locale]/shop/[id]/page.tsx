@@ -11,6 +11,8 @@ import { siteUrl } from "@/lib/site-url";
 import type { Metadata } from "next";
 import { getProduct, getProducts, parsePrice, calcDiscount, PRODUCT_PLACEHOLDER } from "@/lib/woocommerce";
 
+export const revalidate = 1800;
+
 // ── Metadata ──────────────────────────────────────────────────────────────────
 
 export async function generateMetadata({
@@ -202,12 +204,14 @@ export default async function ProductDetailPage({
                     categoryAr: category,
                   }}
                 />
-                <button
+                <Link
+                  href={`/quotation?product=${encodeURIComponent(product.name)}&id=${product.id}`}
                   className="btn-press w-full border border-[#2C2C2C] text-[#2C2C2C] py-4
-                    font-semibold rounded-none hover:bg-[#F5F5F5] transition-colors cursor-pointer text-sm"
+                    font-semibold rounded-none hover:bg-[#F5F5F5] transition-colors text-sm
+                    flex items-center justify-center"
                 >
                   {isAr ? "طلب عرض سعر" : "Request a Quote"}
-                </button>
+                </Link>
               </div>
 
               <hr className="border-[#D4D4D4]" />

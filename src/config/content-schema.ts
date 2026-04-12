@@ -140,7 +140,7 @@ export const SITE_DEFAULTS: SiteContent = {
   },
   contact: {
     phone: '+966 9200 12019',
-    phoneHref: 'tel:+96692001219',
+    phoneHref: 'tel:+966920012019',
     email: 'info@majestic.com.sa',
     addressEn: 'Arcade Centre, Al Rashidiah, Riyadh',
     addressAr: 'أركيد سنتر، الرشيدية، الرياض',

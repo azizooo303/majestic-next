@@ -6,6 +6,8 @@ import { BreadcrumbListJsonLd } from "@/components/common/json-ld";
 import { siteUrl } from "@/lib/site-url";
 import type { Metadata } from "next";
 
+export const revalidate = 86400;
+
 export async function generateMetadata({
   params,
 }: {

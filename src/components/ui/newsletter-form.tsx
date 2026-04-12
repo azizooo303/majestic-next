@@ -57,12 +57,12 @@ export function NewsletterForm() {
         {t("common.subscribe")}
       </button>
       {status === "success" && (
-        <p className="sm:absolute sm:top-full sm:mt-2 text-sm text-[#2C2C2C] mt-2">
+        <p className="sm:absolute sm:top-full sm:mt-2 text-sm text-green-700 mt-2" role="status">
           {t("common.subscribeThankYou")}
         </p>
       )}
       {status === "error" && (
-        <p className="sm:absolute sm:top-full sm:mt-2 text-sm text-[#2C2C2C] font-medium mt-2">
+        <p className="sm:absolute sm:top-full sm:mt-2 text-sm text-red-600 font-medium mt-2" role="alert">
           {t("common.invalidEmail")}
         </p>
       )}

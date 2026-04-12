@@ -2,12 +2,13 @@ import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { Reveal } from "@/components/common/reveal";
 import { PageWrapper } from "@/components/common/page-wrapper";
+import { JsonLd } from "@/components/common/json-ld";
 import { siteUrl } from "@/lib/site-url";
 import type { Metadata } from "next";
 import { client, ABOUT_PAGE_QUERY, urlFor } from "@/lib/sanity";
 import type { SanityAboutPage } from "@/lib/sanity";
 
-export const revalidate = 3600;
+export const revalidate = 86400;
 
 export async function generateMetadata({
   params,
@@ -94,8 +95,31 @@ export default async function AboutPage({
     ? (about?.ctaBodyAr ?? "مفتوح من الأحد إلى الخميس. فريقنا في انتظارك.")
     : (about?.ctaBodyEn ?? "Open Sunday through Thursday. Our team is ready.");
 
+  const aboutPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "@id": siteUrl("/en/about"),
+    url: siteUrl(`/${locale}/about`),
+    name: isAr
+      ? "عن ماجستيك — أثاث مكتبي في السعودية والخليج"
+      : "About Majestic — Office Furniture Saudi Arabia & Gulf",
+    description: isAr
+      ? "ماجستيك تورد بيئات عمل احترافية للقطاعين الحكومي والخاص في المملكة ودول الخليج."
+      : "Majestic supplies professional workspace environments to corporate and government organizations across Saudi Arabia and the Gulf.",
+    about: {
+      "@id": "https://majestic-next.vercel.app/#organization",
+    },
+    isPartOf: {
+      "@type": "WebSite",
+      url: siteUrl(),
+      name: "Majestic Furniture",
+    },
+  };
+
   return (
-    <PageWrapper id="main-content" className="flex-1 bg-white">
+    <>
+      <JsonLd data={aboutPageSchema} />
+      <PageWrapper id="main-content" className="flex-1 bg-white">
       {/* Hero */}
       <section className="bg-white border-b border-[#D4D4D4] py-12 md:py-16">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
@@ -206,5 +230,6 @@ export default async function AboutPage({
         </div>
       </section>
     </PageWrapper>
+    </>
   );
 }

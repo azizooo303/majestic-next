@@ -17,6 +17,8 @@ import { ChevronRight, ChevronLeft } from "lucide-react";
 import { siteUrl } from "@/lib/site-url";
 import type { Metadata } from "next";
 
+export const revalidate = 900;
+
 export async function generateMetadata({
   params,
 }: {

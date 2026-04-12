@@ -6,7 +6,6 @@ import { Link } from "@/i18n/navigation";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { useLocale } from "next-intl";
 import { cn } from "@/lib/utils";
-import { BlueprintOverlay } from "@/components/hero/blueprint-overlay";
 import gsap from "gsap";
 import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
 import { SplitText } from "gsap/SplitText";
@@ -197,9 +196,6 @@ export function HeroBanner({ slides, slide }: HeroBannerProps) {
         </div>
       ))}
 
-      {/* ── Blueprint overlay — fades in on each slide ── */}
-      <BlueprintOverlay slideKey={activeIdx} />
-
       {/* ── Legibility gradient — bottom-third only ── */}
       <div
         className="absolute inset-0 z-10 pointer-events-none"
@@ -208,18 +204,6 @@ export function HeroBanner({ slides, slide }: HeroBannerProps) {
             "linear-gradient(to top, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.30) 35%, rgba(0,0,0,0) 60%)",
         }}
       />
-
-      {/* ── Blueprint watermark — corner ── */}
-      <div className="absolute top-0 end-0 z-10 pointer-events-none w-[180px] h-[180px] md:w-[320px] md:h-[320px]">
-        <Image
-          src="/images/blueprint-pattern.png"
-          alt=""
-          fill
-          className="object-cover object-right-top"
-          style={{ opacity: 0.04, mixBlendMode: "screen" }}
-          aria-hidden="true"
-        />
-      </div>
 
       {/* ── Architectural corner brackets ── */}
       {!reduced && (

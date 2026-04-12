@@ -5,6 +5,8 @@ import { StaggerGrid } from "@/components/common/stagger-grid";
 import { siteUrl } from "@/lib/site-url";
 import type { Metadata } from "next";
 
+export const revalidate = 86400;
+
 export async function generateMetadata({
   params,
 }: {

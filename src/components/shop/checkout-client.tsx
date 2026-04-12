@@ -23,10 +23,6 @@ interface FormState {
   region: string;
   instructions: string;
   paymentMethod: PaymentMethod;
-  cardNumber: string;
-  expiry: string;
-  cvv: string;
-  cardName: string;
 }
 
 const INITIAL_FORM: FormState = {
@@ -40,10 +36,6 @@ const INITIAL_FORM: FormState = {
   region: "",
   instructions: "",
   paymentMethod: "card",
-  cardNumber: "",
-  expiry: "",
-  cvv: "",
-  cardName: "",
 };
 
 const VAT_RATE = 0.15;
@@ -216,18 +208,10 @@ function validateAddress(form: FormState, isAr: boolean): FormErrors {
   return errors;
 }
 
-function validatePayment(form: FormState, isAr: boolean): FormErrors {
-  const errors: FormErrors = {};
-  if (form.paymentMethod !== "card") return errors;
-  const digits = form.cardNumber.replace(/\s/g, "");
-  if (!digits) errors.cardNumber = isAr ? "رقم البطاقة مطلوب" : "Card number is required";
-  else if (!/^\d{16}$/.test(digits)) errors.cardNumber = isAr ? "رقم البطاقة يجب أن يكون 16 رقماً" : "Card number must be 16 digits";
-  if (!form.expiry.trim()) errors.expiry = isAr ? "تاريخ الانتهاء مطلوب" : "Expiry date is required";
-  else if (!/^\d{2}\/\d{2}$/.test(form.expiry)) errors.expiry = isAr ? "الصيغة: MM/YY" : "Format: MM/YY";
-  if (!form.cvv.trim()) errors.cvv = isAr ? "CVV مطلوب" : "CVV is required";
-  else if (!/^\d{3,4}$/.test(form.cvv)) errors.cvv = isAr ? "CVV غير صحيح" : "Invalid CVV";
-  if (!form.cardName.trim()) errors.cardName = isAr ? "اسم حامل البطاقة مطلوب" : "Cardholder name is required";
-  return errors;
+// Payment validation is deferred until the payment gateway (Moyasar) is integrated.
+// No card data is collected client-side — see PCI-DSS compliance note in StepPayment.
+function validatePayment(_form: FormState, _isAr: boolean): FormErrors {
+  return {};
 }
 
 function Field({
@@ -256,7 +240,7 @@ function Field({
         )}
       </label>
       {children}
-      {error && <p className="text-xs text-[#2C2C2C] font-medium mt-0.5">{error}</p>}
+      {error && <p className="text-xs text-red-600 font-medium mt-0.5" role="alert">{error}</p>}
     </div>
   );
 }
@@ -487,58 +471,24 @@ function StepPayment({
         </PaymentTab>
 
         {form.paymentMethod === "card" && (
-          <div className="border border-[#D4D4D4] rounded-sm p-4 flex flex-col gap-4 -mt-1 bg-[#FFFFFF]">
-            <Field label="Card Number" labelAr="رقم البطاقة" isAr={isAr} required error={errors.cardNumber}>
-              <input
-                type="text"
-                inputMode="numeric"
-                value={form.cardNumber}
-                onChange={(e) => onChange("cardNumber", e.target.value)}
-                placeholder="**** **** **** ****"
-                maxLength={19}
-                className={inputCls + " bg-white font-mono"}
-                autoComplete="cc-number"
-                dir="ltr"
-              />
-            </Field>
-            <div className="grid grid-cols-2 gap-4">
-              <Field label="Expiry (MM/YY)" labelAr="تاريخ الانتهاء" isAr={isAr} required error={errors.expiry}>
-                <input
-                  type="text"
-                  inputMode="numeric"
-                  value={form.expiry}
-                  onChange={(e) => onChange("expiry", e.target.value)}
-                  placeholder="MM/YY"
-                  maxLength={5}
-                  className={inputCls + " bg-white font-mono"}
-                  autoComplete="cc-exp"
-                  dir="ltr"
-                />
-              </Field>
-              <Field label="CVV" labelAr="CVV" isAr={isAr} required error={errors.cvv}>
-                <input
-                  type="password"
-                  inputMode="numeric"
-                  value={form.cvv}
-                  onChange={(e) => onChange("cvv", e.target.value)}
-                  placeholder="***"
-                  maxLength={4}
-                  className={inputCls + " bg-white font-mono"}
-                  autoComplete="cc-csc"
-                  dir="ltr"
-                />
-              </Field>
+          <div
+            className="border border-[#C1B167] rounded-sm p-4 -mt-1 bg-[#FDFBF3]"
+            role="note"
+            aria-label={isAr ? "تنبيه: بوابة الدفع قيد التطوير" : "Notice: Payment gateway in development"}
+          >
+            <div className="flex items-start gap-3">
+              <ShieldCheck size={18} className="text-[#C1B167] flex-shrink-0 mt-0.5" />
+              <div className="flex flex-col gap-1">
+                <p className="text-sm font-semibold text-[#2C2C2C]">
+                  {isAr ? "تكامل الدفع قيد الإعداد" : "Payment Integration Coming Soon"}
+                </p>
+                <p className="text-xs text-[#3A3A3A] leading-relaxed">
+                  {isAr
+                    ? "سيتم تفعيل الدفع عبر مدى وفيزا وماستركارد عند اكتمال تكامل بوابة الدفع. في الوقت الحالي، سيتواصل معك فريقنا لإتمام الطلب."
+                    : "Secure card payments via mada, Visa, and Mastercard will be available once our payment gateway integration is complete. Our team will contact you to finalize your order."}
+                </p>
+              </div>
             </div>
-            <Field label="Cardholder Name" labelAr="اسم حامل البطاقة" isAr={isAr} required error={errors.cardName}>
-              <input
-                type="text"
-                value={form.cardName}
-                onChange={(e) => onChange("cardName", e.target.value)}
-                placeholder={isAr ? "الاسم كما هو على البطاقة" : "Name as shown on card"}
-                className={inputCls + " bg-white"}
-                autoComplete="cc-name"
-              />
-            </Field>
           </div>
         )}
 

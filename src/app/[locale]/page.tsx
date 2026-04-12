@@ -293,7 +293,7 @@ export default async function HomePage({
                 LinkedIn
               </a>
               <a
-                href="https://wa.me/96692001219"
+                href="https://wa.me/966920012019"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[#484848] hover:text-[#0c0c0c] text-sm transition-colors"

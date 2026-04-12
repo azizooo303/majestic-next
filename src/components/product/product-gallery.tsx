@@ -39,7 +39,7 @@ export function ProductGallery({ images, name }: ProductGalleryProps) {
       {/* Thumbnails */}
       {images.length > 1 && (
         <div className="flex gap-2" role="group" aria-label={`${name} images`}>
-          {images.slice(0, 4).map((img, i) => (
+          {images.map((img, i) => (
             <button
               key={img.id}
               onClick={() => setActiveIndex(i)}

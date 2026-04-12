@@ -1,7 +1,9 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
+import { useCart } from "@/context/cart-context";
 
 function parseCategory(raw: string): string {
   return raw
@@ -35,6 +37,25 @@ export function ProductCard({
   image,
   isAr,
 }: ProductCardProps) {
+  const { addItem } = useCart();
+  const [added, setAdded] = useState(false);
+
+  function handleAddToCart(e: React.MouseEvent) {
+    e.preventDefault();
+    addItem({
+      id,
+      name,
+      nameAr: name,
+      price,
+      image,
+      category,
+      categoryAr: category,
+      quantity: 1,
+    });
+    setAdded(true);
+    setTimeout(() => setAdded(false), 2000);
+  }
+
   return (
     <div className="group bg-white border border-[rgba(0,0,0,0.21)] rounded-sm overflow-hidden transition-all duration-200 hover:shadow-md">
       {/* Clickable image + info area */}
@@ -82,10 +103,19 @@ export function ProductCard({
       <div className="px-3 pb-3">
         <button
           className="w-full bg-[#2C2C2C] text-white py-2 text-xs font-semibold
-            rounded-none hover:bg-[#333] transition-colors cursor-pointer"
-          onClick={() => {/* cart integration coming */}}
+            rounded-none hover:bg-[#333] transition-colors cursor-pointer
+            disabled:bg-[#C1B167] disabled:cursor-default"
+          onClick={handleAddToCart}
+          disabled={added}
+          aria-label={
+            added
+              ? isAr ? "تمت الإضافة" : "Added to cart"
+              : isAr ? "أضف إلى السلة" : "Add to cart"
+          }
         >
-          {isAr ? "أضف إلى السلة" : "Add to Cart"}
+          {added
+            ? isAr ? "تمت الإضافة" : "Added"
+            : isAr ? "أضف إلى السلة" : "Add to Cart"}
         </button>
       </div>
     </div>

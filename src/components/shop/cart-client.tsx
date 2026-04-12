@@ -18,7 +18,7 @@ function QuantityControl({
       <button
         aria-label="Decrease quantity"
         onClick={() => onChange(Math.max(1, value - 1))}
-        className="w-8 h-8 flex items-center justify-center text-[#3A3A3A] hover:text-[#2C2C2C] hover:bg-[#FFFFFF] transition-colors text-lg leading-none select-none"
+        className="w-11 h-11 flex items-center justify-center text-[#3A3A3A] hover:text-[#2C2C2C] hover:bg-[#FFFFFF] transition-colors text-lg leading-none select-none cursor-pointer"
       >
         −
       </button>
@@ -28,7 +28,7 @@ function QuantityControl({
       <button
         aria-label="Increase quantity"
         onClick={() => onChange(value + 1)}
-        className="w-8 h-8 flex items-center justify-center text-[#3A3A3A] hover:text-[#2C2C2C] hover:bg-[#FFFFFF] transition-colors text-lg leading-none select-none"
+        className="w-11 h-11 flex items-center justify-center text-[#3A3A3A] hover:text-[#2C2C2C] hover:bg-[#FFFFFF] transition-colors text-lg leading-none select-none cursor-pointer"
       >
         +
       </button>
@@ -36,6 +36,8 @@ function QuantityControl({
   );
 }
 
+// Intentionally always "en-SA" locale: SAR amounts are always formatted in
+// Western numerals regardless of UI locale (Arabic e-commerce convention).
 function fmt(n: number) {
   return `SAR ${n.toLocaleString("en-SA", {
     minimumFractionDigits: 0,

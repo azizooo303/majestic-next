@@ -4,6 +4,7 @@ import { Link } from "@/i18n/navigation";
 import { PageWrapper } from "@/components/common/page-wrapper";
 import { Reveal } from "@/components/common/reveal";
 import { siteUrl } from "@/lib/site-url";
+import { BlogPostingJsonLd } from "@/components/common/json-ld";
 import { PortableText } from "@portabletext/react";
 import {
   client,
@@ -96,8 +97,28 @@ export default async function BlogPostPage({
     ? urlFor(post.mainImage).width(1200).height(675).url()
     : null;
 
+  // Use the EN title for the schema headline regardless of locale — Google
+  // indexes the canonical (EN) version, so the EN headline is correct here.
+  const schemaImageUrl = post.mainImage
+    ? urlFor(post.mainImage).width(1200).height(630).url()
+    : siteUrl("/images/og/blog-default.jpg");
+
+  // publishedAt comes from Sanity as an ISO 8601 date string (e.g. "2025-11-01")
+  const datePublished = post.publishedAt
+    ? new Date(post.publishedAt).toISOString()
+    : new Date().toISOString();
+
   return (
-    <PageWrapper id="main-content" className="flex-1 bg-white">
+    <>
+      <BlogPostingJsonLd
+        headline={post.title}
+        description={post.excerpt ?? ""}
+        image={schemaImageUrl}
+        datePublished={datePublished}
+        url={siteUrl(`/en/blog/${slug}`)}
+        slug={slug}
+      />
+      <PageWrapper id="main-content" className="flex-1 bg-white">
       {/* Breadcrumb + Hero */}
       <section className="bg-white border-b border-[rgba(0,0,0,0.08)] py-12 md:py-16">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
@@ -200,5 +221,6 @@ export default async function BlogPostPage({
         </div>
       </section>
     </PageWrapper>
+    </>
   );
 }

@@ -23,7 +23,7 @@ export function ConsultationCta({ isAr }: { isAr: boolean }) {
                 {isAr ? "احجز استشارة" : "Book a Consultation"}
               </Link>
               <Link
-                href="/about"
+                href="/showrooms"
                 className="text-sm font-medium text-[#3A3A3A] hover:text-[#2C2C2C] transition-colors border-b border-[#D4D4D4] pb-0.5"
               >
                 {isAr ? "زر المعرض" : "Visit the Showroom"}

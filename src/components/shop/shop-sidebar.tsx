@@ -4,6 +4,7 @@ import { useRouter, usePathname } from "@/i18n/navigation";
 import { useSearchParams } from "next/navigation";
 import { useLocale } from "next-intl";
 import { ChevronRight } from "lucide-react";
+import { useState, useEffect } from "react";
 
 const SIDEBAR_CATEGORIES = [
   { slugEn: "seating",             slugAr: "%d8%a7%d9%84%d9%85%d9%82%d8%a7%d8%b9%d8%af",       en: "Seating",      ar: "المقاعد" },
@@ -14,11 +15,6 @@ const SIDEBAR_CATEGORIES = [
   { slugEn: "lounge",              slugAr: "%d8%a7%d9%84%d8%b5%d8%a7%d9%84%d8%a9",              en: "Lounge",       ar: "الاسترخاء" },
 ];
 
-const BRANDS = [
-  { value: "majestic",   en: "Majestic",   ar: "ماجستيك" },
-  { value: "chairline",  en: "ChairLine",  ar: "شيرلاين" },
-  { value: "other",      en: "Other",      ar: "أخرى" },
-];
 
 interface ShopSidebarProps {
   activeCategory?: string;
@@ -31,6 +27,39 @@ export function ShopSidebar({ activeCategory }: ShopSidebarProps) {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
+
+  // Local state for price inputs — applied on blur or Enter key
+  const [minPrice, setMinPrice] = useState(searchParams.get("minPrice") ?? "");
+  const [maxPrice, setMaxPrice] = useState(searchParams.get("maxPrice") ?? "");
+
+  // Keep local state in sync if URL params change externally (e.g. Reset all)
+  useEffect(() => {
+    setMinPrice(searchParams.get("minPrice") ?? "");
+    setMaxPrice(searchParams.get("maxPrice") ?? "");
+  }, [searchParams]);
+
+  function applyPriceRange() {
+    const params = new URLSearchParams(searchParams.toString());
+    if (minPrice) {
+      params.set("minPrice", minPrice);
+    } else {
+      params.delete("minPrice");
+    }
+    if (maxPrice) {
+      params.set("maxPrice", maxPrice);
+    } else {
+      params.delete("maxPrice");
+    }
+    params.delete("page");
+    const qs = params.toString();
+    router.push(qs ? `${pathname}?${qs}` : pathname);
+  }
+
+  function handlePriceKeyDown(e: React.KeyboardEvent<HTMLInputElement>) {
+    if (e.key === "Enter") {
+      applyPriceRange();
+    }
+  }
 
   function setCategory(slug: string) {
     const params = new URLSearchParams(searchParams.toString());
@@ -129,6 +158,11 @@ export function ShopSidebar({ activeCategory }: ShopSidebarProps) {
                 placeholder="0"
                 min={0}
                 max={10000}
+                value={minPrice}
+                onChange={(e) => setMinPrice(e.target.value)}
+                onBlur={applyPriceRange}
+                onKeyDown={handlePriceKeyDown}
+                aria-label={isAr ? "الحد الأدنى للسعر" : "Minimum price"}
                 className="w-full border border-[#D4D4D4] rounded-sm px-2 py-1.5 text-xs
                   text-[#2C2C2C] placeholder:text-[#3A3A3A] focus:outline-none focus:border-[#2C2C2C] bg-white"
               />
@@ -143,6 +177,11 @@ export function ShopSidebar({ activeCategory }: ShopSidebarProps) {
                 placeholder="10,000"
                 min={0}
                 max={10000}
+                value={maxPrice}
+                onChange={(e) => setMaxPrice(e.target.value)}
+                onBlur={applyPriceRange}
+                onKeyDown={handlePriceKeyDown}
+                aria-label={isAr ? "الحد الأقصى للسعر" : "Maximum price"}
                 className="w-full border border-[#D4D4D4] rounded-sm px-2 py-1.5 text-xs
                   text-[#2C2C2C] placeholder:text-[#3A3A3A] focus:outline-none focus:border-[#2C2C2C] bg-white"
               />
@@ -152,50 +191,13 @@ export function ShopSidebar({ activeCategory }: ShopSidebarProps) {
         </details>
       </div>
 
-      {/* Brand */}
-      <div className="border-t border-[#D4D4D4] pt-4 pb-4">
-        <details open className="group">
-          <summary className="flex items-center justify-between cursor-pointer list-none mb-3">
-            <span className="text-xs font-semibold text-[#2C2C2C] uppercase tracking-wide">
-              {isAr ? "العلامة التجارية" : "Brand"}
-            </span>
-            <ChevronRight
-              size={13}
-              className="text-[#3A3A3A] group-open:rotate-90 transition-transform duration-200"
-              aria-hidden="true"
-            />
-          </summary>
-          <ul className="space-y-2.5">
-            {BRANDS.map((b) => (
-              <li key={b.value}>
-                <label className="flex items-center gap-2.5 cursor-pointer group/item">
-                  <input
-                    type="checkbox"
-                    className="w-3.5 h-3.5 rounded-sm border border-[#D4D4D4] accent-[#2C2C2C] cursor-pointer"
-                  />
-                  <span className="text-sm text-[#3A3A3A] group-hover/item:text-[#2C2C2C] transition-colors">
-                    {isAr ? b.ar : b.en}
-                  </span>
-                </label>
-              </li>
-            ))}
-          </ul>
-        </details>
-      </div>
-
-      {/* In Stock toggle */}
-      <div className="border-t border-[#D4D4D4] pt-4 pb-4">
-        <label className="flex items-center justify-between cursor-pointer">
-          <span className="text-xs font-semibold text-[#2C2C2C] uppercase tracking-wide">
-            {isAr ? "متوفر في المخزون" : "In Stock Only"}
-          </span>
-          <div className="relative w-9 h-5">
-            <input type="checkbox" className="sr-only peer" />
-            <div className="w-9 h-5 bg-[#D4D4D4] peer-checked:bg-[#2C2C2C] rounded-sm transition-colors duration-200 cursor-pointer" />
-            <div className="absolute top-0.5 start-0.5 w-4 h-4 bg-white rounded-sm shadow-sm transition-all duration-200 peer-checked:translate-x-4" />
-          </div>
-        </label>
-      </div>
+      {/*
+       * TODO: Brand filter — restore when WooCommerce product API returns brand metadata
+       * and the filtering logic is wired to the shop page. Do not re-add without onChange handlers.
+       *
+       * TODO: In Stock toggle — restore when WooCommerce stock status is available in the
+       * product query and the filter can be passed as ?inStock=true to the API.
+       */}
     </aside>
   );
 }

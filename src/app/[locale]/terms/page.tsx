@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Reveal } from "@/components/common/reveal";
 import { Link } from "@/i18n/navigation";
 
+export const revalidate = 86400;
+
 export async function generateMetadata({
   params,
 }: {

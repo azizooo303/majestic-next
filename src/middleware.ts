@@ -5,12 +5,40 @@ import type { NextRequest } from 'next/server'
 
 const intlMiddleware = createMiddleware(routing)
 
+// Prefixes that must never be redirected to /en/
+const BYPASS_PREFIXES = [
+  '/en',
+  '/ar',
+  '/api',
+  '/_next',
+  '/_vercel',
+  '/images',
+  '/fonts',
+  '/icons',
+  '/favicon',
+  '/sitemap',
+  '/robots',
+  '/manifest',
+]
+
 export default async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl
 
-  // Skip intl for API routes
-  if (pathname.startsWith('/api')) {
+  // Skip intl for API and internal Next.js routes
+  if (pathname.startsWith('/api') || pathname.startsWith('/_next')) {
     return withSecurityHeaders(NextResponse.next())
+  }
+
+  // Redirect bare paths (no locale prefix) to /en equivalent
+  // e.g. /shop -> /en/shop, /about -> /en/about
+  const hasBypassPrefix = BYPASS_PREFIXES.some((prefix) =>
+    pathname === prefix || pathname.startsWith(prefix + '/')
+  )
+
+  if (!hasBypassPrefix) {
+    const url = request.nextUrl.clone()
+    url.pathname = `/en${pathname}`
+    return withSecurityHeaders(NextResponse.redirect(url, 308))
   }
 
   return withSecurityHeaders(intlMiddleware(request))
@@ -45,8 +73,11 @@ function withSecurityHeaders(response: NextResponse): NextResponse {
 }
 
 export const config = {
+  // Match everything except static file extensions so the middleware
+  // can intercept bare paths and redirect them to /en/.
+  // Static assets (.js, .css, .png, etc.) are excluded to avoid
+  // redirecting _next/static chunks or public-folder files.
   matcher: [
-    '/',
-    '/(en|ar)/:path*',
+    '/((?!_next/static|_next/image|.*\\.(?:ico|png|jpg|jpeg|gif|svg|webp|avif|woff|woff2|ttf|otf|css|js|map|txt|xml|json)).*)',
   ],
 }

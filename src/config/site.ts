@@ -32,7 +32,7 @@ export const BRAND = {
   social: {
     instagram: "https://www.instagram.com/majesticarabia/",
     linkedin: "https://www.linkedin.com/company/majestic-office-for-furniture/",
-    whatsapp: "https://wa.me/96692001219",
+    whatsapp: "https://wa.me/966920012019",
   },
 } as const;
 
@@ -42,7 +42,7 @@ export const BRAND = {
 export const CONTACT = {
   phone: {
     display: "+966 9200 12019",
-    href: "tel:+96692001219",
+    href: "tel:+966920012019",
   },
   email: {
     main: "info@majestic.com.sa",
