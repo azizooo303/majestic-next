@@ -19,6 +19,7 @@ const BYPASS_PREFIXES = [
   '/sitemap',
   '/robots',
   '/manifest',
+  '/3d',
 ]
 
 export default async function middleware(request: NextRequest) {
@@ -58,7 +59,8 @@ function withSecurityHeaders(response: NextResponse): NextResponse {
     'Content-Security-Policy',
     [
       "default-src 'self'",
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://vercel.live https://va.vercel-scripts.com",
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' blob: https://vercel.live https://va.vercel-scripts.com https://ajax.googleapis.com",
+      "worker-src 'self' blob:",
       "style-src 'self' 'unsafe-inline'",
       "img-src 'self' data: blob: https://res.cloudinary.com https://*.supabase.co https://lightyellow-mallard-240169.hostingersite.com",
       "font-src 'self' data:",
@@ -78,6 +80,6 @@ export const config = {
   // Static assets (.js, .css, .png, etc.) are excluded to avoid
   // redirecting _next/static chunks or public-folder files.
   matcher: [
-    '/((?!_next/static|_next/image|.*\\.(?:ico|png|jpg|jpeg|gif|svg|webp|avif|woff|woff2|ttf|otf|css|js|map|txt|xml|json)).*)',
+    '/((?!_next/static|_next/image|.*\\.(?:ico|png|jpg|jpeg|gif|svg|webp|avif|woff|woff2|ttf|otf|css|js|map|txt|xml|json|glb|gltf|usdz|fbx|obj|bin|hdr|exr|ktx2|drc|wasm)).*)',
   ],
 }
