@@ -38,9 +38,9 @@ export function ProductViewer3D({ model, name }: ProductViewer3DProps) {
           min-camera-orbit="auto 45deg auto"
           max-camera-orbit="auto 90deg auto"
           environment-image="neutral"
-          exposure="1.25"
-          tone-mapping="commerce"
-          shadow-intensity="1.6"
+          exposure="1.0"
+          tone-mapping="neutral"
+          shadow-intensity="1.4"
           shadow-softness="0.85"
           ar
           ar-modes="webxr scene-viewer quick-look"
