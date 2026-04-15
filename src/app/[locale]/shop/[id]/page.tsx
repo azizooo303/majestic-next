@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { Link } from "@/i18n/navigation";
 import { ProductGallery } from "@/components/product/product-gallery";
+import { ProductViewer3D } from "@/components/product/product-viewer-3d";
 import { Reveal } from "@/components/common/reveal";
 import { StaggerGrid } from "@/components/common/stagger-grid";
 import { ProductCard } from "@/components/shop/product-card";
@@ -149,7 +150,7 @@ export default async function ProductDetailPage({
 
           {/* ── LEFT: Image gallery ─────────────────────────────────────── */}
           <Reveal>
-            <ProductGallery images={images} name={product.name} model3d={model3d} />
+            <ProductGallery images={images} name={product.name} />
           </Reveal>
 
           {/* ── RIGHT: Product info ─────────────────────────────────────── */}
@@ -239,6 +240,33 @@ export default async function ProductDetailPage({
             </div>
           </Reveal>
         </div>
+
+        {/* ── 360° 3D Viewer Section ───────────────────────────────────────── */}
+        {model3d && (
+          <section
+            className="mt-20"
+            aria-label={isAr ? "عرض ثلاثي الأبعاد" : "3D product viewer"}
+          >
+            <Reveal>
+              <div className="mb-6">
+                <p className="text-xs uppercase tracking-widest text-[#3A3A3A] mb-2">
+                  {isAr ? "استعراض تفاعلي" : "Interactive Preview"}
+                </p>
+                <h2 className="text-2xl md:text-3xl font-bold text-[#2C2C2C] tracking-tight">
+                  {isAr ? "استعرض هذا المنتج بزاوية 360°" : "Explore this product in 360°"}
+                </h2>
+                <p className="mt-2 text-sm text-[#3A3A3A] max-w-2xl">
+                  {isAr
+                    ? "اسحب للتدوير · مرر للتكبير · انقر على زر الواقع المعزز في الجوال لوضعه في مكانك"
+                    : "Drag to rotate · scroll or pinch to zoom · tap the AR button on mobile to place it in your space at real size."}
+                </p>
+              </div>
+            </Reveal>
+            <Reveal yIn={20}>
+              <ProductViewer3D model={model3d} name={product.name} />
+            </Reveal>
+          </section>
+        )}
 
         {/* ── Related Products ─────────────────────────────────────────────── */}
         {relatedFiltered.length > 0 && (

@@ -21,7 +21,7 @@ export function ProductViewer3D({ model, name }: ProductViewer3DProps) {
       />
 
       <div
-        className="relative aspect-[4/3] overflow-hidden border border-[#D4D4D4]"
+        className="relative w-full aspect-[16/9] md:aspect-[21/9] min-h-[420px] overflow-hidden border border-[#D4D4D4]"
         style={{ background: STUDIO_BACKDROP }}
       >
         <model-viewer
