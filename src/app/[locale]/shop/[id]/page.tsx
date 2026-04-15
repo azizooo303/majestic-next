@@ -10,6 +10,7 @@ import { ChevronRight, Truck, Clock, Wrench } from "lucide-react";
 import { siteUrl } from "@/lib/site-url";
 import type { Metadata } from "next";
 import { getProduct, getProducts, parsePrice, calcDiscount, PRODUCT_PLACEHOLDER } from "@/lib/woocommerce";
+import { getProduct3DModel } from "@/lib/products-3d";
 
 export const revalidate = 1800;
 
@@ -81,6 +82,9 @@ export default async function ProductDetailPage({
   const shortDesc = product.short_description?.replace(/<[^>]+>/g, "") || "";
 
   // Related products: same category, different id
+  // 3D model lookup — only products with a matching SKU get the viewer
+  const model3d = getProduct3DModel(product.sku || undefined);
+
   const related = await getProducts({ lang: locale, per_page: 4, category: product.categories[0]?.id }).catch(() => []);
   const relatedFiltered = related.filter((p) => p.id !== product.id).slice(0, 4);
 
@@ -145,7 +149,7 @@ export default async function ProductDetailPage({
 
           {/* ── LEFT: Image gallery ─────────────────────────────────────── */}
           <Reveal>
-            <ProductGallery images={images} name={product.name} />
+            <ProductGallery images={images} name={product.name} model3d={model3d} />
           </Reveal>
 
           {/* ── RIGHT: Product info ─────────────────────────────────────── */}
