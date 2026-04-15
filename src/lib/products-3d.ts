@@ -18,14 +18,7 @@ export interface Model3D {
 }
 
 /** SKU → model paths map. Add new entries here as more products get 3D models. */
-const PRODUCTS_3D_MANIFEST: Record<string, Model3D> = {
-  // Verified against WC product 998308 (CRATOS Desk) — sku "DESK-CRATOS"
-  "DESK-CRATOS": {
-    glb: "/3d/cratos-executive/model-v2.glb",
-    usdz: "/3d/cratos-executive/model.usdz",
-    label: "360°",
-  },
-};
+const PRODUCTS_3D_MANIFEST: Record<string, Model3D> = {};
 
 /**
  * Look up 3D model data for a given product SKU.
