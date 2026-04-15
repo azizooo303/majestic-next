@@ -21,7 +21,7 @@ export function ProductViewer3D({ model, name }: ProductViewer3DProps) {
       />
 
       <div
-        className="relative w-full aspect-[16/9] md:aspect-[21/9] min-h-[420px] overflow-hidden border border-[#D4D4D4]"
+        className="relative w-full aspect-[4/3] md:aspect-[16/9] min-h-[520px] md:min-h-[600px] overflow-hidden border border-[#D4D4D4]"
         style={{ background: STUDIO_BACKDROP }}
       >
         <model-viewer
@@ -34,12 +34,9 @@ export function ProductViewer3D({ model, name }: ProductViewer3DProps) {
           auto-rotate
           auto-rotate-delay="1500"
           rotation-per-second="18deg"
-          camera-orbit="35deg 72deg 4.2m"
-          min-camera-orbit="auto 45deg 2.4m"
-          max-camera-orbit="auto 90deg 7m"
-          field-of-view="30deg"
-          min-field-of-view="22deg"
-          max-field-of-view="45deg"
+          camera-orbit="35deg 72deg auto"
+          min-camera-orbit="auto 45deg auto"
+          max-camera-orbit="auto 90deg auto"
           environment-image="neutral"
           exposure="1.25"
           tone-mapping="commerce"
