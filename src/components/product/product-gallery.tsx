@@ -26,13 +26,13 @@ export function ProductGallery({ images, name }: ProductGalleryProps) {
   return (
     <div className="space-y-3">
       {/* Main image */}
-      <div className="relative aspect-[4/3] bg-[#FFFFFF] rounded-none overflow-hidden border border-[#D4D4D4]">
+      <div className="relative aspect-[4/3] bg-[#F5F5F5] rounded-none overflow-hidden border border-[#D4D4D4]">
         <Image
           src={activeImage.src}
           alt={activeImage.alt || name}
           fill
           priority
-          className="object-cover"
+          className="object-contain p-4"
           sizes="(max-width: 1024px) 100vw, 55vw"
         />
       </div>
@@ -47,7 +47,7 @@ export function ProductGallery({ images, name }: ProductGalleryProps) {
               aria-label={img.alt || `${name} view ${i + 1}`}
               aria-current={i === activeIndex ? true : undefined}
               className={cn(
-                "relative w-16 h-16 shrink-0 rounded-none overflow-hidden border-2 bg-[#FFFFFF] cursor-pointer transition-colors",
+                "relative w-16 h-16 shrink-0 rounded-none overflow-hidden border-2 bg-[#F5F5F5] cursor-pointer transition-colors",
                 i === activeIndex
                   ? "border-[#2C2C2C]"
                   : "border-transparent hover:border-[rgba(0,0,0,0.21)]"
@@ -57,7 +57,7 @@ export function ProductGallery({ images, name }: ProductGalleryProps) {
                 src={img.src}
                 alt={img.alt || `${name} ${i + 1}`}
                 fill
-                className="object-cover"
+                className="object-contain p-1"
                 sizes="64px"
               />
             </button>
