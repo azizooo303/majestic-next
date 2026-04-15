@@ -21,7 +21,7 @@ export interface Model3D {
 const PRODUCTS_3D_MANIFEST: Record<string, Model3D> = {
   // Verified against WC product 998308 (CRATOS Desk) — sku "DESK-CRATOS"
   "DESK-CRATOS": {
-    glb: "/3d/cratos-executive/model.glb",
+    glb: "/3d/cratos-executive/model-blacklegs.glb",
     usdz: "/3d/cratos-executive/model.usdz",
     label: "360°",
   },
