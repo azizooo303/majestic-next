@@ -1,17 +1,104 @@
 "use client";
 
 import Script from "next/script";
+import { useEffect, useRef } from "react";
 import type { Model3D } from "@/lib/products-3d";
+import { FAMILY_MESH_MAP, DESK_TOP_FINISH_HEX } from "@/data/families";
+
+// Minimal shape of the material object exposed by <model-viewer> 4.x runtime API.
+// Docs: https://modelviewer.dev/docs/index.html#entrydocs-materials
+interface MVMaterial {
+  name: string;
+  pbrMetallicRoughness: {
+    setBaseColorFactor: (rgba: [number, number, number, number]) => void;
+    setRoughnessFactor?: (v: number) => void;
+    setMetallicFactor?: (v: number) => void;
+  };
+}
+interface MVModel {
+  materials: MVMaterial[];
+}
+interface MVElement extends HTMLElement {
+  model?: MVModel;
+}
 
 interface ProductViewer3DProps {
   model: Model3D;
   name: string;
+  /** SKU used to look up FAMILY_MESH_MAP (e.g. "DESK-CRATOS"). Optional — omit for static viewer. */
+  familySku?: string;
+  /** Finish name from DESK_TOP_FINISHES picker (e.g. "Italian Walnut"). Optional. */
+  topFinishName?: string;
+  /** Leg color name — future: will swap legs material when GLB has separate material slots. */
+  legColorName?: string;
 }
 
 const STUDIO_BACKDROP =
   "radial-gradient(ellipse 70% 55% at 50% 45%, #b8b8b8 0%, #cfcfcf 22%, #e6e6e6 45%, #f5f5f5 68%, #ffffff 88%)";
 
-export function ProductViewer3D({ model, name }: ProductViewer3DProps) {
+/** Parse #RRGGBB → [r, g, b] floats in 0..1 range. */
+function hexToFloat(hex: string): [number, number, number] {
+  const h = hex.replace("#", "");
+  const r = parseInt(h.slice(0, 2), 16) / 255;
+  const g = parseInt(h.slice(2, 4), 16) / 255;
+  const b = parseInt(h.slice(4, 6), 16) / 255;
+  return [r, g, b];
+}
+
+export function ProductViewer3D({
+  model,
+  name,
+  familySku,
+  topFinishName,
+  legColorName,
+}: ProductViewer3DProps) {
+  const mvRef = useRef<MVElement | null>(null);
+
+  // Material swap effect — fires on finish/leg change after GLB is loaded.
+  useEffect(() => {
+    const el = mvRef.current;
+    if (!el || !familySku) return;
+
+    const family = familySku.replace(/^DESK-/, "");
+    const meshMap = FAMILY_MESH_MAP[family];
+    if (!meshMap) return; // family not mapped yet — static viewer fallback
+
+    const applySwap = () => {
+      const materials = el.model?.materials;
+      if (!materials || materials.length === 0) return;
+
+      // Swap desktop top material
+      if (topFinishName && DESK_TOP_FINISH_HEX[topFinishName]) {
+        const topMat = materials.find((m) => m.name === meshMap.topMaterial);
+        if (topMat) {
+          const [r, g, b] = hexToFloat(DESK_TOP_FINISH_HEX[topFinishName]);
+          try {
+            topMat.pbrMetallicRoughness.setBaseColorFactor([r, g, b, 1]);
+          } catch (e) {
+            console.warn("[viewer] top material swap failed", e);
+          }
+        }
+      }
+
+      // Leg color swap — currently Cratos GLB shares material between top + legs,
+      // so this block intentionally does nothing until GLB is re-exported with
+      // a separate legs material. Kept as a placeholder so the call site is stable.
+      if (legColorName && meshMap.legsMaterial !== meshMap.topMaterial) {
+        // future: separate material path
+      }
+    };
+
+    // model-viewer emits 'load' once the GLB is ready. If already loaded (cached),
+    // el.model is already populated so we call immediately; otherwise we wait.
+    if (el.model) {
+      applySwap();
+    } else {
+      const onLoad = () => applySwap();
+      el.addEventListener("load", onLoad, { once: true });
+      return () => el.removeEventListener("load", onLoad);
+    }
+  }, [familySku, topFinishName, legColorName]);
+
   return (
     <>
       <Script
@@ -25,6 +112,8 @@ export function ProductViewer3D({ model, name }: ProductViewer3DProps) {
         style={{ background: STUDIO_BACKDROP }}
       >
         <model-viewer
+          // @ts-expect-error — ref to web component element
+          ref={mvRef}
           src={model.glb}
           ios-src={model.usdz}
           alt={`360° view of ${name}`}

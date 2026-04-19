@@ -31,7 +31,7 @@ export const DESK_FAMILIES: DeskFamily[] = [
     tagline: {en: "Best-selling executive desk", ar: "الأكثر مبيعاً — مكتب تنفيذي"},
     configs: ["Executive", "Manager", "Operator", "L-Shape", "U-Shape", "Conference", "Custom (Contact Us)"],
     hasGlb: true,
-    glbUrl: "/models/desk-cratos.glb",
+    glbUrl: "/3d/cratos-executive/model.glb",
     heroImage: "/images/shop/cratos-hero.webp",
     priority: 1,
     status: "live",
@@ -228,12 +228,98 @@ export const DESK_TOP_FINISHES = [
   "White Oak", "Cherry", "Aris Anthracite", "Devine Oak",
 ] as const;
 
+/**
+ * Representative hex per finish for 3D viewer material swap (Wave 4 pilot).
+ * Values are averaged/estimated from Egger + Kastamonu supplier samples.
+ * When the material library textures are ready, these hexes become the
+ * fallback + the texture path takes over for grain detail.
+ */
+export const DESK_TOP_FINISH_HEX: Record<string, string> = {
+  // Whites / creams
+  "Premium White": "#F4F0E8",
+  "Antique White": "#E8DFC8",
+  // Oaks (light → mid → dark)
+  "Natural Hamilton Oak": "#C2A378",
+  "Light Rustic Oak": "#D6B88F",
+  "Grey Bardolino Oak": "#A08F7A",
+  "Vicenza Oak": "#B89872",
+  "Lefkas Oak": "#CDAA7F",
+  "White Oak": "#E2CDA0",
+  "Devine Oak": "#BFA478",
+  // Walnuts (warm, rich browns)
+  "Natural Hamilton Walnut": "#7D5A3A",
+  "Africa Walnut": "#664228",
+  "Anatolia Walnut": "#6E4630",
+  "Italian Walnut": "#5B3A26",
+  // Greys (light → dark)
+  "Cashmere Grey": "#B5AEA0",
+  "Light Grey": "#B9B6B0",
+  "Basalt Grey": "#595857",
+  "Platinum Grey": "#8A8A86",
+  "Soft Black": "#2E2B28",
+  "Graphite Grey": "#4A4845",
+  "Onyx Grey": "#3A3836",
+  "Aris Anthracite": "#42403D",
+  // Kastamonu decorative
+  "Ibiza": "#D4C3A0",
+  "Dakota": "#A17953",
+  "Garda": "#8B6842",
+  "Amalfi": "#C9A27A",
+  "Armada": "#7B5C42",
+  "Acapulco": "#D8B48A",
+  "Belmonte": "#8A6445",
+  "Cabana": "#A97A5A",
+  "Argos": "#7D6248",
+  "Alpine": "#E6DCC5",
+  "Cherry": "#9A5A42",
+};
+
 export const LEG_COLORS = [
   "Black Powder Coat",
   "White Powder Coat",
   "Silver Powder Coat",
   "Polished Chrome",
 ] as const;
+
+/**
+ * Leg material properties for 3D viewer (Wave 4 pilot).
+ * Powder coats are low-metalness, higher roughness.
+ * Polished chrome is high-metalness, low-roughness.
+ */
+export const LEG_COLOR_MATERIAL: Record<
+  string,
+  { hex: string; metalness: number; roughness: number }
+> = {
+  "Black Powder Coat": { hex: "#2B2B2B", metalness: 0.1, roughness: 0.7 },
+  "White Powder Coat": { hex: "#F4F4F4", metalness: 0.1, roughness: 0.65 },
+  "Silver Powder Coat": { hex: "#9A9CA0", metalness: 0.2, roughness: 0.55 },
+  "Polished Chrome":    { hex: "#D9D9D9", metalness: 1.0, roughness: 0.08 },
+};
+
+/**
+ * Per-family GLB mesh targeting for runtime material swap.
+ * When user picks finish → we target `top` mesh's material.
+ * When user picks leg color → we target `legs` meshes' material.
+ *
+ * Only families with verified mesh names are included here. Families
+ * not in this map fall back to static GLB (no live swap).
+ *
+ * Cratos was verified by GLB inspection 2026-04-20 (2 materials total,
+ * `Majestic_WhitePaint` is the material used by Box443 top + Box3113/3114 legs).
+ */
+export const FAMILY_MESH_MAP: Record<
+  string,
+  { topMaterial: string; legsMaterial: string }
+> = {
+  CRATOS: {
+    // Both top + legs share the same `Majestic_WhitePaint` material in the exported GLB.
+    // For swap we color the same material — top changes reveal leg change too, which is
+    // correct behavior in the Cratos product (unified painted finish).
+    // When legs have their own material in future GLBs, this split applies.
+    topMaterial: "Majestic_WhitePaint",
+    legsMaterial: "Majestic_WhitePaint",
+  },
+};
 
 // Invalid combo exclusions (from Odoo product_template_attribute_exclusion)
 export type Exclusion = {

@@ -20,6 +20,8 @@ import {
 } from "@/data/families";
 import {ConfiguratorPicker} from "@/components/shop/configurator-picker";
 import {LivePrice} from "@/components/shop/live-price";
+import {ProductViewer3D} from "@/components/product/product-viewer-3d";
+import {getProduct3DModel} from "@/lib/products-3d";
 
 type FamilyConfiguratorProps = {
   family: DeskFamily;
@@ -116,17 +118,21 @@ export function FamilyConfigurator({family, basePrice, locale}: FamilyConfigurat
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 py-8 px-4 max-w-7xl mx-auto">
       {/* Left — 3D viewer / hero */}
-      <div className="bg-[#F7F7F7] aspect-square lg:aspect-auto lg:h-[600px] flex items-center justify-center">
-        {family.hasGlb ? (
-          <div className="text-center">
-            <div className="text-xs uppercase tracking-wider text-[#3A3A3A]">3D Viewer</div>
-            <div className="text-sm text-[#3A3A3A] mt-2">[GLB: {family.glbUrl}]</div>
-            <div className="text-xs text-[#3A3A3A] mt-2">Material swap: Wave 4</div>
-          </div>
+      <div className="bg-[#F7F7F7] lg:h-[600px] flex items-center justify-center">
+        {family.hasGlb && getProduct3DModel(family.sku) ? (
+          <ProductViewer3D
+            model={getProduct3DModel(family.sku)!}
+            name={isAr ? family.nameAr : family.nameEn}
+            familySku={family.sku}
+            topFinishName={finish}
+            legColorName={leg}
+          />
         ) : (
-          <div className="text-[#3A3A3A] text-center">
-            <div className="text-sm uppercase tracking-wider">{family.nameEn}</div>
-            <div className="text-xs mt-2">3D coming soon</div>
+          <div className="text-[#3A3A3A] text-center aspect-square w-full flex items-center justify-center">
+            <div>
+              <div className="text-sm uppercase tracking-wider">{family.nameEn}</div>
+              <div className="text-xs mt-2">{isAr ? "قريباً" : "3D coming soon"}</div>
+            </div>
           </div>
         )}
       </div>
