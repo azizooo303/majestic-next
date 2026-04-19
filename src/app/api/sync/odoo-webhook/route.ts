@@ -167,12 +167,22 @@ async function handleTemplateChange(ids: number[], eventId: string) {
       id: number;
       attribute_id: [number, string];
       value_ids: number[];
-      variation: string;
     }>(
       "product.template.attribute.line",
       [["product_tmpl_id", "=", tpl.id]],
-      ["id", "attribute_id", "value_ids", "variation"],
+      ["id", "attribute_id", "value_ids"],
     );
+
+    // Fetch create_variant from parent product.attribute to know which axes are variants
+    const attrIds = Array.from(new Set(lines.map((l) => l.attribute_id[0])));
+    const attrs = attrIds.length
+      ? await read<{ id: number; create_variant: string }>(
+          "product.attribute",
+          attrIds,
+          ["id", "create_variant"],
+        )
+      : [];
+    const attrCreateVariant = new Map(attrs.map((a) => [a.id, a.create_variant]));
 
     const attrLines: Array<{
       attribute_name: string;
@@ -181,16 +191,18 @@ async function handleTemplateChange(ids: number[], eventId: string) {
     }> = [];
 
     for (const line of lines) {
+      if (!line.value_ids?.length) continue;
       const values = await read<{ name: string }>(
         "product.attribute.value",
         line.value_ids,
         ["name"],
       );
+      const cv = attrCreateVariant.get(line.attribute_id[0]) || "always";
       attrLines.push({
         attribute_name: line.attribute_id[1],
         value_names: values.map((v) => v.name),
-        // variation attribute values are "always" or "dynamic"; configurator-only is "no_variant"
-        variation: line.variation !== "no_variant",
+        // Configurator-only attributes have create_variant='no_variant'
+        variation: cv !== "no_variant",
       });
     }
 
