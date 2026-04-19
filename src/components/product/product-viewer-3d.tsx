@@ -33,10 +33,11 @@ interface MVMaterial {
 }
 interface MVModel {
   materials: MVMaterial[];
-  createTexture?: (uri: string) => Promise<MVTexture>;
 }
 interface MVElement extends HTMLElement {
   model?: MVModel;
+  // createTexture is a method on the ModelViewerElement itself (not on .model).
+  createTexture?: (uri: string) => Promise<MVTexture>;
 }
 
 interface ProductViewer3DProps {
@@ -114,10 +115,11 @@ export function ProductViewer3D({
             }
           }
 
-          // Path B — create a new texture and bind it.
-          if (applied === "skip" && absoluteUrl && typeof modelObj.createTexture === "function") {
+          // Path B — create a new texture via the element-level createTexture
+          // (NOT on .model — that was the bug in the previous attempt) and bind it.
+          if (applied === "skip" && absoluteUrl && typeof el.createTexture === "function") {
             try {
-              const tex = await modelObj.createTexture(absoluteUrl);
+              const tex = await el.createTexture(absoluteUrl);
               textureInfo?.setTexture(tex);
               topMat.pbrMetallicRoughness.setBaseColorFactor(WHITE);
               topMat.pbrMetallicRoughness.setRoughnessFactor?.(0.55);
