@@ -125,9 +125,9 @@ export function FamilyConfigurator({family, basePrice, locale}: FamilyConfigurat
   }
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 py-8 px-4 max-w-7xl mx-auto">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 py-8 px-4 md:px-6 lg:px-8 max-w-7xl mx-auto">
       {/* Left — 3D viewer / hero */}
-      <div className="bg-[#F7F7F7] lg:h-[600px] flex flex-col items-center justify-center relative">
+      <div className="bg-[#F5F5F5] lg:h-[600px] flex flex-col items-center justify-center relative border border-[#E7E7E7]">
         {family.hasGlb && getProduct3DModel(family.sku) ? (
           <>
             <ProductViewer3D
@@ -138,7 +138,7 @@ export function FamilyConfigurator({family, basePrice, locale}: FamilyConfigurat
               legColorName={leg}
             />
             {config !== "Executive" && (
-              <div className="absolute top-3 left-3 bg-white/90 text-[#3A3A3A] text-[10px] uppercase tracking-wider px-3 py-1.5 border border-[#D4D4D4]">
+              <div className="absolute top-3 left-3 bg-white/90 text-[#3A3A3A] text-[10px] uppercase tracking-[0.14em] px-3 py-1.5 border border-[#D4D4D4]">
                 {isAr
                   ? `معاينة ثلاثية الأبعاد: تنفيذي فقط (${config} قريباً)`
                   : `3D preview: Executive only (${config} coming soon)`}
@@ -148,20 +148,34 @@ export function FamilyConfigurator({family, basePrice, locale}: FamilyConfigurat
         ) : (
           <div className="text-[#3A3A3A] text-center aspect-square w-full flex items-center justify-center">
             <div>
-              <div className="text-sm uppercase tracking-wider">{family.nameEn}</div>
-              <div className="text-xs mt-2">{isAr ? "قريباً" : "3D coming soon"}</div>
+              <p className="overline">{family.nameEn}</p>
+              <p className="text-[12px] text-[#3A3A3A] mt-2">{isAr ? "قريباً" : "3D coming soon"}</p>
             </div>
           </div>
         )}
       </div>
 
       {/* Right — picker */}
-      <div>
-        <h1 className="text-3xl font-medium text-[#2C2C2C]">
+      <div className="space-y-5">
+        {/* Category eyebrow — kit overline */}
+        <p className="overline">
+          {isAr ? "تشكيلة المكاتب" : "Desk Collection"}
+        </p>
+
+        {/* Product H1 — kit editorial scale */}
+        <h1 className="text-[32px] md:text-[40px] lg:text-[48px] font-bold text-[#2C2C2C] leading-[1.15] tracking-[-0.01em]">
           {isAr ? family.nameAr : family.nameEn}
         </h1>
+
+        {/* Brand line */}
+        <p className="text-[14px] text-[#3A3A3A]">
+          {isAr ? "ماجستيك · صُنع للمشاريع" : "Majestic · Built for contract"}
+        </p>
+
         {family.tagline && (
-          <p className="text-[#3A3A3A] mt-2">{isAr ? family.tagline.ar : family.tagline.en}</p>
+          <p className="text-[15px] text-[#3A3A3A] leading-[1.6] max-w-prose">
+            {isAr ? family.tagline.ar : family.tagline.en}
+          </p>
         )}
 
         <div className="mt-8 space-y-4">
@@ -266,17 +280,39 @@ export function FamilyConfigurator({family, basePrice, locale}: FamilyConfigurat
           isCustomQuote={isCustomQuote}
         />
 
-        <div className="mt-6 space-y-2">
+        {/* Spec grid — kit editorial style */}
+        <hr className="border-[#D4D4D4] mt-6" />
+        <dl className="grid grid-cols-2 gap-x-6 gap-y-0 text-[13px] mt-4">
+          <div className="flex items-baseline justify-between py-2 border-b border-dashed border-[#D4D4D4]">
+            <dt className="text-[#3A3A3A]">{isAr ? "الضمان" : "Warranty"}</dt>
+            <dd className="font-medium text-[#2C2C2C]">{isAr ? "10 سنوات" : "10 years"}</dd>
+          </div>
+          <div className="flex items-baseline justify-between py-2 border-b border-dashed border-[#D4D4D4]">
+            <dt className="text-[#3A3A3A]">{isAr ? "مدة التوصيل" : "Lead time"}</dt>
+            <dd className="font-medium text-[#2C2C2C]">{isAr ? "3–5 أسابيع" : "3–5 weeks"}</dd>
+          </div>
+          <div className="flex items-baseline justify-between py-2 border-b border-dashed border-[#D4D4D4]">
+            <dt className="text-[#3A3A3A]">{isAr ? "الشحن من" : "Ships from"}</dt>
+            <dd className="font-medium text-[#2C2C2C]">{isAr ? "الرياض" : "Riyadh"}</dd>
+          </div>
+          <div className="flex items-baseline justify-between py-2 border-b border-dashed border-[#D4D4D4]">
+            <dt className="text-[#3A3A3A]">SKU</dt>
+            <dd className="font-medium text-[#2C2C2C]">{family.sku}</dd>
+          </div>
+        </dl>
+        <hr className="border-[#D4D4D4] mt-2" />
+
+        <div className="mt-6 space-y-3">
           <button
             onClick={handleAddToCart}
-            className="w-full py-4 bg-[#2C2C2C] text-white font-medium uppercase tracking-wide hover:bg-[#3A3A3A] transition-colors"
+            className="w-full h-11 bg-[#2C2C2C] text-white font-semibold text-[13px] rounded-none hover:bg-[#3A3A3A] active:scale-[0.98] transition-all"
           >
             {isCustomQuote
-              ? (isAr ? "طلب عرض سعر" : "Request Quote")
+              ? (isAr ? "طلب عرض سعر" : "Request a Quote")
               : (isAr ? "أضف إلى السلة" : "Add to Cart")}
           </button>
           <button
-            className="w-full py-3 border border-[#2C2C2C] text-[#2C2C2C] text-sm uppercase tracking-wide hover:bg-[#F7F7F7]"
+            className="w-full h-11 border border-[#2C2C2C] text-[#2C2C2C] text-[13px] font-semibold rounded-none hover:bg-[#F5F5F5] active:scale-[0.98] transition-all"
           >
             {isAr ? "احفظ التكوين" : "Save Configuration"}
           </button>
