@@ -25,12 +25,31 @@ import type { SyncEvent, OdooProductTemplate } from "@/lib/sync/types";
 export const runtime = "nodejs";           // needs crypto + fetch XML-RPC
 export const dynamic = "force-dynamic";     // no caching
 
+// Infer event type from Odoo native webhook payload (when URL ?event= not set)
+function inferEventType(payload: Record<string, unknown>): string {
+  const model = (payload._model as string) || "";
+  if (model === "product.template") {
+    return payload.active === false ? "product.template.archive" : "product.template.write";
+  }
+  if (model === "product.product") return "product.product.write";
+  if (model === "stock.quant") return "stock.quant.write";
+  return "product.template.write";
+}
+
 export async function POST(req: NextRequest) {
   const rawBody = await req.text();
   const signature = req.headers.get("x-odoo-signature") || "";
+  const { searchParams } = new URL(req.url);
+  const urlToken = searchParams.get("token");
 
-  if (!verifyHmac(rawBody, signature)) {
-    return NextResponse.json({ error: "invalid signature" }, { status: 401 });
+  // Auth: either HMAC-signed body OR URL token matching INTERNAL_SYNC_TOKEN
+  // (Odoo native webhook action doesn't support HMAC; it uses URL tokens instead.)
+  const internalToken = process.env.INTERNAL_SYNC_TOKEN;
+  const tokenValid = !!(internalToken && urlToken && urlToken === internalToken);
+  const hmacValid = !!signature && verifyHmac(rawBody, signature);
+
+  if (!tokenValid && !hmacValid) {
+    return NextResponse.json({ error: "unauthorized (need X-Odoo-Signature OR ?token=)" }, { status: 401 });
   }
 
   if (await isKillSwitchActive()) {
@@ -40,11 +59,39 @@ export async function POST(req: NextRequest) {
     );
   }
 
+  // Parse body — support BOTH custom SyncEvent format AND Odoo native webhook format
   let event: SyncEvent;
   try {
-    event = JSON.parse(rawBody);
+    const parsed = JSON.parse(rawBody);
+
+    if (parsed.event && Array.isArray(parsed.record_ids)) {
+      // Custom format (future-proofing — e.g. curl-triggered)
+      event = parsed as SyncEvent;
+    } else {
+      // Odoo native webhook format:
+      //   {"_model": "product.template", "id": 85, "name": "Cratos", ...}
+      //   OR for batch: {"_model": "product.template", "_records": [{id: 85}, ...]}
+      const eventType = (searchParams.get("event") || inferEventType(parsed)) as SyncEvent["event"];
+      const recordIds = Array.isArray(parsed._records)
+        ? parsed._records.map((r: { id: number }) => r.id)
+        : parsed.id
+          ? [parsed.id]
+          : [];
+
+      event = {
+        event: eventType,
+        model: parsed._model || eventType.split(".").slice(0, -1).join("."),
+        record_ids: recordIds,
+        timestamp: new Date().toISOString(),
+        hmac: "",
+      };
+    }
   } catch {
     return NextResponse.json({ error: "invalid JSON" }, { status: 400 });
+  }
+
+  if (!event.record_ids.length) {
+    return NextResponse.json({ error: "no record_ids in payload" }, { status: 400 });
   }
 
   const eventId = `${event.event}-${event.timestamp}-${event.record_ids.join(",")}`;
