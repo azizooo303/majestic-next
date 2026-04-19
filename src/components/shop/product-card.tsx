@@ -57,12 +57,12 @@ export function ProductCard({
   }
 
   return (
-    <div className="group bg-white border border-[rgba(0,0,0,0.21)] rounded-sm overflow-hidden transition-all duration-200 hover:shadow-md">
+    <div className="group bg-white border border-transparent rounded-none overflow-hidden transition-[border-color] duration-[250ms] ease-[cubic-bezier(0.4,0,0.2,1)] hover:border-[#D4D4D4]">
       {/* Clickable image + info area */}
       <Link href={`/shop/${id}`} className="block">
-        <div className="relative aspect-square bg-[#fafafa] overflow-hidden">
+        <div className="relative aspect-[4/5] bg-[#F5F5F5] overflow-hidden border border-[#E7E7E7] group-hover:border-[#D4D4D4] transition-colors">
           {discount && (
-            <span className="absolute top-2 start-2 z-10 bg-[#2C2C2C] text-white text-xs font-bold px-2 py-0.5 rounded-sm">
+            <span className="absolute top-3 start-3 z-10 bg-[#2C2C2C] text-white text-[11px] font-semibold px-2 py-1 rounded-none tracking-[0.04em]">
               -{discount}%
             </span>
           )}
@@ -70,29 +70,29 @@ export function ProductCard({
             src={image || "https://lightyellow-mallard-240169.hostingersite.com/wp-content/uploads/2026/03/hero_office_desktop_en-1.png"}
             alt={name}
             fill
-            className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
             sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
             onError={(e) => { (e.target as HTMLImageElement).src = "https://lightyellow-mallard-240169.hostingersite.com/wp-content/uploads/2026/03/hero_office_desktop_en-1.png"; }}
           />
         </div>
-        <div className="p-3 pb-2">
-          <p className="text-xs text-[#3A3A3A] uppercase tracking-wide">{parseCategory(category)}</p>
-          <h3 className="text-sm font-bold text-[#2C2C2C] mt-1 leading-tight">{name}</h3>
-          {brand && <p className="text-xs text-[#3A3A3A] mt-0.5">{brand}</p>}
-          <div className="flex items-center gap-2 mt-2">
+        <div className="pt-4 pb-2 px-0">
+          <p className="overline mb-1">{parseCategory(category)}</p>
+          <h3 className="text-[15px] font-medium text-[#2C2C2C] leading-[1.25] line-clamp-2 [dir=rtl]:text-[16px] [dir=rtl]:font-normal">{name}</h3>
+          {brand && <p className="text-[12px] text-[#6B6B6B] mt-1">{brand}</p>}
+          <div className="flex items-baseline gap-2 mt-2">
             {price > 0 ? (
               <>
-                <span className="font-bold text-[#2C2C2C] text-sm">
+                <span className="text-[15px] font-medium text-[#2C2C2C]">
                   {isAr ? `${price.toLocaleString("ar-SA")} ر.س` : `SAR ${price.toLocaleString()}`}
                 </span>
                 {originalPrice && (
-                  <span className="text-xs text-[#3A3A3A] line-through">
+                  <span className="text-[12px] text-[#6B6B6B] line-through">
                     {isAr ? `${originalPrice.toLocaleString("ar-SA")} ر.س` : `SAR ${originalPrice.toLocaleString()}`}
                   </span>
                 )}
               </>
             ) : (
-              <span className="text-xs text-[#3A3A3A]">
+              <span className="text-[13px] text-[#6B6B6B]">
                 {isAr ? "اتصل للسعر" : "Contact for price"}
               </span>
             )}
@@ -100,10 +100,10 @@ export function ProductCard({
         </div>
       </Link>
       {/* Add to Cart — outside the Link */}
-      <div className="px-3 pb-3">
+      <div className="px-0 pb-0 pt-2">
         <button
-          className="w-full bg-[#2C2C2C] text-white py-2 text-xs font-semibold
-            rounded-none hover:bg-[#3A3A3A] transition-colors cursor-pointer
+          className="w-full bg-[#2C2C2C] text-white h-11 text-[13px] font-semibold
+            rounded-none hover:bg-[#3A3A3A] transition-colors cursor-pointer active:scale-[0.98]
             disabled:bg-[#E7E7E7] disabled:text-[#3A3A3A] disabled:cursor-default"
           onClick={handleAddToCart}
           disabled={added}
