@@ -10,7 +10,7 @@
 
 "use client";
 
-import {useState, useMemo, useEffect} from "react";
+import {useState, useMemo} from "react";
 import type {DeskFamily} from "@/data/families";
 import {
   DESK_TOP_FINISHES,
@@ -68,11 +68,15 @@ export function FamilyConfigurator({family, basePrice, locale}: FamilyConfigurat
   const [pedestalFinish, setPedestalFinish] = useState<string>("");
 
   // If the current size isn't valid for the new config, snap to that config's first size.
-  useEffect(() => {
+  // React 19 pattern: derived state during render — avoids setState-in-effect cascade.
+  const [prevConfig, setPrevConfig] = useState(config);
+  if (prevConfig !== config) {
+    setPrevConfig(config);
     const valid = SIZE_OPTIONS_PER_CONFIG[config];
-    if (!valid) return;
-    if (!valid.includes(size)) setSize(valid[0]);
-  }, [config, size]);
+    if (valid && !valid.includes(size)) {
+      setSize(valid[0]);
+    }
+  }
 
   const isCustomQuote = config === "Custom (Contact Us)" || size === "CUSTOM";
 
