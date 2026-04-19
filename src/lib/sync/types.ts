@@ -116,7 +116,7 @@ export interface RollbackEntry {
   wc_entity_id?: number;
   before_state: unknown | null;   // snapshot before write
   after_state: unknown | null;    // what we tried to write
-  status: "success" | "failure" | "rolled_back";
+  status: "pending" | "success" | "failure" | "rolled_back";
   error?: string;
 }
 

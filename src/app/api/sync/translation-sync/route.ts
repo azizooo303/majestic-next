@@ -24,6 +24,7 @@ import { odooCall, read } from "@/lib/sync/odoo-client";
 import { wcFetch } from "@/lib/woocommerce";
 import { transformProductTemplate } from "@/lib/sync/transform";
 import { upsertVariableProduct } from "@/lib/sync/wc-writer";
+import type { WCVariableProduct } from "@/lib/sync/types";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -120,7 +121,7 @@ export async function POST(req: NextRequest) {
           ? (enTpl.description_sale as string) || ""
           : (arTpl.description_sale as string) || "",
         status: enTpl.active ? ("publish" as const) : ("draft" as const),
-        attributes: (enPayload as never as { attributes: unknown[] }).attributes,
+        attributes: (enPayload as { attributes?: WCVariableProduct["attributes"] }).attributes ?? [],
         meta_data: [
           { key: "_odoo_template_id", value: tplId },
           { key: "_sync_source", value: "majestic-next-v2" },
