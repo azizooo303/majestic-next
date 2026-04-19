@@ -45,6 +45,9 @@ interface ProductViewer3DProps {
   name: string;
   /** SKU used to look up FAMILY_MESH_MAP (e.g. "DESK-CRATOS"). Optional — omit for static viewer. */
   familySku?: string;
+  /** Config name (Executive, Manager, Conference, L-Shape). Used to pick a per-config
+   *  mesh map entry `${FAMILY}:${config}`. Falls back to `${FAMILY}` if no entry found. */
+  config?: string;
   /** Finish name from DESK_TOP_FINISHES picker (e.g. "Italian Walnut"). Optional. */
   topFinishName?: string;
   /** Leg color name — future: will swap legs material when GLB has separate material slots. */
@@ -67,6 +70,7 @@ export function ProductViewer3D({
   model,
   name,
   familySku,
+  config,
   topFinishName,
   legColorName,
 }: ProductViewer3DProps) {
@@ -78,7 +82,10 @@ export function ProductViewer3D({
     if (!el || !familySku) return;
 
     const family = familySku.replace(/^DESK-/, "");
-    const meshMap = FAMILY_MESH_MAP[family];
+    // Prefer config-specific mesh map if present, fall back to family default.
+    const meshMap =
+      (config && FAMILY_MESH_MAP[`${family}:${config}`]) ||
+      FAMILY_MESH_MAP[family];
     if (!meshMap) return; // family not mapped yet — static viewer fallback
 
     // Reset baseColorFactor to white (1,1,1,1) so the loaded texture shows at full color
@@ -173,7 +180,7 @@ export function ProductViewer3D({
       el.addEventListener("load", onLoad, { once: true });
       return () => el.removeEventListener("load", onLoad);
     }
-  }, [familySku, topFinishName, legColorName]);
+  }, [familySku, config, topFinishName, legColorName]);
 
   return (
     <>

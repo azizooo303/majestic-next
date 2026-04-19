@@ -354,9 +354,27 @@ export const FAMILY_MESH_MAP: Record<
   string,
   { topMaterial: string; legsMaterial: string }
 > = {
+  // Key pattern: `${FAMILY}` for default (= Executive), `${FAMILY}:${Config}` for variants.
+  // Verified by gltf-transform inspect on each exported GLB (2026-04-20).
   CRATOS: {
     topMaterial: "Majestic_Oak",
     legsMaterial: "Majestic_WhitePaint",
+  },
+  "CRATOS:Executive": {
+    topMaterial: "Majestic_Oak",
+    legsMaterial: "Majestic_WhitePaint",
+  },
+  "CRATOS:Manager": {
+    topMaterial: "DESKTOP_a398",
+    legsMaterial: "FRAME_white",
+  },
+  "CRATOS:Conference": {
+    topMaterial: "DESKTOP_a398",
+    legsMaterial: "LEG_a398",
+  },
+  "CRATOS:L-Shape": {
+    topMaterial: "DESK-CRATOS-L_DESKTOP",
+    legsMaterial: "DESK-CRATOS-L_LEG",
   },
 };
 

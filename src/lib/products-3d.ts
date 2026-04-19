@@ -1,11 +1,10 @@
 /**
  * 3D Model Manifest
  *
- * Maps WooCommerce product SKU → 3D model paths.
- *
- * IMPORTANT FOR AZIZ: The key "DESK-CRATOS-EXEC" below is a placeholder.
- * Check the actual SKU in WooCommerce admin → Products → Cratos Executive Desk → SKU field.
- * Update the key below to match the exact WooCommerce SKU if it differs.
+ * Maps (SKU, Config) → 3D model paths.
+ * Each desk family can have multiple GLBs, one per Config (Executive, Manager,
+ * Conference, L-Shape, etc.). When a config has no dedicated GLB, the lookup
+ * falls back to the family default.
  */
 
 export interface Model3D {
@@ -17,21 +16,45 @@ export interface Model3D {
   label?: string;
 }
 
-/** SKU → model paths map. Add new entries here as more products get 3D models. */
+/**
+ * (SKU, Config) → model paths. Keys are `${sku}:${config}`. A bare `${sku}`
+ * entry is the fallback when a specific config isn't mapped.
+ */
 const PRODUCTS_3D_MANIFEST: Record<string, Model3D> = {
+  // Cratos — family default points at Executive for backwards compatibility.
   "DESK-CRATOS": {
     glb: "/3d/cratos-executive/model.glb",
     usdz: "/3d/cratos-executive/model.usdz",
     label: "Cratos Desk",
   },
+  "DESK-CRATOS:Executive": {
+    glb: "/3d/cratos-executive/model.glb",
+    usdz: "/3d/cratos-executive/model.usdz",
+    label: "Cratos Executive",
+  },
+  "DESK-CRATOS:Manager": {
+    glb: "/3d/cratos-manager/model.glb",
+    label: "Cratos Manager",
+  },
+  "DESK-CRATOS:Conference": {
+    glb: "/3d/cratos-conference/model.glb",
+    label: "Cratos Conference",
+  },
+  "DESK-CRATOS:L-Shape": {
+    glb: "/3d/cratos-l-shape/model.glb",
+    label: "Cratos L-Shape",
+  },
 };
 
 /**
- * Look up 3D model data for a given product SKU.
- * Returns undefined if no 3D model exists for that SKU — the gallery
- * will then show the standard image-only layout.
+ * Look up 3D model data for a product SKU (and optional Config).
+ * Tries `${sku}:${config}` first, falls back to `${sku}`, then undefined.
  */
-export function getProduct3DModel(sku?: string): Model3D | undefined {
+export function getProduct3DModel(sku?: string, config?: string): Model3D | undefined {
   if (!sku) return undefined;
+  if (config) {
+    const keyed = PRODUCTS_3D_MANIFEST[`${sku}:${config}`];
+    if (keyed) return keyed;
+  }
   return PRODUCTS_3D_MANIFEST[sku] ?? undefined;
 }
