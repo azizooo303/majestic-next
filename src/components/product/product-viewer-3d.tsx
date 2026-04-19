@@ -12,9 +12,11 @@ import {
 
 // Minimal shape of the material object exposed by <model-viewer> 4.x runtime API.
 // Docs: https://modelviewer.dev/docs/index.html#entrydocs-materials
+interface MVImage {
+  setURI?: (uri: string) => Promise<void> | void;
+}
 interface MVTexture {
-  // opaque — we just pass this back into setTexture
-  readonly _opaque?: never;
+  source?: MVImage | null;
 }
 interface MVTextureInfo {
   texture?: MVTexture | null;
@@ -31,7 +33,7 @@ interface MVMaterial {
 }
 interface MVModel {
   materials: MVMaterial[];
-  createTexture: (uri: string) => Promise<MVTexture>;
+  createTexture?: (uri: string) => Promise<MVTexture>;
 }
 interface MVElement extends HTMLElement {
   model?: MVModel;
@@ -86,32 +88,60 @@ export function ProductViewer3D({
       const modelObj = el.model;
       if (!modelObj || !modelObj.materials || modelObj.materials.length === 0) return;
 
-      // --- Top: prefer real texture if available, fall back to flat hex.
+      // --- Top: prefer real texture via existing source.setURI, then createTexture,
+      // and finally fall back to flat hex if neither works.
       if (topFinishName) {
         const topMat = modelObj.materials.find((m) => m.name === meshMap.topMaterial);
         if (topMat) {
           const textureUrl = DESK_TOP_FINISH_TEXTURE[topFinishName];
-          if (textureUrl && typeof modelObj.createTexture === "function") {
+          const absoluteUrl = textureUrl
+            ? new URL(textureUrl, window.location.origin).toString()
+            : null;
+          const textureInfo = topMat.pbrMetallicRoughness.baseColorTexture;
+          let applied: "setURI" | "createTexture" | "hex" | "skip" = "skip";
+
+          // Path A — mutate the source URI of the texture that's already bound to the material.
+          // Most reliable across model-viewer v2→v4.
+          if (absoluteUrl && textureInfo?.texture?.source?.setURI) {
             try {
-              const tex = await modelObj.createTexture(textureUrl);
-              topMat.pbrMetallicRoughness.baseColorTexture?.setTexture(tex);
+              await textureInfo.texture.source.setURI(absoluteUrl);
               topMat.pbrMetallicRoughness.setBaseColorFactor(WHITE);
               topMat.pbrMetallicRoughness.setRoughnessFactor?.(0.55);
               topMat.pbrMetallicRoughness.setMetallicFactor?.(0.0);
+              applied = "setURI";
             } catch (e) {
-              console.warn("[viewer] texture load failed, falling back to hex", e);
-              const hex = DESK_TOP_FINISH_HEX[topFinishName];
-              if (hex) {
-                const [r, g, b] = hexToFloat(hex);
-                topMat.pbrMetallicRoughness.baseColorTexture?.setTexture(null);
-                topMat.pbrMetallicRoughness.setBaseColorFactor([r, g, b, 1]);
-              }
+              console.warn("[viewer] source.setURI failed", e);
             }
-          } else if (DESK_TOP_FINISH_HEX[topFinishName]) {
-            const [r, g, b] = hexToFloat(DESK_TOP_FINISH_HEX[topFinishName]);
-            topMat.pbrMetallicRoughness.baseColorTexture?.setTexture(null);
-            topMat.pbrMetallicRoughness.setBaseColorFactor([r, g, b, 1]);
           }
+
+          // Path B — create a new texture and bind it.
+          if (applied === "skip" && absoluteUrl && typeof modelObj.createTexture === "function") {
+            try {
+              const tex = await modelObj.createTexture(absoluteUrl);
+              textureInfo?.setTexture(tex);
+              topMat.pbrMetallicRoughness.setBaseColorFactor(WHITE);
+              topMat.pbrMetallicRoughness.setRoughnessFactor?.(0.55);
+              topMat.pbrMetallicRoughness.setMetallicFactor?.(0.0);
+              applied = "createTexture";
+            } catch (e) {
+              console.warn("[viewer] createTexture failed", e);
+            }
+          }
+
+          // Path C — flat hex (no texture available or all texture paths failed).
+          if (applied === "skip" && DESK_TOP_FINISH_HEX[topFinishName]) {
+            const [r, g, b] = hexToFloat(DESK_TOP_FINISH_HEX[topFinishName]);
+            textureInfo?.setTexture(null);
+            topMat.pbrMetallicRoughness.setBaseColorFactor([r, g, b, 1]);
+            applied = "hex";
+          }
+
+          console.log(`[viewer] top finish "${topFinishName}" → ${applied}`, {
+            url: absoluteUrl,
+            hasTextureInfo: !!textureInfo,
+            hasSource: !!textureInfo?.texture?.source,
+            hasSetURI: typeof textureInfo?.texture?.source?.setURI,
+          });
         }
       }
 
