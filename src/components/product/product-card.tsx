@@ -27,21 +27,21 @@ export function ProductCard({
     <Link
       href={`/shop/${product.slug}`}
       className="group block bg-white rounded-none overflow-hidden border border-transparent
-        transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border hover:border-[#D4D4D4] cursor-pointer"
+        transition-[border-color] duration-[250ms] ease-[cubic-bezier(0.4,0,0.2,1)]
+        hover:border-[#D4D4D4] cursor-pointer"
     >
-      {/* Image */}
-      <div className="aspect-[4/5] overflow-hidden bg-light relative">
+      {/* Image — 4/5 aspect, zoom on hover, no shadow/translate */}
+      <div className="aspect-[4/5] overflow-hidden bg-[#F5F5F5] relative">
         {image ? (
           <Image
             src={image.src}
             alt={image.alt || product.name}
             fill
-            className="object-cover transition-transform duration-500
-              group-hover:scale-105"
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
             sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
           />
         ) : (
-          <div className="absolute inset-0 flex items-center justify-center text-disabled">
+          <div className="absolute inset-0 flex items-center justify-center text-[#E7E7E7]">
             <svg
               className="w-12 h-12"
               fill="none"
@@ -59,21 +59,21 @@ export function ProductCard({
         )}
       </div>
 
-      {/* Info */}
-      <div className="p-4">
-        {product.nameAr && (
-          <p className="text-sm text-[#2C2C2C] font-alyamama">{product.nameAr}</p>
-        )}
-        <h3 className="text-sm md:text-base font-medium text-gray-900 leading-snug line-clamp-2">
-          {product.name}
-        </h3>
+      {/* Info — order: category eyebrow → name → price */}
+      <div className="pt-4 pb-2 px-0">
         {product.categories[0] && (
-          <p className="text-xs text-gray-800/70 mt-1">
+          <p className="overline mb-1">
             {product.categories[0].name}
           </p>
         )}
+        <h3
+          className="text-[15px] font-medium leading-[1.25] text-[#2C2C2C] line-clamp-2
+            [dir=rtl]:text-[16px] [dir=rtl]:font-normal"
+        >
+          {product.name}
+        </h3>
         {showPrice && product.price && (
-          <p className="text-sm font-semibold text-gray-900 mt-2">
+          <p className="text-[15px] font-medium text-[#2C2C2C] mt-2">
             {formatPrice(product.price, locale)}
           </p>
         )}

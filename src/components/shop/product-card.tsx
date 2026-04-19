@@ -103,8 +103,8 @@ export function ProductCard({
       <div className="px-3 pb-3">
         <button
           className="w-full bg-[#2C2C2C] text-white py-2 text-xs font-semibold
-            rounded-none hover:bg-[#333] transition-colors cursor-pointer
-            disabled:bg-[#C1B167] disabled:cursor-default"
+            rounded-none hover:bg-[#3A3A3A] transition-colors cursor-pointer
+            disabled:bg-[#E7E7E7] disabled:text-[#3A3A3A] disabled:cursor-default"
           onClick={handleAddToCart}
           disabled={added}
           aria-label={

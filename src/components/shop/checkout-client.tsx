@@ -472,12 +472,12 @@ function StepPayment({
 
         {form.paymentMethod === "card" && (
           <div
-            className="border border-[#C1B167] rounded-sm p-4 -mt-1 bg-[#FDFBF3]"
+            className="border border-[#D4D4D4] p-4 -mt-1 bg-[#F5F5F5]"
             role="note"
             aria-label={isAr ? "تنبيه: بوابة الدفع قيد التطوير" : "Notice: Payment gateway in development"}
           >
             <div className="flex items-start gap-3">
-              <ShieldCheck size={18} className="text-[#C1B167] flex-shrink-0 mt-0.5" />
+              <ShieldCheck size={18} className="text-[#2C2C2C] flex-shrink-0 mt-0.5" />
               <div className="flex flex-col gap-1">
                 <p className="text-sm font-semibold text-[#2C2C2C]">
                   {isAr ? "تكامل الدفع قيد الإعداد" : "Payment Integration Coming Soon"}
