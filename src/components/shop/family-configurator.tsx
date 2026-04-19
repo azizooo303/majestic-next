@@ -10,10 +10,11 @@
 
 "use client";
 
-import {useState, useMemo} from "react";
+import {useState, useMemo, useEffect} from "react";
 import type {DeskFamily} from "@/data/families";
 import {
   DESK_TOP_FINISHES,
+  DESK_TOP_FINISH_HEX,
   LEG_COLORS,
   CONFIG_EXTRA_PRICES,
   isValidCombo,
@@ -64,6 +65,13 @@ export function FamilyConfigurator({family, basePrice, locale}: FamilyConfigurat
   const [leg, setLeg] = useState<string>("Polished Chrome");
   const [sideUnitFinish, setSideUnitFinish] = useState<string>("");
   const [pedestalFinish, setPedestalFinish] = useState<string>("");
+
+  // If the current size isn't valid for the new config, snap to that config's first size.
+  useEffect(() => {
+    const valid = SIZE_OPTIONS_PER_CONFIG[config];
+    if (!valid) return;
+    if (!valid.includes(size)) setSize(valid[0]);
+  }, [config, size]);
 
   const isCustomQuote = config === "Custom (Contact Us)" || size === "CUSTOM";
 
@@ -195,7 +203,7 @@ export function FamilyConfigurator({family, basePrice, locale}: FamilyConfigurat
               value: f,
               labelEn: f,
               labelAr: f,
-              swatchHex: "#D4B895", // TODO: per-finish hex from material library
+              swatchHex: DESK_TOP_FINISH_HEX[f] ?? "#D4B895",
             }))}
             displayMode="color-swatch"
             locale={locale}
@@ -209,7 +217,12 @@ export function FamilyConfigurator({family, basePrice, locale}: FamilyConfigurat
               value: l,
               labelEn: l,
               labelAr: l,
-              swatchHex: l.includes("Black") ? "#2C2C2C" : l.includes("White") ? "#FFFFFF" : l.includes("Silver") ? "#C0C0C0" : "#E0E0E0",
+              swatchHex:
+                l === "Black Powder Coat"  ? "#2B2B2B" :
+                l === "White Powder Coat"  ? "#F4F4F4" :
+                l === "Silver Powder Coat" ? "#9A9CA0" :
+                l === "Polished Chrome"    ? "#D9D9D9" :
+                "#E0E0E0",
             }))}
             displayMode="radio"
             exclusions={excludedLegs}

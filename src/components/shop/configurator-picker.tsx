@@ -83,7 +83,7 @@ export function ConfiguratorPicker(props: ConfiguratorPickerProps) {
               ].join(" ")}
             >
               {isAr ? o.labelAr : o.labelEn}
-              {o.extraPrice && o.extraPrice > 0 && !o.isCustom && (
+              {typeof o.extraPrice === "number" && o.extraPrice > 0 && !o.isCustom && (
                 <span className={value === o.value ? "text-white/70 text-xs ml-2" : "text-[#3A3A3A] text-xs ml-2"}>
                   +{o.extraPrice.toLocaleString()}
                 </span>
@@ -103,7 +103,7 @@ export function ConfiguratorPicker(props: ConfiguratorPickerProps) {
           {visibleOptions.map(o => (
             <option key={o.value} value={o.value}>
               {isAr ? o.labelAr : o.labelEn}
-              {o.extraPrice && o.extraPrice > 0 ? ` (+${o.extraPrice})` : ""}
+              {typeof o.extraPrice === "number" && o.extraPrice > 0 ? ` (+${o.extraPrice})` : ""}
             </option>
           ))}
         </select>
