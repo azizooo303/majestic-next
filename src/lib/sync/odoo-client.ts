@@ -115,28 +115,87 @@ function parseValue(xml: string): unknown {
   }
   if (inner.startsWith("<nil")) return null;
   if (inner.startsWith("<array>")) {
-    const dataMatch = inner.match(/<data>([\s\S]*)<\/data>/);
+    const dataMatch = inner.match(/^<array>\s*<data>([\s\S]*)<\/data>\s*<\/array>$/);
     if (!dataMatch) return [];
-    const valueRegex = /<value>([\s\S]*?)<\/value>/g;
-    const items: unknown[] = [];
-    let m;
-    while ((m = valueRegex.exec(dataMatch[1])) !== null) {
-      // need to balance nested <value>; use depth parser for real cases
-      items.push(parseValue(`<value>${m[1]}</value>`));
-    }
-    return items;
+    // Depth-aware scan for top-level <value>...</value> children (struct/array may nest them)
+    return extractTopLevelTags(dataMatch[1], "value").map((v) => parseValue(`<value>${v}</value>`));
   }
   if (inner.startsWith("<struct>")) {
-    const memberRegex =
-      /<member>\s*<name>([\s\S]*?)<\/name>\s*([\s\S]*?)<\/member>/g;
+    // Depth-aware: scan top-level <member> blocks, each containing a <name> and a <value>
+    const structInner = inner.replace(/^<struct>/, "").replace(/<\/struct>$/, "");
+    const members = extractTopLevelTags(structInner, "member");
     const obj: Record<string, unknown> = {};
-    let m;
-    while ((m = memberRegex.exec(inner)) !== null) {
-      obj[m[1]] = parseValue(m[2].trim());
+    for (const member of members) {
+      const nameMatch = member.match(/<name>([\s\S]*?)<\/name>/);
+      if (!nameMatch) continue;
+      const name = nameMatch[1];
+      const valueStart = member.indexOf("<value>", nameMatch.index! + nameMatch[0].length);
+      if (valueStart === -1) continue;
+      const valueXml = extractBalanced(member.slice(valueStart), "value");
+      if (valueXml !== null) {
+        obj[name] = parseValue(valueXml);
+      }
     }
     return obj;
   }
   return inner;
+}
+
+// Extract top-level <tag>...</tag> children at the same depth — handles nested tags.
+function extractTopLevelTags(xml: string, tag: string): string[] {
+  const openTag = `<${tag}>`;
+  const closeTag = `</${tag}>`;
+  const results: string[] = [];
+  let i = 0;
+  while (i < xml.length) {
+    const start = xml.indexOf(openTag, i);
+    if (start === -1) break;
+    // Find matching close at the same depth
+    let depth = 1;
+    let pos = start + openTag.length;
+    while (pos < xml.length && depth > 0) {
+      const nextOpen = xml.indexOf(openTag, pos);
+      const nextClose = xml.indexOf(closeTag, pos);
+      if (nextClose === -1) break;
+      if (nextOpen !== -1 && nextOpen < nextClose) {
+        depth++;
+        pos = nextOpen + openTag.length;
+      } else {
+        depth--;
+        if (depth === 0) {
+          results.push(xml.slice(start + openTag.length, nextClose));
+          i = nextClose + closeTag.length;
+          break;
+        }
+        pos = nextClose + closeTag.length;
+      }
+    }
+    if (depth !== 0) break; // malformed
+  }
+  return results;
+}
+
+// Extract a balanced block starting at `<tag>` and return the inner XML (without outer tags).
+function extractBalanced(xml: string, tag: string): string | null {
+  const openTag = `<${tag}>`;
+  const closeTag = `</${tag}>`;
+  if (!xml.startsWith(openTag)) return null;
+  let depth = 1;
+  let pos = openTag.length;
+  while (pos < xml.length && depth > 0) {
+    const nextOpen = xml.indexOf(openTag, pos);
+    const nextClose = xml.indexOf(closeTag, pos);
+    if (nextClose === -1) return null;
+    if (nextOpen !== -1 && nextOpen < nextClose) {
+      depth++;
+      pos = nextOpen + openTag.length;
+    } else {
+      depth--;
+      if (depth === 0) return xml.slice(0, nextClose + closeTag.length);
+      pos = nextClose + closeTag.length;
+    }
+  }
+  return null;
 }
 
 export async function odooCall<T = unknown>({
