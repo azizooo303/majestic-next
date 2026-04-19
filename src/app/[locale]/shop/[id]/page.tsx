@@ -7,7 +7,7 @@ import { StaggerGrid } from "@/components/common/stagger-grid";
 import { ProductCard } from "@/components/shop/product-card";
 import { AddToCartButton } from "@/components/product/add-to-cart-button";
 import { JsonLd } from "@/components/common/json-ld";
-import { ChevronRight, Truck, Clock, Wrench } from "lucide-react";
+import { ChevronRight, Truck, Wrench } from "lucide-react";
 import { siteUrl } from "@/lib/site-url";
 import type { Metadata } from "next";
 import { getProduct, getProducts, parsePrice, calcDiscount, PRODUCT_PLACEHOLDER } from "@/lib/woocommerce";
@@ -172,28 +172,35 @@ export default async function ProductDetailPage({
           <Reveal yIn={20}>
             <div className="space-y-5">
 
-              {/* Category label */}
+              {/* Category eyebrow — kit overline utility */}
               {category && (
-                <p className="text-xs uppercase tracking-widest text-[#3A3A3A]">{category}</p>
+                <p className="overline">{category}</p>
               )}
 
-              {/* Product name */}
-              <h1 className="text-3xl font-bold text-[#2C2C2C] leading-tight">{product.name}</h1>
+              {/* Product name — kit H1 scale (32/40/48 responsive) */}
+              <h1 className="text-[32px] md:text-[40px] lg:text-[48px] font-bold text-[#2C2C2C] leading-[1.15] tracking-[-0.01em]">
+                {product.name}
+              </h1>
 
-              {/* Price row */}
+              {/* Brand / contract line */}
+              <p className="text-[14px] text-[#3A3A3A]">
+                {isAr ? "ماجستيك · صُنع للمشاريع" : "Majestic · Built for contract"}
+              </p>
+
+              {/* Price row — kit 28px medium */}
               <div className="flex items-baseline gap-3 flex-wrap">
                 {price > 0 ? (
                   <>
-                    <span className="text-2xl font-bold text-[#2C2C2C]">
+                    <span className="text-[28px] font-medium text-[#2C2C2C]">
                       {isAr ? `${price.toLocaleString("ar-SA")} ر.س` : `SAR ${price.toLocaleString()}`}
                     </span>
                     {originalPrice && (
-                      <span className="text-base text-[#3A3A3A] line-through">
+                      <span className="text-[15px] text-[#3A3A3A] line-through">
                         {isAr ? `${originalPrice.toLocaleString("ar-SA")} ر.س` : `SAR ${originalPrice.toLocaleString()}`}
                       </span>
                     )}
                     {discount && (
-                      <span className="text-xs font-bold bg-[#2C2C2C] text-white px-2 py-0.5 rounded-none">
+                      <span className="text-[11px] font-semibold bg-[#2C2C2C] text-white px-2 py-0.5 rounded-none tracking-[0.04em]">
                         -{discount}%
                       </span>
                     )}
@@ -207,8 +214,32 @@ export default async function ProductDetailPage({
 
               {/* Short description */}
               {shortDesc && (
-                <p className="text-sm text-[#3A3A3A] leading-relaxed">{shortDesc}</p>
+                <p className="text-[15px] text-[#3A3A3A] leading-[1.6] max-w-prose">{shortDesc}</p>
               )}
+
+              <hr className="border-[#D4D4D4]" />
+
+              {/* Spec grid — 4 cells, dashed hairline rows (kit editorial style) */}
+              <dl className="grid grid-cols-2 gap-x-6 gap-y-0 text-[13px]">
+                <div className="flex items-baseline justify-between py-2 border-b border-dashed border-[#D4D4D4]">
+                  <dt className="text-[#3A3A3A]">{isAr ? "الضمان" : "Warranty"}</dt>
+                  <dd className="font-medium text-[#2C2C2C]">{isAr ? "10 سنوات" : "10 years"}</dd>
+                </div>
+                <div className="flex items-baseline justify-between py-2 border-b border-dashed border-[#D4D4D4]">
+                  <dt className="text-[#3A3A3A]">{isAr ? "مدة التوصيل" : "Lead time"}</dt>
+                  <dd className="font-medium text-[#2C2C2C]">{isAr ? "5–7 أيام عمل" : "5–7 business days"}</dd>
+                </div>
+                <div className="flex items-baseline justify-between py-2 border-b border-dashed border-[#D4D4D4]">
+                  <dt className="text-[#3A3A3A]">{isAr ? "الشحن من" : "Ships from"}</dt>
+                  <dd className="font-medium text-[#2C2C2C]">{isAr ? "الرياض" : "Riyadh"}</dd>
+                </div>
+                <div className="flex items-baseline justify-between py-2 border-b border-dashed border-[#D4D4D4]">
+                  <dt className="text-[#3A3A3A]">SKU</dt>
+                  <dd className="font-medium text-[#2C2C2C]">{product.sku || String(product.id)}</dd>
+                </div>
+              </dl>
+
+              <hr className="border-[#D4D4D4]" />
 
               {/* Quantity + Add to Cart */}
               <div className="space-y-3">
@@ -226,28 +257,22 @@ export default async function ProductDetailPage({
                 />
                 <Link
                   href={`/quotation?product=${encodeURIComponent(product.name)}&id=${product.id}`}
-                  className="btn-press w-full border border-[#2C2C2C] text-[#2C2C2C] py-4
-                    font-semibold rounded-none hover:bg-[#F5F5F5] transition-colors text-sm
+                  className="btn-press w-full border border-[#2C2C2C] text-[#2C2C2C] h-11
+                    font-semibold rounded-none hover:bg-[#F5F5F5] transition-colors text-[13px]
                     flex items-center justify-center"
                 >
                   {isAr ? "طلب عرض سعر" : "Request a Quote"}
                 </Link>
               </div>
 
-              <hr className="border-[#D4D4D4]" />
-
-              {/* Delivery info */}
-              <div className="flex flex-wrap gap-4">
-                <div className="flex items-center gap-2 text-xs text-[#3A3A3A]">
-                  <Truck size={14} aria-hidden="true" className="shrink-0 text-[#2C2C2C]" />
+              {/* Delivery assurances — compact line, preserved from pre-port */}
+              <div className="flex flex-wrap gap-x-5 gap-y-2 pt-2">
+                <div className="flex items-center gap-2 text-[12px] text-[#3A3A3A]">
+                  <Truck size={13} aria-hidden="true" className="shrink-0 text-[#2C2C2C]" />
                   <span>{isAr ? "توصيل مجاني فوق 500 ريال" : "Free delivery over SAR 500"}</span>
                 </div>
-                <div className="flex items-center gap-2 text-xs text-[#3A3A3A]">
-                  <Clock size={14} aria-hidden="true" className="shrink-0 text-[#2C2C2C]" />
-                  <span>{isAr ? "5-7 أيام عمل" : "5–7 business days"}</span>
-                </div>
-                <div className="flex items-center gap-2 text-xs text-[#3A3A3A]">
-                  <Wrench size={14} aria-hidden="true" className="shrink-0 text-[#2C2C2C]" />
+                <div className="flex items-center gap-2 text-[12px] text-[#3A3A3A]">
+                  <Wrench size={13} aria-hidden="true" className="shrink-0 text-[#2C2C2C]" />
                   <span>{isAr ? "التركيب مشمول" : "Assembly included"}</span>
                 </div>
               </div>
