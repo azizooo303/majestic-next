@@ -118,15 +118,24 @@ export function FamilyConfigurator({family, basePrice, locale}: FamilyConfigurat
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 py-8 px-4 max-w-7xl mx-auto">
       {/* Left — 3D viewer / hero */}
-      <div className="bg-[#F7F7F7] lg:h-[600px] flex items-center justify-center">
+      <div className="bg-[#F7F7F7] lg:h-[600px] flex flex-col items-center justify-center relative">
         {family.hasGlb && getProduct3DModel(family.sku) ? (
-          <ProductViewer3D
-            model={getProduct3DModel(family.sku)!}
-            name={isAr ? family.nameAr : family.nameEn}
-            familySku={family.sku}
-            topFinishName={finish}
-            legColorName={leg}
-          />
+          <>
+            <ProductViewer3D
+              model={getProduct3DModel(family.sku)!}
+              name={isAr ? family.nameAr : family.nameEn}
+              familySku={family.sku}
+              topFinishName={finish}
+              legColorName={leg}
+            />
+            {config !== "Executive" && (
+              <div className="absolute top-3 left-3 bg-white/90 text-[#3A3A3A] text-[10px] uppercase tracking-wider px-3 py-1.5 border border-[#D4D4D4]">
+                {isAr
+                  ? `معاينة ثلاثية الأبعاد: تنفيذي فقط (${config} قريباً)`
+                  : `3D preview: Executive only (${config} coming soon)`}
+              </div>
+            )}
+          </>
         ) : (
           <div className="text-[#3A3A3A] text-center aspect-square w-full flex items-center justify-center">
             <div>

@@ -3,13 +3,21 @@
 import Script from "next/script";
 import { useEffect, useRef } from "react";
 import type { Model3D } from "@/lib/products-3d";
-import { FAMILY_MESH_MAP, DESK_TOP_FINISH_HEX } from "@/data/families";
+import {
+  FAMILY_MESH_MAP,
+  DESK_TOP_FINISH_HEX,
+  LEG_COLOR_MATERIAL,
+} from "@/data/families";
 
 // Minimal shape of the material object exposed by <model-viewer> 4.x runtime API.
 // Docs: https://modelviewer.dev/docs/index.html#entrydocs-materials
+interface MVTextureInfo {
+  setTexture: (tex: unknown | null) => void;
+}
 interface MVMaterial {
   name: string;
   pbrMetallicRoughness: {
+    baseColorTexture?: MVTextureInfo;
     setBaseColorFactor: (rgba: [number, number, number, number]) => void;
     setRoughnessFactor?: (v: number) => void;
     setMetallicFactor?: (v: number) => void;
@@ -67,12 +75,16 @@ export function ProductViewer3D({
       const materials = el.model?.materials;
       if (!materials || materials.length === 0) return;
 
-      // Swap desktop top material
+      // Swap desktop top material. The Cratos `Majestic_Oak` material carries a
+      // baseColorTexture — if we only set baseColorFactor the texture multiplies
+      // against our hex and we get a tinted oak instead of e.g. walnut. Clear the
+      // texture first so baseColorFactor drives the visible color.
       if (topFinishName && DESK_TOP_FINISH_HEX[topFinishName]) {
         const topMat = materials.find((m) => m.name === meshMap.topMaterial);
         if (topMat) {
           const [r, g, b] = hexToFloat(DESK_TOP_FINISH_HEX[topFinishName]);
           try {
+            topMat.pbrMetallicRoughness.baseColorTexture?.setTexture(null);
             topMat.pbrMetallicRoughness.setBaseColorFactor([r, g, b, 1]);
           } catch (e) {
             console.warn("[viewer] top material swap failed", e);
@@ -80,11 +92,20 @@ export function ProductViewer3D({
         }
       }
 
-      // Leg color swap — currently Cratos GLB shares material between top + legs,
-      // so this block intentionally does nothing until GLB is re-exported with
-      // a separate legs material. Kept as a placeholder so the call site is stable.
-      if (legColorName && meshMap.legsMaterial !== meshMap.topMaterial) {
-        // future: separate material path
+      // Swap legs/body material using the leg color's hex + metalness + roughness.
+      if (legColorName && LEG_COLOR_MATERIAL[legColorName]) {
+        const legsMat = materials.find((m) => m.name === meshMap.legsMaterial);
+        if (legsMat) {
+          const { hex, metalness, roughness } = LEG_COLOR_MATERIAL[legColorName];
+          const [r, g, b] = hexToFloat(hex);
+          try {
+            legsMat.pbrMetallicRoughness.setBaseColorFactor([r, g, b, 1]);
+            legsMat.pbrMetallicRoughness.setMetallicFactor?.(metalness);
+            legsMat.pbrMetallicRoughness.setRoughnessFactor?.(roughness);
+          } catch (e) {
+            console.warn("[viewer] legs material swap failed", e);
+          }
+        }
       }
     };
 

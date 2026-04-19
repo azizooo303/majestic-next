@@ -304,19 +304,16 @@ export const LEG_COLOR_MATERIAL: Record<
  * Only families with verified mesh names are included here. Families
  * not in this map fall back to static GLB (no live swap).
  *
- * Cratos was verified by GLB inspection 2026-04-20 (2 materials total,
- * `Majestic_WhitePaint` is the material used by Box443 top + Box3113/3114 legs).
+ * Cratos verified by gltf-transform inspect 2026-04-20:
+ *   - Majestic_Oak (1 mesh instance, carries baseColorTexture) → the desk TOP
+ *   - Majestic_WhitePaint (9 mesh instances)                   → the legs/body
  */
 export const FAMILY_MESH_MAP: Record<
   string,
   { topMaterial: string; legsMaterial: string }
 > = {
   CRATOS: {
-    // Both top + legs share the same `Majestic_WhitePaint` material in the exported GLB.
-    // For swap we color the same material — top changes reveal leg change too, which is
-    // correct behavior in the Cratos product (unified painted finish).
-    // When legs have their own material in future GLBs, this split applies.
-    topMaterial: "Majestic_WhitePaint",
+    topMaterial: "Majestic_Oak",
     legsMaterial: "Majestic_WhitePaint",
   },
 };
