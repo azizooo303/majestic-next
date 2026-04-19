@@ -15,6 +15,7 @@ import type {DeskFamily} from "@/data/families";
 import {
   DESK_TOP_FINISHES,
   DESK_TOP_FINISH_HEX,
+  DESK_TOP_FINISH_TEXTURE,
   LEG_COLORS,
   CONFIG_EXTRA_PRICES,
   isValidCombo,
@@ -204,6 +205,7 @@ export function FamilyConfigurator({family, basePrice, locale}: FamilyConfigurat
               labelEn: f,
               labelAr: f,
               swatchHex: DESK_TOP_FINISH_HEX[f] ?? "#D4B895",
+              swatchImage: DESK_TOP_FINISH_TEXTURE[f],
             }))}
             displayMode="color-swatch"
             locale={locale}

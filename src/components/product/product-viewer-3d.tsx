@@ -6,13 +6,19 @@ import type { Model3D } from "@/lib/products-3d";
 import {
   FAMILY_MESH_MAP,
   DESK_TOP_FINISH_HEX,
+  DESK_TOP_FINISH_TEXTURE,
   LEG_COLOR_MATERIAL,
 } from "@/data/families";
 
 // Minimal shape of the material object exposed by <model-viewer> 4.x runtime API.
 // Docs: https://modelviewer.dev/docs/index.html#entrydocs-materials
+interface MVTexture {
+  // opaque — we just pass this back into setTexture
+  readonly _opaque?: never;
+}
 interface MVTextureInfo {
-  setTexture: (tex: unknown | null) => void;
+  texture?: MVTexture | null;
+  setTexture: (tex: MVTexture | null) => void;
 }
 interface MVMaterial {
   name: string;
@@ -25,6 +31,7 @@ interface MVMaterial {
 }
 interface MVModel {
   materials: MVMaterial[];
+  createTexture: (uri: string) => Promise<MVTexture>;
 }
 interface MVElement extends HTMLElement {
   model?: MVModel;
@@ -71,30 +78,46 @@ export function ProductViewer3D({
     const meshMap = FAMILY_MESH_MAP[family];
     if (!meshMap) return; // family not mapped yet — static viewer fallback
 
-    const applySwap = () => {
-      const materials = el.model?.materials;
-      if (!materials || materials.length === 0) return;
+    // Reset baseColorFactor to white (1,1,1,1) so the loaded texture shows at full color
+    // instead of being tinted by the prior hex swap.
+    const WHITE: [number, number, number, number] = [1, 1, 1, 1];
 
-      // Swap desktop top material. The Cratos `Majestic_Oak` material carries a
-      // baseColorTexture — if we only set baseColorFactor the texture multiplies
-      // against our hex and we get a tinted oak instead of e.g. walnut. Clear the
-      // texture first so baseColorFactor drives the visible color.
-      if (topFinishName && DESK_TOP_FINISH_HEX[topFinishName]) {
-        const topMat = materials.find((m) => m.name === meshMap.topMaterial);
+    const applySwap = async () => {
+      const modelObj = el.model;
+      if (!modelObj || !modelObj.materials || modelObj.materials.length === 0) return;
+
+      // --- Top: prefer real texture if available, fall back to flat hex.
+      if (topFinishName) {
+        const topMat = modelObj.materials.find((m) => m.name === meshMap.topMaterial);
         if (topMat) {
-          const [r, g, b] = hexToFloat(DESK_TOP_FINISH_HEX[topFinishName]);
-          try {
+          const textureUrl = DESK_TOP_FINISH_TEXTURE[topFinishName];
+          if (textureUrl && typeof modelObj.createTexture === "function") {
+            try {
+              const tex = await modelObj.createTexture(textureUrl);
+              topMat.pbrMetallicRoughness.baseColorTexture?.setTexture(tex);
+              topMat.pbrMetallicRoughness.setBaseColorFactor(WHITE);
+              topMat.pbrMetallicRoughness.setRoughnessFactor?.(0.55);
+              topMat.pbrMetallicRoughness.setMetallicFactor?.(0.0);
+            } catch (e) {
+              console.warn("[viewer] texture load failed, falling back to hex", e);
+              const hex = DESK_TOP_FINISH_HEX[topFinishName];
+              if (hex) {
+                const [r, g, b] = hexToFloat(hex);
+                topMat.pbrMetallicRoughness.baseColorTexture?.setTexture(null);
+                topMat.pbrMetallicRoughness.setBaseColorFactor([r, g, b, 1]);
+              }
+            }
+          } else if (DESK_TOP_FINISH_HEX[topFinishName]) {
+            const [r, g, b] = hexToFloat(DESK_TOP_FINISH_HEX[topFinishName]);
             topMat.pbrMetallicRoughness.baseColorTexture?.setTexture(null);
             topMat.pbrMetallicRoughness.setBaseColorFactor([r, g, b, 1]);
-          } catch (e) {
-            console.warn("[viewer] top material swap failed", e);
           }
         }
       }
 
-      // Swap legs/body material using the leg color's hex + metalness + roughness.
+      // --- Legs/body: flat hex + metalness + roughness (powder coat vs chrome).
       if (legColorName && LEG_COLOR_MATERIAL[legColorName]) {
-        const legsMat = materials.find((m) => m.name === meshMap.legsMaterial);
+        const legsMat = modelObj.materials.find((m) => m.name === meshMap.legsMaterial);
         if (legsMat) {
           const { hex, metalness, roughness } = LEG_COLOR_MATERIAL[legColorName];
           const [r, g, b] = hexToFloat(hex);

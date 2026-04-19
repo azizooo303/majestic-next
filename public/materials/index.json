@@ -1,0 +1,134 @@
+{
+  "generated_at": "2026-04-19T21:39:00.468Z",
+  "source": "Majestic-HQ/majestic-3d/03_library/materials/wood",
+  "wood": {
+    "Premium White": {
+      "url": "/materials/wood/premium-white/swatch.jpg",
+      "bytes": 3397
+    },
+    "Natural Hamilton Oak": {
+      "url": "/materials/wood/natural-hamilton-oak/swatch.jpg",
+      "bytes": 163761
+    },
+    "Light Rustic Oak": {
+      "url": "/materials/wood/light-rustic-oak/swatch.jpg",
+      "bytes": 223837
+    },
+    "Grey Bardolino Oak": {
+      "url": "/materials/wood/grey-bardolino-oak/swatch.jpg",
+      "bytes": 259027
+    },
+    "Natural Hamilton Walnut": {
+      "url": "/materials/wood/natural-hamilton-walnut/swatch.jpg",
+      "bytes": 172068
+    },
+    "Vicenza Oak": {
+      "url": "/materials/wood/vicenza-oak-horizontal/swatch.jpg",
+      "bytes": 107341
+    },
+    "Cashmere Grey": {
+      "url": "/materials/wood/cashmere-grey/swatch.jpg",
+      "bytes": 3398
+    },
+    "Light Grey": {
+      "url": "/materials/wood/light-grey/swatch.jpg",
+      "bytes": 3398
+    },
+    "Basalt Grey": {
+      "url": "/materials/wood/basalt-grey/swatch.jpg",
+      "bytes": 3397
+    },
+    "Platinum Grey": {
+      "url": "/materials/wood/platinum-grey/swatch.jpg",
+      "bytes": 3396
+    },
+    "Soft Black": {
+      "url": "/materials/wood/soft-black/swatch.jpg",
+      "bytes": 3397
+    },
+    "Graphite Grey": {
+      "url": "/materials/wood/graphite-grey/swatch.jpg",
+      "bytes": 3397
+    },
+    "Onyx Grey": {
+      "url": "/materials/wood/onyx-grey/swatch.jpg",
+      "bytes": 3395
+    },
+    "Africa Walnut": {
+      "url": "/materials/wood/africa-walnut/swatch.jpg",
+      "bytes": 166905
+    },
+    "Anatolia Walnut": {
+      "url": "/materials/wood/anatolia-walnut/swatch.jpg",
+      "bytes": 117612
+    },
+    "Italian Walnut": {
+      "url": "/materials/wood/italian-walnut/swatch.jpg",
+      "bytes": 94393
+    },
+    "Lefkas Oak": {
+      "url": "/materials/wood/lefkas-oak/swatch.jpg",
+      "bytes": 162565
+    },
+    "Antique White": {
+      "url": "/materials/wood/antique-white/swatch.jpg",
+      "bytes": 209184
+    },
+    "Ibiza": {
+      "url": "/materials/wood/ibiza/swatch.jpg",
+      "bytes": 77639
+    },
+    "Dakota": {
+      "url": "/materials/wood/dakota/swatch.jpg",
+      "bytes": 163724
+    },
+    "Garda": {
+      "url": "/materials/wood/garda/swatch.jpg",
+      "bytes": 187784
+    },
+    "Amalfi": {
+      "url": "/materials/wood/amalfi/swatch.jpg",
+      "bytes": 207347
+    },
+    "Armada": {
+      "url": "/materials/wood/armada/swatch.jpg",
+      "bytes": 126072
+    },
+    "Acapulco": {
+      "url": "/materials/wood/acapulco/swatch.jpg",
+      "bytes": 207693
+    },
+    "Belmonte": {
+      "url": "/materials/wood/belmonte/swatch.jpg",
+      "bytes": 109688
+    },
+    "Cabana": {
+      "url": "/materials/wood/cabana/swatch.jpg",
+      "bytes": 171489
+    },
+    "Argos": {
+      "url": "/materials/wood/argos/swatch.jpg",
+      "bytes": 104957
+    },
+    "Alpine": {
+      "url": "/materials/wood/alpine/swatch.jpg",
+      "bytes": 120432
+    },
+    "White Oak": {
+      "url": "/materials/wood/white-oak/swatch.jpg",
+      "bytes": 84704
+    },
+    "Cherry": {
+      "url": "/materials/wood/cherry/swatch.jpg",
+      "bytes": 84966
+    },
+    "Aris Anthracite": {
+      "url": "/materials/wood/aris-anthracite/swatch.jpg",
+      "bytes": 182245
+    },
+    "Devine Oak": {
+      "url": "/materials/wood/devine-oak/swatch.jpg",
+      "bytes": 138009
+    }
+  }
+}
