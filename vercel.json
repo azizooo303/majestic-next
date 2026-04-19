@@ -28,5 +28,11 @@
   ],
   "rewrites": [
     { "source": "/", "destination": "/en" }
+  ],
+  "crons": [
+    {
+      "path": "/api/sync/nightly-reconcile",
+      "schedule": "0 23 * * *"
+    }
   ]
 }
