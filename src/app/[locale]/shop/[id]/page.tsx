@@ -12,6 +12,8 @@ import { siteUrl } from "@/lib/site-url";
 import type { Metadata } from "next";
 import { getProduct, getProducts, parsePrice, calcDiscount, PRODUCT_PLACEHOLDER } from "@/lib/woocommerce";
 import { getProduct3DModel } from "@/lib/products-3d";
+import { DESK_FAMILIES } from "@/data/families";
+import { FamilyConfigurator } from "@/components/shop/family-configurator";
 
 export const revalidate = 1800;
 
@@ -63,6 +65,19 @@ export default async function ProductDetailPage({
 }) {
   const { locale, id } = await params;
   const isAr = locale === "ar";
+
+  // If the URL segment matches a desk family slug (e.g. /shop/cratos),
+  // render the 4-axis configurator instead of the product detail page.
+  const family = DESK_FAMILIES.find((f) => f.slug === id.toLowerCase());
+  if (family) {
+    return (
+      <FamilyConfigurator
+        family={family}
+        basePrice={2400}
+        locale={isAr ? "ar" : "en"}
+      />
+    );
+  }
 
   let product;
   try {

@@ -11,8 +11,10 @@ import {
 import { Reveal } from "@/components/common/reveal";
 import { StaggerGrid } from "@/components/common/stagger-grid";
 import { ProductCard } from "@/components/shop/product-card";
+import { FamilyCard } from "@/components/shop/family-card";
 import { ShopSidebar } from "@/components/shop/shop-sidebar";
 import { ShopTopBar } from "@/components/shop/shop-top-bar";
+import { DESK_FAMILIES } from "@/data/families";
 import { ChevronRight, ChevronLeft } from "lucide-react";
 import { siteUrl } from "@/lib/site-url";
 import type { Metadata } from "next";
@@ -202,6 +204,31 @@ export default async function ShopPage({
                       : "Executive seating, workstations, conference systems, storage, lounge, and acoustic solutions. Built to modern architectural standards — supplied across Saudi Arabia and the Gulf."}
                   </p>
                 </div>
+              </Reveal>
+            )}
+
+            {/* Desk Families — configurable 4-axis desks (Wave 3 configurator) */}
+            {!categorySlugRaw && !search && page === 1 && (
+              <Reveal>
+                <section className="mb-10">
+                  <div className="mb-4 flex items-baseline justify-between">
+                    <h2 className="text-xl md:text-2xl font-medium text-[#2C2C2C]">
+                      {isAr ? "اضبط مكتبك" : "Configure Your Desk"}
+                    </h2>
+                    <span className="text-xs text-[#3A3A3A] uppercase tracking-wide">
+                      {isAr ? `${DESK_FAMILIES.length} عائلة قابلة للتخصيص` : `${DESK_FAMILIES.length} configurable families`}
+                    </span>
+                  </div>
+                  <StaggerGrid
+                    stagger={0.05}
+                    isRTL={isAr}
+                    className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[15px]"
+                  >
+                    {DESK_FAMILIES.slice(0, 8).map((family) => (
+                      <FamilyCard key={family.sku} family={family} locale={isAr ? "ar" : "en"} />
+                    ))}
+                  </StaggerGrid>
+                </section>
               </Reveal>
             )}
 
