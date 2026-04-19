@@ -224,7 +224,7 @@ async function handleTemplateArchive(ids: number[], eventId: string) {
   for (const tpl of templates) {
     if (!tpl.default_code) continue;
     const wcProducts = await wcFetch<Array<{ id: number }>>({
-      endpoint: "/wc/v3/products",
+      endpoint: "products",
       params: { sku: tpl.default_code as string, per_page: 1 },
     });
     if (wcProducts[0]) {
@@ -294,7 +294,7 @@ async function handleStockChange(quantIds: number[], eventId: string) {
     if (!sku) continue;
 
     const wcProducts = await wcFetch<Array<{ id: number }>>({
-      endpoint: "/wc/v3/products",
+      endpoint: "products",
       params: { sku: sku as string, per_page: 1 },
     });
     if (wcProducts[0]) {

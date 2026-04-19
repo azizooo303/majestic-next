@@ -35,7 +35,7 @@ export async function upsertVariableProduct(
 
   // Try to find existing by SKU
   const existing = await wcFetch<WCVariableProduct[]>({
-    endpoint: "/wc/v3/products",
+    endpoint: "products",
     params: { sku, per_page: 1 },
   });
 
@@ -55,7 +55,7 @@ export async function upsertVariableProduct(
   try {
     if (existing.length > 0) {
       const updated = await wcFetch<WCVariableProduct>({
-        endpoint: `/wc/v3/products/${existing[0].id}`,
+        endpoint: `products/${existing[0].id}`,
         method: "PUT",
         body: payload,
       });
@@ -64,7 +64,7 @@ export async function upsertVariableProduct(
     }
 
     const created = await wcFetch<WCVariableProduct>({
-      endpoint: "/wc/v3/products",
+      endpoint: "products",
       method: "POST",
       body: payload,
     });
@@ -90,7 +90,7 @@ export async function updateStockOnProduct(
   }
 
   const before = await wcFetch<WCVariableProduct>({
-    endpoint: `/wc/v3/products/${wcProductId}`,
+    endpoint: `products/${wcProductId}`,
   });
 
   const rollbackId = await captureRollback({
@@ -105,7 +105,7 @@ export async function updateStockOnProduct(
 
   try {
     await wcFetch<WCVariableProduct>({
-      endpoint: `/wc/v3/products/${wcProductId}`,
+      endpoint: `products/${wcProductId}`,
       method: "PUT",
       body: {
         stock_quantity: quantity,
@@ -144,7 +144,7 @@ export async function archiveVariableProduct(
 
   try {
     await wcFetch({
-      endpoint: `/wc/v3/products/${wcProductId}`,
+      endpoint: `products/${wcProductId}`,
       method: "PUT",
       body: { status: "draft" },
     });

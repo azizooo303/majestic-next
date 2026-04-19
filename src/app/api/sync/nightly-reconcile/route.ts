@@ -73,7 +73,7 @@ export async function GET(req: NextRequest) {
         attributes: unknown;
       }>
     >({
-      endpoint: "/wc/v3/products",
+      endpoint: "products",
       params: { type: "variable", per_page: 100 },
     });
 
