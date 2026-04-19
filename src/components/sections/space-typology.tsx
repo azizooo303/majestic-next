@@ -17,7 +17,7 @@ export function SpaceTypology({ isAr, panels = [], labelEn = "Every Space Has a 
     <section className="relative w-full bg-white overflow-hidden">
       <FadeDown>
         <div className="max-w-screen-2xl mx-auto px-4 md:px-6 lg:px-8 pt-10 pb-4">
-          <h2 className="text-xs text-gray-600 mb-6">
+          <h2 className="overline mb-6">
             {isAr ? labelAr : labelEn}
           </h2>
         </div>

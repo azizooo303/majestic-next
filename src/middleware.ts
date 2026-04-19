@@ -80,6 +80,6 @@ export const config = {
   // Static assets (.js, .css, .png, etc.) are excluded to avoid
   // redirecting _next/static chunks or public-folder files.
   matcher: [
-    '/((?!_next/static|_next/image|.*\\.(?:ico|png|jpg|jpeg|gif|svg|webp|avif|woff|woff2|ttf|otf|css|js|map|txt|xml|json|glb|gltf|usdz|fbx|obj|bin|hdr|exr|ktx2|drc|wasm)).*)',
+    '/((?!_next/static|_next/image|.*\\.(?:ico|png|jpg|jpeg|gif|svg|webp|avif|woff|woff2|ttf|otf|css|js|map|txt|xml|json|webmanifest|glb|gltf|usdz|fbx|obj|bin|hdr|exr|ktx2|drc|wasm)).*)',
   ],
 }

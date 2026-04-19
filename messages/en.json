@@ -49,7 +49,8 @@
     "searchPlaceholder": "Search products...",
     "comingSoon": "Coming soon",
     "subscribeThankYou": "Thank you for subscribing",
-    "invalidEmail": "Please enter a valid email"
+    "invalidEmail": "Please enter a valid email",
+    "emailLabel": "Email address"
   },
   "nav": {
     "home": "Home",

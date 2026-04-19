@@ -170,8 +170,9 @@
     color: #2C2C2C;
   }
   
+  /* Kit rhythm: 80px mobile, 96px desktop vertical section padding */
   section {
-    @apply py-12 px-6 bg-white;
+    @apply py-20 lg:py-24 px-6 bg-white;
   }
   
   button {
