@@ -83,10 +83,10 @@ export default async function KhobarPage({
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
           <Reveal>
             <div className="max-w-3xl">
-              <p className="text-xs uppercase tracking-widest text-[#484848] mb-4">
+              <p className="text-xs uppercase tracking-widest text-[#3A3A3A] mb-4">
                 {isAr ? "نطاق الخدمة" : "Scope of Service"}
               </p>
-              <p className="text-[#484848] text-base md:text-lg leading-relaxed">
+              <p className="text-[#3A3A3A] text-base md:text-lg leading-relaxed">
                 {isAr
                   ? "توريد وتركيب أثاث مكتبي في الخبر — لمكاتب الشركات والمعارض ومجمعات الأعمال في المنطقة الشرقية. نقدّم حلولًا شاملة تغطي المكاتب التنفيذية وأماكن العمل المفتوحة وقاعات الاجتماعات وفق مواصفات دقيقة."
                   : "Office furniture supply and installation in Al Khobar — serving corporate offices, showrooms, and multi-tenant business parks in the Eastern Province. We provide comprehensive solutions covering executive offices, open workspaces, and meeting rooms delivered to precise specifications."}
@@ -98,7 +98,7 @@ export default async function KhobarPage({
 
       {/* Stats — hidden until real data is available */}
       {false && (
-      <section className="bg-white border-y border-[rgba(0,0,0,0.08)] py-16">
+      <section className="bg-white border-y border-[#D4D4D4] py-16">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
           <Reveal>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">

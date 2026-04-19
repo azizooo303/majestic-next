@@ -55,7 +55,7 @@ export default async function AccountPage({
             />
             <button
               className="w-full bg-[#2C2C2C] text-white py-3 text-sm font-semibold rounded-none
-                hover:bg-[#333] transition-colors"
+                hover:bg-[#3A3A3A] transition-colors"
             >
               {isAr ? "دخول" : "Sign In"}
             </button>

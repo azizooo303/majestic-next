@@ -31,7 +31,7 @@ export function InspireSection({ isAr }: { isAr: boolean }) {
   return (
     <section
       ref={sectionRef}
-      className="w-full bg-[#f7f7f5] border-t border-b border-[rgba(0,0,0,0.08)] overflow-hidden relative"
+      className="w-full bg-[#f7f7f5] border-t border-b border-[#D4D4D4] overflow-hidden relative"
     >
       <div className="max-w-screen-xl mx-auto">
         <div className="grid md:grid-cols-2 min-h-[420px]">
@@ -63,7 +63,7 @@ export function InspireSection({ isAr }: { isAr: boolean }) {
             }`}
             style={reducedMotion ? {} : { x: textX }}
           >
-            <p className="text-xs uppercase tracking-widest text-[#484848] font-medium mb-4">
+            <p className="text-xs uppercase tracking-widest text-[#3A3A3A] font-medium mb-4">
               {isAr ? "إلهام التصميم" : "Design Inspiration"}
             </p>
             <h2 className="text-[28px] lg:text-[36px] font-bold text-[#2C2C2C] leading-tight tracking-tight">
@@ -73,14 +73,14 @@ export function InspireSection({ isAr }: { isAr: boolean }) {
                 <>Planning Ideas<br />For Your Workspace</>
               )}
             </h2>
-            <p className="mt-4 text-[#484848] text-base leading-relaxed max-w-sm">
+            <p className="mt-4 text-[#3A3A3A] text-base leading-relaxed max-w-sm">
               {isAr
                 ? "استلهم من مجموعات أثاث مكتبي مصممة لتعزيز الإنتاجية والأناقة في كل بيئة عمل."
                 : "Get inspired by curated office furniture collections designed to elevate productivity and style in any work environment."}
             </p>
             <Link
               href="/inspirations"
-              className="mt-8 inline-flex items-center gap-1 text-sm font-semibold text-[#2C2C2C] hover:text-[#484848] transition-colors group"
+              className="mt-8 inline-flex items-center gap-1 text-sm font-semibold text-[#2C2C2C] hover:text-[#3A3A3A] transition-colors group"
             >
               {isAr ? "استكشف الإلهام" : "Explore the collection"}
               <span className="text-base transition-transform duration-200 ltr:group-hover:translate-x-0.5 rtl:group-hover:-translate-x-0.5 rtl:rotate-180">

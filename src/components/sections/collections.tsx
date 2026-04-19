@@ -61,7 +61,7 @@ export function Collections({
             return (
               <div
                 key={col._id}
-                className="bg-white border border-[#D4D4D4] overflow-hidden group transition-all duration-200 hover:-translate-y-2 hover:shadow-[0_4px_16px_rgba(0,0,0,0.08)]"
+                className="bg-white border border-[#D4D4D4] overflow-hidden group transition-all duration-200 hover:-translate-y-2 hover:shadow-[0_4px_16px_rgba(44,44,44,0.08)]"
               >
                 <div className="relative aspect-[3/2] overflow-hidden">
                   <Image

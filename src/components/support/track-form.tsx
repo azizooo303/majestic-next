@@ -68,19 +68,19 @@ export function TrackForm({ isAr }: TrackFormProps) {
   }
 
   const inputClass =
-    "w-full border border-[#D4D4D4] rounded-none px-4 py-3 text-sm text-[#2C2C2C] placeholder:text-[#999] focus:outline-none focus:border-gray-900 bg-white transition-colors";
+    "w-full border border-[#D4D4D4] rounded-none px-4 py-3 text-sm text-[#2C2C2C] placeholder:text-[#999] focus:outline-none focus:border-[#2C2C2C] bg-white transition-colors";
 
   if (result?.found && result.steps) {
     return (
       <div className="border border-[#D4D4D4] rounded-none p-6 md:p-8">
         <div className="flex items-center justify-between mb-6 flex-wrap gap-2">
           <div>
-            <p className="text-xs text-[#484848] uppercase tracking-widest">
+            <p className="text-xs text-[#3A3A3A] uppercase tracking-widest">
               {isAr ? "رقم الطلب" : "Order Number"}
             </p>
             <p className="text-base font-bold text-[#2C2C2C] mt-0.5">{result.orderNumber}</p>
           </div>
-          <span className="text-xs font-semibold uppercase tracking-wider border border-[#D4D4D4] px-3 py-1 rounded-none text-[#484848]">
+          <span className="text-xs font-semibold uppercase tracking-wider border border-[#D4D4D4] px-3 py-1 rounded-none text-[#3A3A3A]">
             {result.statusLabel}
           </span>
         </div>
@@ -115,12 +115,12 @@ export function TrackForm({ isAr }: TrackFormProps) {
                   </div>
                   {index < result.steps!.length - 1 && (
                     <>
-                      <div className="sm:hidden w-px h-6 bg-[rgba(0,0,0,0.12)] mx-auto" />
-                      <div className="hidden sm:block flex-1 h-px bg-[rgba(0,0,0,0.12)] w-full mt-4" />
+                      <div className="sm:hidden w-px h-6 bg-[#D4D4D4] mx-auto" />
+                      <div className="hidden sm:block flex-1 h-px bg-[#D4D4D4] w-full mt-4" />
                     </>
                   )}
                 </div>
-                <p className={`text-xs font-medium mt-0 sm:mt-2 text-center ${step.active ? "text-[#2C2C2C]" : "text-[#484848]"}`}>
+                <p className={`text-xs font-medium mt-0 sm:mt-2 text-center ${step.active ? "text-[#2C2C2C]" : "text-[#3A3A3A]"}`}>
                   {step.label}
                 </p>
               </div>
@@ -131,7 +131,7 @@ export function TrackForm({ isAr }: TrackFormProps) {
         <button
           type="button"
           onClick={() => { setResult(null); setOrderNumber(""); setEmail(""); }}
-          className="mt-8 text-sm text-[#484848] underline underline-offset-2 hover:text-[#2C2C2C] transition-colors"
+          className="mt-8 text-sm text-[#3A3A3A] underline underline-offset-2 hover:text-[#2C2C2C] transition-colors"
         >
           {isAr ? "البحث عن طلب آخر" : "Track another order"}
         </button>
@@ -191,7 +191,7 @@ export function TrackForm({ isAr }: TrackFormProps) {
         <button
           type="submit"
           disabled={loading}
-          className="btn-press w-full bg-white text-[#2C2C2C] border border-gray-900 py-3.5 font-semibold text-sm
+          className="btn-press w-full bg-white text-[#2C2C2C] border border-[#2C2C2C] py-3.5 font-semibold text-sm
             tracking-wide rounded-none hover:opacity-80 transition-opacity disabled:opacity-50"
         >
           {loading

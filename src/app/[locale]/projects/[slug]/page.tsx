@@ -46,9 +46,9 @@ export default async function ProjectDetailPage({
   return (
     <PageWrapper id="main-content" className="flex-1 bg-white">
       {/* Breadcrumb */}
-      <section className="border-b border-[rgba(0,0,0,0.08)] py-10 md:py-14 bg-white">
+      <section className="border-b border-[#D4D4D4] py-10 md:py-14 bg-white">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
-          <p className="text-xs uppercase tracking-widest text-[#484848] mb-3">
+          <p className="text-xs uppercase tracking-widest text-[#3A3A3A] mb-3">
             <Link href="/" className="hover:text-[#2C2C2C] transition-colors">
               {isAr ? "الرئيسية" : "Home"}
             </Link>
@@ -62,7 +62,7 @@ export default async function ProjectDetailPage({
           <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight text-[#2C2C2C]">
             {displayName}
           </h1>
-          <p className="mt-2 text-sm text-[#484848] uppercase tracking-widest font-semibold">
+          <p className="mt-2 text-sm text-[#3A3A3A] uppercase tracking-widest font-semibold">
             {project.category}
           </p>
         </div>
@@ -77,24 +77,24 @@ export default async function ProjectDetailPage({
             {/* Sidebar */}
             <div className="space-y-8">
               <div className="border border-[rgba(0,0,0,0.1)] rounded-sm p-6">
-                <h2 className="text-xs uppercase tracking-widest text-[#484848] mb-4">
+                <h2 className="text-xs uppercase tracking-widest text-[#3A3A3A] mb-4">
                   {isAr ? "تفاصيل المشروع" : "Project Details"}
                 </h2>
                 <dl className="space-y-3 text-sm">
                   <div>
-                    <dt className="text-[#484848] text-xs uppercase tracking-wider mb-0.5">
+                    <dt className="text-[#3A3A3A] text-xs uppercase tracking-wider mb-0.5">
                       {isAr ? "العميل" : "Client"}
                     </dt>
                     <dd className="font-semibold text-[#2C2C2C]">{displayName}</dd>
                   </div>
                   <div>
-                    <dt className="text-[#484848] text-xs uppercase tracking-wider mb-0.5">
+                    <dt className="text-[#3A3A3A] text-xs uppercase tracking-wider mb-0.5">
                       {isAr ? "القطاع" : "Sector"}
                     </dt>
                     <dd className="font-semibold text-[#2C2C2C]">{project.category}</dd>
                   </div>
                   <div>
-                    <dt className="text-[#484848] text-xs uppercase tracking-wider mb-0.5">
+                    <dt className="text-[#3A3A3A] text-xs uppercase tracking-wider mb-0.5">
                       {isAr ? "عدد الصور" : "Images"}
                     </dt>
                     <dd className="font-semibold text-[#2C2C2C]">{project.images.length}</dd>
@@ -104,23 +104,23 @@ export default async function ProjectDetailPage({
 
               {project.description && (
                 <div>
-                  <h2 className="text-xs uppercase tracking-widest text-[#484848] mb-3">
+                  <h2 className="text-xs uppercase tracking-widest text-[#3A3A3A] mb-3">
                     {isAr ? "عن المشروع" : "About"}
                   </h2>
-                  <p className="text-sm text-[#484848] leading-relaxed">{project.description}</p>
+                  <p className="text-sm text-[#3A3A3A] leading-relaxed">{project.description}</p>
                 </div>
               )}
 
               <div className="pt-2">
                 <Link
                   href="/contact"
-                  className="block w-full text-center bg-[#0c0c0c] text-white px-6 py-3.5 text-sm font-semibold tracking-wide rounded-sm hover:bg-[#333] transition-colors"
+                  className="block w-full text-center bg-[#2C2C2C] text-white px-6 py-3.5 text-sm font-semibold tracking-wide rounded-sm hover:bg-[#3A3A3A] transition-colors"
                 >
                   {isAr ? "ابدأ مشروعك معنا" : "Start a Similar Project"}
                 </Link>
                 <Link
                   href="/projects"
-                  className="block w-full text-center mt-3 border border-[#D4D4D4] text-[#484848] px-6 py-3 text-sm font-medium rounded-sm hover:border-[#0c0c0c] hover:text-[#2C2C2C] transition-colors"
+                  className="block w-full text-center mt-3 border border-[#D4D4D4] text-[#3A3A3A] px-6 py-3 text-sm font-medium rounded-sm hover:border-[#2C2C2C] hover:text-[#2C2C2C] transition-colors"
                 >
                   {isAr ? "جميع المشاريع" : "All Projects"}
                 </Link>

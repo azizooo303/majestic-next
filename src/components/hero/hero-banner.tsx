@@ -144,7 +144,7 @@ export function HeroBanner({ slides, slide }: HeroBannerProps) {
   return (
     <section
       className={cn(
-        "relative w-full overflow-hidden bg-white border-b border-[rgba(0,0,0,0.12)]",
+        "relative w-full overflow-hidden bg-white border-b border-[#D4D4D4]",
         "min-h-[640px] md:min-h-[715px]"
       )}
       aria-label="Featured collections"

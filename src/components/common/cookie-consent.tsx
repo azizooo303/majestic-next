@@ -42,15 +42,15 @@ export function CookieConsent() {
   if (!visible) return null;
 
   return (
-    <div className="fixed bottom-0 inset-x-0 z-50 bg-white border-t border-[rgba(0,0,0,0.12)] px-4 py-4 md:py-3">
+    <div className="fixed bottom-0 inset-x-0 z-50 bg-white border-t border-[#D4D4D4] px-4 py-4 md:py-3">
       <div className="max-w-screen-xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
-        <p className="text-sm text-[#484848] text-center sm:text-start">
+        <p className="text-sm text-[#3A3A3A] text-center sm:text-start">
           {isAr
             ? "نستخدم ملفات تعريف الارتباط لتحسين تجربتك. بالاستمرار، أنت توافق على "
             : "We use cookies to improve your experience. By continuing, you agree to our "}
           <Link
             href="/privacy"
-            className="underline underline-offset-2 hover:text-[#0c0c0c] transition-colors"
+            className="underline underline-offset-2 hover:text-[#2C2C2C] transition-colors"
           >
             {isAr ? "سياسة الخصوصية" : "Privacy Policy"}
           </Link>
@@ -58,7 +58,7 @@ export function CookieConsent() {
         </p>
         <button
           onClick={accept}
-          className="shrink-0 bg-[#0c0c0c] text-white px-6 py-2.5 text-sm font-semibold rounded-sm hover:bg-[#333] transition-colors"
+          className="shrink-0 bg-[#2C2C2C] text-white px-6 py-2.5 text-sm font-semibold rounded-sm hover:bg-[#3A3A3A] transition-colors"
         >
           {isAr ? "موافق" : "Accept"}
         </button>

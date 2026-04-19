@@ -538,7 +538,7 @@ function NavMegaPanel({
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
-      <div className="bg-white border-b border-[#D4D4D4]" style={{ boxShadow: "0 8px 24px rgba(0,0,0,0.12)" }}>
+      <div className="bg-white border-b border-[#D4D4D4]" style={{ boxShadow: "0 8px 24px #D4D4D4" }}>
         <div className="max-w-4xl mx-auto px-8 py-4">
 
           {/* Panel header */}

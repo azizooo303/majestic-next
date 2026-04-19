@@ -2,7 +2,7 @@ export default function ShopLoading() {
   return (
     <main className="min-h-screen bg-white">
       {/* Breadcrumb skeleton */}
-      <div className="border-b border-[rgba(0,0,0,0.08)] py-6">
+      <div className="border-b border-[#D4D4D4] py-6">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
           <div className="h-3 w-48 bg-[#f0f0f0] animate-pulse rounded-sm" />
         </div>

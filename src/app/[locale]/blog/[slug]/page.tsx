@@ -68,13 +68,13 @@ export async function generateMetadata({
 const portableTextComponents = {
   block: {
     normal: ({ children }: { children?: React.ReactNode }) => (
-      <p className="text-[#484848] leading-[1.8] text-base">{children}</p>
+      <p className="text-[#3A3A3A] leading-[1.8] text-base">{children}</p>
     ),
     h2: ({ children }: { children?: React.ReactNode }) => (
-      <h2 className="text-xl font-bold text-[#0c0c0c] mt-8 mb-4">{children}</h2>
+      <h2 className="text-xl font-bold text-[#2C2C2C] mt-8 mb-4">{children}</h2>
     ),
     h3: ({ children }: { children?: React.ReactNode }) => (
-      <h3 className="text-lg font-bold text-[#0c0c0c] mt-6 mb-3">{children}</h3>
+      <h3 className="text-lg font-bold text-[#2C2C2C] mt-6 mb-3">{children}</h3>
     ),
   },
 };
@@ -120,28 +120,28 @@ export default async function BlogPostPage({
       />
       <PageWrapper id="main-content" className="flex-1 bg-white">
       {/* Breadcrumb + Hero */}
-      <section className="bg-white border-b border-[rgba(0,0,0,0.08)] py-12 md:py-16">
+      <section className="bg-white border-b border-[#D4D4D4] py-12 md:py-16">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
-          <p className="text-xs uppercase tracking-widest text-[#484848] mb-3">
-            <Link href="/" className="hover:text-[#0c0c0c] transition-colors">
+          <p className="text-xs uppercase tracking-widest text-[#3A3A3A] mb-3">
+            <Link href="/" className="hover:text-[#2C2C2C] transition-colors">
               {isAr ? "الرئيسية" : "Home"}
             </Link>
             <span className="mx-2">/</span>
             <Link
               href="/blog"
-              className="hover:text-[#0c0c0c] transition-colors"
+              className="hover:text-[#2C2C2C] transition-colors"
             >
               {isAr ? "المدونة" : "Blog"}
             </Link>
             <span className="mx-2">/</span>
             {title}
           </p>
-          <p className="text-xs uppercase tracking-wider font-semibold text-[#484848] mb-3">
+          <p className="text-xs uppercase tracking-wider font-semibold text-[#3A3A3A] mb-3">
             {category}
             <span className="mx-3 text-[#d1d5db]">·</span>
             {post.publishedAt}
           </p>
-          <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight text-[#0c0c0c] max-w-3xl">
+          <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight text-[#2C2C2C] max-w-3xl">
             {title}
           </h1>
         </div>
@@ -181,21 +181,21 @@ export default async function BlogPostPage({
             {/* Sidebar */}
             <aside className="space-y-8">
               <div className="border border-[rgba(0,0,0,0.1)] rounded-sm p-6">
-                <h2 className="text-xs uppercase tracking-widest text-[#484848] mb-4">
+                <h2 className="text-xs uppercase tracking-widest text-[#3A3A3A] mb-4">
                   {isAr ? "تفاصيل المقال" : "Article Details"}
                 </h2>
                 <dl className="space-y-3 text-sm">
                   <div>
-                    <dt className="text-[#484848] text-xs uppercase tracking-wider mb-0.5">
+                    <dt className="text-[#3A3A3A] text-xs uppercase tracking-wider mb-0.5">
                       {isAr ? "التصنيف" : "Category"}
                     </dt>
-                    <dd className="font-semibold text-[#0c0c0c]">{category}</dd>
+                    <dd className="font-semibold text-[#2C2C2C]">{category}</dd>
                   </div>
                   <div>
-                    <dt className="text-[#484848] text-xs uppercase tracking-wider mb-0.5">
+                    <dt className="text-[#3A3A3A] text-xs uppercase tracking-wider mb-0.5">
                       {isAr ? "تاريخ النشر" : "Published"}
                     </dt>
-                    <dd className="font-semibold text-[#0c0c0c]">
+                    <dd className="font-semibold text-[#2C2C2C]">
                       {post.publishedAt}
                     </dd>
                   </div>
@@ -205,13 +205,13 @@ export default async function BlogPostPage({
               <div className="pt-2">
                 <Link
                   href="/contact"
-                  className="block w-full text-center bg-[#0c0c0c] text-white px-6 py-3.5 text-sm font-semibold tracking-wide rounded-sm hover:bg-[#333] transition-colors"
+                  className="block w-full text-center bg-[#2C2C2C] text-white px-6 py-3.5 text-sm font-semibold tracking-wide rounded-sm hover:bg-[#3A3A3A] transition-colors"
                 >
                   {isAr ? "تواصل معنا" : "Get in Touch"}
                 </Link>
                 <Link
                   href="/blog"
-                  className="block w-full text-center mt-3 border border-[#D4D4D4] text-[#484848] px-6 py-3 text-sm font-medium rounded-sm hover:border-[#0c0c0c] hover:text-[#0c0c0c] transition-colors"
+                  className="block w-full text-center mt-3 border border-[#D4D4D4] text-[#3A3A3A] px-6 py-3 text-sm font-medium rounded-sm hover:border-[#2C2C2C] hover:text-[#2C2C2C] transition-colors"
                 >
                   {isAr ? "جميع المقالات" : "All Articles"}
                 </Link>

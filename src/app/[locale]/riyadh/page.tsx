@@ -83,10 +83,10 @@ export default async function RiyadhPage({
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
           <Reveal>
             <div className="max-w-3xl">
-              <p className="text-xs uppercase tracking-widest text-[#484848] mb-4">
+              <p className="text-xs uppercase tracking-widest text-[#3A3A3A] mb-4">
                 {isAr ? "نطاق الخدمة" : "Scope of Service"}
               </p>
-              <p className="text-[#484848] text-base md:text-lg leading-relaxed">
+              <p className="text-[#3A3A3A] text-base md:text-lg leading-relaxed">
                 {isAr
                   ? "ماجستيك توفر وتركب بيئات أثاث مكتبي متكاملة في الرياض — من المكاتب التنفيذية إلى تجهيز الطوابق المؤسسية الكاملة. نعمل مع الشركات والجهات الحكومية والمقرات الإقليمية في مختلف أحياء الرياض، ونضمن تسليمًا كاملًا وفق المواصفات."
                   : "Majestic supplies and installs complete office furniture environments in Riyadh — from single executive offices to full-floor corporate fit-outs. We work with corporations, government entities, and regional headquarters across all districts of Riyadh, delivering to specification on every project."}
@@ -97,7 +97,7 @@ export default async function RiyadhPage({
       </section>
 
       {/* Stats */}
-      <section className="bg-white border-y border-[rgba(0,0,0,0.08)] py-16">
+      <section className="bg-white border-y border-[#D4D4D4] py-16">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
           <Reveal>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
@@ -106,7 +106,7 @@ export default async function RiyadhPage({
                   <p className="text-4xl md:text-5xl font-extrabold text-[#2C2C2C] tracking-tight mb-2">
                     {stat.value}
                   </p>
-                  <p className="text-sm text-[#484848] font-medium">{stat.label}</p>
+                  <p className="text-sm text-[#3A3A3A] font-medium">{stat.label}</p>
                 </div>
               ))}
             </div>

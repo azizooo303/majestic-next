@@ -70,7 +70,7 @@ export function SearchTrigger() {
           onClick={() => setIsOpen(false)}
         >
           <div
-            className="bg-white rounded-none shadow-[0_8px_24px_rgba(0,0,0,0.12)] w-full max-w-lg mx-4 p-6"
+            className="bg-white rounded-none shadow-[0_8px_24px_rgba(44,44,44,0.12)] w-full max-w-lg mx-4 p-6"
             role="dialog"
             aria-modal="true"
             aria-label="Search"

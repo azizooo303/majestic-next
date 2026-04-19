@@ -165,9 +165,9 @@ export default async function ProductCarePage({
   return (
     <main id="main-content" className="flex-1 pt-20 bg-white">
       {/* Hero */}
-      <section className="bg-white border-b border-[rgba(0,0,0,0.08)] py-12 md:py-16">
+      <section className="bg-white border-b border-[#D4D4D4] py-12 md:py-16">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
-          <p className="text-xs uppercase tracking-widest text-[#484848] mb-3">
+          <p className="text-xs uppercase tracking-widest text-[#3A3A3A] mb-3">
             <Link href="/" className="hover:text-[#2C2C2C] transition-colors">
               {isAr ? "الرئيسية" : "Home"}
             </Link>
@@ -177,7 +177,7 @@ export default async function ProductCarePage({
           <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight text-[#2C2C2C]">
             {isAr ? "دليل العناية بالمنتجات" : "Product Care Guide"}
           </h1>
-          <p className="text-[#484848] text-sm mt-3 max-w-md">
+          <p className="text-[#3A3A3A] text-sm mt-3 max-w-md">
             {isAr
               ? "نصائح وإرشادات لإطالة عمر أثاثك والحفاظ على مظهره الأنيق."
               : "Tips and guidance for extending the life of your furniture and maintaining its appearance."}
@@ -200,9 +200,9 @@ export default async function ProductCarePage({
                   <h3 className="text-base font-bold text-[#2C2C2C] mb-4">{cat.title}</h3>
                   <ul className="space-y-2">
                     {cat.tips.map((tip) => (
-                      <li key={tip} className="flex items-start gap-3 text-sm text-[#484848] leading-relaxed">
+                      <li key={tip} className="flex items-start gap-3 text-sm text-[#3A3A3A] leading-relaxed">
                         <span
-                          className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#484848] flex-shrink-0"
+                          className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#3A3A3A] flex-shrink-0"
                           aria-hidden="true"
                         />
                         {tip}
@@ -217,7 +217,7 @@ export default async function ProductCarePage({
       </section>
 
       {/* Section 2 — Products to avoid */}
-      <section className="py-12 bg-white border-t border-[rgba(0,0,0,0.08)]">
+      <section className="py-12 bg-white border-t border-[#D4D4D4]">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
           <Reveal>
             <h2 className="text-2xl md:text-3xl font-bold text-[#2C2C2C] tracking-tight mb-8">
@@ -238,7 +238,7 @@ export default async function ProductCarePage({
       </section>
 
       {/* Section 3 — Pro tips strip */}
-      <section className="py-12 bg-white border-y border-[rgba(0,0,0,0.08)]">
+      <section className="py-12 bg-white border-y border-[#D4D4D4]">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
           <Reveal>
             <h2 className="text-2xl md:text-3xl font-bold text-[#2C2C2C] tracking-tight mb-8">
@@ -252,7 +252,7 @@ export default async function ProductCarePage({
                   <h3 className="text-sm font-bold text-[#2C2C2C] uppercase tracking-wider mb-2">
                     {tip.title}
                   </h3>
-                  <p className="text-sm text-[#484848] leading-relaxed">{tip.desc}</p>
+                  <p className="text-sm text-[#3A3A3A] leading-relaxed">{tip.desc}</p>
                 </div>
               </Reveal>
             ))}

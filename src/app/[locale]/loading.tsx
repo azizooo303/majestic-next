@@ -2,7 +2,7 @@ export default function Loading() {
   return (
     <main id="main-content" className="min-h-[60vh] bg-white">
       {/* Hero skeleton */}
-      <div className="border-b border-[rgba(0,0,0,0.08)] py-12 md:py-16">
+      <div className="border-b border-[#D4D4D4] py-12 md:py-16">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
           <div className="h-3 w-32 bg-[#f0f0f0] animate-pulse rounded-sm mb-4" />
           <div className="h-10 w-64 bg-[#f0f0f0] animate-pulse rounded-sm" />

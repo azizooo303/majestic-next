@@ -115,7 +115,7 @@ export default async function HomePage({
     <Link
       key={cat.key}
       href={`/shop?category=${isAr ? cat.slugAr : cat.slugEn}`}
-      className="group relative flex flex-col overflow-hidden border border-[#D4D4D4] hover:border-[rgba(0,0,0,0.38)] active:scale-[0.99] transition-all focus-visible:outline-2 focus-visible:outline-[#0c0c0c] focus-visible:outline-offset-2"
+      className="group relative flex flex-col overflow-hidden border border-[#D4D4D4] hover:border-[rgba(0,0,0,0.38)] active:scale-[0.99] transition-all focus-visible:outline-2 focus-visible:outline-[#2C2C2C] focus-visible:outline-offset-2"
     >
       <div className="relative aspect-[3/4] bg-[#fafafa] overflow-hidden">
         <Image
@@ -129,7 +129,7 @@ export default async function HomePage({
         <div className="absolute inset-0 bg-black/15 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
       </div>
       <div className="py-3 text-center">
-        <span className="text-[12px] font-semibold text-[#0c0c0c] uppercase tracking-[0.06em]">
+        <span className="text-[12px] font-semibold text-[#2C2C2C] uppercase tracking-[0.06em]">
           {t(`categories.${cat.key}`)}
         </span>
       </div>
@@ -193,9 +193,9 @@ export default async function HomePage({
 
       {/* Category Grid */}
       <SectionReveal direction="up" distance={40} duration={0.6}>
-        <section className="w-full bg-white border-b border-[rgba(0,0,0,0.12)] pt-12">
+        <section className="w-full bg-white border-b border-[#D4D4D4] pt-12">
           <div className="max-w-screen-2xl mx-auto px-4 md:px-6 lg:px-8">
-            <p className={`mb-6 uppercase text-[#484848] ${isAr ? "font-alyamama text-[14px] tracking-normal" : "text-[13px] tracking-[0.08em] font-bold"}`}>
+            <p className={`mb-6 uppercase text-[#3A3A3A] ${isAr ? "font-alyamama text-[14px] tracking-normal" : "text-[13px] tracking-[0.08em] font-bold"}`}>
               {isAr ? "تصفح حسب الفئة" : "Browse by Category"}
             </p>
             <GsapBatchReveal
@@ -216,12 +216,12 @@ export default async function HomePage({
           <div className="max-w-screen-2xl mx-auto px-4 md:px-6 lg:px-8">
             <FadeUp>
               <div className="flex items-baseline justify-between mb-10">
-                <h2 className={`font-bold text-[#0c0c0c] ${isAr ? "font-alyamama text-[31px] md:text-[46px] leading-[1.1em] tracking-normal" : "text-[28px] md:text-[42px] leading-[1.05em] tracking-[-0.02em]"}`}>
+                <h2 className={`font-bold text-[#2C2C2C] ${isAr ? "font-alyamama text-[31px] md:text-[46px] leading-[1.1em] tracking-normal" : "text-[28px] md:text-[42px] leading-[1.05em] tracking-[-0.02em]"}`}>
                   {isAr ? "المنتجات المختارة" : "Featured Products"}
                 </h2>
                 <Link
                   href="/shop"
-                  className="text-[13px] font-medium text-[#484848] hover:text-[#0c0c0c] border-b border-[#484848] hover:border-[#0c0c0c] pb-0.5 whitespace-nowrap"
+                  className="text-[13px] font-medium text-[#3A3A3A] hover:text-[#2C2C2C] border-b border-[#3A3A3A] hover:border-[#2C2C2C] pb-0.5 whitespace-nowrap"
                 >
                   {isAr ? "عرض الكل" : t("common.viewAll")}
                 </Link>
@@ -240,8 +240,8 @@ export default async function HomePage({
             <div className="text-center mt-10">
               <Link
                 href="/shop"
-                className="inline-block bg-[#0c0c0c] text-white px-10 py-3.5 min-h-[48px] font-semibold
-                  text-sm tracking-wide rounded-none hover:bg-[#333] transition-colors"
+                className="inline-block bg-[#2C2C2C] text-white px-10 py-3.5 min-h-[48px] font-semibold
+                  text-sm tracking-wide rounded-none hover:bg-[#3A3A3A] transition-colors"
               >
                 {isAr ? "استعرض جميع المنتجات" : "Browse the Catalog"}
               </Link>
@@ -263,12 +263,12 @@ export default async function HomePage({
 
       {/* Newsletter */}
       <FadeUp>
-        <section className="border-t border-[rgba(0,0,0,0.08)] py-12 bg-white">
+        <section className="border-t border-[#D4D4D4] py-12 bg-white">
           <div className="max-w-md mx-auto px-4 text-center">
-            <h2 className="text-xl font-semibold text-[#0c0c0c]">
+            <h2 className="text-xl font-semibold text-[#2C2C2C]">
               {isAr ? "ابقَ على اطلاع" : "Stay Informed"}
             </h2>
-            <p className="text-[#484848] text-sm mt-2">
+            <p className="text-[#3A3A3A] text-sm mt-2">
               {isAr
                 ? "تشكيلات جديدة، ومشاريع منجزة، ومقالات بيئة العمل — مباشرةً إلى بريدك."
                 : "New collections, project stories, and workspace insights — delivered to your inbox."}
@@ -280,7 +280,7 @@ export default async function HomePage({
                 href="https://www.instagram.com/majesticarabia/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#484848] hover:text-[#0c0c0c] text-sm transition-colors"
+                className="text-[#3A3A3A] hover:text-[#2C2C2C] text-sm transition-colors"
               >
                 Instagram
               </a>
@@ -288,7 +288,7 @@ export default async function HomePage({
                 href="https://www.linkedin.com/company/majestic-office-for-furniture/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#484848] hover:text-[#0c0c0c] text-sm transition-colors"
+                className="text-[#3A3A3A] hover:text-[#2C2C2C] text-sm transition-colors"
               >
                 LinkedIn
               </a>
@@ -296,7 +296,7 @@ export default async function HomePage({
                 href="https://wa.me/966920012019"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#484848] hover:text-[#0c0c0c] text-sm transition-colors"
+                className="text-[#3A3A3A] hover:text-[#2C2C2C] text-sm transition-colors"
               >
                 WhatsApp
               </a>

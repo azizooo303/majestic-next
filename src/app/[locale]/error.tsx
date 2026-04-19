@@ -23,7 +23,7 @@ export default function Error({
       <h1 className="text-2xl font-bold text-[#2C2C2C] mb-2">
         {isAr ? "حدث خطأ ما" : "Something went wrong"}
       </h1>
-      <p className="text-sm text-[#484848] mb-6 max-w-sm">
+      <p className="text-sm text-[#3A3A3A] mb-6 max-w-sm">
         {isAr
           ? "نعتذر، حدث خطأ غير متوقع. يرجى المحاولة مرة أخرى."
           : "An unexpected error occurred. Please try again."}
