@@ -104,7 +104,7 @@ export default async function DammamPage({
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
               {stats.map((stat) => (
                 <div key={stat.label} className="border-t-2 border-[#2C2C2C] pt-6">
-                  <p className="text-xl md:text-2xl font-extrabold text-gray-900 tracking-tight mb-2">
+                  <p className="text-xl md:text-2xl font-extrabold text-[#2C2C2C] tracking-tight mb-2">
                     {stat.label}
                   </p>
                 </div>

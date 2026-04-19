@@ -115,7 +115,7 @@ export default async function HomePage({
     <Link
       key={cat.key}
       href={`/shop?category=${isAr ? cat.slugAr : cat.slugEn}`}
-      className="group relative flex flex-col overflow-hidden border border-[rgba(0,0,0,0.21)] hover:border-[rgba(0,0,0,0.38)] active:scale-[0.99] transition-all focus-visible:outline-2 focus-visible:outline-[#0c0c0c] focus-visible:outline-offset-2"
+      className="group relative flex flex-col overflow-hidden border border-[#D4D4D4] hover:border-[rgba(0,0,0,0.38)] active:scale-[0.99] transition-all focus-visible:outline-2 focus-visible:outline-[#0c0c0c] focus-visible:outline-offset-2"
     >
       <div className="relative aspect-[3/4] bg-[#fafafa] overflow-hidden">
         <Image

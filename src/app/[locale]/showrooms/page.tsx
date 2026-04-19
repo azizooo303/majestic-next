@@ -65,7 +65,7 @@ export default async function ShowroomsPage({
     return (
     <div
       key={s._id}
-      className="border border-[rgba(0,0,0,0.21)] rounded-none overflow-hidden group relative"
+      className="border border-[#D4D4D4] rounded-none overflow-hidden group relative"
     >
       {/* Image */}
       <div className="relative aspect-[16/9] overflow-hidden">

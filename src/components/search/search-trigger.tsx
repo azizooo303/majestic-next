@@ -58,7 +58,7 @@ export function SearchTrigger() {
     <>
       <button
         onClick={() => setIsOpen(true)}
-        className="p-2 text-gray-700 hover:text-gray-900 transition-colors cursor-pointer"
+        className="p-2 text-gray-700 hover:text-[#2C2C2C] transition-colors cursor-pointer"
         aria-label={t("common.search")}
       >
         <Search className="w-5 h-5 stroke-[2]" />
@@ -70,7 +70,7 @@ export function SearchTrigger() {
           onClick={() => setIsOpen(false)}
         >
           <div
-            className="bg-white rounded-xl shadow-xl w-full max-w-lg mx-4 p-6"
+            className="bg-white rounded-none shadow-[0_8px_24px_rgba(0,0,0,0.12)] w-full max-w-lg mx-4 p-6"
             role="dialog"
             aria-modal="true"
             aria-label="Search"
@@ -85,12 +85,12 @@ export function SearchTrigger() {
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder={t("common.searchPlaceholder")}
-                className="flex-1 text-lg text-gray-900 placeholder:text-gray-800/50 outline-none"
+                className="flex-1 text-lg text-[#2C2C2C] placeholder:text-gray-800/50 outline-none"
               />
               <button
                 type="button"
                 onClick={() => setIsOpen(false)}
-                className="p-1 text-gray-800 hover:text-gray-900 cursor-pointer"
+                className="p-1 text-gray-800 hover:text-[#2C2C2C] cursor-pointer"
                 aria-label="Close search"
               >
                 <X className="w-5 h-5" />

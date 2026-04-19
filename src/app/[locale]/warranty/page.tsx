@@ -180,7 +180,7 @@ export default async function WarrantyPage({
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {claimSteps.map((step, index) => (
               <Reveal key={step.title}>
-                <div className="border border-[rgba(0,0,0,0.21)] rounded-none p-6">
+                <div className="border border-[#D4D4D4] rounded-none p-6">
                   <span className="text-3xl font-extrabold text-[#D4D4D4] select-none">
                     0{index + 1}
                   </span>

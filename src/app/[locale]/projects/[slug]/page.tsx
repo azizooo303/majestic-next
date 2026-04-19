@@ -49,17 +49,17 @@ export default async function ProjectDetailPage({
       <section className="border-b border-[rgba(0,0,0,0.08)] py-10 md:py-14 bg-white">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
           <p className="text-xs uppercase tracking-widest text-[#484848] mb-3">
-            <Link href="/" className="hover:text-gray-900 transition-colors">
+            <Link href="/" className="hover:text-[#2C2C2C] transition-colors">
               {isAr ? "الرئيسية" : "Home"}
             </Link>
             <span className="mx-2">/</span>
-            <Link href="/projects" className="hover:text-gray-900 transition-colors">
+            <Link href="/projects" className="hover:text-[#2C2C2C] transition-colors">
               {isAr ? "مشاريعنا" : "Projects"}
             </Link>
             <span className="mx-2">/</span>
             {displayName}
           </p>
-          <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight text-gray-900">
+          <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight text-[#2C2C2C]">
             {displayName}
           </h1>
           <p className="mt-2 text-sm text-[#484848] uppercase tracking-widest font-semibold">
@@ -85,19 +85,19 @@ export default async function ProjectDetailPage({
                     <dt className="text-[#484848] text-xs uppercase tracking-wider mb-0.5">
                       {isAr ? "العميل" : "Client"}
                     </dt>
-                    <dd className="font-semibold text-gray-900">{displayName}</dd>
+                    <dd className="font-semibold text-[#2C2C2C]">{displayName}</dd>
                   </div>
                   <div>
                     <dt className="text-[#484848] text-xs uppercase tracking-wider mb-0.5">
                       {isAr ? "القطاع" : "Sector"}
                     </dt>
-                    <dd className="font-semibold text-gray-900">{project.category}</dd>
+                    <dd className="font-semibold text-[#2C2C2C]">{project.category}</dd>
                   </div>
                   <div>
                     <dt className="text-[#484848] text-xs uppercase tracking-wider mb-0.5">
                       {isAr ? "عدد الصور" : "Images"}
                     </dt>
-                    <dd className="font-semibold text-gray-900">{project.images.length}</dd>
+                    <dd className="font-semibold text-[#2C2C2C]">{project.images.length}</dd>
                   </div>
                 </dl>
               </div>
@@ -120,7 +120,7 @@ export default async function ProjectDetailPage({
                 </Link>
                 <Link
                   href="/projects"
-                  className="block w-full text-center mt-3 border border-[rgba(0,0,0,0.21)] text-[#484848] px-6 py-3 text-sm font-medium rounded-sm hover:border-[#0c0c0c] hover:text-gray-900 transition-colors"
+                  className="block w-full text-center mt-3 border border-[#D4D4D4] text-[#484848] px-6 py-3 text-sm font-medium rounded-sm hover:border-[#0c0c0c] hover:text-[#2C2C2C] transition-colors"
                 >
                   {isAr ? "جميع المشاريع" : "All Projects"}
                 </Link>

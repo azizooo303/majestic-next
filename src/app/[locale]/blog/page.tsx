@@ -67,7 +67,7 @@ export default async function BlogPage({
     return (
       <article
         key={post._id}
-        className="border border-[rgba(0,0,0,0.21)] rounded-none overflow-hidden group"
+        className="border border-[#D4D4D4] rounded-none overflow-hidden group"
       >
         <div className="relative aspect-[16/9] overflow-hidden bg-[#FFFFFF]">
           {imageUrl ? (

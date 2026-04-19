@@ -35,7 +35,7 @@ export function MaterialSelector({
             <p className="text-xs tracking-widest text-[#3A3A3A] mb-2">
               {isAr ? labelAr : labelEn}
             </p>
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 tracking-tight">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#2C2C2C] tracking-tight">
               {isAr ? headingAr : headingEn}
             </h2>
           </div>
@@ -69,7 +69,7 @@ export function MaterialSelector({
             })}
             {current && (
               <div className="absolute bottom-4 start-4 bg-white/90 px-3 py-1.5">
-                <p className="text-xs font-semibold text-gray-900">
+                <p className="text-xs font-semibold text-[#2C2C2C]">
                   {isAr ? current.nameAr : current.nameEn}
                 </p>
               </div>

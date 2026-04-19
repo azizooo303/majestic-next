@@ -4,7 +4,7 @@ import { useRouter, usePathname } from "@/i18n/navigation";
 import { useSearchParams } from "next/navigation";
 import { useLocale } from "next-intl";
 import { ChevronRight } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const SIDEBAR_CATEGORIES = [
   { slugEn: "seating",             slugAr: "%d8%a7%d9%84%d9%85%d9%82%d8%a7%d8%b9%d8%af",       en: "Seating",      ar: "المقاعد" },
@@ -28,15 +28,22 @@ export function ShopSidebar({ activeCategory }: ShopSidebarProps) {
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
-  // Local state for price inputs — applied on blur or Enter key
-  const [minPrice, setMinPrice] = useState(searchParams.get("minPrice") ?? "");
-  const [maxPrice, setMaxPrice] = useState(searchParams.get("maxPrice") ?? "");
-
-  // Keep local state in sync if URL params change externally (e.g. Reset all)
-  useEffect(() => {
-    setMinPrice(searchParams.get("minPrice") ?? "");
-    setMaxPrice(searchParams.get("maxPrice") ?? "");
-  }, [searchParams]);
+  // Local state for price inputs — applied on blur or Enter key.
+  // React 19 pattern: track prev URL params as state and reset during render if they change externally (e.g. Reset all).
+  const urlMin = searchParams.get("minPrice") ?? "";
+  const urlMax = searchParams.get("maxPrice") ?? "";
+  const [minPrice, setMinPrice] = useState(urlMin);
+  const [maxPrice, setMaxPrice] = useState(urlMax);
+  const [prevUrlMin, setPrevUrlMin] = useState(urlMin);
+  const [prevUrlMax, setPrevUrlMax] = useState(urlMax);
+  if (prevUrlMin !== urlMin) {
+    setPrevUrlMin(urlMin);
+    setMinPrice(urlMin);
+  }
+  if (prevUrlMax !== urlMax) {
+    setPrevUrlMax(urlMax);
+    setMaxPrice(urlMax);
+  }
 
   function applyPriceRange() {
     const params = new URLSearchParams(searchParams.toString());

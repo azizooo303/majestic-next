@@ -294,7 +294,7 @@ export default async function ShopPage({
                     <Link
                       href={pageHref(page - 1)}
                       className="inline-flex items-center justify-center gap-1 min-w-[32px] h-8 px-3
-                        text-xs font-medium rounded-none border border-[rgba(0,0,0,0.21)]
+                        text-xs font-medium rounded-none border border-[#D4D4D4]
                         text-[#3A3A3A] hover:border-[#2C2C2C] hover:text-[#2C2C2C] transition-colors"
                     >
                       {isAr ? <ChevronRight size={12} /> : <ChevronLeft size={12} />}
@@ -302,7 +302,7 @@ export default async function ShopPage({
                     </Link>
                   ) : (
                     <span className="inline-flex items-center justify-center gap-1 min-w-[32px] h-8 px-3
-                      text-xs font-medium rounded-none border border-[rgba(0,0,0,0.21)]
+                      text-xs font-medium rounded-none border border-[#D4D4D4]
                       text-[#3A3A3A] opacity-30 cursor-not-allowed">
                       {isAr ? <ChevronRight size={12} /> : <ChevronLeft size={12} />}
                       {isAr ? "السابق" : "Prev"}
@@ -322,7 +322,7 @@ export default async function ShopPage({
                           text-xs font-medium rounded-none border transition-colors ${
                           p === page
                             ? "bg-[#2C2C2C] text-white border-[#2C2C2C]"
-                            : "border-[rgba(0,0,0,0.21)] text-[#3A3A3A] hover:border-[#2C2C2C] hover:text-[#2C2C2C]"
+                            : "border-[#D4D4D4] text-[#3A3A3A] hover:border-[#2C2C2C] hover:text-[#2C2C2C]"
                         }`}
                       >
                         {p}
@@ -335,7 +335,7 @@ export default async function ShopPage({
                     <Link
                       href={pageHref(page + 1)}
                       className="inline-flex items-center justify-center gap-1 min-w-[32px] h-8 px-3
-                        text-xs font-medium rounded-none border border-[rgba(0,0,0,0.21)]
+                        text-xs font-medium rounded-none border border-[#D4D4D4]
                         text-[#3A3A3A] hover:border-[#2C2C2C] hover:text-[#2C2C2C] transition-colors"
                     >
                       {isAr ? "التالي" : "Next"}
@@ -343,7 +343,7 @@ export default async function ShopPage({
                     </Link>
                   ) : (
                     <span className="inline-flex items-center justify-center gap-1 min-w-[32px] h-8 px-3
-                      text-xs font-medium rounded-none border border-[rgba(0,0,0,0.21)]
+                      text-xs font-medium rounded-none border border-[#D4D4D4]
                       text-[#3A3A3A] opacity-30 cursor-not-allowed">
                       {isAr ? "التالي" : "Next"}
                       {isAr ? <ChevronLeft size={12} /> : <ChevronRight size={12} />}

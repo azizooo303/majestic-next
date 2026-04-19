@@ -117,7 +117,7 @@ export default async function FaqPage({
 
           {/* Bottom CTA */}
           <Reveal>
-            <div className="mt-16 text-center border border-[rgba(0,0,0,0.21)] rounded-none p-10">
+            <div className="mt-16 text-center border border-[#D4D4D4] rounded-none p-10">
               <h3 className="text-xl font-bold text-[#2C2C2C] mb-3">
                 {isAr ? "لم تجد إجابتك؟" : "Didn't find your answer?"}
               </h3>

@@ -31,13 +31,13 @@ export function InsightEditorial({
               <p className="text-xs tracking-widest text-[#3A3A3A] mb-2">
                 {isAr ? labelAr : labelEn}
               </p>
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 tracking-tight">
+              <h2 className="text-2xl md:text-3xl font-bold text-[#2C2C2C] tracking-tight">
                 {isAr ? headingAr : headingEn}
               </h2>
             </div>
             <Link
               href="/inspirations"
-              className="hidden md:block text-sm font-medium text-[#3A3A3A] hover:text-gray-900 border-b border-[#3A3A3A] pb-0.5 transition-colors"
+              className="hidden md:block text-sm font-medium text-[#3A3A3A] hover:text-[#2C2C2C] border-b border-[#3A3A3A] pb-0.5 transition-colors"
             >
               {isAr ? "جميع المقالات" : "All Articles"}
             </Link>
@@ -67,12 +67,12 @@ export function InsightEditorial({
                     </span>
                     <span className="text-[10px] text-[#3A3A3A]">{card.publishedDate}</span>
                   </div>
-                  <h3 className="text-sm font-bold text-gray-900 leading-snug mb-4">
+                  <h3 className="text-sm font-bold text-[#2C2C2C] leading-snug mb-4">
                     {isAr ? card.titleAr : card.titleEn}
                   </h3>
                   <Link
                     href={card.link ?? "/inspirations"}
-                    className="text-xs font-semibold text-gray-900 hover:text-[#3A3A3A] transition-colors inline-flex items-center gap-1 group/link"
+                    className="text-xs font-semibold text-[#2C2C2C] hover:text-[#3A3A3A] transition-colors inline-flex items-center gap-1 group/link"
                   >
                     {isAr ? "اقرأ" : "Read"}
                     <span className="transition-transform duration-200 ltr:group-hover/link:translate-x-0.5 rtl:group-hover/link:-translate-x-0.5">›</span>

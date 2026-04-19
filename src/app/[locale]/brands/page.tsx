@@ -65,7 +65,7 @@ export default async function BrandsPage({
   const brandItems = BRANDS.map((brand) => (
     <div
       key={brand}
-      className="border border-[rgba(0,0,0,0.21)] rounded-none p-8 flex items-center justify-center hover:bg-white transition-colors cursor-default min-h-[100px]"
+      className="border border-[#D4D4D4] rounded-none p-8 flex items-center justify-center hover:bg-white transition-colors cursor-default min-h-[100px]"
     >
       <span className="font-bold text-[#2C2C2C] text-sm md:text-base text-center leading-snug">
         {brand}

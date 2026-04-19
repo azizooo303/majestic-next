@@ -55,7 +55,7 @@ export function ContactForm({ isAr, source = "contact" }: ContactFormProps) {
   }
 
   const fieldClass =
-    "w-full border border-[#D4D4D4] rounded-sm px-4 py-3 text-sm text-[#2C2C2C] placeholder:text-[#3A3A3A] focus:outline-none focus:border-[#2C2C2C] transition-colors bg-white";
+    "w-full border border-[#D4D4D4] rounded-none px-4 py-3 text-sm text-[#2C2C2C] placeholder:text-[#3A3A3A] focus:outline-none focus:border-[#2C2C2C] transition-colors bg-white";
 
   const subjects = isAr
     ? [
@@ -75,7 +75,7 @@ export function ContactForm({ isAr, source = "contact" }: ContactFormProps) {
 
   if (status === "success") {
     return (
-      <div className="rounded-sm border border-[#D4D4D4] bg-white px-6 py-10 text-center space-y-3">
+      <div className="rounded-none border border-[#D4D4D4] bg-white px-6 py-10 text-center space-y-3">
         <p className="font-semibold text-[#2C2C2C] text-base">
           {isAr ? "تم إرسال رسالتك بنجاح" : "Message sent successfully"}
         </p>
@@ -182,7 +182,7 @@ export function ContactForm({ isAr, source = "contact" }: ContactFormProps) {
       </div>
 
       {status === "error" && (
-        <p className="text-sm text-[#2C2C2C] font-medium border border-[#2C2C2C] rounded-sm px-4 py-3">
+        <p className="text-sm text-[#2C2C2C] font-medium border border-[#2C2C2C] rounded-none px-4 py-3">
           {errorMsg}
         </p>
       )}
@@ -190,7 +190,7 @@ export function ContactForm({ isAr, source = "contact" }: ContactFormProps) {
       <button
         type="submit"
         disabled={status === "loading"}
-        className="btn-press w-full bg-[#2C2C2C] text-white px-8 py-3.5 font-semibold text-sm tracking-wide rounded-sm hover:bg-[#3A3A3A] transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
+        className="btn-press w-full bg-[#2C2C2C] text-white px-8 py-3.5 font-semibold text-sm tracking-wide rounded-none hover:bg-[#3A3A3A] transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
       >
         {status === "loading"
           ? isAr ? "جارٍ الإرسال..." : "Sending..."

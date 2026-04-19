@@ -119,10 +119,10 @@ export default async function DeliveryPage({
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {deliveryZones.map((zone) => (
               <Reveal key={zone.title}>
-                <div className="border border-[rgba(0,0,0,0.21)] rounded-none p-6 flex flex-col gap-4">
+                <div className="border border-[#D4D4D4] rounded-none p-6 flex flex-col gap-4">
                   {/* Icon placeholder */}
                   <div
-                    className="w-10 h-10 rounded-none border border-[rgba(0,0,0,0.21)] flex items-center justify-center"
+                    className="w-10 h-10 rounded-none border border-[#D4D4D4] flex items-center justify-center"
                     aria-hidden="true"
                   >
                     <span className="w-3 h-3 bg-white inline-block" />

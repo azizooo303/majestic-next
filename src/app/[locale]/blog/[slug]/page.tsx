@@ -211,7 +211,7 @@ export default async function BlogPostPage({
                 </Link>
                 <Link
                   href="/blog"
-                  className="block w-full text-center mt-3 border border-[rgba(0,0,0,0.21)] text-[#484848] px-6 py-3 text-sm font-medium rounded-sm hover:border-[#0c0c0c] hover:text-[#0c0c0c] transition-colors"
+                  className="block w-full text-center mt-3 border border-[#D4D4D4] text-[#484848] px-6 py-3 text-sm font-medium rounded-sm hover:border-[#0c0c0c] hover:text-[#0c0c0c] transition-colors"
                 >
                   {isAr ? "جميع المقالات" : "All Articles"}
                 </Link>

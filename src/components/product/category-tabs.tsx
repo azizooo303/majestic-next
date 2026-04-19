@@ -28,7 +28,7 @@ export function CategoryTabs({ categories, locale }: CategoryTabsProps) {
           "px-3 py-1.5 text-sm font-medium rounded-none whitespace-nowrap transition-colors",
           !activeCategory
             ? "bg-primary text-white"
-            : "text-gray-800 hover:text-gray-900"
+            : "text-gray-800 hover:text-[#2C2C2C]"
         )}
       >
         {isAr ? "الكل" : "All"}
@@ -45,7 +45,7 @@ export function CategoryTabs({ categories, locale }: CategoryTabsProps) {
               "px-3 py-1.5 text-sm font-medium rounded-none whitespace-nowrap transition-colors",
               isActive
                 ? "bg-primary text-white"
-                : "text-gray-800 hover:text-gray-900"
+                : "text-gray-800 hover:text-[#2C2C2C]"
             )}
           >
             {cat.name}

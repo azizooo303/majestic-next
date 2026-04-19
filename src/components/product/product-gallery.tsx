@@ -50,7 +50,7 @@ export function ProductGallery({ images, name }: ProductGalleryProps) {
                 "relative w-16 h-16 shrink-0 rounded-none overflow-hidden border-2 bg-[#FFFFFF] cursor-pointer transition-colors",
                 i === activeIndex
                   ? "border-[#2C2C2C]"
-                  : "border-transparent hover:border-[rgba(0,0,0,0.21)]"
+                  : "border-transparent hover:border-[#D4D4D4]"
               )}
             >
               <Image

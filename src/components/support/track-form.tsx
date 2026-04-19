@@ -68,19 +68,19 @@ export function TrackForm({ isAr }: TrackFormProps) {
   }
 
   const inputClass =
-    "w-full border border-[rgba(0,0,0,0.21)] rounded-sm px-4 py-3 text-sm text-gray-900 placeholder:text-[#999] focus:outline-none focus:border-gray-900 bg-white transition-colors";
+    "w-full border border-[#D4D4D4] rounded-none px-4 py-3 text-sm text-[#2C2C2C] placeholder:text-[#999] focus:outline-none focus:border-gray-900 bg-white transition-colors";
 
   if (result?.found && result.steps) {
     return (
-      <div className="border border-[rgba(0,0,0,0.21)] rounded-sm p-6 md:p-8">
+      <div className="border border-[#D4D4D4] rounded-none p-6 md:p-8">
         <div className="flex items-center justify-between mb-6 flex-wrap gap-2">
           <div>
             <p className="text-xs text-[#484848] uppercase tracking-widest">
               {isAr ? "رقم الطلب" : "Order Number"}
             </p>
-            <p className="text-base font-bold text-gray-900 mt-0.5">{result.orderNumber}</p>
+            <p className="text-base font-bold text-[#2C2C2C] mt-0.5">{result.orderNumber}</p>
           </div>
-          <span className="text-xs font-semibold uppercase tracking-wider border border-[rgba(0,0,0,0.21)] px-3 py-1 rounded-sm text-[#484848]">
+          <span className="text-xs font-semibold uppercase tracking-wider border border-[#D4D4D4] px-3 py-1 rounded-none text-[#484848]">
             {result.statusLabel}
           </span>
         </div>
@@ -120,7 +120,7 @@ export function TrackForm({ isAr }: TrackFormProps) {
                     </>
                   )}
                 </div>
-                <p className={`text-xs font-medium mt-0 sm:mt-2 text-center ${step.active ? "text-gray-900" : "text-[#484848]"}`}>
+                <p className={`text-xs font-medium mt-0 sm:mt-2 text-center ${step.active ? "text-[#2C2C2C]" : "text-[#484848]"}`}>
                   {step.label}
                 </p>
               </div>
@@ -131,7 +131,7 @@ export function TrackForm({ isAr }: TrackFormProps) {
         <button
           type="button"
           onClick={() => { setResult(null); setOrderNumber(""); setEmail(""); }}
-          className="mt-8 text-sm text-[#484848] underline underline-offset-2 hover:text-gray-900 transition-colors"
+          className="mt-8 text-sm text-[#484848] underline underline-offset-2 hover:text-[#2C2C2C] transition-colors"
         >
           {isAr ? "البحث عن طلب آخر" : "Track another order"}
         </button>
@@ -143,14 +143,14 @@ export function TrackForm({ isAr }: TrackFormProps) {
     <form
       onSubmit={handleSubmit}
       noValidate
-      className="border border-[rgba(0,0,0,0.21)] rounded-sm p-6 md:p-8"
+      className="border border-[#D4D4D4] rounded-none p-6 md:p-8"
       aria-label={isAr ? "نموذج تتبع الطلب" : "Order tracking form"}
     >
       <div className="space-y-4">
         <div>
           <label
             htmlFor="order-number"
-            className="block text-sm font-semibold text-gray-900 mb-1.5"
+            className="block text-sm font-semibold text-[#2C2C2C] mb-1.5"
           >
             {isAr ? "رقم الطلب" : "Order Number"}
           </label>
@@ -167,7 +167,7 @@ export function TrackForm({ isAr }: TrackFormProps) {
         <div>
           <label
             htmlFor="track-email"
-            className="block text-sm font-semibold text-gray-900 mb-1.5"
+            className="block text-sm font-semibold text-[#2C2C2C] mb-1.5"
           >
             {isAr ? "البريد الإلكتروني" : "Email Address"}
           </label>
@@ -191,8 +191,8 @@ export function TrackForm({ isAr }: TrackFormProps) {
         <button
           type="submit"
           disabled={loading}
-          className="btn-press w-full bg-white text-gray-900 border border-gray-900 py-3.5 font-semibold text-sm
-            tracking-wide rounded-sm hover:opacity-80 transition-opacity disabled:opacity-50"
+          className="btn-press w-full bg-white text-[#2C2C2C] border border-gray-900 py-3.5 font-semibold text-sm
+            tracking-wide rounded-none hover:opacity-80 transition-opacity disabled:opacity-50"
         >
           {loading
             ? (isAr ? "جارٍ البحث..." : "Tracking...")
