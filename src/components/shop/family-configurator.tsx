@@ -229,10 +229,22 @@ export function FamilyConfigurator({family, basePrice, locale}: FamilyConfigurat
     console.log("Add to cart:", {family: family.sku, config, size, finish, leg, sideUnitFinish, pedestalFinish});
   }
 
+  // Smart viewer background:
+  // Default = warm off-white (actiu-style, softer than #F5F5F5).
+  // Switch to neutral grey ONLY when the user selects a white top or white legs,
+  // otherwise white-on-white would wash out the product.
+  const isWhiteTop = finish === "Premium White" || /white/i.test(finish);
+  const isWhiteLegs = /white/i.test(leg);
+  const viewerBg = isWhiteTop || isWhiteLegs ? "#E8E8E8" : "#F7F4EE";
+
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 py-8 px-4 md:px-6 lg:px-8 max-w-7xl mx-auto">
-      {/* Left — 3D viewer / hero */}
-      <div className="bg-[#F5F5F5] lg:h-[600px] flex flex-col items-center justify-center relative border border-[#E7E7E7]">
+      {/* Left — 3D viewer / hero. Sticky on desktop so it stays in view while
+          the right column (pickers, swatches, accessories) scrolls. */}
+      <div
+        className="lg:sticky lg:top-6 lg:self-start lg:h-[600px] flex flex-col items-center justify-center relative border border-[#E7E7E7] transition-colors"
+        style={{ backgroundColor: viewerBg }}
+      >
         {useAssemblyViewer && manifest ? (
           <AssemblyViewer
             manifest={manifest}

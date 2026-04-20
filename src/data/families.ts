@@ -29,7 +29,7 @@ export const DESK_FAMILIES: DeskFamily[] = [
     nameEn: "Cratos Desk",
     nameAr: "مكتب كراتوس",
     tagline: {en: "Best-selling executive desk", ar: "الأكثر مبيعاً — مكتب تنفيذي"},
-    configs: ["Executive", "Manager", "Operator", "L-Shape", "U-Shape", "Conference", "Meeting 4-Person", "Meeting 6-Person", "Meeting (Large)", "Workstation 6-Person", "Custom (Contact Us)"],
+    configs: ["Operator", "Manager", "L-Shape", "Meeting 6-Person", "Meeting (Large)", "Workstation 6-Person", "Custom (Contact Us)"],
     hasGlb: true,
     glbUrl: "/3d/cratos-executive/model.glb",
     heroImage: "/images/shop/cratos-hero.webp",
