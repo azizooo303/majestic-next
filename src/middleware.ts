@@ -64,7 +64,7 @@ function withSecurityHeaders(response: NextResponse): NextResponse {
       "style-src 'self' 'unsafe-inline'",
       "img-src 'self' data: blob: https://res.cloudinary.com https://*.supabase.co https://lightyellow-mallard-240169.hostingersite.com",
       "font-src 'self' data:",
-      "connect-src 'self' https://*.supabase.co https://lightyellow-mallard-240169.hostingersite.com https://*.sentry.io https://vercel.live wss://ws-us3.pusher.com https://www.gstatic.com https://ajax.googleapis.com",
+      "connect-src 'self' blob: https://*.supabase.co https://lightyellow-mallard-240169.hostingersite.com https://*.sentry.io https://vercel.live wss://ws-us3.pusher.com https://www.gstatic.com https://ajax.googleapis.com",
       "frame-src 'none'",
       "object-src 'none'",
       "base-uri 'self'",

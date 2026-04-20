@@ -40,6 +40,7 @@ const LABELS: Record<string, {en: string; ar: string}> = {
   "Size":             {en: "Size",    ar: "المقاس"},
   "Desk Top Finish":  {en: "Top",     ar: "سطح المكتب"},
   "Leg Color":        {en: "Legs",    ar: "الأرجل"},
+  "Divider Color":    {en: "Divider Fabric", ar: "قماش الفاصل"},
   "Side Unit Finish": {en: "Side Unit (optional)", ar: "الوحدة الجانبية (اختياري)"},
   "Pedestal Finish":  {en: "Pedestal (optional)",  ar: "الأدراج (اختياري)"},
 };
