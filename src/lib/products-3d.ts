@@ -21,7 +21,12 @@ export interface Model3D {
  * entry is the fallback when a specific config isn't mapped.
  */
 const PRODUCTS_3D_MANIFEST: Record<string, Model3D> = {
-  // Cratos — family default points at Executive for backwards compatibility.
+  // Cratos — Executive is the only config with a verified-clean baked GLB.
+  // MGR/CONF/L exports from 2026-04-20 included a large backdrop floor plane
+  // that broke the viewer's auto-framing (desk appeared as tiny floating
+  // rectangle). Reverted until the part-GLB composition pipeline replaces
+  // the baked-per-config approach entirely — see
+  // C:/Users/Admin/.claude/plans/so-you-know-we-rippling-meteor.md
   "DESK-CRATOS": {
     glb: "/3d/cratos-executive/model.glb",
     usdz: "/3d/cratos-executive/model.usdz",
@@ -31,18 +36,6 @@ const PRODUCTS_3D_MANIFEST: Record<string, Model3D> = {
     glb: "/3d/cratos-executive/model.glb",
     usdz: "/3d/cratos-executive/model.usdz",
     label: "Cratos Executive",
-  },
-  "DESK-CRATOS:Manager": {
-    glb: "/3d/cratos-manager/model.glb",
-    label: "Cratos Manager",
-  },
-  "DESK-CRATOS:Conference": {
-    glb: "/3d/cratos-conference/model.glb",
-    label: "Cratos Conference",
-  },
-  "DESK-CRATOS:L-Shape": {
-    glb: "/3d/cratos-l-shape/model.glb",
-    label: "Cratos L-Shape",
   },
 };
 

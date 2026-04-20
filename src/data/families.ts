@@ -364,18 +364,8 @@ export const FAMILY_MESH_MAP: Record<
     topMaterial: "Majestic_Oak",
     legsMaterial: "Majestic_WhitePaint",
   },
-  "CRATOS:Manager": {
-    topMaterial: "DESKTOP_a398",
-    legsMaterial: "FRAME_white",
-  },
-  "CRATOS:Conference": {
-    topMaterial: "DESKTOP_a398",
-    legsMaterial: "LEG_a398",
-  },
-  "CRATOS:L-Shape": {
-    topMaterial: "DESK-CRATOS-L_DESKTOP",
-    legsMaterial: "DESK-CRATOS-L_LEG",
-  },
+  // MGR / CONF / L entries reverted along with their broken baked GLBs — to
+  // be replaced by the part-GLB composition pipeline (scene composer + manifest).
 };
 
 // Invalid combo exclusions (from Odoo product_template_attribute_exclusion)
