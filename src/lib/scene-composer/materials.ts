@@ -15,6 +15,7 @@ import {
   type RoleKind,
   WOOD_FINISH_ROLES,
   METAL_FINISH_ROLES,
+  FABRIC_FINISH_ROLES,
   baseRole,
 } from "./types";
 
@@ -71,6 +72,26 @@ export async function applyWoodFinish(
 }
 
 /**
+ * Apply fabric finish — matte light grey, zero metalness, high roughness.
+ * Used for acoustic dividers and any upholstered panel.
+ */
+export function applyFabricFinish(
+  subtree: THREE.Object3D,
+  hex: string = "#B8B8B8",
+): void {
+  subtree.traverse((obj) => {
+    if (!(obj as THREE.Mesh).isMesh) return;
+    const mesh = obj as THREE.Mesh;
+    const mat = ensureStandardMaterial(mesh);
+    mat.map = null;
+    mat.color.set(hex);
+    mat.metalness = 0.0;
+    mat.roughness = 0.92; // fabric weave — high roughness kills highlights
+    mat.needsUpdate = true;
+  });
+}
+
+/**
  * Apply leg/metal finish (hex + metalness + roughness) to every mesh in the subtree.
  */
 export function applyMetalFinish(
@@ -108,6 +129,8 @@ export async function applyMaterialForRole(
   const base = baseRole(role as string);
   if (WOOD_FINISH_ROLES.has(base)) {
     await applyWoodFinish(subtree, topFinishName);
+  } else if (FABRIC_FINISH_ROLES.has(base)) {
+    applyFabricFinish(subtree);
   } else if (METAL_FINISH_ROLES.has(base)) {
     applyMetalFinish(subtree, legColorName);
   }

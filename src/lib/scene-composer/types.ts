@@ -81,12 +81,27 @@ export const METAL_FINISH_ROLES = new Set<string>([
   "grommet",        // cable cover, metal
   "cable_tray",
   "cable_spine",
-  "screen_front",   // divider/bracket
-  "screen_side",
   "handle",         // drawer handles, metal
   "pedestal",       // pedestal body painted like frame
   "pedestal_handle",
 ]);
+
+/** Roles that render as fabric-covered panels (Majestic acoustic dividers). */
+export const FABRIC_FINISH_ROLES = new Set<string>([
+  "screen_front",
+  "screen_side",
+]);
+
+/**
+ * When a role appears in this map, the composer loads THIS GLB instead of
+ * the one in the config's manifest entry. Used to canonicalize accessories
+ * that should look identical across configs (e.g. the real Majestic acoustic
+ * divider from CRATOS-WS.fbx replacing the placeholder screens in every config).
+ */
+export const ROLE_GLB_OVERRIDE: Record<string, string> = {
+  screen_front: "/3d-parts/accessories/acoustic-divider-cratos.glb",
+  screen_side:  "/3d-parts/accessories/acoustic-divider-cratos.glb",
+};
 
 /** Strip trailing "_0", "_12" etc. so "top_0" matches "top" in the role sets. */
 export function baseRole(role: string): string {
