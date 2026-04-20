@@ -238,11 +238,14 @@ export function FamilyConfigurator({family, basePrice, locale}: FamilyConfigurat
   const viewerBg = isWhiteTop || isWhiteLegs ? "#E8E8E8" : "#F7F4EE";
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 py-8 px-4 md:px-6 lg:px-8 max-w-7xl mx-auto">
-      {/* Left — 3D viewer / hero. Sticky on desktop so it stays in view while
-          the right column (pickers, swatches, accessories) scrolls. */}
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 py-8 px-4 md:px-6 lg:px-8 max-w-7xl mx-auto items-start">
+      {/* Left — 3D viewer / hero. Wrapper + sticky inner pattern: the outer
+          div is a normal grid item (no stretch thanks to items-start on the
+          grid); the inner div is position:sticky so it pins to top-6 while
+          the right column scrolls past. */}
+      <div className="lg:sticky lg:top-6 self-start w-full">
       <div
-        className="lg:sticky lg:top-6 lg:self-start lg:h-[600px] flex flex-col items-center justify-center relative border border-[#E7E7E7] transition-colors"
+        className="h-[420px] lg:h-[600px] flex flex-col items-center justify-center relative border border-[#E7E7E7] transition-colors"
         style={{ backgroundColor: viewerBg }}
       >
         {useAssemblyViewer && manifest ? (
@@ -278,6 +281,7 @@ export function FamilyConfigurator({family, basePrice, locale}: FamilyConfigurat
           </div>
         )}
       </div>
+      </div>{/* /sticky wrapper */}
 
       {/* Right — picker */}
       <div className="space-y-5">
