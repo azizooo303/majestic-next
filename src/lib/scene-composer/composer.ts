@@ -1,0 +1,142 @@
+/**
+ * Scene composer — takes a family manifest + user's picker state and returns
+ * a three.js Group containing all active parts, positioned, sized, materialed.
+ *
+ * Called on picker change. Reuses cached GLBs (zero network cost after first
+ * visit). Only mutates transforms + visibility + materials — doesn't reload
+ * meshes.
+ */
+import * as THREE from "three";
+import type {
+  AssemblyState,
+  ConfigEntry,
+  FamilyManifest,
+  PartEntry,
+  RoleKind,
+} from "./types";
+import { ACCESSORY_AXIS, ACCESSORY_ROLES, parseSize } from "./types";
+import { cloneGLTFScene, loadPart } from "./cache";
+import { applyMaterialForRole } from "./materials";
+
+export interface ComposedPart {
+  role: string;
+  node: THREE.Object3D;
+  entry: PartEntry;
+}
+
+/**
+ * Compose a scene for the given state. Returns a Promise<THREE.Group> that
+ * resolves when all active parts are loaded + placed + materialed.
+ */
+export async function composeScene(
+  manifest: FamilyManifest,
+  state: AssemblyState,
+): Promise<THREE.Group> {
+  const group = new THREE.Group();
+  group.name = `assembly-${manifest.family}-${state.config}`;
+
+  const configEntry = manifest.configs[state.config];
+  if (!configEntry) return group;
+
+  const activeParts = resolveActiveParts(configEntry, state);
+  const base = parseSize(configEntry.baseSize);
+  const picked = parseSize(state.size);
+  const stretch = base && picked
+    ? { x: picked.w / base.w, z: picked.d / base.d }
+    : { x: 1, z: 1 };
+
+  const composed = await Promise.all(
+    activeParts.map(async ({ role, entry }) => {
+      const gltf = await loadPart(entry.glb);
+      const node = cloneGLTFScene(gltf);
+      node.name = role;
+      placePart(node, role as RoleKind, entry, stretch);
+      await applyMaterialForRole(
+        node,
+        role as RoleKind,
+        state.topFinishName,
+        state.legColorName,
+      );
+      return { role, node, entry };
+    }),
+  );
+
+  for (const { node } of composed) group.add(node);
+  return group;
+}
+
+/** Filter the parts map to only the roles that should be visible for this state. */
+function resolveActiveParts(
+  configEntry: ConfigEntry,
+  state: AssemblyState,
+): Array<{ role: string; entry: PartEntry }> {
+  const out: Array<{ role: string; entry: PartEntry }> = [];
+  for (const [role, entry] of Object.entries(configEntry.parts)) {
+    const axis = ACCESSORY_AXIS[role];
+    if (axis) {
+      // accessory role — controlled by picker state
+      if (!state.accessories[axis]) continue;
+    }
+    // non-accessory (top, legs, feet, grommet, etc.) — always visible
+    out.push({ role, entry });
+  }
+  return out;
+}
+
+/**
+ * Place a part at its anchor, apply stretch scaling on the roles that flex.
+ *
+ * Stretching logic (applies only when the picked size differs from baseSize):
+ * - "top"           → scale X (width) + Z (depth)
+ * - "frame_beam"    → scale X only (length of crossbar)
+ * - "leg_l"         → anchor.x *= stretch.x (move outward), no scale
+ * - "leg_r"         → anchor.x *= stretch.x (move outward), no scale
+ * - "modesty"       → scale X only
+ * - everything else → placed at native anchor, no stretch
+ */
+function placePart(
+  node: THREE.Object3D,
+  role: RoleKind,
+  entry: PartEntry,
+  stretch: { x: number; z: number },
+): void {
+  const [ax, ay, az] = entry.anchor;
+
+  // Legs move outward with stretch but keep their authored scale.
+  if (role === "leg_l" || role === "leg_r") {
+    node.position.set(ax * stretch.x, ay, az);
+    return;
+  }
+
+  // Tops and similar flexible parts scale.
+  if (role === "top") {
+    node.position.set(ax, ay, az);
+    node.scale.set(stretch.x, 1, stretch.z);
+    return;
+  }
+
+  if (role === "frame_beam" || role === "modesty") {
+    node.position.set(ax, ay, az);
+    node.scale.set(stretch.x, 1, 1);
+    return;
+  }
+
+  // Default — place at authored anchor, no stretch.
+  node.position.set(ax, ay, az);
+}
+
+/**
+ * List of accessory axes present in a config — drives which pickers to render.
+ * Deduplicated, stable order.
+ */
+export function accessoryAxesInConfig(configEntry: ConfigEntry): string[] {
+  const seen = new Set<string>();
+  const order: string[] = [];
+  for (const role of Object.keys(configEntry.parts)) {
+    const axis = ACCESSORY_AXIS[role];
+    if (!axis || seen.has(axis)) continue;
+    seen.add(axis);
+    order.push(axis);
+  }
+  return order;
+}

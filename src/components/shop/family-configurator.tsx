@@ -10,7 +10,7 @@
 
 "use client";
 
-import {useState, useMemo} from "react";
+import {useState, useEffect, useMemo} from "react";
 import type {DeskFamily} from "@/data/families";
 import {
   DESK_TOP_FINISHES,
@@ -23,7 +23,15 @@ import {
 import {ConfiguratorPicker} from "@/components/shop/configurator-picker";
 import {LivePrice} from "@/components/shop/live-price";
 import {ProductViewer3D} from "@/components/product/product-viewer-3d";
+import {AssemblyViewer} from "@/components/product/assembly-viewer";
 import {getProduct3DModel} from "@/lib/products-3d";
+import type {FamilyManifest, AssemblyState} from "@/lib/scene-composer";
+
+// Family slug -> manifest URL. Families present here use the part-composition
+// viewer; others fall back to the single-GLB <ProductViewer3D>.
+const FAMILY_MANIFEST_URL: Record<string, string> = {
+  cratos: "/3d-parts/cratos/manifest.json",
+};
 
 type FamilyConfiguratorProps = {
   family: DeskFamily;
@@ -77,6 +85,41 @@ export function FamilyConfigurator({family, basePrice, locale}: FamilyConfigurat
       setSize(valid[0]);
     }
   }
+
+  // Accessory picker state. Axes populated dynamically from the manifest —
+  // a user-visible checkbox appears only if the current config has a part
+  // with a matching accessoryAxis entry.
+  const [accessories, setAccessories] = useState<Record<string, boolean>>({
+    modesty: true,
+    pedestal: false,
+    cable_mgmt: false,
+    screen: true,
+  });
+
+  // Fetch the family's parts manifest on mount (if one exists).
+  const [manifest, setManifest] = useState<FamilyManifest | null>(null);
+  useEffect(() => {
+    const url = FAMILY_MANIFEST_URL[family.slug];
+    if (!url) return;
+    let cancelled = false;
+    fetch(url)
+      .then((r) => (r.ok ? r.json() : null))
+      .then((data: FamilyManifest | null) => {
+        if (!cancelled) setManifest(data);
+      })
+      .catch((err) => console.warn("[configurator] manifest fetch failed", err));
+    return () => { cancelled = true; };
+  }, [family.slug]);
+
+  const useAssemblyViewer = !!manifest && !!manifest.configs[config];
+
+  const assemblyState: AssemblyState = {
+    config,
+    size,
+    topFinishName: finish,
+    legColorName: leg,
+    accessories,
+  };
 
   const isCustomQuote = config === "Custom (Contact Us)" || size === "CUSTOM";
 
@@ -132,7 +175,13 @@ export function FamilyConfigurator({family, basePrice, locale}: FamilyConfigurat
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 py-8 px-4 md:px-6 lg:px-8 max-w-7xl mx-auto">
       {/* Left — 3D viewer / hero */}
       <div className="bg-[#F5F5F5] lg:h-[600px] flex flex-col items-center justify-center relative border border-[#E7E7E7]">
-        {family.hasGlb && getProduct3DModel(family.sku, config) ? (
+        {useAssemblyViewer && manifest ? (
+          <AssemblyViewer
+            manifest={manifest}
+            state={assemblyState}
+            name={isAr ? family.nameAr : family.nameEn}
+          />
+        ) : family.hasGlb && getProduct3DModel(family.sku, config) ? (
           <>
             <ProductViewer3D
               model={getProduct3DModel(family.sku, config)!}
