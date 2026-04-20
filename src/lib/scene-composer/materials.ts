@@ -15,6 +15,7 @@ import {
   type RoleKind,
   WOOD_FINISH_ROLES,
   METAL_FINISH_ROLES,
+  baseRole,
 } from "./types";
 
 // Shared TextureLoader — caches decoded textures by URL.
@@ -91,21 +92,26 @@ export function applyMetalFinish(
 }
 
 /**
- * Route a (role, state) to the correct material application. No-op for roles
- * that carry their own baked material (grommet, feet).
+ * Route a (role, state) to the correct material application.
+ *
+ * Normalizes the role by stripping any `_N` numeric suffix first — so
+ * "top_0", "top_1", "frame_beam_12", "leg_r_0" all resolve to their base role.
+ * This was the "some configs render fully white" bug — Manager, L-Shape, and
+ * the meeting configs have numbered roles that didn't match the finish sets.
  */
 export async function applyMaterialForRole(
   subtree: THREE.Object3D,
-  role: RoleKind,
+  role: RoleKind | string,
   topFinishName: string,
   legColorName: string,
 ): Promise<void> {
-  if (WOOD_FINISH_ROLES.has(role)) {
+  const base = baseRole(role as string);
+  if (WOOD_FINISH_ROLES.has(base)) {
     await applyWoodFinish(subtree, topFinishName);
-  } else if (METAL_FINISH_ROLES.has(role)) {
+  } else if (METAL_FINISH_ROLES.has(base)) {
     applyMetalFinish(subtree, legColorName);
   }
-  // grommet / feet / unknown — leave baked materials intact
+  // unknown / anything else — leave baked materials intact
 }
 
 /**

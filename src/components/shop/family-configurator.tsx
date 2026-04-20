@@ -26,12 +26,23 @@ import {ProductViewer3D} from "@/components/product/product-viewer-3d";
 import {AssemblyViewer} from "@/components/product/assembly-viewer";
 import {getProduct3DModel} from "@/lib/products-3d";
 import type {FamilyManifest, AssemblyState} from "@/lib/scene-composer";
+import {accessoryAxesInConfig} from "@/lib/scene-composer";
 
 // Family slug -> manifest URL. Families present here use the part-composition
 // viewer; others fall back to the single-GLB <ProductViewer3D>.
 const FAMILY_MANIFEST_URL: Record<string, string> = {
   cratos: "/3d-parts/cratos/manifest.json",
 };
+
+/** Return the accessory axes that have at least one part in this config's manifest. */
+function accessoryAxesForCurrentConfig(
+  manifest: FamilyManifest,
+  config: string,
+): string[] {
+  const cfg = manifest.configs[config];
+  if (!cfg) return [];
+  return accessoryAxesInConfig(cfg);
+}
 
 type FamilyConfiguratorProps = {
   family: DeskFamily;
@@ -305,6 +316,53 @@ export function FamilyConfigurator({family, basePrice, locale}: FamilyConfigurat
             exclusions={excludedLegs}
             locale={locale}
           />
+
+          {/* Accessory toggles — only shown when the current config has a part
+              on that axis in the manifest. Uses ACCESSORY_AXIS to introspect. */}
+          {useAssemblyViewer && manifest && (
+            <div className="mb-6">
+              <h4 className="text-[#2C2C2C] font-medium text-sm uppercase tracking-wide mb-2">
+                {isAr ? "ملحقات" : "Accessories"}
+              </h4>
+              <div className="flex flex-wrap gap-3">
+                {(() => {
+                  const axes = accessoryAxesForCurrentConfig(manifest, config);
+                  const labels: Record<string, { en: string; ar: string }> = {
+                    modesty: { en: "Modesty panel", ar: "لوحة أمامية" },
+                    pedestal: { en: "Pedestal drawer", ar: "خزانة جانبية" },
+                    cable_mgmt: { en: "Cable tray / spine", ar: "إدارة الكابلات" },
+                    screen: { en: "Privacy screens", ar: "فواصل خصوصية" },
+                  };
+                  return axes.map((axis) => {
+                    const label = labels[axis] || { en: axis, ar: axis };
+                    const on = !!accessories[axis];
+                    return (
+                      <label
+                        key={axis}
+                        className={[
+                          "flex items-center gap-2 px-3 py-2 border cursor-pointer select-none text-sm transition-colors",
+                          on
+                            ? "border-[#2C2C2C] bg-[#2C2C2C] text-white"
+                            : "border-[#D4D4D4] text-[#2C2C2C] hover:border-[#3A3A3A]",
+                        ].join(" ")}
+                      >
+                        <input
+                          type="checkbox"
+                          checked={on}
+                          onChange={(e) =>
+                            setAccessories((prev) => ({ ...prev, [axis]: e.target.checked }))
+                          }
+                          className="sr-only"
+                        />
+                        <span>{on ? "✓" : "○"}</span>
+                        <span>{isAr ? label.ar : label.en}</span>
+                      </label>
+                    );
+                  });
+                })()}
+              </div>
+            </div>
+          )}
 
           {/* Optional configurator-only axes */}
           <ConfiguratorPicker

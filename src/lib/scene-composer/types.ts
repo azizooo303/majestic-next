@@ -63,17 +63,35 @@ export type RoleKind =
   | "handle"
   | "unknown";
 
-export const WOOD_FINISH_ROLES = new Set<RoleKind>([
+// NOTE: roles are compared AFTER stripping any "_N" numeric suffix (top_0 → top).
+// See baseRole() below. This keeps the set small while handling multi-piece parts.
+
+export const WOOD_FINISH_ROLES = new Set<string>([
   "top",
   "pedestal_top",
-  "handle", // some handles are wood-grain; overridable per family
 ]);
 
-export const METAL_FINISH_ROLES = new Set<RoleKind>([
+export const METAL_FINISH_ROLES = new Set<string>([
   "leg_l",
   "leg_r",
+  "leg",            // generic (before disambiguate)
   "frame_beam",
+  "feet",           // leveling feet are metal
+  "modesty",        // painted panel matches legs
+  "grommet",        // cable cover, metal
+  "cable_tray",
+  "cable_spine",
+  "screen_front",   // divider/bracket
+  "screen_side",
+  "handle",         // drawer handles, metal
+  "pedestal",       // pedestal body painted like frame
+  "pedestal_handle",
 ]);
+
+/** Strip trailing "_0", "_12" etc. so "top_0" matches "top" in the role sets. */
+export function baseRole(role: string): string {
+  return role.replace(/_\d+$/, "");
+}
 
 export const ACCESSORY_ROLES = new Set<RoleKind>([
   "modesty",
