@@ -1412,12 +1412,12 @@
             0
           ],
           "bbox": [
-            0.05,
-            0.05,
+            0.03,
+            0.03,
             0.127
           ],
-          "bytes": 1824,
-          "hash": "ba356a493ee8"
+          "bytes": 1812,
+          "hash": "4797f1fbeafb"
         }
       },
       "baseSize": null,
@@ -4373,5 +4373,5 @@
       "productKind": "workstation"
     }
   },
-  "generated_at": "2026-04-20T14:28:38.325Z"
+  "generated_at": "2026-04-20T14:33:24.640Z"
 }
