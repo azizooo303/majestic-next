@@ -53,6 +53,10 @@ const SIZE_OPTIONS_PER_CONFIG: Record<string, string[]> = {
   "L-Shape": ["160x80+120x60", "180x90+120x60", "CUSTOM"],
   "U-Shape": ["180x90+2x120x60", "CUSTOM"],
   "Conference": ["180x90", "240x100", "300x110", "360x120", "CUSTOM"],
+  // Meeting tables — rectangle tops by seating count.
+  "Meeting 4-Person": ["120x120", "140x140", "CUSTOM"],
+  "Meeting 6-Person": ["180x90", "240x100", "CUSTOM"],
+  "Meeting (Large)": ["300x110", "360x120", "420x140", "CUSTOM"],
   "Custom (Contact Us)": ["CUSTOM"],
   "Height-Adjustable": ["120x60", "140x70", "160x80", "180x80", "CUSTOM"],
 };
@@ -61,6 +65,8 @@ const SIZE_EXTRA_PRICES: Record<string, number> = {
   "120x60": 0, "140x60": 0, "140x70": 100, "160x70": 150, "160x80": 200,
   "180x80": 300, "180x90": 400, "200x80": 500, "200x100": 650,
   "220x90": 700, "220x100": 800, "240x100": 900, "300x110": 1200, "360x120": 1500,
+  // Meeting table sizes
+  "120x120": 300, "140x140": 500, "420x140": 2000,
   "CUSTOM": 0,
 };
 
@@ -147,6 +153,7 @@ export function FamilyConfigurator({family, basePrice, locale}: FamilyConfigurat
     const valid = SIZE_OPTIONS_PER_CONFIG[config] || [];
     const ALL_SIZES = ["120x60", "140x60", "140x70", "160x70", "160x80", "180x80", "180x90",
                        "200x80", "200x100", "220x90", "220x100", "240x100", "300x110", "360x120",
+                       "120x120", "140x140", "420x140",
                        "160x80+120x60", "180x90+120x60", "180x90+2x120x60", "CUSTOM"];
     return ALL_SIZES.filter(s => !valid.includes(s));
   }, [config]);

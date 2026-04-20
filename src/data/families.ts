@@ -29,7 +29,7 @@ export const DESK_FAMILIES: DeskFamily[] = [
     nameEn: "Cratos Desk",
     nameAr: "مكتب كراتوس",
     tagline: {en: "Best-selling executive desk", ar: "الأكثر مبيعاً — مكتب تنفيذي"},
-    configs: ["Executive", "Manager", "Operator", "L-Shape", "U-Shape", "Conference", "Custom (Contact Us)"],
+    configs: ["Executive", "Manager", "Operator", "L-Shape", "U-Shape", "Conference", "Meeting 4-Person", "Meeting 6-Person", "Meeting (Large)", "Custom (Contact Us)"],
     hasGlb: true,
     glbUrl: "/3d/cratos-executive/model.glb",
     heroImage: "/images/shop/cratos-hero.webp",
@@ -212,6 +212,10 @@ export const CONFIG_EXTRA_PRICES: Record<string, number> = {
   "L-Shape": 2000,
   "U-Shape": 3500,
   "Conference": 1500,
+  // Meeting tables — placeholder pricing, Aziz to confirm real numbers in Odoo
+  "Meeting 4-Person": 1800,
+  "Meeting 6-Person": 2800,
+  "Meeting (Large)": 4500,
   "Custom (Contact Us)": 0,      // quote path, no direct price
   "Height-Adjustable": 3000,     // Newton only (placeholder)
 };
