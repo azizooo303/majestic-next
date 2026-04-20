@@ -224,7 +224,7 @@ export default async function ShopPage({
                     isRTL={isAr}
                     className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[15px]"
                   >
-                    {DESK_FAMILIES.slice(0, 8).map((family) => (
+                    {DESK_FAMILIES.map((family) => (
                       <FamilyCard key={family.sku} family={family} locale={isAr ? "ar" : "en"} />
                     ))}
                   </StaggerGrid>
