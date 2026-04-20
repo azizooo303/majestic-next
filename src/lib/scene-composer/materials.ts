@@ -71,22 +71,37 @@ export async function applyWoodFinish(
   });
 }
 
+const FABRIC_WEAVE_URL = "/materials/fabric/acoustic-weave.jpg";
+
 /**
- * Apply fabric finish — matte light grey, zero metalness, high roughness.
+ * Apply fabric finish — real acoustic fabric weave texture + matte response.
  * Used for acoustic dividers and any upholstered panel.
+ * Texture tiled high so the weave reads as "fabric" not "stretched paper".
  */
-export function applyFabricFinish(
+export async function applyFabricFinish(
   subtree: THREE.Object3D,
-  hex: string = "#B8B8B8",
-): void {
+  hex: string = "#FFFFFF",
+): Promise<void> {
+  const tex = await loadTextureCached(FABRIC_WEAVE_URL).catch(() => null);
   subtree.traverse((obj) => {
     if (!(obj as THREE.Mesh).isMesh) return;
     const mesh = obj as THREE.Mesh;
     const mat = ensureStandardMaterial(mesh);
-    mat.map = null;
-    mat.color.set(hex);
+    if (tex) {
+      // Clone the texture so per-mesh repeat settings don't leak across dividers.
+      const mtex = tex.clone();
+      mtex.wrapS = THREE.RepeatWrapping;
+      mtex.wrapT = THREE.RepeatWrapping;
+      mtex.repeat.set(6, 3); // visual density for a ~60cm x 40cm panel
+      mtex.needsUpdate = true;
+      mat.map = mtex;
+      mat.color.set(0xffffff);
+    } else {
+      mat.map = null;
+      mat.color.set(hex);
+    }
     mat.metalness = 0.0;
-    mat.roughness = 0.92; // fabric weave — high roughness kills highlights
+    mat.roughness = 0.92;
     mat.needsUpdate = true;
   });
 }
@@ -130,7 +145,7 @@ export async function applyMaterialForRole(
   if (WOOD_FINISH_ROLES.has(base)) {
     await applyWoodFinish(subtree, topFinishName);
   } else if (FABRIC_FINISH_ROLES.has(base)) {
-    applyFabricFinish(subtree);
+    await applyFabricFinish(subtree);
   } else if (METAL_FINISH_ROLES.has(base)) {
     applyMetalFinish(subtree, legColorName);
   }
