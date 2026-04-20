@@ -201,12 +201,12 @@
             0
           ],
           "bbox": [
-            0.449,
+            1.56,
             0.082,
             0.08
           ],
-          "bytes": 2320,
-          "hash": "2d2b4b2c95e7"
+          "bytes": 2240,
+          "hash": "2561adff11f4"
         }
       },
       "baseSize": "180x80",
@@ -546,12 +546,12 @@
             0
           ],
           "bbox": [
-            0.449,
+            1.36,
             0.082,
             0.08
           ],
-          "bytes": 2208,
-          "hash": "89c22deaebcf"
+          "bytes": 2144,
+          "hash": "9a4c4393df66"
         }
       },
       "baseSize": null,
@@ -808,12 +808,12 @@
             0
           ],
           "bbox": [
-            0.449,
+            0.96,
             0.082,
             0.08
           ],
-          "bytes": 2212,
-          "hash": "aa47109bf2cc"
+          "bytes": 2148,
+          "hash": "25dbd6a2f450"
         }
       },
       "baseSize": "120x120",
@@ -1472,12 +1472,12 @@
             0
           ],
           "bbox": [
-            0.449,
+            1.36,
             0.082,
             0.08
           ],
-          "bytes": 2220,
-          "hash": "ed09d8827439"
+          "bytes": 2160,
+          "hash": "21dff3ab4032"
         }
       },
       "baseSize": null,
@@ -1734,12 +1734,12 @@
             0
           ],
           "bbox": [
-            0.449,
+            0.96,
             0.082,
             0.08
           ],
-          "bytes": 2212,
-          "hash": "aa47109bf2cc"
+          "bytes": 2148,
+          "hash": "25dbd6a2f450"
         }
       },
       "baseSize": "120x120",
@@ -2459,12 +2459,12 @@
             0
           ],
           "bbox": [
-            0.449,
+            1.36,
             0.082,
             0.08
           ],
-          "bytes": 2208,
-          "hash": "b71823ddb8c0"
+          "bytes": 2152,
+          "hash": "b83553da0c59"
         }
       },
       "baseSize": null,
@@ -3519,12 +3519,12 @@
             0
           ],
           "bbox": [
-            0.449,
+            1.16,
             0.082,
             0.08
           ],
-          "bytes": 2220,
-          "hash": "ef2ffbcd90b3"
+          "bytes": 2160,
+          "hash": "f6d71b1744ab"
         }
       },
       "baseSize": null,
@@ -4677,12 +4677,12 @@
             0
           ],
           "bbox": [
-            0.449,
+            1.16,
             0.082,
             0.08
           ],
-          "bytes": 2220,
-          "hash": "ef2ffbcd90b3"
+          "bytes": 2164,
+          "hash": "e20b55bbc8bb"
         },
         "cable_tray_1": {
           "glb": "/3d-parts/cratos/cable_tray_1/workstation-6-person.glb",
@@ -4692,12 +4692,12 @@
             0
           ],
           "bbox": [
-            0.449,
+            1.16,
             0.082,
             0.08
           ],
-          "bytes": 2224,
-          "hash": "7693c61bea9f"
+          "bytes": 2164,
+          "hash": "fdb9cec61de7"
         },
         "cable_tray_2": {
           "glb": "/3d-parts/cratos/cable_tray_2/workstation-6-person.glb",
@@ -4707,12 +4707,12 @@
             0
           ],
           "bbox": [
-            0.449,
+            1.16,
             0.082,
             0.08
           ],
-          "bytes": 2224,
-          "hash": "0112aa6d871a"
+          "bytes": 2164,
+          "hash": "f6d71b1744ab"
         },
         "cable_tray_3": {
           "glb": "/3d-parts/cratos/cable_tray_3/workstation-6-person.glb",
@@ -4722,12 +4722,12 @@
             0
           ],
           "bbox": [
-            0.449,
+            1.16,
             0.082,
             0.08
           ],
-          "bytes": 2224,
-          "hash": "719248f2bd83"
+          "bytes": 2164,
+          "hash": "6695e9a5eadb"
         },
         "cable_tray_4": {
           "glb": "/3d-parts/cratos/cable_tray_4/workstation-6-person.glb",
@@ -4737,12 +4737,12 @@
             0
           ],
           "bbox": [
-            0.449,
+            1.16,
             0.082,
             0.08
           ],
-          "bytes": 2224,
-          "hash": "c2e2754d5479"
+          "bytes": 2164,
+          "hash": "049ddffe3728"
         },
         "cable_tray_5": {
           "glb": "/3d-parts/cratos/cable_tray_5/workstation-6-person.glb",
@@ -4752,12 +4752,12 @@
             0
           ],
           "bbox": [
-            0.449,
+            1.16,
             0.082,
             0.08
           ],
-          "bytes": 2224,
-          "hash": "a4b4a26216a7"
+          "bytes": 2164,
+          "hash": "6eefdbd6b822"
         }
       },
       "baseSize": null,
@@ -4788,5 +4788,5 @@
       "productKind": "workstation"
     }
   },
-  "generated_at": "2026-04-20T22:14:38.269Z"
+  "generated_at": "2026-04-20T22:21:10.997Z"
 }
