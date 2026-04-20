@@ -1416,8 +1416,8 @@
             0.03,
             0.127
           ],
-          "bytes": 1812,
-          "hash": "4797f1fbeafb"
+          "bytes": 1808,
+          "hash": "8c7a97d532fa"
         }
       },
       "baseSize": null,
@@ -4373,5 +4373,5 @@
       "productKind": "workstation"
     }
   },
-  "generated_at": "2026-04-20T14:33:24.640Z"
+  "generated_at": "2026-04-20T14:46:58.131Z"
 }
