@@ -21,17 +21,28 @@ export interface Model3D {
  * entry is the fallback when a specific config isn't mapped.
  */
 const PRODUCTS_3D_MANIFEST: Record<string, Model3D> = {
-  // Cratos — Executive is the only config with a verified-clean baked GLB.
-  // MGR/CONF/L exports from 2026-04-20 included a large backdrop floor plane
-  // that broke the viewer's auto-framing (desk appeared as tiny floating
-  // rectangle). Reverted until the part-GLB composition pipeline replaces
-  // the baked-per-config approach entirely — see
-  // C:/Users/Admin/.claude/plans/so-you-know-we-rippling-meteor.md
+  // Cratos — the part-composition pipeline (AssemblyViewer) is the primary
+  // 3D path for all Cratos configs. These single-GLB entries are kept as a
+  // last-resort fallback for configs NOT in the manifest (e.g. if the
+  // manifest fetch fails or a config has no parts yet).
+  //
+  // NOTE: "Executive" was renamed to "Operator" in families.ts (2026-04-20).
+  // The manifest key is "Operator". The old "Executive" GLB still serves as
+  // the fallback baked model when AssemblyViewer cannot load.
   "DESK-CRATOS": {
     glb: "/3d/cratos-executive/model.glb",
     usdz: "/3d/cratos-executive/model.usdz",
     label: "Cratos Desk",
   },
+  // "Operator" is the renamed "Executive" — maps to the same baked GLB as
+  // fallback. The AssemblyViewer will render first when manifest is present.
+  "DESK-CRATOS:Operator": {
+    glb: "/3d/cratos-executive/model.glb",
+    usdz: "/3d/cratos-executive/model.usdz",
+    label: "Cratos Operator",
+  },
+  // Kept for backward-compat in case any bookmark/bot still loads
+  // /shop/cratos?config=Executive — won't match manifest so falls to GLB.
   "DESK-CRATOS:Executive": {
     glb: "/3d/cratos-executive/model.glb",
     usdz: "/3d/cratos-executive/model.usdz",

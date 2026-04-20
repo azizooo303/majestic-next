@@ -18,9 +18,13 @@ interface AssemblyViewerProps {
   manifest: FamilyManifest;
   state: AssemblyState;
   name: string;
+  /** CSS color string for the viewer backdrop. Defaults to transparent so the
+   *  parent container's backgroundColor shows through. The parent
+   *  (family-configurator) controls the warm off-white / grey flip logic. */
+  backgroundColor?: string;
 }
 
-export function AssemblyViewer({ manifest, state, name }: AssemblyViewerProps) {
+export function AssemblyViewer({ manifest, state, name, backgroundColor }: AssemblyViewerProps) {
   const mountRef = useRef<HTMLDivElement | null>(null);
   const rendererRef = useRef<THREE.WebGLRenderer | null>(null);
   const sceneRef = useRef<THREE.Scene | null>(null);
@@ -175,9 +179,11 @@ export function AssemblyViewer({ manifest, state, name }: AssemblyViewerProps) {
       aria-label={`3D view of ${name}`}
       className="w-full h-full"
       style={{
-        // Same studio gradient as the old viewer so we don't reintroduce a visual regression.
-        background:
-          "radial-gradient(ellipse 70% 55% at 50% 45%, #b8b8b8 0%, #cfcfcf 22%, #e6e6e6 45%, #f5f5f5 68%, #ffffff 88%)",
+        // backgroundColor comes from parent (family-configurator viewerBg logic).
+        // Fallback to transparent so the parent container color shows through.
+        // The old hardcoded grey gradient is intentionally removed — it was
+        // overriding the parent's warm off-white (#F7F4EE) background.
+        backgroundColor: backgroundColor ?? "transparent",
       }}
     />
   );

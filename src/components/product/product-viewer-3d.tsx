@@ -52,6 +52,9 @@ interface ProductViewer3DProps {
   topFinishName?: string;
   /** Leg color name — future: will swap legs material when GLB has separate material slots. */
   legColorName?: string;
+  /** Override the studio backdrop. When provided, replaces the default radial-gradient
+   *  with a flat colour so the parent configurator's warm off-white / grey logic shows. */
+  backgroundColor?: string;
 }
 
 const STUDIO_BACKDROP =
@@ -73,6 +76,7 @@ export function ProductViewer3D({
   config,
   topFinishName,
   legColorName,
+  backgroundColor,
 }: ProductViewer3DProps) {
   const mvRef = useRef<MVElement | null>(null);
 
@@ -192,7 +196,7 @@ export function ProductViewer3D({
 
       <div
         className="relative w-full aspect-[4/3] md:aspect-[16/9] min-h-[520px] md:min-h-[600px] overflow-hidden border border-[#D4D4D4]"
-        style={{ background: STUDIO_BACKDROP }}
+        style={{ background: backgroundColor ?? STUDIO_BACKDROP }}
       >
         <model-viewer
           // @ts-expect-error — ref to web component element

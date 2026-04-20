@@ -147,18 +147,24 @@ export function FamilyConfigurator({family, basePrice, locale}: FamilyConfigurat
   const [manifest, setManifest] = useState<FamilyManifest | null>(null);
   useEffect(() => {
     const url = FAMILY_MANIFEST_URL[family.slug];
+    console.log("[cfg] manifest url", family.slug, "->", url);
     if (!url) return;
     let cancelled = false;
     fetch(url)
-      .then((r) => (r.ok ? r.json() : null))
+      .then((r) => {
+        console.log("[cfg] fetch status", r.status);
+        return r.ok ? r.json() : null;
+      })
       .then((data: FamilyManifest | null) => {
+        console.log("[cfg] manifest data", data ? Object.keys(data.configs) : null);
         if (!cancelled) setManifest(data);
       })
-      .catch((err) => console.warn("[configurator] manifest fetch failed", err));
+      .catch((err) => console.warn("[cfg] manifest fetch failed", err));
     return () => { cancelled = true; };
   }, [family.slug]);
 
   const useAssemblyViewer = !!manifest && !!manifest.configs[config];
+  console.log("[cfg] useAssemblyViewer", useAssemblyViewer, "config", config, "manifest?", !!manifest);
 
   const assemblyState: AssemblyState = {
     config,
@@ -239,11 +245,14 @@ export function FamilyConfigurator({family, basePrice, locale}: FamilyConfigurat
   const viewerBg = isPremiumWhiteTop && isWhitePowderLegs ? "#E8E8E8" : "#F7F4EE";
 
   return (
+    <main id="main-content" className="flex-1 bg-white min-h-screen">
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 py-8 px-4 md:px-6 lg:px-8 max-w-7xl mx-auto items-start">
-      {/* Left — 3D viewer / hero. Wrapper + sticky inner pattern: the outer
-          div is a normal grid item (no stretch thanks to items-start on the
-          grid); the inner div is position:sticky so it pins to top-6 while
-          the right column scrolls past. */}
+      {/* Left — 3D viewer / hero.
+          Sticky pattern: this div IS the grid cell. items-start on the grid
+          parent gives it natural height (not stretched to right column).
+          lg:sticky + lg:top-6 pins it as the right column scrolls past.
+          IMPORTANT: no transform/will-change on any ancestor — transforms
+          create a new containing block that breaks position:sticky. */}
       <div className="lg:sticky lg:top-6 self-start w-full">
       <div
         className="h-[480px] lg:h-[720px] flex flex-col items-center justify-center relative border border-[#E7E7E7] transition-colors"
@@ -254,6 +263,7 @@ export function FamilyConfigurator({family, basePrice, locale}: FamilyConfigurat
             manifest={manifest}
             state={assemblyState}
             name={isAr ? family.nameAr : family.nameEn}
+            backgroundColor={viewerBg}
           />
         ) : family.hasGlb && getProduct3DModel(family.sku, config) ? (
           <>
@@ -264,6 +274,7 @@ export function FamilyConfigurator({family, basePrice, locale}: FamilyConfigurat
               config={config}
               topFinishName={finish}
               legColorName={leg}
+              backgroundColor={viewerBg}
             />
             {!getProduct3DModel(family.sku, config)?.label?.includes(config) && (
               <div className="absolute top-3 left-3 bg-white/90 text-[#3A3A3A] text-[10px] uppercase tracking-[0.14em] px-3 py-1.5 border border-[#D4D4D4]">
@@ -518,5 +529,6 @@ export function FamilyConfigurator({family, basePrice, locale}: FamilyConfigurat
         </div>
       </div>
     </div>
+    </main>
   );
 }
