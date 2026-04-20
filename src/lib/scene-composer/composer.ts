@@ -84,17 +84,30 @@ function resolveActiveParts(
 }
 
 /**
- * Place a part at its anchor, apply stretch scaling on the roles that flex.
+ * Place a part at its anchor.
  *
- * Stretching logic (applies only when the picked size differs from baseSize):
- * - "top"           → scale X (width) + Z (depth)
- * - "frame_beam"    → scale X only (length of crossbar)
- * - "leg_l"         → anchor.x *= stretch.x (move outward), no scale
- * - "leg_r"         → anchor.x *= stretch.x (move outward), no scale
- * - "modesty"       → scale X only
- * - everything else → placed at native anchor, no stretch
+ * Note: with the current extraction pipeline (2026-04-20), each part GLB has
+ * its world-space position baked into the mesh itself (see blender-extract-parts.py
+ * bake_transform_and_recenter). Manifest anchors are therefore (0,0,0) and
+ * placement is a no-op — we leave the node at origin and the mesh self-places.
+ *
+ * Stretch is disabled in this pass because stretching a world-positioned mesh
+ * would scale around the GLB origin (which is outside the mesh), producing
+ * wrong visuals. When we need size variants, we'll re-extract with mesh-local
+ * centering per-role and re-enable this path.
  */
 function placePart(
+  node: THREE.Object3D,
+  role: RoleKind,
+  entry: PartEntry,
+  _stretch: { x: number; z: number },
+): void {
+  void role;
+  const [ax, ay, az] = entry.anchor;
+  node.position.set(ax, ay, az);
+}
+
+function _placePart_legacy_stretch(
   node: THREE.Object3D,
   role: RoleKind,
   entry: PartEntry,
