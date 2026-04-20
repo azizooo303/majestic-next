@@ -231,11 +231,12 @@ export function FamilyConfigurator({family, basePrice, locale}: FamilyConfigurat
 
   // Smart viewer background:
   // Default = warm off-white (actiu-style, softer than #F5F5F5).
-  // Switch to neutral grey ONLY when the user selects a white top or white legs,
-  // otherwise white-on-white would wash out the product.
-  const isWhiteTop = finish === "Premium White" || /white/i.test(finish);
-  const isWhiteLegs = /white/i.test(leg);
-  const viewerBg = isWhiteTop || isWhiteLegs ? "#E8E8E8" : "#F7F4EE";
+  // Flip to grey only when a fully white combo would wash out — i.e. the top
+  // is truly "Premium White" AND the legs are "White Powder Coat". A white
+  // top on chrome/black legs already has enough contrast; keep off-white then.
+  const isPremiumWhiteTop = finish === "Premium White";
+  const isWhitePowderLegs = leg === "White Powder Coat";
+  const viewerBg = isPremiumWhiteTop && isWhitePowderLegs ? "#E8E8E8" : "#F7F4EE";
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 py-8 px-4 md:px-6 lg:px-8 max-w-7xl mx-auto items-start">
@@ -245,7 +246,7 @@ export function FamilyConfigurator({family, basePrice, locale}: FamilyConfigurat
           the right column scrolls past. */}
       <div className="lg:sticky lg:top-6 self-start w-full">
       <div
-        className="h-[420px] lg:h-[600px] flex flex-col items-center justify-center relative border border-[#E7E7E7] transition-colors"
+        className="h-[480px] lg:h-[720px] flex flex-col items-center justify-center relative border border-[#E7E7E7] transition-colors"
         style={{ backgroundColor: viewerBg }}
       >
         {useAssemblyViewer && manifest ? (
