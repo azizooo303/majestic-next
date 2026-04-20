@@ -93,26 +93,37 @@ export function baseRole(role: string): string {
   return role.replace(/_\d+$/, "");
 }
 
-export const ACCESSORY_ROLES = new Set<RoleKind>([
+export const ACCESSORY_ROLES = new Set<string>([
   "modesty",
   "pedestal",
   "pedestal_handle",
+  "pedestal_top",
   "cable_tray",
   "cable_spine",
   "screen_front",
   "screen_side",
+  "grommet",
+  "powerbox",
+  "handle",
 ]);
 
-/** Map each accessory role -> the picker "axis" that controls its visibility. */
+/**
+ * Map each accessory role -> the picker "axis" that controls its visibility.
+ * Each axis is its own toggle in the UI so Aziz can see front vs side dividers
+ * separately, and cable tray vs spine separately, rather than lumped together.
+ */
 export const ACCESSORY_AXIS: Record<string, string> = {
   modesty: "modesty",
   pedestal: "pedestal",
   pedestal_handle: "pedestal",
-  pedestal_top: "pedestal", // visible only if user enables pedestal
-  cable_tray: "cable_mgmt",
-  cable_spine: "cable_mgmt",
-  screen_front: "screen",
-  screen_side: "screen",
+  pedestal_top: "pedestal",
+  cable_tray: "cable_tray",
+  cable_spine: "cable_spine",
+  screen_front: "screen_front",
+  screen_side: "screen_side",
+  grommet: "grommet",
+  powerbox: "powerbox",
+  // handle intentionally NOT an accessory axis — handles are bundled with pedestal visually
 };
 
 /** Runtime state passed to the composer — picker selections + global config. */

@@ -68,6 +68,8 @@ const SIZE_OPTIONS_PER_CONFIG: Record<string, string[]> = {
   "Meeting 4-Person": ["120x120", "140x140", "CUSTOM"],
   "Meeting 6-Person": ["180x90", "240x100", "CUSTOM"],
   "Meeting (Large)": ["300x110", "360x120", "420x140", "CUSTOM"],
+  // Workstation cluster — size refers to per-seat desktop
+  "Workstation 6-Person": ["120x60", "140x70", "160x80", "CUSTOM"],
   "Custom (Contact Us)": ["CUSTOM"],
   "Height-Adjustable": ["120x60", "140x70", "160x80", "180x80", "CUSTOM"],
 };
@@ -103,14 +105,22 @@ export function FamilyConfigurator({family, basePrice, locale}: FamilyConfigurat
     }
   }
 
-  // Accessory picker state. Axes populated dynamically from the manifest —
-  // a user-visible checkbox appears only if the current config has a part
-  // with a matching accessoryAxis entry.
+  // Accessory picker state — one boolean per accessory axis. Each axis only
+  // appears in the UI if the current config's manifest has a part on it.
+  //
+  // Screens default OFF: the currently-authored "screen_front"/"screen_side"
+  // objects in the masters are small decorative brackets, not the real fabric
+  // acoustic dividers. Don't show them unless user explicitly opts in.
+  // Acoustic-divider authoring is pending with the 3D squad.
   const [accessories, setAccessories] = useState<Record<string, boolean>>({
     modesty: true,
     pedestal: false,
-    cable_mgmt: false,
-    screen: true,
+    cable_tray: false,
+    cable_spine: false,
+    grommet: true,        // cable cutouts usually visible
+    powerbox: false,      // not yet in any master, auto-hides
+    screen_front: false,  // see note above
+    screen_side: false,
   });
 
   // Fetch the family's parts manifest on mount (if one exists).
@@ -328,10 +338,14 @@ export function FamilyConfigurator({family, basePrice, locale}: FamilyConfigurat
                 {(() => {
                   const axes = accessoryAxesForCurrentConfig(manifest, config);
                   const labels: Record<string, { en: string; ar: string }> = {
-                    modesty: { en: "Modesty panel", ar: "لوحة أمامية" },
-                    pedestal: { en: "Pedestal drawer", ar: "خزانة جانبية" },
-                    cable_mgmt: { en: "Cable tray / spine", ar: "إدارة الكابلات" },
-                    screen: { en: "Privacy screens", ar: "فواصل خصوصية" },
+                    modesty:      { en: "Modesty panel",    ar: "لوحة أمامية" },
+                    pedestal:     { en: "Pedestal drawer",  ar: "خزانة جانبية" },
+                    cable_tray:   { en: "Cable tray",       ar: "حامل الكابلات" },
+                    cable_spine:  { en: "Cable spine",      ar: "عمود الكابلات" },
+                    grommet:      { en: "Cable grommets",   ar: "فتحات الكابلات" },
+                    powerbox:     { en: "Powerbox / outlet",ar: "صندوق الطاقة" },
+                    screen_front: { en: "Front divider",    ar: "فاصل أمامي" },
+                    screen_side:  { en: "Side divider",     ar: "فاصل جانبي" },
                   };
                   return axes.map((axis) => {
                     const label = labels[axis] || { en: axis, ar: axis };
