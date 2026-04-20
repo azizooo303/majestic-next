@@ -205,8 +205,8 @@
             0.082,
             0.08
           ],
-          "bytes": 2240,
-          "hash": "2561adff11f4"
+          "bytes": 2204,
+          "hash": "22478328b146"
         }
       },
       "baseSize": "180x80",
@@ -550,8 +550,8 @@
             0.082,
             0.08
           ],
-          "bytes": 2144,
-          "hash": "9a4c4393df66"
+          "bytes": 2096,
+          "hash": "199ba3144936"
         }
       },
       "baseSize": null,
@@ -812,8 +812,8 @@
             0.082,
             0.08
           ],
-          "bytes": 2148,
-          "hash": "25dbd6a2f450"
+          "bytes": 2112,
+          "hash": "66c9f029ef64"
         }
       },
       "baseSize": "120x120",
@@ -1476,8 +1476,8 @@
             0.082,
             0.08
           ],
-          "bytes": 2160,
-          "hash": "21dff3ab4032"
+          "bytes": 2108,
+          "hash": "3691ef5c52cc"
         }
       },
       "baseSize": null,
@@ -1738,8 +1738,8 @@
             0.082,
             0.08
           ],
-          "bytes": 2148,
-          "hash": "25dbd6a2f450"
+          "bytes": 2112,
+          "hash": "66c9f029ef64"
         }
       },
       "baseSize": "120x120",
@@ -2463,8 +2463,8 @@
             0.082,
             0.08
           ],
-          "bytes": 2152,
-          "hash": "b83553da0c59"
+          "bytes": 2100,
+          "hash": "75134b3ccfce"
         }
       },
       "baseSize": null,
@@ -3523,8 +3523,8 @@
             0.082,
             0.08
           ],
-          "bytes": 2160,
-          "hash": "f6d71b1744ab"
+          "bytes": 2120,
+          "hash": "567ad6749fcd"
         }
       },
       "baseSize": null,
@@ -4681,8 +4681,8 @@
             0.082,
             0.08
           ],
-          "bytes": 2164,
-          "hash": "e20b55bbc8bb"
+          "bytes": 2120,
+          "hash": "186ebf4a1538"
         },
         "cable_tray_1": {
           "glb": "/3d-parts/cratos/cable_tray_1/workstation-6-person.glb",
@@ -4696,8 +4696,8 @@
             0.082,
             0.08
           ],
-          "bytes": 2164,
-          "hash": "fdb9cec61de7"
+          "bytes": 2128,
+          "hash": "af556299b33c"
         },
         "cable_tray_2": {
           "glb": "/3d-parts/cratos/cable_tray_2/workstation-6-person.glb",
@@ -4711,8 +4711,8 @@
             0.082,
             0.08
           ],
-          "bytes": 2164,
-          "hash": "f6d71b1744ab"
+          "bytes": 2124,
+          "hash": "567ad6749fcd"
         },
         "cable_tray_3": {
           "glb": "/3d-parts/cratos/cable_tray_3/workstation-6-person.glb",
@@ -4726,8 +4726,8 @@
             0.082,
             0.08
           ],
-          "bytes": 2164,
-          "hash": "6695e9a5eadb"
+          "bytes": 2128,
+          "hash": "683b0fdaffa6"
         },
         "cable_tray_4": {
           "glb": "/3d-parts/cratos/cable_tray_4/workstation-6-person.glb",
@@ -4741,8 +4741,8 @@
             0.082,
             0.08
           ],
-          "bytes": 2164,
-          "hash": "049ddffe3728"
+          "bytes": 2124,
+          "hash": "4af5b287e2d1"
         },
         "cable_tray_5": {
           "glb": "/3d-parts/cratos/cable_tray_5/workstation-6-person.glb",
@@ -4756,8 +4756,8 @@
             0.082,
             0.08
           ],
-          "bytes": 2164,
-          "hash": "6eefdbd6b822"
+          "bytes": 2128,
+          "hash": "3923508b5bc7"
         }
       },
       "baseSize": null,
@@ -4788,5 +4788,5 @@
       "productKind": "workstation"
     }
   },
-  "generated_at": "2026-04-20T22:21:10.997Z"
+  "generated_at": "2026-04-20T22:31:01.075Z"
 }
