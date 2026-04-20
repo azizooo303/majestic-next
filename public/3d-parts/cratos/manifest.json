@@ -192,6 +192,21 @@
           "source_materials": [
             "Majestic_WhitePaint"
           ]
+        },
+        "cable_tray": {
+          "glb": "/3d-parts/cratos/cable_tray/executive.glb",
+          "anchor": [
+            0,
+            0,
+            0
+          ],
+          "bbox": [
+            0.449,
+            0.082,
+            0.08
+          ],
+          "bytes": 2320,
+          "hash": "2d2b4b2c95e7"
         }
       },
       "baseSize": "180x80",
@@ -522,6 +537,21 @@
           "source_materials": [
             "FRAME_white"
           ]
+        },
+        "cable_tray": {
+          "glb": "/3d-parts/cratos/cable_tray/manager.glb",
+          "anchor": [
+            0,
+            0,
+            0
+          ],
+          "bbox": [
+            0.449,
+            0.082,
+            0.08
+          ],
+          "bytes": 2208,
+          "hash": "89c22deaebcf"
         }
       },
       "baseSize": null,
@@ -769,6 +799,21 @@
           "source_materials": [
             "GROMMET_COVER_a398"
           ]
+        },
+        "cable_tray": {
+          "glb": "/3d-parts/cratos/cable_tray/conference.glb",
+          "anchor": [
+            0,
+            0,
+            0
+          ],
+          "bbox": [
+            0.449,
+            0.082,
+            0.08
+          ],
+          "bytes": 2212,
+          "hash": "aa47109bf2cc"
         }
       },
       "baseSize": "120x120",
@@ -1418,6 +1463,21 @@
           ],
           "bytes": 1812,
           "hash": "offset-aligned"
+        },
+        "cable_tray": {
+          "glb": "/3d-parts/cratos/cable_tray/l-shape.glb",
+          "anchor": [
+            0,
+            0,
+            0
+          ],
+          "bbox": [
+            0.449,
+            0.082,
+            0.08
+          ],
+          "bytes": 2220,
+          "hash": "ed09d8827439"
         }
       },
       "baseSize": null,
@@ -1665,6 +1725,21 @@
           "source_materials": [
             "GROMMET_COVER_a398"
           ]
+        },
+        "cable_tray": {
+          "glb": "/3d-parts/cratos/cable_tray/meeting-4-person.glb",
+          "anchor": [
+            0,
+            0,
+            0
+          ],
+          "bbox": [
+            0.449,
+            0.082,
+            0.08
+          ],
+          "bytes": 2212,
+          "hash": "aa47109bf2cc"
         }
       },
       "baseSize": "120x120",
@@ -2375,6 +2450,21 @@
           "source_materials": [
             "LEG_a398"
           ]
+        },
+        "cable_tray": {
+          "glb": "/3d-parts/cratos/cable_tray/meeting-6-person.glb",
+          "anchor": [
+            0,
+            0,
+            0
+          ],
+          "bbox": [
+            0.449,
+            0.082,
+            0.08
+          ],
+          "bytes": 2208,
+          "hash": "b71823ddb8c0"
         }
       },
       "baseSize": null,
@@ -3420,6 +3510,21 @@
           "source_materials": [
             "DESK-CRATOS-WS_LEG"
           ]
+        },
+        "cable_tray": {
+          "glb": "/3d-parts/cratos/cable_tray/meeting-large.glb",
+          "anchor": [
+            0,
+            0,
+            0
+          ],
+          "bbox": [
+            0.449,
+            0.082,
+            0.08
+          ],
+          "bytes": 2220,
+          "hash": "ef2ffbcd90b3"
         }
       },
       "baseSize": null,
@@ -4563,6 +4668,96 @@
           ],
           "bytes": 2284,
           "hash": "aace9b727e67"
+        },
+        "cable_tray_0": {
+          "glb": "/3d-parts/cratos/cable_tray_0/workstation-6-person.glb",
+          "anchor": [
+            0,
+            0,
+            0
+          ],
+          "bbox": [
+            0.449,
+            0.082,
+            0.08
+          ],
+          "bytes": 2220,
+          "hash": "ef2ffbcd90b3"
+        },
+        "cable_tray_1": {
+          "glb": "/3d-parts/cratos/cable_tray_1/workstation-6-person.glb",
+          "anchor": [
+            0,
+            0,
+            0
+          ],
+          "bbox": [
+            0.449,
+            0.082,
+            0.08
+          ],
+          "bytes": 2224,
+          "hash": "7693c61bea9f"
+        },
+        "cable_tray_2": {
+          "glb": "/3d-parts/cratos/cable_tray_2/workstation-6-person.glb",
+          "anchor": [
+            0,
+            0,
+            0
+          ],
+          "bbox": [
+            0.449,
+            0.082,
+            0.08
+          ],
+          "bytes": 2224,
+          "hash": "0112aa6d871a"
+        },
+        "cable_tray_3": {
+          "glb": "/3d-parts/cratos/cable_tray_3/workstation-6-person.glb",
+          "anchor": [
+            0,
+            0,
+            0
+          ],
+          "bbox": [
+            0.449,
+            0.082,
+            0.08
+          ],
+          "bytes": 2224,
+          "hash": "719248f2bd83"
+        },
+        "cable_tray_4": {
+          "glb": "/3d-parts/cratos/cable_tray_4/workstation-6-person.glb",
+          "anchor": [
+            0,
+            0,
+            0
+          ],
+          "bbox": [
+            0.449,
+            0.082,
+            0.08
+          ],
+          "bytes": 2224,
+          "hash": "c2e2754d5479"
+        },
+        "cable_tray_5": {
+          "glb": "/3d-parts/cratos/cable_tray_5/workstation-6-person.glb",
+          "anchor": [
+            0,
+            0,
+            0
+          ],
+          "bbox": [
+            0.449,
+            0.082,
+            0.08
+          ],
+          "bytes": 2224,
+          "hash": "a4b4a26216a7"
         }
       },
       "baseSize": null,
@@ -4593,5 +4788,5 @@
       "productKind": "workstation"
     }
   },
-  "generated_at": "2026-04-20T18:24:20.103Z"
+  "generated_at": "2026-04-20T22:14:38.269Z"
 }
