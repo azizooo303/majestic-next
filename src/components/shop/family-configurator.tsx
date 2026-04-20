@@ -108,19 +108,19 @@ export function FamilyConfigurator({family, basePrice, locale}: FamilyConfigurat
   // Accessory picker state — one boolean per accessory axis. Each axis only
   // appears in the UI if the current config's manifest has a part on it.
   //
-  // Screens default OFF: the currently-authored "screen_front"/"screen_side"
-  // objects in the masters are small decorative brackets, not the real fabric
-  // acoustic dividers. Don't show them unless user explicitly opts in.
-  // Acoustic-divider authoring is pending with the 3D squad.
+  // Screens default ON — SYS-CRATOS-WS-6P carries real full-size fabric
+  // acoustic dividers (verified 2026-04-20). In configs where the classifier
+  // catches tiny decorative plates instead of real panels, they render as
+  // near-invisible specks, not broken visuals. Always-on is the honest default.
   const [accessories, setAccessories] = useState<Record<string, boolean>>({
     modesty: true,
-    pedestal: false,
-    cable_tray: false,
-    cable_spine: false,
-    grommet: true,        // cable cutouts usually visible
-    powerbox: false,      // not yet in any master, auto-hides
-    screen_front: false,  // see note above
-    screen_side: false,
+    pedestal: true,       // show drawer unit when config has one
+    cable_tray: true,
+    cable_spine: true,
+    grommet: true,
+    powerbox: true,       // no geometry yet in masters, still auto-hides per config
+    screen_front: true,   // real fabric dividers in Workstation 6P
+    screen_side: true,
   });
 
   // Fetch the family's parts manifest on mount (if one exists).
