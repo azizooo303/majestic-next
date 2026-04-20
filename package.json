@@ -14,7 +14,7 @@
     "status": "node scripts/majestic.js status",
     "majestic": "node scripts/majestic.js",
     "screenshot": "npx playwright test visual-scan.spec.ts --reporter=list",
-    "screenshot:regression": "npx playwright test tests/visual-regression.spec.ts",
+    "screenshot:regression": "npx playwright test tests/visual-regression.spec.ts tests/e2e/shop-configurator.spec.ts --project=desktop",
     "screenshot:update": "npx playwright test tests/visual-regression.spec.ts --update-snapshots",
     "tokens:sync": "node scripts/sync-tokens.js",
     "tokens:check": "node scripts/sync-tokens.js --check",
