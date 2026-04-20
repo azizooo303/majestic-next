@@ -4037,253 +4037,6 @@
             "DESK-CRATOS-WS_LEVELING_FOOT"
           ]
         },
-        "screen_front_0": {
-          "glb": "/3d-parts/accessories/screen_front-dced16721181.glb",
-          "anchor": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "bbox": [
-            0.268,
-            0.02,
-            0.0
-          ],
-          "bytes": 1408,
-          "hash": "dced16721181",
-          "source_object": "Plane054",
-          "source_materials": [
-            "DESK-CRATOS-WS_SCREEN_PANEL"
-          ]
-        },
-        "screen_front_1": {
-          "glb": "/3d-parts/accessories/screen_front-2bfe323e748a.glb",
-          "anchor": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "bbox": [
-            0.267,
-            0.07,
-            0.002
-          ],
-          "bytes": 1356,
-          "hash": "2bfe323e748a",
-          "source_object": "Rectangle321",
-          "source_materials": [
-            "DESK-CRATOS-WS_SCREEN_PANEL"
-          ]
-        },
-        "screen_front_2": {
-          "glb": "/3d-parts/accessories/screen_front-7412baf7f545.glb",
-          "anchor": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "bbox": [
-            0.268,
-            0.02,
-            0.0
-          ],
-          "bytes": 1412,
-          "hash": "7412baf7f545",
-          "source_object": "Plane055",
-          "source_materials": [
-            "DESK-CRATOS-WS_SCREEN_PANEL"
-          ]
-        },
-        "screen_front_3": {
-          "glb": "/3d-parts/accessories/screen_front-fbb0965401fc.glb",
-          "anchor": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "bbox": [
-            0.267,
-            0.07,
-            0.002
-          ],
-          "bytes": 1356,
-          "hash": "fbb0965401fc",
-          "source_object": "Rectangle323",
-          "source_materials": [
-            "DESK-CRATOS-WS_SCREEN_PANEL"
-          ]
-        },
-        "screen_front_4": {
-          "glb": "/3d-parts/accessories/screen_front-b259a5b99a2d.glb",
-          "anchor": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "bbox": [
-            0.268,
-            0.02,
-            0.0
-          ],
-          "bytes": 1408,
-          "hash": "b259a5b99a2d",
-          "source_object": "Plane058",
-          "source_materials": [
-            "DESK-CRATOS-WS_SCREEN_PANEL"
-          ]
-        },
-        "screen_front_5": {
-          "glb": "/3d-parts/accessories/screen_front-e9ab8a0dcbed.glb",
-          "anchor": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "bbox": [
-            0.267,
-            0.07,
-            0.002
-          ],
-          "bytes": 1356,
-          "hash": "e9ab8a0dcbed",
-          "source_object": "Rectangle327",
-          "source_materials": [
-            "DESK-CRATOS-WS_SCREEN_PANEL"
-          ]
-        },
-        "screen_front_6": {
-          "glb": "/3d-parts/accessories/screen_front-ac4e6147164a.glb",
-          "anchor": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "bbox": [
-            0.268,
-            0.02,
-            0.0
-          ],
-          "bytes": 1412,
-          "hash": "ac4e6147164a",
-          "source_object": "Plane059",
-          "source_materials": [
-            "DESK-CRATOS-WS_SCREEN_PANEL"
-          ]
-        },
-        "screen_front_7": {
-          "glb": "/3d-parts/accessories/screen_front-745ebf7f5b57.glb",
-          "anchor": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "bbox": [
-            0.267,
-            0.07,
-            0.002
-          ],
-          "bytes": 1356,
-          "hash": "745ebf7f5b57",
-          "source_object": "Rectangle329",
-          "source_materials": [
-            "DESK-CRATOS-WS_SCREEN_PANEL"
-          ]
-        },
-        "screen_front_8": {
-          "glb": "/3d-parts/accessories/screen_front-0d19368d9440.glb",
-          "anchor": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "bbox": [
-            0.268,
-            0.02,
-            0.0
-          ],
-          "bytes": 1408,
-          "hash": "0d19368d9440",
-          "source_object": "Plane060",
-          "source_materials": [
-            "DESK-CRATOS-WS_SCREEN_PANEL"
-          ]
-        },
-        "screen_front_9": {
-          "glb": "/3d-parts/accessories/screen_front-07de145cd6bc.glb",
-          "anchor": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "bbox": [
-            0.267,
-            0.07,
-            0.002
-          ],
-          "bytes": 1352,
-          "hash": "07de145cd6bc",
-          "source_object": "Rectangle331",
-          "source_materials": [
-            "DESK-CRATOS-WS_SCREEN_PANEL"
-          ]
-        },
-        "screen_front_10": {
-          "glb": "/3d-parts/accessories/screen_front-869b88223748.glb",
-          "anchor": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "bbox": [
-            0.268,
-            0.02,
-            0.0
-          ],
-          "bytes": 1412,
-          "hash": "869b88223748",
-          "source_object": "Plane061",
-          "source_materials": [
-            "DESK-CRATOS-WS_SCREEN_PANEL"
-          ]
-        },
-        "screen_front_11": {
-          "glb": "/3d-parts/accessories/screen_front-770fe0b72885.glb",
-          "anchor": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "bbox": [
-            0.267,
-            0.07,
-            0.002
-          ],
-          "bytes": 1356,
-          "hash": "770fe0b72885",
-          "source_object": "Rectangle333",
-          "source_materials": [
-            "DESK-CRATOS-WS_SCREEN_PANEL"
-          ]
-        },
-        "screen_front_12": {
-          "glb": "/3d-parts/accessories/screen_front-46ca220a1e9f.glb",
-          "anchor": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "bbox": [
-            4.258,
-            0.02,
-            0.4
-          ],
-          "bytes": 1392,
-          "hash": "46ca220a1e9f",
-          "source_object": "SCREEN_PANEL_center_spine",
-          "source_materials": [
-            "Screen_LightGrey_Fabric"
-          ]
-        },
         "modesty_0": {
           "glb": "/3d-parts/accessories/modesty-34b478d090a1.glb",
           "anchor": [
@@ -4548,6 +4301,25 @@
           "source_object": "Box3105",
           "source_materials": [
             "DESK-CRATOS-WS_LEG"
+          ]
+        },
+        "screen_front_0": {
+          "glb": "/3d-parts/accessories/screen_front-46ca220a1e9f.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            4.258,
+            0.02,
+            0.4
+          ],
+          "bytes": 1392,
+          "hash": "46ca220a1e9f",
+          "source_object": "SCREEN_PANEL_center_spine",
+          "source_materials": [
+            "Screen_LightGrey_Fabric"
           ]
         }
       },
