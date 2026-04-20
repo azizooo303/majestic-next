@@ -1,0 +1,4784 @@
+{
+  "family": "semina",
+  "configs": {
+    "Meeting": {
+      "parts": {
+        "top_0": {
+          "glb": "/3d-parts/semina/top_0/meeting.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.4,
+            1.2,
+            0.03
+          ],
+          "bytes": 1528,
+          "hash": "45771b380431",
+          "source_object": "Box1956",
+          "source_materials": [
+            "WALNUT_HERO"
+          ]
+        },
+        "top_1": {
+          "glb": "/3d-parts/semina/top_1/meeting.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.4,
+            1.2,
+            0.03
+          ],
+          "bytes": 1528,
+          "hash": "ce83fa4a0654",
+          "source_object": "Box3043",
+          "source_materials": [
+            "WALNUT_HERO"
+          ]
+        },
+        "top_2": {
+          "glb": "/3d-parts/semina/top_2/meeting.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            39.188,
+            2.038,
+            0.0
+          ],
+          "bytes": 1332,
+          "hash": "a4bb1c44ae1f",
+          "source_object": "Plane035",
+          "source_materials": [
+            "WALNUT_HERO"
+          ]
+        },
+        "top_3": {
+          "glb": "/3d-parts/semina/top_3/meeting.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            39.188,
+            2.038,
+            0.0
+          ],
+          "bytes": 1332,
+          "hash": "c527980d838a",
+          "source_object": "Plane036",
+          "source_materials": [
+            "WALNUT_HERO"
+          ]
+        },
+        "top_4": {
+          "glb": "/3d-parts/semina/top_4/meeting.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            39.188,
+            2.038,
+            0.0
+          ],
+          "bytes": 1332,
+          "hash": "a4bb1c44ae1f",
+          "source_object": "Plane060",
+          "source_materials": [
+            "WALNUT_HERO"
+          ]
+        },
+        "top_5": {
+          "glb": "/3d-parts/semina/top_5/meeting.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            39.188,
+            2.038,
+            0.0
+          ],
+          "bytes": 1332,
+          "hash": "c527980d838a",
+          "source_object": "Plane061",
+          "source_materials": [
+            "WALNUT_HERO"
+          ]
+        },
+        "top_6": {
+          "glb": "/3d-parts/semina/top_6/meeting.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            13.664,
+            2.07,
+            0.0
+          ],
+          "bytes": 1328,
+          "hash": "1f9125040cb1",
+          "source_object": "Plane028",
+          "source_materials": [
+            "WALNUT_HERO"
+          ]
+        },
+        "top_7": {
+          "glb": "/3d-parts/semina/top_7/meeting.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            13.664,
+            2.07,
+            0.0
+          ],
+          "bytes": 1328,
+          "hash": "1f9125040cb1",
+          "source_object": "Plane062",
+          "source_materials": [
+            "WALNUT_HERO"
+          ]
+        },
+        "top_8": {
+          "glb": "/3d-parts/semina/top_8/meeting.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            2.0,
+            0.8,
+            0.018
+          ],
+          "bytes": 1400,
+          "hash": "3262c71dd4ac",
+          "source_object": "Box002.001",
+          "source_materials": [
+            "WALNUT_HERO"
+          ]
+        },
+        "top_9": {
+          "glb": "/3d-parts/semina/top_9/meeting.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.818,
+            0.49,
+            0.03
+          ],
+          "bytes": 1576,
+          "hash": "7ed4e3839528",
+          "source_object": "Object002",
+          "source_materials": [
+            "WALNUT_HERO"
+          ]
+        },
+        "feet_0": {
+          "glb": "/3d-parts/semina/feet_0/meeting.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.02,
+            0.02,
+            0.01
+          ],
+          "bytes": 4312,
+          "hash": "35f754eb17c8",
+          "source_object": "Cylinder031",
+          "source_materials": [
+            "WALNUT_HERO"
+          ]
+        },
+        "feet_1": {
+          "glb": "/3d-parts/semina/feet_1/meeting.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.02,
+            0.02,
+            0.01
+          ],
+          "bytes": 4308,
+          "hash": "65dd0a3ae238",
+          "source_object": "Cylinder032",
+          "source_materials": [
+            "WALNUT_HERO"
+          ]
+        },
+        "feet_2": {
+          "glb": "/3d-parts/semina/feet_2/meeting.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.02,
+            0.02,
+            0.01
+          ],
+          "bytes": 4316,
+          "hash": "a742986a7570",
+          "source_object": "Cylinder033",
+          "source_materials": [
+            "WALNUT_HERO"
+          ]
+        },
+        "feet_3": {
+          "glb": "/3d-parts/semina/feet_3/meeting.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.02,
+            0.02,
+            0.01
+          ],
+          "bytes": 4320,
+          "hash": "174ab12754de",
+          "source_object": "Cylinder034",
+          "source_materials": [
+            "WALNUT_HERO"
+          ]
+        },
+        "feet_4": {
+          "glb": "/3d-parts/semina/feet_4/meeting.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.02,
+            0.02,
+            0.01
+          ],
+          "bytes": 4300,
+          "hash": "6f85bbafe138",
+          "source_object": "Cylinder035",
+          "source_materials": [
+            "WALNUT_HERO"
+          ]
+        },
+        "feet_5": {
+          "glb": "/3d-parts/semina/feet_5/meeting.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.02,
+            0.02,
+            0.01
+          ],
+          "bytes": 4320,
+          "hash": "d74a2c61cbd8",
+          "source_object": "Cylinder036",
+          "source_materials": [
+            "WALNUT_HERO"
+          ]
+        }
+      },
+      "baseSize": null,
+      "unknowns": [
+        {
+          "name": "Rectangle285",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            38.292,
+            9.15,
+            0.176
+          ]
+        },
+        {
+          "name": "Rectangle286",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            41.667,
+            14.427,
+            0.586
+          ]
+        },
+        {
+          "name": "Rectangle333",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            38.292,
+            9.15,
+            0.176
+          ]
+        },
+        {
+          "name": "Rectangle334",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            41.667,
+            14.427,
+            0.586
+          ]
+        },
+        {
+          "name": "Box3124",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            0.03,
+            0.8,
+            0.718
+          ]
+        },
+        {
+          "name": "Box3125",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            0.03,
+            0.8,
+            0.718
+          ]
+        },
+        {
+          "name": "Box3126",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            0.03,
+            0.8,
+            0.718
+          ]
+        },
+        {
+          "name": "Box3127",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.95,
+            0.03,
+            0.35
+          ]
+        },
+        {
+          "name": "Rectangle273",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            12.6,
+            7.1,
+            0.3
+          ]
+        },
+        {
+          "name": "Rectangle274",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            15.0,
+            11.0,
+            1.0
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì499",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            12.0,
+            0.7,
+            9.0
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì478",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.921,
+            2.269,
+            3.547
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì500",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            7.0,
+            3.42,
+            2.5
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì479",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.927,
+            2.265,
+            3.484
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì480",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.758,
+            2.227,
+            3.548
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì503",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.914,
+            2.25,
+            3.522
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì504",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.914,
+            2.25,
+            3.522
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì481",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.715,
+            2.223,
+            3.542
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì482",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.668,
+            2.218,
+            3.533
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì502",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.914,
+            2.25,
+            3.522
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì483",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.622,
+            2.214,
+            3.521
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì484",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.706,
+            2.219,
+            3.554
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì485",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.749,
+            2.223,
+            3.56
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì486",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.789,
+            2.228,
+            3.563
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì487",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.824,
+            2.232,
+            3.562
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì488",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.854,
+            2.236,
+            3.558
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì489",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.879,
+            2.241,
+            3.55
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì490",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.899,
+            2.245,
+            3.537
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì491",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.914,
+            2.25,
+            3.522
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì492",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.921,
+            2.269,
+            3.547
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì493",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.921,
+            2.269,
+            3.547
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì494",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.914,
+            2.25,
+            3.522
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì495",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.914,
+            2.25,
+            3.522
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì496",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.914,
+            2.25,
+            3.522
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì497",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.921,
+            2.269,
+            3.547
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì498",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.921,
+            2.269,
+            3.547
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì501",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.914,
+            2.25,
+            3.522
+          ]
+        },
+        {
+          "name": "Rectangle335",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            12.6,
+            7.1,
+            0.3
+          ]
+        },
+        {
+          "name": "Rectangle336",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            15.0,
+            11.0,
+            1.0
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì526",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            12.0,
+            0.7,
+            9.0
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì505",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.921,
+            2.269,
+            3.547
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì506",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.927,
+            2.265,
+            3.484
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì507",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.758,
+            2.227,
+            3.548
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì508",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.715,
+            2.223,
+            3.542
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì509",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.668,
+            2.218,
+            3.533
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì510",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.622,
+            2.214,
+            3.521
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì511",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.706,
+            2.219,
+            3.554
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì512",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.749,
+            2.223,
+            3.56
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì513",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.789,
+            2.228,
+            3.563
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì514",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.824,
+            2.232,
+            3.562
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì515",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.854,
+            2.236,
+            3.558
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì516",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.879,
+            2.241,
+            3.55
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì517",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.899,
+            2.245,
+            3.537
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì518",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.914,
+            2.25,
+            3.522
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì519",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.921,
+            2.269,
+            3.547
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì520",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.921,
+            2.269,
+            3.547
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì521",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.914,
+            2.25,
+            3.522
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì522",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.914,
+            2.25,
+            3.522
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì523",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.914,
+            2.25,
+            3.522
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì524",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.921,
+            2.269,
+            3.547
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì525",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.921,
+            2.269,
+            3.547
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì528",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.914,
+            2.25,
+            3.522
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì529",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.914,
+            2.25,
+            3.522
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì530",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.914,
+            2.25,
+            3.522
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì531",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.914,
+            2.25,
+            3.522
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì527",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            7.0,
+            3.42,
+            2.5
+          ]
+        },
+        {
+          "name": "Layer:$PR -3D FURNITURE001",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.99,
+            1.6,
+            0.713
+          ]
+        },
+        {
+          "name": "ales-mesh:030",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            49.767,
+            14.509,
+            58.08
+          ]
+        },
+        {
+          "name": "DAW8-3401:3",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.178,
+            1.066,
+            0.18
+          ]
+        },
+        {
+          "name": "DAW8-3401:3.001",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            6.499,
+            6.861,
+            8.244
+          ]
+        },
+        {
+          "name": "DAW8-3401:3.002",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.168,
+            1.057,
+            0.17
+          ]
+        },
+        {
+          "name": "DAW8-3401:4",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.179,
+            1.178,
+            0.18
+          ]
+        },
+        {
+          "name": "DAW8-3401:4.001",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            5.1,
+            6.577,
+            8.244
+          ]
+        },
+        {
+          "name": "DAW8-3401:4.002",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.169,
+            1.168,
+            0.17
+          ]
+        },
+        {
+          "name": "A801-01-R:003",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            17.668,
+            12.504,
+            22.83
+          ]
+        },
+        {
+          "name": "A801-03-R:003",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.995,
+            16.185,
+            16.476
+          ]
+        },
+        {
+          "name": "A801-06-R:003",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.684,
+            4.344,
+            4.167
+          ]
+        },
+        {
+          "name": "A801-11-R:003",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            7.868,
+            24.699,
+            1.381
+          ]
+        },
+        {
+          "name": "A801-12-R:003",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.22,
+            18.078,
+            0.231
+          ]
+        },
+        {
+          "name": "A801-13-R:003",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.84,
+            14.196,
+            0.792
+          ]
+        },
+        {
+          "name": "A801-16-R:1",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            9.095,
+            25.986,
+            3.351
+          ]
+        },
+        {
+          "name": "A801-02-R:004",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            2.35,
+            4.607,
+            1.662
+          ]
+        },
+        {
+          "name": "Solid1:1",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            9.051,
+            6.308,
+            17.5
+          ]
+        },
+        {
+          "name": "Solid2:1",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            5.092,
+            5.094,
+            1.193
+          ]
+        },
+        {
+          "name": "Solid3:1",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            5.614,
+            5.605,
+            14.499
+          ]
+        },
+        {
+          "name": "Solid4:1",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            5.614,
+            5.605,
+            14.499
+          ]
+        },
+        {
+          "name": "Solid5:1",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            5.092,
+            5.094,
+            1.193
+          ]
+        },
+        {
+          "name": "Solid6:1",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            9.051,
+            6.308,
+            17.15
+          ]
+        },
+        {
+          "name": "718-AL__3_008",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            12.4,
+            22.008,
+            9.476
+          ]
+        },
+        {
+          "name": "QIAOBAN__2_7",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            17.386,
+            6.176,
+            10.1
+          ]
+        },
+        {
+          "name": "QIAOBAN-YUANGANG__2_8",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.195,
+            1.198,
+            9.5
+          ]
+        },
+        {
+          "name": "CENTAO__2_017",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.45,
+            1.6,
+            1.6
+          ]
+        },
+        {
+          "name": "DIBAN__1_14",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            24.8,
+            5.8,
+            13.1
+          ]
+        },
+        {
+          "name": "HUABAN__1_15",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            23.0,
+            1.05,
+            17.9
+          ]
+        },
+        {
+          "name": "ales-mesh:031",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            49.767,
+            14.509,
+            58.091
+          ]
+        },
+        {
+          "name": "DAW8-3401:1",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.15,
+            1.178,
+            0.18
+          ]
+        },
+        {
+          "name": "DAW8-3401:1.001",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            6.998,
+            5.73,
+            8.244
+          ]
+        },
+        {
+          "name": "DAW8-3401:1.002",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.14,
+            1.168,
+            0.17
+          ]
+        },
+        {
+          "name": "F17 Apple Keyboard with Numeric Keypad019",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            42.95,
+            11.696,
+            1.89
+          ]
+        },
+        {
+          "name": "Apple iMac 27 - leg019",
+          "materials": [
+            "GUNMETAL"
+          ],
+          "extents": [
+            21.603,
+            20.801,
+            30.14
+          ]
+        },
+        {
+          "name": "Box009.001",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.8,
+            38.502,
+            46.0
+          ]
+        },
+        {
+          "name": "Cylinder003.002",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.6,
+            1.576,
+            0.8
+          ]
+        },
+        {
+          "name": "Box005.001",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            40.0,
+            1.8,
+            56.0
+          ]
+        },
+        {
+          "name": "Cylinder004.002",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.6,
+            1.576,
+            0.8
+          ]
+        },
+        {
+          "name": "Box008.001",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            36.541,
+            1.8,
+            46.364
+          ]
+        },
+        {
+          "name": "Box006.001",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            40.0,
+            76.3,
+            1.8
+          ]
+        },
+        {
+          "name": "Box010.001",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.8,
+            37.359,
+            22.933
+          ]
+        },
+        {
+          "name": "Object003",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.8,
+            37.359,
+            22.967
+          ]
+        },
+        {
+          "name": "Cylinder001.002",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.6,
+            1.576,
+            0.8
+          ]
+        },
+        {
+          "name": "Cylinder002.002",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.6,
+            1.576,
+            0.8
+          ]
+        },
+        {
+          "name": "Box004.001",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            40.0,
+            1.8,
+            56.0
+          ]
+        },
+        {
+          "name": "Box003.002",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            40.0,
+            76.3,
+            1.8
+          ]
+        },
+        {
+          "name": "Box007.001",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            0.8,
+            76.4,
+            46.2
+          ]
+        },
+        {
+          "name": "Box011",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.8,
+            76.35,
+            6.1
+          ]
+        },
+        {
+          "name": "718-AL__3_009",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            12.4,
+            22.008,
+            9.476
+          ]
+        },
+        {
+          "name": "A801-01-L:004",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            17.668,
+            12.504,
+            22.83
+          ]
+        },
+        {
+          "name": "A801-01-R:004",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            17.668,
+            12.504,
+            22.83
+          ]
+        },
+        {
+          "name": "A801-02-L:005",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            2.35,
+            4.607,
+            1.662
+          ]
+        },
+        {
+          "name": "A801-02-R:005",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            2.35,
+            4.607,
+            1.662
+          ]
+        },
+        {
+          "name": "A801-03-L:004",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.995,
+            16.185,
+            16.476
+          ]
+        },
+        {
+          "name": "A801-03-R:004",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.995,
+            16.185,
+            16.476
+          ]
+        },
+        {
+          "name": "A801-06-L:004",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.684,
+            4.344,
+            4.167
+          ]
+        },
+        {
+          "name": "A801-06-R:004",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.684,
+            4.344,
+            4.167
+          ]
+        },
+        {
+          "name": "A801-11-L:004",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            7.868,
+            24.699,
+            1.381
+          ]
+        },
+        {
+          "name": "A801-11-R:004",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            7.868,
+            24.699,
+            1.381
+          ]
+        },
+        {
+          "name": "A801-12-L:004",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.22,
+            18.078,
+            0.231
+          ]
+        },
+        {
+          "name": "A801-12-R:004",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.22,
+            18.078,
+            0.231
+          ]
+        },
+        {
+          "name": "A801-13-L:004",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.84,
+            14.196,
+            0.792
+          ]
+        },
+        {
+          "name": "A801-13-R:004",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.84,
+            14.196,
+            0.792
+          ]
+        },
+        {
+          "name": "A801-16-L:004",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            9.095,
+            25.986,
+            3.351
+          ]
+        },
+        {
+          "name": "A801-16-R:002",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            9.095,
+            25.986,
+            3.351
+          ]
+        },
+        {
+          "name": "CENTAO__2_018",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.45,
+            1.6,
+            1.6
+          ]
+        },
+        {
+          "name": "CENTAO__2_019",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.45,
+            1.6,
+            1.6
+          ]
+        },
+        {
+          "name": "DAW7-0106:004",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            64.833,
+            61.807,
+            12.9
+          ]
+        },
+        {
+          "name": "DAW8-3401:036",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            6.998,
+            5.73,
+            8.244
+          ]
+        },
+        {
+          "name": "DAW8-3401:037",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.15,
+            1.178,
+            0.18
+          ]
+        },
+        {
+          "name": "DAW8-3401:038",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.14,
+            1.168,
+            0.17
+          ]
+        },
+        {
+          "name": "DAW8-3401:039",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.066,
+            1.178,
+            0.18
+          ]
+        },
+        {
+          "name": "DAW8-3401:040",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            6.499,
+            6.855,
+            8.244
+          ]
+        },
+        {
+          "name": "DAW8-3401:041",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.057,
+            1.168,
+            0.17
+          ]
+        },
+        {
+          "name": "DAW8-3401:042",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.178,
+            1.066,
+            0.18
+          ]
+        },
+        {
+          "name": "DAW8-3401:043",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.168,
+            1.057,
+            0.17
+          ]
+        },
+        {
+          "name": "DAW8-3401:044",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            6.499,
+            6.861,
+            8.244
+          ]
+        },
+        {
+          "name": "DAW8-3401:045",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.169,
+            1.168,
+            0.17
+          ]
+        },
+        {
+          "name": "DAW8-3401:046",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.179,
+            1.178,
+            0.18
+          ]
+        },
+        {
+          "name": "DAW8-3401:047",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            5.1,
+            6.577,
+            8.244
+          ]
+        },
+        {
+          "name": "DAW8-3401:048",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.178,
+            1.15,
+            0.18
+          ]
+        },
+        {
+          "name": "DAW8-3401:049",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.168,
+            1.14,
+            0.17
+          ]
+        },
+        {
+          "name": "DAW8-3401:050",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            6.99,
+            5.73,
+            8.244
+          ]
+        },
+        {
+          "name": "DIBAN__1_015",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            24.8,
+            5.8,
+            13.1
+          ]
+        },
+        {
+          "name": "HUABAN__1_016",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            23.0,
+            1.05,
+            17.9
+          ]
+        },
+        {
+          "name": "QIAOBAN-YUANGANG__2_009",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.195,
+            1.198,
+            9.5
+          ]
+        },
+        {
+          "name": "QIAOBAN__2_008",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            17.386,
+            6.176,
+            10.1
+          ]
+        },
+        {
+          "name": "SDA3-0102_(SU)-20150520:002",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            48.595,
+            47.279,
+            7.199
+          ]
+        },
+        {
+          "name": "SDA3-3301:002",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            51.711,
+            50.48,
+            7.949
+          ]
+        },
+        {
+          "name": "SGB4-108-435195CBA:004",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            5.0,
+            5.004,
+            26.103
+          ]
+        },
+        {
+          "name": "Solid1:002",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            9.051,
+            6.308,
+            17.5
+          ]
+        },
+        {
+          "name": "Solid2:002",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            5.092,
+            5.094,
+            1.193
+          ]
+        },
+        {
+          "name": "Solid3:002",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            5.614,
+            5.605,
+            14.499
+          ]
+        },
+        {
+          "name": "Solid4:002",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            5.614,
+            5.605,
+            14.499
+          ]
+        },
+        {
+          "name": "Solid5:002",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            5.092,
+            5.094,
+            1.193
+          ]
+        },
+        {
+          "name": "Solid6:002",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            9.051,
+            6.308,
+            17.15
+          ]
+        },
+        {
+          "name": "TRI2-0102:004",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            49.991,
+            15.014,
+            57.766
+          ]
+        },
+        {
+          "name": "TRI2-0103:004",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            26.142,
+            3.211,
+            3.083
+          ]
+        },
+        {
+          "name": "TRI2-0104:004",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            49.993,
+            22.5,
+            74.794
+          ]
+        },
+        {
+          "name": "TRI2-0105:004",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            41.49,
+            15.4,
+            32.041
+          ]
+        },
+        {
+          "name": "TRI2-0108:005",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            5.445,
+            6.794,
+            6.797
+          ]
+        },
+        {
+          "name": "TRI2-0108:006",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            5.445,
+            6.794,
+            6.797
+          ]
+        },
+        {
+          "name": "TRI2-2167:005",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            17.6,
+            0.631,
+            0.729
+          ]
+        },
+        {
+          "name": "TRI2-2167:006",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            17.6,
+            0.631,
+            0.729
+          ]
+        },
+        {
+          "name": "ales-mesh:032",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            49.767,
+            14.509,
+            58.08
+          ]
+        },
+        {
+          "name": "ales-mesh:033",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            49.767,
+            14.509,
+            58.091
+          ]
+        },
+        {
+          "name": "718-AL__3_010",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            12.4,
+            22.008,
+            9.476
+          ]
+        },
+        {
+          "name": "A801-01-L:005",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            17.668,
+            12.504,
+            22.83
+          ]
+        },
+        {
+          "name": "A801-01-R:005",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            17.668,
+            12.504,
+            22.83
+          ]
+        },
+        {
+          "name": "A801-02-L:006",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            2.35,
+            4.607,
+            1.662
+          ]
+        },
+        {
+          "name": "A801-02-R:006",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            2.35,
+            4.607,
+            1.662
+          ]
+        },
+        {
+          "name": "A801-03-L:005",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.995,
+            16.185,
+            16.476
+          ]
+        },
+        {
+          "name": "A801-03-R:005",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.995,
+            16.185,
+            16.476
+          ]
+        },
+        {
+          "name": "A801-06-L:005",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.684,
+            4.344,
+            4.167
+          ]
+        },
+        {
+          "name": "A801-06-R:005",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.684,
+            4.344,
+            4.167
+          ]
+        },
+        {
+          "name": "A801-11-L:005",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            7.868,
+            24.699,
+            1.381
+          ]
+        },
+        {
+          "name": "A801-11-R:005",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            7.868,
+            24.699,
+            1.381
+          ]
+        },
+        {
+          "name": "A801-12-L:005",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.22,
+            18.078,
+            0.231
+          ]
+        },
+        {
+          "name": "A801-12-R:005",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.22,
+            18.078,
+            0.231
+          ]
+        },
+        {
+          "name": "A801-13-L:005",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.84,
+            14.196,
+            0.792
+          ]
+        },
+        {
+          "name": "A801-13-R:005",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.84,
+            14.196,
+            0.792
+          ]
+        },
+        {
+          "name": "A801-16-L:005",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            9.095,
+            25.986,
+            3.351
+          ]
+        },
+        {
+          "name": "A801-16-R:003",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            9.095,
+            25.986,
+            3.351
+          ]
+        },
+        {
+          "name": "CENTAO__2_020",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.45,
+            1.6,
+            1.6
+          ]
+        },
+        {
+          "name": "CENTAO__2_021",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.45,
+            1.6,
+            1.6
+          ]
+        },
+        {
+          "name": "DAW7-0106:005",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            64.833,
+            61.807,
+            12.9
+          ]
+        },
+        {
+          "name": "DAW8-3401:056",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            6.998,
+            5.73,
+            8.244
+          ]
+        },
+        {
+          "name": "DAW8-3401:057",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.15,
+            1.178,
+            0.18
+          ]
+        },
+        {
+          "name": "DAW8-3401:058",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.14,
+            1.168,
+            0.17
+          ]
+        },
+        {
+          "name": "DAW8-3401:059",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.066,
+            1.178,
+            0.18
+          ]
+        },
+        {
+          "name": "DAW8-3401:060",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            6.499,
+            6.855,
+            8.244
+          ]
+        },
+        {
+          "name": "DAW8-3401:061",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.057,
+            1.168,
+            0.17
+          ]
+        },
+        {
+          "name": "DAW8-3401:062",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.178,
+            1.066,
+            0.18
+          ]
+        },
+        {
+          "name": "DAW8-3401:063",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.168,
+            1.057,
+            0.17
+          ]
+        },
+        {
+          "name": "DAW8-3401:064",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            6.499,
+            6.861,
+            8.244
+          ]
+        },
+        {
+          "name": "DAW8-3401:065",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.169,
+            1.168,
+            0.17
+          ]
+        },
+        {
+          "name": "DAW8-3401:066",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.179,
+            1.178,
+            0.18
+          ]
+        },
+        {
+          "name": "DAW8-3401:067",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            5.1,
+            6.577,
+            8.244
+          ]
+        },
+        {
+          "name": "DAW8-3401:068",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.178,
+            1.15,
+            0.18
+          ]
+        },
+        {
+          "name": "DAW8-3401:069",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.168,
+            1.14,
+            0.17
+          ]
+        },
+        {
+          "name": "DAW8-3401:070",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            6.99,
+            5.73,
+            8.244
+          ]
+        },
+        {
+          "name": "DIBAN__1_016",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            24.8,
+            5.8,
+            13.1
+          ]
+        },
+        {
+          "name": "HUABAN__1_017",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            23.0,
+            1.05,
+            17.9
+          ]
+        },
+        {
+          "name": "QIAOBAN-YUANGANG__2_010",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.195,
+            1.198,
+            9.5
+          ]
+        },
+        {
+          "name": "QIAOBAN__2_009",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            17.386,
+            6.176,
+            10.1
+          ]
+        },
+        {
+          "name": "SDA3-0102_(SU)-20150520:003",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            48.595,
+            47.279,
+            7.199
+          ]
+        },
+        {
+          "name": "SDA3-3301:003",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            51.711,
+            50.48,
+            7.949
+          ]
+        },
+        {
+          "name": "SGB4-108-435195CBA:005",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            5.0,
+            5.004,
+            26.103
+          ]
+        },
+        {
+          "name": "Solid1:003",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            9.051,
+            6.308,
+            17.5
+          ]
+        },
+        {
+          "name": "Solid2:003",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            5.092,
+            5.094,
+            1.193
+          ]
+        },
+        {
+          "name": "Solid3:003",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            5.614,
+            5.605,
+            14.499
+          ]
+        },
+        {
+          "name": "Solid4:003",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            5.614,
+            5.605,
+            14.499
+          ]
+        },
+        {
+          "name": "Solid5:003",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            5.092,
+            5.094,
+            1.193
+          ]
+        },
+        {
+          "name": "Solid6:003",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            9.051,
+            6.308,
+            17.15
+          ]
+        },
+        {
+          "name": "TRI2-0102:005",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            49.991,
+            15.014,
+            57.766
+          ]
+        },
+        {
+          "name": "TRI2-0103:005",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            26.142,
+            3.211,
+            3.083
+          ]
+        },
+        {
+          "name": "TRI2-0104:005",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            49.993,
+            22.5,
+            74.794
+          ]
+        },
+        {
+          "name": "TRI2-0105:005",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            41.49,
+            15.4,
+            32.041
+          ]
+        },
+        {
+          "name": "TRI2-0108:007",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            5.445,
+            6.794,
+            6.797
+          ]
+        },
+        {
+          "name": "TRI2-0108:008",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            5.445,
+            6.794,
+            6.797
+          ]
+        },
+        {
+          "name": "TRI2-2167:007",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            17.6,
+            0.631,
+            0.729
+          ]
+        },
+        {
+          "name": "TRI2-2167:008",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            17.6,
+            0.631,
+            0.729
+          ]
+        },
+        {
+          "name": "ales-mesh:034",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            49.767,
+            14.509,
+            58.08
+          ]
+        },
+        {
+          "name": "ales-mesh:035",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            49.767,
+            14.509,
+            58.091
+          ]
+        },
+        {
+          "name": "718-AL__3_011",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            12.4,
+            22.008,
+            9.476
+          ]
+        },
+        {
+          "name": "A801-01-L:006",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            17.668,
+            12.504,
+            22.83
+          ]
+        },
+        {
+          "name": "A801-01-R:006",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            17.668,
+            12.504,
+            22.83
+          ]
+        },
+        {
+          "name": "A801-02-L:007",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            2.35,
+            4.607,
+            1.662
+          ]
+        },
+        {
+          "name": "A801-02-R:007",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            2.35,
+            4.607,
+            1.662
+          ]
+        },
+        {
+          "name": "A801-03-L:006",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.995,
+            16.185,
+            16.476
+          ]
+        },
+        {
+          "name": "A801-03-R:006",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.995,
+            16.185,
+            16.476
+          ]
+        },
+        {
+          "name": "A801-06-L:006",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.684,
+            4.344,
+            4.167
+          ]
+        },
+        {
+          "name": "A801-06-R:006",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.684,
+            4.344,
+            4.167
+          ]
+        },
+        {
+          "name": "A801-11-L:006",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            7.868,
+            24.699,
+            1.381
+          ]
+        },
+        {
+          "name": "A801-11-R:006",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            7.868,
+            24.699,
+            1.381
+          ]
+        },
+        {
+          "name": "A801-12-L:006",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.22,
+            18.078,
+            0.231
+          ]
+        },
+        {
+          "name": "A801-12-R:006",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.22,
+            18.078,
+            0.231
+          ]
+        },
+        {
+          "name": "A801-13-L:006",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.84,
+            14.196,
+            0.792
+          ]
+        },
+        {
+          "name": "A801-13-R:006",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.84,
+            14.196,
+            0.792
+          ]
+        },
+        {
+          "name": "A801-16-L:006",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            9.095,
+            25.986,
+            3.351
+          ]
+        },
+        {
+          "name": "A801-16-R:004",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            9.095,
+            25.986,
+            3.351
+          ]
+        },
+        {
+          "name": "CENTAO__2_022",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.45,
+            1.6,
+            1.6
+          ]
+        },
+        {
+          "name": "CENTAO__2_023",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.45,
+            1.6,
+            1.6
+          ]
+        },
+        {
+          "name": "DAW7-0106:006",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            64.833,
+            61.807,
+            12.9
+          ]
+        },
+        {
+          "name": "DAW8-3401:076",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            6.998,
+            5.73,
+            8.244
+          ]
+        },
+        {
+          "name": "DAW8-3401:077",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.15,
+            1.178,
+            0.18
+          ]
+        },
+        {
+          "name": "DAW8-3401:078",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.14,
+            1.168,
+            0.17
+          ]
+        },
+        {
+          "name": "DAW8-3401:079",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.066,
+            1.178,
+            0.18
+          ]
+        },
+        {
+          "name": "DAW8-3401:080",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            6.499,
+            6.855,
+            8.244
+          ]
+        },
+        {
+          "name": "DAW8-3401:081",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.057,
+            1.168,
+            0.17
+          ]
+        },
+        {
+          "name": "DAW8-3401:082",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.178,
+            1.066,
+            0.18
+          ]
+        },
+        {
+          "name": "DAW8-3401:083",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.168,
+            1.057,
+            0.17
+          ]
+        },
+        {
+          "name": "DAW8-3401:084",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            6.499,
+            6.861,
+            8.244
+          ]
+        },
+        {
+          "name": "DAW8-3401:085",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.169,
+            1.168,
+            0.17
+          ]
+        },
+        {
+          "name": "DAW8-3401:086",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.179,
+            1.178,
+            0.18
+          ]
+        },
+        {
+          "name": "DAW8-3401:087",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            5.1,
+            6.577,
+            8.244
+          ]
+        },
+        {
+          "name": "DAW8-3401:088",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.178,
+            1.15,
+            0.18
+          ]
+        },
+        {
+          "name": "DAW8-3401:089",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.168,
+            1.14,
+            0.17
+          ]
+        },
+        {
+          "name": "DAW8-3401:090",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            6.99,
+            5.73,
+            8.244
+          ]
+        },
+        {
+          "name": "DIBAN__1_017",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            24.8,
+            5.8,
+            13.1
+          ]
+        },
+        {
+          "name": "HUABAN__1_018",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            23.0,
+            1.05,
+            17.9
+          ]
+        },
+        {
+          "name": "QIAOBAN-YUANGANG__2_011",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.195,
+            1.198,
+            9.5
+          ]
+        },
+        {
+          "name": "QIAOBAN__2_010",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            17.386,
+            6.176,
+            10.1
+          ]
+        },
+        {
+          "name": "SDA3-0102_(SU)-20150520:004",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            48.595,
+            47.279,
+            7.199
+          ]
+        },
+        {
+          "name": "SDA3-3301:004",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            51.711,
+            50.48,
+            7.949
+          ]
+        },
+        {
+          "name": "SGB4-108-435195CBA:006",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            5.0,
+            5.004,
+            26.103
+          ]
+        },
+        {
+          "name": "Solid1:004",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            9.051,
+            6.308,
+            17.5
+          ]
+        },
+        {
+          "name": "Solid2:004",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            5.092,
+            5.094,
+            1.193
+          ]
+        },
+        {
+          "name": "Solid3:004",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            5.614,
+            5.605,
+            14.499
+          ]
+        },
+        {
+          "name": "Solid4:004",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            5.614,
+            5.605,
+            14.499
+          ]
+        },
+        {
+          "name": "Solid5:004",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            5.092,
+            5.094,
+            1.193
+          ]
+        },
+        {
+          "name": "Solid6:004",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            9.051,
+            6.308,
+            17.15
+          ]
+        },
+        {
+          "name": "TRI2-0102:006",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            49.991,
+            15.014,
+            57.766
+          ]
+        },
+        {
+          "name": "TRI2-0103:006",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            26.142,
+            3.211,
+            3.083
+          ]
+        },
+        {
+          "name": "TRI2-0104:006",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            49.993,
+            22.5,
+            74.794
+          ]
+        },
+        {
+          "name": "TRI2-0105:006",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            41.49,
+            15.4,
+            32.041
+          ]
+        },
+        {
+          "name": "TRI2-0108:009",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            5.445,
+            6.794,
+            6.797
+          ]
+        },
+        {
+          "name": "TRI2-0108:010",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            5.445,
+            6.794,
+            6.797
+          ]
+        },
+        {
+          "name": "TRI2-2167:009",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            17.6,
+            0.631,
+            0.729
+          ]
+        },
+        {
+          "name": "TRI2-2167:010",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            17.6,
+            0.631,
+            0.729
+          ]
+        },
+        {
+          "name": "ales-mesh:036",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            49.767,
+            14.509,
+            58.08
+          ]
+        },
+        {
+          "name": "ales-mesh:037",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            49.767,
+            14.509,
+            58.091
+          ]
+        },
+        {
+          "name": "718-AL__3_012",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            12.4,
+            22.008,
+            9.476
+          ]
+        },
+        {
+          "name": "A801-01-L:007",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            17.668,
+            12.504,
+            22.83
+          ]
+        },
+        {
+          "name": "A801-01-R:007",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            17.668,
+            12.504,
+            22.83
+          ]
+        },
+        {
+          "name": "A801-02-L:008",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            2.35,
+            4.607,
+            1.662
+          ]
+        },
+        {
+          "name": "A801-02-R:008",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            2.35,
+            4.607,
+            1.662
+          ]
+        },
+        {
+          "name": "A801-03-L:007",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.995,
+            16.185,
+            16.476
+          ]
+        },
+        {
+          "name": "A801-03-R:007",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.995,
+            16.185,
+            16.476
+          ]
+        },
+        {
+          "name": "A801-06-L:007",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.684,
+            4.344,
+            4.167
+          ]
+        },
+        {
+          "name": "A801-06-R:007",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.684,
+            4.344,
+            4.167
+          ]
+        },
+        {
+          "name": "A801-11-L:007",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            7.868,
+            24.699,
+            1.381
+          ]
+        },
+        {
+          "name": "A801-11-R:007",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            7.868,
+            24.699,
+            1.381
+          ]
+        },
+        {
+          "name": "A801-12-L:007",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.22,
+            18.078,
+            0.231
+          ]
+        },
+        {
+          "name": "A801-12-R:007",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.22,
+            18.078,
+            0.231
+          ]
+        },
+        {
+          "name": "A801-13-L:007",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.84,
+            14.196,
+            0.792
+          ]
+        },
+        {
+          "name": "A801-13-R:007",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.84,
+            14.196,
+            0.792
+          ]
+        },
+        {
+          "name": "A801-16-L:007",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            9.095,
+            25.986,
+            3.351
+          ]
+        },
+        {
+          "name": "A801-16-R:005",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            9.095,
+            25.986,
+            3.351
+          ]
+        },
+        {
+          "name": "CENTAO__2_024",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.45,
+            1.6,
+            1.6
+          ]
+        },
+        {
+          "name": "CENTAO__2_025",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.45,
+            1.6,
+            1.6
+          ]
+        },
+        {
+          "name": "DAW7-0106:007",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            64.833,
+            61.807,
+            12.9
+          ]
+        },
+        {
+          "name": "DAW8-3401:096",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            6.998,
+            5.73,
+            8.244
+          ]
+        },
+        {
+          "name": "DAW8-3401:097",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.15,
+            1.178,
+            0.18
+          ]
+        },
+        {
+          "name": "DAW8-3401:098",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.14,
+            1.168,
+            0.17
+          ]
+        },
+        {
+          "name": "DAW8-3401:099",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.066,
+            1.178,
+            0.18
+          ]
+        },
+        {
+          "name": "DAW8-3401:100",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            6.499,
+            6.855,
+            8.244
+          ]
+        },
+        {
+          "name": "DAW8-3401:101",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.057,
+            1.168,
+            0.17
+          ]
+        },
+        {
+          "name": "DAW8-3401:102",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.178,
+            1.066,
+            0.18
+          ]
+        },
+        {
+          "name": "DAW8-3401:103",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.168,
+            1.057,
+            0.17
+          ]
+        },
+        {
+          "name": "DAW8-3401:104",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            6.499,
+            6.861,
+            8.244
+          ]
+        },
+        {
+          "name": "DAW8-3401:105",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.169,
+            1.168,
+            0.17
+          ]
+        },
+        {
+          "name": "DAW8-3401:106",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.179,
+            1.178,
+            0.18
+          ]
+        },
+        {
+          "name": "DAW8-3401:107",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            5.1,
+            6.577,
+            8.244
+          ]
+        },
+        {
+          "name": "DAW8-3401:108",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.178,
+            1.15,
+            0.18
+          ]
+        },
+        {
+          "name": "DAW8-3401:109",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.168,
+            1.14,
+            0.17
+          ]
+        },
+        {
+          "name": "DAW8-3401:110",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            6.99,
+            5.73,
+            8.244
+          ]
+        },
+        {
+          "name": "DIBAN__1_018",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            24.8,
+            5.8,
+            13.1
+          ]
+        },
+        {
+          "name": "HUABAN__1_019",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            23.0,
+            1.05,
+            17.9
+          ]
+        },
+        {
+          "name": "QIAOBAN-YUANGANG__2_012",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.195,
+            1.198,
+            9.5
+          ]
+        },
+        {
+          "name": "QIAOBAN__2_011",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            17.386,
+            6.176,
+            10.1
+          ]
+        },
+        {
+          "name": "SDA3-0102_(SU)-20150520:005",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            48.595,
+            47.279,
+            7.199
+          ]
+        },
+        {
+          "name": "SDA3-3301:005",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            51.711,
+            50.48,
+            7.949
+          ]
+        },
+        {
+          "name": "SGB4-108-435195CBA:007",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            5.0,
+            5.004,
+            26.103
+          ]
+        },
+        {
+          "name": "Solid1:005",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            9.051,
+            6.308,
+            17.5
+          ]
+        },
+        {
+          "name": "Solid2:005",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            5.092,
+            5.094,
+            1.193
+          ]
+        },
+        {
+          "name": "Solid3:005",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            5.614,
+            5.605,
+            14.499
+          ]
+        },
+        {
+          "name": "Solid4:005",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            5.614,
+            5.605,
+            14.499
+          ]
+        },
+        {
+          "name": "Solid5:005",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            5.092,
+            5.094,
+            1.193
+          ]
+        },
+        {
+          "name": "Solid6:005",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            9.051,
+            6.308,
+            17.15
+          ]
+        },
+        {
+          "name": "TRI2-0102:007",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            49.991,
+            15.014,
+            57.766
+          ]
+        },
+        {
+          "name": "TRI2-0103:007",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            26.142,
+            3.211,
+            3.083
+          ]
+        },
+        {
+          "name": "TRI2-0104:007",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            49.993,
+            22.5,
+            74.794
+          ]
+        },
+        {
+          "name": "TRI2-0105:007",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            41.49,
+            15.4,
+            32.041
+          ]
+        },
+        {
+          "name": "TRI2-0108:011",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            5.445,
+            6.794,
+            6.797
+          ]
+        },
+        {
+          "name": "TRI2-0108:012",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            5.445,
+            6.794,
+            6.797
+          ]
+        },
+        {
+          "name": "TRI2-2167:011",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            17.6,
+            0.631,
+            0.729
+          ]
+        },
+        {
+          "name": "TRI2-2167:012",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            17.6,
+            0.631,
+            0.729
+          ]
+        },
+        {
+          "name": "ales-mesh:038",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            49.767,
+            14.509,
+            58.08
+          ]
+        },
+        {
+          "name": "ales-mesh:039",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            49.767,
+            14.509,
+            58.091
+          ]
+        }
+      ],
+      "productKind": "meeting"
+    },
+    "Workstation": {
+      "parts": {
+        "top_0": {
+          "glb": "/3d-parts/semina/top_0/workstation.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            2.0,
+            0.8,
+            0.03
+          ],
+          "bytes": 1544,
+          "hash": "7d45ab092d97",
+          "source_object": "Box423",
+          "source_materials": [
+            "WALNUT_HERO"
+          ]
+        },
+        "top_1": {
+          "glb": "/3d-parts/semina/top_1/workstation.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.5,
+            0.8,
+            0.03
+          ],
+          "bytes": 1532,
+          "hash": "85b0b8e15cdd",
+          "source_object": "Box424",
+          "source_materials": [
+            "WALNUT_HERO"
+          ]
+        },
+        "top_2": {
+          "glb": "/3d-parts/semina/top_2/workstation.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            26.836,
+            2.038,
+            0.0
+          ],
+          "bytes": 1332,
+          "hash": "dc734a6fad94",
+          "source_object": "Plane027",
+          "source_materials": [
+            "WALNUT_HERO"
+          ]
+        },
+        "feet_0": {
+          "glb": "/3d-parts/semina/feet_0/workstation.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.02,
+            0.02,
+            0.01
+          ],
+          "bytes": 4664,
+          "hash": "5d7c52ef11bc",
+          "source_object": "Cylinder010",
+          "source_materials": [
+            "WALNUT_HERO"
+          ]
+        },
+        "feet_1": {
+          "glb": "/3d-parts/semina/feet_1/workstation.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.02,
+            0.02,
+            0.01
+          ],
+          "bytes": 4664,
+          "hash": "4b3b40a5dcc7",
+          "source_object": "Cylinder011",
+          "source_materials": [
+            "WALNUT_HERO"
+          ]
+        },
+        "feet_2": {
+          "glb": "/3d-parts/semina/feet_2/workstation.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.02,
+            0.02,
+            0.01
+          ],
+          "bytes": 4592,
+          "hash": "d4e3869a404d",
+          "source_object": "Cylinder008",
+          "source_materials": [
+            "WALNUT_HERO"
+          ]
+        },
+        "feet_3": {
+          "glb": "/3d-parts/semina/feet_3/workstation.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.02,
+            0.02,
+            0.01
+          ],
+          "bytes": 4596,
+          "hash": "bf08e7c64124",
+          "source_object": "Cylinder009",
+          "source_materials": [
+            "WALNUT_HERO"
+          ]
+        },
+        "feet_4": {
+          "glb": "/3d-parts/semina/feet_4/workstation.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.02,
+            0.02,
+            0.01
+          ],
+          "bytes": 4656,
+          "hash": "1c391984e71c",
+          "source_object": "Cylinder006",
+          "source_materials": [
+            "WALNUT_HERO"
+          ]
+        },
+        "feet_5": {
+          "glb": "/3d-parts/semina/feet_5/workstation.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.02,
+            0.02,
+            0.01
+          ],
+          "bytes": 4664,
+          "hash": "a459bef7369a",
+          "source_object": "Cylinder007",
+          "source_materials": [
+            "WALNUT_HERO"
+          ]
+        },
+        "leg_r": {
+          "glb": "/3d-parts/semina/leg_r/workstation.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.5,
+            0.03,
+            0.718
+          ],
+          "bytes": 1552,
+          "hash": "d33e093140f4",
+          "source_object": "Box3110",
+          "source_materials": [
+            "GUNMETAL"
+          ]
+        }
+      },
+      "baseSize": null,
+      "unknowns": [
+        {
+          "name": "Box421",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.94,
+            0.018,
+            0.35
+          ]
+        },
+        {
+          "name": "Rectangle271",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            26.684,
+            6.988,
+            0.176
+          ]
+        },
+        {
+          "name": "Rectangle272",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            30.017,
+            10.827,
+            0.586
+          ]
+        },
+        {
+          "name": "Box3111",
+          "materials": [
+            "GUNMETAL"
+          ],
+          "extents": [
+            0.03,
+            0.77,
+            0.35
+          ]
+        },
+        {
+          "name": "Object19978",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            39.8,
+            5.279,
+            27.342
+          ]
+        },
+        {
+          "name": "cgaxis_electronics_13_01",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            31.174,
+            12.198,
+            0.542
+          ]
+        },
+        {
+          "name": "IMAC GLOSSY BLACK002",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            6.261,
+            1.5,
+            7.618
+          ]
+        },
+        {
+          "name": "IMAC GLOSSY BLACK001",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            0.796,
+            0.244,
+            0.976
+          ]
+        },
+        {
+          "name": "cgaxis_electronics_13_05",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            36.052,
+            5.46,
+            25.227
+          ]
+        },
+        {
+          "name": "cgaxis_electronics_13_02",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            40.322,
+            33.769,
+            28.155
+          ]
+        },
+        {
+          "name": "Arch38_047_obj_01",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            10.468,
+            10.468,
+            2.996
+          ]
+        },
+        {
+          "name": "Arch38_047_obj_02",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            9.114,
+            9.114,
+            0.21
+          ]
+        },
+        {
+          "name": "Arch38_047_obj_03",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            9.078,
+            9.078,
+            0.309
+          ]
+        },
+        {
+          "name": "Arch38_047_obj_04",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            0.42,
+            1.739,
+            11.131
+          ]
+        },
+        {
+          "name": "Arch38_047_obj_05",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            2.768,
+            0.945,
+            0.945
+          ]
+        },
+        {
+          "name": "Arch38_047_obj_06",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            55.363,
+            1.05,
+            1.05
+          ]
+        },
+        {
+          "name": "Arch38_047_obj_07",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            25.387,
+            2.1,
+            2.1
+          ]
+        },
+        {
+          "name": "Arch38_047_obj_08",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.743,
+            1.329,
+            3.387
+          ]
+        },
+        {
+          "name": "Arch38_047_obj_09",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.47,
+            1.17,
+            1.47
+          ]
+        },
+        {
+          "name": "Arch38_047_obj_10",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            1.778,
+            1.778,
+            0.66
+          ]
+        },
+        {
+          "name": "Arch38_047_obj_11",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            21.31,
+            1.611,
+            60.564
+          ]
+        },
+        {
+          "name": "Arch38_047_obj_12",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            23.045,
+            23.045,
+            1.998
+          ]
+        },
+        {
+          "name": "Arch38_047_obj_13",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            20.636,
+            20.636,
+            0.861
+          ]
+        },
+        {
+          "name": "Vases_decors_31",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            0.162,
+            0.163,
+            0.067
+          ]
+        },
+        {
+          "name": "Books_05",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            0.237,
+            0.194,
+            0.025
+          ]
+        },
+        {
+          "name": "Books_04",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            0.23,
+            0.187,
+            0.019
+          ]
+        },
+        {
+          "name": "Books_02",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            0.267,
+            0.259,
+            0.033
+          ]
+        },
+        {
+          "name": "Books_03",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            0.26,
+            0.248,
+            0.026
+          ]
+        },
+        {
+          "name": "Line001",
+          "materials": [
+            "GUNMETAL"
+          ],
+          "extents": [
+            8.8,
+            22.596,
+            7.05
+          ]
+        },
+        {
+          "name": "Object018",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            68.397,
+            56.537,
+            89.777
+          ]
+        },
+        {
+          "name": "Rectangle001",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            67.413,
+            22.826,
+            5.625
+          ]
+        },
+        {
+          "name": "Object024",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            51.139,
+            51.328,
+            83.987
+          ]
+        },
+        {
+          "name": "Object027",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            27.209,
+            3.421,
+            3.006
+          ]
+        },
+        {
+          "name": "Object029",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            48.638,
+            13.701,
+            54.549
+          ]
+        },
+        {
+          "name": "Circle001",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            2.994,
+            2.994,
+            6.079
+          ]
+        },
+        {
+          "name": "Line007",
+          "materials": [
+            "GUNMETAL"
+          ],
+          "extents": [
+            5.34,
+            5.31,
+            18.591
+          ]
+        },
+        {
+          "name": "Object034",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            48.172,
+            13.57,
+            54.026
+          ]
+        },
+        {
+          "name": "Cylinder043.001",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            70.153,
+            66.792,
+            6.688
+          ]
+        },
+        {
+          "name": "Cylinder027.001",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            64.573,
+            61.614,
+            13.283
+          ]
+        },
+        {
+          "name": "Cylinder032.001",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            71.141,
+            67.722,
+            5.506
+          ]
+        },
+        {
+          "name": "Box3109",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            0.03,
+            0.796,
+            0.718
+          ]
+        },
+        {
+          "name": "Box3108",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            0.03,
+            0.796,
+            0.718
+          ]
+        }
+      ],
+      "productKind": "workstation"
+    }
+  },
+  "generated_at": "2026-04-20T03:54:26.777807Z"
+}

@@ -31,7 +31,16 @@ import {accessoryAxesInConfig} from "@/lib/scene-composer";
 // Family slug -> manifest URL. Families present here use the part-composition
 // viewer; others fall back to the single-GLB <ProductViewer3D>.
 const FAMILY_MANIFEST_URL: Record<string, string> = {
-  cratos: "/3d-parts/cratos/manifest.json",
+  cratos:  "/3d-parts/cratos/manifest.json",
+  lyra:    "/3d-parts/lyra/manifest.json",
+  newton:  "/3d-parts/newton/manifest.json",
+  semina:  "/3d-parts/semina/manifest.json",
+  diamond: "/3d-parts/diamond/manifest.json",
+  nepton:  "/3d-parts/nepton/manifest.json",
+  maximus: "/3d-parts/maximus/manifest.json",
+  davinci: "/3d-parts/davinci/manifest.json",
+  tesla:   "/3d-parts/tesla/manifest.json",
+  beauty:  "/3d-parts/beauty/manifest.json",
 };
 
 /** Return the accessory axes that have at least one part in this config's manifest. */
@@ -70,6 +79,13 @@ const SIZE_OPTIONS_PER_CONFIG: Record<string, string[]> = {
   "Meeting (Large)": ["300x110", "360x120", "420x140", "CUSTOM"],
   // Workstation cluster — size refers to per-seat desktop
   "Workstation 6-Person": ["120x60", "140x70", "160x80", "CUSTOM"],
+  // Non-desk product types
+  "Storage Credenza": ["120x40", "160x40", "180x40", "CUSTOM"],
+  "Tall Credenza":    ["80x40x180", "100x40x180", "CUSTOM"],
+  "Coffee Table":     ["120x60", "140x70", "CUSTOM"],
+  "Shelf Credenza":   ["160x40", "200x40", "CUSTOM"],
+  "Meeting":          ["180x90", "240x100", "300x110", "CUSTOM"],    // Semina generic meeting
+  "Workstation":      ["120x60", "140x70", "160x80", "CUSTOM"],       // Semina generic WS
   "Custom (Contact Us)": ["CUSTOM"],
   "Height-Adjustable": ["120x60", "140x70", "160x80", "180x80", "CUSTOM"],
 };
@@ -80,6 +96,9 @@ const SIZE_EXTRA_PRICES: Record<string, number> = {
   "220x90": 700, "220x100": 800, "240x100": 900, "300x110": 1200, "360x120": 1500,
   // Meeting table sizes
   "120x120": 300, "140x140": 500, "420x140": 2000,
+  // Credenza / coffee table / semina sizes
+  "120x40": 200, "160x40": 400, "180x40": 500, "200x40": 600,
+  "80x40x180": 700, "100x40x180": 900,
   "CUSTOM": 0,
 };
 
@@ -175,6 +194,7 @@ export function FamilyConfigurator({family, basePrice, locale}: FamilyConfigurat
     const ALL_SIZES = ["120x60", "140x60", "140x70", "160x70", "160x80", "180x80", "180x90",
                        "200x80", "200x100", "220x90", "220x100", "240x100", "300x110", "360x120",
                        "120x120", "140x140", "420x140",
+                       "120x40", "160x40", "180x40", "200x40", "80x40x180", "100x40x180",
                        "160x80+120x60", "180x90+120x60", "180x90+2x120x60", "CUSTOM"];
     return ALL_SIZES.filter(s => !valid.includes(s));
   }, [config]);

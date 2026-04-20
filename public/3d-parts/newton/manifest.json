@@ -1,0 +1,889 @@
+{
+  "family": "newton",
+  "configs": {
+    "Executive": {
+      "parts": {
+        "frame_beam": {
+          "glb": "/3d-parts/newton/frame_beam/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.05,
+            0.14,
+            0.05
+          ],
+          "bytes": 1688,
+          "hash": "880433e4d2ef",
+          "source_object": "frame_newton-openframe_crossbar",
+          "source_materials": [
+            "newton_silver_powder_coat"
+          ]
+        }
+      },
+      "baseSize": null,
+      "unknowns": [
+        {
+          "name": "newton-openframe_top",
+          "materials": [
+            "tripo_material_dbcf09d3-22d8-4890-91d2-ab99cd5367e1"
+          ],
+          "extents": [
+            1.8,
+            0.884,
+            0.082
+          ]
+        },
+        {
+          "name": "Backdrop",
+          "materials": [
+            "BackdropGrey"
+          ],
+          "extents": [
+            30.0,
+            30.0,
+            0.0
+          ]
+        },
+        {
+          "name": "frame_newton-openframe_col_L_s1",
+          "materials": [
+            "newton_silver_powder_coat"
+          ],
+          "extents": [
+            0.1,
+            0.1,
+            0.245
+          ]
+        },
+        {
+          "name": "frame_newton-openframe_col_L_s2",
+          "materials": [
+            "newton_silver_powder_coat"
+          ],
+          "extents": [
+            0.085,
+            0.085,
+            0.2
+          ]
+        },
+        {
+          "name": "frame_newton-openframe_col_L_s3",
+          "materials": [
+            "newton_silver_powder_coat"
+          ],
+          "extents": [
+            0.072,
+            0.072,
+            0.18
+          ]
+        },
+        {
+          "name": "frame_newton-openframe_col_R_s1",
+          "materials": [
+            "newton_silver_powder_coat"
+          ],
+          "extents": [
+            0.1,
+            0.1,
+            0.245
+          ]
+        },
+        {
+          "name": "frame_newton-openframe_col_R_s2",
+          "materials": [
+            "newton_silver_powder_coat"
+          ],
+          "extents": [
+            0.085,
+            0.085,
+            0.2
+          ]
+        },
+        {
+          "name": "frame_newton-openframe_col_R_s3",
+          "materials": [
+            "newton_silver_powder_coat"
+          ],
+          "extents": [
+            0.072,
+            0.072,
+            0.18
+          ]
+        },
+        {
+          "name": "frame_newton-openframe_arm_L",
+          "materials": [
+            "newton_silver_powder_coat"
+          ],
+          "extents": [
+            0.45,
+            0.14,
+            0.05
+          ]
+        },
+        {
+          "name": "frame_newton-openframe_arm_R",
+          "materials": [
+            "newton_silver_powder_coat"
+          ],
+          "extents": [
+            0.45,
+            0.14,
+            0.05
+          ]
+        },
+        {
+          "name": "frame_newton-openframe_foot_L",
+          "materials": [
+            "newton_silver_powder_coat"
+          ],
+          "extents": [
+            0.7,
+            0.14,
+            0.055
+          ]
+        },
+        {
+          "name": "frame_newton-openframe_foot_R",
+          "materials": [
+            "newton_silver_powder_coat"
+          ],
+          "extents": [
+            0.7,
+            0.14,
+            0.055
+          ]
+        }
+      ],
+      "productKind": "desk"
+    },
+    "Height-Adjustable": {
+      "parts": {
+        "top_0": {
+          "glb": "/3d-parts/newton/top_0/height-adjustable.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            13.664,
+            2.07,
+            0.0
+          ],
+          "bytes": 1328,
+          "hash": "142a4b3122da",
+          "source_object": "Plane027",
+          "source_materials": [
+            "WALNUT_HERO"
+          ]
+        },
+        "top_1": {
+          "glb": "/3d-parts/newton/top_1/height-adjustable.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            13.664,
+            2.07,
+            0.0
+          ],
+          "bytes": 1328,
+          "hash": "142a4b3122da",
+          "source_object": "Plane028",
+          "source_materials": [
+            "WALNUT_HERO"
+          ]
+        },
+        "top_2": {
+          "glb": "/3d-parts/newton/top_2/height-adjustable.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            13.664,
+            2.07,
+            0.0
+          ],
+          "bytes": 1328,
+          "hash": "1e0784a648a5",
+          "source_object": "Plane029",
+          "source_materials": [
+            "WALNUT_HERO"
+          ]
+        },
+        "leg_r": {
+          "glb": "/3d-parts/newton/leg_r/height-adjustable.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.118,
+            0.14,
+            1.012
+          ],
+          "bytes": 43972,
+          "hash": "c555a340427a",
+          "source_object": "caster-ring:1",
+          "source_materials": [
+            "GUNMETAL"
+          ]
+        },
+        "leg_l_0": {
+          "glb": "/3d-parts/newton/leg_l_0/height-adjustable.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.118,
+            0.14,
+            1.012
+          ],
+          "bytes": 43972,
+          "hash": "40ecb09ccf10",
+          "source_object": "caster-ring:002",
+          "source_materials": [
+            "GUNMETAL"
+          ]
+        },
+        "leg_l_1": {
+          "glb": "/3d-parts/newton/leg_l_1/height-adjustable.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.118,
+            0.14,
+            1.012
+          ],
+          "bytes": 43972,
+          "hash": "2171a72097d0",
+          "source_object": "caster-ring:003",
+          "source_materials": [
+            "GUNMETAL"
+          ]
+        },
+        "leg_l_2": {
+          "glb": "/3d-parts/newton/leg_l_2/height-adjustable.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.118,
+            0.14,
+            1.012
+          ],
+          "bytes": 43972,
+          "hash": "40ecb09ccf10",
+          "source_object": "caster-ring:004",
+          "source_materials": [
+            "GUNMETAL"
+          ]
+        }
+      },
+      "baseSize": null,
+      "unknowns": [
+        {
+          "name": "Layer:N_metal",
+          "materials": [
+            "GUNMETAL"
+          ],
+          "extents": [
+            174.6,
+            69.99,
+            79.0
+          ]
+        },
+        {
+          "name": "Layer:N_furniture",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            163.705,
+            67.005,
+            0.9
+          ]
+        },
+        {
+          "name": "Layer:N_button NA",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            9.107,
+            10.189,
+            2.017
+          ]
+        },
+        {
+          "name": "Box001",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            180.0,
+            80.0,
+            3.0
+          ]
+        },
+        {
+          "name": "Rectangle271",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            12.6,
+            7.1,
+            0.3
+          ]
+        },
+        {
+          "name": "Rectangle272",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            15.0,
+            11.0,
+            1.0
+          ]
+        },
+        {
+          "name": "Box004",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            150.0,
+            1.8,
+            35.0
+          ]
+        },
+        {
+          "name": "Rectangle273",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            12.6,
+            5.258,
+            0.3
+          ]
+        },
+        {
+          "name": "Rectangle274",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            15.0,
+            11.0,
+            1.0
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì499",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            12.0,
+            0.7,
+            9.0
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì478",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.921,
+            2.269,
+            3.547
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì500",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            7.0,
+            3.42,
+            2.5
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì479",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.927,
+            2.265,
+            3.484
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì480",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.758,
+            2.227,
+            3.548
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì503",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.914,
+            2.25,
+            3.522
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì504",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.914,
+            2.25,
+            3.522
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì481",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.715,
+            2.223,
+            3.543
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì482",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.668,
+            2.218,
+            3.533
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì502",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.914,
+            2.25,
+            3.522
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì483",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.622,
+            2.214,
+            3.521
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì484",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.706,
+            2.219,
+            3.554
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì485",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.749,
+            2.223,
+            3.56
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì486",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.789,
+            2.228,
+            3.563
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì487",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.824,
+            2.232,
+            3.562
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì488",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.854,
+            2.236,
+            3.558
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì489",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.879,
+            2.241,
+            3.55
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì490",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.899,
+            2.245,
+            3.537
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì491",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.914,
+            2.25,
+            3.522
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì492",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.921,
+            2.269,
+            3.547
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì493",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.921,
+            2.269,
+            3.547
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì494",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.914,
+            2.25,
+            3.522
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì495",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.914,
+            2.25,
+            3.522
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì496",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.914,
+            2.25,
+            3.522
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì497",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.921,
+            2.269,
+            3.547
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì498",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.921,
+            2.269,
+            3.547
+          ]
+        },
+        {
+          "name": "ÇÐ³ý-À­Éì501",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            4.914,
+            2.25,
+            3.522
+          ]
+        },
+        {
+          "name": "caster-3:1",
+          "materials": [
+            "GUNMETAL"
+          ],
+          "extents": [
+            4.856,
+            6.7,
+            5.772
+          ]
+        },
+        {
+          "name": "caster-1:1",
+          "materials": [
+            "GUNMETAL"
+          ],
+          "extents": [
+            4.422,
+            5.998,
+            5.473
+          ]
+        },
+        {
+          "name": "caster-1_MIR:1",
+          "materials": [
+            "GUNMETAL"
+          ],
+          "extents": [
+            4.422,
+            5.998,
+            5.473
+          ]
+        },
+        {
+          "name": "caster-1:002",
+          "materials": [
+            "GUNMETAL"
+          ],
+          "extents": [
+            4.422,
+            5.998,
+            5.473
+          ]
+        },
+        {
+          "name": "caster-1_MIR:002",
+          "materials": [
+            "GUNMETAL"
+          ],
+          "extents": [
+            4.422,
+            5.998,
+            5.473
+          ]
+        },
+        {
+          "name": "caster-3:002",
+          "materials": [
+            "GUNMETAL"
+          ],
+          "extents": [
+            4.856,
+            6.7,
+            5.772
+          ]
+        },
+        {
+          "name": "caster-1:003",
+          "materials": [
+            "GUNMETAL"
+          ],
+          "extents": [
+            4.422,
+            5.998,
+            5.473
+          ]
+        },
+        {
+          "name": "caster-1_MIR:003",
+          "materials": [
+            "GUNMETAL"
+          ],
+          "extents": [
+            4.422,
+            5.998,
+            5.473
+          ]
+        },
+        {
+          "name": "caster-3:003",
+          "materials": [
+            "GUNMETAL"
+          ],
+          "extents": [
+            4.856,
+            6.7,
+            5.772
+          ]
+        },
+        {
+          "name": "caster-1:004",
+          "materials": [
+            "GUNMETAL"
+          ],
+          "extents": [
+            4.422,
+            5.998,
+            5.473
+          ]
+        },
+        {
+          "name": "caster-1_MIR:004",
+          "materials": [
+            "GUNMETAL"
+          ],
+          "extents": [
+            4.422,
+            5.998,
+            5.473
+          ]
+        },
+        {
+          "name": "caster-3:004",
+          "materials": [
+            "GUNMETAL"
+          ],
+          "extents": [
+            4.856,
+            6.7,
+            5.772
+          ]
+        },
+        {
+          "name": "Box285",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            2.646,
+            16.7,
+            1.0
+          ]
+        },
+        {
+          "name": "Box286",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            2.646,
+            16.7,
+            1.0
+          ]
+        },
+        {
+          "name": "Box287",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            2.646,
+            16.7,
+            1.0
+          ]
+        },
+        {
+          "name": "Box288",
+          "materials": [
+            "WALNUT_HERO"
+          ],
+          "extents": [
+            50.179,
+            40.215,
+            1.8
+          ]
+        },
+        {
+          "name": "Floor",
+          "materials": [
+            "Floor_Mat"
+          ],
+          "extents": [
+            15.0,
+            15.0,
+            0.0
+          ]
+        }
+      ],
+      "productKind": "desk"
+    }
+  },
+  "generated_at": "2026-04-20T03:54:26.776271Z"
+}

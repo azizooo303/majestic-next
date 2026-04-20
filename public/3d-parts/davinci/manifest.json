@@ -1,0 +1,424 @@
+{
+  "family": "davinci",
+  "configs": {
+    "Executive": {
+      "parts": {
+        "frame_beam_0": {
+          "glb": "/3d-parts/davinci/frame_beam_0/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.016,
+            1.528,
+            0.546
+          ],
+          "bytes": 1520,
+          "hash": "3752b5b9d0e7",
+          "source_object": "Furniture <04-Arkitek_Mesa Direccion con Apoyo en Block_aaa27e4",
+          "source_materials": [
+            "FRAME_BEAM_a398"
+          ]
+        },
+        "frame_beam_1": {
+          "glb": "/3d-parts/davinci/frame_beam_1/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.5,
+            1.57,
+            0.029
+          ],
+          "bytes": 1724,
+          "hash": "745ad3bca8e5",
+          "source_object": "Furniture <04-Arkitek_Mesa Direccion con Apoyo en Block_784a8ad",
+          "source_materials": [
+            "FRAME_BEAM_a398"
+          ]
+        },
+        "frame_beam_2": {
+          "glb": "/3d-parts/davinci/frame_beam_2/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.008,
+            1.531,
+            0.546
+          ],
+          "bytes": 1832,
+          "hash": "b98d130e0848",
+          "source_object": "Furniture <04-Arkitek_Mesa Direccion con Apoyo en Block_c6c3e52",
+          "source_materials": [
+            "FRAME_BEAM_a398"
+          ]
+        },
+        "frame_beam_3": {
+          "glb": "/3d-parts/davinci/frame_beam_3/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.005,
+            0.525,
+            0.542
+          ],
+          "bytes": 1544,
+          "hash": "c2368cf0e5e8",
+          "source_object": "Furniture <04-Arkitek_Mesa Direccion con Apoyo en Block_111ae49",
+          "source_materials": [
+            "FRAME_BEAM_a398"
+          ]
+        },
+        "frame_beam_4": {
+          "glb": "/3d-parts/davinci/frame_beam_4/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.209,
+            0.554,
+            0.068
+          ],
+          "bytes": 147336,
+          "hash": "a809495ade01",
+          "source_object": "Object009",
+          "source_materials": [
+            "FRAME_BEAM_a398"
+          ]
+        },
+        "feet_0": {
+          "glb": "/3d-parts/davinci/feet_0/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.04,
+            0.04,
+            0.005
+          ],
+          "bytes": 1484,
+          "hash": "a32554f14fd6",
+          "source_object": "164",
+          "source_materials": [
+            "LEVELING_FOOT_a398"
+          ]
+        },
+        "feet_1": {
+          "glb": "/3d-parts/davinci/feet_1/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.057,
+            0.057,
+            0.065
+          ],
+          "bytes": 1364,
+          "hash": "d639e17a11a2",
+          "source_object": "051",
+          "source_materials": [
+            "LEVELING_FOOT_a398"
+          ]
+        },
+        "feet_2": {
+          "glb": "/3d-parts/davinci/feet_2/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.04,
+            0.04,
+            0.005
+          ],
+          "bytes": 1484,
+          "hash": "ed4e803a23e1",
+          "source_object": "047",
+          "source_materials": [
+            "LEVELING_FOOT_a398"
+          ]
+        },
+        "feet_3": {
+          "glb": "/3d-parts/davinci/feet_3/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.057,
+            0.057,
+            0.065
+          ],
+          "bytes": 1360,
+          "hash": "0e3cf77cbd92",
+          "source_object": "165",
+          "source_materials": [
+            "LEVELING_FOOT_a398"
+          ]
+        },
+        "feet_4": {
+          "glb": "/3d-parts/davinci/feet_4/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.04,
+            0.04,
+            0.005
+          ],
+          "bytes": 1484,
+          "hash": "7ac3fc8677ee",
+          "source_object": "148",
+          "source_materials": [
+            "LEVELING_FOOT_a398"
+          ]
+        },
+        "feet_5": {
+          "glb": "/3d-parts/davinci/feet_5/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.057,
+            0.057,
+            0.065
+          ],
+          "bytes": 1376,
+          "hash": "ce436bf71c41",
+          "source_object": "149",
+          "source_materials": [
+            "LEVELING_FOOT_a398"
+          ]
+        },
+        "feet_6": {
+          "glb": "/3d-parts/davinci/feet_6/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.057,
+            0.057,
+            0.065
+          ],
+          "bytes": 1376,
+          "hash": "d3c8aefc2bbf",
+          "source_object": "166",
+          "source_materials": [
+            "LEVELING_FOOT_a398"
+          ]
+        },
+        "feet_7": {
+          "glb": "/3d-parts/davinci/feet_7/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.04,
+            0.04,
+            0.005
+          ],
+          "bytes": 1484,
+          "hash": "fe58d9e25dbc",
+          "source_object": "167",
+          "source_materials": [
+            "LEVELING_FOOT_a398"
+          ]
+        },
+        "modesty_0": {
+          "glb": "/3d-parts/accessories/modesty-ed86aaf067e9.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.356,
+            0.491,
+            0.017
+          ],
+          "bytes": 161628,
+          "hash": "ed86aaf067e9",
+          "source_object": "Furniture <04-Arkitek_Mesa Direccion con Apoyo en Block_e2b9c3b",
+          "source_materials": [
+            "MODESTY_PANEL_a398"
+          ]
+        },
+        "modesty_1": {
+          "glb": "/3d-parts/accessories/modesty-e8b28ea62f96.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.018,
+            0.499,
+            0.176
+          ],
+          "bytes": 161532,
+          "hash": "e8b28ea62f96",
+          "source_object": "Box181929",
+          "source_materials": [
+            "MODESTY_PANEL_a398"
+          ]
+        },
+        "modesty_2": {
+          "glb": "/3d-parts/accessories/modesty-c00dc9150138.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.018,
+            0.499,
+            0.176
+          ],
+          "bytes": 161532,
+          "hash": "c00dc9150138",
+          "source_object": "Box181930",
+          "source_materials": [
+            "MODESTY_PANEL_a398"
+          ]
+        },
+        "modesty_3": {
+          "glb": "/3d-parts/accessories/modesty-534ebc0e57d9.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.018,
+            0.499,
+            0.176
+          ],
+          "bytes": 161532,
+          "hash": "534ebc0e57d9",
+          "source_object": "Box181931",
+          "source_materials": [
+            "MODESTY_PANEL_a398"
+          ]
+        },
+        "pedestal_0": {
+          "glb": "/3d-parts/accessories/pedestal-37bce8ca6814.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.495,
+            1.564,
+            0.55
+          ],
+          "bytes": 1732,
+          "hash": "37bce8ca6814",
+          "source_object": "Furniture <04-Arkitek_Mesa Direccion con Apoyo en Block_c51b1c5",
+          "source_materials": [
+            "PEDESTAL_BODY_a398"
+          ]
+        },
+        "pedestal_1": {
+          "glb": "/3d-parts/accessories/pedestal-35a4f1eca876.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.461,
+            0.569,
+            0.546
+          ],
+          "bytes": 1728,
+          "hash": "35a4f1eca876",
+          "source_object": "Furniture <04-Arkitek_Mesa Direccion con Apoyo en Block_71c40ea",
+          "source_materials": [
+            "PEDESTAL_BODY_a398"
+          ]
+        },
+        "pedestal_top": {
+          "glb": "/3d-parts/accessories/pedestal_top-438d8fcfe94b.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.5,
+            1.57,
+            0.029
+          ],
+          "bytes": 161772,
+          "hash": "438d8fcfe94b",
+          "source_object": "Furniture <04-Arkitek_Mesa Direccion con Apoyo en Block_fd81f73",
+          "source_materials": [
+            "PEDESTAL_TOP_a398"
+          ]
+        },
+        "top": {
+          "glb": "/3d-parts/davinci/top/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            2.102,
+            0.9,
+            0.018
+          ],
+          "bytes": 161520,
+          "hash": "2851decc0fda",
+          "source_object": "Box013",
+          "source_materials": [
+            "DESKTOP_a398"
+          ]
+        }
+      },
+      "baseSize": "210x90",
+      "unknowns": [
+        {
+          "name": "Object010",
+          "materials": [
+            "UNKNOWN_a398"
+          ],
+          "extents": [
+            0.157,
+            0.615,
+            0.505
+          ]
+        }
+      ],
+      "productKind": "desk"
+    }
+  },
+  "generated_at": "2026-04-20T03:54:26.791207Z"
+}

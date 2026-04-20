@@ -66,8 +66,8 @@ export const DESK_FAMILIES: DeskFamily[] = [
     nameEn: "Lyra Desk",
     nameAr: "مكتب ليرا",
     tagline: {en: "Layra GS executive", ar: "ليرا جي إس التنفيذي"},
-    configs: ["Executive", "Manager", "Operator", "L-Shape", "U-Shape", "Conference", "Custom (Contact Us)"],
-    hasGlb: false,
+    configs: ["Executive", "Storage Credenza", "Tall Credenza", "Coffee Table", "Manager", "Operator", "L-Shape", "U-Shape", "Conference", "Custom (Contact Us)"],
+    hasGlb: true,
     heroImage: "/images/shop/lyra-hero.webp",
     priority: 4,
     status: "live",
@@ -99,8 +99,8 @@ export const DESK_FAMILIES: DeskFamily[] = [
     slug: "maximus",
     nameEn: "Maximus Desk",
     nameAr: "مكتب ماكسيموس",
-    configs: ["Executive", "Manager", "Operator", "L-Shape", "U-Shape", "Conference", "Custom (Contact Us)"],
-    hasGlb: false,
+    configs: ["L-Shape", "Executive", "Manager", "Operator", "U-Shape", "Conference", "Custom (Contact Us)"],
+    hasGlb: true,
     heroImage: "/images/shop/maximus-hero.webp",
     priority: 7,
     status: "live",
@@ -121,8 +121,8 @@ export const DESK_FAMILIES: DeskFamily[] = [
     slug: "tesla",
     nameEn: "Tesla Desk",
     nameAr: "مكتب تيسلا",
-    configs: ["Executive", "Manager", "Operator", "L-Shape", "U-Shape", "Conference", "Custom (Contact Us)"],
-    hasGlb: false,
+    configs: ["Meeting 4-Person", "Executive", "Manager", "Operator", "L-Shape", "U-Shape", "Conference", "Custom (Contact Us)"],
+    hasGlb: true,
     heroImage: "/images/shop/tesla-hero.webp",
     priority: 9,
     status: "live",
@@ -155,9 +155,9 @@ export const DESK_FAMILIES: DeskFamily[] = [
     nameAr: "مكتب دافنشي",
     tagline: {en: "Artist-inspired executive design", ar: "تصميم تنفيذي مستوحى من الفن"},
     configs: ["Executive", "Manager", "Operator", "L-Shape", "U-Shape", "Conference", "Custom (Contact Us)"],
-    hasGlb: false,
+    hasGlb: true,
     priority: 12,
-    status: "new",
+    status: "live",
   },
   {
     sku: "DESK-DIAMOND",
@@ -165,9 +165,9 @@ export const DESK_FAMILIES: DeskFamily[] = [
     nameEn: "Diamond Desk",
     nameAr: "مكتب دايموند",
     configs: ["Executive", "Manager", "Operator", "L-Shape", "U-Shape", "Conference", "Custom (Contact Us)"],
-    hasGlb: false,
+    hasGlb: true,
     priority: 13,
-    status: "new",
+    status: "live",
   },
   {
     sku: "DESK-NEPTON",
@@ -175,9 +175,9 @@ export const DESK_FAMILIES: DeskFamily[] = [
     nameEn: "Nepton Desk",
     nameAr: "مكتب نبتون",
     configs: ["Executive", "Manager", "Operator", "L-Shape", "U-Shape", "Conference", "Custom (Contact Us)"],
-    hasGlb: false,
+    hasGlb: true,
     priority: 14,
-    status: "new",
+    status: "live",
   },
   {
     sku: "DESK-SIMPLE",
@@ -196,10 +196,31 @@ export const DESK_FAMILIES: DeskFamily[] = [
     nameEn: "Newton Height-Adjustable Desk",
     nameAr: "مكتب نيوتن القابل للتعديل",
     tagline: {en: "Motorised height-adjustable workstation", ar: "محطة عمل قابلة للتعديل بالمحرك"},
-    configs: ["Height-Adjustable", "Custom (Contact Us)"],  // special — no EXEC/MGR/OPR tiers
+    configs: ["Executive", "Height-Adjustable", "Custom (Contact Us)"],
     hasGlb: true,
-    glbUrl: "/models/desk-newton.glb",
     priority: 16,
+    status: "live",
+  },
+  {
+    sku: "DESK-SEMINA",
+    slug: "semina",
+    nameEn: "Semina Desk System",
+    nameAr: "نظام مكاتب سمينا",
+    tagline: {en: "Modular workstation & meeting system", ar: "نظام محطات عمل واجتماعات معياري"},
+    configs: ["Meeting", "Workstation", "Custom (Contact Us)"],
+    hasGlb: true,
+    priority: 17,
+    status: "live",
+  },
+  {
+    sku: "CRED-BEAUTY",
+    slug: "beauty",
+    nameEn: "Beauty Credenza",
+    nameAr: "خزانة بيوتي",
+    tagline: {en: "Shelf credenza", ar: "خزانة أرفف"},
+    configs: ["Shelf Credenza", "Custom (Contact Us)"],
+    hasGlb: true,
+    priority: 18,
     status: "live",
   },
 ];
@@ -217,8 +238,15 @@ export const CONFIG_EXTRA_PRICES: Record<string, number> = {
   "Meeting 6-Person": 2800,
   "Meeting (Large)": 4500,
   "Workstation 6-Person": 6500,     // 6-seat workstation cluster
-  "Custom (Contact Us)": 0,      // quote path, no direct price
-  "Height-Adjustable": 3000,     // Newton only (placeholder)
+  // Non-desk product types (Lyra + Beauty + Semina)
+  "Storage Credenza": 1600,
+  "Tall Credenza": 2200,
+  "Coffee Table": 900,
+  "Shelf Credenza": 2400,
+  "Meeting": 2500,                  // Semina meeting
+  "Workstation": 5500,               // Semina workstation
+  "Custom (Contact Us)": 0,          // quote path, no direct price
+  "Height-Adjustable": 3000,         // Newton HA
 };
 
 // 32 MFC finishes with Egger/Kastamonu supplier codes

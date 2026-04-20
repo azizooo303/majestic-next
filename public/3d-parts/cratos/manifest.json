@@ -195,7 +195,8 @@
         }
       },
       "baseSize": "180x80",
-      "unknowns": []
+      "unknowns": [],
+      "productKind": "desk"
     },
     "Manager": {
       "parts": {
@@ -536,7 +537,8 @@
             0.04
           ]
         }
-      ]
+      ],
+      "productKind": "desk"
     },
     "Conference": {
       "parts": {
@@ -770,7 +772,8 @@
         }
       },
       "baseSize": "120x120",
-      "unknowns": []
+      "unknowns": [],
+      "productKind": "desk"
     },
     "L-Shape": {
       "parts": {
@@ -1415,7 +1418,8 @@
             0.13
           ]
         }
-      ]
+      ],
+      "productKind": "desk"
     },
     "Meeting 4-Person": {
       "parts": {
@@ -1649,7 +1653,8 @@
         }
       },
       "baseSize": "120x120",
-      "unknowns": []
+      "unknowns": [],
+      "productKind": "meeting"
     },
     "Meeting 6-Person": {
       "parts": {
@@ -2370,7 +2375,8 @@
             0.018
           ]
         }
-      ]
+      ],
+      "productKind": "meeting"
     },
     "Meeting (Large)": {
       "parts": {
@@ -3425,7 +3431,8 @@
             0.018
           ]
         }
-      ]
+      ],
+      "productKind": "meeting"
     },
     "Workstation 6-Person": {
       "parts": {
@@ -3442,7 +3449,7 @@
             0.05
           ],
           "bytes": 1472,
-          "hash": "a2da9e4008fa",
+          "hash": "81db06e2ba32",
           "source_object": "Box3088",
           "source_materials": [
             "DESK-CRATOS-WS_FRAME_BEAM"
@@ -3461,7 +3468,7 @@
             0.04
           ],
           "bytes": 1432,
-          "hash": "441e4db5c581",
+          "hash": "c205d264601d",
           "source_object": "Box3091",
           "source_materials": [
             "DESK-CRATOS-WS_LEG"
@@ -3480,7 +3487,7 @@
             0.04
           ],
           "bytes": 1432,
-          "hash": "7bc07eaa7276",
+          "hash": "68f6c627dc68",
           "source_object": "Box3096",
           "source_materials": [
             "DESK-CRATOS-WS_LEG"
@@ -3499,7 +3506,7 @@
             0.04
           ],
           "bytes": 1432,
-          "hash": "96611bda23d5",
+          "hash": "c02b7e029871",
           "source_object": "Box3097",
           "source_materials": [
             "DESK-CRATOS-WS_LEG"
@@ -3518,7 +3525,7 @@
             0.04
           ],
           "bytes": 1436,
-          "hash": "e3d71b714653",
+          "hash": "aa79ab3bf708",
           "source_object": "Box3098",
           "source_materials": [
             "DESK-CRATOS-WS_LEG"
@@ -3537,7 +3544,7 @@
             0.608
           ],
           "bytes": 1600,
-          "hash": "65a8db6ab761",
+          "hash": "d24eb0020c60",
           "source_object": "Line1230",
           "source_materials": [
             "DESK-CRATOS-WS_FRAME_BEAM"
@@ -3555,8 +3562,8 @@
             0.554,
             0.608
           ],
-          "bytes": 1600,
-          "hash": "2b3bc4bd2c7f",
+          "bytes": 1596,
+          "hash": "2c639845840a",
           "source_object": "Line1231",
           "source_materials": [
             "DESK-CRATOS-WS_FRAME_BEAM"
@@ -3575,7 +3582,7 @@
             0.04
           ],
           "bytes": 1432,
-          "hash": "8ee4e9643925",
+          "hash": "39108753bfee",
           "source_object": "Box3101",
           "source_materials": [
             "DESK-CRATOS-WS_LEG"
@@ -3594,7 +3601,7 @@
             0.04
           ],
           "bytes": 1436,
-          "hash": "92678e940bce",
+          "hash": "6cde21ada7f2",
           "source_object": "Box3102",
           "source_materials": [
             "DESK-CRATOS-WS_LEG"
@@ -3613,7 +3620,7 @@
             0.05
           ],
           "bytes": 1472,
-          "hash": "2292c3480c5b",
+          "hash": "154547c89141",
           "source_object": "Box3103",
           "source_materials": [
             "DESK-CRATOS-WS_FRAME_BEAM"
@@ -3632,7 +3639,7 @@
             0.608
           ],
           "bytes": 1600,
-          "hash": "5fa146c5951a",
+          "hash": "73f724d34107",
           "source_object": "Line1244",
           "source_materials": [
             "DESK-CRATOS-WS_FRAME_BEAM"
@@ -3651,7 +3658,7 @@
             0.608
           ],
           "bytes": 1600,
-          "hash": "c731a9356e67",
+          "hash": "4ec363228b2b",
           "source_object": "Line1245",
           "source_materials": [
             "DESK-CRATOS-WS_FRAME_BEAM"
@@ -3669,8 +3676,8 @@
             1.376,
             0.72
           ],
-          "bytes": 72932,
-          "hash": "6775ccacb368",
+          "bytes": 73084,
+          "hash": "cda7cb10768f",
           "source_object": "Object104",
           "source_materials": [
             "DESK-CRATOS-WS_FRAME_BEAM"
@@ -3688,8 +3695,8 @@
             1.376,
             0.72
           ],
-          "bytes": 73028,
-          "hash": "e6673a5ce684",
+          "bytes": 72624,
+          "hash": "bd606c5acfbf",
           "source_object": "Object105",
           "source_materials": [
             "DESK-CRATOS-WS_FRAME_BEAM"
@@ -3708,7 +3715,7 @@
             0.03
           ],
           "bytes": 161528,
-          "hash": "a223ba07eb33",
+          "hash": "cce634131ca8",
           "source_object": "Box3092",
           "source_materials": [
             "DESK-CRATOS-WS_DESKTOP"
@@ -3727,7 +3734,7 @@
             0.03
           ],
           "bytes": 161528,
-          "hash": "ab14a10bec53",
+          "hash": "6c772ba84f75",
           "source_object": "Box3093",
           "source_materials": [
             "DESK-CRATOS-WS_DESKTOP"
@@ -3746,7 +3753,7 @@
             0.03
           ],
           "bytes": 161528,
-          "hash": "9dd78eacf99c",
+          "hash": "4abec898ff21",
           "source_object": "Box3094",
           "source_materials": [
             "DESK-CRATOS-WS_DESKTOP"
@@ -3765,7 +3772,7 @@
             0.03
           ],
           "bytes": 161528,
-          "hash": "e8882def97e1",
+          "hash": "ed5cdaddc409",
           "source_object": "Box3095",
           "source_materials": [
             "DESK-CRATOS-WS_DESKTOP"
@@ -3784,7 +3791,7 @@
             0.03
           ],
           "bytes": 161528,
-          "hash": "fc8e33da7d62",
+          "hash": "9dbc7ff22c61",
           "source_object": "Box3099",
           "source_materials": [
             "DESK-CRATOS-WS_DESKTOP"
@@ -3803,7 +3810,7 @@
             0.03
           ],
           "bytes": 161528,
-          "hash": "3a5a3ea20140",
+          "hash": "a02804349f17",
           "source_object": "Box3100",
           "source_materials": [
             "DESK-CRATOS-WS_DESKTOP"
@@ -3822,7 +3829,7 @@
             0.042
           ],
           "bytes": 2896,
-          "hash": "f82ab9f2054a",
+          "hash": "7a82d22e6c8e",
           "source_object": "Line1232",
           "source_materials": [
             "DESK-CRATOS-WS_LEVELING_FOOT"
@@ -3841,7 +3848,7 @@
             0.042
           ],
           "bytes": 2892,
-          "hash": "6b6a536908cc",
+          "hash": "93750155db98",
           "source_object": "Line1233",
           "source_materials": [
             "DESK-CRATOS-WS_LEVELING_FOOT"
@@ -3859,8 +3866,8 @@
             0.041,
             0.042
           ],
-          "bytes": 2900,
-          "hash": "44a02db8d664",
+          "bytes": 2904,
+          "hash": "baabc446930f",
           "source_object": "Line1234",
           "source_materials": [
             "DESK-CRATOS-WS_LEVELING_FOOT"
@@ -3878,8 +3885,8 @@
             0.041,
             0.042
           ],
-          "bytes": 2892,
-          "hash": "be357a56e60c",
+          "bytes": 2896,
+          "hash": "db4eafacc05e",
           "source_object": "Line1235",
           "source_materials": [
             "DESK-CRATOS-WS_LEVELING_FOOT"
@@ -3897,8 +3904,8 @@
             0.041,
             0.042
           ],
-          "bytes": 2896,
-          "hash": "8e6b6a4a33c1",
+          "bytes": 2900,
+          "hash": "ca856bb3db35",
           "source_object": "Line1236",
           "source_materials": [
             "DESK-CRATOS-WS_LEVELING_FOOT"
@@ -3917,7 +3924,7 @@
             0.042
           ],
           "bytes": 2892,
-          "hash": "a0451dbb6d4b",
+          "hash": "c98e57c2760c",
           "source_object": "Line1237",
           "source_materials": [
             "DESK-CRATOS-WS_LEVELING_FOOT"
@@ -3935,8 +3942,8 @@
             0.041,
             0.042
           ],
-          "bytes": 2904,
-          "hash": "fec6bec192d9",
+          "bytes": 2908,
+          "hash": "147ee4e9750a",
           "source_object": "Line1238",
           "source_materials": [
             "DESK-CRATOS-WS_LEVELING_FOOT"
@@ -3955,7 +3962,7 @@
             0.042
           ],
           "bytes": 2896,
-          "hash": "537865194733",
+          "hash": "fa5fcefbffb4",
           "source_object": "Line1239",
           "source_materials": [
             "DESK-CRATOS-WS_LEVELING_FOOT"
@@ -3974,7 +3981,7 @@
             0.042
           ],
           "bytes": 2892,
-          "hash": "64ca870ef544",
+          "hash": "7847a3a47081",
           "source_object": "Line1240",
           "source_materials": [
             "DESK-CRATOS-WS_LEVELING_FOOT"
@@ -3992,8 +3999,8 @@
             0.041,
             0.042
           ],
-          "bytes": 2892,
-          "hash": "1690c8768119",
+          "bytes": 2896,
+          "hash": "bda4011c23e9",
           "source_object": "Line1241",
           "source_materials": [
             "DESK-CRATOS-WS_LEVELING_FOOT"
@@ -4011,8 +4018,8 @@
             0.041,
             0.042
           ],
-          "bytes": 2904,
-          "hash": "9282f12e777b",
+          "bytes": 2900,
+          "hash": "a882c4ffde70",
           "source_object": "Line1242",
           "source_materials": [
             "DESK-CRATOS-WS_LEVELING_FOOT"
@@ -4030,15 +4037,15 @@
             0.041,
             0.042
           ],
-          "bytes": 2896,
-          "hash": "2d0f0465a053",
+          "bytes": 2900,
+          "hash": "bb1cf8baa854",
           "source_object": "Line1243",
           "source_materials": [
             "DESK-CRATOS-WS_LEVELING_FOOT"
           ]
         },
         "modesty_0": {
-          "glb": "/3d-parts/accessories/modesty-34b478d090a1.glb",
+          "glb": "/3d-parts/accessories/modesty-9f405046fad4.glb",
           "anchor": [
             0.0,
             0.0,
@@ -4050,14 +4057,14 @@
             0.006
           ],
           "bytes": 1488,
-          "hash": "34b478d090a1",
+          "hash": "9f405046fad4",
           "source_object": "Rectangle322",
           "source_materials": [
             "DESK-CRATOS-WS_MODESTY_PANEL"
           ]
         },
         "modesty_1": {
-          "glb": "/3d-parts/accessories/modesty-afab725f1084.glb",
+          "glb": "/3d-parts/accessories/modesty-ced05f18dffe.glb",
           "anchor": [
             0.0,
             0.0,
@@ -4068,15 +4075,15 @@
             0.108,
             0.006
           ],
-          "bytes": 1492,
-          "hash": "afab725f1084",
+          "bytes": 1488,
+          "hash": "ced05f18dffe",
           "source_object": "Rectangle324",
           "source_materials": [
             "DESK-CRATOS-WS_MODESTY_PANEL"
           ]
         },
         "modesty_2": {
-          "glb": "/3d-parts/accessories/modesty-59d623e7bc9c.glb",
+          "glb": "/3d-parts/accessories/modesty-91f71069479c.glb",
           "anchor": [
             0.0,
             0.0,
@@ -4088,14 +4095,14 @@
             0.006
           ],
           "bytes": 1488,
-          "hash": "59d623e7bc9c",
+          "hash": "91f71069479c",
           "source_object": "Rectangle328",
           "source_materials": [
             "DESK-CRATOS-WS_MODESTY_PANEL"
           ]
         },
         "modesty_3": {
-          "glb": "/3d-parts/accessories/modesty-5eacd9242380.glb",
+          "glb": "/3d-parts/accessories/modesty-c8892cc276a1.glb",
           "anchor": [
             0.0,
             0.0,
@@ -4107,14 +4114,14 @@
             0.006
           ],
           "bytes": 1492,
-          "hash": "5eacd9242380",
+          "hash": "c8892cc276a1",
           "source_object": "Rectangle330",
           "source_materials": [
             "DESK-CRATOS-WS_MODESTY_PANEL"
           ]
         },
         "modesty_4": {
-          "glb": "/3d-parts/accessories/modesty-4192369504ad.glb",
+          "glb": "/3d-parts/accessories/modesty-9c088c133077.glb",
           "anchor": [
             0.0,
             0.0,
@@ -4126,14 +4133,14 @@
             0.006
           ],
           "bytes": 1488,
-          "hash": "4192369504ad",
+          "hash": "9c088c133077",
           "source_object": "Rectangle332",
           "source_materials": [
             "DESK-CRATOS-WS_MODESTY_PANEL"
           ]
         },
         "modesty_5": {
-          "glb": "/3d-parts/accessories/modesty-4b28feb180f1.glb",
+          "glb": "/3d-parts/accessories/modesty-224a02ce8c82.glb",
           "anchor": [
             0.0,
             0.0,
@@ -4145,14 +4152,33 @@
             0.006
           ],
           "bytes": 1488,
-          "hash": "4b28feb180f1",
+          "hash": "224a02ce8c82",
           "source_object": "Rectangle334",
           "source_materials": [
             "DESK-CRATOS-WS_MODESTY_PANEL"
           ]
         },
+        "screen_front": {
+          "glb": "/3d-parts/accessories/screen_front-4e8876a10948.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            4.258,
+            0.02,
+            0.4
+          ],
+          "bytes": 1392,
+          "hash": "4e8876a10948",
+          "source_object": "SCREEN_PANEL_center_spine",
+          "source_materials": [
+            "Screen_LightGrey_Fabric"
+          ]
+        },
         "screen_side_0": {
-          "glb": "/3d-parts/accessories/screen_side-0dd3f1b0bbb0.glb",
+          "glb": "/3d-parts/accessories/screen_side-f7f565961aae.glb",
           "anchor": [
             0.0,
             0.0,
@@ -4164,14 +4190,14 @@
             0.4
           ],
           "bytes": 1400,
-          "hash": "0dd3f1b0bbb0",
+          "hash": "f7f565961aae",
           "source_object": "SCREEN_PANEL_side_0_0",
           "source_materials": [
             "Screen_LightGrey_Fabric"
           ]
         },
         "screen_side_1": {
-          "glb": "/3d-parts/accessories/screen_side-e7aeab659ff0.glb",
+          "glb": "/3d-parts/accessories/screen_side-44f4abeb8974.glb",
           "anchor": [
             0.0,
             0.0,
@@ -4183,14 +4209,14 @@
             0.4
           ],
           "bytes": 1396,
-          "hash": "e7aeab659ff0",
+          "hash": "44f4abeb8974",
           "source_object": "SCREEN_PANEL_side_0_1",
           "source_materials": [
             "Screen_LightGrey_Fabric"
           ]
         },
         "screen_side_2": {
-          "glb": "/3d-parts/accessories/screen_side-b233ebd8bd27.glb",
+          "glb": "/3d-parts/accessories/screen_side-51a91434249d.glb",
           "anchor": [
             0.0,
             0.0,
@@ -4202,14 +4228,14 @@
             0.4
           ],
           "bytes": 1396,
-          "hash": "b233ebd8bd27",
+          "hash": "51a91434249d",
           "source_object": "SCREEN_PANEL_side_1_0",
           "source_materials": [
             "Screen_LightGrey_Fabric"
           ]
         },
         "screen_side_3": {
-          "glb": "/3d-parts/accessories/screen_side-791f20ba4ac4.glb",
+          "glb": "/3d-parts/accessories/screen_side-ca8d61ea00ff.glb",
           "anchor": [
             0.0,
             0.0,
@@ -4221,7 +4247,7 @@
             0.4
           ],
           "bytes": 1396,
-          "hash": "791f20ba4ac4",
+          "hash": "ca8d61ea00ff",
           "source_object": "SCREEN_PANEL_side_1_1",
           "source_materials": [
             "Screen_LightGrey_Fabric"
@@ -4240,7 +4266,7 @@
             0.656
           ],
           "bytes": 1460,
-          "hash": "e153d09b253c",
+          "hash": "f49ee05b9e96",
           "source_object": "Box3089",
           "source_materials": [
             "DESK-CRATOS-WS_LEG"
@@ -4259,7 +4285,7 @@
             0.656
           ],
           "bytes": 1456,
-          "hash": "33c7f2c733f3",
+          "hash": "27becfd07ff8",
           "source_object": "Box3090",
           "source_materials": [
             "DESK-CRATOS-WS_LEG"
@@ -4278,7 +4304,7 @@
             0.656
           ],
           "bytes": 1464,
-          "hash": "a2035c52da59",
+          "hash": "fc5e35fd9a61",
           "source_object": "Box3104",
           "source_materials": [
             "DESK-CRATOS-WS_LEG"
@@ -4297,29 +4323,10 @@
             0.656
           ],
           "bytes": 1460,
-          "hash": "d9fabcbd46f3",
+          "hash": "e8420da7e077",
           "source_object": "Box3105",
           "source_materials": [
             "DESK-CRATOS-WS_LEG"
-          ]
-        },
-        "screen_front_0": {
-          "glb": "/3d-parts/accessories/screen_front-46ca220a1e9f.glb",
-          "anchor": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "bbox": [
-            4.258,
-            0.02,
-            0.4
-          ],
-          "bytes": 1392,
-          "hash": "46ca220a1e9f",
-          "source_object": "SCREEN_PANEL_center_spine",
-          "source_materials": [
-            "Screen_LightGrey_Fabric"
           ]
         }
       },
@@ -4347,8 +4354,9 @@
             0.018
           ]
         }
-      ]
+      ],
+      "productKind": "workstation"
     }
   },
-  "generated_at": "2026-04-20T02:12:00.073613Z"
+  "generated_at": "2026-04-20T03:54:26.768380Z"
 }

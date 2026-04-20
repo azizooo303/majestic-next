@@ -1,0 +1,275 @@
+{
+  "family": "nepton",
+  "configs": {
+    "Executive": {
+      "parts": {
+        "modesty": {
+          "glb": "/3d-parts/accessories/modesty-3f175a6fc136.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.4,
+            0.018,
+            0.35
+          ],
+          "bytes": 1476,
+          "hash": "3f175a6fc136",
+          "source_object": "Box3128",
+          "source_materials": [
+            "Majestic_WhitePaint"
+          ]
+        },
+        "top": {
+          "glb": "/3d-parts/nepton/top/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.8,
+            0.8,
+            0.03
+          ],
+          "bytes": 161692,
+          "hash": "842686d1e189",
+          "source_object": "Box3129",
+          "source_materials": [
+            "Library_A398_ItalianWalnut"
+          ]
+        },
+        "grommet_0": {
+          "glb": "/3d-parts/accessories/grommet-a74e57251a0d.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.268,
+            0.02,
+            0.0
+          ],
+          "bytes": 1400,
+          "hash": "a74e57251a0d",
+          "source_object": "Plane062",
+          "source_materials": [
+            "Majestic_WhitePaint"
+          ]
+        },
+        "grommet_1": {
+          "glb": "/3d-parts/accessories/grommet-a1ea68f72e2b.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.267,
+            0.07,
+            0.002
+          ],
+          "bytes": 1340,
+          "hash": "a1ea68f72e2b",
+          "source_object": "Rectangle335",
+          "source_materials": [
+            "Majestic_WhitePaint"
+          ]
+        },
+        "grommet_2": {
+          "glb": "/3d-parts/accessories/grommet-5fcfc5dc04bc.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.3,
+            0.108,
+            0.006
+          ],
+          "bytes": 1480,
+          "hash": "5fcfc5dc04bc",
+          "source_object": "Rectangle336",
+          "source_materials": [
+            "Majestic_WhitePaint"
+          ]
+        },
+        "grommet_3": {
+          "glb": "/3d-parts/accessories/grommet-5a87b73207e8.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.026,
+            0.167,
+            0.01
+          ],
+          "bytes": 11660,
+          "hash": "5a87b73207e8",
+          "source_object": "Box3106",
+          "source_materials": [
+            "Majestic_WhitePaint"
+          ]
+        },
+        "grommet_4": {
+          "glb": "/3d-parts/accessories/grommet-fcc293e4513c.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.026,
+            0.167,
+            0.01
+          ],
+          "bytes": 11664,
+          "hash": "fcc293e4513c",
+          "source_object": "Box3116",
+          "source_materials": [
+            "Majestic_WhitePaint"
+          ]
+        },
+        "grommet_5": {
+          "glb": "/3d-parts/accessories/grommet-88d59a169489.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.026,
+            0.167,
+            0.01
+          ],
+          "bytes": 11652,
+          "hash": "88d59a169489",
+          "source_object": "Box3117",
+          "source_materials": [
+            "Majestic_WhitePaint"
+          ]
+        },
+        "feet_0": {
+          "glb": "/3d-parts/nepton/feet_0/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.069,
+            0.05,
+            0.031
+          ],
+          "bytes": 12564,
+          "hash": "c11af2418094",
+          "source_object": "Line1291",
+          "source_materials": [
+            "Majestic_WhitePaint"
+          ]
+        },
+        "feet_1": {
+          "glb": "/3d-parts/nepton/feet_1/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.069,
+            0.05,
+            0.031
+          ],
+          "bytes": 12564,
+          "hash": "428f4b551cee",
+          "source_object": "Line1292",
+          "source_materials": [
+            "Majestic_WhitePaint"
+          ]
+        },
+        "feet_2": {
+          "glb": "/3d-parts/nepton/feet_2/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.069,
+            0.05,
+            0.031
+          ],
+          "bytes": 12568,
+          "hash": "8486d4532633",
+          "source_object": "Line1293",
+          "source_materials": [
+            "Majestic_WhitePaint"
+          ]
+        },
+        "feet_3": {
+          "glb": "/3d-parts/nepton/feet_3/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.069,
+            0.05,
+            0.031
+          ],
+          "bytes": 12564,
+          "hash": "cbf8eff04492",
+          "source_object": "Line1294",
+          "source_materials": [
+            "Majestic_WhitePaint"
+          ]
+        }
+      },
+      "baseSize": "180x80",
+      "unknowns": [
+        {
+          "name": "Layer:015",
+          "materials": [
+            "Majestic_WhitePaint"
+          ],
+          "extents": [
+            1.791,
+            0.789,
+            0.722
+          ]
+        },
+        {
+          "name": "Box3118",
+          "materials": [
+            "Majestic_WhitePaint"
+          ],
+          "extents": [
+            0.026,
+            0.01,
+            0.153
+          ]
+        },
+        {
+          "name": "Cyc",
+          "materials": [
+            "GradientFloor"
+          ],
+          "extents": [
+            30.0,
+            30.0,
+            0.0
+          ]
+        }
+      ],
+      "productKind": "desk"
+    }
+  },
+  "generated_at": "2026-04-20T03:54:26.787754Z"
+}

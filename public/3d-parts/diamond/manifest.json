@@ -1,0 +1,1468 @@
+{
+  "family": "diamond",
+  "configs": {
+    "Executive": {
+      "parts": {
+        "frame_beam_0": {
+          "glb": "/3d-parts/diamond/frame_beam_0/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.448,
+            0.04,
+            0.04
+          ],
+          "bytes": 1436,
+          "hash": "4f3d477ae030",
+          "source_object": "Box3165",
+          "source_materials": [
+            "Majestic_WhitePaint.001"
+          ]
+        },
+        "frame_beam_1": {
+          "glb": "/3d-parts/diamond/frame_beam_1/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.448,
+            0.04,
+            0.04
+          ],
+          "bytes": 1436,
+          "hash": "cc43342e076f",
+          "source_object": "Box3166",
+          "source_materials": [
+            "Majestic_WhitePaint.001"
+          ]
+        },
+        "modesty": {
+          "glb": "/3d-parts/accessories/modesty-d4df90de344c.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.5,
+            0.018,
+            0.35
+          ],
+          "bytes": 1476,
+          "hash": "d4df90de344c",
+          "source_object": "Box3167",
+          "source_materials": [
+            "Majestic_WhitePaint.001"
+          ]
+        },
+        "top": {
+          "glb": "/3d-parts/diamond/top/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.8,
+            0.8,
+            0.03
+          ],
+          "bytes": 161688,
+          "hash": "ec919806ec87",
+          "source_object": "Box3168",
+          "source_materials": [
+            "A398_Italian_Walnut.001"
+          ]
+        },
+        "feet_0": {
+          "glb": "/3d-parts/diamond/feet_0/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 3420,
+          "hash": "00bd6db07569",
+          "source_object": "o349",
+          "source_materials": [
+            "Majestic_WhitePaint.001"
+          ]
+        },
+        "feet_1": {
+          "glb": "/3d-parts/diamond/feet_1/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 2812,
+          "hash": "2bac99a6a18d",
+          "source_object": "o350",
+          "source_materials": [
+            "Majestic_WhitePaint.001"
+          ]
+        },
+        "feet_2": {
+          "glb": "/3d-parts/diamond/feet_2/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 3472,
+          "hash": "d03bd58c4ac7",
+          "source_object": "o351",
+          "source_materials": [
+            "Majestic_WhitePaint.001"
+          ]
+        },
+        "feet_3": {
+          "glb": "/3d-parts/diamond/feet_3/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 2804,
+          "hash": "3d478187d16d",
+          "source_object": "o352",
+          "source_materials": [
+            "Majestic_WhitePaint.001"
+          ]
+        },
+        "feet_4": {
+          "glb": "/3d-parts/diamond/feet_4/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.036,
+            0.036,
+            0.009
+          ],
+          "bytes": 10312,
+          "hash": "280e221ca73f",
+          "source_object": "o353",
+          "source_materials": [
+            "Majestic_WhitePaint.001"
+          ]
+        },
+        "feet_5": {
+          "glb": "/3d-parts/diamond/feet_5/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.036,
+            0.036,
+            0.009
+          ],
+          "bytes": 17436,
+          "hash": "ccf87ca2657c",
+          "source_object": "o354",
+          "source_materials": [
+            "Majestic_WhitePaint.001"
+          ]
+        },
+        "feet_6": {
+          "glb": "/3d-parts/diamond/feet_6/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 3492,
+          "hash": "449c568a5423",
+          "source_object": "o359",
+          "source_materials": [
+            "Majestic_WhitePaint.001"
+          ]
+        },
+        "feet_7": {
+          "glb": "/3d-parts/diamond/feet_7/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 2824,
+          "hash": "29be6c6debff",
+          "source_object": "o360",
+          "source_materials": [
+            "Majestic_WhitePaint.001"
+          ]
+        },
+        "feet_8": {
+          "glb": "/3d-parts/diamond/feet_8/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 3524,
+          "hash": "b11db4968479",
+          "source_object": "o361",
+          "source_materials": [
+            "Majestic_WhitePaint.001"
+          ]
+        },
+        "feet_9": {
+          "glb": "/3d-parts/diamond/feet_9/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 2824,
+          "hash": "f6614401dcfe",
+          "source_object": "o362",
+          "source_materials": [
+            "Majestic_WhitePaint.001"
+          ]
+        },
+        "feet_10": {
+          "glb": "/3d-parts/diamond/feet_10/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.036,
+            0.036,
+            0.009
+          ],
+          "bytes": 10268,
+          "hash": "3e67a8f5c1c9",
+          "source_object": "o363",
+          "source_materials": [
+            "Majestic_WhitePaint.001"
+          ]
+        },
+        "feet_11": {
+          "glb": "/3d-parts/diamond/feet_11/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.036,
+            0.036,
+            0.009
+          ],
+          "bytes": 18084,
+          "hash": "487a547d0fd6",
+          "source_object": "o364",
+          "source_materials": [
+            "Majestic_WhitePaint.001"
+          ]
+        },
+        "feet_12": {
+          "glb": "/3d-parts/diamond/feet_12/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 2948,
+          "hash": "940891d94e79",
+          "source_object": "Line1325",
+          "source_materials": [
+            "Majestic_WhitePaint.001"
+          ]
+        },
+        "feet_13": {
+          "glb": "/3d-parts/diamond/feet_13/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 2888,
+          "hash": "82cc8a61a967",
+          "source_object": "Line1326",
+          "source_materials": [
+            "Majestic_WhitePaint.001"
+          ]
+        },
+        "feet_14": {
+          "glb": "/3d-parts/diamond/feet_14/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 2956,
+          "hash": "7fbc826c7126",
+          "source_object": "Line1327",
+          "source_materials": [
+            "Majestic_WhitePaint.001"
+          ]
+        },
+        "feet_15": {
+          "glb": "/3d-parts/diamond/feet_15/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 2888,
+          "hash": "87a2ea5ba33f",
+          "source_object": "Line1328",
+          "source_materials": [
+            "Majestic_WhitePaint.001"
+          ]
+        },
+        "leg_l_0": {
+          "glb": "/3d-parts/diamond/leg_l_0/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.611
+          ],
+          "bytes": 1756,
+          "hash": "9947147c1bab",
+          "source_object": "o357",
+          "source_materials": [
+            "Majestic_WhitePaint.001"
+          ]
+        },
+        "leg_l_1": {
+          "glb": "/3d-parts/diamond/leg_l_1/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.611
+          ],
+          "bytes": 1752,
+          "hash": "31d8ac64221d",
+          "source_object": "o358",
+          "source_materials": [
+            "Majestic_WhitePaint.001"
+          ]
+        },
+        "leg_r_0": {
+          "glb": "/3d-parts/diamond/leg_r_0/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.611
+          ],
+          "bytes": 1760,
+          "hash": "0ca676a9da11",
+          "source_object": "o367",
+          "source_materials": [
+            "Majestic_WhitePaint.001"
+          ]
+        },
+        "leg_r_1": {
+          "glb": "/3d-parts/diamond/leg_r_1/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.611
+          ],
+          "bytes": 1756,
+          "hash": "674d44779783",
+          "source_object": "o368",
+          "source_materials": [
+            "Majestic_WhitePaint.001"
+          ]
+        }
+      },
+      "baseSize": "180x80",
+      "unknowns": [
+        {
+          "name": "o355",
+          "materials": [
+            "Majestic_WhitePaint.001"
+          ],
+          "extents": [
+            0.05,
+            0.684,
+            0.05
+          ]
+        },
+        {
+          "name": "o356",
+          "materials": [
+            "Majestic_WhitePaint.001"
+          ],
+          "extents": [
+            0.05,
+            0.684,
+            0.05
+          ]
+        },
+        {
+          "name": "o365",
+          "materials": [
+            "Majestic_WhitePaint.001"
+          ],
+          "extents": [
+            0.05,
+            0.684,
+            0.05
+          ]
+        },
+        {
+          "name": "o366",
+          "materials": [
+            "Majestic_WhitePaint.001"
+          ],
+          "extents": [
+            0.05,
+            0.684,
+            0.05
+          ]
+        },
+        {
+          "name": "Cyc",
+          "materials": [
+            "Cyc_Gradient"
+          ],
+          "extents": [
+            30.0,
+            30.0,
+            0.0
+          ]
+        }
+      ],
+      "productKind": "desk"
+    },
+    "Manager": {
+      "parts": {
+        "top": {
+          "glb": "/3d-parts/diamond/top/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.6,
+            0.8,
+            0.03
+          ],
+          "bytes": 161684,
+          "hash": "cddfe97b16c5",
+          "source_object": "Box428",
+          "source_materials": [
+            "A398_Italian_Walnut"
+          ]
+        },
+        "feet_0": {
+          "glb": "/3d-parts/diamond/feet_0/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 3448,
+          "hash": "bba238bff020",
+          "source_object": "o129",
+          "source_materials": [
+            "Majestic_WhitePaint"
+          ]
+        },
+        "feet_1": {
+          "glb": "/3d-parts/diamond/feet_1/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 2808,
+          "hash": "5dffd49446e1",
+          "source_object": "o130",
+          "source_materials": [
+            "Majestic_WhitePaint"
+          ]
+        },
+        "feet_2": {
+          "glb": "/3d-parts/diamond/feet_2/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 3476,
+          "hash": "8f90666e421e",
+          "source_object": "o131",
+          "source_materials": [
+            "Majestic_WhitePaint"
+          ]
+        },
+        "feet_3": {
+          "glb": "/3d-parts/diamond/feet_3/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 2800,
+          "hash": "dc58a2da4cc3",
+          "source_object": "o132",
+          "source_materials": [
+            "Majestic_WhitePaint"
+          ]
+        },
+        "feet_4": {
+          "glb": "/3d-parts/diamond/feet_4/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.036,
+            0.036,
+            0.009
+          ],
+          "bytes": 10324,
+          "hash": "58bdc773ee67",
+          "source_object": "o133",
+          "source_materials": [
+            "Majestic_WhitePaint"
+          ]
+        },
+        "feet_5": {
+          "glb": "/3d-parts/diamond/feet_5/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.036,
+            0.036,
+            0.009
+          ],
+          "bytes": 17556,
+          "hash": "079d1179ac50",
+          "source_object": "o134",
+          "source_materials": [
+            "Majestic_WhitePaint"
+          ]
+        },
+        "feet_6": {
+          "glb": "/3d-parts/diamond/feet_6/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 2944,
+          "hash": "3788cd51c726",
+          "source_object": "Line1264",
+          "source_materials": [
+            "Majestic_WhitePaint"
+          ]
+        },
+        "feet_7": {
+          "glb": "/3d-parts/diamond/feet_7/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 2888,
+          "hash": "3a3e762b644f",
+          "source_object": "Line1265",
+          "source_materials": [
+            "Majestic_WhitePaint"
+          ]
+        },
+        "feet_8": {
+          "glb": "/3d-parts/diamond/feet_8/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 2952,
+          "hash": "ba8667a15a86",
+          "source_object": "Line1266",
+          "source_materials": [
+            "Majestic_WhitePaint"
+          ]
+        },
+        "feet_9": {
+          "glb": "/3d-parts/diamond/feet_9/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 2884,
+          "hash": "790f6586e225",
+          "source_object": "Line1267",
+          "source_materials": [
+            "Majestic_WhitePaint"
+          ]
+        },
+        "feet_10": {
+          "glb": "/3d-parts/diamond/feet_10/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 3464,
+          "hash": "8dbfa3111b67",
+          "source_object": "o139",
+          "source_materials": [
+            "Majestic_WhitePaint"
+          ]
+        },
+        "feet_11": {
+          "glb": "/3d-parts/diamond/feet_11/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 2824,
+          "hash": "773c31f29f44",
+          "source_object": "o140",
+          "source_materials": [
+            "Majestic_WhitePaint"
+          ]
+        },
+        "feet_12": {
+          "glb": "/3d-parts/diamond/feet_12/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 3528,
+          "hash": "cb946d63be24",
+          "source_object": "o141",
+          "source_materials": [
+            "Majestic_WhitePaint"
+          ]
+        },
+        "feet_13": {
+          "glb": "/3d-parts/diamond/feet_13/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 2820,
+          "hash": "deab46152aca",
+          "source_object": "o142",
+          "source_materials": [
+            "Majestic_WhitePaint"
+          ]
+        },
+        "feet_14": {
+          "glb": "/3d-parts/diamond/feet_14/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.036,
+            0.036,
+            0.009
+          ],
+          "bytes": 10268,
+          "hash": "ccf43c777fc0",
+          "source_object": "o143",
+          "source_materials": [
+            "Majestic_WhitePaint"
+          ]
+        },
+        "feet_15": {
+          "glb": "/3d-parts/diamond/feet_15/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.036,
+            0.036,
+            0.009
+          ],
+          "bytes": 18240,
+          "hash": "eaee6193cd61",
+          "source_object": "o144",
+          "source_materials": [
+            "Majestic_WhitePaint"
+          ]
+        },
+        "frame_beam_0": {
+          "glb": "/3d-parts/diamond/frame_beam_0/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.448,
+            0.04,
+            0.04
+          ],
+          "bytes": 1432,
+          "hash": "804b9352de6e",
+          "source_object": "Box3117",
+          "source_materials": [
+            "Majestic_WhitePaint"
+          ]
+        },
+        "frame_beam_1": {
+          "glb": "/3d-parts/diamond/frame_beam_1/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.448,
+            0.04,
+            0.04
+          ],
+          "bytes": 1432,
+          "hash": "97d4bac232d9",
+          "source_object": "Box3118",
+          "source_materials": [
+            "Majestic_WhitePaint"
+          ]
+        },
+        "leg_l_0": {
+          "glb": "/3d-parts/diamond/leg_l_0/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.611
+          ],
+          "bytes": 1748,
+          "hash": "dc96fc4e44a5",
+          "source_object": "o137",
+          "source_materials": [
+            "Majestic_WhitePaint"
+          ]
+        },
+        "leg_l_1": {
+          "glb": "/3d-parts/diamond/leg_l_1/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.611
+          ],
+          "bytes": 1752,
+          "hash": "45afdc7e5a3f",
+          "source_object": "o138",
+          "source_materials": [
+            "Majestic_WhitePaint"
+          ]
+        },
+        "leg_r_0": {
+          "glb": "/3d-parts/diamond/leg_r_0/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.611
+          ],
+          "bytes": 1756,
+          "hash": "eb08c5c107de",
+          "source_object": "o147",
+          "source_materials": [
+            "Majestic_WhitePaint"
+          ]
+        },
+        "leg_r_1": {
+          "glb": "/3d-parts/diamond/leg_r_1/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.611
+          ],
+          "bytes": 1752,
+          "hash": "bf8272994923",
+          "source_object": "o148",
+          "source_materials": [
+            "Majestic_WhitePaint"
+          ]
+        }
+      },
+      "baseSize": "160x80",
+      "unknowns": [
+        {
+          "name": "o135",
+          "materials": [
+            "Majestic_WhitePaint"
+          ],
+          "extents": [
+            0.05,
+            0.684,
+            0.05
+          ]
+        },
+        {
+          "name": "o136",
+          "materials": [
+            "Majestic_WhitePaint"
+          ],
+          "extents": [
+            0.05,
+            0.684,
+            0.05
+          ]
+        },
+        {
+          "name": "o145",
+          "materials": [
+            "Majestic_WhitePaint"
+          ],
+          "extents": [
+            0.05,
+            0.684,
+            0.05
+          ]
+        },
+        {
+          "name": "o146",
+          "materials": [
+            "Majestic_WhitePaint"
+          ],
+          "extents": [
+            0.05,
+            0.684,
+            0.05
+          ]
+        },
+        {
+          "name": "Cyc",
+          "materials": [
+            "Cyc_Gradient"
+          ],
+          "extents": [
+            30.0,
+            30.0,
+            0.0
+          ]
+        }
+      ],
+      "productKind": "desk"
+    },
+    "Operator": {
+      "parts": {
+        "top": {
+          "glb": "/3d-parts/diamond/top/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.4,
+            0.7,
+            0.03
+          ],
+          "bytes": 161644,
+          "hash": "e06ac11b5b19",
+          "source_object": "Box3084",
+          "source_materials": [
+            "A398_Italian_Walnut"
+          ]
+        },
+        "frame_beam": {
+          "glb": "/3d-parts/diamond/frame_beam/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.283,
+            0.04,
+            0.04
+          ],
+          "bytes": 1436,
+          "hash": "9dc94c6a91c7",
+          "source_object": "Box3086",
+          "source_materials": [
+            "Majestic_WhitePaint"
+          ]
+        },
+        "feet_0": {
+          "glb": "/3d-parts/diamond/feet_0/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 2944,
+          "hash": "b272f0975bf7",
+          "source_object": "Line1226",
+          "source_materials": [
+            "Majestic_WhitePaint"
+          ]
+        },
+        "feet_1": {
+          "glb": "/3d-parts/diamond/feet_1/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 2892,
+          "hash": "b9440b80df4c",
+          "source_object": "Line1227",
+          "source_materials": [
+            "Majestic_WhitePaint"
+          ]
+        },
+        "feet_2": {
+          "glb": "/3d-parts/diamond/feet_2/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 3420,
+          "hash": "66d04d50350a",
+          "source_object": "o259",
+          "source_materials": [
+            "Majestic_WhitePaint"
+          ]
+        },
+        "feet_3": {
+          "glb": "/3d-parts/diamond/feet_3/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 2820,
+          "hash": "89f233435f96",
+          "source_object": "o260",
+          "source_materials": [
+            "Majestic_WhitePaint"
+          ]
+        },
+        "feet_4": {
+          "glb": "/3d-parts/diamond/feet_4/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 3476,
+          "hash": "9157785d02d7",
+          "source_object": "o261",
+          "source_materials": [
+            "Majestic_WhitePaint"
+          ]
+        },
+        "feet_5": {
+          "glb": "/3d-parts/diamond/feet_5/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 2816,
+          "hash": "b32c4819d663",
+          "source_object": "o262",
+          "source_materials": [
+            "Majestic_WhitePaint"
+          ]
+        },
+        "feet_6": {
+          "glb": "/3d-parts/diamond/feet_6/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.036,
+            0.036,
+            0.009
+          ],
+          "bytes": 10316,
+          "hash": "0f0deddd9a3c",
+          "source_object": "o263",
+          "source_materials": [
+            "Majestic_WhitePaint"
+          ]
+        },
+        "feet_7": {
+          "glb": "/3d-parts/diamond/feet_7/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.036,
+            0.036,
+            0.009
+          ],
+          "bytes": 17496,
+          "hash": "4fdc016548ee",
+          "source_object": "o264",
+          "source_materials": [
+            "Majestic_WhitePaint"
+          ]
+        },
+        "feet_8": {
+          "glb": "/3d-parts/diamond/feet_8/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 3444,
+          "hash": "dcb6faa33b19",
+          "source_object": "o269",
+          "source_materials": [
+            "Majestic_WhitePaint"
+          ]
+        },
+        "feet_9": {
+          "glb": "/3d-parts/diamond/feet_9/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 2808,
+          "hash": "0394559d8050",
+          "source_object": "o270",
+          "source_materials": [
+            "Majestic_WhitePaint"
+          ]
+        },
+        "feet_10": {
+          "glb": "/3d-parts/diamond/feet_10/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 3456,
+          "hash": "ef4027882f76",
+          "source_object": "o271",
+          "source_materials": [
+            "Majestic_WhitePaint"
+          ]
+        },
+        "feet_11": {
+          "glb": "/3d-parts/diamond/feet_11/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 2800,
+          "hash": "a5f5ba365410",
+          "source_object": "o272",
+          "source_materials": [
+            "Majestic_WhitePaint"
+          ]
+        },
+        "feet_12": {
+          "glb": "/3d-parts/diamond/feet_12/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.036,
+            0.036,
+            0.009
+          ],
+          "bytes": 10320,
+          "hash": "a5e9c58b48f2",
+          "source_object": "o273",
+          "source_materials": [
+            "Majestic_WhitePaint"
+          ]
+        },
+        "feet_13": {
+          "glb": "/3d-parts/diamond/feet_13/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.036,
+            0.036,
+            0.009
+          ],
+          "bytes": 17508,
+          "hash": "47e03856189d",
+          "source_object": "o274",
+          "source_materials": [
+            "Majestic_WhitePaint"
+          ]
+        },
+        "leg_l_0": {
+          "glb": "/3d-parts/diamond/leg_l_0/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.611
+          ],
+          "bytes": 1748,
+          "hash": "9325946364ae",
+          "source_object": "o267",
+          "source_materials": [
+            "Majestic_WhitePaint"
+          ]
+        },
+        "leg_l_1": {
+          "glb": "/3d-parts/diamond/leg_l_1/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.611
+          ],
+          "bytes": 1752,
+          "hash": "5942cbb79728",
+          "source_object": "o268",
+          "source_materials": [
+            "Majestic_WhitePaint"
+          ]
+        },
+        "leg_r_0": {
+          "glb": "/3d-parts/diamond/leg_r_0/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.611
+          ],
+          "bytes": 1744,
+          "hash": "0ebd0c630844",
+          "source_object": "o277",
+          "source_materials": [
+            "Majestic_WhitePaint"
+          ]
+        },
+        "leg_r_1": {
+          "glb": "/3d-parts/diamond/leg_r_1/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.611
+          ],
+          "bytes": 1748,
+          "hash": "4a902b42aa38",
+          "source_object": "o278",
+          "source_materials": [
+            "Majestic_WhitePaint"
+          ]
+        }
+      },
+      "baseSize": "140x70",
+      "unknowns": [
+        {
+          "name": "o265",
+          "materials": [
+            "Majestic_WhitePaint"
+          ],
+          "extents": [
+            0.05,
+            0.574,
+            0.05
+          ]
+        },
+        {
+          "name": "o266",
+          "materials": [
+            "Majestic_WhitePaint"
+          ],
+          "extents": [
+            0.05,
+            0.574,
+            0.05
+          ]
+        },
+        {
+          "name": "o275",
+          "materials": [
+            "Majestic_WhitePaint"
+          ],
+          "extents": [
+            0.05,
+            0.574,
+            0.05
+          ]
+        },
+        {
+          "name": "o276",
+          "materials": [
+            "Majestic_WhitePaint"
+          ],
+          "extents": [
+            0.05,
+            0.574,
+            0.05
+          ]
+        },
+        {
+          "name": "Cyc",
+          "materials": [
+            "Cyc_DarkGradient"
+          ],
+          "extents": [
+            30.0,
+            30.0,
+            0.0
+          ]
+        }
+      ],
+      "productKind": "desk"
+    }
+  },
+  "generated_at": "2026-04-20T03:54:26.784619Z"
+}

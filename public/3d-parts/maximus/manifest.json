@@ -1,0 +1,1125 @@
+{
+  "family": "maximus",
+  "configs": {
+    "L-Shape": {
+      "parts": {
+        "frame_beam_0": {
+          "glb": "/3d-parts/maximus/frame_beam_0/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.018,
+            1.198,
+            0.65
+          ],
+          "bytes": 1536,
+          "hash": "a79ed5751ef3",
+          "source_object": "Object016",
+          "source_materials": [
+            "FRAME_BEAM_a398"
+          ]
+        },
+        "frame_beam_1": {
+          "glb": "/3d-parts/maximus/frame_beam_1/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.499,
+            1.18,
+            0.018
+          ],
+          "bytes": 1452,
+          "hash": "500f308b31c8",
+          "source_object": "Object018",
+          "source_materials": [
+            "FRAME_BEAM_a398"
+          ]
+        },
+        "frame_beam_2": {
+          "glb": "/3d-parts/maximus/frame_beam_2/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.082,
+            1.2,
+            0.048
+          ],
+          "bytes": 1496,
+          "hash": "0b46a62b6637",
+          "source_object": "Box1780",
+          "source_materials": [
+            "FRAME_BEAM_a398"
+          ]
+        },
+        "frame_beam_3": {
+          "glb": "/3d-parts/maximus/frame_beam_3/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.512,
+            0.018,
+            0.65
+          ],
+          "bytes": 1520,
+          "hash": "e236db30d7a6",
+          "source_object": "Object005",
+          "source_materials": [
+            "FRAME_BEAM_a398"
+          ]
+        },
+        "frame_beam_4": {
+          "glb": "/3d-parts/maximus/frame_beam_4/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.464,
+            0.018,
+            0.632
+          ],
+          "bytes": 1512,
+          "hash": "ace779ebe108",
+          "source_object": "Object020",
+          "source_materials": [
+            "FRAME_BEAM_a398"
+          ]
+        },
+        "frame_beam_5": {
+          "glb": "/3d-parts/maximus/frame_beam_5/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.476,
+            0.018,
+            0.632
+          ],
+          "bytes": 1476,
+          "hash": "8cf2f9b3251c",
+          "source_object": "Object021",
+          "source_materials": [
+            "FRAME_BEAM_a398"
+          ]
+        },
+        "frame_beam_6": {
+          "glb": "/3d-parts/maximus/frame_beam_6/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.082,
+            1.2,
+            0.048
+          ],
+          "bytes": 1496,
+          "hash": "99991373de1a",
+          "source_object": "Box003",
+          "source_materials": [
+            "FRAME_BEAM_a398"
+          ]
+        },
+        "frame_beam_7": {
+          "glb": "/3d-parts/maximus/frame_beam_7/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.018,
+            0.402,
+            0.639
+          ],
+          "bytes": 2212,
+          "hash": "32bf53e64023",
+          "source_object": "Object006",
+          "source_materials": [
+            "FRAME_BEAM_a398"
+          ]
+        },
+        "frame_beam_8": {
+          "glb": "/3d-parts/maximus/frame_beam_8/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.52,
+            0.018,
+            0.65
+          ],
+          "bytes": 1492,
+          "hash": "e6b2836f4ed8",
+          "source_object": "Object014",
+          "source_materials": [
+            "FRAME_BEAM_a398"
+          ]
+        },
+        "frame_beam_9": {
+          "glb": "/3d-parts/maximus/frame_beam_9/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.4,
+            0.8,
+            0.048
+          ],
+          "bytes": 1520,
+          "hash": "4ee07662c12c",
+          "source_object": "Box1737",
+          "source_materials": [
+            "FRAME_BEAM_a398"
+          ]
+        },
+        "frame_beam_10": {
+          "glb": "/3d-parts/maximus/frame_beam_10/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.4,
+            0.8,
+            0.048
+          ],
+          "bytes": 1516,
+          "hash": "7c3549f9aef7",
+          "source_object": "Box1738",
+          "source_materials": [
+            "FRAME_BEAM_a398"
+          ]
+        },
+        "frame_beam_11": {
+          "glb": "/3d-parts/maximus/frame_beam_11/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.018,
+            0.964,
+            0.696
+          ],
+          "bytes": 1972,
+          "hash": "c221a4eb5759",
+          "source_object": "044",
+          "source_materials": [
+            "FRAME_BEAM_a398"
+          ]
+        },
+        "frame_beam_12": {
+          "glb": "/3d-parts/maximus/frame_beam_12/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.422,
+            0.972,
+            0.018
+          ],
+          "bytes": 1844,
+          "hash": "99819dcf443b",
+          "source_object": "048",
+          "source_materials": [
+            "FRAME_BEAM_a398"
+          ]
+        },
+        "frame_beam_13": {
+          "glb": "/3d-parts/maximus/frame_beam_13/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.018,
+            0.964,
+            0.696
+          ],
+          "bytes": 1932,
+          "hash": "94658194ce0b",
+          "source_object": "036",
+          "source_materials": [
+            "FRAME_BEAM_a398"
+          ]
+        },
+        "frame_beam_14": {
+          "glb": "/3d-parts/maximus/frame_beam_14/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.018,
+            0.964,
+            0.696
+          ],
+          "bytes": 1936,
+          "hash": "0f41c44e6c0e",
+          "source_object": "051",
+          "source_materials": [
+            "FRAME_BEAM_a398"
+          ]
+        },
+        "frame_beam_15": {
+          "glb": "/3d-parts/maximus/frame_beam_15/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.018,
+            0.971,
+            0.512
+          ],
+          "bytes": 1964,
+          "hash": "cac575db23b8",
+          "source_object": "050",
+          "source_materials": [
+            "FRAME_BEAM_a398"
+          ]
+        },
+        "frame_beam_16": {
+          "glb": "/3d-parts/maximus/frame_beam_16/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.422,
+            0.972,
+            0.018
+          ],
+          "bytes": 1820,
+          "hash": "a6fb14669efd",
+          "source_object": "029",
+          "source_materials": [
+            "FRAME_BEAM_a398"
+          ]
+        },
+        "frame_beam_17": {
+          "glb": "/3d-parts/maximus/frame_beam_17/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.018,
+            0.971,
+            0.512
+          ],
+          "bytes": 1908,
+          "hash": "f0c2c988fc41",
+          "source_object": "030",
+          "source_materials": [
+            "FRAME_BEAM_a398"
+          ]
+        },
+        "frame_beam_18": {
+          "glb": "/3d-parts/maximus/frame_beam_18/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.018,
+            0.964,
+            0.696
+          ],
+          "bytes": 1948,
+          "hash": "a91dc9e82b79",
+          "source_object": "035",
+          "source_materials": [
+            "FRAME_BEAM_a398"
+          ]
+        },
+        "frame_beam_19": {
+          "glb": "/3d-parts/maximus/frame_beam_19/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.169,
+            0.018,
+            0.08
+          ],
+          "bytes": 1728,
+          "hash": "bf9125cf8e67",
+          "source_object": "Object",
+          "source_materials": [
+            "LEG_a398"
+          ]
+        },
+        "frame_beam_20": {
+          "glb": "/3d-parts/maximus/frame_beam_20/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.169,
+            0.018,
+            0.08
+          ],
+          "bytes": 1728,
+          "hash": "84e600548da9",
+          "source_object": "052",
+          "source_materials": [
+            "LEG_a398"
+          ]
+        },
+        "frame_beam_21": {
+          "glb": "/3d-parts/maximus/frame_beam_21/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.018,
+            0.971,
+            0.512
+          ],
+          "bytes": 1920,
+          "hash": "d9ea4a9d6625",
+          "source_object": "039",
+          "source_materials": [
+            "FRAME_BEAM_a398"
+          ]
+        },
+        "frame_beam_22": {
+          "glb": "/3d-parts/maximus/frame_beam_22/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.408,
+            0.008,
+            0.517
+          ],
+          "bytes": 1468,
+          "hash": "e2314134171c",
+          "source_object": "Box1772",
+          "source_materials": [
+            "FRAME_BEAM_a398"
+          ]
+        },
+        "frame_beam_23": {
+          "glb": "/3d-parts/maximus/frame_beam_23/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.018,
+            0.971,
+            0.512
+          ],
+          "bytes": 1948,
+          "hash": "0df8a15253c8",
+          "source_object": "023",
+          "source_materials": [
+            "FRAME_BEAM_a398"
+          ]
+        },
+        "frame_beam_24": {
+          "glb": "/3d-parts/maximus/frame_beam_24/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.656,
+            0.053,
+            0.547
+          ],
+          "bytes": 104456,
+          "hash": "3f18c774bbd1",
+          "source_object": "Box015",
+          "source_materials": [
+            "FRAME_BEAM_a398"
+          ]
+        },
+        "frame_beam_25": {
+          "glb": "/3d-parts/maximus/frame_beam_25/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.564,
+            0.053,
+            0.547
+          ],
+          "bytes": 90928,
+          "hash": "e1e3e4a37e34",
+          "source_object": "Box1768",
+          "source_materials": [
+            "FRAME_BEAM_a398"
+          ]
+        },
+        "modesty_0": {
+          "glb": "/3d-parts/accessories/modesty-f21d43e207a2.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.42,
+            0.382,
+            0.018
+          ],
+          "bytes": 161512,
+          "hash": "f21d43e207a2",
+          "source_object": "Object017",
+          "source_materials": [
+            "MODESTY_PANEL_a398"
+          ]
+        },
+        "modesty_1": {
+          "glb": "/3d-parts/accessories/modesty-ee6650962b9c.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.018,
+            0.409,
+            0.174
+          ],
+          "bytes": 162352,
+          "hash": "ee6650962b9c",
+          "source_object": "Object023",
+          "source_materials": [
+            "MODESTY_PANEL_a398"
+          ]
+        },
+        "modesty_2": {
+          "glb": "/3d-parts/accessories/modesty-8eb1fb3caae8.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.018,
+            0.409,
+            0.166
+          ],
+          "bytes": 162348,
+          "hash": "8eb1fb3caae8",
+          "source_object": "Object007",
+          "source_materials": [
+            "MODESTY_PANEL_a398"
+          ]
+        },
+        "modesty_3": {
+          "glb": "/3d-parts/accessories/modesty-6e579900c86d.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.017,
+            0.408,
+            0.156
+          ],
+          "bytes": 162184,
+          "hash": "6e579900c86d",
+          "source_object": "Object008",
+          "source_materials": [
+            "MODESTY_PANEL_a398"
+          ]
+        },
+        "modesty_4": {
+          "glb": "/3d-parts/accessories/modesty-04ffc8172707.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.018,
+            0.41,
+            0.153
+          ],
+          "bytes": 162148,
+          "hash": "04ffc8172707",
+          "source_object": "Object009",
+          "source_materials": [
+            "MODESTY_PANEL_a398"
+          ]
+        },
+        "modesty_5": {
+          "glb": "/3d-parts/accessories/modesty-76130502c6a8.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.1,
+            0.018,
+            0.7
+          ],
+          "bytes": 161572,
+          "hash": "76130502c6a8",
+          "source_object": "Box1743",
+          "source_materials": [
+            "MODESTY_PANEL_a398"
+          ]
+        },
+        "modesty_6": {
+          "glb": "/3d-parts/accessories/modesty-6fbb519d20f3.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.1,
+            0.018,
+            0.7
+          ],
+          "bytes": 161556,
+          "hash": "6fbb519d20f3",
+          "source_object": "Box1742",
+          "source_materials": [
+            "MODESTY_PANEL_a398"
+          ]
+        },
+        "modesty_7": {
+          "glb": "/3d-parts/accessories/modesty-c390536a1f68.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.408,
+            0.008,
+            0.165
+          ],
+          "bytes": 161528,
+          "hash": "c390536a1f68",
+          "source_object": "Box1774",
+          "source_materials": [
+            "MODESTY_PANEL_a398"
+          ]
+        },
+        "modesty_8": {
+          "glb": "/3d-parts/accessories/modesty-12157cc8bc58.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.1,
+            0.018,
+            0.7
+          ],
+          "bytes": 161560,
+          "hash": "12157cc8bc58",
+          "source_object": "Box1740",
+          "source_materials": [
+            "MODESTY_PANEL_a398"
+          ]
+        },
+        "modesty_9": {
+          "glb": "/3d-parts/accessories/modesty-561de99efd74.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.1,
+            0.018,
+            0.7
+          ],
+          "bytes": 161568,
+          "hash": "561de99efd74",
+          "source_object": "Box1741",
+          "source_materials": [
+            "MODESTY_PANEL_a398"
+          ]
+        },
+        "modesty_10": {
+          "glb": "/3d-parts/accessories/modesty-6cb792d19dbe.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.18,
+            0.03,
+            0.022
+          ],
+          "bytes": 161700,
+          "hash": "6cb792d19dbe",
+          "source_object": "Box1778",
+          "source_materials": [
+            "MODESTY_PANEL_a398"
+          ]
+        },
+        "modesty_11": {
+          "glb": "/3d-parts/accessories/modesty-523564b86f9d.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.18,
+            0.03,
+            0.022
+          ],
+          "bytes": 161696,
+          "hash": "523564b86f9d",
+          "source_object": "Box1779",
+          "source_materials": [
+            "MODESTY_PANEL_a398"
+          ]
+        },
+        "modesty_12": {
+          "glb": "/3d-parts/accessories/modesty-23992c04b1c0.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.408,
+            0.008,
+            0.163
+          ],
+          "bytes": 161532,
+          "hash": "23992c04b1c0",
+          "source_object": "Box1775",
+          "source_materials": [
+            "MODESTY_PANEL_a398"
+          ]
+        },
+        "modesty_13": {
+          "glb": "/3d-parts/accessories/modesty-2e5429975c9e.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.18,
+            0.03,
+            0.022
+          ],
+          "bytes": 161700,
+          "hash": "2e5429975c9e",
+          "source_object": "Box1777",
+          "source_materials": [
+            "MODESTY_PANEL_a398"
+          ]
+        },
+        "modesty_14": {
+          "glb": "/3d-parts/accessories/modesty-27115dddd73c.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.408,
+            0.008,
+            0.179
+          ],
+          "bytes": 161532,
+          "hash": "27115dddd73c",
+          "source_object": "Box1776",
+          "source_materials": [
+            "MODESTY_PANEL_a398"
+          ]
+        },
+        "modesty_15": {
+          "glb": "/3d-parts/accessories/modesty-b2d30522ae3c.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.18,
+            0.03,
+            0.022
+          ],
+          "bytes": 161700,
+          "hash": "b2d30522ae3c",
+          "source_object": "Box1766",
+          "source_materials": [
+            "MODESTY_PANEL_a398"
+          ]
+        },
+        "top_0": {
+          "glb": "/3d-parts/maximus/top_0/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.389,
+            1.045,
+            0.002
+          ],
+          "bytes": 161560,
+          "hash": "78849fb07d57",
+          "source_object": "Box001",
+          "source_materials": [
+            "DESKTOP_a398"
+          ]
+        },
+        "top_1": {
+          "glb": "/3d-parts/maximus/top_1/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            2.204,
+            1.0,
+            0.048
+          ],
+          "bytes": 162112,
+          "hash": "bb029c39f0b3",
+          "source_object": "Box1731",
+          "source_materials": [
+            "DESKTOP_a398"
+          ]
+        },
+        "top_2": {
+          "glb": "/3d-parts/maximus/top_2/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.2,
+            0.8,
+            0.048
+          ],
+          "bytes": 161564,
+          "hash": "84790008ce5d",
+          "source_object": "Box1736",
+          "source_materials": [
+            "DESKTOP_a398"
+          ]
+        },
+        "grommet_0": {
+          "glb": "/3d-parts/accessories/grommet-c6787da06bbf.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.373,
+            0.018,
+            0.08
+          ],
+          "bytes": 1504,
+          "hash": "c6787da06bbf",
+          "source_object": "042",
+          "source_materials": [
+            "LEG_a398"
+          ]
+        },
+        "grommet_1": {
+          "glb": "/3d-parts/accessories/grommet-dfa311bfdf1a.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.372,
+            0.018,
+            0.08
+          ],
+          "bytes": 1504,
+          "hash": "dfa311bfdf1a",
+          "source_object": "043",
+          "source_materials": [
+            "LEG_a398"
+          ]
+        },
+        "grommet_2": {
+          "glb": "/3d-parts/accessories/grommet-c90dcc0b6fe6.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.362,
+            0.018,
+            0.07
+          ],
+          "bytes": 1504,
+          "hash": "c90dcc0b6fe6",
+          "source_object": "045",
+          "source_materials": [
+            "LEG_a398"
+          ]
+        },
+        "grommet_3": {
+          "glb": "/3d-parts/accessories/grommet-911a2b01371b.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.362,
+            0.018,
+            0.07
+          ],
+          "bytes": 1508,
+          "hash": "911a2b01371b",
+          "source_object": "049",
+          "source_materials": [
+            "LEG_a398"
+          ]
+        },
+        "grommet_4": {
+          "glb": "/3d-parts/accessories/grommet-61e9856a28dc.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.362,
+            0.018,
+            0.07
+          ],
+          "bytes": 1504,
+          "hash": "61e9856a28dc",
+          "source_object": "033",
+          "source_materials": [
+            "LEG_a398"
+          ]
+        },
+        "grommet_5": {
+          "glb": "/3d-parts/accessories/grommet-07ac2a0e5dc5.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.373,
+            0.018,
+            0.08
+          ],
+          "bytes": 1500,
+          "hash": "07ac2a0e5dc5",
+          "source_object": "034",
+          "source_materials": [
+            "LEG_a398"
+          ]
+        },
+        "grommet_6": {
+          "glb": "/3d-parts/accessories/grommet-98a82e37f351.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.362,
+            0.018,
+            0.07
+          ],
+          "bytes": 1500,
+          "hash": "98a82e37f351",
+          "source_object": "021",
+          "source_materials": [
+            "LEG_a398"
+          ]
+        },
+        "grommet_7": {
+          "glb": "/3d-parts/accessories/grommet-2306317f89ee.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.372,
+            0.018,
+            0.08
+          ],
+          "bytes": 1500,
+          "hash": "2306317f89ee",
+          "source_object": "027",
+          "source_materials": [
+            "LEG_a398"
+          ]
+        },
+        "pedestal_top_0": {
+          "glb": "/3d-parts/accessories/pedestal_top-ab87229953f1.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.422,
+            0.971,
+            0.018
+          ],
+          "bytes": 161876,
+          "hash": "ab87229953f1",
+          "source_object": "028",
+          "source_materials": [
+            "PEDESTAL_TOP_a398"
+          ]
+        },
+        "pedestal_top_1": {
+          "glb": "/3d-parts/accessories/pedestal_top-ca37e5bb0c72.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.422,
+            0.971,
+            0.018
+          ],
+          "bytes": 161964,
+          "hash": "ca37e5bb0c72",
+          "source_object": "037",
+          "source_materials": [
+            "PEDESTAL_TOP_a398"
+          ]
+        }
+      },
+      "baseSize": null,
+      "unknowns": [
+        {
+          "name": "Object022",
+          "materials": [
+            "UNKNOWN_a398"
+          ],
+          "extents": [
+            0.391,
+            0.081,
+            0.048
+          ]
+        },
+        {
+          "name": "Object011",
+          "materials": [
+            "UNKNOWN_a398"
+          ],
+          "extents": [
+            0.391,
+            0.081,
+            0.048
+          ]
+        },
+        {
+          "name": "046",
+          "materials": [
+            "LEG_a398"
+          ],
+          "extents": [
+            0.018,
+            0.81,
+            0.069
+          ]
+        },
+        {
+          "name": "047",
+          "materials": [
+            "LEG_a398"
+          ],
+          "extents": [
+            0.014,
+            0.81,
+            0.08
+          ]
+        },
+        {
+          "name": "031",
+          "materials": [
+            "LEG_a398"
+          ],
+          "extents": [
+            0.014,
+            0.81,
+            0.08
+          ]
+        },
+        {
+          "name": "032",
+          "materials": [
+            "LEG_a398"
+          ],
+          "extents": [
+            0.018,
+            0.81,
+            0.069
+          ]
+        }
+      ],
+      "productKind": "desk"
+    }
+  },
+  "generated_at": "2026-04-20T03:54:26.789491Z"
+}
