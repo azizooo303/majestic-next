@@ -58,6 +58,7 @@ export type RoleKind =
   | "cable_spine"
   | "screen_front"
   | "screen_side"
+  | "bracket"
   | "grommet"
   | "feet"
   | "handle"
@@ -86,6 +87,20 @@ export const METAL_FINISH_ROLES = new Set<string>([
   "pedestal_handle",
 ]);
 
+/**
+ * Roles that render as static brushed/white metal — NOT driven by the leg-color
+ * picker. Divider brackets stay stainless-steel regardless of what color legs
+ * the user picks (matches real-world hardware: brackets don't match paint jobs).
+ */
+export const STATIC_METAL_ROLES = new Set<string>([
+  "bracket",
+]);
+export const BRACKET_COLOR = {
+  hex: "#D9D9DA",
+  metalness: 0.85,
+  roughness: 0.35,
+};
+
 /** Roles that render as fabric-covered panels (Majestic acoustic dividers). */
 export const FABRIC_FINISH_ROLES = new Set<string>([
   "screen_front",
@@ -93,15 +108,27 @@ export const FABRIC_FINISH_ROLES = new Set<string>([
 ]);
 
 /**
- * When a role appears in this map, the composer loads THIS GLB instead of
- * the one in the config's manifest entry. Used to canonicalize accessories
- * that should look identical across configs (e.g. the real Majestic acoustic
- * divider from CRATOS-WS.fbx replacing the placeholder screens in every config).
+ * Fabric colors for the divider_color picker — matches workspace.sa catalog
+ * codes so we can offer the same options on majestic-next.vercel.app.
  */
-export const ROLE_GLB_OVERRIDE: Record<string, string> = {
-  screen_front: "/3d-parts/accessories/acoustic-divider-cratos.glb",
-  screen_side:  "/3d-parts/accessories/acoustic-divider-cratos.glb",
+export const DIVIDER_COLOR_MATERIAL: Record<string, { hex: string; label: string }> = {
+  "9009-26-gray":     { hex: "#8B8E90", label: "Gray" },
+  "9009-09-beige":    { hex: "#C7B8A0", label: "Beige" },
+  "9009-28-charcoal": { hex: "#3C3E40", label: "Charcoal" },
+  "9009-01-taupe":    { hex: "#9A8573", label: "Taupe" },
+  "9009-15-green":    { hex: "#6E8570", label: "Green" },
+  "9009-07-pink":     { hex: "#D3A9A6", label: "Pink" },
+  "9009-16-blue":     { hex: "#6E8398", label: "Blue" },
 };
+export const DEFAULT_DIVIDER_COLOR = "9009-26-gray";
+
+/**
+ * When a role appears in this map, the composer loads THIS GLB instead of
+ * the one in the config's manifest entry. Kept empty now that every config
+ * has its own extracted divider parts — the IKEA-Eilif-style pleated panels
+ * are per-config, not a single shared override.
+ */
+export const ROLE_GLB_OVERRIDE: Record<string, string> = {};
 
 /** Strip trailing "_0", "_12" etc. so "top_0" matches "top" in the role sets. */
 export function baseRole(role: string): string {
@@ -147,6 +174,8 @@ export interface AssemblyState {
   size: string;
   topFinishName: string;
   legColorName: string;
+  /** Key in DIVIDER_COLOR_MATERIAL — drives fabric color on screen_* roles. */
+  dividerColorName?: string;
   /** per-axis accessory state. Axes without entries default to false unless a part's default is true. */
   accessories: Record<string, boolean>;
 }

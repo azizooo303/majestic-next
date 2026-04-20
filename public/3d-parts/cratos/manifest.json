@@ -4173,101 +4173,6 @@
             "DESK-CRATOS-WS_MODESTY_PANEL"
           ]
         },
-        "screen_front": {
-          "glb": "/3d-parts/accessories/screen_front-4e8876a10948.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            4.258,
-            0.02,
-            0.4
-          ],
-          "bytes": 1392,
-          "hash": "4e8876a10948",
-          "source_object": "SCREEN_PANEL_center_spine",
-          "source_materials": [
-            "Screen_LightGrey_Fabric"
-          ]
-        },
-        "screen_side_0": {
-          "glb": "/3d-parts/accessories/screen_side-f7f565961aae.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.02,
-            0.6,
-            0.4
-          ],
-          "bytes": 1400,
-          "hash": "f7f565961aae",
-          "source_object": "SCREEN_PANEL_side_0_0",
-          "source_materials": [
-            "Screen_LightGrey_Fabric"
-          ]
-        },
-        "screen_side_1": {
-          "glb": "/3d-parts/accessories/screen_side-44f4abeb8974.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.02,
-            0.6,
-            0.4
-          ],
-          "bytes": 1396,
-          "hash": "44f4abeb8974",
-          "source_object": "SCREEN_PANEL_side_0_1",
-          "source_materials": [
-            "Screen_LightGrey_Fabric"
-          ]
-        },
-        "screen_side_2": {
-          "glb": "/3d-parts/accessories/screen_side-51a91434249d.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.02,
-            0.6,
-            0.4
-          ],
-          "bytes": 1396,
-          "hash": "51a91434249d",
-          "source_object": "SCREEN_PANEL_side_1_0",
-          "source_materials": [
-            "Screen_LightGrey_Fabric"
-          ]
-        },
-        "screen_side_3": {
-          "glb": "/3d-parts/accessories/screen_side-ca8d61ea00ff.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.02,
-            0.6,
-            0.4
-          ],
-          "bytes": 1396,
-          "hash": "ca8d61ea00ff",
-          "source_object": "SCREEN_PANEL_side_1_1",
-          "source_materials": [
-            "Screen_LightGrey_Fabric"
-          ]
-        },
         "leg_r_0": {
           "glb": "/3d-parts/cratos/leg_r_0/workstation-6-person.glb",
           "anchor": [
@@ -4343,6 +4248,321 @@
           "source_materials": [
             "DESK-CRATOS-WS_LEG"
           ]
+        },
+        "screen_front_0": {
+          "glb": "/3d-parts/cratos/screen_front_0/workstation-6-person.glb",
+          "anchor": [
+            0,
+            0,
+            0
+          ],
+          "bbox": [
+            1,
+            0.064,
+            0.2
+          ],
+          "bytes": 43896,
+          "hash": "ef01f920cffa"
+        },
+        "screen_front_1": {
+          "glb": "/3d-parts/cratos/screen_front_1/workstation-6-person.glb",
+          "anchor": [
+            0,
+            0,
+            0
+          ],
+          "bbox": [
+            1,
+            0.064,
+            0.2
+          ],
+          "bytes": 43868,
+          "hash": "d13c6089dc46"
+        },
+        "screen_front_2": {
+          "glb": "/3d-parts/cratos/screen_front_2/workstation-6-person.glb",
+          "anchor": [
+            0,
+            0,
+            0
+          ],
+          "bbox": [
+            1,
+            0.064,
+            0.2
+          ],
+          "bytes": 43896,
+          "hash": "02599792e0bc"
+        },
+        "screen_side_0": {
+          "glb": "/3d-parts/cratos/screen_side_0/workstation-6-person.glb",
+          "anchor": [
+            0,
+            0,
+            0
+          ],
+          "bbox": [
+            0.028,
+            0.4,
+            0.15
+          ],
+          "bytes": 43908,
+          "hash": "96202277748b"
+        },
+        "screen_side_1": {
+          "glb": "/3d-parts/cratos/screen_side_1/workstation-6-person.glb",
+          "anchor": [
+            0,
+            0,
+            0
+          ],
+          "bbox": [
+            0.028,
+            0.4,
+            0.15
+          ],
+          "bytes": 43912,
+          "hash": "5e03060171c5"
+        },
+        "screen_side_2": {
+          "glb": "/3d-parts/cratos/screen_side_2/workstation-6-person.glb",
+          "anchor": [
+            0,
+            0,
+            0
+          ],
+          "bbox": [
+            0.028,
+            0.4,
+            0.15
+          ],
+          "bytes": 43904,
+          "hash": "77749976ad07"
+        },
+        "screen_side_3": {
+          "glb": "/3d-parts/cratos/screen_side_3/workstation-6-person.glb",
+          "anchor": [
+            0,
+            0,
+            0
+          ],
+          "bbox": [
+            0.028,
+            0.4,
+            0.15
+          ],
+          "bytes": 43908,
+          "hash": "bc47be6f057e"
+        },
+        "bracket_0": {
+          "glb": "/3d-parts/cratos/bracket_0/workstation-6-person.glb",
+          "anchor": [
+            0,
+            0,
+            0
+          ],
+          "bbox": [
+            0.022,
+            0.041,
+            0.095
+          ],
+          "bytes": 2280,
+          "hash": "a32d143f53f0"
+        },
+        "bracket_1": {
+          "glb": "/3d-parts/cratos/bracket_1/workstation-6-person.glb",
+          "anchor": [
+            0,
+            0,
+            0
+          ],
+          "bbox": [
+            0.022,
+            0.041,
+            0.095
+          ],
+          "bytes": 2280,
+          "hash": "2d32bc94c572"
+        },
+        "bracket_2": {
+          "glb": "/3d-parts/cratos/bracket_2/workstation-6-person.glb",
+          "anchor": [
+            0,
+            0,
+            0
+          ],
+          "bbox": [
+            0.022,
+            0.041,
+            0.095
+          ],
+          "bytes": 2280,
+          "hash": "c8200e76d9f8"
+        },
+        "bracket_3": {
+          "glb": "/3d-parts/cratos/bracket_3/workstation-6-person.glb",
+          "anchor": [
+            0,
+            0,
+            0
+          ],
+          "bbox": [
+            0.022,
+            0.041,
+            0.095
+          ],
+          "bytes": 2280,
+          "hash": "a5fdc8ee4d86"
+        },
+        "bracket_4": {
+          "glb": "/3d-parts/cratos/bracket_4/workstation-6-person.glb",
+          "anchor": [
+            0,
+            0,
+            0
+          ],
+          "bbox": [
+            0.022,
+            0.041,
+            0.095
+          ],
+          "bytes": 2280,
+          "hash": "6037dfdba749"
+        },
+        "bracket_5": {
+          "glb": "/3d-parts/cratos/bracket_5/workstation-6-person.glb",
+          "anchor": [
+            0,
+            0,
+            0
+          ],
+          "bbox": [
+            0.022,
+            0.041,
+            0.095
+          ],
+          "bytes": 2280,
+          "hash": "d6120d2a2e33"
+        },
+        "bracket_6": {
+          "glb": "/3d-parts/cratos/bracket_6/workstation-6-person.glb",
+          "anchor": [
+            0,
+            0,
+            0
+          ],
+          "bbox": [
+            0.041,
+            0.022,
+            0.095
+          ],
+          "bytes": 2284,
+          "hash": "2f8825d1ba69"
+        },
+        "bracket_7": {
+          "glb": "/3d-parts/cratos/bracket_7/workstation-6-person.glb",
+          "anchor": [
+            0,
+            0,
+            0
+          ],
+          "bbox": [
+            0.041,
+            0.022,
+            0.095
+          ],
+          "bytes": 2284,
+          "hash": "c7b0da762242"
+        },
+        "bracket_8": {
+          "glb": "/3d-parts/cratos/bracket_8/workstation-6-person.glb",
+          "anchor": [
+            0,
+            0,
+            0
+          ],
+          "bbox": [
+            0.041,
+            0.022,
+            0.095
+          ],
+          "bytes": 2288,
+          "hash": "e7fc7c2cc7b4"
+        },
+        "bracket_9": {
+          "glb": "/3d-parts/cratos/bracket_9/workstation-6-person.glb",
+          "anchor": [
+            0,
+            0,
+            0
+          ],
+          "bbox": [
+            0.041,
+            0.022,
+            0.095
+          ],
+          "bytes": 2284,
+          "hash": "b8fa6d939537"
+        },
+        "bracket_10": {
+          "glb": "/3d-parts/cratos/bracket_10/workstation-6-person.glb",
+          "anchor": [
+            0,
+            0,
+            0
+          ],
+          "bbox": [
+            0.041,
+            0.022,
+            0.095
+          ],
+          "bytes": 2280,
+          "hash": "880a374056be"
+        },
+        "bracket_11": {
+          "glb": "/3d-parts/cratos/bracket_11/workstation-6-person.glb",
+          "anchor": [
+            0,
+            0,
+            0
+          ],
+          "bbox": [
+            0.041,
+            0.022,
+            0.095
+          ],
+          "bytes": 2284,
+          "hash": "4b3f49cf2c07"
+        },
+        "bracket_12": {
+          "glb": "/3d-parts/cratos/bracket_12/workstation-6-person.glb",
+          "anchor": [
+            0,
+            0,
+            0
+          ],
+          "bbox": [
+            0.041,
+            0.022,
+            0.095
+          ],
+          "bytes": 2284,
+          "hash": "96905b5b90ce"
+        },
+        "bracket_13": {
+          "glb": "/3d-parts/cratos/bracket_13/workstation-6-person.glb",
+          "anchor": [
+            0,
+            0,
+            0
+          ],
+          "bbox": [
+            0.041,
+            0.022,
+            0.095
+          ],
+          "bytes": 2284,
+          "hash": "aace9b727e67"
         }
       },
       "baseSize": null,
@@ -4373,5 +4593,5 @@
       "productKind": "workstation"
     }
   },
-  "generated_at": "2026-04-20T15:07:23.931Z"
+  "generated_at": "2026-04-20T18:24:20.103Z"
 }

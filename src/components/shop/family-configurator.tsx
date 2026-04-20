@@ -26,7 +26,7 @@ import {ProductViewer3D} from "@/components/product/product-viewer-3d";
 import {AssemblyViewer} from "@/components/product/assembly-viewer";
 import {getProduct3DModel} from "@/lib/products-3d";
 import type {FamilyManifest, AssemblyState} from "@/lib/scene-composer";
-import {accessoryAxesInConfig} from "@/lib/scene-composer";
+import {accessoryAxesInConfig, DIVIDER_COLOR_MATERIAL, DEFAULT_DIVIDER_COLOR} from "@/lib/scene-composer";
 
 // Family slug -> manifest URL. Families present here use the part-composition
 // viewer; others fall back to the single-GLB <ProductViewer3D>.
@@ -112,6 +112,7 @@ export function FamilyConfigurator({family, basePrice, locale}: FamilyConfigurat
   const [leg, setLeg] = useState<string>("Polished Chrome");
   const [sideUnitFinish, setSideUnitFinish] = useState<string>("");
   const [pedestalFinish, setPedestalFinish] = useState<string>("");
+  const [dividerColor, setDividerColor] = useState<string>(DEFAULT_DIVIDER_COLOR);
 
   // If the current size isn't valid for the new config, snap to that config's first size.
   // React 19 pattern: derived state during render — avoids setState-in-effect cascade.
@@ -164,8 +165,17 @@ export function FamilyConfigurator({family, basePrice, locale}: FamilyConfigurat
     size,
     topFinishName: finish,
     legColorName: leg,
+    dividerColorName: dividerColor,
     accessories,
   };
+
+  // Does the current config have any fabric divider parts?
+  const configHasDividers = useMemo(() => {
+    if (!manifest) return false;
+    const cfg = manifest.configs[config];
+    if (!cfg) return false;
+    return Object.keys(cfg.parts).some((k) => k.startsWith("screen_front") || k.startsWith("screen_side"));
+  }, [manifest, config]);
 
   const isCustomQuote = config === "Custom (Contact Us)" || size === "CUSTOM";
 
@@ -346,6 +356,25 @@ export function FamilyConfigurator({family, basePrice, locale}: FamilyConfigurat
             exclusions={excludedLegs}
             locale={locale}
           />
+
+          {/* Divider (acoustic panel) fabric color — only shown if current config
+              actually has fabric divider parts. 7 colors matching workspace.sa's
+              Eilif-style acoustic panel catalog. */}
+          {configHasDividers && (
+            <ConfiguratorPicker
+              axis="Divider Color"
+              value={dividerColor}
+              onChange={setDividerColor}
+              options={Object.entries(DIVIDER_COLOR_MATERIAL).map(([key, entry]) => ({
+                value: key,
+                labelEn: entry.label,
+                labelAr: entry.label,
+                swatchHex: entry.hex,
+              }))}
+              displayMode="color-swatch"
+              locale={locale}
+            />
+          )}
 
           {/* Accessory toggles — only shown when the current config has a part
               on that axis in the manifest. Uses ACCESSORY_AXIS to introspect. */}

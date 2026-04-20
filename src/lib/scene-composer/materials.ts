@@ -16,6 +16,10 @@ import {
   WOOD_FINISH_ROLES,
   METAL_FINISH_ROLES,
   FABRIC_FINISH_ROLES,
+  STATIC_METAL_ROLES,
+  BRACKET_COLOR,
+  DIVIDER_COLOR_MATERIAL,
+  DEFAULT_DIVIDER_COLOR,
   baseRole,
 } from "./types";
 
@@ -74,13 +78,16 @@ export async function applyWoodFinish(
 const FABRIC_WEAVE_URL = "/materials/fabric/acoustic-weave.jpg";
 
 /**
- * Apply fabric finish — real acoustic fabric weave texture + matte response.
- * Used for acoustic dividers and any upholstered panel.
- * Texture tiled high so the weave reads as "fabric" not "stretched paper".
+ * Apply fabric finish — acoustic-weave texture tinted by the picked divider color.
+ *
+ * `hex` drives `material.color` so the weave texture reads as that color (texture
+ * luminance multiplies the tint — works well with greyscale weave maps). Used for
+ * every `screen_front_*` / `screen_side_*` role. If the hex is omitted, defaults
+ * to the catalog Gray 9009-26.
  */
 export async function applyFabricFinish(
   subtree: THREE.Object3D,
-  hex: string = "#FFFFFF",
+  hex: string = DIVIDER_COLOR_MATERIAL[DEFAULT_DIVIDER_COLOR].hex,
 ): Promise<void> {
   const tex = await loadTextureCached(FABRIC_WEAVE_URL).catch(() => null);
   subtree.traverse((obj) => {
@@ -95,13 +102,31 @@ export async function applyFabricFinish(
       mtex.repeat.set(6, 3); // visual density for a ~60cm x 40cm panel
       mtex.needsUpdate = true;
       mat.map = mtex;
-      mat.color.set(0xffffff);
+      // Tint the weave with the picked fabric color. Texture greyscale × tint.
+      mat.color.set(hex);
     } else {
       mat.map = null;
       mat.color.set(hex);
     }
     mat.metalness = 0.0;
     mat.roughness = 0.92;
+    mat.needsUpdate = true;
+  });
+}
+
+/**
+ * Apply the static bracket finish — always brushed stainless, not driven by any picker.
+ * Brackets are real hardware; they don't paint-match the legs or the fabric.
+ */
+export function applyBracketFinish(subtree: THREE.Object3D): void {
+  subtree.traverse((obj) => {
+    if (!(obj as THREE.Mesh).isMesh) return;
+    const mesh = obj as THREE.Mesh;
+    const mat = ensureStandardMaterial(mesh);
+    mat.map = null;
+    mat.color.set(BRACKET_COLOR.hex);
+    mat.metalness = BRACKET_COLOR.metalness;
+    mat.roughness = BRACKET_COLOR.roughness;
     mat.needsUpdate = true;
   });
 }
@@ -140,12 +165,16 @@ export async function applyMaterialForRole(
   role: RoleKind | string,
   topFinishName: string,
   legColorName: string,
+  dividerColorName: string = DEFAULT_DIVIDER_COLOR,
 ): Promise<void> {
   const base = baseRole(role as string);
   if (WOOD_FINISH_ROLES.has(base)) {
     await applyWoodFinish(subtree, topFinishName);
   } else if (FABRIC_FINISH_ROLES.has(base)) {
-    await applyFabricFinish(subtree);
+    const entry = DIVIDER_COLOR_MATERIAL[dividerColorName] ?? DIVIDER_COLOR_MATERIAL[DEFAULT_DIVIDER_COLOR];
+    await applyFabricFinish(subtree, entry.hex);
+  } else if (STATIC_METAL_ROLES.has(base)) {
+    applyBracketFinish(subtree);
   } else if (METAL_FINISH_ROLES.has(base)) {
     applyMetalFinish(subtree, legColorName);
   }

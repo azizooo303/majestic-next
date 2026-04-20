@@ -24,7 +24,7 @@ type PickerOption = {
 };
 
 type ConfiguratorPickerProps = {
-  axis: "Config" | "Size" | "Desk Top Finish" | "Leg Color" | "Side Unit Finish" | "Pedestal Finish";
+  axis: "Config" | "Size" | "Desk Top Finish" | "Leg Color" | "Side Unit Finish" | "Pedestal Finish" | "Divider Color";
   value: string;
   onChange: (val: string) => void;
   options: PickerOption[];
