@@ -14,7 +14,7 @@ import type {
   PartEntry,
   RoleKind,
 } from "./types";
-import { ACCESSORY_AXIS, ACCESSORY_ROLES, parseSize } from "./types";
+import { ACCESSORY_AXIS, ACCESSORY_ROLES, baseRole, parseSize } from "./types";
 import { cloneGLTFScene, loadPart } from "./cache";
 import { applyMaterialForRole } from "./materials";
 
@@ -72,12 +72,12 @@ function resolveActiveParts(
 ): Array<{ role: string; entry: PartEntry }> {
   const out: Array<{ role: string; entry: PartEntry }> = [];
   for (const [role, entry] of Object.entries(configEntry.parts)) {
-    const axis = ACCESSORY_AXIS[role];
+    // Role keys in the manifest are suffixed (screen_front_0, screen_front_1, …).
+    // ACCESSORY_AXIS is keyed by the BASE role, so normalize before lookup.
+    const axis = ACCESSORY_AXIS[baseRole(role)];
     if (axis) {
-      // accessory role — controlled by picker state
       if (!state.accessories[axis]) continue;
     }
-    // non-accessory (top, legs, feet, grommet, etc.) — always visible
     out.push({ role, entry });
   }
   return out;
@@ -146,7 +146,10 @@ export function accessoryAxesInConfig(configEntry: ConfigEntry): string[] {
   const seen = new Set<string>();
   const order: string[] = [];
   for (const role of Object.keys(configEntry.parts)) {
-    const axis = ACCESSORY_AXIS[role];
+    // Same numeric-suffix normalization as resolveActiveParts — otherwise
+    // "screen_front_0" doesn't match the "screen_front" ACCESSORY_AXIS key
+    // and the whole accessory section stays empty in the UI.
+    const axis = ACCESSORY_AXIS[baseRole(role)];
     if (!axis || seen.has(axis)) continue;
     seen.add(axis);
     order.push(axis);
