@@ -6,9 +6,9 @@
         "frame_beam_0": {
           "glb": "/3d-parts/maximus/frame_beam_0/l-shape.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.018,
@@ -25,9 +25,9 @@
         "frame_beam_1": {
           "glb": "/3d-parts/maximus/frame_beam_1/l-shape.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.499,
@@ -44,9 +44,9 @@
         "frame_beam_2": {
           "glb": "/3d-parts/maximus/frame_beam_2/l-shape.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.082,
@@ -63,9 +63,9 @@
         "frame_beam_3": {
           "glb": "/3d-parts/maximus/frame_beam_3/l-shape.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.512,
@@ -82,9 +82,9 @@
         "frame_beam_4": {
           "glb": "/3d-parts/maximus/frame_beam_4/l-shape.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.464,
@@ -101,9 +101,9 @@
         "frame_beam_5": {
           "glb": "/3d-parts/maximus/frame_beam_5/l-shape.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.476,
@@ -120,9 +120,9 @@
         "frame_beam_6": {
           "glb": "/3d-parts/maximus/frame_beam_6/l-shape.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.082,
@@ -139,9 +139,9 @@
         "frame_beam_7": {
           "glb": "/3d-parts/maximus/frame_beam_7/l-shape.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.018,
@@ -158,9 +158,9 @@
         "frame_beam_8": {
           "glb": "/3d-parts/maximus/frame_beam_8/l-shape.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.52,
@@ -177,9 +177,9 @@
         "frame_beam_9": {
           "glb": "/3d-parts/maximus/frame_beam_9/l-shape.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.4,
@@ -196,9 +196,9 @@
         "frame_beam_10": {
           "glb": "/3d-parts/maximus/frame_beam_10/l-shape.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.4,
@@ -215,9 +215,9 @@
         "frame_beam_11": {
           "glb": "/3d-parts/maximus/frame_beam_11/l-shape.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.018,
@@ -234,9 +234,9 @@
         "frame_beam_12": {
           "glb": "/3d-parts/maximus/frame_beam_12/l-shape.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.422,
@@ -253,9 +253,9 @@
         "frame_beam_13": {
           "glb": "/3d-parts/maximus/frame_beam_13/l-shape.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.018,
@@ -272,9 +272,9 @@
         "frame_beam_14": {
           "glb": "/3d-parts/maximus/frame_beam_14/l-shape.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.018,
@@ -291,9 +291,9 @@
         "frame_beam_15": {
           "glb": "/3d-parts/maximus/frame_beam_15/l-shape.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.018,
@@ -310,9 +310,9 @@
         "frame_beam_16": {
           "glb": "/3d-parts/maximus/frame_beam_16/l-shape.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.422,
@@ -329,9 +329,9 @@
         "frame_beam_17": {
           "glb": "/3d-parts/maximus/frame_beam_17/l-shape.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.018,
@@ -348,9 +348,9 @@
         "frame_beam_18": {
           "glb": "/3d-parts/maximus/frame_beam_18/l-shape.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.018,
@@ -367,9 +367,9 @@
         "frame_beam_19": {
           "glb": "/3d-parts/maximus/frame_beam_19/l-shape.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             1.169,
@@ -386,9 +386,9 @@
         "frame_beam_20": {
           "glb": "/3d-parts/maximus/frame_beam_20/l-shape.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             1.169,
@@ -405,9 +405,9 @@
         "frame_beam_21": {
           "glb": "/3d-parts/maximus/frame_beam_21/l-shape.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.018,
@@ -424,9 +424,9 @@
         "frame_beam_22": {
           "glb": "/3d-parts/maximus/frame_beam_22/l-shape.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.408,
@@ -443,9 +443,9 @@
         "frame_beam_23": {
           "glb": "/3d-parts/maximus/frame_beam_23/l-shape.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.018,
@@ -462,9 +462,9 @@
         "frame_beam_24": {
           "glb": "/3d-parts/maximus/frame_beam_24/l-shape.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.656,
@@ -481,9 +481,9 @@
         "frame_beam_25": {
           "glb": "/3d-parts/maximus/frame_beam_25/l-shape.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.564,
@@ -500,9 +500,9 @@
         "modesty_0": {
           "glb": "/3d-parts/accessories/modesty-f21d43e207a2.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.42,
@@ -519,9 +519,9 @@
         "modesty_1": {
           "glb": "/3d-parts/accessories/modesty-ee6650962b9c.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.018,
@@ -538,9 +538,9 @@
         "modesty_2": {
           "glb": "/3d-parts/accessories/modesty-8eb1fb3caae8.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.018,
@@ -557,9 +557,9 @@
         "modesty_3": {
           "glb": "/3d-parts/accessories/modesty-6e579900c86d.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.017,
@@ -576,9 +576,9 @@
         "modesty_4": {
           "glb": "/3d-parts/accessories/modesty-04ffc8172707.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.018,
@@ -595,9 +595,9 @@
         "modesty_5": {
           "glb": "/3d-parts/accessories/modesty-76130502c6a8.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.1,
@@ -614,9 +614,9 @@
         "modesty_6": {
           "glb": "/3d-parts/accessories/modesty-6fbb519d20f3.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.1,
@@ -633,9 +633,9 @@
         "modesty_7": {
           "glb": "/3d-parts/accessories/modesty-c390536a1f68.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.408,
@@ -652,9 +652,9 @@
         "modesty_8": {
           "glb": "/3d-parts/accessories/modesty-12157cc8bc58.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.1,
@@ -671,9 +671,9 @@
         "modesty_9": {
           "glb": "/3d-parts/accessories/modesty-561de99efd74.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.1,
@@ -690,9 +690,9 @@
         "modesty_10": {
           "glb": "/3d-parts/accessories/modesty-6cb792d19dbe.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.18,
@@ -709,9 +709,9 @@
         "modesty_11": {
           "glb": "/3d-parts/accessories/modesty-523564b86f9d.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.18,
@@ -728,9 +728,9 @@
         "modesty_12": {
           "glb": "/3d-parts/accessories/modesty-23992c04b1c0.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.408,
@@ -747,9 +747,9 @@
         "modesty_13": {
           "glb": "/3d-parts/accessories/modesty-2e5429975c9e.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.18,
@@ -766,9 +766,9 @@
         "modesty_14": {
           "glb": "/3d-parts/accessories/modesty-27115dddd73c.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.408,
@@ -785,9 +785,9 @@
         "modesty_15": {
           "glb": "/3d-parts/accessories/modesty-b2d30522ae3c.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.18,
@@ -804,9 +804,9 @@
         "top_0": {
           "glb": "/3d-parts/maximus/top_0/l-shape.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.389,
@@ -823,13 +823,13 @@
         "top_1": {
           "glb": "/3d-parts/maximus/top_1/l-shape.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             2.204,
-            1,
+            1.0,
             0.048
           ],
           "bytes": 162112,
@@ -842,9 +842,9 @@
         "top_2": {
           "glb": "/3d-parts/maximus/top_2/l-shape.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             1.2,
@@ -861,9 +861,9 @@
         "grommet_0": {
           "glb": "/3d-parts/accessories/grommet-c6787da06bbf.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.373,
@@ -880,9 +880,9 @@
         "grommet_1": {
           "glb": "/3d-parts/accessories/grommet-dfa311bfdf1a.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.372,
@@ -899,9 +899,9 @@
         "grommet_2": {
           "glb": "/3d-parts/accessories/grommet-c90dcc0b6fe6.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.362,
@@ -918,9 +918,9 @@
         "grommet_3": {
           "glb": "/3d-parts/accessories/grommet-911a2b01371b.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.362,
@@ -937,9 +937,9 @@
         "grommet_4": {
           "glb": "/3d-parts/accessories/grommet-61e9856a28dc.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.362,
@@ -956,9 +956,9 @@
         "grommet_5": {
           "glb": "/3d-parts/accessories/grommet-07ac2a0e5dc5.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.373,
@@ -975,9 +975,9 @@
         "grommet_6": {
           "glb": "/3d-parts/accessories/grommet-98a82e37f351.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.362,
@@ -994,9 +994,9 @@
         "grommet_7": {
           "glb": "/3d-parts/accessories/grommet-2306317f89ee.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.372,
@@ -1013,9 +1013,9 @@
         "pedestal_top_0": {
           "glb": "/3d-parts/accessories/pedestal_top-ab87229953f1.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.422,
@@ -1032,9 +1032,9 @@
         "pedestal_top_1": {
           "glb": "/3d-parts/accessories/pedestal_top-ca37e5bb0c72.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.422,
@@ -1047,21 +1047,6 @@
           "source_materials": [
             "PEDESTAL_TOP_a398"
           ]
-        },
-        "cable_tray": {
-          "glb": "/3d-parts/maximus/cable_tray/l-shape.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            1.964,
-            0.082,
-            0.08
-          ],
-          "bytes": 2072,
-          "hash": "0c16da6927e9"
         }
       },
       "baseSize": null,
@@ -1136,5 +1121,5 @@
       "productKind": "desk"
     }
   },
-  "generated_at": "2026-04-21T00:39:36.938Z"
+  "generated_at": "2026-04-20T03:54:26.789491Z"
 }

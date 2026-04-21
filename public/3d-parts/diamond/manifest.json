@@ -1,14 +1,533 @@
 {
   "family": "diamond",
   "configs": {
+    "Executive": {
+      "parts": {
+        "frame_beam_0": {
+          "glb": "/3d-parts/diamond/frame_beam_0/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.448,
+            0.04,
+            0.04
+          ],
+          "bytes": 1436,
+          "hash": "4f3d477ae030",
+          "source_object": "Box3165",
+          "source_materials": [
+            "Majestic_WhitePaint.001"
+          ]
+        },
+        "frame_beam_1": {
+          "glb": "/3d-parts/diamond/frame_beam_1/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.448,
+            0.04,
+            0.04
+          ],
+          "bytes": 1436,
+          "hash": "cc43342e076f",
+          "source_object": "Box3166",
+          "source_materials": [
+            "Majestic_WhitePaint.001"
+          ]
+        },
+        "modesty": {
+          "glb": "/3d-parts/accessories/modesty-d4df90de344c.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.5,
+            0.018,
+            0.35
+          ],
+          "bytes": 1476,
+          "hash": "d4df90de344c",
+          "source_object": "Box3167",
+          "source_materials": [
+            "Majestic_WhitePaint.001"
+          ]
+        },
+        "top": {
+          "glb": "/3d-parts/diamond/top/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.8,
+            0.8,
+            0.03
+          ],
+          "bytes": 161688,
+          "hash": "ec919806ec87",
+          "source_object": "Box3168",
+          "source_materials": [
+            "A398_Italian_Walnut.001"
+          ]
+        },
+        "feet_0": {
+          "glb": "/3d-parts/diamond/feet_0/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 3420,
+          "hash": "00bd6db07569",
+          "source_object": "o349",
+          "source_materials": [
+            "Majestic_WhitePaint.001"
+          ]
+        },
+        "feet_1": {
+          "glb": "/3d-parts/diamond/feet_1/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 2812,
+          "hash": "2bac99a6a18d",
+          "source_object": "o350",
+          "source_materials": [
+            "Majestic_WhitePaint.001"
+          ]
+        },
+        "feet_2": {
+          "glb": "/3d-parts/diamond/feet_2/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 3472,
+          "hash": "d03bd58c4ac7",
+          "source_object": "o351",
+          "source_materials": [
+            "Majestic_WhitePaint.001"
+          ]
+        },
+        "feet_3": {
+          "glb": "/3d-parts/diamond/feet_3/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 2804,
+          "hash": "3d478187d16d",
+          "source_object": "o352",
+          "source_materials": [
+            "Majestic_WhitePaint.001"
+          ]
+        },
+        "feet_4": {
+          "glb": "/3d-parts/diamond/feet_4/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.036,
+            0.036,
+            0.009
+          ],
+          "bytes": 10312,
+          "hash": "280e221ca73f",
+          "source_object": "o353",
+          "source_materials": [
+            "Majestic_WhitePaint.001"
+          ]
+        },
+        "feet_5": {
+          "glb": "/3d-parts/diamond/feet_5/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.036,
+            0.036,
+            0.009
+          ],
+          "bytes": 17436,
+          "hash": "ccf87ca2657c",
+          "source_object": "o354",
+          "source_materials": [
+            "Majestic_WhitePaint.001"
+          ]
+        },
+        "feet_6": {
+          "glb": "/3d-parts/diamond/feet_6/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 3492,
+          "hash": "449c568a5423",
+          "source_object": "o359",
+          "source_materials": [
+            "Majestic_WhitePaint.001"
+          ]
+        },
+        "feet_7": {
+          "glb": "/3d-parts/diamond/feet_7/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 2824,
+          "hash": "29be6c6debff",
+          "source_object": "o360",
+          "source_materials": [
+            "Majestic_WhitePaint.001"
+          ]
+        },
+        "feet_8": {
+          "glb": "/3d-parts/diamond/feet_8/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 3524,
+          "hash": "b11db4968479",
+          "source_object": "o361",
+          "source_materials": [
+            "Majestic_WhitePaint.001"
+          ]
+        },
+        "feet_9": {
+          "glb": "/3d-parts/diamond/feet_9/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 2824,
+          "hash": "f6614401dcfe",
+          "source_object": "o362",
+          "source_materials": [
+            "Majestic_WhitePaint.001"
+          ]
+        },
+        "feet_10": {
+          "glb": "/3d-parts/diamond/feet_10/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.036,
+            0.036,
+            0.009
+          ],
+          "bytes": 10268,
+          "hash": "3e67a8f5c1c9",
+          "source_object": "o363",
+          "source_materials": [
+            "Majestic_WhitePaint.001"
+          ]
+        },
+        "feet_11": {
+          "glb": "/3d-parts/diamond/feet_11/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.036,
+            0.036,
+            0.009
+          ],
+          "bytes": 18084,
+          "hash": "487a547d0fd6",
+          "source_object": "o364",
+          "source_materials": [
+            "Majestic_WhitePaint.001"
+          ]
+        },
+        "feet_12": {
+          "glb": "/3d-parts/diamond/feet_12/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 2948,
+          "hash": "940891d94e79",
+          "source_object": "Line1325",
+          "source_materials": [
+            "Majestic_WhitePaint.001"
+          ]
+        },
+        "feet_13": {
+          "glb": "/3d-parts/diamond/feet_13/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 2888,
+          "hash": "82cc8a61a967",
+          "source_object": "Line1326",
+          "source_materials": [
+            "Majestic_WhitePaint.001"
+          ]
+        },
+        "feet_14": {
+          "glb": "/3d-parts/diamond/feet_14/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 2956,
+          "hash": "7fbc826c7126",
+          "source_object": "Line1327",
+          "source_materials": [
+            "Majestic_WhitePaint.001"
+          ]
+        },
+        "feet_15": {
+          "glb": "/3d-parts/diamond/feet_15/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 2888,
+          "hash": "87a2ea5ba33f",
+          "source_object": "Line1328",
+          "source_materials": [
+            "Majestic_WhitePaint.001"
+          ]
+        },
+        "leg_l_0": {
+          "glb": "/3d-parts/diamond/leg_l_0/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.611
+          ],
+          "bytes": 1756,
+          "hash": "9947147c1bab",
+          "source_object": "o357",
+          "source_materials": [
+            "Majestic_WhitePaint.001"
+          ]
+        },
+        "leg_l_1": {
+          "glb": "/3d-parts/diamond/leg_l_1/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.611
+          ],
+          "bytes": 1752,
+          "hash": "31d8ac64221d",
+          "source_object": "o358",
+          "source_materials": [
+            "Majestic_WhitePaint.001"
+          ]
+        },
+        "leg_r_0": {
+          "glb": "/3d-parts/diamond/leg_r_0/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.611
+          ],
+          "bytes": 1760,
+          "hash": "0ca676a9da11",
+          "source_object": "o367",
+          "source_materials": [
+            "Majestic_WhitePaint.001"
+          ]
+        },
+        "leg_r_1": {
+          "glb": "/3d-parts/diamond/leg_r_1/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.611
+          ],
+          "bytes": 1756,
+          "hash": "674d44779783",
+          "source_object": "o368",
+          "source_materials": [
+            "Majestic_WhitePaint.001"
+          ]
+        }
+      },
+      "baseSize": "180x80",
+      "unknowns": [
+        {
+          "name": "o355",
+          "materials": [
+            "Majestic_WhitePaint.001"
+          ],
+          "extents": [
+            0.05,
+            0.684,
+            0.05
+          ]
+        },
+        {
+          "name": "o356",
+          "materials": [
+            "Majestic_WhitePaint.001"
+          ],
+          "extents": [
+            0.05,
+            0.684,
+            0.05
+          ]
+        },
+        {
+          "name": "o365",
+          "materials": [
+            "Majestic_WhitePaint.001"
+          ],
+          "extents": [
+            0.05,
+            0.684,
+            0.05
+          ]
+        },
+        {
+          "name": "o366",
+          "materials": [
+            "Majestic_WhitePaint.001"
+          ],
+          "extents": [
+            0.05,
+            0.684,
+            0.05
+          ]
+        },
+        {
+          "name": "Cyc",
+          "materials": [
+            "Cyc_Gradient"
+          ],
+          "extents": [
+            30.0,
+            30.0,
+            0.0
+          ]
+        }
+      ],
+      "productKind": "desk"
+    },
     "Manager": {
       "parts": {
         "top": {
           "glb": "/3d-parts/diamond/top/manager.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             1.6,
@@ -25,9 +544,9 @@
         "feet_0": {
           "glb": "/3d-parts/diamond/feet_0/manager.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.05,
@@ -44,9 +563,9 @@
         "feet_1": {
           "glb": "/3d-parts/diamond/feet_1/manager.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.05,
@@ -63,9 +582,9 @@
         "feet_2": {
           "glb": "/3d-parts/diamond/feet_2/manager.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.05,
@@ -82,9 +601,9 @@
         "feet_3": {
           "glb": "/3d-parts/diamond/feet_3/manager.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.05,
@@ -101,9 +620,9 @@
         "feet_4": {
           "glb": "/3d-parts/diamond/feet_4/manager.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.036,
@@ -120,9 +639,9 @@
         "feet_5": {
           "glb": "/3d-parts/diamond/feet_5/manager.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.036,
@@ -139,9 +658,9 @@
         "feet_6": {
           "glb": "/3d-parts/diamond/feet_6/manager.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.042,
@@ -158,9 +677,9 @@
         "feet_7": {
           "glb": "/3d-parts/diamond/feet_7/manager.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.042,
@@ -177,9 +696,9 @@
         "feet_8": {
           "glb": "/3d-parts/diamond/feet_8/manager.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.042,
@@ -196,9 +715,9 @@
         "feet_9": {
           "glb": "/3d-parts/diamond/feet_9/manager.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.042,
@@ -215,9 +734,9 @@
         "feet_10": {
           "glb": "/3d-parts/diamond/feet_10/manager.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.05,
@@ -234,9 +753,9 @@
         "feet_11": {
           "glb": "/3d-parts/diamond/feet_11/manager.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.05,
@@ -253,9 +772,9 @@
         "feet_12": {
           "glb": "/3d-parts/diamond/feet_12/manager.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.05,
@@ -272,9 +791,9 @@
         "feet_13": {
           "glb": "/3d-parts/diamond/feet_13/manager.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.05,
@@ -291,9 +810,9 @@
         "feet_14": {
           "glb": "/3d-parts/diamond/feet_14/manager.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.036,
@@ -310,9 +829,9 @@
         "feet_15": {
           "glb": "/3d-parts/diamond/feet_15/manager.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.036,
@@ -329,9 +848,9 @@
         "frame_beam_0": {
           "glb": "/3d-parts/diamond/frame_beam_0/manager.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             1.448,
@@ -348,9 +867,9 @@
         "frame_beam_1": {
           "glb": "/3d-parts/diamond/frame_beam_1/manager.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             1.448,
@@ -367,9 +886,9 @@
         "leg_l_0": {
           "glb": "/3d-parts/diamond/leg_l_0/manager.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.05,
@@ -386,9 +905,9 @@
         "leg_l_1": {
           "glb": "/3d-parts/diamond/leg_l_1/manager.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.05,
@@ -405,9 +924,9 @@
         "leg_r_0": {
           "glb": "/3d-parts/diamond/leg_r_0/manager.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.05,
@@ -424,9 +943,9 @@
         "leg_r_1": {
           "glb": "/3d-parts/diamond/leg_r_1/manager.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.05,
@@ -439,21 +958,6 @@
           "source_materials": [
             "Majestic_WhitePaint"
           ]
-        },
-        "cable_tray": {
-          "glb": "/3d-parts/diamond/cable_tray/manager.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            1.36,
-            0.082,
-            0.08
-          ],
-          "bytes": 2104,
-          "hash": "41b1164fbd77"
         }
       },
       "baseSize": "160x80",
@@ -508,9 +1012,9 @@
             "Cyc_Gradient"
           ],
           "extents": [
-            30,
-            30,
-            0
+            30.0,
+            30.0,
+            0.0
           ]
         }
       ],
@@ -521,9 +1025,9 @@
         "top": {
           "glb": "/3d-parts/diamond/top/operator.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             1.4,
@@ -540,9 +1044,9 @@
         "frame_beam": {
           "glb": "/3d-parts/diamond/frame_beam/operator.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             1.283,
@@ -559,9 +1063,9 @@
         "feet_0": {
           "glb": "/3d-parts/diamond/feet_0/operator.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.042,
@@ -578,9 +1082,9 @@
         "feet_1": {
           "glb": "/3d-parts/diamond/feet_1/operator.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.042,
@@ -597,9 +1101,9 @@
         "feet_2": {
           "glb": "/3d-parts/diamond/feet_2/operator.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.05,
@@ -616,9 +1120,9 @@
         "feet_3": {
           "glb": "/3d-parts/diamond/feet_3/operator.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.05,
@@ -635,9 +1139,9 @@
         "feet_4": {
           "glb": "/3d-parts/diamond/feet_4/operator.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.05,
@@ -654,9 +1158,9 @@
         "feet_5": {
           "glb": "/3d-parts/diamond/feet_5/operator.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.05,
@@ -673,9 +1177,9 @@
         "feet_6": {
           "glb": "/3d-parts/diamond/feet_6/operator.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.036,
@@ -692,9 +1196,9 @@
         "feet_7": {
           "glb": "/3d-parts/diamond/feet_7/operator.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.036,
@@ -711,9 +1215,9 @@
         "feet_8": {
           "glb": "/3d-parts/diamond/feet_8/operator.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.05,
@@ -730,9 +1234,9 @@
         "feet_9": {
           "glb": "/3d-parts/diamond/feet_9/operator.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.05,
@@ -749,9 +1253,9 @@
         "feet_10": {
           "glb": "/3d-parts/diamond/feet_10/operator.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.05,
@@ -768,9 +1272,9 @@
         "feet_11": {
           "glb": "/3d-parts/diamond/feet_11/operator.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.05,
@@ -787,9 +1291,9 @@
         "feet_12": {
           "glb": "/3d-parts/diamond/feet_12/operator.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.036,
@@ -806,9 +1310,9 @@
         "feet_13": {
           "glb": "/3d-parts/diamond/feet_13/operator.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.036,
@@ -825,9 +1329,9 @@
         "leg_l_0": {
           "glb": "/3d-parts/diamond/leg_l_0/operator.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.05,
@@ -844,9 +1348,9 @@
         "leg_l_1": {
           "glb": "/3d-parts/diamond/leg_l_1/operator.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.05,
@@ -863,9 +1367,9 @@
         "leg_r_0": {
           "glb": "/3d-parts/diamond/leg_r_0/operator.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.05,
@@ -882,9 +1386,9 @@
         "leg_r_1": {
           "glb": "/3d-parts/diamond/leg_r_1/operator.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.05,
@@ -897,21 +1401,6 @@
           "source_materials": [
             "Majestic_WhitePaint"
           ]
-        },
-        "cable_tray": {
-          "glb": "/3d-parts/diamond/cable_tray/operator.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            1.16,
-            0.082,
-            0.08
-          ],
-          "bytes": 2116,
-          "hash": "841ee66d6b0b"
         }
       },
       "baseSize": "140x70",
@@ -966,14 +1455,14 @@
             "Cyc_DarkGradient"
           ],
           "extents": [
-            30,
-            30,
-            0
+            30.0,
+            30.0,
+            0.0
           ]
         }
       ],
       "productKind": "desk"
     }
   },
-  "generated_at": "2026-04-21T00:39:36.936Z"
+  "generated_at": "2026-04-20T03:54:26.784619Z"
 }
