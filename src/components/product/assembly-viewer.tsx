@@ -41,17 +41,29 @@ export function AssemblyViewer({ manifest, state, name, backgroundColor }: Assem
     const width = mount.clientWidth;
     const height = mount.clientHeight;
 
-    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    // Resolve the scene clear color from the backgroundColor prop.
+    // We read it once here (at mount time) — the reactive effect below keeps
+    // it in sync whenever the prop changes.
+    const bgColor = new THREE.Color(backgroundColor ?? "#F7F4EE");
+
+    const renderer = new THREE.WebGLRenderer({
+      antialias: true,
+      // alpha: false — we own the background color; no CSS bleed needed.
+      alpha: false,
+    });
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     renderer.setSize(width, height);
     renderer.outputColorSpace = THREE.SRGBColorSpace;
     renderer.toneMapping = THREE.NeutralToneMapping;
     renderer.toneMappingExposure = 1.0;
+    renderer.setClearColor(bgColor, 1);
     mount.appendChild(renderer.domElement);
     rendererRef.current = renderer;
 
     const scene = new THREE.Scene();
-    scene.background = null; // transparent — CSS backdrop behind
+    // Solid warm off-white infinity backdrop — matches the CSS outer container.
+    // The reactive effect below keeps this in sync when backgroundColor prop changes.
+    scene.background = bgColor;
     sceneRef.current = scene;
 
     // Neutral studio environment (model-viewer's "neutral" look).
@@ -59,12 +71,13 @@ export function AssemblyViewer({ manifest, state, name, backgroundColor }: Assem
     scene.environment = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
 
     // Soft ground shadow — a single contact shadow plane. Keeps things fast.
+    // Very low opacity so it reads as a subtle grounding shadow, not a hard floor.
     const shadow = new THREE.Mesh(
-      new THREE.PlaneGeometry(4, 4),
+      new THREE.PlaneGeometry(6, 6),
       new THREE.MeshBasicMaterial({
         color: 0x000000,
         transparent: true,
-        opacity: 0.2,
+        opacity: 0.12,
         depthWrite: false,
       }),
     );
@@ -128,6 +141,16 @@ export function AssemblyViewer({ manifest, state, name, backgroundColor }: Assem
     };
   }, []);
 
+  // --- reactive: sync backgroundColor prop → scene.background + clearColor ------
+  useEffect(() => {
+    const renderer = rendererRef.current;
+    const scene = sceneRef.current;
+    if (!renderer || !scene) return;
+    const color = new THREE.Color(backgroundColor ?? "#F7F4EE");
+    scene.background = color;
+    renderer.setClearColor(color, 1);
+  }, [backgroundColor]);
+
   // --- reactive: recompose scene when state changes ------------------------------
   useEffect(() => {
     const scene = sceneRef.current;
@@ -179,11 +202,10 @@ export function AssemblyViewer({ manifest, state, name, backgroundColor }: Assem
       aria-label={`3D view of ${name}`}
       className="w-full h-full"
       style={{
-        // backgroundColor comes from parent (family-configurator viewerBg logic).
-        // Fallback to transparent so the parent container color shows through.
-        // The old hardcoded grey gradient is intentionally removed — it was
-        // overriding the parent's warm off-white (#F7F4EE) background.
-        backgroundColor: backgroundColor ?? "transparent",
+        // Matches the scene.background so there is no flash of a different color
+        // before the first WebGL frame paints. The canvas (alpha:false) covers
+        // this fully once rendered.
+        backgroundColor: backgroundColor ?? "#F7F4EE",
       }}
     />
   );

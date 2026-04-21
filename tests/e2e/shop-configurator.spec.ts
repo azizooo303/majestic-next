@@ -156,4 +156,43 @@ test("Cratos configurator: AssemblyViewer canvas active, smart bg flips, sticky 
     topAtRest,
     `Viewer top at scroll=0 should be above 30px (got ${topAtRest}), sticky should have released`
   ).toBeGreaterThan(30);
+
+  // ─────────────────────────────────────────────────────────────────
+  // Assertion 4 — THREE.js internal scene background is warm off-white
+  //
+  // Reset picker to default (Polished Chrome legs) so viewerBg returns to
+  // #F7F4EE before we read the WebGL clear color. The all-white combo from
+  // Assertion 2 left the state at #E8E8E8 (grey) — that was correct then,
+  // but we want to verify the warm off-white path here.
+  // ─────────────────────────────────────────────────────────────────
+  await page.evaluate(() => window.scrollTo({ top: 0, behavior: "instant" }));
+  const polishedChromeBtn = page.getByRole("radio", { name: /Polished Chrome/i });
+  if (await polishedChromeBtn.isVisible({ timeout: 3000 }).catch(() => false)) {
+    await polishedChromeBtn.click();
+  }
+  // Wait for React to re-render and THREE.js to apply the new clearColor.
+  await page.waitForTimeout(500);
+
+  const clearColorOk = await canvas.evaluate((canvasEl) => {
+    const c = canvasEl as HTMLCanvasElement;
+    const gl =
+      (c.getContext("webgl2") as WebGL2RenderingContext | null) ??
+      (c.getContext("webgl") as WebGLRenderingContext | null);
+    if (!gl) return { ok: false, reason: "no WebGL context", r: 0, g: 0, b: 0 };
+    const val = gl.getParameter(gl.COLOR_CLEAR_VALUE) as Float32Array;
+    const r = val[0];
+    const g = val[1];
+    const b = val[2];
+    // #F7F4EE in 0-1: r=0.9686, g=0.9569, b=0.9333. Tolerance ±0.02.
+    const target = { r: 247 / 255, g: 244 / 255, b: 238 / 255 };
+    const ok =
+      Math.abs(r - target.r) <= 0.02 &&
+      Math.abs(g - target.g) <= 0.02 &&
+      Math.abs(b - target.b) <= 0.02;
+    return { ok, r: Math.round(r * 255), g: Math.round(g * 255), b: Math.round(b * 255), reason: ok ? "pass" : "color mismatch" };
+  });
+  expect(
+    clearColorOk.ok,
+    `THREE.js clear color should be near rgb(247,244,238) — got rgb(${clearColorOk.r},${clearColorOk.g},${clearColorOk.b})`
+  ).toBe(true);
 });

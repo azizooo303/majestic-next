@@ -246,7 +246,7 @@ export function FamilyConfigurator({family, basePrice, locale}: FamilyConfigurat
 
   return (
     <main id="main-content" className="flex-1 bg-white min-h-screen">
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 py-8 px-4 md:px-6 lg:px-8 max-w-7xl mx-auto items-start">
+    <div className="grid grid-cols-1 lg:grid-cols-[1fr_340px] gap-10 lg:gap-12 py-8 px-4 md:px-6 lg:px-8 max-w-[1440px] mx-auto items-start">
       {/* Left — 3D viewer / hero.
           Sticky pattern: this div IS the grid cell. items-start on the grid
           parent gives it natural height (not stretched to right column).
@@ -255,7 +255,7 @@ export function FamilyConfigurator({family, basePrice, locale}: FamilyConfigurat
           create a new containing block that breaks position:sticky. */}
       <div className="lg:sticky lg:top-6 self-start w-full">
       <div
-        className="h-[480px] lg:h-[720px] flex flex-col items-center justify-center relative border border-[#E7E7E7] transition-colors"
+        className="h-[480px] lg:h-[calc(100vh-120px)] flex flex-col items-center justify-center relative border border-[#E7E7E7] transition-colors"
         style={{ backgroundColor: viewerBg }}
       >
         {useAssemblyViewer && manifest ? (
