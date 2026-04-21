@@ -1,252 +1,17 @@
 {
   "family": "lyra",
   "configs": {
-    "Executive": {
-      "parts": {
-        "pedestal_0": {
-          "glb": "/3d-parts/accessories/pedestal-c75981d98752.glb",
-          "anchor": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "bbox": [
-            2.195,
-            1.673,
-            0.688
-          ],
-          "bytes": 15848,
-          "hash": "c75981d98752",
-          "source_object": "Layer:3DFrame",
-          "source_materials": [
-            "DESK-LYRA-EXEC_PEDESTAL_BODY"
-          ]
-        },
-        "pedestal_1": {
-          "glb": "/3d-parts/accessories/pedestal-540d2fa5c0a4.glb",
-          "anchor": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "bbox": [
-            0.188,
-            1.652,
-            0.636
-          ],
-          "bytes": 2096,
-          "hash": "540d2fa5c0a4",
-          "source_object": "Object004",
-          "source_materials": [
-            "DESK-LYRA-EXEC_PEDESTAL_BODY"
-          ]
-        },
-        "top_0": {
-          "glb": "/3d-parts/lyra/top_0/executive.glb",
-          "anchor": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "bbox": [
-            0.646,
-            1.6,
-            0.025
-          ],
-          "bytes": 161760,
-          "hash": "6bfb92aacc2b",
-          "source_object": "Layer:3DTops",
-          "source_materials": [
-            "DESK-LYRA-EXEC_DESKTOP"
-          ]
-        },
-        "top_1": {
-          "glb": "/3d-parts/lyra/top_1/executive.glb",
-          "anchor": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "bbox": [
-            2.3,
-            0.7,
-            0.05
-          ],
-          "bytes": 161556,
-          "hash": "43bd6dda9697",
-          "source_object": "Object003",
-          "source_materials": [
-            "DESK-LYRA-EXEC_DESKTOP"
-          ]
-        },
-        "top_2": {
-          "glb": "/3d-parts/lyra/top_2/executive.glb",
-          "anchor": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "bbox": [
-            2.3,
-            0.3,
-            0.05
-          ],
-          "bytes": 161568,
-          "hash": "8bfd68c40c02",
-          "source_object": "Object005",
-          "source_materials": [
-            "DESK-LYRA-EXEC_DESKTOP"
-          ]
-        },
-        "frame_beam_0": {
-          "glb": "/3d-parts/lyra/frame_beam_0/executive.glb",
-          "anchor": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "bbox": [
-            0.05,
-            0.65,
-            0.636
-          ],
-          "bytes": 1540,
-          "hash": "eab214c41091",
-          "source_object": "Object003.001",
-          "source_materials": [
-            "DESK-LYRA-EXEC_FRAME_BEAM"
-          ]
-        },
-        "frame_beam_1": {
-          "glb": "/3d-parts/lyra/frame_beam_1/executive.glb",
-          "anchor": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "bbox": [
-            0.65,
-            0.05,
-            0.636
-          ],
-          "bytes": 1536,
-          "hash": "fd102e6537c6",
-          "source_object": "Object004.001",
-          "source_materials": [
-            "DESK-LYRA-EXEC_FRAME_BEAM"
-          ]
-        },
-        "frame_beam_2": {
-          "glb": "/3d-parts/lyra/frame_beam_2/executive.glb",
-          "anchor": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "bbox": [
-            0.6,
-            0.4,
-            0.03
-          ],
-          "bytes": 1524,
-          "hash": "72a95e9249b2",
-          "source_object": "Box181933",
-          "source_materials": [
-            "DESK-LYRA-EXEC_FRAME_BEAM"
-          ]
-        },
-        "modesty_0": {
-          "glb": "/3d-parts/accessories/modesty-230b47e29050.glb",
-          "anchor": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "bbox": [
-            0.47,
-            0.4,
-            0.018
-          ],
-          "bytes": 161584,
-          "hash": "230b47e29050",
-          "source_object": "Box181932",
-          "source_materials": [
-            "DESK-LYRA-EXEC_MODESTY_PANEL"
-          ]
-        },
-        "modesty_1": {
-          "glb": "/3d-parts/accessories/modesty-c98530a09852.glb",
-          "anchor": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "bbox": [
-            0.018,
-            0.4,
-            0.37
-          ],
-          "bytes": 161548,
-          "hash": "c98530a09852",
-          "source_object": "Box181934",
-          "source_materials": [
-            "DESK-LYRA-EXEC_MODESTY_PANEL"
-          ]
-        },
-        "modesty_2": {
-          "glb": "/3d-parts/accessories/modesty-637fd40cf8c8.glb",
-          "anchor": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "bbox": [
-            0.018,
-            0.4,
-            0.37
-          ],
-          "bytes": 161544,
-          "hash": "637fd40cf8c8",
-          "source_object": "Box181935",
-          "source_materials": [
-            "DESK-LYRA-EXEC_MODESTY_PANEL"
-          ]
-        },
-        "modesty_3": {
-          "glb": "/3d-parts/accessories/modesty-38fa55096f7c.glb",
-          "anchor": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "bbox": [
-            0.47,
-            0.018,
-            0.1
-          ],
-          "bytes": 161532,
-          "hash": "38fa55096f7c",
-          "source_object": "Box181936",
-          "source_materials": [
-            "DESK-LYRA-EXEC_MODESTY_PANEL"
-          ]
-        }
-      },
-      "baseSize": null,
-      "unknowns": [],
-      "productKind": "desk"
-    },
     "Storage Credenza": {
       "parts": {
         "pedestal_top_0": {
           "glb": "/3d-parts/accessories/pedestal_top-1fd9c1d9ed47.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
-            2.0,
+            2,
             0.018,
             1.164
           ],
@@ -260,9 +25,9 @@
         "pedestal_top_1": {
           "glb": "/3d-parts/accessories/pedestal_top-500f8dbc87be.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.018,
@@ -279,9 +44,9 @@
         "pedestal_top_2": {
           "glb": "/3d-parts/accessories/pedestal_top-0a6cd8f91492.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.018,
@@ -298,9 +63,9 @@
         "pedestal_top_3": {
           "glb": "/3d-parts/accessories/pedestal_top-9b14dedfe35f.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.4,
@@ -317,9 +82,9 @@
         "pedestal_top_4": {
           "glb": "/3d-parts/accessories/pedestal_top-6deffcc505ec.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.4,
@@ -336,9 +101,9 @@
         "pedestal_top_5": {
           "glb": "/3d-parts/accessories/pedestal_top-542c333c59c7.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.4,
@@ -355,9 +120,9 @@
         "pedestal_top_6": {
           "glb": "/3d-parts/accessories/pedestal_top-774350ba5731.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.4,
@@ -374,9 +139,9 @@
         "pedestal_top_7": {
           "glb": "/3d-parts/accessories/pedestal_top-c9bcdd50f4db.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.4,
@@ -393,9 +158,9 @@
         "top": {
           "glb": "/3d-parts/lyra/top/storage-credenza.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             2.036,
@@ -412,9 +177,9 @@
         "frame_beam_0": {
           "glb": "/3d-parts/lyra/frame_beam_0/storage-credenza.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             2.036,
@@ -431,9 +196,9 @@
         "frame_beam_1": {
           "glb": "/3d-parts/lyra/frame_beam_1/storage-credenza.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.6,
@@ -450,9 +215,9 @@
         "feet_0": {
           "glb": "/3d-parts/lyra/feet_0/storage-credenza.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.01,
@@ -469,9 +234,9 @@
         "feet_1": {
           "glb": "/3d-parts/lyra/feet_1/storage-credenza.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.006,
@@ -488,9 +253,9 @@
         "feet_2": {
           "glb": "/3d-parts/lyra/feet_2/storage-credenza.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.006,
@@ -507,9 +272,9 @@
         "modesty_0": {
           "glb": "/3d-parts/accessories/modesty-07665e79b20b.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.47,
@@ -526,9 +291,9 @@
         "modesty_1": {
           "glb": "/3d-parts/accessories/modesty-c87c0c48fa09.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.018,
@@ -545,9 +310,9 @@
         "modesty_2": {
           "glb": "/3d-parts/accessories/modesty-f1d73d0c3ddf.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.018,
@@ -564,9 +329,9 @@
         "modesty_3": {
           "glb": "/3d-parts/accessories/modesty-bc5966966e8c.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.47,
@@ -602,12 +367,12 @@
         "pedestal_top_0": {
           "glb": "/3d-parts/accessories/pedestal_top-101f81cbbedf.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
-            2.0,
+            2,
             0.018,
             1.164
           ],
@@ -621,9 +386,9 @@
         "pedestal_top_1": {
           "glb": "/3d-parts/accessories/pedestal_top-d0bec89c565f.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.018,
@@ -640,9 +405,9 @@
         "pedestal_top_2": {
           "glb": "/3d-parts/accessories/pedestal_top-df60538f4c61.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.018,
@@ -659,9 +424,9 @@
         "pedestal_top_3": {
           "glb": "/3d-parts/accessories/pedestal_top-77fcf514cf93.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.4,
@@ -678,9 +443,9 @@
         "pedestal_top_4": {
           "glb": "/3d-parts/accessories/pedestal_top-bd9fe046617a.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.4,
@@ -697,9 +462,9 @@
         "pedestal_top_5": {
           "glb": "/3d-parts/accessories/pedestal_top-f387ac944aee.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.4,
@@ -716,9 +481,9 @@
         "pedestal_top_6": {
           "glb": "/3d-parts/accessories/pedestal_top-e028c8d8e982.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.4,
@@ -735,9 +500,9 @@
         "pedestal_top_7": {
           "glb": "/3d-parts/accessories/pedestal_top-df313a740125.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.4,
@@ -754,9 +519,9 @@
         "top": {
           "glb": "/3d-parts/lyra/top/tall-credenza.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             2.036,
@@ -773,9 +538,9 @@
         "frame_beam": {
           "glb": "/3d-parts/lyra/frame_beam/tall-credenza.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             2.036,
@@ -818,9 +583,9 @@
         "modesty_0": {
           "glb": "/3d-parts/accessories/modesty-bb23a834c87a.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.47,
@@ -837,9 +602,9 @@
         "modesty_1": {
           "glb": "/3d-parts/accessories/modesty-6033af9b777e.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.018,
@@ -856,9 +621,9 @@
         "modesty_2": {
           "glb": "/3d-parts/accessories/modesty-8dd34bb5fb6d.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.018,
@@ -875,9 +640,9 @@
         "modesty_3": {
           "glb": "/3d-parts/accessories/modesty-b3bee78cb700.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.47,
@@ -894,9 +659,9 @@
         "frame_beam": {
           "glb": "/3d-parts/lyra/frame_beam/coffee-table.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.6,
@@ -914,7 +679,257 @@
       "baseSize": null,
       "unknowns": [],
       "productKind": "coffee_table"
+    },
+    "Operator": {
+      "parts": {
+        "pedestal_0": {
+          "glb": "/3d-parts/accessories/pedestal-c75981d98752.glb",
+          "anchor": [
+            0,
+            0,
+            0
+          ],
+          "bbox": [
+            2.195,
+            1.673,
+            0.688
+          ],
+          "bytes": 15848,
+          "hash": "c75981d98752",
+          "source_object": "Layer:3DFrame",
+          "source_materials": [
+            "DESK-LYRA-EXEC_PEDESTAL_BODY"
+          ]
+        },
+        "pedestal_1": {
+          "glb": "/3d-parts/accessories/pedestal-540d2fa5c0a4.glb",
+          "anchor": [
+            0,
+            0,
+            0
+          ],
+          "bbox": [
+            0.188,
+            1.652,
+            0.636
+          ],
+          "bytes": 2096,
+          "hash": "540d2fa5c0a4",
+          "source_object": "Object004",
+          "source_materials": [
+            "DESK-LYRA-EXEC_PEDESTAL_BODY"
+          ]
+        },
+        "top_0": {
+          "glb": "/3d-parts/lyra/top_0/executive.glb",
+          "anchor": [
+            0,
+            0,
+            0
+          ],
+          "bbox": [
+            0.646,
+            1.6,
+            0.025
+          ],
+          "bytes": 161760,
+          "hash": "6bfb92aacc2b",
+          "source_object": "Layer:3DTops",
+          "source_materials": [
+            "DESK-LYRA-EXEC_DESKTOP"
+          ]
+        },
+        "top_1": {
+          "glb": "/3d-parts/lyra/top_1/executive.glb",
+          "anchor": [
+            0,
+            0,
+            0
+          ],
+          "bbox": [
+            2.3,
+            0.7,
+            0.05
+          ],
+          "bytes": 161556,
+          "hash": "43bd6dda9697",
+          "source_object": "Object003",
+          "source_materials": [
+            "DESK-LYRA-EXEC_DESKTOP"
+          ]
+        },
+        "top_2": {
+          "glb": "/3d-parts/lyra/top_2/executive.glb",
+          "anchor": [
+            0,
+            0,
+            0
+          ],
+          "bbox": [
+            2.3,
+            0.3,
+            0.05
+          ],
+          "bytes": 161568,
+          "hash": "8bfd68c40c02",
+          "source_object": "Object005",
+          "source_materials": [
+            "DESK-LYRA-EXEC_DESKTOP"
+          ]
+        },
+        "frame_beam_0": {
+          "glb": "/3d-parts/lyra/frame_beam_0/executive.glb",
+          "anchor": [
+            0,
+            0,
+            0
+          ],
+          "bbox": [
+            0.05,
+            0.65,
+            0.636
+          ],
+          "bytes": 1540,
+          "hash": "eab214c41091",
+          "source_object": "Object003.001",
+          "source_materials": [
+            "DESK-LYRA-EXEC_FRAME_BEAM"
+          ]
+        },
+        "frame_beam_1": {
+          "glb": "/3d-parts/lyra/frame_beam_1/executive.glb",
+          "anchor": [
+            0,
+            0,
+            0
+          ],
+          "bbox": [
+            0.65,
+            0.05,
+            0.636
+          ],
+          "bytes": 1536,
+          "hash": "fd102e6537c6",
+          "source_object": "Object004.001",
+          "source_materials": [
+            "DESK-LYRA-EXEC_FRAME_BEAM"
+          ]
+        },
+        "frame_beam_2": {
+          "glb": "/3d-parts/lyra/frame_beam_2/executive.glb",
+          "anchor": [
+            0,
+            0,
+            0
+          ],
+          "bbox": [
+            0.6,
+            0.4,
+            0.03
+          ],
+          "bytes": 1524,
+          "hash": "72a95e9249b2",
+          "source_object": "Box181933",
+          "source_materials": [
+            "DESK-LYRA-EXEC_FRAME_BEAM"
+          ]
+        },
+        "modesty_0": {
+          "glb": "/3d-parts/accessories/modesty-230b47e29050.glb",
+          "anchor": [
+            0,
+            0,
+            0
+          ],
+          "bbox": [
+            0.47,
+            0.4,
+            0.018
+          ],
+          "bytes": 161584,
+          "hash": "230b47e29050",
+          "source_object": "Box181932",
+          "source_materials": [
+            "DESK-LYRA-EXEC_MODESTY_PANEL"
+          ]
+        },
+        "modesty_1": {
+          "glb": "/3d-parts/accessories/modesty-c98530a09852.glb",
+          "anchor": [
+            0,
+            0,
+            0
+          ],
+          "bbox": [
+            0.018,
+            0.4,
+            0.37
+          ],
+          "bytes": 161548,
+          "hash": "c98530a09852",
+          "source_object": "Box181934",
+          "source_materials": [
+            "DESK-LYRA-EXEC_MODESTY_PANEL"
+          ]
+        },
+        "modesty_2": {
+          "glb": "/3d-parts/accessories/modesty-637fd40cf8c8.glb",
+          "anchor": [
+            0,
+            0,
+            0
+          ],
+          "bbox": [
+            0.018,
+            0.4,
+            0.37
+          ],
+          "bytes": 161544,
+          "hash": "637fd40cf8c8",
+          "source_object": "Box181935",
+          "source_materials": [
+            "DESK-LYRA-EXEC_MODESTY_PANEL"
+          ]
+        },
+        "modesty_3": {
+          "glb": "/3d-parts/accessories/modesty-38fa55096f7c.glb",
+          "anchor": [
+            0,
+            0,
+            0
+          ],
+          "bbox": [
+            0.47,
+            0.018,
+            0.1
+          ],
+          "bytes": 161532,
+          "hash": "38fa55096f7c",
+          "source_object": "Box181936",
+          "source_materials": [
+            "DESK-LYRA-EXEC_MODESTY_PANEL"
+          ]
+        },
+        "cable_tray": {
+          "glb": "/3d-parts/lyra/cable_tray/operator.glb",
+          "anchor": [
+            0,
+            0,
+            0
+          ],
+          "bbox": [
+            2.06,
+            0.082,
+            0.08
+          ],
+          "bytes": 2096,
+          "hash": "264c5f5a458e"
+        }
+      },
+      "baseSize": null,
+      "unknowns": [],
+      "productKind": "desk"
     }
   },
-  "generated_at": "2026-04-20T03:54:26.774573Z"
+  "generated_at": "2026-04-21T00:39:36.937Z"
 }

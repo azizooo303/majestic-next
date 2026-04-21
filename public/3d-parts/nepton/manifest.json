@@ -1,14 +1,14 @@
 {
   "family": "nepton",
   "configs": {
-    "Executive": {
+    "Operator": {
       "parts": {
         "modesty": {
           "glb": "/3d-parts/accessories/modesty-3f175a6fc136.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             1.4,
@@ -25,9 +25,9 @@
         "top": {
           "glb": "/3d-parts/nepton/top/executive.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             1.8,
@@ -44,14 +44,14 @@
         "grommet_0": {
           "glb": "/3d-parts/accessories/grommet-a74e57251a0d.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.268,
             0.02,
-            0.0
+            0
           ],
           "bytes": 1400,
           "hash": "a74e57251a0d",
@@ -63,9 +63,9 @@
         "grommet_1": {
           "glb": "/3d-parts/accessories/grommet-a1ea68f72e2b.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.267,
@@ -82,9 +82,9 @@
         "grommet_2": {
           "glb": "/3d-parts/accessories/grommet-5fcfc5dc04bc.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.3,
@@ -101,9 +101,9 @@
         "grommet_3": {
           "glb": "/3d-parts/accessories/grommet-5a87b73207e8.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.026,
@@ -120,9 +120,9 @@
         "grommet_4": {
           "glb": "/3d-parts/accessories/grommet-fcc293e4513c.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.026,
@@ -139,9 +139,9 @@
         "grommet_5": {
           "glb": "/3d-parts/accessories/grommet-88d59a169489.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.026,
@@ -158,9 +158,9 @@
         "feet_0": {
           "glb": "/3d-parts/nepton/feet_0/executive.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.069,
@@ -177,9 +177,9 @@
         "feet_1": {
           "glb": "/3d-parts/nepton/feet_1/executive.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.069,
@@ -196,9 +196,9 @@
         "feet_2": {
           "glb": "/3d-parts/nepton/feet_2/executive.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.069,
@@ -215,9 +215,9 @@
         "feet_3": {
           "glb": "/3d-parts/nepton/feet_3/executive.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.069,
@@ -262,14 +262,14 @@
             "GradientFloor"
           ],
           "extents": [
-            30.0,
-            30.0,
-            0.0
+            30,
+            30,
+            0
           ]
         }
       ],
       "productKind": "desk"
     }
   },
-  "generated_at": "2026-04-20T03:54:26.787754Z"
+  "generated_at": "2026-04-21T00:36:56.129Z"
 }

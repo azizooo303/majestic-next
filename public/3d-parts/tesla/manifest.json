@@ -6,9 +6,9 @@
         "feet_0": {
           "glb": "/3d-parts/tesla/feet_0/meeting-4-person.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.116,
@@ -25,9 +25,9 @@
         "feet_1": {
           "glb": "/3d-parts/tesla/feet_1/meeting-4-person.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.116,
@@ -44,9 +44,9 @@
         "feet_2": {
           "glb": "/3d-parts/tesla/feet_2/meeting-4-person.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.116,
@@ -63,9 +63,9 @@
         "feet_3": {
           "glb": "/3d-parts/tesla/feet_3/meeting-4-person.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.116,
@@ -82,9 +82,9 @@
         "frame_beam_0": {
           "glb": "/3d-parts/tesla/frame_beam_0/meeting-4-person.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.234,
@@ -101,9 +101,9 @@
         "frame_beam_1": {
           "glb": "/3d-parts/tesla/frame_beam_1/meeting-4-person.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.234,
@@ -120,9 +120,9 @@
         "frame_beam_2": {
           "glb": "/3d-parts/tesla/frame_beam_2/meeting-4-person.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.234,
@@ -139,9 +139,9 @@
         "frame_beam_3": {
           "glb": "/3d-parts/tesla/frame_beam_3/meeting-4-person.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.234,
@@ -158,9 +158,9 @@
         "grommet_0": {
           "glb": "/3d-parts/accessories/grommet-f524bf7d4f42.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.06,
@@ -177,9 +177,9 @@
         "grommet_1": {
           "glb": "/3d-parts/accessories/grommet-127a7cd8b668.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.06,
@@ -196,9 +196,9 @@
         "top": {
           "glb": "/3d-parts/tesla/top/meeting-4-person.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             1.242,
@@ -211,6 +211,21 @@
           "source_materials": [
             "DESKTOP_a398"
           ]
+        },
+        "cable_tray": {
+          "glb": "/3d-parts/tesla/cable_tray/meeting-4-person.glb",
+          "anchor": [
+            0,
+            0,
+            0
+          ],
+          "bbox": [
+            1.002,
+            0.082,
+            0.08
+          ],
+          "bytes": 2112,
+          "hash": "360d29c41095"
         }
       },
       "baseSize": "120x120",
@@ -274,5 +289,5 @@
       "productKind": "meeting"
     }
   },
-  "generated_at": "2026-04-20T03:54:26.792314Z"
+  "generated_at": "2026-04-21T00:39:36.939Z"
 }
