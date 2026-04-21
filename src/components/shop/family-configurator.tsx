@@ -255,7 +255,7 @@ export function FamilyConfigurator({family, basePrice, locale}: FamilyConfigurat
           create a new containing block that breaks position:sticky. */}
       <div className="lg:sticky lg:top-6 self-start w-full">
       <div
-        className="h-[480px] lg:h-[calc(100vh-120px)] flex flex-col items-center justify-center relative border border-[#E7E7E7] transition-colors"
+        className="h-[480px] lg:h-[min(calc(100vh-120px),680px)] flex flex-col items-center justify-center relative border border-[#E7E7E7] transition-colors"
         style={{ backgroundColor: viewerBg }}
       >
         {useAssemblyViewer && manifest ? (
