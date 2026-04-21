@@ -106,10 +106,11 @@ export function AssemblyViewer({ manifest, state, name, backgroundColor }: Assem
     controls.enableDamping = true;
     controls.dampingFactor = 0.05;
     // Full 360° horizontal + near-full vertical — users need to rotate
-    // freely to inspect any angle (Aziz: "I CANT EASLY GO 360 TO VIEW
-    // ANYTHING"). Only clamp just above floor + just below top.
-    controls.minPolarAngle = 0.1;
-    controls.maxPolarAngle = Math.PI / 2;
+    // freely to inspect any angle, including looking UP at the underside
+    // of the desk (Aziz: "I CANT SE BELOW VERY GOOD"). Only clamp at the
+    // absolute poles so orbit math doesn't gimbal-lock.
+    controls.minPolarAngle = 0.05;
+    controls.maxPolarAngle = Math.PI - 0.05;
     controls.minDistance = 0.9;
     controls.maxDistance = 6.0;
     controls.rotateSpeed = 0.9;
