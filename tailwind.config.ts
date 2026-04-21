@@ -74,6 +74,16 @@ const config: Config = {
         base: '2px',
         lg: '2px',
       },
+      keyframes: {
+        pricePulse: {
+          '0%':   { color: '#2C2C2C' },
+          '30%':  { color: '#000000' },
+          '100%': { color: '#2C2C2C' },
+        },
+      },
+      animation: {
+        pricePulse: 'pricePulse 0.45s cubic-bezier(0.16,1,0.3,1)',
+      },
     },
   },
   plugins: [],

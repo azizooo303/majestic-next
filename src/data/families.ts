@@ -261,6 +261,51 @@ export const DESK_TOP_FINISHES = [
   "White Oak", "Cherry", "Aris Anthracite", "Devine Oak",
 ] as const;
 
+export type FinishGroup = "whites" | "oaks" | "walnuts" | "greys" | "stone";
+
+/** Finish metadata: group (for tab filter) + substrate description.
+ *  Source: v2 HTML FINISHES array (lines 1220-1258) as ground truth.
+ *  Group taxonomy: Whites (3) · Oaks (9) · Walnuts (4) · Greys & Blacks (8) · Stone & Neutrals (8) */
+export const FINISH_META: Record<string, { group: FinishGroup; meta: string }> = {
+  // Whites (3)
+  "Premium White":           { group: "whites",  meta: "Laminate · 25 mm · Matte · In stock" },
+  "Antique White":           { group: "whites",  meta: "Laminate · 25 mm · Matte" },
+  "Cashmere Grey":           { group: "whites",  meta: "Laminate · 25 mm · Matte" },
+  // Oaks (9)
+  "Natural Hamilton Oak":    { group: "oaks",    meta: "Laminate · Woodgrain · Matte" },
+  "Light Rustic Oak":        { group: "oaks",    meta: "Laminate · Woodgrain · Matte" },
+  "Grey Bardolino Oak":      { group: "oaks",    meta: "Laminate · Woodgrain · Matte" },
+  "Vicenza Oak":             { group: "oaks",    meta: "Laminate · Woodgrain · Satin" },
+  "Lefkas Oak":              { group: "oaks",    meta: "Laminate · Woodgrain · Matte" },
+  "White Oak":               { group: "oaks",    meta: "Veneer · Brushed · Matte" },
+  "Devine Oak":              { group: "oaks",    meta: "Laminate · Woodgrain · Satin" },
+  "Alpine":                  { group: "oaks",    meta: "Laminate · Woodgrain · Matte" },
+  "Aris Anthracite":         { group: "oaks",    meta: "Laminate · Woodgrain · Matte" },
+  // Walnuts (4)
+  "Natural Hamilton Walnut": { group: "walnuts", meta: "Laminate · Woodgrain · Matte" },
+  "Italian Walnut":          { group: "walnuts", meta: "Veneer · Satin" },
+  "Anatolia Walnut":         { group: "walnuts", meta: "Laminate · Woodgrain · Matte" },
+  "Africa Walnut":           { group: "walnuts", meta: "Laminate · Woodgrain · Matte" },
+  // Greys & Blacks (8)
+  "Light Grey":              { group: "greys",   meta: "Laminate · Solid · Matte" },
+  "Platinum Grey":           { group: "greys",   meta: "Laminate · Solid · Matte" },
+  "Basalt Grey":             { group: "greys",   meta: "Laminate · Solid · Matte" },
+  "Graphite Grey":           { group: "greys",   meta: "Laminate · Solid · Matte" },
+  "Onyx Grey":               { group: "greys",   meta: "Laminate · Solid · Matte" },
+  "Soft Black":              { group: "greys",   meta: "Laminate · Solid · Matte · In stock" },
+  "Cherry":                  { group: "greys",   meta: "Veneer · Satin" },
+  "Argos":                   { group: "greys",   meta: "Laminate · Solid · Matte" },
+  // Stone & Neutrals (8)
+  "Ibiza":                   { group: "stone",   meta: "Laminate · Stone · Matte" },
+  "Dakota":                  { group: "stone",   meta: "Laminate · Stone · Matte" },
+  "Garda":                   { group: "stone",   meta: "Laminate · Stone · Matte" },
+  "Amalfi":                  { group: "stone",   meta: "Laminate · Stone · Matte" },
+  "Armada":                  { group: "stone",   meta: "Laminate · Stone · Matte" },
+  "Acapulco":                { group: "stone",   meta: "Laminate · Stone · Matte" },
+  "Belmonte":                { group: "stone",   meta: "Laminate · Stone · Matte" },
+  "Cabana":                  { group: "stone",   meta: "Laminate · Stone · Matte" },
+};
+
 /**
  * Representative hex per finish for 3D viewer material swap (Wave 4 pilot).
  * Values are averaged/estimated from Egger + Kastamonu supplier samples.
