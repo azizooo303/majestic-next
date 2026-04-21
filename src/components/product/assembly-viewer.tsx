@@ -70,21 +70,33 @@ export function AssemblyViewer({ manifest, state, name, backgroundColor }: Assem
     const pmrem = new THREE.PMREMGenerator(renderer);
     scene.environment = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
 
-    // Soft ground shadow — a single contact shadow plane. Keeps things fast.
-    // Very low opacity so it reads as a subtle grounding shadow, not a hard floor.
+    // Ground shadow — ShadowMaterial only darkens where a real light
+    // casts a shadow; everywhere else stays fully transparent so the warm
+    // off-white scene.background shows through cleanly. Previously this was
+    // a MeshBasicMaterial at 0.12 opacity which dimmed the *entire* floor
+    // disc to grey and read as a visible grey floor (Aziz bug 2026-04-21).
     const shadow = new THREE.Mesh(
       new THREE.PlaneGeometry(6, 6),
-      new THREE.MeshBasicMaterial({
-        color: 0x000000,
-        transparent: true,
-        opacity: 0.12,
-        depthWrite: false,
-      }),
+      new THREE.ShadowMaterial({ opacity: 0.22 }),
     );
     shadow.rotation.x = -Math.PI / 2;
     shadow.position.y = 0.001;
+    shadow.receiveShadow = true;
     shadow.name = "contact-shadow";
     scene.add(shadow);
+    // ShadowMaterial needs a directional light that casts shadows + the
+    // renderer with shadowMap enabled. Without them the floor is invisible
+    // (which is fine — desk sits on the off-white backdrop cleanly).
+    renderer.shadowMap.enabled = true;
+    renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+    const sun = new THREE.DirectionalLight(0xffffff, 1.2);
+    sun.position.set(2.5, 4, 2);
+    sun.castShadow = true;
+    sun.shadow.mapSize.set(1024, 1024);
+    sun.shadow.camera.left = -3; sun.shadow.camera.right = 3;
+    sun.shadow.camera.top = 3; sun.shadow.camera.bottom = -3;
+    sun.shadow.bias = -0.0001;
+    scene.add(sun);
 
     const camera = new THREE.PerspectiveCamera(35, width / height, 0.05, 50);
     camera.position.set(1.8, 1.35, 2.4);
