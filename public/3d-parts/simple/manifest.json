@@ -1,0 +1,87 @@
+{
+  "family": "simple",
+  "generated_at": "2026-04-21T14:35:00Z",
+  "generator": "hand-authored minimal single-body manifest (Phase 4 ship; per-part decomposition deferred)",
+  "configs": {
+    "Operator": {
+      "parts": {
+        "body": {
+          "glb": "/3d/simple-operator/model.glb",
+          "anchor": [0, 0, 0],
+          "bbox": [2.10, 0.79, 0.76],
+          "source_sku": "DESK-SIMPLE-OPR"
+        }
+      }
+    },
+    "Manager": {
+      "parts": {
+        "body": {
+          "glb": "/3d/simple-manager/model.glb",
+          "anchor": [0, 0, 0],
+          "bbox": [1.60, 1.60, 0.76],
+          "source_sku": "DESK-SIMPLE-MGR"
+        }
+      }
+    },
+    "L-Shape": {
+      "parts": {
+        "body": {
+          "glb": "/3d/simple-l-shape/model.glb",
+          "anchor": [0, 0, 0],
+          "bbox": [2.00, 1.60, 0.76],
+          "source_sku": "DESK-SIMPLE-L"
+        }
+      }
+    },
+    "Meeting 4-Person": {
+      "parts": {
+        "body": {
+          "glb": "/3d/simple-meeting-4p/model.glb",
+          "anchor": [0, 0, 0],
+          "bbox": [1.20, 1.20, 0.75],
+          "source_sku": "MTG-SIMPLE-4P"
+        }
+      }
+    },
+    "Meeting 10-Person": {
+      "parts": {
+        "body": {
+          "glb": "/3d/simple-meeting-10p/model.glb",
+          "anchor": [0, 0, 0],
+          "bbox": [3.20, 1.40, 0.76],
+          "source_sku": "MTG-SIMPLE-10P"
+        }
+      }
+    },
+    "Workstation 4-Person": {
+      "parts": {
+        "body": {
+          "glb": "/3d/simple-ws-4p/model.glb",
+          "anchor": [0, 0, 0],
+          "bbox": [2.80, 1.40, 0.99],
+          "source_sku": "SYS-SIMPLE-WS-4P"
+        }
+      }
+    },
+    "Coffee Table (1000)": {
+      "parts": {
+        "body": {
+          "glb": "/3d/simple-coffee-1000/model.glb",
+          "anchor": [0, 0, 0],
+          "bbox": [1.58, 0.59, 0.42],
+          "source_sku": "TBL-SIMPLE-COFFEE-1000"
+        }
+      }
+    },
+    "Coffee Table (500)": {
+      "parts": {
+        "body": {
+          "glb": "/3d/simple-coffee-500/model.glb",
+          "anchor": [0, 0, 0],
+          "bbox": [0.50, 0.50, 0.50],
+          "source_sku": "TBL-SIMPLE-COFFEE-500"
+        }
+      }
+    }
+  }
+}
