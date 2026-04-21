@@ -1,14 +1,15 @@
 {
   "family": "cratos",
+  "generated_at": "2026-04-21T15:04:11.115868Z",
   "configs": {
-    "Operator": {
+    "Executive": {
       "parts": {
-        "modesty": {
-          "glb": "/3d-parts/accessories/modesty-26adebaae097.glb",
+        "leg_r_0": {
+          "glb": "/3d-parts/cratos/leg_r_0/executive.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             1.4,
@@ -16,18 +17,44 @@
             0.35
           ],
           "bytes": 1584,
-          "hash": "26adebaae097",
-          "source_object": "Box443",
-          "source_materials": [
-            "Majestic_WhitePaint"
-          ]
+          "hash": "101b1f635e1b"
         },
-        "top": {
-          "glb": "/3d-parts/cratos/top/executive.glb",
+        "leg_r_1": {
+          "glb": "/3d-parts/cratos/leg_r_1/executive.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.06,
+            0.796,
+            0.72
+          ],
+          "bytes": 74876,
+          "hash": "6f46818c898c"
+        },
+        "leg_r_2": {
+          "glb": "/3d-parts/cratos/leg_r_2/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.06,
+            0.796,
+            0.72
+          ],
+          "bytes": 71840,
+          "hash": "99bd2ab08b6d"
+        },
+        "top_0": {
+          "glb": "/3d-parts/cratos/top_0/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             1.8,
@@ -35,18 +62,29 @@
             0.03
           ],
           "bytes": 1436,
-          "hash": "9a847c27fb03",
-          "source_object": "Box444",
-          "source_materials": [
-            "Majestic_Oak"
-          ]
+          "hash": "599c16720151"
+        },
+        "top_1": {
+          "glb": "/3d-parts/cratos/top_1/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            30.0,
+            30.0,
+            0.0
+          ],
+          "bytes": 3280,
+          "hash": "0d776dad83e0"
         },
         "frame_beam_0": {
           "glb": "/3d-parts/cratos/frame_beam_0/executive.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             1.668,
@@ -54,75 +92,59 @@
             0.04
           ],
           "bytes": 1536,
-          "hash": "1357933ecf95",
-          "source_object": "Box3113",
-          "source_materials": [
-            "Majestic_WhitePaint"
-          ]
+          "hash": "d91ebde280a6"
         },
         "frame_beam_1": {
           "glb": "/3d-parts/cratos/frame_beam_1/executive.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             1.668,
             0.04,
             0.04
           ],
-          "bytes": 1536,
-          "hash": "59cdb14d9024",
-          "source_object": "Box3114",
-          "source_materials": [
-            "Majestic_WhitePaint"
-          ]
+          "bytes": 1540,
+          "hash": "ff62be6ba90d"
         },
         "feet_0": {
           "glb": "/3d-parts/cratos/feet_0/executive.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.042,
             0.041,
             0.042
           ],
-          "bytes": 4784,
-          "hash": "e34d58eaa8ed",
-          "source_object": "Line1256",
-          "source_materials": [
-            "Majestic_WhitePaint"
-          ]
+          "bytes": 4780,
+          "hash": "9c283aeddecc"
         },
         "feet_1": {
           "glb": "/3d-parts/cratos/feet_1/executive.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.042,
             0.041,
             0.042
           ],
-          "bytes": 5068,
-          "hash": "4bad35a95c9a",
-          "source_object": "Line1257",
-          "source_materials": [
-            "Majestic_WhitePaint"
-          ]
+          "bytes": 5064,
+          "hash": "c6aefb9b5030"
         },
         "feet_2": {
           "glb": "/3d-parts/cratos/feet_2/executive.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.042,
@@ -130,18 +152,14 @@
             0.042
           ],
           "bytes": 4816,
-          "hash": "5f23f499dc0a",
-          "source_object": "Line1258",
-          "source_materials": [
-            "Majestic_WhitePaint"
-          ]
+          "hash": "80b5d46543c2"
         },
         "feet_3": {
           "glb": "/3d-parts/cratos/feet_3/executive.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.042,
@@ -149,192 +167,187 @@
             0.042
           ],
           "bytes": 5068,
-          "hash": "26b5c8df2840",
-          "source_object": "Line1259",
-          "source_materials": [
-            "Majestic_WhitePaint"
-          ]
-        },
-        "leg_r": {
-          "glb": "/3d-parts/cratos/leg_r/executive.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.06,
-            0.796,
-            0.72
-          ],
-          "bytes": 75008,
-          "hash": "397945e58628",
-          "source_object": "Object144",
-          "source_materials": [
-            "Majestic_WhitePaint"
-          ]
-        },
-        "leg_l": {
-          "glb": "/3d-parts/cratos/leg_l/executive.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.06,
-            0.796,
-            0.72
-          ],
-          "bytes": 72004,
-          "hash": "73b95926a65d",
-          "source_object": "Object144_Left",
-          "source_materials": [
-            "Majestic_WhitePaint"
-          ]
+          "hash": "fd1eb19a4d8a"
         },
         "cable_tray": {
-          "glb": "/3d-parts/cratos/cable_tray/executive.glb",
+          "glb": "/3d-parts/accessories/cable_tray-de03c5ab7387.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
-            1.56,
-            0.082,
-            0.08
+            1.642,
+            0.112,
+            0.1
           ],
-          "bytes": 2204,
-          "hash": "22478328b146"
+          "bytes": 2208,
+          "hash": "de03c5ab7387"
         }
       },
-      "baseSize": "180x80",
-      "unknowns": [],
-      "productKind": "desk"
+      "baseSize": null,
+      "unknowns": [
+        {
+          "name": "CycBack",
+          "materials": [
+            "CycWhite"
+          ],
+          "bbox": [
+            20.0,
+            0.0,
+            20.0
+          ],
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
     },
     "Manager": {
       "parts": {
-        "modesty": {
-          "glb": "/3d-parts/accessories/modesty-04e284b350c8.glb",
+        "leg_r_0": {
+          "glb": "/3d-parts/cratos/leg_r_0/manager.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             1.3,
             0.018,
             0.35
           ],
-          "bytes": 1468,
-          "hash": "04e284b350c8",
-          "source_object": "Box421",
-          "source_materials": [
-            "FRAME_white"
-          ]
+          "bytes": 1464,
+          "hash": "56334f4733ec"
+        },
+        "leg_r_1": {
+          "glb": "/3d-parts/cratos/leg_r_1/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.06,
+            0.796,
+            0.72
+          ],
+          "bytes": 74728,
+          "hash": "2c239fbef816"
+        },
+        "leg_r_2": {
+          "glb": "/3d-parts/cratos/leg_r_2/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.06,
+            0.796,
+            0.72
+          ],
+          "bytes": 74696,
+          "hash": "7d7e32d7847c"
+        },
+        "leg_r_3": {
+          "glb": "/3d-parts/cratos/leg_r_3/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.495,
+            0.06,
+            0.72
+          ],
+          "bytes": 75240,
+          "hash": "6ad3b9cf5437"
         },
         "top_0": {
           "glb": "/3d-parts/cratos/top_0/manager.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             1.6,
             0.8,
             0.03
           ],
-          "bytes": 161560,
-          "hash": "d27a2b0f7480",
-          "source_object": "Box423",
-          "source_materials": [
-            "DESKTOP_a398"
-          ]
+          "bytes": 161540,
+          "hash": "2f66fda791fb"
         },
         "top_1": {
           "glb": "/3d-parts/cratos/top_1/manager.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.5,
             0.8,
             0.03
           ],
-          "bytes": 161556,
-          "hash": "96e8d3bf328d",
-          "source_object": "Box424",
-          "source_materials": [
-            "DESKTOP_a398"
-          ]
+          "bytes": 161560,
+          "hash": "bad377131ccc"
         },
         "grommet_0": {
-          "glb": "/3d-parts/accessories/grommet-1c908676fb56.glb",
+          "glb": "/3d-parts/cratos/grommet_0/manager.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.267,
             0.07,
             0.002
           ],
-          "bytes": 1336,
-          "hash": "1c908676fb56",
-          "source_object": "Rectangle271",
-          "source_materials": [
-            "FRAME_white"
-          ]
+          "bytes": 1480,
+          "hash": "8ee36c42f006"
         },
         "grommet_1": {
-          "glb": "/3d-parts/accessories/grommet-42bebaafe87c.glb",
+          "glb": "/3d-parts/cratos/grommet_1/manager.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.3,
             0.108,
             0.006
           ],
-          "bytes": 1472,
-          "hash": "42bebaafe87c",
-          "source_object": "Rectangle272",
-          "source_materials": [
-            "FRAME_white"
-          ]
+          "bytes": 1616,
+          "hash": "91f6e6073dd1"
         },
         "grommet_2": {
-          "glb": "/3d-parts/accessories/grommet-219e5077616e.glb",
+          "glb": "/3d-parts/cratos/grommet_2/manager.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.268,
             0.02,
-            0
+            0.0
           ],
-          "bytes": 1392,
-          "hash": "219e5077616e",
-          "source_object": "Plane027",
-          "source_materials": [
-            "FRAME_white"
-          ]
+          "bytes": 1532,
+          "hash": "a8664fc69a66"
         },
         "frame_beam_0": {
           "glb": "/3d-parts/cratos/frame_beam_0/manager.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             1.448,
@@ -342,56 +355,59 @@
             0.04
           ],
           "bytes": 1420,
-          "hash": "8b68aeeaafed",
-          "source_object": "Box3110",
-          "source_materials": [
-            "FRAME_white"
-          ]
+          "hash": "50997faa9911"
         },
         "frame_beam_1": {
           "glb": "/3d-parts/cratos/frame_beam_1/manager.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             1.448,
             0.04,
             0.04
           ],
-          "bytes": 1424,
-          "hash": "ce2a0b3fbe53",
-          "source_object": "Box3111",
-          "source_materials": [
-            "FRAME_white"
-          ]
+          "bytes": 1420,
+          "hash": "6a3ec664fa7d"
+        },
+        "frame_beam_2": {
+          "glb": "/3d-parts/cratos/frame_beam_2/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.04,
+            0.89,
+            0.04
+          ],
+          "bytes": 1432,
+          "hash": "315e67e3b118"
         },
         "feet_0": {
           "glb": "/3d-parts/cratos/feet_0/manager.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.042,
             0.041,
             0.042
           ],
-          "bytes": 2884,
-          "hash": "f9bfcebb1889",
-          "source_object": "Line1250",
-          "source_materials": [
-            "FRAME_white"
-          ]
+          "bytes": 2880,
+          "hash": "6f84a22fa7f9"
         },
         "feet_1": {
           "glb": "/3d-parts/cratos/feet_1/manager.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.042,
@@ -399,18 +415,14 @@
             0.042
           ],
           "bytes": 2888,
-          "hash": "4536b3a2aaff",
-          "source_object": "Line1251",
-          "source_materials": [
-            "FRAME_white"
-          ]
+          "hash": "43b510b62f87"
         },
         "feet_2": {
           "glb": "/3d-parts/cratos/feet_2/manager.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.042,
@@ -418,37 +430,44 @@
             0.042
           ],
           "bytes": 2896,
-          "hash": "8a548e466a1d",
-          "source_object": "Line1252",
-          "source_materials": [
-            "FRAME_white"
-          ]
+          "hash": "a18a190f71b4"
         },
         "feet_3": {
           "glb": "/3d-parts/cratos/feet_3/manager.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.042,
             0.041,
             0.042
           ],
-          "bytes": 2892,
-          "hash": "fc7bc1d0c03f",
-          "source_object": "Line1253",
-          "source_materials": [
-            "FRAME_white"
-          ]
+          "bytes": 2888,
+          "hash": "cd6e73bc400e"
         },
         "feet_4": {
           "glb": "/3d-parts/cratos/feet_4/manager.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.041,
+            0.042,
+            0.042
+          ],
+          "bytes": 2896,
+          "hash": "d0e768002a9d"
+        },
+        "feet_5": {
+          "glb": "/3d-parts/cratos/feet_5/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.041,
@@ -456,147 +475,251 @@
             0.042
           ],
           "bytes": 2900,
-          "hash": "f1070556faaf",
-          "source_object": "Line1254",
-          "source_materials": [
-            "FRAME_white"
-          ]
-        },
-        "feet_5": {
-          "glb": "/3d-parts/cratos/feet_5/manager.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.041,
-            0.042,
-            0.042
-          ],
-          "bytes": 2904,
-          "hash": "1c058109e9af",
-          "source_object": "Line1255",
-          "source_materials": [
-            "FRAME_white"
-          ]
-        },
-        "leg_l_0": {
-          "glb": "/3d-parts/cratos/leg_l_0/manager.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.06,
-            0.796,
-            0.72
-          ],
-          "bytes": 74392,
-          "hash": "8b3422af10e7",
-          "source_object": "Object141",
-          "source_materials": [
-            "FRAME_white"
-          ]
-        },
-        "leg_l_1": {
-          "glb": "/3d-parts/cratos/leg_l_1/manager.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.495,
-            0.06,
-            0.72
-          ],
-          "bytes": 74752,
-          "hash": "a8eb5181e32e",
-          "source_object": "Object143",
-          "source_materials": [
-            "FRAME_white"
-          ]
-        },
-        "leg_r": {
-          "glb": "/3d-parts/cratos/leg_r/manager.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.06,
-            0.796,
-            0.72
-          ],
-          "bytes": 74980,
-          "hash": "a77b6ee91ce0",
-          "source_object": "Object142",
-          "source_materials": [
-            "FRAME_white"
-          ]
+          "hash": "373a6fbddc82"
         },
         "cable_tray": {
-          "glb": "/3d-parts/cratos/cable_tray/manager.glb",
+          "glb": "/3d-parts/accessories/cable_tray-8efa0623a539.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
-            1.36,
-            0.082,
-            0.08
+            1.442,
+            0.112,
+            0.1
           ],
           "bytes": 2096,
-          "hash": "199ba3144936"
+          "hash": "8efa0623a539"
         }
       },
       "baseSize": null,
-      "unknowns": [
-        {
-          "name": "Box3112",
-          "materials": [
-            "FRAME_white"
+      "unknowns": []
+    },
+    "Conference": {
+      "parts": {
+        "top": {
+          "glb": "/3d-parts/cratos/top/conference.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
           ],
-          "extents": [
+          "bbox": [
+            1.2,
+            1.2,
+            0.03
+          ],
+          "bytes": 161508,
+          "hash": "b921236d19aa"
+        },
+        "grommet_0": {
+          "glb": "/3d-parts/cratos/grommet_0/conference.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.268,
+            0.02,
+            0.0
+          ],
+          "bytes": 1540,
+          "hash": "13b283e9a4e9"
+        },
+        "grommet_1": {
+          "glb": "/3d-parts/cratos/grommet_1/conference.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.267,
+            0.07,
+            0.002
+          ],
+          "bytes": 1488,
+          "hash": "c352cbf7b6f5"
+        },
+        "grommet_2": {
+          "glb": "/3d-parts/cratos/grommet_2/conference.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 3032,
+          "hash": "2272bdbb63bf"
+        },
+        "grommet_3": {
+          "glb": "/3d-parts/cratos/grommet_3/conference.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 3028,
+          "hash": "287f99b66263"
+        },
+        "grommet_4": {
+          "glb": "/3d-parts/cratos/grommet_4/conference.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 3036,
+          "hash": "e302ffa4b073"
+        },
+        "grommet_5": {
+          "glb": "/3d-parts/cratos/grommet_5/conference.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 3032,
+          "hash": "170462e63eef"
+        },
+        "modesty": {
+          "glb": "/3d-parts/accessories/modesty-f982466be0cb.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.3,
+            0.108,
+            0.006
+          ],
+          "bytes": 1620,
+          "hash": "f982466be0cb"
+        },
+        "leg_r_0": {
+          "glb": "/3d-parts/cratos/leg_r_0/conference.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.06,
+            1.181,
+            0.72
+          ],
+          "bytes": 72476,
+          "hash": "cf66f557d029"
+        },
+        "leg_r_1": {
+          "glb": "/3d-parts/cratos/leg_r_1/conference.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.06,
+            1.181,
+            0.72
+          ],
+          "bytes": 72120,
+          "hash": "c210ca6aa1dd"
+        },
+        "frame_beam_0": {
+          "glb": "/3d-parts/cratos/frame_beam_0/conference.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.068,
             0.04,
-            0.89,
             0.04
-          ]
+          ],
+          "bytes": 1568,
+          "hash": "388524308329"
+        },
+        "frame_beam_1": {
+          "glb": "/3d-parts/cratos/frame_beam_1/conference.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.068,
+            0.04,
+            0.04
+          ],
+          "bytes": 1572,
+          "hash": "7f8df0931f66"
+        },
+        "cable_tray": {
+          "glb": "/3d-parts/accessories/cable_tray-76038fc196ce.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.042,
+            0.112,
+            0.1
+          ],
+          "bytes": 2108,
+          "hash": "76038fc196ce"
         }
-      ],
-      "productKind": "desk"
+      },
+      "baseSize": "120x120",
+      "unknowns": []
     },
     "L-Shape": {
       "parts": {
         "top_0": {
           "glb": "/3d-parts/cratos/top_0/l-shape.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             1.6,
             0.8,
             0.03
           ],
-          "bytes": 161568,
-          "hash": "6e4ec7865251",
-          "source_object": "Box430",
-          "source_materials": [
-            "DESK-CRATOS-L_DESKTOP"
-          ]
+          "bytes": 161544,
+          "hash": "4bf08add997d"
         },
         "top_1": {
           "glb": "/3d-parts/cratos/top_1/l-shape.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.5,
@@ -604,265 +727,209 @@
             0.03
           ],
           "bytes": 161568,
-          "hash": "2bbdc8b2f959",
-          "source_object": "Box431",
-          "source_materials": [
-            "DESK-CRATOS-L_DESKTOP"
-          ]
+          "hash": "691891556925"
         },
         "feet_0": {
           "glb": "/3d-parts/cratos/feet_0/l-shape.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.002,
             0.026,
             0.026
           ],
-          "bytes": 8084,
-          "hash": "f01d906409c2",
-          "source_object": "Line690",
-          "source_materials": [
-            "DESK-CRATOS-L_LEVELING_FOOT"
-          ]
+          "bytes": 8224,
+          "hash": "3e83375e6802"
         },
         "feet_1": {
           "glb": "/3d-parts/cratos/feet_1/l-shape.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.06,
             0.06,
             0.002
           ],
-          "bytes": 3876,
-          "hash": "96d0b565224d",
-          "source_object": "Box066",
-          "source_materials": [
-            "DESK-CRATOS-L_LEVELING_FOOT"
-          ]
+          "bytes": 4012,
+          "hash": "5b43ce52f78d"
         },
         "feet_2": {
           "glb": "/3d-parts/cratos/feet_2/l-shape.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.04,
             0.04,
             0.005
           ],
-          "bytes": 1456,
-          "hash": "a6ebf2f70ea9",
-          "source_object": "Box067",
-          "source_materials": [
-            "DESK-CRATOS-L_LEVELING_FOOT"
-          ]
+          "bytes": 1592,
+          "hash": "d60cda63b492"
         },
         "feet_3": {
           "glb": "/3d-parts/cratos/feet_3/l-shape.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.04,
             0.04,
             0.053
           ],
-          "bytes": 3688,
-          "hash": "cacc74cba13d",
-          "source_object": "Box065",
-          "source_materials": [
-            "DESK-CRATOS-L_LEVELING_FOOT"
-          ]
+          "bytes": 3856,
+          "hash": "88264fb0dd31"
         },
         "feet_4": {
           "glb": "/3d-parts/cratos/feet_4/l-shape.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.04,
             0.04,
             0.053
           ],
-          "bytes": 3688,
-          "hash": "778c04dc3334",
-          "source_object": "Box432",
-          "source_materials": [
-            "DESK-CRATOS-L_LEVELING_FOOT"
-          ]
+          "bytes": 3856,
+          "hash": "a818be56811b"
         },
         "feet_5": {
           "glb": "/3d-parts/cratos/feet_5/l-shape.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.06,
             0.06,
             0.002
           ],
-          "bytes": 3876,
-          "hash": "fc0b1759ba81",
-          "source_object": "Box433",
-          "source_materials": [
-            "DESK-CRATOS-L_LEVELING_FOOT"
-          ]
+          "bytes": 4012,
+          "hash": "791cae2bf89a"
         },
         "feet_6": {
           "glb": "/3d-parts/cratos/feet_6/l-shape.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.04,
             0.04,
             0.005
           ],
-          "bytes": 1432,
-          "hash": "a32b275aba77",
-          "source_object": "Box434",
-          "source_materials": [
-            "DESK-CRATOS-L_LEVELING_FOOT"
-          ]
+          "bytes": 1592,
+          "hash": "d60cda63b492"
         },
         "feet_7": {
           "glb": "/3d-parts/cratos/feet_7/l-shape.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.04,
             0.04,
             0.053
           ],
-          "bytes": 3700,
-          "hash": "62aeef81ddc6",
-          "source_object": "Box435",
-          "source_materials": [
-            "DESK-CRATOS-L_LEVELING_FOOT"
-          ]
+          "bytes": 3856,
+          "hash": "88264fb0dd31"
         },
         "feet_8": {
           "glb": "/3d-parts/cratos/feet_8/l-shape.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.06,
             0.06,
             0.002
           ],
-          "bytes": 3876,
-          "hash": "60ceb85d3a3a",
-          "source_object": "Box436",
-          "source_materials": [
-            "DESK-CRATOS-L_LEVELING_FOOT"
-          ]
+          "bytes": 4012,
+          "hash": "5b43ce52f78d"
         },
         "feet_9": {
           "glb": "/3d-parts/cratos/feet_9/l-shape.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.04,
             0.04,
             0.005
           ],
-          "bytes": 1460,
-          "hash": "5e18a7e1e21a",
-          "source_object": "Box437",
-          "source_materials": [
-            "DESK-CRATOS-L_LEVELING_FOOT"
-          ]
+          "bytes": 1592,
+          "hash": "d60cda63b492"
         },
         "feet_10": {
           "glb": "/3d-parts/cratos/feet_10/l-shape.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.04,
             0.04,
             0.053
           ],
-          "bytes": 3696,
-          "hash": "47a097bc86cb",
-          "source_object": "Box438",
-          "source_materials": [
-            "DESK-CRATOS-L_LEVELING_FOOT"
-          ]
+          "bytes": 3856,
+          "hash": "a818be56811b"
         },
         "feet_11": {
           "glb": "/3d-parts/cratos/feet_11/l-shape.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.06,
             0.06,
             0.002
           ],
-          "bytes": 3876,
-          "hash": "3f708933d5eb",
-          "source_object": "Box439",
-          "source_materials": [
-            "DESK-CRATOS-L_LEVELING_FOOT"
-          ]
+          "bytes": 4012,
+          "hash": "791cae2bf89a"
         },
         "feet_12": {
           "glb": "/3d-parts/cratos/feet_12/l-shape.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.04,
             0.04,
             0.005
           ],
-          "bytes": 1436,
-          "hash": "bd62c1bc4dc7",
-          "source_object": "Box440",
-          "source_materials": [
-            "DESK-CRATOS-L_LEVELING_FOOT"
-          ]
+          "bytes": 1592,
+          "hash": "d60cda63b492"
         },
         "feet_13": {
           "glb": "/3d-parts/cratos/feet_13/l-shape.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.042,
@@ -870,18 +937,14 @@
             0.042
           ],
           "bytes": 2900,
-          "hash": "8648412c45fd",
-          "source_object": "Line1246",
-          "source_materials": [
-            "DESK-CRATOS-L_LEVELING_FOOT"
-          ]
+          "hash": "cf43584863b1"
         },
         "feet_14": {
           "glb": "/3d-parts/cratos/feet_14/l-shape.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.042,
@@ -889,37 +952,29 @@
             0.042
           ],
           "bytes": 2908,
-          "hash": "afcb70259bd6",
-          "source_object": "Line1247",
-          "source_materials": [
-            "DESK-CRATOS-L_LEVELING_FOOT"
-          ]
+          "hash": "7a1107c02bfd"
         },
         "feet_15": {
           "glb": "/3d-parts/cratos/feet_15/l-shape.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.042,
             0.041,
             0.042
           ],
-          "bytes": 2896,
-          "hash": "3d5a96710c30",
-          "source_object": "Line1248",
-          "source_materials": [
-            "DESK-CRATOS-L_LEVELING_FOOT"
-          ]
+          "bytes": 2912,
+          "hash": "f7df9850db37"
         },
         "feet_16": {
           "glb": "/3d-parts/cratos/feet_16/l-shape.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.042,
@@ -927,94 +982,104 @@
             0.042
           ],
           "bytes": 2904,
-          "hash": "9f35b881cea5",
-          "source_object": "Line1249",
-          "source_materials": [
-            "DESK-CRATOS-L_LEVELING_FOOT"
-          ]
+          "hash": "b5ce5bd6cd7c"
         },
         "handle_0": {
-          "glb": "/3d-parts/accessories/handle-ff6f6ec8c4c5.glb",
+          "glb": "/3d-parts/cratos/handle_0/l-shape.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.026,
             0.167,
             0.01
           ],
-          "bytes": 11552,
-          "hash": "ff6f6ec8c4c5",
-          "source_object": "handle006",
-          "source_materials": [
-            "DESK-CRATOS-L_HANDLE"
-          ]
+          "bytes": 11720,
+          "hash": "cb8849fd1881"
         },
         "handle_1": {
-          "glb": "/3d-parts/accessories/handle-01c1ad96f29d.glb",
+          "glb": "/3d-parts/cratos/handle_1/l-shape.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.026,
             0.167,
             0.01
           ],
-          "bytes": 11536,
-          "hash": "01c1ad96f29d",
-          "source_object": "handle007",
-          "source_materials": [
-            "DESK-CRATOS-L_HANDLE"
-          ]
+          "bytes": 11704,
+          "hash": "926bb7edb9e3"
         },
         "handle_2": {
-          "glb": "/3d-parts/accessories/handle-bd7dfb0df85e.glb",
+          "glb": "/3d-parts/cratos/handle_2/l-shape.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.026,
             0.167,
             0.01
           ],
-          "bytes": 11528,
-          "hash": "bd7dfb0df85e",
-          "source_object": "handle008",
-          "source_materials": [
-            "DESK-CRATOS-L_HANDLE"
-          ]
+          "bytes": 11720,
+          "hash": "4c92eadd0ed8"
         },
-        "pedestal_top_0": {
-          "glb": "/3d-parts/accessories/pedestal_top-48322e64adde.glb",
+        "pedestal_0": {
+          "glb": "/3d-parts/cratos/pedestal_0/l-shape.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.498,
             0.402,
             0.019
           ],
-          "bytes": 1492,
-          "hash": "48322e64adde",
-          "source_object": "BLATY_KONT002",
-          "source_materials": [
-            "DESK-CRATOS-L_PEDESTAL_BODY"
-          ]
+          "bytes": 1628,
+          "hash": "9d903e6adb48"
         },
-        "pedestal_top_1": {
-          "glb": "/3d-parts/accessories/pedestal_top-8cab1d92e2dc.glb",
+        "pedestal_1": {
+          "glb": "/3d-parts/cratos/pedestal_1/l-shape.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.015,
+            0.402,
+            0.519
+          ],
+          "bytes": 1840,
+          "hash": "9bb7ac3f0fed"
+        },
+        "pedestal_2": {
+          "glb": "/3d-parts/cratos/pedestal_2/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.487,
+            0.402,
+            0.522
+          ],
+          "bytes": 2032,
+          "hash": "209db38403dd"
+        },
+        "pedestal_3": {
+          "glb": "/3d-parts/cratos/pedestal_3/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             1.3,
@@ -1022,212 +1087,142 @@
             0.35
           ],
           "bytes": 161532,
-          "hash": "8cab1d92e2dc",
-          "source_object": "Box3109",
-          "source_materials": [
-            "DESK-CRATOS-L_PEDESTAL_TOP"
-          ]
+          "hash": "519bf013402c"
         },
-        "pedestal_0": {
-          "glb": "/3d-parts/accessories/pedestal-3c408c871956.glb",
+        "pedestal_4": {
+          "glb": "/3d-parts/cratos/pedestal_4/l-shape.glb",
           "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.015,
-            0.402,
-            0.519
-          ],
-          "bytes": 1708,
-          "hash": "3c408c871956",
-          "source_object": "FRONT_KONT002",
-          "source_materials": [
-            "DESK-CRATOS-L_PEDESTAL_BODY"
-          ]
-        },
-        "pedestal_1": {
-          "glb": "/3d-parts/accessories/pedestal-ce34b66c9380.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.487,
-            0.402,
-            0.522
-          ],
-          "bytes": 1896,
-          "hash": "ce34b66c9380",
-          "source_object": "KORPUSY002",
-          "source_materials": [
-            "DESK-CRATOS-L_PEDESTAL_BODY"
-          ]
-        },
-        "screen_front_0": {
-          "glb": "/3d-parts/accessories/screen_front-c3933d6035d0.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.268,
-            0.02,
-            0
-          ],
-          "bytes": 1408,
-          "hash": "c3933d6035d0",
-          "source_object": "Plane030",
-          "source_materials": [
-            "DESK-CRATOS-L_SCREEN_PANEL"
-          ]
-        },
-        "screen_front_1": {
-          "glb": "/3d-parts/accessories/screen_front-0e70472369ad.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.267,
-            0.07,
-            0.002
-          ],
-          "bytes": 1348,
-          "hash": "0e70472369ad",
-          "source_object": "Rectangle275",
-          "source_materials": [
-            "DESK-CRATOS-L_SCREEN_PANEL"
-          ]
-        },
-        "modesty": {
-          "glb": "/3d-parts/accessories/modesty-c70b50001ff1.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.3,
-            0.108,
-            0.006
-          ],
-          "bytes": 1484,
-          "hash": "c70b50001ff1",
-          "source_object": "Rectangle276",
-          "source_materials": [
-            "DESK-CRATOS-L_MODESTY_PANEL"
-          ]
-        },
-        "frame_beam_0": {
-          "glb": "/3d-parts/cratos/frame_beam_0/l-shape.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.06,
-            0.796,
-            0.72
-          ],
-          "bytes": 75488,
-          "hash": "72e71ffd81e7",
-          "source_object": "Object083",
-          "source_materials": [
-            "DESK-CRATOS-L_FRAME_BEAM"
-          ]
-        },
-        "frame_beam_1": {
-          "glb": "/3d-parts/cratos/frame_beam_1/l-shape.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            1.448,
-            0.04,
-            0.04
-          ],
-          "bytes": 1428,
-          "hash": "0aa53610969c",
-          "source_object": "Box3106",
-          "source_materials": [
-            "DESK-CRATOS-L_LEG"
-          ]
-        },
-        "frame_beam_2": {
-          "glb": "/3d-parts/cratos/frame_beam_2/l-shape.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            1.448,
-            0.04,
-            0.04
-          ],
-          "bytes": 1428,
-          "hash": "cbb74a5144f1",
-          "source_object": "Box3108",
-          "source_materials": [
-            "DESK-CRATOS-L_LEG"
-          ]
-        },
-        "frame_beam_3": {
-          "glb": "/3d-parts/cratos/frame_beam_3/l-shape.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.06,
-            0.796,
-            0.72
-          ],
-          "bytes": 73668,
-          "hash": "ac4b2b2d857b",
-          "source_object": "Object139",
-          "source_materials": [
-            "DESK-CRATOS-L_FRAME_BEAM"
-          ]
-        },
-        "frame_beam_4": {
-          "glb": "/3d-parts/cratos/frame_beam_4/l-shape.glb",
-          "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
             0.03,
             0.03,
             0.127
           ],
-          "bytes": 1812,
-          "hash": "offset-aligned"
+          "bytes": 1808,
+          "hash": "9ca609b7064f"
         },
-        "cable_tray": {
-          "glb": "/3d-parts/cratos/cable_tray/l-shape.glb",
+        "grommet_0": {
+          "glb": "/3d-parts/cratos/grommet_0/l-shape.glb",
           "anchor": [
-            0,
-            0,
-            0
+            0.0,
+            0.0,
+            0.0
           ],
           "bbox": [
-            1.36,
-            0.082,
-            0.08
+            0.268,
+            0.02,
+            0.0
+          ],
+          "bytes": 1552,
+          "hash": "443ff4630232"
+        },
+        "grommet_1": {
+          "glb": "/3d-parts/cratos/grommet_1/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.267,
+            0.07,
+            0.002
+          ],
+          "bytes": 1496,
+          "hash": "da5e56c23414"
+        },
+        "modesty": {
+          "glb": "/3d-parts/accessories/modesty-0860e91f6039.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.3,
+            0.108,
+            0.006
+          ],
+          "bytes": 1632,
+          "hash": "0860e91f6039"
+        },
+        "leg_r_0": {
+          "glb": "/3d-parts/cratos/leg_r_0/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.06,
+            0.796,
+            0.72
+          ],
+          "bytes": 74804,
+          "hash": "9e9b4897773a"
+        },
+        "leg_r_1": {
+          "glb": "/3d-parts/cratos/leg_r_1/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.06,
+            0.796,
+            0.72
+          ],
+          "bytes": 74440,
+          "hash": "6260eed8aaa0"
+        },
+        "frame_beam_0": {
+          "glb": "/3d-parts/cratos/frame_beam_0/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.448,
+            0.04,
+            0.04
+          ],
+          "bytes": 1428,
+          "hash": "f54ff02d2c66"
+        },
+        "frame_beam_1": {
+          "glb": "/3d-parts/cratos/frame_beam_1/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.448,
+            0.04,
+            0.04
+          ],
+          "bytes": 1428,
+          "hash": "7c81715dbe27"
+        },
+        "cable_tray": {
+          "glb": "/3d-parts/accessories/cable_tray-e0d4d1754430.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.442,
+            0.112,
+            0.1
           ],
           "bytes": 2108,
-          "hash": "3691ef5c52cc"
+          "hash": "e0d4d1754430"
         }
       },
       "baseSize": null,
@@ -1237,3056 +1232,18 @@
           "materials": [
             "DESK-CRATOS-L_UNKNOWN"
           ],
-          "extents": [
+          "bbox": [
             0.06,
             0.059,
             0.13
+          ],
+          "location": [
+            0.0,
+            0.0,
+            0.0
           ]
         }
-      ],
-      "productKind": "desk"
-    },
-    "Meeting 6-Person": {
-      "parts": {
-        "top_0": {
-          "glb": "/3d-parts/cratos/top_0/meeting-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            1.6,
-            1.4,
-            0.03
-          ],
-          "bytes": 161596,
-          "hash": "20cc91e09acd",
-          "source_object": "Box3201",
-          "source_materials": [
-            "DESKTOP_a398"
-          ]
-        },
-        "top_1": {
-          "glb": "/3d-parts/cratos/top_1/meeting-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            1.6,
-            1.4,
-            0.03
-          ],
-          "bytes": 161592,
-          "hash": "434d122fb0a0",
-          "source_object": "Box3200",
-          "source_materials": [
-            "DESKTOP_a398"
-          ]
-        },
-        "frame_beam_0": {
-          "glb": "/3d-parts/cratos/frame_beam_0/meeting-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.101,
-            1.01,
-            0.05
-          ],
-          "bytes": 1504,
-          "hash": "11feb63be706",
-          "source_object": "Box3210",
-          "source_materials": [
-            "FRAME_BEAM_a398"
-          ]
-        },
-        "frame_beam_1": {
-          "glb": "/3d-parts/cratos/frame_beam_1/meeting-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            1.487,
-            0.04,
-            0.04
-          ],
-          "bytes": 1460,
-          "hash": "0fdd953875dd",
-          "source_object": "Box3202",
-          "source_materials": [
-            "LEG_a398"
-          ]
-        },
-        "frame_beam_2": {
-          "glb": "/3d-parts/cratos/frame_beam_2/meeting-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            1.486,
-            0.04,
-            0.04
-          ],
-          "bytes": 1460,
-          "hash": "472fbf6ac075",
-          "source_object": "Box3203",
-          "source_materials": [
-            "LEG_a398"
-          ]
-        },
-        "frame_beam_3": {
-          "glb": "/3d-parts/cratos/frame_beam_3/meeting-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            1.487,
-            0.04,
-            0.04
-          ],
-          "bytes": 1460,
-          "hash": "2ddbe2acf9dc",
-          "source_object": "Box3204",
-          "source_materials": [
-            "LEG_a398"
-          ]
-        },
-        "frame_beam_4": {
-          "glb": "/3d-parts/cratos/frame_beam_4/meeting-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            1.486,
-            0.04,
-            0.04
-          ],
-          "bytes": 1460,
-          "hash": "4ff97cac545e",
-          "source_object": "Box3205",
-          "source_materials": [
-            "LEG_a398"
-          ]
-        },
-        "frame_beam_5": {
-          "glb": "/3d-parts/cratos/frame_beam_5/meeting-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            1.487,
-            0.04,
-            0.04
-          ],
-          "bytes": 1420,
-          "hash": "1693982ec248",
-          "source_object": "Box3206",
-          "source_materials": [
-            "LEG_a398"
-          ]
-        },
-        "frame_beam_6": {
-          "glb": "/3d-parts/cratos/frame_beam_6/meeting-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            1.486,
-            0.04,
-            0.04
-          ],
-          "bytes": 1420,
-          "hash": "0e1eb6741428",
-          "source_object": "Box3207",
-          "source_materials": [
-            "LEG_a398"
-          ]
-        },
-        "frame_beam_7": {
-          "glb": "/3d-parts/cratos/frame_beam_7/meeting-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            1.487,
-            0.04,
-            0.04
-          ],
-          "bytes": 1424,
-          "hash": "bf0e88d19597",
-          "source_object": "Box3208",
-          "source_materials": [
-            "LEG_a398"
-          ]
-        },
-        "frame_beam_8": {
-          "glb": "/3d-parts/cratos/frame_beam_8/meeting-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            1.486,
-            0.04,
-            0.04
-          ],
-          "bytes": 1424,
-          "hash": "edb7b1c6aedd",
-          "source_object": "Box3209",
-          "source_materials": [
-            "LEG_a398"
-          ]
-        },
-        "frame_beam_9": {
-          "glb": "/3d-parts/cratos/frame_beam_9/meeting-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.01,
-            0.554,
-            0.608
-          ],
-          "bytes": 1636,
-          "hash": "0ebd26870fe8",
-          "source_object": "Line1339",
-          "source_materials": [
-            "FRAME_BEAM_a398"
-          ]
-        },
-        "frame_beam_10": {
-          "glb": "/3d-parts/cratos/frame_beam_10/meeting-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.01,
-            0.554,
-            0.608
-          ],
-          "bytes": 1632,
-          "hash": "9a533b404eb4",
-          "source_object": "Line1340",
-          "source_materials": [
-            "FRAME_BEAM_a398"
-          ]
-        },
-        "frame_beam_11": {
-          "glb": "/3d-parts/cratos/frame_beam_11/meeting-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.06,
-            1.381,
-            0.72
-          ],
-          "bytes": 72524,
-          "hash": "94b0cae9d739",
-          "source_object": "Object127",
-          "source_materials": [
-            "FRAME_BEAM_a398"
-          ]
-        },
-        "frame_beam_12": {
-          "glb": "/3d-parts/cratos/frame_beam_12/meeting-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.06,
-            1.381,
-            0.72
-          ],
-          "bytes": 72348,
-          "hash": "b1bf8de57cd3",
-          "source_object": "Object128",
-          "source_materials": [
-            "FRAME_BEAM_a398"
-          ]
-        },
-        "grommet_0": {
-          "glb": "/3d-parts/accessories/grommet-5f71a4202a4e.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.392,
-            0.02,
-            0
-          ],
-          "bytes": 1424,
-          "hash": "5f71a4202a4e",
-          "source_object": "Plane073",
-          "source_materials": [
-            "LEG_a398"
-          ]
-        },
-        "grommet_1": {
-          "glb": "/3d-parts/accessories/grommet-45e480d516a0.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.392,
-            0.02,
-            0
-          ],
-          "bytes": 1424,
-          "hash": "45e480d516a0",
-          "source_object": "Plane074",
-          "source_materials": [
-            "LEG_a398"
-          ]
-        },
-        "grommet_2": {
-          "glb": "/3d-parts/accessories/grommet-38f36c74e335.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.392,
-            0.02,
-            0
-          ],
-          "bytes": 1384,
-          "hash": "38f36c74e335",
-          "source_object": "Plane075",
-          "source_materials": [
-            "LEG_a398"
-          ]
-        },
-        "grommet_3": {
-          "glb": "/3d-parts/accessories/grommet-0ed3826f1671.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.392,
-            0.02,
-            0
-          ],
-          "bytes": 1388,
-          "hash": "0ed3826f1671",
-          "source_object": "Plane076",
-          "source_materials": [
-            "LEG_a398"
-          ]
-        },
-        "screen_front_0": {
-          "glb": "/3d-parts/accessories/screen_front-4ac595380b64.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.383,
-            0.092,
-            0.002
-          ],
-          "bytes": 1388,
-          "hash": "4ac595380b64",
-          "source_object": "Rectangle364",
-          "source_materials": [
-            "SCREEN_PANEL_a398"
-          ]
-        },
-        "screen_front_1": {
-          "glb": "/3d-parts/accessories/screen_front-e48fbd86ade9.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.383,
-            0.092,
-            0.002
-          ],
-          "bytes": 1348,
-          "hash": "e48fbd86ade9",
-          "source_object": "Rectangle366",
-          "source_materials": [
-            "SCREEN_PANEL_a398"
-          ]
-        },
-        "modesty_0": {
-          "glb": "/3d-parts/accessories/modesty-287d95c1f41f.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.417,
-            0.144,
-            0.006
-          ],
-          "bytes": 1516,
-          "hash": "287d95c1f41f",
-          "source_object": "Rectangle365",
-          "source_materials": [
-            "MODESTY_PANEL_a398"
-          ]
-        },
-        "modesty_1": {
-          "glb": "/3d-parts/accessories/modesty-56ff38dfbf95.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.417,
-            0.144,
-            0.006
-          ],
-          "bytes": 1480,
-          "hash": "56ff38dfbf95",
-          "source_object": "Rectangle367",
-          "source_materials": [
-            "MODESTY_PANEL_a398"
-          ]
-        },
-        "feet_0": {
-          "glb": "/3d-parts/cratos/feet_0/meeting-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.042,
-            0.041,
-            0.042
-          ],
-          "bytes": 3056,
-          "hash": "efd09ee85c02",
-          "source_object": "Line1327",
-          "source_materials": [
-            "LEVELING_FOOT_a398"
-          ]
-        },
-        "feet_1": {
-          "glb": "/3d-parts/cratos/feet_1/meeting-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.042,
-            0.041,
-            0.042
-          ],
-          "bytes": 2924,
-          "hash": "82e14bb8c620",
-          "source_object": "Line1328",
-          "source_materials": [
-            "LEVELING_FOOT_a398"
-          ]
-        },
-        "feet_2": {
-          "glb": "/3d-parts/cratos/feet_2/meeting-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.042,
-            0.041,
-            0.042
-          ],
-          "bytes": 3060,
-          "hash": "17cab4e58b66",
-          "source_object": "Line1329",
-          "source_materials": [
-            "LEVELING_FOOT_a398"
-          ]
-        },
-        "feet_3": {
-          "glb": "/3d-parts/cratos/feet_3/meeting-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.042,
-            0.041,
-            0.042
-          ],
-          "bytes": 2924,
-          "hash": "ee1706957401",
-          "source_object": "Line1330",
-          "source_materials": [
-            "LEVELING_FOOT_a398"
-          ]
-        },
-        "feet_4": {
-          "glb": "/3d-parts/cratos/feet_4/meeting-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.042,
-            0.041,
-            0.042
-          ],
-          "bytes": 3064,
-          "hash": "8a46459eb78f",
-          "source_object": "Line1331",
-          "source_materials": [
-            "LEVELING_FOOT_a398"
-          ]
-        },
-        "feet_5": {
-          "glb": "/3d-parts/cratos/feet_5/meeting-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.042,
-            0.041,
-            0.042
-          ],
-          "bytes": 2928,
-          "hash": "d721039e81de",
-          "source_object": "Line1332",
-          "source_materials": [
-            "LEVELING_FOOT_a398"
-          ]
-        },
-        "feet_6": {
-          "glb": "/3d-parts/cratos/feet_6/meeting-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.042,
-            0.041,
-            0.042
-          ],
-          "bytes": 3056,
-          "hash": "3c839f457dfc",
-          "source_object": "Line1333",
-          "source_materials": [
-            "LEVELING_FOOT_a398"
-          ]
-        },
-        "feet_7": {
-          "glb": "/3d-parts/cratos/feet_7/meeting-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.042,
-            0.041,
-            0.042
-          ],
-          "bytes": 2936,
-          "hash": "aca588dbe973",
-          "source_object": "Line1334",
-          "source_materials": [
-            "LEVELING_FOOT_a398"
-          ]
-        },
-        "feet_8": {
-          "glb": "/3d-parts/cratos/feet_8/meeting-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.042,
-            0.041,
-            0.042
-          ],
-          "bytes": 2900,
-          "hash": "d0d7e1dd5c3d",
-          "source_object": "Line1335",
-          "source_materials": [
-            "LEVELING_FOOT_a398"
-          ]
-        },
-        "feet_9": {
-          "glb": "/3d-parts/cratos/feet_9/meeting-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.042,
-            0.041,
-            0.042
-          ],
-          "bytes": 2908,
-          "hash": "2040c00a73b6",
-          "source_object": "Line1336",
-          "source_materials": [
-            "LEVELING_FOOT_a398"
-          ]
-        },
-        "feet_10": {
-          "glb": "/3d-parts/cratos/feet_10/meeting-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.042,
-            0.041,
-            0.042
-          ],
-          "bytes": 2912,
-          "hash": "cd654ecb19b4",
-          "source_object": "Line1337",
-          "source_materials": [
-            "LEVELING_FOOT_a398"
-          ]
-        },
-        "feet_11": {
-          "glb": "/3d-parts/cratos/feet_11/meeting-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.042,
-            0.041,
-            0.042
-          ],
-          "bytes": 2904,
-          "hash": "8d2dd9cd93e4",
-          "source_object": "Line1338",
-          "source_materials": [
-            "LEVELING_FOOT_a398"
-          ]
-        },
-        "leg_r_0": {
-          "glb": "/3d-parts/cratos/leg_r_0/meeting-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.05,
-            0.026,
-            0.656
-          ],
-          "bytes": 1496,
-          "hash": "b798654110b4",
-          "source_object": "Box3211",
-          "source_materials": [
-            "LEG_a398"
-          ]
-        },
-        "leg_r_1": {
-          "glb": "/3d-parts/cratos/leg_r_1/meeting-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.05,
-            0.026,
-            0.656
-          ],
-          "bytes": 1492,
-          "hash": "d8d54677af45",
-          "source_object": "Box3212",
-          "source_materials": [
-            "LEG_a398"
-          ]
-        },
-        "cable_tray": {
-          "glb": "/3d-parts/cratos/cable_tray/meeting-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            1.36,
-            0.082,
-            0.08
-          ],
-          "bytes": 2100,
-          "hash": "75134b3ccfce"
-        }
-      },
-      "baseSize": null,
-      "unknowns": [
-        {
-          "name": "Object129",
-          "materials": [
-            "LEG_a398"
-          ],
-          "extents": [
-            0.03,
-            0.61,
-            0.018
-          ]
-        }
-      ],
-      "productKind": "meeting"
-    },
-    "Meeting (Large)": {
-      "parts": {
-        "frame_beam_0": {
-          "glb": "/3d-parts/cratos/frame_beam_0/meeting-large.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.101,
-            1.01,
-            0.05
-          ],
-          "bytes": 1472,
-          "hash": "e3723e50ba5b",
-          "source_object": "Box3088",
-          "source_materials": [
-            "DESK-CRATOS-WS_FRAME_BEAM"
-          ]
-        },
-        "frame_beam_1": {
-          "glb": "/3d-parts/cratos/frame_beam_1/meeting-large.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            1.283,
-            0.04,
-            0.04
-          ],
-          "bytes": 1432,
-          "hash": "684f2085c1c2",
-          "source_object": "Box3091",
-          "source_materials": [
-            "DESK-CRATOS-WS_LEG"
-          ]
-        },
-        "frame_beam_2": {
-          "glb": "/3d-parts/cratos/frame_beam_2/meeting-large.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            1.283,
-            0.04,
-            0.04
-          ],
-          "bytes": 1436,
-          "hash": "5ef843f32a0e",
-          "source_object": "Box3096",
-          "source_materials": [
-            "DESK-CRATOS-WS_LEG"
-          ]
-        },
-        "frame_beam_3": {
-          "glb": "/3d-parts/cratos/frame_beam_3/meeting-large.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            1.283,
-            0.04,
-            0.04
-          ],
-          "bytes": 1432,
-          "hash": "54b5a4c744a4",
-          "source_object": "Box3097",
-          "source_materials": [
-            "DESK-CRATOS-WS_LEG"
-          ]
-        },
-        "frame_beam_4": {
-          "glb": "/3d-parts/cratos/frame_beam_4/meeting-large.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            1.283,
-            0.04,
-            0.04
-          ],
-          "bytes": 1436,
-          "hash": "e1543ee35618",
-          "source_object": "Box3098",
-          "source_materials": [
-            "DESK-CRATOS-WS_LEG"
-          ]
-        },
-        "frame_beam_5": {
-          "glb": "/3d-parts/cratos/frame_beam_5/meeting-large.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.01,
-            0.554,
-            0.608
-          ],
-          "bytes": 1600,
-          "hash": "83e731b1c747",
-          "source_object": "Line1230",
-          "source_materials": [
-            "DESK-CRATOS-WS_FRAME_BEAM"
-          ]
-        },
-        "frame_beam_6": {
-          "glb": "/3d-parts/cratos/frame_beam_6/meeting-large.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.01,
-            0.554,
-            0.608
-          ],
-          "bytes": 1600,
-          "hash": "3a6f7c5daef1",
-          "source_object": "Line1231",
-          "source_materials": [
-            "DESK-CRATOS-WS_FRAME_BEAM"
-          ]
-        },
-        "frame_beam_7": {
-          "glb": "/3d-parts/cratos/frame_beam_7/meeting-large.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            1.283,
-            0.04,
-            0.04
-          ],
-          "bytes": 1432,
-          "hash": "64cb6740a824",
-          "source_object": "Box3101",
-          "source_materials": [
-            "DESK-CRATOS-WS_LEG"
-          ]
-        },
-        "frame_beam_8": {
-          "glb": "/3d-parts/cratos/frame_beam_8/meeting-large.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            1.283,
-            0.04,
-            0.04
-          ],
-          "bytes": 1436,
-          "hash": "9edbe52a73c0",
-          "source_object": "Box3102",
-          "source_materials": [
-            "DESK-CRATOS-WS_LEG"
-          ]
-        },
-        "frame_beam_9": {
-          "glb": "/3d-parts/cratos/frame_beam_9/meeting-large.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.101,
-            1.01,
-            0.05
-          ],
-          "bytes": 1476,
-          "hash": "268344373fbc",
-          "source_object": "Box3103",
-          "source_materials": [
-            "DESK-CRATOS-WS_FRAME_BEAM"
-          ]
-        },
-        "frame_beam_10": {
-          "glb": "/3d-parts/cratos/frame_beam_10/meeting-large.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.01,
-            0.554,
-            0.608
-          ],
-          "bytes": 1600,
-          "hash": "5926599bab20",
-          "source_object": "Line1244",
-          "source_materials": [
-            "DESK-CRATOS-WS_FRAME_BEAM"
-          ]
-        },
-        "frame_beam_11": {
-          "glb": "/3d-parts/cratos/frame_beam_11/meeting-large.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.01,
-            0.554,
-            0.608
-          ],
-          "bytes": 1600,
-          "hash": "314ff7889c5d",
-          "source_object": "Line1245",
-          "source_materials": [
-            "DESK-CRATOS-WS_FRAME_BEAM"
-          ]
-        },
-        "frame_beam_12": {
-          "glb": "/3d-parts/cratos/frame_beam_12/meeting-large.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.06,
-            1.376,
-            0.72
-          ],
-          "bytes": 72940,
-          "hash": "8784a0826366",
-          "source_object": "Object104",
-          "source_materials": [
-            "DESK-CRATOS-WS_FRAME_BEAM"
-          ]
-        },
-        "frame_beam_13": {
-          "glb": "/3d-parts/cratos/frame_beam_13/meeting-large.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.06,
-            1.376,
-            0.72
-          ],
-          "bytes": 72960,
-          "hash": "cd7759e7c2a7",
-          "source_object": "Object105",
-          "source_materials": [
-            "DESK-CRATOS-WS_FRAME_BEAM"
-          ]
-        },
-        "top_0": {
-          "glb": "/3d-parts/cratos/top_0/meeting-large.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            1.4,
-            0.7,
-            0.03
-          ],
-          "bytes": 161528,
-          "hash": "48c44b8800ab",
-          "source_object": "Box3092",
-          "source_materials": [
-            "DESK-CRATOS-WS_DESKTOP"
-          ]
-        },
-        "top_1": {
-          "glb": "/3d-parts/cratos/top_1/meeting-large.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            1.4,
-            0.7,
-            0.03
-          ],
-          "bytes": 161528,
-          "hash": "cc8039580d61",
-          "source_object": "Box3093",
-          "source_materials": [
-            "DESK-CRATOS-WS_DESKTOP"
-          ]
-        },
-        "top_2": {
-          "glb": "/3d-parts/cratos/top_2/meeting-large.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            1.4,
-            0.7,
-            0.03
-          ],
-          "bytes": 161528,
-          "hash": "6d82a74071ef",
-          "source_object": "Box3094",
-          "source_materials": [
-            "DESK-CRATOS-WS_DESKTOP"
-          ]
-        },
-        "top_3": {
-          "glb": "/3d-parts/cratos/top_3/meeting-large.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            1.4,
-            0.7,
-            0.03
-          ],
-          "bytes": 161528,
-          "hash": "42531ae12f46",
-          "source_object": "Box3095",
-          "source_materials": [
-            "DESK-CRATOS-WS_DESKTOP"
-          ]
-        },
-        "top_4": {
-          "glb": "/3d-parts/cratos/top_4/meeting-large.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            1.4,
-            0.7,
-            0.03
-          ],
-          "bytes": 161528,
-          "hash": "a046d6708a50",
-          "source_object": "Box3099",
-          "source_materials": [
-            "DESK-CRATOS-WS_DESKTOP"
-          ]
-        },
-        "top_5": {
-          "glb": "/3d-parts/cratos/top_5/meeting-large.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            1.4,
-            0.7,
-            0.03
-          ],
-          "bytes": 161528,
-          "hash": "e7ff7aed4ab1",
-          "source_object": "Box3100",
-          "source_materials": [
-            "DESK-CRATOS-WS_DESKTOP"
-          ]
-        },
-        "feet_0": {
-          "glb": "/3d-parts/cratos/feet_0/meeting-large.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.042,
-            0.041,
-            0.042
-          ],
-          "bytes": 2900,
-          "hash": "a8bfdc8dc6b2",
-          "source_object": "Line1232",
-          "source_materials": [
-            "DESK-CRATOS-WS_LEVELING_FOOT"
-          ]
-        },
-        "feet_1": {
-          "glb": "/3d-parts/cratos/feet_1/meeting-large.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.042,
-            0.041,
-            0.042
-          ],
-          "bytes": 2892,
-          "hash": "a8fcc56a0971",
-          "source_object": "Line1233",
-          "source_materials": [
-            "DESK-CRATOS-WS_LEVELING_FOOT"
-          ]
-        },
-        "feet_2": {
-          "glb": "/3d-parts/cratos/feet_2/meeting-large.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.042,
-            0.041,
-            0.042
-          ],
-          "bytes": 2904,
-          "hash": "748fc1dec80a",
-          "source_object": "Line1234",
-          "source_materials": [
-            "DESK-CRATOS-WS_LEVELING_FOOT"
-          ]
-        },
-        "feet_3": {
-          "glb": "/3d-parts/cratos/feet_3/meeting-large.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.042,
-            0.041,
-            0.042
-          ],
-          "bytes": 2896,
-          "hash": "195353a41e91",
-          "source_object": "Line1235",
-          "source_materials": [
-            "DESK-CRATOS-WS_LEVELING_FOOT"
-          ]
-        },
-        "feet_4": {
-          "glb": "/3d-parts/cratos/feet_4/meeting-large.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.042,
-            0.041,
-            0.042
-          ],
-          "bytes": 2900,
-          "hash": "f514496f81e7",
-          "source_object": "Line1236",
-          "source_materials": [
-            "DESK-CRATOS-WS_LEVELING_FOOT"
-          ]
-        },
-        "feet_5": {
-          "glb": "/3d-parts/cratos/feet_5/meeting-large.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.042,
-            0.041,
-            0.042
-          ],
-          "bytes": 2892,
-          "hash": "f5a1c48600dd",
-          "source_object": "Line1237",
-          "source_materials": [
-            "DESK-CRATOS-WS_LEVELING_FOOT"
-          ]
-        },
-        "feet_6": {
-          "glb": "/3d-parts/cratos/feet_6/meeting-large.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.042,
-            0.041,
-            0.042
-          ],
-          "bytes": 2904,
-          "hash": "bfc8f9d22e28",
-          "source_object": "Line1238",
-          "source_materials": [
-            "DESK-CRATOS-WS_LEVELING_FOOT"
-          ]
-        },
-        "feet_7": {
-          "glb": "/3d-parts/cratos/feet_7/meeting-large.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.042,
-            0.041,
-            0.042
-          ],
-          "bytes": 2896,
-          "hash": "d21515503f47",
-          "source_object": "Line1239",
-          "source_materials": [
-            "DESK-CRATOS-WS_LEVELING_FOOT"
-          ]
-        },
-        "feet_8": {
-          "glb": "/3d-parts/cratos/feet_8/meeting-large.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.042,
-            0.041,
-            0.042
-          ],
-          "bytes": 2896,
-          "hash": "99e4779f6040",
-          "source_object": "Line1240",
-          "source_materials": [
-            "DESK-CRATOS-WS_LEVELING_FOOT"
-          ]
-        },
-        "feet_9": {
-          "glb": "/3d-parts/cratos/feet_9/meeting-large.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.042,
-            0.041,
-            0.042
-          ],
-          "bytes": 2896,
-          "hash": "7dfec7f9ad15",
-          "source_object": "Line1241",
-          "source_materials": [
-            "DESK-CRATOS-WS_LEVELING_FOOT"
-          ]
-        },
-        "feet_10": {
-          "glb": "/3d-parts/cratos/feet_10/meeting-large.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.042,
-            0.041,
-            0.042
-          ],
-          "bytes": 2904,
-          "hash": "6308031a6a36",
-          "source_object": "Line1242",
-          "source_materials": [
-            "DESK-CRATOS-WS_LEVELING_FOOT"
-          ]
-        },
-        "feet_11": {
-          "glb": "/3d-parts/cratos/feet_11/meeting-large.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.042,
-            0.041,
-            0.042
-          ],
-          "bytes": 2900,
-          "hash": "703aacfc5913",
-          "source_object": "Line1243",
-          "source_materials": [
-            "DESK-CRATOS-WS_LEVELING_FOOT"
-          ]
-        },
-        "screen_front_0": {
-          "glb": "/3d-parts/accessories/screen_front-32a3abba54ab.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.268,
-            0.02,
-            0
-          ],
-          "bytes": 1408,
-          "hash": "32a3abba54ab",
-          "source_object": "Plane054",
-          "source_materials": [
-            "DESK-CRATOS-WS_SCREEN_PANEL"
-          ]
-        },
-        "screen_front_1": {
-          "glb": "/3d-parts/accessories/screen_front-bcf24a70f24d.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.267,
-            0.07,
-            0.002
-          ],
-          "bytes": 1352,
-          "hash": "bcf24a70f24d",
-          "source_object": "Rectangle321",
-          "source_materials": [
-            "DESK-CRATOS-WS_SCREEN_PANEL"
-          ]
-        },
-        "screen_front_2": {
-          "glb": "/3d-parts/accessories/screen_front-4db90394c77b.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.268,
-            0.02,
-            0
-          ],
-          "bytes": 1408,
-          "hash": "4db90394c77b",
-          "source_object": "Plane055",
-          "source_materials": [
-            "DESK-CRATOS-WS_SCREEN_PANEL"
-          ]
-        },
-        "screen_front_3": {
-          "glb": "/3d-parts/accessories/screen_front-21fe76ffa90d.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.267,
-            0.07,
-            0.002
-          ],
-          "bytes": 1356,
-          "hash": "21fe76ffa90d",
-          "source_object": "Rectangle323",
-          "source_materials": [
-            "DESK-CRATOS-WS_SCREEN_PANEL"
-          ]
-        },
-        "screen_front_4": {
-          "glb": "/3d-parts/accessories/screen_front-af1ddb148b9a.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.268,
-            0.02,
-            0
-          ],
-          "bytes": 1412,
-          "hash": "af1ddb148b9a",
-          "source_object": "Plane058",
-          "source_materials": [
-            "DESK-CRATOS-WS_SCREEN_PANEL"
-          ]
-        },
-        "screen_front_5": {
-          "glb": "/3d-parts/accessories/screen_front-3ee9492595b1.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.267,
-            0.07,
-            0.002
-          ],
-          "bytes": 1356,
-          "hash": "3ee9492595b1",
-          "source_object": "Rectangle327",
-          "source_materials": [
-            "DESK-CRATOS-WS_SCREEN_PANEL"
-          ]
-        },
-        "screen_front_6": {
-          "glb": "/3d-parts/accessories/screen_front-fa351e6df02a.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.268,
-            0.02,
-            0
-          ],
-          "bytes": 1412,
-          "hash": "fa351e6df02a",
-          "source_object": "Plane059",
-          "source_materials": [
-            "DESK-CRATOS-WS_SCREEN_PANEL"
-          ]
-        },
-        "screen_front_7": {
-          "glb": "/3d-parts/accessories/screen_front-758ddb185855.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.267,
-            0.07,
-            0.002
-          ],
-          "bytes": 1356,
-          "hash": "758ddb185855",
-          "source_object": "Rectangle329",
-          "source_materials": [
-            "DESK-CRATOS-WS_SCREEN_PANEL"
-          ]
-        },
-        "screen_front_8": {
-          "glb": "/3d-parts/accessories/screen_front-2b87f598db14.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.268,
-            0.02,
-            0
-          ],
-          "bytes": 1408,
-          "hash": "2b87f598db14",
-          "source_object": "Plane060",
-          "source_materials": [
-            "DESK-CRATOS-WS_SCREEN_PANEL"
-          ]
-        },
-        "screen_front_9": {
-          "glb": "/3d-parts/accessories/screen_front-7ae9389d4642.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.267,
-            0.07,
-            0.002
-          ],
-          "bytes": 1352,
-          "hash": "7ae9389d4642",
-          "source_object": "Rectangle331",
-          "source_materials": [
-            "DESK-CRATOS-WS_SCREEN_PANEL"
-          ]
-        },
-        "screen_front_10": {
-          "glb": "/3d-parts/accessories/screen_front-d9a75e5a5a61.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.268,
-            0.02,
-            0
-          ],
-          "bytes": 1408,
-          "hash": "d9a75e5a5a61",
-          "source_object": "Plane061",
-          "source_materials": [
-            "DESK-CRATOS-WS_SCREEN_PANEL"
-          ]
-        },
-        "screen_front_11": {
-          "glb": "/3d-parts/accessories/screen_front-fd2f6b7341ac.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.267,
-            0.07,
-            0.002
-          ],
-          "bytes": 1352,
-          "hash": "fd2f6b7341ac",
-          "source_object": "Rectangle333",
-          "source_materials": [
-            "DESK-CRATOS-WS_SCREEN_PANEL"
-          ]
-        },
-        "modesty_0": {
-          "glb": "/3d-parts/accessories/modesty-1346dff132db.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.3,
-            0.108,
-            0.006
-          ],
-          "bytes": 1488,
-          "hash": "1346dff132db",
-          "source_object": "Rectangle322",
-          "source_materials": [
-            "DESK-CRATOS-WS_MODESTY_PANEL"
-          ]
-        },
-        "modesty_1": {
-          "glb": "/3d-parts/accessories/modesty-b2a486b1d2a7.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.3,
-            0.108,
-            0.006
-          ],
-          "bytes": 1492,
-          "hash": "b2a486b1d2a7",
-          "source_object": "Rectangle324",
-          "source_materials": [
-            "DESK-CRATOS-WS_MODESTY_PANEL"
-          ]
-        },
-        "modesty_2": {
-          "glb": "/3d-parts/accessories/modesty-c9afbe5198de.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.3,
-            0.108,
-            0.006
-          ],
-          "bytes": 1488,
-          "hash": "c9afbe5198de",
-          "source_object": "Rectangle328",
-          "source_materials": [
-            "DESK-CRATOS-WS_MODESTY_PANEL"
-          ]
-        },
-        "modesty_3": {
-          "glb": "/3d-parts/accessories/modesty-b6abd1872216.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.3,
-            0.108,
-            0.006
-          ],
-          "bytes": 1492,
-          "hash": "b6abd1872216",
-          "source_object": "Rectangle330",
-          "source_materials": [
-            "DESK-CRATOS-WS_MODESTY_PANEL"
-          ]
-        },
-        "modesty_4": {
-          "glb": "/3d-parts/accessories/modesty-1334c2227e8a.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.3,
-            0.108,
-            0.006
-          ],
-          "bytes": 1484,
-          "hash": "1334c2227e8a",
-          "source_object": "Rectangle332",
-          "source_materials": [
-            "DESK-CRATOS-WS_MODESTY_PANEL"
-          ]
-        },
-        "modesty_5": {
-          "glb": "/3d-parts/accessories/modesty-84a55dd3598f.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.3,
-            0.108,
-            0.006
-          ],
-          "bytes": 1488,
-          "hash": "84a55dd3598f",
-          "source_object": "Rectangle334",
-          "source_materials": [
-            "DESK-CRATOS-WS_MODESTY_PANEL"
-          ]
-        },
-        "leg_r_0": {
-          "glb": "/3d-parts/cratos/leg_r_0/meeting-large.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.05,
-            0.026,
-            0.656
-          ],
-          "bytes": 1460,
-          "hash": "aeb55295fbb1",
-          "source_object": "Box3089",
-          "source_materials": [
-            "DESK-CRATOS-WS_LEG"
-          ]
-        },
-        "leg_r_1": {
-          "glb": "/3d-parts/cratos/leg_r_1/meeting-large.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.05,
-            0.026,
-            0.656
-          ],
-          "bytes": 1456,
-          "hash": "92444d3a3830",
-          "source_object": "Box3090",
-          "source_materials": [
-            "DESK-CRATOS-WS_LEG"
-          ]
-        },
-        "leg_l_0": {
-          "glb": "/3d-parts/cratos/leg_l_0/meeting-large.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.05,
-            0.026,
-            0.656
-          ],
-          "bytes": 1460,
-          "hash": "20746bc2fcd1",
-          "source_object": "Box3104",
-          "source_materials": [
-            "DESK-CRATOS-WS_LEG"
-          ]
-        },
-        "leg_l_1": {
-          "glb": "/3d-parts/cratos/leg_l_1/meeting-large.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.05,
-            0.026,
-            0.656
-          ],
-          "bytes": 1460,
-          "hash": "a1669ba07372",
-          "source_object": "Box3105",
-          "source_materials": [
-            "DESK-CRATOS-WS_LEG"
-          ]
-        },
-        "cable_tray": {
-          "glb": "/3d-parts/cratos/cable_tray/meeting-large.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            1.16,
-            0.082,
-            0.08
-          ],
-          "bytes": 2120,
-          "hash": "567ad6749fcd"
-        }
-      },
-      "baseSize": null,
-      "unknowns": [
-        {
-          "name": "Object071",
-          "materials": [
-            "DESK-CRATOS-WS_LEG"
-          ],
-          "extents": [
-            0.03,
-            0.61,
-            0.018
-          ]
-        },
-        {
-          "name": "Object078",
-          "materials": [
-            "DESK-CRATOS-WS_LEG"
-          ],
-          "extents": [
-            0.03,
-            0.61,
-            0.018
-          ]
-        }
-      ],
-      "productKind": "meeting"
-    },
-    "Workstation 6-Person": {
-      "parts": {
-        "frame_beam_0": {
-          "glb": "/3d-parts/cratos/frame_beam_0/workstation-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.101,
-            1.01,
-            0.05
-          ],
-          "bytes": 1472,
-          "hash": "81db06e2ba32",
-          "source_object": "Box3088",
-          "source_materials": [
-            "DESK-CRATOS-WS_FRAME_BEAM"
-          ]
-        },
-        "frame_beam_1": {
-          "glb": "/3d-parts/cratos/frame_beam_1/workstation-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            1.283,
-            0.04,
-            0.04
-          ],
-          "bytes": 1432,
-          "hash": "c205d264601d",
-          "source_object": "Box3091",
-          "source_materials": [
-            "DESK-CRATOS-WS_LEG"
-          ]
-        },
-        "frame_beam_2": {
-          "glb": "/3d-parts/cratos/frame_beam_2/workstation-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            1.283,
-            0.04,
-            0.04
-          ],
-          "bytes": 1432,
-          "hash": "68f6c627dc68",
-          "source_object": "Box3096",
-          "source_materials": [
-            "DESK-CRATOS-WS_LEG"
-          ]
-        },
-        "frame_beam_3": {
-          "glb": "/3d-parts/cratos/frame_beam_3/workstation-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            1.283,
-            0.04,
-            0.04
-          ],
-          "bytes": 1432,
-          "hash": "c02b7e029871",
-          "source_object": "Box3097",
-          "source_materials": [
-            "DESK-CRATOS-WS_LEG"
-          ]
-        },
-        "frame_beam_4": {
-          "glb": "/3d-parts/cratos/frame_beam_4/workstation-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            1.283,
-            0.04,
-            0.04
-          ],
-          "bytes": 1436,
-          "hash": "aa79ab3bf708",
-          "source_object": "Box3098",
-          "source_materials": [
-            "DESK-CRATOS-WS_LEG"
-          ]
-        },
-        "frame_beam_5": {
-          "glb": "/3d-parts/cratos/frame_beam_5/workstation-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.01,
-            0.554,
-            0.608
-          ],
-          "bytes": 1600,
-          "hash": "d24eb0020c60",
-          "source_object": "Line1230",
-          "source_materials": [
-            "DESK-CRATOS-WS_FRAME_BEAM"
-          ]
-        },
-        "frame_beam_6": {
-          "glb": "/3d-parts/cratos/frame_beam_6/workstation-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.01,
-            0.554,
-            0.608
-          ],
-          "bytes": 1596,
-          "hash": "2c639845840a",
-          "source_object": "Line1231",
-          "source_materials": [
-            "DESK-CRATOS-WS_FRAME_BEAM"
-          ]
-        },
-        "frame_beam_7": {
-          "glb": "/3d-parts/cratos/frame_beam_7/workstation-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            1.283,
-            0.04,
-            0.04
-          ],
-          "bytes": 1432,
-          "hash": "39108753bfee",
-          "source_object": "Box3101",
-          "source_materials": [
-            "DESK-CRATOS-WS_LEG"
-          ]
-        },
-        "frame_beam_8": {
-          "glb": "/3d-parts/cratos/frame_beam_8/workstation-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            1.283,
-            0.04,
-            0.04
-          ],
-          "bytes": 1436,
-          "hash": "6cde21ada7f2",
-          "source_object": "Box3102",
-          "source_materials": [
-            "DESK-CRATOS-WS_LEG"
-          ]
-        },
-        "frame_beam_9": {
-          "glb": "/3d-parts/cratos/frame_beam_9/workstation-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.101,
-            1.01,
-            0.05
-          ],
-          "bytes": 1472,
-          "hash": "154547c89141",
-          "source_object": "Box3103",
-          "source_materials": [
-            "DESK-CRATOS-WS_FRAME_BEAM"
-          ]
-        },
-        "frame_beam_10": {
-          "glb": "/3d-parts/cratos/frame_beam_10/workstation-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.01,
-            0.554,
-            0.608
-          ],
-          "bytes": 1600,
-          "hash": "73f724d34107",
-          "source_object": "Line1244",
-          "source_materials": [
-            "DESK-CRATOS-WS_FRAME_BEAM"
-          ]
-        },
-        "frame_beam_11": {
-          "glb": "/3d-parts/cratos/frame_beam_11/workstation-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.01,
-            0.554,
-            0.608
-          ],
-          "bytes": 1600,
-          "hash": "4ec363228b2b",
-          "source_object": "Line1245",
-          "source_materials": [
-            "DESK-CRATOS-WS_FRAME_BEAM"
-          ]
-        },
-        "frame_beam_12": {
-          "glb": "/3d-parts/cratos/frame_beam_12/workstation-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.06,
-            1.376,
-            0.72
-          ],
-          "bytes": 73084,
-          "hash": "cda7cb10768f",
-          "source_object": "Object104",
-          "source_materials": [
-            "DESK-CRATOS-WS_FRAME_BEAM"
-          ]
-        },
-        "frame_beam_13": {
-          "glb": "/3d-parts/cratos/frame_beam_13/workstation-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.06,
-            1.376,
-            0.72
-          ],
-          "bytes": 72624,
-          "hash": "bd606c5acfbf",
-          "source_object": "Object105",
-          "source_materials": [
-            "DESK-CRATOS-WS_FRAME_BEAM"
-          ]
-        },
-        "top_0": {
-          "glb": "/3d-parts/cratos/top_0/workstation-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            1.4,
-            0.7,
-            0.03
-          ],
-          "bytes": 161528,
-          "hash": "cce634131ca8",
-          "source_object": "Box3092",
-          "source_materials": [
-            "DESK-CRATOS-WS_DESKTOP"
-          ]
-        },
-        "top_1": {
-          "glb": "/3d-parts/cratos/top_1/workstation-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            1.4,
-            0.7,
-            0.03
-          ],
-          "bytes": 161528,
-          "hash": "6c772ba84f75",
-          "source_object": "Box3093",
-          "source_materials": [
-            "DESK-CRATOS-WS_DESKTOP"
-          ]
-        },
-        "top_2": {
-          "glb": "/3d-parts/cratos/top_2/workstation-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            1.4,
-            0.7,
-            0.03
-          ],
-          "bytes": 161528,
-          "hash": "4abec898ff21",
-          "source_object": "Box3094",
-          "source_materials": [
-            "DESK-CRATOS-WS_DESKTOP"
-          ]
-        },
-        "top_3": {
-          "glb": "/3d-parts/cratos/top_3/workstation-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            1.4,
-            0.7,
-            0.03
-          ],
-          "bytes": 161528,
-          "hash": "ed5cdaddc409",
-          "source_object": "Box3095",
-          "source_materials": [
-            "DESK-CRATOS-WS_DESKTOP"
-          ]
-        },
-        "top_4": {
-          "glb": "/3d-parts/cratos/top_4/workstation-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            1.4,
-            0.7,
-            0.03
-          ],
-          "bytes": 161528,
-          "hash": "9dbc7ff22c61",
-          "source_object": "Box3099",
-          "source_materials": [
-            "DESK-CRATOS-WS_DESKTOP"
-          ]
-        },
-        "top_5": {
-          "glb": "/3d-parts/cratos/top_5/workstation-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            1.4,
-            0.7,
-            0.03
-          ],
-          "bytes": 161528,
-          "hash": "a02804349f17",
-          "source_object": "Box3100",
-          "source_materials": [
-            "DESK-CRATOS-WS_DESKTOP"
-          ]
-        },
-        "feet_0": {
-          "glb": "/3d-parts/cratos/feet_0/workstation-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.042,
-            0.041,
-            0.042
-          ],
-          "bytes": 2896,
-          "hash": "7a82d22e6c8e",
-          "source_object": "Line1232",
-          "source_materials": [
-            "DESK-CRATOS-WS_LEVELING_FOOT"
-          ]
-        },
-        "feet_1": {
-          "glb": "/3d-parts/cratos/feet_1/workstation-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.042,
-            0.041,
-            0.042
-          ],
-          "bytes": 2892,
-          "hash": "93750155db98",
-          "source_object": "Line1233",
-          "source_materials": [
-            "DESK-CRATOS-WS_LEVELING_FOOT"
-          ]
-        },
-        "feet_2": {
-          "glb": "/3d-parts/cratos/feet_2/workstation-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.042,
-            0.041,
-            0.042
-          ],
-          "bytes": 2904,
-          "hash": "baabc446930f",
-          "source_object": "Line1234",
-          "source_materials": [
-            "DESK-CRATOS-WS_LEVELING_FOOT"
-          ]
-        },
-        "feet_3": {
-          "glb": "/3d-parts/cratos/feet_3/workstation-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.042,
-            0.041,
-            0.042
-          ],
-          "bytes": 2896,
-          "hash": "db4eafacc05e",
-          "source_object": "Line1235",
-          "source_materials": [
-            "DESK-CRATOS-WS_LEVELING_FOOT"
-          ]
-        },
-        "feet_4": {
-          "glb": "/3d-parts/cratos/feet_4/workstation-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.042,
-            0.041,
-            0.042
-          ],
-          "bytes": 2900,
-          "hash": "ca856bb3db35",
-          "source_object": "Line1236",
-          "source_materials": [
-            "DESK-CRATOS-WS_LEVELING_FOOT"
-          ]
-        },
-        "feet_5": {
-          "glb": "/3d-parts/cratos/feet_5/workstation-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.042,
-            0.041,
-            0.042
-          ],
-          "bytes": 2892,
-          "hash": "c98e57c2760c",
-          "source_object": "Line1237",
-          "source_materials": [
-            "DESK-CRATOS-WS_LEVELING_FOOT"
-          ]
-        },
-        "feet_6": {
-          "glb": "/3d-parts/cratos/feet_6/workstation-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.042,
-            0.041,
-            0.042
-          ],
-          "bytes": 2908,
-          "hash": "147ee4e9750a",
-          "source_object": "Line1238",
-          "source_materials": [
-            "DESK-CRATOS-WS_LEVELING_FOOT"
-          ]
-        },
-        "feet_7": {
-          "glb": "/3d-parts/cratos/feet_7/workstation-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.042,
-            0.041,
-            0.042
-          ],
-          "bytes": 2896,
-          "hash": "fa5fcefbffb4",
-          "source_object": "Line1239",
-          "source_materials": [
-            "DESK-CRATOS-WS_LEVELING_FOOT"
-          ]
-        },
-        "feet_8": {
-          "glb": "/3d-parts/cratos/feet_8/workstation-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.042,
-            0.041,
-            0.042
-          ],
-          "bytes": 2892,
-          "hash": "7847a3a47081",
-          "source_object": "Line1240",
-          "source_materials": [
-            "DESK-CRATOS-WS_LEVELING_FOOT"
-          ]
-        },
-        "feet_9": {
-          "glb": "/3d-parts/cratos/feet_9/workstation-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.042,
-            0.041,
-            0.042
-          ],
-          "bytes": 2896,
-          "hash": "bda4011c23e9",
-          "source_object": "Line1241",
-          "source_materials": [
-            "DESK-CRATOS-WS_LEVELING_FOOT"
-          ]
-        },
-        "feet_10": {
-          "glb": "/3d-parts/cratos/feet_10/workstation-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.042,
-            0.041,
-            0.042
-          ],
-          "bytes": 2900,
-          "hash": "a882c4ffde70",
-          "source_object": "Line1242",
-          "source_materials": [
-            "DESK-CRATOS-WS_LEVELING_FOOT"
-          ]
-        },
-        "feet_11": {
-          "glb": "/3d-parts/cratos/feet_11/workstation-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.042,
-            0.041,
-            0.042
-          ],
-          "bytes": 2900,
-          "hash": "bb1cf8baa854",
-          "source_object": "Line1243",
-          "source_materials": [
-            "DESK-CRATOS-WS_LEVELING_FOOT"
-          ]
-        },
-        "modesty_0": {
-          "glb": "/3d-parts/accessories/modesty-9f405046fad4.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.3,
-            0.108,
-            0.006
-          ],
-          "bytes": 1488,
-          "hash": "9f405046fad4",
-          "source_object": "Rectangle322",
-          "source_materials": [
-            "DESK-CRATOS-WS_MODESTY_PANEL"
-          ]
-        },
-        "modesty_1": {
-          "glb": "/3d-parts/accessories/modesty-ced05f18dffe.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.3,
-            0.108,
-            0.006
-          ],
-          "bytes": 1488,
-          "hash": "ced05f18dffe",
-          "source_object": "Rectangle324",
-          "source_materials": [
-            "DESK-CRATOS-WS_MODESTY_PANEL"
-          ]
-        },
-        "modesty_2": {
-          "glb": "/3d-parts/accessories/modesty-91f71069479c.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.3,
-            0.108,
-            0.006
-          ],
-          "bytes": 1488,
-          "hash": "91f71069479c",
-          "source_object": "Rectangle328",
-          "source_materials": [
-            "DESK-CRATOS-WS_MODESTY_PANEL"
-          ]
-        },
-        "modesty_3": {
-          "glb": "/3d-parts/accessories/modesty-c8892cc276a1.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.3,
-            0.108,
-            0.006
-          ],
-          "bytes": 1492,
-          "hash": "c8892cc276a1",
-          "source_object": "Rectangle330",
-          "source_materials": [
-            "DESK-CRATOS-WS_MODESTY_PANEL"
-          ]
-        },
-        "modesty_4": {
-          "glb": "/3d-parts/accessories/modesty-9c088c133077.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.3,
-            0.108,
-            0.006
-          ],
-          "bytes": 1488,
-          "hash": "9c088c133077",
-          "source_object": "Rectangle332",
-          "source_materials": [
-            "DESK-CRATOS-WS_MODESTY_PANEL"
-          ]
-        },
-        "modesty_5": {
-          "glb": "/3d-parts/accessories/modesty-224a02ce8c82.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.3,
-            0.108,
-            0.006
-          ],
-          "bytes": 1488,
-          "hash": "224a02ce8c82",
-          "source_object": "Rectangle334",
-          "source_materials": [
-            "DESK-CRATOS-WS_MODESTY_PANEL"
-          ]
-        },
-        "leg_r_0": {
-          "glb": "/3d-parts/cratos/leg_r_0/workstation-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.05,
-            0.026,
-            0.656
-          ],
-          "bytes": 1460,
-          "hash": "f49ee05b9e96",
-          "source_object": "Box3089",
-          "source_materials": [
-            "DESK-CRATOS-WS_LEG"
-          ]
-        },
-        "leg_r_1": {
-          "glb": "/3d-parts/cratos/leg_r_1/workstation-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.05,
-            0.026,
-            0.656
-          ],
-          "bytes": 1456,
-          "hash": "27becfd07ff8",
-          "source_object": "Box3090",
-          "source_materials": [
-            "DESK-CRATOS-WS_LEG"
-          ]
-        },
-        "leg_l_0": {
-          "glb": "/3d-parts/cratos/leg_l_0/workstation-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.05,
-            0.026,
-            0.656
-          ],
-          "bytes": 1464,
-          "hash": "fc5e35fd9a61",
-          "source_object": "Box3104",
-          "source_materials": [
-            "DESK-CRATOS-WS_LEG"
-          ]
-        },
-        "leg_l_1": {
-          "glb": "/3d-parts/cratos/leg_l_1/workstation-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.05,
-            0.026,
-            0.656
-          ],
-          "bytes": 1460,
-          "hash": "e8420da7e077",
-          "source_object": "Box3105",
-          "source_materials": [
-            "DESK-CRATOS-WS_LEG"
-          ]
-        },
-        "screen_front_0": {
-          "glb": "/3d-parts/cratos/screen_front_0/workstation-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            1,
-            0.064,
-            0.2
-          ],
-          "bytes": 43896,
-          "hash": "ef01f920cffa"
-        },
-        "screen_front_1": {
-          "glb": "/3d-parts/cratos/screen_front_1/workstation-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            1,
-            0.064,
-            0.2
-          ],
-          "bytes": 43868,
-          "hash": "d13c6089dc46"
-        },
-        "screen_front_2": {
-          "glb": "/3d-parts/cratos/screen_front_2/workstation-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            1,
-            0.064,
-            0.2
-          ],
-          "bytes": 43896,
-          "hash": "02599792e0bc"
-        },
-        "screen_side_0": {
-          "glb": "/3d-parts/cratos/screen_side_0/workstation-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.028,
-            0.4,
-            0.15
-          ],
-          "bytes": 43908,
-          "hash": "96202277748b"
-        },
-        "screen_side_1": {
-          "glb": "/3d-parts/cratos/screen_side_1/workstation-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.028,
-            0.4,
-            0.15
-          ],
-          "bytes": 43912,
-          "hash": "5e03060171c5"
-        },
-        "screen_side_2": {
-          "glb": "/3d-parts/cratos/screen_side_2/workstation-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.028,
-            0.4,
-            0.15
-          ],
-          "bytes": 43904,
-          "hash": "77749976ad07"
-        },
-        "screen_side_3": {
-          "glb": "/3d-parts/cratos/screen_side_3/workstation-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.028,
-            0.4,
-            0.15
-          ],
-          "bytes": 43908,
-          "hash": "bc47be6f057e"
-        },
-        "bracket_0": {
-          "glb": "/3d-parts/cratos/bracket_0/workstation-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.022,
-            0.041,
-            0.095
-          ],
-          "bytes": 2280,
-          "hash": "a32d143f53f0"
-        },
-        "bracket_1": {
-          "glb": "/3d-parts/cratos/bracket_1/workstation-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.022,
-            0.041,
-            0.095
-          ],
-          "bytes": 2280,
-          "hash": "2d32bc94c572"
-        },
-        "bracket_2": {
-          "glb": "/3d-parts/cratos/bracket_2/workstation-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.022,
-            0.041,
-            0.095
-          ],
-          "bytes": 2280,
-          "hash": "c8200e76d9f8"
-        },
-        "bracket_3": {
-          "glb": "/3d-parts/cratos/bracket_3/workstation-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.022,
-            0.041,
-            0.095
-          ],
-          "bytes": 2280,
-          "hash": "a5fdc8ee4d86"
-        },
-        "bracket_4": {
-          "glb": "/3d-parts/cratos/bracket_4/workstation-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.022,
-            0.041,
-            0.095
-          ],
-          "bytes": 2280,
-          "hash": "6037dfdba749"
-        },
-        "bracket_5": {
-          "glb": "/3d-parts/cratos/bracket_5/workstation-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.022,
-            0.041,
-            0.095
-          ],
-          "bytes": 2280,
-          "hash": "d6120d2a2e33"
-        },
-        "bracket_6": {
-          "glb": "/3d-parts/cratos/bracket_6/workstation-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.041,
-            0.022,
-            0.095
-          ],
-          "bytes": 2284,
-          "hash": "2f8825d1ba69"
-        },
-        "bracket_7": {
-          "glb": "/3d-parts/cratos/bracket_7/workstation-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.041,
-            0.022,
-            0.095
-          ],
-          "bytes": 2284,
-          "hash": "c7b0da762242"
-        },
-        "bracket_8": {
-          "glb": "/3d-parts/cratos/bracket_8/workstation-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.041,
-            0.022,
-            0.095
-          ],
-          "bytes": 2288,
-          "hash": "e7fc7c2cc7b4"
-        },
-        "bracket_9": {
-          "glb": "/3d-parts/cratos/bracket_9/workstation-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.041,
-            0.022,
-            0.095
-          ],
-          "bytes": 2284,
-          "hash": "b8fa6d939537"
-        },
-        "bracket_10": {
-          "glb": "/3d-parts/cratos/bracket_10/workstation-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.041,
-            0.022,
-            0.095
-          ],
-          "bytes": 2280,
-          "hash": "880a374056be"
-        },
-        "bracket_11": {
-          "glb": "/3d-parts/cratos/bracket_11/workstation-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.041,
-            0.022,
-            0.095
-          ],
-          "bytes": 2284,
-          "hash": "4b3f49cf2c07"
-        },
-        "bracket_12": {
-          "glb": "/3d-parts/cratos/bracket_12/workstation-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.041,
-            0.022,
-            0.095
-          ],
-          "bytes": 2284,
-          "hash": "96905b5b90ce"
-        },
-        "bracket_13": {
-          "glb": "/3d-parts/cratos/bracket_13/workstation-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            0.041,
-            0.022,
-            0.095
-          ],
-          "bytes": 2284,
-          "hash": "aace9b727e67"
-        },
-        "cable_tray_0": {
-          "glb": "/3d-parts/cratos/cable_tray_0/workstation-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            1.16,
-            0.082,
-            0.08
-          ],
-          "bytes": 2120,
-          "hash": "186ebf4a1538"
-        },
-        "cable_tray_1": {
-          "glb": "/3d-parts/cratos/cable_tray_1/workstation-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            1.16,
-            0.082,
-            0.08
-          ],
-          "bytes": 2128,
-          "hash": "af556299b33c"
-        },
-        "cable_tray_2": {
-          "glb": "/3d-parts/cratos/cable_tray_2/workstation-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            1.16,
-            0.082,
-            0.08
-          ],
-          "bytes": 2124,
-          "hash": "567ad6749fcd"
-        },
-        "cable_tray_3": {
-          "glb": "/3d-parts/cratos/cable_tray_3/workstation-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            1.16,
-            0.082,
-            0.08
-          ],
-          "bytes": 2128,
-          "hash": "683b0fdaffa6"
-        },
-        "cable_tray_4": {
-          "glb": "/3d-parts/cratos/cable_tray_4/workstation-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            1.16,
-            0.082,
-            0.08
-          ],
-          "bytes": 2124,
-          "hash": "4af5b287e2d1"
-        },
-        "cable_tray_5": {
-          "glb": "/3d-parts/cratos/cable_tray_5/workstation-6-person.glb",
-          "anchor": [
-            0,
-            0,
-            0
-          ],
-          "bbox": [
-            1.16,
-            0.082,
-            0.08
-          ],
-          "bytes": 2128,
-          "hash": "3923508b5bc7"
-        }
-      },
-      "baseSize": null,
-      "unknowns": [
-        {
-          "name": "Object071",
-          "materials": [
-            "DESK-CRATOS-WS_LEG"
-          ],
-          "extents": [
-            0.03,
-            0.61,
-            0.018
-          ]
-        },
-        {
-          "name": "Object078",
-          "materials": [
-            "DESK-CRATOS-WS_LEG"
-          ],
-          "extents": [
-            0.03,
-            0.61,
-            0.018
-          ]
-        }
-      ],
-      "productKind": "workstation"
+      ]
     }
-  },
-  "generated_at": "2026-04-20T22:48:23.649Z"
+  }
 }

@@ -20,6 +20,13 @@ export type DeskFamily = {
   heroImage?: string;           // fallback image if no GLB
   priority: number;             // shop grid ordering (lower = earlier)
   status: "live" | "new" | "coming-soon";
+  /** Canonical breadcrumb path for the configurator route.
+   *  Shape: ['Home', 'Shop', '<Category>', '<Sub-category>', '<FamilyName>']
+   *  Defined at family level — NOT pulled from WC category (which varies by product variant).
+   *  TODO: move to Odoo product catalog when catalog taxonomy is stable. */
+  breadcrumb: string[];
+  /** Arabic breadcrumb — same shape as breadcrumb, all strings in Arabic. */
+  breadcrumbAr: string[];
 };
 
 export const DESK_FAMILIES: DeskFamily[] = [
@@ -35,6 +42,8 @@ export const DESK_FAMILIES: DeskFamily[] = [
     heroImage: "/images/shop/cratos-hero.webp",
     priority: 1,
     status: "live",
+    breadcrumb: ["Home", "Shop", "Desks", "Executive Desks", "Cratos"],
+    breadcrumbAr: ["الرئيسية", "المتجر", "المكاتب", "المكاتب التنفيذية", "كراتوس"],
   },
   {
     sku: "DESK-TRUVA",
@@ -47,6 +56,8 @@ export const DESK_FAMILIES: DeskFamily[] = [
     heroImage: "/images/shop/truva-hero.webp",
     priority: 2,
     status: "live",
+    breadcrumb: ["Home", "Shop", "Desks", "Executive Desks", "Truva"],
+    breadcrumbAr: ["الرئيسية", "المتجر", "المكاتب", "المكاتب التنفيذية", "تروفا"],
   },
   {
     sku: "DESK-ALPHA",
@@ -59,6 +70,8 @@ export const DESK_FAMILIES: DeskFamily[] = [
     heroImage: "/images/shop/alpha-hero.webp",
     priority: 3,
     status: "live",
+    breadcrumb: ["Home", "Shop", "Desks", "Executive Desks", "Alpha"],
+    breadcrumbAr: ["الرئيسية", "المتجر", "المكاتب", "المكاتب التنفيذية", "ألفا"],
   },
   {
     sku: "DESK-LYRA",
@@ -71,6 +84,8 @@ export const DESK_FAMILIES: DeskFamily[] = [
     heroImage: "/images/shop/lyra-hero.webp",
     priority: 4,
     status: "live",
+    breadcrumb: ["Home", "Shop", "Desks", "Executive Desks", "Lyra"],
+    breadcrumbAr: ["الرئيسية", "المتجر", "المكاتب", "المكاتب التنفيذية", "ليرا"],
   },
   {
     sku: "DESK-SKY",
@@ -82,6 +97,8 @@ export const DESK_FAMILIES: DeskFamily[] = [
     heroImage: "/images/shop/sky-hero.webp",
     priority: 5,
     status: "live",
+    breadcrumb: ["Home", "Shop", "Desks", "Executive Desks", "Sky"],
+    breadcrumbAr: ["الرئيسية", "المتجر", "المكاتب", "المكاتب التنفيذية", "سكاي"],
   },
   {
     sku: "DESK-GRAVITY",
@@ -93,6 +110,8 @@ export const DESK_FAMILIES: DeskFamily[] = [
     heroImage: "/images/shop/gravity-hero.webp",
     priority: 6,
     status: "live",
+    breadcrumb: ["Home", "Shop", "Desks", "Executive Desks", "Gravity"],
+    breadcrumbAr: ["الرئيسية", "المتجر", "المكاتب", "المكاتب التنفيذية", "غرافيتي"],
   },
   {
     sku: "DESK-MAXIMUS",
@@ -104,6 +123,8 @@ export const DESK_FAMILIES: DeskFamily[] = [
     heroImage: "/images/shop/maximus-hero.webp",
     priority: 7,
     status: "live",
+    breadcrumb: ["Home", "Shop", "Desks", "Executive Desks", "Maximus"],
+    breadcrumbAr: ["الرئيسية", "المتجر", "المكاتب", "المكاتب التنفيذية", "ماكسيموس"],
   },
   {
     sku: "DESK-PASCAL",
@@ -115,6 +136,8 @@ export const DESK_FAMILIES: DeskFamily[] = [
     heroImage: "/images/shop/pascal-hero.webp",
     priority: 8,
     status: "live",
+    breadcrumb: ["Home", "Shop", "Desks", "Executive Desks", "Pascal"],
+    breadcrumbAr: ["الرئيسية", "المتجر", "المكاتب", "المكاتب التنفيذية", "باسكال"],
   },
   {
     sku: "DESK-TESLA",
@@ -126,6 +149,8 @@ export const DESK_FAMILIES: DeskFamily[] = [
     heroImage: "/images/shop/tesla-hero.webp",
     priority: 9,
     status: "live",
+    breadcrumb: ["Home", "Shop", "Desks", "Meeting Tables", "Tesla"],
+    breadcrumbAr: ["الرئيسية", "المتجر", "المكاتب", "طاولات الاجتماعات", "تيسلا"],
   },
   {
     sku: "DESK-FLAT",
@@ -137,6 +162,8 @@ export const DESK_FAMILIES: DeskFamily[] = [
     heroImage: "/images/shop/flat-hero.webp",
     priority: 10,
     status: "live",
+    breadcrumb: ["Home", "Shop", "Desks", "Executive Desks", "Flat"],
+    breadcrumbAr: ["الرئيسية", "المتجر", "المكاتب", "المكاتب التنفيذية", "فلات"],
   },
   {
     sku: "DESK-NEWLINE",
@@ -147,6 +174,8 @@ export const DESK_FAMILIES: DeskFamily[] = [
     hasGlb: false,
     priority: 11,
     status: "new",
+    breadcrumb: ["Home", "Shop", "Desks", "Executive Desks", "Newline"],
+    breadcrumbAr: ["الرئيسية", "المتجر", "المكاتب", "المكاتب التنفيذية", "نيوليين"],
   },
   {
     sku: "DESK-DAVINCI",
@@ -158,6 +187,8 @@ export const DESK_FAMILIES: DeskFamily[] = [
     hasGlb: true,
     priority: 12,
     status: "live",
+    breadcrumb: ["Home", "Shop", "Desks", "Executive Desks", "Da Vinci"],
+    breadcrumbAr: ["الرئيسية", "المتجر", "المكاتب", "المكاتب التنفيذية", "دافنشي"],
   },
   {
     sku: "DESK-DIAMOND",
@@ -168,6 +199,8 @@ export const DESK_FAMILIES: DeskFamily[] = [
     hasGlb: true,
     priority: 13,
     status: "live",
+    breadcrumb: ["Home", "Shop", "Desks", "Executive Desks", "Diamond"],
+    breadcrumbAr: ["الرئيسية", "المتجر", "المكاتب", "المكاتب التنفيذية", "دايموند"],
   },
   {
     sku: "DESK-NEPTON",
@@ -178,6 +211,8 @@ export const DESK_FAMILIES: DeskFamily[] = [
     hasGlb: true,
     priority: 14,
     status: "live",
+    breadcrumb: ["Home", "Shop", "Desks", "Executive Desks", "Nepton"],
+    breadcrumbAr: ["الرئيسية", "المتجر", "المكاتب", "المكاتب التنفيذية", "نبتون"],
   },
   {
     sku: "DESK-SIMPLE",
@@ -185,10 +220,12 @@ export const DESK_FAMILIES: DeskFamily[] = [
     nameEn: "Simple Desk",
     nameAr: "مكتب سيمبل",
     tagline: {en: "Entry-level elegance", ar: "أناقة المستوى الأول"},
-    configs: ["Executive", "Manager", "Operator", "Custom (Contact Us)"],
-    hasGlb: false,
+    configs: ["Operator", "Manager", "L-Shape", "Meeting 4-Person", "Meeting 10-Person", "Workstation 4-Person", "Coffee Table (1000)", "Coffee Table (500)", "Custom (Contact Us)"],
+    hasGlb: true,
     priority: 15,
-    status: "new",
+    status: "live",
+    breadcrumb: ["Home", "Shop", "Desks", "Executive Desks", "Simple"],
+    breadcrumbAr: ["الرئيسية", "المتجر", "المكاتب", "المكاتب التنفيذية", "سيمبل"],
   },
   {
     sku: "DESK-NEWTON",
@@ -200,6 +237,8 @@ export const DESK_FAMILIES: DeskFamily[] = [
     hasGlb: true,
     priority: 16,
     status: "live",
+    breadcrumb: ["Home", "Shop", "Desks", "Height-Adjustable", "Newton"],
+    breadcrumbAr: ["الرئيسية", "المتجر", "المكاتب", "قابل للتعديل", "نيوتن"],
   },
   {
     sku: "DESK-SEMINA",
@@ -211,6 +250,8 @@ export const DESK_FAMILIES: DeskFamily[] = [
     hasGlb: true,
     priority: 17,
     status: "live",
+    breadcrumb: ["Home", "Shop", "Desks", "Workstations", "Semina"],
+    breadcrumbAr: ["الرئيسية", "المتجر", "المكاتب", "محطات العمل", "سمينا"],
   },
   {
     sku: "CRED-BEAUTY",
@@ -222,6 +263,8 @@ export const DESK_FAMILIES: DeskFamily[] = [
     hasGlb: true,
     priority: 18,
     status: "live",
+    breadcrumb: ["Home", "Shop", "Storage", "Credenzas", "Beauty"],
+    breadcrumbAr: ["الرئيسية", "المتجر", "التخزين", "الخزائن", "بيوتي"],
   },
 ];
 

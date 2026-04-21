@@ -1,0 +1,3504 @@
+{
+  "family": "simple",
+  "generated_at": "2026-04-21T15:04:11.118417Z",
+  "configs": {
+    "L-Shape": {
+      "parts": {
+        "leg_r_0": {
+          "glb": "/3d-parts/simple/leg_r_0/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.2,
+            0.018,
+            0.35
+          ],
+          "bytes": 1472,
+          "hash": "de8539e28856"
+        },
+        "leg_r_1": {
+          "glb": "/3d-parts/simple/leg_r_1/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.784,
+            0.711
+          ],
+          "bytes": 1612,
+          "hash": "c2e507eb4abc"
+        },
+        "top_0": {
+          "glb": "/3d-parts/simple/top_0/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.8,
+            0.8,
+            0.03
+          ],
+          "bytes": 180080,
+          "hash": "51e6c1c41c68"
+        },
+        "top_1": {
+          "glb": "/3d-parts/simple/top_1/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.48,
+            1.596,
+            0.018
+          ],
+          "bytes": 1624,
+          "hash": "ab130e4b9d1e"
+        },
+        "top_2": {
+          "glb": "/3d-parts/simple/top_2/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.52,
+            1.6,
+            0.018
+          ],
+          "bytes": 180196,
+          "hash": "a49c47f354d3"
+        },
+        "top_3": {
+          "glb": "/3d-parts/simple/top_3/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.459,
+            0.783,
+            0.018
+          ],
+          "bytes": 1608,
+          "hash": "0428e51d2590"
+        },
+        "grommet_0": {
+          "glb": "/3d-parts/simple/grommet_0/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.268,
+            0.02,
+            0.0
+          ],
+          "bytes": 1544,
+          "hash": "f8a7309fbd1d"
+        },
+        "grommet_1": {
+          "glb": "/3d-parts/simple/grommet_1/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.267,
+            0.07,
+            0.002
+          ],
+          "bytes": 1488,
+          "hash": "4d70639668b4"
+        },
+        "grommet_2": {
+          "glb": "/3d-parts/simple/grommet_2/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.3,
+            0.108,
+            0.006
+          ],
+          "bytes": 1624,
+          "hash": "3d918c8093f7"
+        },
+        "grommet_3": {
+          "glb": "/3d-parts/simple/grommet_3/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.026,
+            0.167,
+            0.01
+          ],
+          "bytes": 15668,
+          "hash": "474b489413ea"
+        },
+        "grommet_4": {
+          "glb": "/3d-parts/simple/grommet_4/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.026,
+            0.167,
+            0.01
+          ],
+          "bytes": 14892,
+          "hash": "c9ee25578933"
+        },
+        "grommet_5": {
+          "glb": "/3d-parts/simple/grommet_5/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.026,
+            0.167,
+            0.01
+          ],
+          "bytes": 16028,
+          "hash": "39a4a999fbbf"
+        },
+        "grommet_6": {
+          "glb": "/3d-parts/simple/grommet_6/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.026,
+            0.167,
+            0.01
+          ],
+          "bytes": 15620,
+          "hash": "ed679548e1d6"
+        },
+        "frame_beam_0": {
+          "glb": "/3d-parts/simple/frame_beam_0/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.448,
+            0.04,
+            0.04
+          ],
+          "bytes": 1428,
+          "hash": "0c28652f81ec"
+        },
+        "frame_beam_1": {
+          "glb": "/3d-parts/simple/frame_beam_1/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.448,
+            0.04,
+            0.04
+          ],
+          "bytes": 1428,
+          "hash": "422668df1295"
+        },
+        "frame_beam_2": {
+          "glb": "/3d-parts/simple/frame_beam_2/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.784,
+            0.113
+          ],
+          "bytes": 1464,
+          "hash": "998a927294a5"
+        },
+        "feet_0": {
+          "glb": "/3d-parts/simple/feet_0/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 2968,
+          "hash": "098489a2efa3"
+        },
+        "feet_1": {
+          "glb": "/3d-parts/simple/feet_1/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 3136,
+          "hash": "434e0198a45b"
+        },
+        "feet_2": {
+          "glb": "/3d-parts/simple/feet_2/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 3104,
+          "hash": "bd6e7777d06e"
+        },
+        "feet_3": {
+          "glb": "/3d-parts/simple/feet_3/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.051,
+            0.05,
+            0.01
+          ],
+          "bytes": 1468,
+          "hash": "d9e986fb171b"
+        },
+        "feet_4": {
+          "glb": "/3d-parts/simple/feet_4/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.051,
+            0.049,
+            0.01
+          ],
+          "bytes": 1472,
+          "hash": "d1957dedcf0b"
+        },
+        "feet_5": {
+          "glb": "/3d-parts/simple/feet_5/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.029,
+            0.016,
+            0.016
+          ],
+          "bytes": 7016,
+          "hash": "a35dda71b7a3"
+        },
+        "feet_6": {
+          "glb": "/3d-parts/simple/feet_6/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.029,
+            0.016,
+            0.016
+          ],
+          "bytes": 6772,
+          "hash": "916364c779d5"
+        },
+        "feet_7": {
+          "glb": "/3d-parts/simple/feet_7/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.06,
+            0.06,
+            0.002
+          ],
+          "bytes": 3936,
+          "hash": "b10b9d157497"
+        },
+        "feet_8": {
+          "glb": "/3d-parts/simple/feet_8/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.04,
+            0.04,
+            0.005
+          ],
+          "bytes": 1512,
+          "hash": "2aa89322a9d1"
+        },
+        "feet_9": {
+          "glb": "/3d-parts/simple/feet_9/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.04,
+            0.04,
+            0.053
+          ],
+          "bytes": 3668,
+          "hash": "0c78275e9d6d"
+        },
+        "feet_10": {
+          "glb": "/3d-parts/simple/feet_10/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.04,
+            0.04,
+            0.053
+          ],
+          "bytes": 3660,
+          "hash": "0c78275e9d6d"
+        },
+        "feet_11": {
+          "glb": "/3d-parts/simple/feet_11/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.06,
+            0.06,
+            0.002
+          ],
+          "bytes": 3932,
+          "hash": "b10b9d157497"
+        },
+        "feet_12": {
+          "glb": "/3d-parts/simple/feet_12/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.04,
+            0.04,
+            0.005
+          ],
+          "bytes": 1504,
+          "hash": "2aa89322a9d1"
+        },
+        "feet_13": {
+          "glb": "/3d-parts/simple/feet_13/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.04,
+            0.04,
+            0.053
+          ],
+          "bytes": 3664,
+          "hash": "0c78275e9d6d"
+        },
+        "feet_14": {
+          "glb": "/3d-parts/simple/feet_14/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.06,
+            0.06,
+            0.002
+          ],
+          "bytes": 3932,
+          "hash": "b10b9d157497"
+        },
+        "feet_15": {
+          "glb": "/3d-parts/simple/feet_15/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.04,
+            0.04,
+            0.005
+          ],
+          "bytes": 1508,
+          "hash": "2aa89322a9d1"
+        },
+        "feet_16": {
+          "glb": "/3d-parts/simple/feet_16/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.04,
+            0.04,
+            0.053
+          ],
+          "bytes": 3664,
+          "hash": "0c78275e9d6d"
+        },
+        "feet_17": {
+          "glb": "/3d-parts/simple/feet_17/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.06,
+            0.06,
+            0.002
+          ],
+          "bytes": 3932,
+          "hash": "b10b9d157497"
+        },
+        "feet_18": {
+          "glb": "/3d-parts/simple/feet_18/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.04,
+            0.04,
+            0.005
+          ],
+          "bytes": 1504,
+          "hash": "2aa89322a9d1"
+        },
+        "modesty_0": {
+          "glb": "/3d-parts/simple/modesty_0/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.018,
+            0.404,
+            0.178
+          ],
+          "bytes": 180196,
+          "hash": "fda30e4083d9"
+        },
+        "modesty_1": {
+          "glb": "/3d-parts/simple/modesty_1/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.018,
+            0.404,
+            0.175
+          ],
+          "bytes": 180188,
+          "hash": "dd64888b8731"
+        },
+        "modesty_2": {
+          "glb": "/3d-parts/simple/modesty_2/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.018,
+            0.404,
+            0.171
+          ],
+          "bytes": 180184,
+          "hash": "cbb22e216353"
+        },
+        "leg_l_0": {
+          "glb": "/3d-parts/simple/leg_l_0/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.48,
+            0.018,
+            0.532
+          ],
+          "bytes": 1636,
+          "hash": "f59c73c827bb"
+        },
+        "leg_l_1": {
+          "glb": "/3d-parts/simple/leg_l_1/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.478,
+            0.018,
+            0.51
+          ],
+          "bytes": 1612,
+          "hash": "80cd5ff1a047"
+        },
+        "leg_l_2": {
+          "glb": "/3d-parts/simple/leg_l_2/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.481,
+            0.018,
+            0.52
+          ],
+          "bytes": 1588,
+          "hash": "6e15f64517fb"
+        },
+        "leg_l_3": {
+          "glb": "/3d-parts/simple/leg_l_3/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.478,
+            0.018,
+            0.51
+          ],
+          "bytes": 1612,
+          "hash": "7e179fb1dbe7"
+        },
+        "leg_l_4": {
+          "glb": "/3d-parts/simple/leg_l_4/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.018,
+            0.38,
+            0.527
+          ],
+          "bytes": 180184,
+          "hash": "3145c446803b"
+        },
+        "pedestal": {
+          "glb": "/3d-parts/accessories/pedestal-f692a1005479.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.018,
+            1.598,
+            0.528
+          ],
+          "bytes": 180176,
+          "hash": "f692a1005479"
+        }
+      },
+      "baseSize": null,
+      "unknowns": []
+    },
+    "Manager": {
+      "parts": {
+        "leg_r_0": {
+          "glb": "/3d-parts/simple/leg_r_0/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.3,
+            0.018,
+            0.35
+          ],
+          "bytes": 1472,
+          "hash": "c89bd9479a89"
+        },
+        "leg_r_1": {
+          "glb": "/3d-parts/simple/leg_r_1/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.784,
+            0.711
+          ],
+          "bytes": 1612,
+          "hash": "c2e507eb4abc"
+        },
+        "feet_0": {
+          "glb": "/3d-parts/simple/feet_0/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.002,
+            0.026,
+            0.026
+          ],
+          "bytes": 16692,
+          "hash": "07ba62514494"
+        },
+        "feet_1": {
+          "glb": "/3d-parts/simple/feet_1/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 3056,
+          "hash": "e288db11115b"
+        },
+        "feet_2": {
+          "glb": "/3d-parts/simple/feet_2/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 3036,
+          "hash": "81c8422cc760"
+        },
+        "feet_3": {
+          "glb": "/3d-parts/simple/feet_3/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 3124,
+          "hash": "c23aa3d06841"
+        },
+        "feet_4": {
+          "glb": "/3d-parts/simple/feet_4/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 3100,
+          "hash": "ac95ac47aae2"
+        },
+        "feet_5": {
+          "glb": "/3d-parts/simple/feet_5/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.041,
+            0.042,
+            0.042
+          ],
+          "bytes": 3040,
+          "hash": "9063cc823d7b"
+        },
+        "feet_6": {
+          "glb": "/3d-parts/simple/feet_6/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.041,
+            0.042,
+            0.042
+          ],
+          "bytes": 3000,
+          "hash": "4fa05640a29a"
+        },
+        "feet_7": {
+          "glb": "/3d-parts/simple/feet_7/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.051,
+            0.05,
+            0.01
+          ],
+          "bytes": 1468,
+          "hash": "d9e986fb171b"
+        },
+        "feet_8": {
+          "glb": "/3d-parts/simple/feet_8/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.051,
+            0.049,
+            0.01
+          ],
+          "bytes": 1472,
+          "hash": "d1957dedcf0b"
+        },
+        "feet_9": {
+          "glb": "/3d-parts/simple/feet_9/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.051,
+            0.05,
+            0.01
+          ],
+          "bytes": 1468,
+          "hash": "d9e986fb171b"
+        },
+        "feet_10": {
+          "glb": "/3d-parts/simple/feet_10/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.051,
+            0.049,
+            0.01
+          ],
+          "bytes": 1472,
+          "hash": "d1957dedcf0b"
+        },
+        "feet_11": {
+          "glb": "/3d-parts/simple/feet_11/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.051,
+            0.01
+          ],
+          "bytes": 1524,
+          "hash": "d9e986fb171b"
+        },
+        "feet_12": {
+          "glb": "/3d-parts/simple/feet_12/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.049,
+            0.051,
+            0.01
+          ],
+          "bytes": 1528,
+          "hash": "18554a24721f"
+        },
+        "feet_13": {
+          "glb": "/3d-parts/simple/feet_13/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.04,
+            0.04,
+            0.04
+          ],
+          "bytes": 1452,
+          "hash": "f05f08472033"
+        },
+        "feet_14": {
+          "glb": "/3d-parts/simple/feet_14/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.04,
+            0.04,
+            0.04
+          ],
+          "bytes": 1452,
+          "hash": "0d76cf132334"
+        },
+        "feet_15": {
+          "glb": "/3d-parts/simple/feet_15/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.04,
+            0.04,
+            0.04
+          ],
+          "bytes": 1456,
+          "hash": "0dbd4cfc8e10"
+        },
+        "feet_16": {
+          "glb": "/3d-parts/simple/feet_16/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.04,
+            0.04,
+            0.04
+          ],
+          "bytes": 1456,
+          "hash": "afd82c5a3b5b"
+        },
+        "handle_0": {
+          "glb": "/3d-parts/simple/handle_0/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.026,
+            0.167,
+            0.01
+          ],
+          "bytes": 13380,
+          "hash": "9a89437d0e05"
+        },
+        "handle_1": {
+          "glb": "/3d-parts/simple/handle_1/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.026,
+            0.167,
+            0.01
+          ],
+          "bytes": 15164,
+          "hash": "c90a99e3fffd"
+        },
+        "handle_2": {
+          "glb": "/3d-parts/simple/handle_2/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.026,
+            0.167,
+            0.01
+          ],
+          "bytes": 15424,
+          "hash": "fc3ce0893130"
+        },
+        "top_0": {
+          "glb": "/3d-parts/simple/top_0/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.6,
+            0.8,
+            0.03
+          ],
+          "bytes": 180064,
+          "hash": "0eb6a959fb65"
+        },
+        "top_1": {
+          "glb": "/3d-parts/simple/top_1/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.5,
+            0.8,
+            0.03
+          ],
+          "bytes": 180084,
+          "hash": "95c52ac5df65"
+        },
+        "grommet_0": {
+          "glb": "/3d-parts/simple/grommet_0/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.267,
+            0.07,
+            0.002
+          ],
+          "bytes": 1492,
+          "hash": "4d70639668b4"
+        },
+        "grommet_1": {
+          "glb": "/3d-parts/simple/grommet_1/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.3,
+            0.108,
+            0.006
+          ],
+          "bytes": 1628,
+          "hash": "3d918c8093f7"
+        },
+        "grommet_2": {
+          "glb": "/3d-parts/simple/grommet_2/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.268,
+            0.02,
+            0.0
+          ],
+          "bytes": 1544,
+          "hash": "f8a7309fbd1d"
+        },
+        "frame_beam_0": {
+          "glb": "/3d-parts/simple/frame_beam_0/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.448,
+            0.04,
+            0.04
+          ],
+          "bytes": 1428,
+          "hash": "b89e436d333c"
+        },
+        "frame_beam_1": {
+          "glb": "/3d-parts/simple/frame_beam_1/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.448,
+            0.04,
+            0.04
+          ],
+          "bytes": 1428,
+          "hash": "824767a2aba1"
+        },
+        "frame_beam_2": {
+          "glb": "/3d-parts/simple/frame_beam_2/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.04,
+            0.89,
+            0.04
+          ],
+          "bytes": 1440,
+          "hash": "b3a451bf52d2"
+        },
+        "leg_l_0": {
+          "glb": "/3d-parts/simple/leg_l_0/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.784,
+            0.711
+          ],
+          "bytes": 1612,
+          "hash": "c2e507eb4abc"
+        },
+        "leg_l_1": {
+          "glb": "/3d-parts/simple/leg_l_1/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.484,
+            0.05,
+            0.711
+          ],
+          "bytes": 1680,
+          "hash": "a3d7923bfefc"
+        },
+        "pedestal_top": {
+          "glb": "/3d-parts/simple/pedestal_top/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.4,
+            0.5,
+            0.018
+          ],
+          "bytes": 180096,
+          "hash": "1dac30588085"
+        },
+        "pedestal_0": {
+          "glb": "/3d-parts/simple/pedestal_0/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.38,
+            0.48,
+            0.55
+          ],
+          "bytes": 1540,
+          "hash": "5ddd1d1fef24"
+        },
+        "pedestal_1": {
+          "glb": "/3d-parts/simple/pedestal_1/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.364,
+            0.015,
+            0.173
+          ],
+          "bytes": 1552,
+          "hash": "3b690f2c9d1f"
+        },
+        "pedestal_2": {
+          "glb": "/3d-parts/simple/pedestal_2/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.364,
+            0.015,
+            0.173
+          ],
+          "bytes": 1552,
+          "hash": "3db18a54cd7f"
+        },
+        "pedestal_3": {
+          "glb": "/3d-parts/simple/pedestal_3/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.364,
+            0.015,
+            0.173
+          ],
+          "bytes": 1556,
+          "hash": "1f1ec0dae8ac"
+        },
+        "pedestal_handle_0": {
+          "glb": "/3d-parts/simple/pedestal_handle_0/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.1,
+            0.015,
+            0.02
+          ],
+          "bytes": 1548,
+          "hash": "95cbbd480ec2"
+        },
+        "pedestal_handle_1": {
+          "glb": "/3d-parts/simple/pedestal_handle_1/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.1,
+            0.015,
+            0.02
+          ],
+          "bytes": 1548,
+          "hash": "d6475bbce188"
+        },
+        "pedestal_handle_2": {
+          "glb": "/3d-parts/simple/pedestal_handle_2/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.1,
+            0.015,
+            0.02
+          ],
+          "bytes": 1548,
+          "hash": "d7694d563319"
+        }
+      },
+      "baseSize": null,
+      "unknowns": []
+    },
+    "Operator": {
+      "parts": {
+        "frame_beam_0": {
+          "glb": "/3d-parts/simple/frame_beam_0/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.448,
+            0.04,
+            0.04
+          ],
+          "bytes": 1432,
+          "hash": "f5f23541848a"
+        },
+        "frame_beam_1": {
+          "glb": "/3d-parts/simple/frame_beam_1/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.448,
+            0.04,
+            0.04
+          ],
+          "bytes": 1440,
+          "hash": "88d633c48c6d"
+        },
+        "leg_r_0": {
+          "glb": "/3d-parts/simple/leg_r_0/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.4,
+            0.018,
+            0.35
+          ],
+          "bytes": 1484,
+          "hash": "d56479938ce3"
+        },
+        "leg_r_1": {
+          "glb": "/3d-parts/simple/leg_r_1/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.784,
+            0.711
+          ],
+          "bytes": 1620,
+          "hash": "de39ec244fd6"
+        },
+        "top": {
+          "glb": "/3d-parts/simple/top/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.59,
+            0.79,
+            0.03
+          ],
+          "bytes": 180084,
+          "hash": "4fc4f51a1558"
+        },
+        "feet_0": {
+          "glb": "/3d-parts/simple/feet_0/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.051,
+            0.05,
+            0.01
+          ],
+          "bytes": 1468,
+          "hash": "41618cd508a6"
+        },
+        "feet_1": {
+          "glb": "/3d-parts/simple/feet_1/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.051,
+            0.049,
+            0.01
+          ],
+          "bytes": 1472,
+          "hash": "994ecbdad952"
+        },
+        "feet_2": {
+          "glb": "/3d-parts/simple/feet_2/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.051,
+            0.05,
+            0.01
+          ],
+          "bytes": 1468,
+          "hash": "41618cd508a6"
+        },
+        "feet_3": {
+          "glb": "/3d-parts/simple/feet_3/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.051,
+            0.049,
+            0.01
+          ],
+          "bytes": 1472,
+          "hash": "994ecbdad952"
+        },
+        "feet_4": {
+          "glb": "/3d-parts/simple/feet_4/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 3192,
+          "hash": "4c2290303731"
+        },
+        "feet_5": {
+          "glb": "/3d-parts/simple/feet_5/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 3100,
+          "hash": "2793aeb4c3ba"
+        },
+        "feet_6": {
+          "glb": "/3d-parts/simple/feet_6/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 3196,
+          "hash": "29bef16b96d4"
+        },
+        "feet_7": {
+          "glb": "/3d-parts/simple/feet_7/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 3100,
+          "hash": "d4a312ffe493"
+        },
+        "feet_8": {
+          "glb": "/3d-parts/simple/feet_8/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.041,
+            0.042,
+            0.042
+          ],
+          "bytes": 3060,
+          "hash": "7f21a6d5d9a9"
+        },
+        "feet_9": {
+          "glb": "/3d-parts/simple/feet_9/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.04,
+            0.04,
+            0.04
+          ],
+          "bytes": 1456,
+          "hash": "db10abfb6299"
+        },
+        "feet_10": {
+          "glb": "/3d-parts/simple/feet_10/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.04,
+            0.04,
+            0.04
+          ],
+          "bytes": 1456,
+          "hash": "db10abfb6299"
+        },
+        "feet_11": {
+          "glb": "/3d-parts/simple/feet_11/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.04,
+            0.04,
+            0.04
+          ],
+          "bytes": 1456,
+          "hash": "db10abfb6299"
+        },
+        "feet_12": {
+          "glb": "/3d-parts/simple/feet_12/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.04,
+            0.04,
+            0.04
+          ],
+          "bytes": 1456,
+          "hash": "db10abfb6299"
+        },
+        "leg_l": {
+          "glb": "/3d-parts/simple/leg_l/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.784,
+            0.711
+          ],
+          "bytes": 1624,
+          "hash": "de39ec244fd6"
+        },
+        "grommet_0": {
+          "glb": "/3d-parts/simple/grommet_0/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.268,
+            0.02,
+            0.0
+          ],
+          "bytes": 1588,
+          "hash": "7cd4ba81db99"
+        },
+        "grommet_1": {
+          "glb": "/3d-parts/simple/grommet_1/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.267,
+            0.07,
+            0.002
+          ],
+          "bytes": 1532,
+          "hash": "ae7328346bf6"
+        },
+        "grommet_2": {
+          "glb": "/3d-parts/simple/grommet_2/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.3,
+            0.108,
+            0.006
+          ],
+          "bytes": 1668,
+          "hash": "c1f69df3ea69"
+        },
+        "pedestal_top": {
+          "glb": "/3d-parts/simple/pedestal_top/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.4,
+            0.5,
+            0.018
+          ],
+          "bytes": 180064,
+          "hash": "4c2dd09864fc"
+        },
+        "pedestal_0": {
+          "glb": "/3d-parts/simple/pedestal_0/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.38,
+            0.48,
+            0.55
+          ],
+          "bytes": 1536,
+          "hash": "396ee0bdba11"
+        },
+        "pedestal_1": {
+          "glb": "/3d-parts/simple/pedestal_1/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.364,
+            0.015,
+            0.173
+          ],
+          "bytes": 1552,
+          "hash": "fb89aba045dd"
+        },
+        "pedestal_2": {
+          "glb": "/3d-parts/simple/pedestal_2/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.364,
+            0.015,
+            0.173
+          ],
+          "bytes": 1552,
+          "hash": "c716beeae649"
+        },
+        "pedestal_3": {
+          "glb": "/3d-parts/simple/pedestal_3/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.364,
+            0.015,
+            0.173
+          ],
+          "bytes": 1556,
+          "hash": "a0f95797eeac"
+        },
+        "pedestal_handle_0": {
+          "glb": "/3d-parts/simple/pedestal_handle_0/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.1,
+            0.015,
+            0.02
+          ],
+          "bytes": 1564,
+          "hash": "e99a487065de"
+        },
+        "pedestal_handle_1": {
+          "glb": "/3d-parts/simple/pedestal_handle_1/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.1,
+            0.015,
+            0.02
+          ],
+          "bytes": 1564,
+          "hash": "b292d9d4a18f"
+        },
+        "pedestal_handle_2": {
+          "glb": "/3d-parts/simple/pedestal_handle_2/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.1,
+            0.015,
+            0.02
+          ],
+          "bytes": 1564,
+          "hash": "fc2f5fecef91"
+        }
+      },
+      "baseSize": "160x80",
+      "unknowns": []
+    },
+    "Meeting 4-Person": {
+      "parts": {
+        "top": {
+          "glb": "/3d-parts/simple/top/meeting-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.2,
+            1.2,
+            0.03
+          ],
+          "bytes": 180032,
+          "hash": "962105cc7780"
+        },
+        "grommet_0": {
+          "glb": "/3d-parts/simple/grommet_0/meeting-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.268,
+            0.02,
+            0.0
+          ],
+          "bytes": 1544,
+          "hash": "f8a7309fbd1d"
+        },
+        "grommet_1": {
+          "glb": "/3d-parts/simple/grommet_1/meeting-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.267,
+            0.07,
+            0.002
+          ],
+          "bytes": 1492,
+          "hash": "4d70639668b4"
+        },
+        "grommet_2": {
+          "glb": "/3d-parts/simple/grommet_2/meeting-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.3,
+            0.108,
+            0.006
+          ],
+          "bytes": 1628,
+          "hash": "3d918c8093f7"
+        },
+        "feet_0": {
+          "glb": "/3d-parts/simple/feet_0/meeting-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 3164,
+          "hash": "a0b191013109"
+        },
+        "feet_1": {
+          "glb": "/3d-parts/simple/feet_1/meeting-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 3044,
+          "hash": "60bc0ea8fdc7"
+        },
+        "feet_2": {
+          "glb": "/3d-parts/simple/feet_2/meeting-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 3164,
+          "hash": "a0b191013109"
+        },
+        "feet_3": {
+          "glb": "/3d-parts/simple/feet_3/meeting-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 3044,
+          "hash": "60bc0ea8fdc7"
+        },
+        "feet_4": {
+          "glb": "/3d-parts/simple/feet_4/meeting-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.051,
+            0.05,
+            0.01
+          ],
+          "bytes": 1468,
+          "hash": "d9e986fb171b"
+        },
+        "feet_5": {
+          "glb": "/3d-parts/simple/feet_5/meeting-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.051,
+            0.049,
+            0.01
+          ],
+          "bytes": 1468,
+          "hash": "f95d551cacfb"
+        },
+        "feet_6": {
+          "glb": "/3d-parts/simple/feet_6/meeting-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.051,
+            0.05,
+            0.01
+          ],
+          "bytes": 1468,
+          "hash": "d9e986fb171b"
+        },
+        "feet_7": {
+          "glb": "/3d-parts/simple/feet_7/meeting-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.051,
+            0.049,
+            0.01
+          ],
+          "bytes": 1468,
+          "hash": "f95d551cacfb"
+        },
+        "frame_beam_0": {
+          "glb": "/3d-parts/simple/frame_beam_0/meeting-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.068,
+            0.04,
+            0.04
+          ],
+          "bytes": 1584,
+          "hash": "3b7ff90289e3"
+        },
+        "frame_beam_1": {
+          "glb": "/3d-parts/simple/frame_beam_1/meeting-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.068,
+            0.04,
+            0.04
+          ],
+          "bytes": 1584,
+          "hash": "3b7ff90289e3"
+        },
+        "leg_l": {
+          "glb": "/3d-parts/simple/leg_l/meeting-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            1.174,
+            0.711
+          ],
+          "bytes": 1636,
+          "hash": "94f16cb4df2c"
+        },
+        "leg_r": {
+          "glb": "/3d-parts/simple/leg_r/meeting-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            1.174,
+            0.711
+          ],
+          "bytes": 1636,
+          "hash": "94f16cb4df2c"
+        }
+      },
+      "baseSize": "120x120",
+      "unknowns": []
+    },
+    "Meeting 10-Person": {
+      "parts": {
+        "top_0": {
+          "glb": "/3d-parts/simple/top_0/meeting-10-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.6,
+            1.4,
+            0.03
+          ],
+          "bytes": 180076,
+          "hash": "f766ca966c1c"
+        },
+        "top_1": {
+          "glb": "/3d-parts/simple/top_1/meeting-10-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.6,
+            1.4,
+            0.03
+          ],
+          "bytes": 180080,
+          "hash": "453c5ed33235"
+        },
+        "grommet_0": {
+          "glb": "/3d-parts/simple/grommet_0/meeting-10-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.392,
+            0.02,
+            0.0
+          ],
+          "bytes": 1540,
+          "hash": "e5a686833318"
+        },
+        "grommet_1": {
+          "glb": "/3d-parts/simple/grommet_1/meeting-10-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.392,
+            0.02,
+            0.0
+          ],
+          "bytes": 1544,
+          "hash": "a3c2274b9346"
+        },
+        "grommet_2": {
+          "glb": "/3d-parts/simple/grommet_2/meeting-10-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.383,
+            0.092,
+            0.002
+          ],
+          "bytes": 1492,
+          "hash": "071125e4a678"
+        },
+        "grommet_3": {
+          "glb": "/3d-parts/simple/grommet_3/meeting-10-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.417,
+            0.144,
+            0.006
+          ],
+          "bytes": 1628,
+          "hash": "bb85f6d4a6ee"
+        },
+        "grommet_4": {
+          "glb": "/3d-parts/simple/grommet_4/meeting-10-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.392,
+            0.02,
+            0.0
+          ],
+          "bytes": 1544,
+          "hash": "e5a686833318"
+        },
+        "grommet_5": {
+          "glb": "/3d-parts/simple/grommet_5/meeting-10-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.392,
+            0.02,
+            0.0
+          ],
+          "bytes": 1544,
+          "hash": "a3c2274b9346"
+        },
+        "grommet_6": {
+          "glb": "/3d-parts/simple/grommet_6/meeting-10-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.383,
+            0.092,
+            0.002
+          ],
+          "bytes": 1492,
+          "hash": "071125e4a678"
+        },
+        "grommet_7": {
+          "glb": "/3d-parts/simple/grommet_7/meeting-10-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.417,
+            0.144,
+            0.006
+          ],
+          "bytes": 1628,
+          "hash": "bb85f6d4a6ee"
+        },
+        "feet_0": {
+          "glb": "/3d-parts/simple/feet_0/meeting-10-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 3104,
+          "hash": "527e125ade76"
+        },
+        "feet_1": {
+          "glb": "/3d-parts/simple/feet_1/meeting-10-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 3136,
+          "hash": "fdffd090333a"
+        },
+        "feet_2": {
+          "glb": "/3d-parts/simple/feet_2/meeting-10-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 3104,
+          "hash": "2f6192a27dd8"
+        },
+        "feet_3": {
+          "glb": "/3d-parts/simple/feet_3/meeting-10-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 3136,
+          "hash": "4b4caa923c16"
+        },
+        "feet_4": {
+          "glb": "/3d-parts/simple/feet_4/meeting-10-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 3108,
+          "hash": "527e125ade76"
+        },
+        "feet_5": {
+          "glb": "/3d-parts/simple/feet_5/meeting-10-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 3140,
+          "hash": "fdffd090333a"
+        },
+        "feet_6": {
+          "glb": "/3d-parts/simple/feet_6/meeting-10-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 3108,
+          "hash": "2f6192a27dd8"
+        },
+        "feet_7": {
+          "glb": "/3d-parts/simple/feet_7/meeting-10-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 3140,
+          "hash": "4b4caa923c16"
+        },
+        "feet_8": {
+          "glb": "/3d-parts/simple/feet_8/meeting-10-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 3124,
+          "hash": "621b5821266c"
+        },
+        "feet_9": {
+          "glb": "/3d-parts/simple/feet_9/meeting-10-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 3124,
+          "hash": "56a2464380a7"
+        },
+        "feet_10": {
+          "glb": "/3d-parts/simple/feet_10/meeting-10-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 3124,
+          "hash": "621b5821266c"
+        },
+        "feet_11": {
+          "glb": "/3d-parts/simple/feet_11/meeting-10-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 3124,
+          "hash": "56a2464380a7"
+        },
+        "feet_12": {
+          "glb": "/3d-parts/simple/feet_12/meeting-10-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.051,
+            0.05,
+            0.01
+          ],
+          "bytes": 1468,
+          "hash": "d9e986fb171b"
+        },
+        "feet_13": {
+          "glb": "/3d-parts/simple/feet_13/meeting-10-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.051,
+            0.049,
+            0.01
+          ],
+          "bytes": 1468,
+          "hash": "a92245fffc9e"
+        },
+        "feet_14": {
+          "glb": "/3d-parts/simple/feet_14/meeting-10-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.051,
+            0.05,
+            0.01
+          ],
+          "bytes": 1468,
+          "hash": "d9e986fb171b"
+        },
+        "feet_15": {
+          "glb": "/3d-parts/simple/feet_15/meeting-10-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.051,
+            0.049,
+            0.01
+          ],
+          "bytes": 1464,
+          "hash": "a92245fffc9e"
+        },
+        "frame_beam_0": {
+          "glb": "/3d-parts/simple/frame_beam_0/meeting-10-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.487,
+            0.04,
+            0.04
+          ],
+          "bytes": 1572,
+          "hash": "6b43b46ef9fe"
+        },
+        "frame_beam_1": {
+          "glb": "/3d-parts/simple/frame_beam_1/meeting-10-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.486,
+            0.04,
+            0.04
+          ],
+          "bytes": 1572,
+          "hash": "db63b87353e0"
+        },
+        "frame_beam_2": {
+          "glb": "/3d-parts/simple/frame_beam_2/meeting-10-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.487,
+            0.04,
+            0.04
+          ],
+          "bytes": 1572,
+          "hash": "6b43b46ef9fe"
+        },
+        "frame_beam_3": {
+          "glb": "/3d-parts/simple/frame_beam_3/meeting-10-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.486,
+            0.04,
+            0.04
+          ],
+          "bytes": 1572,
+          "hash": "db63b87353e0"
+        },
+        "frame_beam_4": {
+          "glb": "/3d-parts/simple/frame_beam_4/meeting-10-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.487,
+            0.04,
+            0.04
+          ],
+          "bytes": 1572,
+          "hash": "6b43b46ef9fe"
+        },
+        "frame_beam_5": {
+          "glb": "/3d-parts/simple/frame_beam_5/meeting-10-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.486,
+            0.04,
+            0.04
+          ],
+          "bytes": 1572,
+          "hash": "db63b87353e0"
+        },
+        "frame_beam_6": {
+          "glb": "/3d-parts/simple/frame_beam_6/meeting-10-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.487,
+            0.04,
+            0.04
+          ],
+          "bytes": 1576,
+          "hash": "6b43b46ef9fe"
+        },
+        "frame_beam_7": {
+          "glb": "/3d-parts/simple/frame_beam_7/meeting-10-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.486,
+            0.04,
+            0.04
+          ],
+          "bytes": 1576,
+          "hash": "db63b87353e0"
+        },
+        "frame_beam_8": {
+          "glb": "/3d-parts/simple/frame_beam_8/meeting-10-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.101,
+            1.091,
+            0.05
+          ],
+          "bytes": 1616,
+          "hash": "c02ec3530eae"
+        },
+        "frame_beam_9": {
+          "glb": "/3d-parts/simple/frame_beam_9/meeting-10-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.03,
+            0.659,
+            0.018
+          ],
+          "bytes": 13720,
+          "hash": "a87896fa3861"
+        },
+        "leg_l_0": {
+          "glb": "/3d-parts/simple/leg_l_0/meeting-10-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.01,
+            0.599,
+            0.608
+          ],
+          "bytes": 1740,
+          "hash": "717acb4d9988"
+        },
+        "leg_l_1": {
+          "glb": "/3d-parts/simple/leg_l_1/meeting-10-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.01,
+            0.599,
+            0.608
+          ],
+          "bytes": 1744,
+          "hash": "3ea8cb4637ee"
+        },
+        "leg_l_2": {
+          "glb": "/3d-parts/simple/leg_l_2/meeting-10-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            1.374,
+            0.711
+          ],
+          "bytes": 1636,
+          "hash": "7c194b3984a4"
+        },
+        "leg_r_0": {
+          "glb": "/3d-parts/simple/leg_r_0/meeting-10-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.028,
+            0.656
+          ],
+          "bytes": 1612,
+          "hash": "b1ffab0f7e72"
+        },
+        "leg_r_1": {
+          "glb": "/3d-parts/simple/leg_r_1/meeting-10-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.028,
+            0.656
+          ],
+          "bytes": 1612,
+          "hash": "20a05e36c45f"
+        },
+        "leg_r_2": {
+          "glb": "/3d-parts/simple/leg_r_2/meeting-10-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            1.374,
+            0.711
+          ],
+          "bytes": 1632,
+          "hash": "7c194b3984a4"
+        }
+      },
+      "baseSize": null,
+      "unknowns": []
+    },
+    "Workstation 4-Person": {
+      "parts": {
+        "top_0": {
+          "glb": "/3d-parts/simple/top_0/workstation-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.4,
+            0.7,
+            0.03
+          ],
+          "bytes": 180040,
+          "hash": "22dd67c88977"
+        },
+        "top_1": {
+          "glb": "/3d-parts/simple/top_1/workstation-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.4,
+            0.7,
+            0.03
+          ],
+          "bytes": 180048,
+          "hash": "bd6cc6133018"
+        },
+        "top_2": {
+          "glb": "/3d-parts/simple/top_2/workstation-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.4,
+            0.7,
+            0.03
+          ],
+          "bytes": 180044,
+          "hash": "59de91b3c6e0"
+        },
+        "top_3": {
+          "glb": "/3d-parts/simple/top_3/workstation-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.4,
+            0.7,
+            0.03
+          ],
+          "bytes": 180044,
+          "hash": "bd0833048c76"
+        },
+        "frame_beam_0": {
+          "glb": "/3d-parts/simple/frame_beam_0/workstation-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.101,
+            1.01,
+            0.05
+          ],
+          "bytes": 1472,
+          "hash": "69317d486acf"
+        },
+        "frame_beam_1": {
+          "glb": "/3d-parts/simple/frame_beam_1/workstation-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.283,
+            0.04,
+            0.04
+          ],
+          "bytes": 1576,
+          "hash": "1c7a0f5fee82"
+        },
+        "frame_beam_2": {
+          "glb": "/3d-parts/simple/frame_beam_2/workstation-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.03,
+            0.61,
+            0.018
+          ],
+          "bytes": 11692,
+          "hash": "be64cd3a3035"
+        },
+        "frame_beam_3": {
+          "glb": "/3d-parts/simple/frame_beam_3/workstation-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.283,
+            0.04,
+            0.04
+          ],
+          "bytes": 1576,
+          "hash": "1c7a0f5fee82"
+        },
+        "frame_beam_4": {
+          "glb": "/3d-parts/simple/frame_beam_4/workstation-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.283,
+            0.04,
+            0.04
+          ],
+          "bytes": 1576,
+          "hash": "1c7a0f5fee82"
+        },
+        "frame_beam_5": {
+          "glb": "/3d-parts/simple/frame_beam_5/workstation-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.283,
+            0.04,
+            0.04
+          ],
+          "bytes": 1576,
+          "hash": "1c7a0f5fee82"
+        },
+        "leg_r_0": {
+          "glb": "/3d-parts/simple/leg_r_0/workstation-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.026,
+            0.656
+          ],
+          "bytes": 1464,
+          "hash": "c093f9f81fad"
+        },
+        "leg_r_1": {
+          "glb": "/3d-parts/simple/leg_r_1/workstation-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.026,
+            0.656
+          ],
+          "bytes": 1460,
+          "hash": "2756f1b1f106"
+        },
+        "leg_r_2": {
+          "glb": "/3d-parts/simple/leg_r_2/workstation-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.01,
+            0.554,
+            0.608
+          ],
+          "bytes": 1596,
+          "hash": "acaa18e2e7a4"
+        },
+        "leg_r_3": {
+          "glb": "/3d-parts/simple/leg_r_3/workstation-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.01,
+            0.554,
+            0.608
+          ],
+          "bytes": 1596,
+          "hash": "38ab902f0bb8"
+        },
+        "leg_r_4": {
+          "glb": "/3d-parts/simple/leg_r_4/workstation-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            1.374,
+            0.711
+          ],
+          "bytes": 1636,
+          "hash": "7c194b3984a4"
+        },
+        "feet_0": {
+          "glb": "/3d-parts/simple/feet_0/workstation-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 3056,
+          "hash": "17fe6a70fe07"
+        },
+        "feet_1": {
+          "glb": "/3d-parts/simple/feet_1/workstation-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 3128,
+          "hash": "3e2b15d5a5e0"
+        },
+        "feet_2": {
+          "glb": "/3d-parts/simple/feet_2/workstation-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 3056,
+          "hash": "17fe6a70fe07"
+        },
+        "feet_3": {
+          "glb": "/3d-parts/simple/feet_3/workstation-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 3128,
+          "hash": "3e2b15d5a5e0"
+        },
+        "feet_4": {
+          "glb": "/3d-parts/simple/feet_4/workstation-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 3056,
+          "hash": "17fe6a70fe07"
+        },
+        "feet_5": {
+          "glb": "/3d-parts/simple/feet_5/workstation-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 3128,
+          "hash": "3e2b15d5a5e0"
+        },
+        "feet_6": {
+          "glb": "/3d-parts/simple/feet_6/workstation-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 3056,
+          "hash": "17fe6a70fe07"
+        },
+        "feet_7": {
+          "glb": "/3d-parts/simple/feet_7/workstation-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 3128,
+          "hash": "3e2b15d5a5e0"
+        },
+        "feet_8": {
+          "glb": "/3d-parts/simple/feet_8/workstation-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.051,
+            0.05,
+            0.01
+          ],
+          "bytes": 1468,
+          "hash": "d9e986fb171b"
+        },
+        "feet_9": {
+          "glb": "/3d-parts/simple/feet_9/workstation-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.051,
+            0.049,
+            0.01
+          ],
+          "bytes": 1468,
+          "hash": "a92245fffc9e"
+        },
+        "feet_10": {
+          "glb": "/3d-parts/simple/feet_10/workstation-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.051,
+            0.05,
+            0.01
+          ],
+          "bytes": 1468,
+          "hash": "d9e986fb171b"
+        },
+        "feet_11": {
+          "glb": "/3d-parts/simple/feet_11/workstation-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.051,
+            0.049,
+            0.01
+          ],
+          "bytes": 1468,
+          "hash": "a92245fffc9e"
+        },
+        "grommet_0": {
+          "glb": "/3d-parts/simple/grommet_0/workstation-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.268,
+            0.02,
+            0.0
+          ],
+          "bytes": 1544,
+          "hash": "f8a7309fbd1d"
+        },
+        "grommet_1": {
+          "glb": "/3d-parts/simple/grommet_1/workstation-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.267,
+            0.07,
+            0.002
+          ],
+          "bytes": 1492,
+          "hash": "4d70639668b4"
+        },
+        "grommet_2": {
+          "glb": "/3d-parts/simple/grommet_2/workstation-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.3,
+            0.108,
+            0.006
+          ],
+          "bytes": 1628,
+          "hash": "8854af8a8043"
+        },
+        "grommet_3": {
+          "glb": "/3d-parts/simple/grommet_3/workstation-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.268,
+            0.02,
+            0.0
+          ],
+          "bytes": 1544,
+          "hash": "f8a7309fbd1d"
+        },
+        "grommet_4": {
+          "glb": "/3d-parts/simple/grommet_4/workstation-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.267,
+            0.07,
+            0.002
+          ],
+          "bytes": 1492,
+          "hash": "4d70639668b4"
+        },
+        "grommet_5": {
+          "glb": "/3d-parts/simple/grommet_5/workstation-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.3,
+            0.108,
+            0.006
+          ],
+          "bytes": 1628,
+          "hash": "8854af8a8043"
+        },
+        "grommet_6": {
+          "glb": "/3d-parts/simple/grommet_6/workstation-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.268,
+            0.02,
+            0.0
+          ],
+          "bytes": 1544,
+          "hash": "f8a7309fbd1d"
+        },
+        "grommet_7": {
+          "glb": "/3d-parts/simple/grommet_7/workstation-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.267,
+            0.07,
+            0.002
+          ],
+          "bytes": 1488,
+          "hash": "4d70639668b4"
+        },
+        "grommet_8": {
+          "glb": "/3d-parts/simple/grommet_8/workstation-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.3,
+            0.108,
+            0.006
+          ],
+          "bytes": 1624,
+          "hash": "3d918c8093f7"
+        },
+        "grommet_9": {
+          "glb": "/3d-parts/simple/grommet_9/workstation-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.268,
+            0.02,
+            0.0
+          ],
+          "bytes": 1544,
+          "hash": "f8a7309fbd1d"
+        },
+        "grommet_10": {
+          "glb": "/3d-parts/simple/grommet_10/workstation-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.267,
+            0.07,
+            0.002
+          ],
+          "bytes": 1492,
+          "hash": "4d70639668b4"
+        },
+        "grommet_11": {
+          "glb": "/3d-parts/simple/grommet_11/workstation-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.3,
+            0.108,
+            0.006
+          ],
+          "bytes": 1628,
+          "hash": "3d918c8093f7"
+        },
+        "leg_l": {
+          "glb": "/3d-parts/simple/leg_l/workstation-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            1.374,
+            0.711
+          ],
+          "bytes": 1636,
+          "hash": "7c194b3984a4"
+        },
+        "screen_front_0": {
+          "glb": "/3d-parts/simple/screen_front_0/workstation-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.0,
+            0.064,
+            0.2
+          ],
+          "bytes": 43900,
+          "hash": "1fb672dcd3dc"
+        },
+        "screen_front_1": {
+          "glb": "/3d-parts/simple/screen_front_1/workstation-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.022,
+            0.041,
+            0.095
+          ],
+          "bytes": 2284,
+          "hash": "7c6c79d3bd69"
+        },
+        "screen_front_2": {
+          "glb": "/3d-parts/simple/screen_front_2/workstation-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.022,
+            0.041,
+            0.095
+          ],
+          "bytes": 2284,
+          "hash": "5d9a9425af7f"
+        },
+        "screen_front_3": {
+          "glb": "/3d-parts/simple/screen_front_3/workstation-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.0,
+            0.064,
+            0.2
+          ],
+          "bytes": 43896,
+          "hash": "6fb3c69b43d1"
+        },
+        "screen_front_4": {
+          "glb": "/3d-parts/simple/screen_front_4/workstation-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.022,
+            0.041,
+            0.095
+          ],
+          "bytes": 2284,
+          "hash": "86224941ae4c"
+        },
+        "screen_front_5": {
+          "glb": "/3d-parts/simple/screen_front_5/workstation-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.022,
+            0.041,
+            0.095
+          ],
+          "bytes": 2280,
+          "hash": "294b2e02765b"
+        }
+      },
+      "baseSize": null,
+      "unknowns": []
+    },
+    "Coffee Table (1000)": {
+      "parts": {
+        "top": {
+          "glb": "/3d-parts/simple/top/coffee-table-(1000).glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.0,
+            0.5,
+            0.03
+          ],
+          "bytes": 180032,
+          "hash": "62f31fac2f64"
+        },
+        "feet_0": {
+          "glb": "/3d-parts/simple/feet_0/coffee-table-(1000).glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.051,
+            0.05,
+            0.01
+          ],
+          "bytes": 1460,
+          "hash": "61c1c0ec2230"
+        },
+        "feet_1": {
+          "glb": "/3d-parts/simple/feet_1/coffee-table-(1000).glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.051,
+            0.049,
+            0.01
+          ],
+          "bytes": 1472,
+          "hash": "ccb5c89b2ab0"
+        },
+        "feet_2": {
+          "glb": "/3d-parts/simple/feet_2/coffee-table-(1000).glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.051,
+            0.05,
+            0.01
+          ],
+          "bytes": 1460,
+          "hash": "61c1c0ec2230"
+        },
+        "feet_3": {
+          "glb": "/3d-parts/simple/feet_3/coffee-table-(1000).glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.051,
+            0.049,
+            0.01
+          ],
+          "bytes": 1476,
+          "hash": "ccb5c89b2ab0"
+        },
+        "leg_r_0": {
+          "glb": "/3d-parts/simple/leg_r_0/coffee-table-(1000).glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.484,
+            0.381
+          ],
+          "bytes": 1632,
+          "hash": "ed3cfb0f276c"
+        },
+        "leg_r_1": {
+          "glb": "/3d-parts/simple/leg_r_1/coffee-table-(1000).glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.484,
+            0.381
+          ],
+          "bytes": 1636,
+          "hash": "5387f191f395"
+        }
+      },
+      "baseSize": "100x50",
+      "unknowns": []
+    },
+    "Coffee Table (500)": {
+      "parts": {
+        "top": {
+          "glb": "/3d-parts/simple/top/coffee-table-(500).glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.5,
+            0.5,
+            0.028
+          ],
+          "bytes": 179988,
+          "hash": "874ecefbed09"
+        },
+        "leg_r_0": {
+          "glb": "/3d-parts/simple/leg_r_0/coffee-table-(500).glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.04,
+            0.04,
+            0.472
+          ],
+          "bytes": 1496,
+          "hash": "bd240d3bde84"
+        },
+        "leg_r_1": {
+          "glb": "/3d-parts/simple/leg_r_1/coffee-table-(500).glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.04,
+            0.04,
+            0.472
+          ],
+          "bytes": 1496,
+          "hash": "0091bf5e370c"
+        },
+        "leg_r_2": {
+          "glb": "/3d-parts/simple/leg_r_2/coffee-table-(500).glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.04,
+            0.04,
+            0.472
+          ],
+          "bytes": 1500,
+          "hash": "5b2eacb8f579"
+        },
+        "leg_r_3": {
+          "glb": "/3d-parts/simple/leg_r_3/coffee-table-(500).glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.04,
+            0.04,
+            0.472
+          ],
+          "bytes": 1496,
+          "hash": "c55f53859c42"
+        }
+      },
+      "baseSize": "50x50",
+      "unknowns": []
+    }
+  }
+}

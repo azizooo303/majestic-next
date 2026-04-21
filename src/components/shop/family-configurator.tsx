@@ -23,6 +23,7 @@
 "use client";
 
 import { useState, useEffect, useMemo, useRef } from "react";
+import { useSearchParams, useRouter, usePathname } from "next/navigation";
 import type { DeskFamily } from "@/data/families";
 import {
   DESK_TOP_FINISHES,
@@ -40,6 +41,34 @@ import { getProduct3DModel } from "@/lib/products-3d";
 import type { FamilyManifest, AssemblyState } from "@/lib/scene-composer";
 import { accessoryAxesInConfig, DIVIDER_COLOR_MATERIAL, DEFAULT_DIVIDER_COLOR } from "@/lib/scene-composer";
 
+// ─── Config serialization (decision 6: Save = localStorage + ?cfg= URL slug) ─
+type SavedConfig = {
+  config: string;
+  size: string;
+  finish: string;
+  leg: string;
+  sideUnit: string;
+  pedestal: string;
+  dividerColor: string;
+  accessories: Record<string, boolean>;
+};
+
+function serializeConfig(cfg: SavedConfig): string {
+  try {
+    return btoa(encodeURIComponent(JSON.stringify(cfg)));
+  } catch {
+    return "";
+  }
+}
+
+function deserializeConfig(raw: string): SavedConfig | null {
+  try {
+    return JSON.parse(decodeURIComponent(atob(raw))) as SavedConfig;
+  } catch {
+    return null;
+  }
+}
+
 // ─── Manifest URLs ────────────────────────────────────────────────────────────
 const FAMILY_MANIFEST_URL: Record<string, string> = {
   cratos:  "/3d-parts/cratos/manifest.json",
@@ -52,6 +81,7 @@ const FAMILY_MANIFEST_URL: Record<string, string> = {
   davinci: "/3d-parts/davinci/manifest.json",
   tesla:   "/3d-parts/tesla/manifest.json",
   beauty:  "/3d-parts/beauty/manifest.json",
+  simple:  "/3d-parts/simple/manifest.json",
 };
 
 function accessoryAxesForCurrentConfig(manifest: FamilyManifest, config: string): string[] {
@@ -93,6 +123,11 @@ const SIZE_OPTIONS_PER_CONFIG: Record<string, string[]> = {
   "Workstation":          ["120x60", "140x70", "160x80", "CUSTOM"],
   "Custom (Contact Us)":  ["CUSTOM"],
   "Height-Adjustable":    ["120x60", "140x70", "160x80", "180x80", "CUSTOM"],
+  // Simple family additions (2026-04-21 — protocol §4 onboarding)
+  "Meeting 10-Person":    ["320x140", "360x140", "CUSTOM"],
+  "Workstation 4-Person": ["140x70", "160x80", "CUSTOM"],
+  "Coffee Table (1000)":  ["100x50", "120x60", "CUSTOM"],
+  "Coffee Table (500)":   ["50x50", "60x60", "CUSTOM"],
 };
 
 const SIZE_EXTRA_PRICES: Record<string, number> = {
@@ -202,18 +237,71 @@ const VIEWPOINT_THUMBS = [
   },
 ];
 
+// ─── Animated price hook (decision 8: count-up from old→new in 250ms) ────────
+// Separate from pricePulse (color flash 450ms). Both run simultaneously.
+// Respects prefers-reduced-motion: jumps straight to target when reduced.
+function useAnimatedPrice(target: number, duration = 250): number {
+  const [displayed, setDisplayed] = useState(target);
+  const prevRef = useRef(target);
+  const rafRef  = useRef<number | null>(null);
+
+  useEffect(() => {
+    const from = prevRef.current;
+    if (from === target) return;
+    prevRef.current = target;
+
+    // Check reduced motion
+    const prefersReduced =
+      typeof window !== "undefined" &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (prefersReduced) {
+      setDisplayed(target);
+      return;
+    }
+
+    const startTime = performance.now();
+    const tick = (now: number) => {
+      const elapsed  = now - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      // ease-out cubic
+      const eased = 1 - Math.pow(1 - progress, 3);
+      setDisplayed(Math.round(from + (target - from) * eased));
+      if (progress < 1) {
+        rafRef.current = requestAnimationFrame(tick);
+      }
+    };
+    rafRef.current = requestAnimationFrame(tick);
+    return () => { if (rafRef.current !== null) cancelAnimationFrame(rafRef.current); };
+  }, [target, duration]);
+
+  return displayed;
+}
+
 // ─── Main component ───────────────────────────────────────────────────────────
 export function FamilyConfigurator({ family, basePrice, locale }: FamilyConfiguratorProps) {
   const isAr = locale === "ar";
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  const pathname = usePathname();
+
+  // ── Resolve initial state — prefer ?cfg= param, then defaults ────────────
+  const initialState = (() => {
+    const raw = searchParams.get("cfg");
+    if (raw) {
+      const saved = deserializeConfig(raw);
+      if (saved && family.configs.includes(saved.config)) return saved;
+    }
+    return null;
+  })();
 
   // ── Picker state ──────────────────────────────────────────────────────────
-  const [config, setConfig]               = useState(family.configs[0] || "Executive");
-  const [size, setSize]                   = useState(SIZE_OPTIONS_PER_CONFIG[config]?.[0] || "160x80");
-  const [finish, setFinish]               = useState<string>(DESK_TOP_FINISHES[0]);
-  const [leg, setLeg]                     = useState<string>("Polished Chrome");
-  const [sideUnitOption, setSideUnitOpt]  = useState<string>("");
-  const [pedestalOption, setPedestalOpt]  = useState<string>("");
-  const [dividerColor, setDividerColor]   = useState<string>(DEFAULT_DIVIDER_COLOR);
+  const [config, setConfig]               = useState(initialState?.config ?? family.configs[0] ?? "Executive");
+  const [size, setSize]                   = useState(initialState?.size ?? SIZE_OPTIONS_PER_CONFIG[initialState?.config ?? family.configs[0]]?.[0] ?? "160x80");
+  const [finish, setFinish]               = useState<string>(initialState?.finish ?? DESK_TOP_FINISHES[0]);
+  const [leg, setLeg]                     = useState<string>(initialState?.leg ?? "Polished Chrome");
+  const [sideUnitOption, setSideUnitOpt]  = useState<string>(initialState?.sideUnit ?? "");
+  const [pedestalOption, setPedestalOpt]  = useState<string>(initialState?.pedestal ?? "");
+  const [dividerColor, setDividerColor]   = useState<string>(initialState?.dividerColor ?? DEFAULT_DIVIDER_COLOR);
   const [activeThumb, setActiveThumb]     = useState(0);
   const [showBreakdown, setShowBreakdown] = useState(false);
   const [pricePulse, setPricePulse]       = useState(false);
@@ -230,16 +318,41 @@ export function FamilyConfigurator({ family, basePrice, locale }: FamilyConfigur
   }
 
   // ── Accessory state ───────────────────────────────────────────────────────
-  const [accessories, setAccessories] = useState<Record<string, boolean>>({
-    modesty:      true,
-    pedestal:     true,
-    cable_tray:   true,
-    cable_spine:  true,
-    grommet:      true,
-    powerbox:     true,
-    screen_front: true,
-    screen_side:  true,
-  });
+  const [accessories, setAccessories] = useState<Record<string, boolean>>(
+    initialState?.accessories ?? {
+      modesty:      true,
+      pedestal:     true,
+      cable_tray:   true,
+      cable_spine:  true,
+      grommet:      true,
+      powerbox:     true,
+      screen_front: true,
+      screen_side:  true,
+    }
+  );
+
+  // ── Save handler (decision 6: localStorage + ?cfg= URL param) ────────────
+  function handleSave() {
+    const cfg: SavedConfig = {
+      config, size, finish, leg,
+      sideUnit: sideUnitOption,
+      pedestal: pedestalOption,
+      dividerColor,
+      accessories,
+    };
+    const encoded = serializeConfig(cfg);
+    if (!encoded) return;
+    // Write to localStorage under family-scoped key
+    try {
+      localStorage.setItem(`majestic-cfg-${family.slug}`, encoded);
+    } catch {
+      // localStorage unavailable (private browsing, storage full) — silent
+    }
+    // Update URL with ?cfg= param without triggering a navigation/scroll
+    const params = new URLSearchParams(searchParams.toString());
+    params.set("cfg", encoded);
+    router.replace(`${pathname}?${params.toString()}`, { scroll: false });
+  }
 
   // ── Manifest fetch ────────────────────────────────────────────────────────
   const [manifest, setManifest] = useState<FamilyManifest | null>(null);
@@ -298,6 +411,9 @@ export function FamilyConfigurator({ family, basePrice, locale }: FamilyConfigur
       return () => { clearTimeout(on); clearTimeout(off); };
     }
   }, [total]);
+
+  // ── Animated price (count-up 250ms, decision 8) ──────────────────────────
+  const animatedTotal = useAnimatedPrice(total);
 
   // ── Exclusions ────────────────────────────────────────────────────────────
   const validSizes = SIZE_OPTIONS_PER_CONFIG[config] || [];
@@ -979,8 +1095,12 @@ export function FamilyConfigurator({ family, basePrice, locale }: FamilyConfigur
                       ].join(" ")}
                       aria-live="polite"
                       aria-atomic="true"
+                      aria-label={`${formatSAR(total, isAr)} ${isAr ? "ريال" : "SAR"}`}
                     >
-                      {formatSAR(total, isAr)}
+                      {/* Count-up animates from old total to new total (250ms).
+                          pricePulse color-flash runs simultaneously (450ms).
+                          aria-label stays on exact total for screen readers. */}
+                      {formatSAR(animatedTotal, isAr)}
                       <span className={[
                         "text-[16px] font-medium text-[#3A3A3A] ms-1",
                         isAr ? "tracking-normal" : "tracking-[0]",
@@ -1054,7 +1174,7 @@ export function FamilyConfigurator({ family, basePrice, locale }: FamilyConfigur
 
               {/* CTAs */}
               <div className="flex gap-2.5 items-center">
-                {/* Save — ghost, stub */}
+                {/* Save — writes config to localStorage + ?cfg= URL param */}
                 <button
                   type="button"
                   className={[
@@ -1065,7 +1185,8 @@ export function FamilyConfigurator({ family, basePrice, locale }: FamilyConfigur
                     isAr ? "tracking-normal" : "tracking-[0.08em]",
                   ].join(" ")}
                   style={{ height: "52px" }}
-                  onClick={() => { /* stub — localStorage or account flow */ }}
+                  onClick={handleSave}
+                  aria-label={isAr ? "حفظ التكوين ومشاركته" : "Save and share configuration"}
                 >
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">
                     <path d="M19 21 12 16l-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2Z"/>

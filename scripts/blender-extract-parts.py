@@ -36,6 +36,15 @@ JOBS = [
     (rf"{HQ_ROOT}\cratos\DESK-CRATOS-MGR\master.blend",     "cratos", "Manager"),
     (rf"{HQ_ROOT}\cratos\DESK-CRATOS-CONF\master.blend",    "cratos", "Conference"),
     (rf"{HQ_ROOT}\cratos\DESK-CRATOS-L\master.blend",       "cratos", "L-Shape"),
+    # Simple family onboarding 2026-04-21 (protocol §4 flow)
+    (rf"{HQ_ROOT}\simple\DESK-SIMPLE-L\master.blend",          "simple", "L-Shape"),
+    (rf"{HQ_ROOT}\simple\DESK-SIMPLE-MGR\master.blend",        "simple", "Manager"),
+    (rf"{HQ_ROOT}\simple\DESK-SIMPLE-OPR\master.blend",        "simple", "Operator"),
+    (rf"{HQ_ROOT}\simple\MTG-SIMPLE-4P\master.blend",          "simple", "Meeting 4-Person"),
+    (rf"{HQ_ROOT}\simple\MTG-SIMPLE-10P\master.blend",         "simple", "Meeting 10-Person"),
+    (rf"{HQ_ROOT}\simple\SYS-SIMPLE-WS-4P\master.blend",       "simple", "Workstation 4-Person"),
+    (rf"{HQ_ROOT}\simple\TBL-SIMPLE-COFFEE-1000\master.blend", "simple", "Coffee Table (1000)"),
+    (rf"{HQ_ROOT}\simple\TBL-SIMPLE-COFFEE-500\master.blend",  "simple", "Coffee Table (500)"),
 ]
 
 # ---------------------------------------------------------------------------
@@ -45,6 +54,7 @@ JOBS = [
 BACKDROP_MATS = {
     "Floor_Gradient", "FloorMat", "Floor", "Backdrop", "Studio_Floor",
     "Ground", "floor", "backdrop", "studio_floor",
+    "Cyc_GradientFloor", "Cyc_Floor",  # Simple family studio rigs
 }
 
 # Role inference rules. Each rule = (predicate fn, role name).
@@ -99,7 +109,63 @@ def _classify(obj, mat_names_lower, name_lower, bbox):
     # Handle
     if _has_kw(name_lower, "handle"):
         return "handle"
-    # Fallback — couldn't classify, report as unknown so the human can add a rule
+
+    # ------------------------------------------------------------------
+    # GEOMETRY-BASED FALLBACK — for vendor-named objects (Line1320, Box3057, …)
+    # Added 2026-04-21 to handle Simple family whose objects carry no keyword.
+    # Tuned further same day after first triage pass.
+    # Order matters: most-specific first.
+    # ------------------------------------------------------------------
+    dx, dy, dz = bbox
+    wz = obj.matrix_world.translation.z
+    # Leveling foot: small cube under the desk (loosened: dz<=0.06 to catch 50mm height)
+    if dx < 0.08 and dy < 0.08 and dz <= 0.06:
+        return "feet"
+    # Grommet / cable port cover: flat (dz<0.02), smallish (area<0.05 m²)
+    if dz < 0.02 and dx < 0.45 and dy < 0.45 and max(dx, dy) > 0.1:
+        return "grommet"
+    # Drawer handle: long thin bar, small cross-section
+    if max(dx, dy) < 0.30 and min(dx, dy) < 0.05 and dz < 0.05 and wz > 0.05:
+        return "handle"
+    # Desktop: wide flat plank with thin Z (loosened: >= 0.25 m² area)
+    if dz < 0.05 and dx * dy >= 0.25:
+        # If attached to a wood material, it's clearly a top
+        if any("oak" in m or "wood" in m or "veneer" in m or "vicenza" in m or "dakota" in m or "premium" in m for m in mat_names_lower):
+            return "top"
+        # Otherwise still treat as top (flat horizontal plank at desk height OR near origin for parametric builds)
+        if wz > 0.35 or (0.4 < dz + 0.6 and wz >= 0.0):  # catches Coffee-500 Desktop at z~0.5
+            return "top"
+        if wz > 0.25:
+            return "top"
+    # Leg: tall upright, narrow cross-section
+    if dz > 0.3 and max(dx, dy) < 0.15:
+        return "leg_l" if obj.matrix_world.translation.x < 0 else "leg_r"
+    # Leg frame (U-shape, H-shape): tall, one dim moderate, one dim thin
+    # Widened max to 1.5m to catch Simple family's full-depth H-frames (1370mm wide)
+    if dz > 0.3 and min(dx, dy) < 0.1 and max(dx, dy) < 1.5:
+        return "leg_l" if obj.matrix_world.translation.x < 0 else "leg_r"
+    # Pedestal wall (tall thin vertical panel — 500-600mm tall, <0.03m thick)
+    if dz > 0.3 and dz < 0.7 and min(dx, dy) < 0.03 and max(dx, dy) > 0.4:
+        return "pedestal"
+    # Pedestal top / shelf (wide flat panel, 10-25mm thick, mid-size area 0.2-1.5 m²)
+    if 0.01 < dz < 0.03 and 0.3 < dx < 2.0 and 0.3 < dy < 2.0 and 0.1 < dx * dy < 2.0:
+        return "pedestal_top"
+    # Frame beam (horizontal crossbar under the desktop) — dropped strict Z-height
+    # window since parent transforms sometimes push world Z out of the frame zone.
+    if dz < 0.08 and max(dx, dy) > 0.5 and min(dx, dy) < 0.12:
+        return "frame_beam"
+    # Modesty panel: thin vertical under-desk panel
+    if dz > 0.15 and dz < 0.5 and min(dx, dy) < 0.04 and max(dx, dy) > 0.4:
+        return "modesty"
+    # Thin rectangular panel: likely drawer front or cabinet side
+    if dz > 0.1 and dz < 0.25 and min(dx, dy) < 0.04:
+        return "pedestal"
+    # Support bracket: long horizontal element with moderate Z
+    # (50x785x115 on L-Shape, 50x780x110 on Manager — L-desk return supports)
+    if dz < 0.20 and max(dx, dy) > 0.5 and min(dx, dy) < 0.08:
+        return "frame_beam"
+
+    # Still nothing matched — genuine UNKNOWN.
     return "unknown"
 
 
@@ -179,6 +245,9 @@ def export_object_glb(obj, out_path):
             export_draco_mesh_compression_level=6,
             export_apply=True,
             export_yup=True,
+            # Texture compression — keeps GLBs < 500KB even with embedded wood swatches
+            export_image_format="JPEG",
+            export_jpeg_quality=85,
         )
     return os.path.getsize(out_path)
 
@@ -189,6 +258,28 @@ def export_object_glb(obj, out_path):
 def process_master(blend_path, family, config, family_manifest):
     print(f"\n=== {family}/{config} — {os.path.basename(blend_path)} ===")
     bpy.ops.wm.open_mainfile(filepath=blend_path)
+
+    # --- PREPROCESS (added 2026-04-21 per protocol §4 fix) ---
+    # 1. Resize any embedded texture > 1024px so GLBs stay < 500 KB.
+    for img in bpy.data.images:
+        if img.size and (img.size[0] > 1024 or img.size[1] > 1024):
+            print(f"  resize {img.name}: {img.size[0]}x{img.size[1]} -> 1024x1024")
+            img.scale(1024, 1024)
+    # 2. Apply transforms on every mesh so world coords are baked in and
+    #    obj.matrix_world.translation == true anchor. Fixes Simple-family
+    #    stale-matrix-world bug (top_1 reporting Z=28m, handles at X=25m).
+    bpy.ops.object.select_all(action="DESELECT")
+    for obj in list(bpy.context.view_layer.objects):
+        if obj.type != "MESH":
+            continue
+        obj.select_set(True)
+    if bpy.context.selected_objects:
+        bpy.context.view_layer.objects.active = bpy.context.selected_objects[0]
+        try:
+            bpy.ops.object.transform_apply(location=True, rotation=True, scale=True)
+        except RuntimeError as e:
+            print(f"  transform_apply skipped: {e}")
+    bpy.context.view_layer.update()
 
     roles_found = {}  # role -> [(obj, anchor, bbox, geom_hash), ...]
     unknowns = []
@@ -210,16 +301,26 @@ def process_master(blend_path, family, config, family_manifest):
         bbox = bbox_extents(obj)
         role = _classify(obj, mat_names_lower, name_lower, bbox)
 
+        # World-space anchor (transforms applied so obj.location may now be zero
+        # but matrix_world.translation still carries original positions for
+        # parented meshes).
+        w = obj.matrix_world.translation
+
         if role == "unknown":
             unknowns.append({
                 "name": obj.name,
                 "materials": mat_names,
                 "bbox": [round(x, 3) for x in bbox],
-                "location": [round(obj.location.x, 3), round(obj.location.y, 3), round(obj.location.z, 3)],
+                "location": [round(w.x, 3), round(w.y, 3), round(w.z, 3)],
             })
             continue
 
-        anchor = [round(obj.location.x, 4), round(obj.location.y, 4), round(obj.location.z, 4)]
+        # Anchor = (0,0,0). The GLB carries world-coord geometry because
+        # export_apply=True in export_scene.gltf() bakes transforms. The viewer
+        # places every part at origin and composes via the baked geometry — same
+        # pattern Cratos uses. Keeping the anchor at zero avoids the
+        # "pre-transform-applied object ends up shifted twice" class of bug.
+        anchor = [0.0, 0.0, 0.0]
         gh = geometry_hash(obj)
         roles_found.setdefault(role, []).append((obj, anchor, bbox, gh))
 
