@@ -49,6 +49,10 @@ JOBS_ALL = [
     # HA is a 2P back-to-back workstation (Aziz-confirmed). Open-Frame is single-desk.
     (rf"{HQ_ROOT}\newton\SYS-NEWTON-HA\master.blend",          "newton", "Height-Adjustable"),
     (rf"{HQ_ROOT}\newton\newton-openframe\master.blend",       "newton", "Open-Frame"),
+    # Beauty credenza onboarding 2026-04-23 — one base design, wood-on-wood two-tone
+    # (top wood axis + new base wood axis). Objects renamed to canonical roles
+    # in a Gate 2.5 pre-extraction pass.
+    (rf"{HQ_ROOT}\beauty\CRED-BEAUTY-SHELF\master.blend",      "beauty", "Shelf Credenza"),
 ]
 
 # Filter via env var: ONLY_FAMILY=newton runs just that family's masters.
@@ -76,6 +80,11 @@ def _has_kw(s, *kw):
 
 def _classify(obj, mat_names_lower, name_lower, bbox):
     # Floor/backdrop already filtered upstream.
+    # Base panel (credenza body: wood axis separate from top — check BEFORE top rule
+    # because the material keyword "oak" matches both top and base on wood-on-wood
+    # families like Beauty).
+    if name_lower == "base" or name_lower.startswith("base_"):
+        return "base"
     # Top: material mentions desktop/top/oak/walnut OR name; flat and wide + bbox Z thin
     if _has_kw(name_lower, "desktop", "top", "surface") or \
        any(_has_kw(m, "desktop", "oak", "walnut") for m in mat_names_lower):
@@ -309,8 +318,14 @@ def process_master(blend_path, family, config, family_manifest):
             (slot.material.name if slot.material else "")
             for slot in obj.material_slots
         ]
-        # Skip backdrops
+        # Skip backdrops (by material name)
         if any(m in BACKDROP_MATS for m in mat_names):
+            continue
+        # Skip studio-rig elements by NAME — Cyc floor, gradient, backdrop sphere.
+        # Covers cases where the Gate 2 agent renamed the backdrop material and the
+        # material-set filter above missed it. Any object named "Cyc..." is studio,
+        # not product.
+        if obj.name.lower().startswith("cyc") or obj.name.lower().startswith("backdrop"):
             continue
 
         mat_names_lower = [m.lower() for m in mat_names]

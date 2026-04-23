@@ -14,6 +14,7 @@ import {
 import {
   type RoleKind,
   WOOD_FINISH_ROLES,
+  BASE_FINISH_ROLES,
   METAL_FINISH_ROLES,
   FABRIC_FINISH_ROLES,
   STATIC_METAL_ROLES,
@@ -166,9 +167,14 @@ export async function applyMaterialForRole(
   topFinishName: string,
   legColorName: string,
   dividerColorName: string = DEFAULT_DIVIDER_COLOR,
+  baseFinishName?: string,
 ): Promise<void> {
   const base = baseRole(role as string);
-  if (WOOD_FINISH_ROLES.has(base)) {
+  if (BASE_FINISH_ROLES.has(base)) {
+    // Wood-on-wood two-tone (credenzas): base roles take baseFinishName.
+    // Falls back to topFinishName if no base-finish picker is wired (monotone).
+    await applyWoodFinish(subtree, baseFinishName ?? topFinishName);
+  } else if (WOOD_FINISH_ROLES.has(base)) {
     await applyWoodFinish(subtree, topFinishName);
   } else if (FABRIC_FINISH_ROLES.has(base)) {
     const entry = DIVIDER_COLOR_MATERIAL[dividerColorName] ?? DIVIDER_COLOR_MATERIAL[DEFAULT_DIVIDER_COLOR];

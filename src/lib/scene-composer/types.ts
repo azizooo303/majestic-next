@@ -62,6 +62,7 @@ export type RoleKind =
   | "grommet"
   | "feet"
   | "handle"
+  | "base"
   | "unknown";
 
 // NOTE: roles are compared AFTER stripping any "_N" numeric suffix (top_0 → top).
@@ -70,6 +71,15 @@ export type RoleKind =
 export const WOOD_FINISH_ROLES = new Set<string>([
   "top",
   "pedestal_top",
+]);
+
+/**
+ * Roles that render as wood but are driven by the BASE-finish picker, not the
+ * top-finish picker. Used by credenzas (Beauty, etc.) to support wood-on-wood
+ * two-tone: user picks top wood and base wood independently.
+ */
+export const BASE_FINISH_ROLES = new Set<string>([
+  "base",
 ]);
 
 export const METAL_FINISH_ROLES = new Set<string>([
@@ -176,6 +186,12 @@ export interface AssemblyState {
   legColorName: string;
   /** Key in DIVIDER_COLOR_MATERIAL — drives fabric color on screen_* roles. */
   dividerColorName?: string;
+  /**
+   * Wood decor for the `base` role (credenza body panels). Independent from
+   * topFinishName so users can pick wood-on-wood two-tone. If omitted, base
+   * roles fall back to topFinishName (monotone).
+   */
+  baseFinishName?: string;
   /** per-axis accessory state. Axes without entries default to false unless a part's default is true. */
   accessories: Record<string, boolean>;
 }

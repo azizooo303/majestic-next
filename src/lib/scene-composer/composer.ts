@@ -57,6 +57,7 @@ export async function composeScene(
         state.topFinishName,
         state.legColorName,
         state.dividerColorName,
+        state.baseFinishName,
       );
       return { role, node, entry };
     }),

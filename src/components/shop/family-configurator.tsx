@@ -118,7 +118,7 @@ const SIZE_OPTIONS_PER_CONFIG: Record<string, string[]> = {
   "Storage Credenza":     ["120x40", "160x40", "180x40", "CUSTOM"],
   "Tall Credenza":        ["80x40x180", "100x40x180", "CUSTOM"],
   "Coffee Table":         ["120x60", "140x70", "CUSTOM"],
-  "Shelf Credenza":       ["160x40", "200x40", "CUSTOM"],
+  "Shelf Credenza":       ["1600x700", "2000x800", "2400x800", "3000x900", "CUSTOM"],
   "Meeting":              ["180x90", "240x100", "300x110", "CUSTOM"],
   "Workstation":          ["120x60", "140x70", "160x80", "CUSTOM"],
   "Custom (Contact Us)":  ["CUSTOM"],
@@ -157,7 +157,7 @@ const CONFIG_META: Record<string, { en: string; ar: string }> = {
   "Storage Credenza":     { en: "120–180 cm · Under-desk storage", ar: "120–180 سم · تخزين تحت المكتب" },
   "Tall Credenza":        { en: "180 cm tall · Side storage unit", ar: "180 سم ارتفاعاً · وحدة تخزين جانبية" },
   "Coffee Table":         { en: "Low table · Lounge setting", ar: "طاولة منخفضة · بيئة لاونج" },
-  "Shelf Credenza":       { en: "160–200 cm · Open shelf credenza", ar: "160–200 سم · خزانة أرفف مفتوحة" },
+  "Shelf Credenza":       { en: "1600–3000 mm · Reception shelf credenza", ar: "1600–3000 مم · خزانة أرفف للاستقبال" },
   "Meeting":              { en: "Meeting table", ar: "طاولة اجتماعات" },
   "Workstation":          { en: "Open-plan workstation", ar: "محطة عمل خطة مفتوحة" },
   "Height-Adjustable":    { en: "Motorised · 680–1,200 mm range", ar: "كهربائي · نطاق 680–1,200 مم" },
@@ -299,6 +299,10 @@ export function FamilyConfigurator({ family, basePrice, locale }: FamilyConfigur
   const [config, setConfig]               = useState(initialState?.config ?? family.configs[0] ?? "Executive");
   const [size, setSize]                   = useState(initialState?.size ?? SIZE_OPTIONS_PER_CONFIG[initialState?.config ?? family.configs[0]]?.[0] ?? "160x80");
   const [finish, setFinish]               = useState<string>(initialState?.finish ?? DESK_TOP_FINISHES[0]);
+  // Base finish (wood-on-wood axis, credenzas only). Defaults to a second decor
+  // so the two-tone reads visibly on first load. Ignored by families without a
+  // `base` role in their manifest.
+  const [baseFinish, setBaseFinish]       = useState<string>(DESK_TOP_FINISHES[1] ?? DESK_TOP_FINISHES[0]);
   const [leg, setLeg]                     = useState<string>(initialState?.leg ?? "Polished Chrome");
   const [sideUnitOption, setSideUnitOpt]  = useState<string>(initialState?.sideUnit ?? "");
   const [pedestalOption, setPedestalOpt]  = useState<string>(initialState?.pedestal ?? "");
@@ -375,6 +379,7 @@ export function FamilyConfigurator({ family, basePrice, locale }: FamilyConfigur
     topFinishName: finish,
     legColorName: leg,
     dividerColorName: dividerColor,
+    baseFinishName: baseFinish,
     accessories,
   };
 
@@ -383,6 +388,16 @@ export function FamilyConfigurator({ family, basePrice, locale }: FamilyConfigur
     const cfg = manifest.configs[config];
     if (!cfg) return false;
     return Object.keys(cfg.parts).some((k) => k.startsWith("screen_front") || k.startsWith("screen_side"));
+  }, [manifest, config]);
+
+  // Credenzas (Beauty, etc.) have a `base` role that swaps wood independently
+  // from the top. Used to show a Base Finish picker in place of the Frame
+  // Colour picker.
+  const hasBaseRole = useMemo(() => {
+    if (!manifest) return false;
+    const cfg = manifest.configs[config];
+    if (!cfg) return false;
+    return Object.keys(cfg.parts).some((k) => k === "base" || k.startsWith("base_"));
   }, [manifest, config]);
 
   const isCustomQuote = config === "Custom (Contact Us)" || size === "CUSTOM";
@@ -875,65 +890,89 @@ export function FamilyConfigurator({ family, basePrice, locale }: FamilyConfigur
               <FinishLibrary value={finish} onChange={setFinish} locale={locale} />
             </div>
 
-            {/* Leg / frame colour — 4-tile row */}
-            <div>
-              <div className="flex items-baseline justify-between mb-2.5">
-                <span className={[
-                  "text-[13px] font-medium text-[#2C2C2C]",
-                  isAr ? "tracking-normal" : "",
-                ].join(" ")}>
-                  {isAr ? "لون الهيكل" : "Frame colour"}
-                </span>
-                <span className={[
-                  "text-[12.5px] text-[#3A3A3A]",
-                  isAr ? "tracking-normal" : "",
-                ].join(" ")}>
-                  <em className="not-italic font-medium text-[#2C2C2C]">{leg}</em>
-                </span>
-              </div>
-              <div
-                className="grid gap-2"
-                style={{ gridTemplateColumns: "repeat(4, 1fr)" }}
-                role="radiogroup"
-                aria-label={isAr ? "لون الهيكل" : "Frame colour"}
-              >
-                {LEG_COLORS.map((l) => {
-                  if (excludedLegs.includes(l)) return null;
-                  const isSelected = leg === l;
-                  const tile = LEG_TILE_CONFIG[l];
-                  if (!tile) return null;
-                  return (
-                    <button
-                      key={l}
-                      type="button"
-                      role="radio"
-                      aria-checked={isSelected}
-                      aria-label={l}
-                      onClick={() => setLeg(l)}
-                      className={[
-                        "relative aspect-square border border-black/10",
-                        "flex flex-col justify-end p-2",
-                        "transition-transform duration-200 hover:-translate-y-0.5",
-                        isSelected ? "outline outline-1 outline-[#2C2C2C] outline-offset-[3px]" : "",
-                      ].join(" ")}
-                      style={{
-                        background: tile.bg,
-                      }}
-                    >
-                      <span
+            {/* Leg / frame colour — 4-tile row (hidden on credenzas) */}
+            {!hasBaseRole && (
+              <div>
+                <div className="flex items-baseline justify-between mb-2.5">
+                  <span className={[
+                    "text-[13px] font-medium text-[#2C2C2C]",
+                    isAr ? "tracking-normal" : "",
+                  ].join(" ")}>
+                    {isAr ? "لون الهيكل" : "Frame colour"}
+                  </span>
+                  <span className={[
+                    "text-[12.5px] text-[#3A3A3A]",
+                    isAr ? "tracking-normal" : "",
+                  ].join(" ")}>
+                    <em className="not-italic font-medium text-[#2C2C2C]">{leg}</em>
+                  </span>
+                </div>
+                <div
+                  className="grid gap-2"
+                  style={{ gridTemplateColumns: "repeat(4, 1fr)" }}
+                  role="radiogroup"
+                  aria-label={isAr ? "لون الهيكل" : "Frame colour"}
+                >
+                  {LEG_COLORS.map((l) => {
+                    if (excludedLegs.includes(l)) return null;
+                    const isSelected = leg === l;
+                    const tile = LEG_TILE_CONFIG[l];
+                    if (!tile) return null;
+                    return (
+                      <button
+                        key={l}
+                        type="button"
+                        role="radio"
+                        aria-checked={isSelected}
+                        aria-label={l}
+                        onClick={() => setLeg(l)}
                         className={[
-                          "text-[10.5px] uppercase leading-[1.2]",
-                          isAr ? "tracking-normal" : "tracking-[0.08em]",
+                          "relative aspect-square border border-black/10",
+                          "flex flex-col justify-end p-2",
+                          "transition-transform duration-200 hover:-translate-y-0.5",
+                          isSelected ? "outline outline-1 outline-[#2C2C2C] outline-offset-[3px]" : "",
                         ].join(" ")}
-                        style={{ color: tile.textColor }}
+                        style={{
+                          background: tile.bg,
+                        }}
                       >
-                        {l.replace(" Coat", "").replace(" Powder", "\nPowder")}
-                      </span>
-                    </button>
-                  );
-                })}
+                        <span
+                          className={[
+                            "text-[10.5px] uppercase leading-[1.2]",
+                            isAr ? "tracking-normal" : "tracking-[0.08em]",
+                          ].join(" ")}
+                          style={{ color: tile.textColor }}
+                        >
+                          {l.replace(" Coat", "").replace(" Powder", "\nPowder")}
+                        </span>
+                      </button>
+                    );
+                  })}
+                </div>
               </div>
-            </div>
+            )}
+
+            {/* Base finish — wood-on-wood two-tone (credenzas only) */}
+            {hasBaseRole && (
+              <div>
+                <div className="flex items-baseline justify-between mb-2.5">
+                  <span className={[
+                    "text-[13px] font-medium text-[#2C2C2C]",
+                    isAr ? "tracking-normal" : "",
+                  ].join(" ")}>
+                    {isAr ? "تشطيب القاعدة" : "Base finish"}
+                  </span>
+                  <span className={[
+                    "text-[12.5px] text-[#3A3A3A]",
+                    isAr ? "tracking-normal" : "",
+                  ].join(" ")}>
+                    <em className="not-italic font-medium text-[#2C2C2C]">32</em>
+                    {" "}{isAr ? "تشطيبات" : "finishes"}
+                  </span>
+                </div>
+                <FinishLibrary value={baseFinish} onChange={setBaseFinish} locale={locale} />
+              </div>
+            )}
           </section>
 
           {/* ═══ GROUP 03 — Add-ons ════════════════════════════════════════ */}

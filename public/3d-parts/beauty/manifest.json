@@ -1,5 +1,6 @@
 {
   "family": "beauty",
+  "generated_at": "2026-04-23T01:32:20.659226Z",
   "configs": {
     "Shelf Credenza": {
       "parts": {
@@ -15,15 +16,11 @@
             0.25,
             0.018
           ],
-          "bytes": 250584,
-          "hash": "145785d8400c",
-          "source_object": "Box182479",
-          "source_materials": [
-            "DESKTOP_a398"
-          ]
+          "bytes": 1468,
+          "hash": "0d83ee3ee1f8"
         },
-        "frame_beam_0": {
-          "glb": "/3d-parts/beauty/frame_beam_0/shelf-credenza.glb",
+        "base_0": {
+          "glb": "/3d-parts/beauty/base_0/shelf-credenza.glb",
           "anchor": [
             0.0,
             0.0,
@@ -34,15 +31,11 @@
             0.7,
             1.072
           ],
-          "bytes": 1512,
-          "hash": "9a381d276994",
-          "source_object": "Box182480",
-          "source_materials": [
-            "FRAME_BEAM_a398"
-          ]
+          "bytes": 1568,
+          "hash": "4c434547a492"
         },
-        "frame_beam_1": {
-          "glb": "/3d-parts/beauty/frame_beam_1/shelf-credenza.glb",
+        "base_1": {
+          "glb": "/3d-parts/beauty/base_1/shelf-credenza.glb",
           "anchor": [
             0.0,
             0.0,
@@ -53,15 +46,11 @@
             0.7,
             1.072
           ],
-          "bytes": 1508,
-          "hash": "cd71063e5918",
-          "source_object": "Box182481",
-          "source_materials": [
-            "FRAME_BEAM_a398"
-          ]
+          "bytes": 1568,
+          "hash": "407631203e3f"
         },
-        "frame_beam_2": {
-          "glb": "/3d-parts/beauty/frame_beam_2/shelf-credenza.glb",
+        "base_2": {
+          "glb": "/3d-parts/beauty/base_2/shelf-credenza.glb",
           "anchor": [
             0.0,
             0.0,
@@ -72,15 +61,11 @@
             0.018,
             1.072
           ],
-          "bytes": 1484,
-          "hash": "6c7078571b04",
-          "source_object": "Box182482",
-          "source_materials": [
-            "FRAME_BEAM_a398"
-          ]
+          "bytes": 1540,
+          "hash": "d3602d74f5b0"
         },
-        "frame_beam_3": {
-          "glb": "/3d-parts/beauty/frame_beam_3/shelf-credenza.glb",
+        "base_3": {
+          "glb": "/3d-parts/beauty/base_3/shelf-credenza.glb",
           "anchor": [
             0.0,
             0.0,
@@ -91,15 +76,11 @@
             0.018,
             0.327
           ],
-          "bytes": 1504,
-          "hash": "c1db784e5715",
-          "source_object": "Box182487",
-          "source_materials": [
-            "FRAME_BEAM_a398"
-          ]
+          "bytes": 1564,
+          "hash": "7bf27a5d3be7"
         },
-        "frame_beam_4": {
-          "glb": "/3d-parts/beauty/frame_beam_4/shelf-credenza.glb",
+        "base_4": {
+          "glb": "/3d-parts/beauty/base_4/shelf-credenza.glb",
           "anchor": [
             0.0,
             0.0,
@@ -110,34 +91,11 @@
             0.018,
             0.327
           ],
-          "bytes": 1504,
-          "hash": "a97cdf5c65f2",
-          "source_object": "Box182488",
-          "source_materials": [
-            "FRAME_BEAM_a398"
-          ]
+          "bytes": 1564,
+          "hash": "0927b55d19cd"
         },
-        "frame_beam_5": {
-          "glb": "/3d-parts/beauty/frame_beam_5/shelf-credenza.glb",
-          "anchor": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "bbox": [
-            0.018,
-            0.3,
-            0.71
-          ],
-          "bytes": 1516,
-          "hash": "4152e9970149",
-          "source_object": "Box182490",
-          "source_materials": [
-            "FRAME_BEAM_a398"
-          ]
-        },
-        "pedestal_top_0": {
-          "glb": "/3d-parts/accessories/pedestal_top-fb8b8294e6eb.glb",
+        "base_5": {
+          "glb": "/3d-parts/beauty/base_5/shelf-credenza.glb",
           "anchor": [
             0.0,
             0.0,
@@ -148,15 +106,11 @@
             0.018,
             0.327
           ],
-          "bytes": 250600,
-          "hash": "fb8b8294e6eb",
-          "source_object": "Box182483",
-          "source_materials": [
-            "PEDESTAL_TOP_a398"
-          ]
+          "bytes": 1564,
+          "hash": "45cf673adbd8"
         },
-        "pedestal_top_1": {
-          "glb": "/3d-parts/accessories/pedestal_top-38eccc5712f9.glb",
+        "base_6": {
+          "glb": "/3d-parts/beauty/base_6/shelf-credenza.glb",
           "anchor": [
             0.0,
             0.0,
@@ -167,15 +121,11 @@
             0.018,
             0.327
           ],
-          "bytes": 250600,
-          "hash": "38eccc5712f9",
-          "source_object": "Box182484",
-          "source_materials": [
-            "PEDESTAL_TOP_a398"
-          ]
+          "bytes": 1564,
+          "hash": "2311e08c8e75"
         },
-        "pedestal_top_2": {
-          "glb": "/3d-parts/accessories/pedestal_top-1a37ce8b535c.glb",
+        "base_7": {
+          "glb": "/3d-parts/beauty/base_7/shelf-credenza.glb",
           "anchor": [
             0.0,
             0.0,
@@ -186,15 +136,11 @@
             0.018,
             0.327
           ],
-          "bytes": 250600,
-          "hash": "1a37ce8b535c",
-          "source_object": "Box182485",
-          "source_materials": [
-            "PEDESTAL_TOP_a398"
-          ]
+          "bytes": 1568,
+          "hash": "9c6a9c7f5a43"
         },
-        "pedestal_top_3": {
-          "glb": "/3d-parts/accessories/pedestal_top-994e67e7498e.glb",
+        "base_8": {
+          "glb": "/3d-parts/beauty/base_8/shelf-credenza.glb",
           "anchor": [
             0.0,
             0.0,
@@ -205,15 +151,11 @@
             0.018,
             0.327
           ],
-          "bytes": 250600,
-          "hash": "994e67e7498e",
-          "source_object": "Box182486",
-          "source_materials": [
-            "PEDESTAL_TOP_a398"
-          ]
+          "bytes": 1564,
+          "hash": "64a1349cd0f1"
         },
-        "pedestal_top_4": {
-          "glb": "/3d-parts/accessories/pedestal_top-84375de58723.glb",
+        "base_9": {
+          "glb": "/3d-parts/beauty/base_9/shelf-credenza.glb",
           "anchor": [
             0.0,
             0.0,
@@ -224,18 +166,27 @@
             0.582,
             0.03
           ],
-          "bytes": 250588,
-          "hash": "84375de58723",
-          "source_object": "Box182489",
-          "source_materials": [
-            "PEDESTAL_TOP_a398"
-          ]
+          "bytes": 1556,
+          "hash": "c655b690aca2"
+        },
+        "base_10": {
+          "glb": "/3d-parts/beauty/base_10/shelf-credenza.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.018,
+            0.3,
+            0.71
+          ],
+          "bytes": 1576,
+          "hash": "19cd8c444746"
         }
       },
       "baseSize": "260x20",
-      "unknowns": [],
-      "productKind": "credenza"
+      "unknowns": []
     }
-  },
-  "generated_at": "2026-04-20T03:54:26.788712Z"
+  }
 }
