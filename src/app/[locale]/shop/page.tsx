@@ -208,7 +208,9 @@ export default async function ShopPage({
             )}
 
             {/* Desk Families — configurable 4-axis desks (Wave 3 configurator) */}
-            {!categorySlugRaw && !search && page === 1 && (
+            {!categorySlugRaw && !search && page === 1 && (() => {
+              const visibleFamilies = DESK_FAMILIES.filter((f) => f.status !== "coming-soon");
+              return (
               <Reveal>
                 <section className="mb-10">
                   <div className="mb-4 flex items-baseline justify-between">
@@ -216,7 +218,7 @@ export default async function ShopPage({
                       {isAr ? "اضبط مكتبك" : "Configure Your Desk"}
                     </h2>
                     <span className="text-xs text-[#3A3A3A] uppercase tracking-wide">
-                      {isAr ? `${DESK_FAMILIES.length} عائلة قابلة للتخصيص` : `${DESK_FAMILIES.length} configurable families`}
+                      {isAr ? `${visibleFamilies.length} عائلة قابلة للتخصيص` : `${visibleFamilies.length} configurable families`}
                     </span>
                   </div>
                   <StaggerGrid
@@ -224,13 +226,14 @@ export default async function ShopPage({
                     isRTL={isAr}
                     className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[15px]"
                   >
-                    {DESK_FAMILIES.map((family) => (
+                    {visibleFamilies.map((family) => (
                       <FamilyCard key={family.sku} family={family} locale={isAr ? "ar" : "en"} />
                     ))}
                   </StaggerGrid>
                 </section>
               </Reveal>
-            )}
+              );
+            })()}
 
             {/* Sort bar */}
             <Reveal>
