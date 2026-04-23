@@ -1,5 +1,6 @@
 {
   "family": "diamond",
+  "generated_at": "2026-04-23T05:30:50.666813Z",
   "configs": {
     "Executive": {
       "parts": {
@@ -15,12 +16,8 @@
             0.04,
             0.04
           ],
-          "bytes": 1436,
-          "hash": "4f3d477ae030",
-          "source_object": "Box3165",
-          "source_materials": [
-            "Majestic_WhitePaint.001"
-          ]
+          "bytes": 1428,
+          "hash": "c9e22a9af33a"
         },
         "frame_beam_1": {
           "glb": "/3d-parts/diamond/frame_beam_1/executive.glb",
@@ -34,15 +31,71 @@
             0.04,
             0.04
           ],
-          "bytes": 1436,
-          "hash": "cc43342e076f",
-          "source_object": "Box3166",
-          "source_materials": [
-            "Majestic_WhitePaint.001"
-          ]
+          "bytes": 1432,
+          "hash": "b01e24cb40ef"
         },
-        "modesty": {
-          "glb": "/3d-parts/accessories/modesty-d4df90de344c.glb",
+        "frame_beam_2": {
+          "glb": "/3d-parts/diamond/frame_beam_2/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.684,
+            0.05
+          ],
+          "bytes": 1744,
+          "hash": "9fd574ab9e2c"
+        },
+        "frame_beam_3": {
+          "glb": "/3d-parts/diamond/frame_beam_3/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.684,
+            0.05
+          ],
+          "bytes": 1736,
+          "hash": "f01738cf2d31"
+        },
+        "frame_beam_4": {
+          "glb": "/3d-parts/diamond/frame_beam_4/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.684,
+            0.05
+          ],
+          "bytes": 1744,
+          "hash": "c7ac1b2a6539"
+        },
+        "frame_beam_5": {
+          "glb": "/3d-parts/diamond/frame_beam_5/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.684,
+            0.05
+          ],
+          "bytes": 1736,
+          "hash": "d6ee20043f60"
+        },
+        "pedestal": {
+          "glb": "/3d-parts/accessories/pedestal-245b088358e7.glb",
           "anchor": [
             0.0,
             0.0,
@@ -54,11 +107,7 @@
             0.35
           ],
           "bytes": 1476,
-          "hash": "d4df90de344c",
-          "source_object": "Box3167",
-          "source_materials": [
-            "Majestic_WhitePaint.001"
-          ]
+          "hash": "245b088358e7"
         },
         "top": {
           "glb": "/3d-parts/diamond/top/executive.glb",
@@ -72,15 +121,11 @@
             0.8,
             0.03
           ],
-          "bytes": 161688,
-          "hash": "ec919806ec87",
-          "source_object": "Box3168",
-          "source_materials": [
-            "A398_Italian_Walnut.001"
-          ]
+          "bytes": 161564,
+          "hash": "d04654626b6f"
         },
-        "feet_0": {
-          "glb": "/3d-parts/diamond/feet_0/executive.glb",
+        "grommet_0": {
+          "glb": "/3d-parts/diamond/grommet_0/executive.glb",
           "anchor": [
             0.0,
             0.0,
@@ -91,15 +136,11 @@
             0.05,
             0.05
           ],
-          "bytes": 3420,
-          "hash": "00bd6db07569",
-          "source_object": "o349",
-          "source_materials": [
-            "Majestic_WhitePaint.001"
-          ]
+          "bytes": 3440,
+          "hash": "d29b9aaed5e8"
         },
-        "feet_1": {
-          "glb": "/3d-parts/diamond/feet_1/executive.glb",
+        "grommet_1": {
+          "glb": "/3d-parts/diamond/grommet_1/executive.glb",
           "anchor": [
             0.0,
             0.0,
@@ -110,15 +151,11 @@
             0.05,
             0.05
           ],
-          "bytes": 2812,
-          "hash": "2bac99a6a18d",
-          "source_object": "o350",
-          "source_materials": [
-            "Majestic_WhitePaint.001"
-          ]
+          "bytes": 2808,
+          "hash": "8608a65f83f9"
         },
-        "feet_2": {
-          "glb": "/3d-parts/diamond/feet_2/executive.glb",
+        "grommet_2": {
+          "glb": "/3d-parts/diamond/grommet_2/executive.glb",
           "anchor": [
             0.0,
             0.0,
@@ -129,15 +166,11 @@
             0.05,
             0.05
           ],
-          "bytes": 3472,
-          "hash": "d03bd58c4ac7",
-          "source_object": "o351",
-          "source_materials": [
-            "Majestic_WhitePaint.001"
-          ]
+          "bytes": 3464,
+          "hash": "0e4f8d4d08f4"
         },
-        "feet_3": {
-          "glb": "/3d-parts/diamond/feet_3/executive.glb",
+        "grommet_3": {
+          "glb": "/3d-parts/diamond/grommet_3/executive.glb",
           "anchor": [
             0.0,
             0.0,
@@ -148,15 +181,11 @@
             0.05,
             0.05
           ],
-          "bytes": 2804,
-          "hash": "3d478187d16d",
-          "source_object": "o352",
-          "source_materials": [
-            "Majestic_WhitePaint.001"
-          ]
+          "bytes": 2808,
+          "hash": "8f97a98f5b6c"
         },
-        "feet_4": {
-          "glb": "/3d-parts/diamond/feet_4/executive.glb",
+        "grommet_4": {
+          "glb": "/3d-parts/diamond/grommet_4/executive.glb",
           "anchor": [
             0.0,
             0.0,
@@ -167,15 +196,11 @@
             0.036,
             0.009
           ],
-          "bytes": 10312,
-          "hash": "280e221ca73f",
-          "source_object": "o353",
-          "source_materials": [
-            "Majestic_WhitePaint.001"
-          ]
+          "bytes": 10300,
+          "hash": "79041c2f342e"
         },
-        "feet_5": {
-          "glb": "/3d-parts/diamond/feet_5/executive.glb",
+        "grommet_5": {
+          "glb": "/3d-parts/diamond/grommet_5/executive.glb",
           "anchor": [
             0.0,
             0.0,
@@ -186,15 +211,11 @@
             0.036,
             0.009
           ],
-          "bytes": 17436,
-          "hash": "ccf87ca2657c",
-          "source_object": "o354",
-          "source_materials": [
-            "Majestic_WhitePaint.001"
-          ]
+          "bytes": 17516,
+          "hash": "f2244413f861"
         },
-        "feet_6": {
-          "glb": "/3d-parts/diamond/feet_6/executive.glb",
+        "grommet_6": {
+          "glb": "/3d-parts/diamond/grommet_6/executive.glb",
           "anchor": [
             0.0,
             0.0,
@@ -205,15 +226,11 @@
             0.05,
             0.05
           ],
-          "bytes": 3492,
-          "hash": "449c568a5423",
-          "source_object": "o359",
-          "source_materials": [
-            "Majestic_WhitePaint.001"
-          ]
+          "bytes": 3468,
+          "hash": "3191c67f6bbb"
         },
-        "feet_7": {
-          "glb": "/3d-parts/diamond/feet_7/executive.glb",
+        "grommet_7": {
+          "glb": "/3d-parts/diamond/grommet_7/executive.glb",
           "anchor": [
             0.0,
             0.0,
@@ -224,15 +241,11 @@
             0.05,
             0.05
           ],
-          "bytes": 2824,
-          "hash": "29be6c6debff",
-          "source_object": "o360",
-          "source_materials": [
-            "Majestic_WhitePaint.001"
-          ]
+          "bytes": 2828,
+          "hash": "59024278a840"
         },
-        "feet_8": {
-          "glb": "/3d-parts/diamond/feet_8/executive.glb",
+        "grommet_8": {
+          "glb": "/3d-parts/diamond/grommet_8/executive.glb",
           "anchor": [
             0.0,
             0.0,
@@ -243,15 +256,11 @@
             0.05,
             0.05
           ],
-          "bytes": 3524,
-          "hash": "b11db4968479",
-          "source_object": "o361",
-          "source_materials": [
-            "Majestic_WhitePaint.001"
-          ]
+          "bytes": 3476,
+          "hash": "94a307063fd4"
         },
-        "feet_9": {
-          "glb": "/3d-parts/diamond/feet_9/executive.glb",
+        "grommet_9": {
+          "glb": "/3d-parts/diamond/grommet_9/executive.glb",
           "anchor": [
             0.0,
             0.0,
@@ -262,15 +271,11 @@
             0.05,
             0.05
           ],
-          "bytes": 2824,
-          "hash": "f6614401dcfe",
-          "source_object": "o362",
-          "source_materials": [
-            "Majestic_WhitePaint.001"
-          ]
+          "bytes": 2816,
+          "hash": "c8d3b91ba540"
         },
-        "feet_10": {
-          "glb": "/3d-parts/diamond/feet_10/executive.glb",
+        "grommet_10": {
+          "glb": "/3d-parts/diamond/grommet_10/executive.glb",
           "anchor": [
             0.0,
             0.0,
@@ -282,14 +287,10 @@
             0.009
           ],
           "bytes": 10268,
-          "hash": "3e67a8f5c1c9",
-          "source_object": "o363",
-          "source_materials": [
-            "Majestic_WhitePaint.001"
-          ]
+          "hash": "55439c78acbd"
         },
-        "feet_11": {
-          "glb": "/3d-parts/diamond/feet_11/executive.glb",
+        "grommet_11": {
+          "glb": "/3d-parts/diamond/grommet_11/executive.glb",
           "anchor": [
             0.0,
             0.0,
@@ -300,15 +301,41 @@
             0.036,
             0.009
           ],
-          "bytes": 18084,
-          "hash": "487a547d0fd6",
-          "source_object": "o364",
-          "source_materials": [
-            "Majestic_WhitePaint.001"
-          ]
+          "bytes": 18224,
+          "hash": "77a958094083"
         },
-        "feet_12": {
-          "glb": "/3d-parts/diamond/feet_12/executive.glb",
+        "grommet_12": {
+          "glb": "/3d-parts/diamond/grommet_12/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 2940,
+          "hash": "36ddb85b49ee"
+        },
+        "grommet_13": {
+          "glb": "/3d-parts/diamond/grommet_13/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 2884,
+          "hash": "a129883d6c24"
+        },
+        "grommet_14": {
+          "glb": "/3d-parts/diamond/grommet_14/executive.glb",
           "anchor": [
             0.0,
             0.0,
@@ -320,14 +347,10 @@
             0.042
           ],
           "bytes": 2948,
-          "hash": "940891d94e79",
-          "source_object": "Line1325",
-          "source_materials": [
-            "Majestic_WhitePaint.001"
-          ]
+          "hash": "0dec4b70fc85"
         },
-        "feet_13": {
-          "glb": "/3d-parts/diamond/feet_13/executive.glb",
+        "grommet_15": {
+          "glb": "/3d-parts/diamond/grommet_15/executive.glb",
           "anchor": [
             0.0,
             0.0,
@@ -338,88 +361,8 @@
             0.041,
             0.042
           ],
-          "bytes": 2888,
-          "hash": "82cc8a61a967",
-          "source_object": "Line1326",
-          "source_materials": [
-            "Majestic_WhitePaint.001"
-          ]
-        },
-        "feet_14": {
-          "glb": "/3d-parts/diamond/feet_14/executive.glb",
-          "anchor": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "bbox": [
-            0.042,
-            0.041,
-            0.042
-          ],
-          "bytes": 2956,
-          "hash": "7fbc826c7126",
-          "source_object": "Line1327",
-          "source_materials": [
-            "Majestic_WhitePaint.001"
-          ]
-        },
-        "feet_15": {
-          "glb": "/3d-parts/diamond/feet_15/executive.glb",
-          "anchor": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "bbox": [
-            0.042,
-            0.041,
-            0.042
-          ],
-          "bytes": 2888,
-          "hash": "87a2ea5ba33f",
-          "source_object": "Line1328",
-          "source_materials": [
-            "Majestic_WhitePaint.001"
-          ]
-        },
-        "leg_l_0": {
-          "glb": "/3d-parts/diamond/leg_l_0/executive.glb",
-          "anchor": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "bbox": [
-            0.05,
-            0.05,
-            0.611
-          ],
-          "bytes": 1756,
-          "hash": "9947147c1bab",
-          "source_object": "o357",
-          "source_materials": [
-            "Majestic_WhitePaint.001"
-          ]
-        },
-        "leg_l_1": {
-          "glb": "/3d-parts/diamond/leg_l_1/executive.glb",
-          "anchor": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "bbox": [
-            0.05,
-            0.05,
-            0.611
-          ],
-          "bytes": 1752,
-          "hash": "31d8ac64221d",
-          "source_object": "o358",
-          "source_materials": [
-            "Majestic_WhitePaint.001"
-          ]
+          "bytes": 2884,
+          "hash": "0c0f655a9428"
         },
         "leg_r_0": {
           "glb": "/3d-parts/diamond/leg_r_0/executive.glb",
@@ -433,12 +376,8 @@
             0.05,
             0.611
           ],
-          "bytes": 1760,
-          "hash": "0ca676a9da11",
-          "source_object": "o367",
-          "source_materials": [
-            "Majestic_WhitePaint.001"
-          ]
+          "bytes": 1752,
+          "hash": "f454d41b5b24"
         },
         "leg_r_1": {
           "glb": "/3d-parts/diamond/leg_r_1/executive.glb",
@@ -453,72 +392,41 @@
             0.611
           ],
           "bytes": 1756,
-          "hash": "674d44779783",
-          "source_object": "o368",
-          "source_materials": [
-            "Majestic_WhitePaint.001"
-          ]
+          "hash": "9fc474e0887b"
+        },
+        "leg_r_2": {
+          "glb": "/3d-parts/diamond/leg_r_2/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.611
+          ],
+          "bytes": 1756,
+          "hash": "bf846cdcd7fc"
+        },
+        "leg_r_3": {
+          "glb": "/3d-parts/diamond/leg_r_3/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.611
+          ],
+          "bytes": 1756,
+          "hash": "7a3562876fb5"
         }
       },
       "baseSize": "180x80",
-      "unknowns": [
-        {
-          "name": "o355",
-          "materials": [
-            "Majestic_WhitePaint.001"
-          ],
-          "extents": [
-            0.05,
-            0.684,
-            0.05
-          ]
-        },
-        {
-          "name": "o356",
-          "materials": [
-            "Majestic_WhitePaint.001"
-          ],
-          "extents": [
-            0.05,
-            0.684,
-            0.05
-          ]
-        },
-        {
-          "name": "o365",
-          "materials": [
-            "Majestic_WhitePaint.001"
-          ],
-          "extents": [
-            0.05,
-            0.684,
-            0.05
-          ]
-        },
-        {
-          "name": "o366",
-          "materials": [
-            "Majestic_WhitePaint.001"
-          ],
-          "extents": [
-            0.05,
-            0.684,
-            0.05
-          ]
-        },
-        {
-          "name": "Cyc",
-          "materials": [
-            "Cyc_Gradient"
-          ],
-          "extents": [
-            30.0,
-            30.0,
-            0.0
-          ]
-        }
-      ],
-      "productKind": "desk"
+      "unknowns": []
     },
     "Manager": {
       "parts": {
@@ -535,14 +443,10 @@
             0.03
           ],
           "bytes": 161684,
-          "hash": "cddfe97b16c5",
-          "source_object": "Box428",
-          "source_materials": [
-            "A398_Italian_Walnut"
-          ]
+          "hash": "80429c9be00c"
         },
-        "feet_0": {
-          "glb": "/3d-parts/diamond/feet_0/manager.glb",
+        "grommet_0": {
+          "glb": "/3d-parts/diamond/grommet_0/manager.glb",
           "anchor": [
             0.0,
             0.0,
@@ -553,15 +457,11 @@
             0.05,
             0.05
           ],
-          "bytes": 3448,
-          "hash": "bba238bff020",
-          "source_object": "o129",
-          "source_materials": [
-            "Majestic_WhitePaint"
-          ]
+          "bytes": 3432,
+          "hash": "16a152ed79c2"
         },
-        "feet_1": {
-          "glb": "/3d-parts/diamond/feet_1/manager.glb",
+        "grommet_1": {
+          "glb": "/3d-parts/diamond/grommet_1/manager.glb",
           "anchor": [
             0.0,
             0.0,
@@ -572,15 +472,11 @@
             0.05,
             0.05
           ],
-          "bytes": 2808,
-          "hash": "5dffd49446e1",
-          "source_object": "o130",
-          "source_materials": [
-            "Majestic_WhitePaint"
-          ]
+          "bytes": 2816,
+          "hash": "a033d0f4fc83"
         },
-        "feet_2": {
-          "glb": "/3d-parts/diamond/feet_2/manager.glb",
+        "grommet_2": {
+          "glb": "/3d-parts/diamond/grommet_2/manager.glb",
           "anchor": [
             0.0,
             0.0,
@@ -591,15 +487,11 @@
             0.05,
             0.05
           ],
-          "bytes": 3476,
-          "hash": "8f90666e421e",
-          "source_object": "o131",
-          "source_materials": [
-            "Majestic_WhitePaint"
-          ]
+          "bytes": 3440,
+          "hash": "c6b012adcf91"
         },
-        "feet_3": {
-          "glb": "/3d-parts/diamond/feet_3/manager.glb",
+        "grommet_3": {
+          "glb": "/3d-parts/diamond/grommet_3/manager.glb",
           "anchor": [
             0.0,
             0.0,
@@ -610,15 +502,11 @@
             0.05,
             0.05
           ],
-          "bytes": 2800,
-          "hash": "dc58a2da4cc3",
-          "source_object": "o132",
-          "source_materials": [
-            "Majestic_WhitePaint"
-          ]
+          "bytes": 2804,
+          "hash": "2d7f2260cb64"
         },
-        "feet_4": {
-          "glb": "/3d-parts/diamond/feet_4/manager.glb",
+        "grommet_4": {
+          "glb": "/3d-parts/diamond/grommet_4/manager.glb",
           "anchor": [
             0.0,
             0.0,
@@ -630,14 +518,10 @@
             0.009
           ],
           "bytes": 10324,
-          "hash": "58bdc773ee67",
-          "source_object": "o133",
-          "source_materials": [
-            "Majestic_WhitePaint"
-          ]
+          "hash": "4dd384efa3da"
         },
-        "feet_5": {
-          "glb": "/3d-parts/diamond/feet_5/manager.glb",
+        "grommet_5": {
+          "glb": "/3d-parts/diamond/grommet_5/manager.glb",
           "anchor": [
             0.0,
             0.0,
@@ -648,15 +532,11 @@
             0.036,
             0.009
           ],
-          "bytes": 17556,
-          "hash": "079d1179ac50",
-          "source_object": "o134",
-          "source_materials": [
-            "Majestic_WhitePaint"
-          ]
+          "bytes": 17668,
+          "hash": "9e484a25cd52"
         },
-        "feet_6": {
-          "glb": "/3d-parts/diamond/feet_6/manager.glb",
+        "grommet_6": {
+          "glb": "/3d-parts/diamond/grommet_6/manager.glb",
           "anchor": [
             0.0,
             0.0,
@@ -667,53 +547,11 @@
             0.041,
             0.042
           ],
-          "bytes": 2944,
-          "hash": "3788cd51c726",
-          "source_object": "Line1264",
-          "source_materials": [
-            "Majestic_WhitePaint"
-          ]
+          "bytes": 2936,
+          "hash": "b74e2c25b9ed"
         },
-        "feet_7": {
-          "glb": "/3d-parts/diamond/feet_7/manager.glb",
-          "anchor": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "bbox": [
-            0.042,
-            0.041,
-            0.042
-          ],
-          "bytes": 2888,
-          "hash": "3a3e762b644f",
-          "source_object": "Line1265",
-          "source_materials": [
-            "Majestic_WhitePaint"
-          ]
-        },
-        "feet_8": {
-          "glb": "/3d-parts/diamond/feet_8/manager.glb",
-          "anchor": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "bbox": [
-            0.042,
-            0.041,
-            0.042
-          ],
-          "bytes": 2952,
-          "hash": "ba8667a15a86",
-          "source_object": "Line1266",
-          "source_materials": [
-            "Majestic_WhitePaint"
-          ]
-        },
-        "feet_9": {
-          "glb": "/3d-parts/diamond/feet_9/manager.glb",
+        "grommet_7": {
+          "glb": "/3d-parts/diamond/grommet_7/manager.glb",
           "anchor": [
             0.0,
             0.0,
@@ -725,14 +563,40 @@
             0.042
           ],
           "bytes": 2884,
-          "hash": "790f6586e225",
-          "source_object": "Line1267",
-          "source_materials": [
-            "Majestic_WhitePaint"
-          ]
+          "hash": "3aa2e7b8fc9c"
         },
-        "feet_10": {
-          "glb": "/3d-parts/diamond/feet_10/manager.glb",
+        "grommet_8": {
+          "glb": "/3d-parts/diamond/grommet_8/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 2940,
+          "hash": "38e994d23b95"
+        },
+        "grommet_9": {
+          "glb": "/3d-parts/diamond/grommet_9/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 2884,
+          "hash": "3cb556b45ff7"
+        },
+        "grommet_10": {
+          "glb": "/3d-parts/diamond/grommet_10/manager.glb",
           "anchor": [
             0.0,
             0.0,
@@ -743,15 +607,11 @@
             0.05,
             0.05
           ],
-          "bytes": 3464,
-          "hash": "8dbfa3111b67",
-          "source_object": "o139",
-          "source_materials": [
-            "Majestic_WhitePaint"
-          ]
+          "bytes": 3472,
+          "hash": "acb49d7cf38e"
         },
-        "feet_11": {
-          "glb": "/3d-parts/diamond/feet_11/manager.glb",
+        "grommet_11": {
+          "glb": "/3d-parts/diamond/grommet_11/manager.glb",
           "anchor": [
             0.0,
             0.0,
@@ -762,15 +622,11 @@
             0.05,
             0.05
           ],
-          "bytes": 2824,
-          "hash": "773c31f29f44",
-          "source_object": "o140",
-          "source_materials": [
-            "Majestic_WhitePaint"
-          ]
+          "bytes": 2816,
+          "hash": "13bf50dc599e"
         },
-        "feet_12": {
-          "glb": "/3d-parts/diamond/feet_12/manager.glb",
+        "grommet_12": {
+          "glb": "/3d-parts/diamond/grommet_12/manager.glb",
           "anchor": [
             0.0,
             0.0,
@@ -781,15 +637,11 @@
             0.05,
             0.05
           ],
-          "bytes": 3528,
-          "hash": "cb946d63be24",
-          "source_object": "o141",
-          "source_materials": [
-            "Majestic_WhitePaint"
-          ]
+          "bytes": 3500,
+          "hash": "3f21fd1981dc"
         },
-        "feet_13": {
-          "glb": "/3d-parts/diamond/feet_13/manager.glb",
+        "grommet_13": {
+          "glb": "/3d-parts/diamond/grommet_13/manager.glb",
           "anchor": [
             0.0,
             0.0,
@@ -800,15 +652,11 @@
             0.05,
             0.05
           ],
-          "bytes": 2820,
-          "hash": "deab46152aca",
-          "source_object": "o142",
-          "source_materials": [
-            "Majestic_WhitePaint"
-          ]
+          "bytes": 2816,
+          "hash": "c0daa666639a"
         },
-        "feet_14": {
-          "glb": "/3d-parts/diamond/feet_14/manager.glb",
+        "grommet_14": {
+          "glb": "/3d-parts/diamond/grommet_14/manager.glb",
           "anchor": [
             0.0,
             0.0,
@@ -820,14 +668,10 @@
             0.009
           ],
           "bytes": 10268,
-          "hash": "ccf43c777fc0",
-          "source_object": "o143",
-          "source_materials": [
-            "Majestic_WhitePaint"
-          ]
+          "hash": "262a4852d06e"
         },
-        "feet_15": {
-          "glb": "/3d-parts/diamond/feet_15/manager.glb",
+        "grommet_15": {
+          "glb": "/3d-parts/diamond/grommet_15/manager.glb",
           "anchor": [
             0.0,
             0.0,
@@ -838,12 +682,8 @@
             0.036,
             0.009
           ],
-          "bytes": 18240,
-          "hash": "eaee6193cd61",
-          "source_object": "o144",
-          "source_materials": [
-            "Majestic_WhitePaint"
-          ]
+          "bytes": 18224,
+          "hash": "102915fb88ce"
         },
         "frame_beam_0": {
           "glb": "/3d-parts/diamond/frame_beam_0/manager.glb",
@@ -853,16 +693,12 @@
             0.0
           ],
           "bbox": [
-            1.448,
-            0.04,
-            0.04
+            0.05,
+            0.684,
+            0.05
           ],
-          "bytes": 1432,
-          "hash": "804b9352de6e",
-          "source_object": "Box3117",
-          "source_materials": [
-            "Majestic_WhitePaint"
-          ]
+          "bytes": 1744,
+          "hash": "cfaa51bf62aa"
         },
         "frame_beam_1": {
           "glb": "/3d-parts/diamond/frame_beam_1/manager.glb",
@@ -872,19 +708,45 @@
             0.0
           ],
           "bbox": [
+            0.05,
+            0.684,
+            0.05
+          ],
+          "bytes": 1732,
+          "hash": "a4aff53251d9"
+        },
+        "frame_beam_2": {
+          "glb": "/3d-parts/diamond/frame_beam_2/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
             1.448,
             0.04,
             0.04
           ],
           "bytes": 1432,
-          "hash": "97d4bac232d9",
-          "source_object": "Box3118",
-          "source_materials": [
-            "Majestic_WhitePaint"
-          ]
+          "hash": "8f202bea282d"
         },
-        "leg_l_0": {
-          "glb": "/3d-parts/diamond/leg_l_0/manager.glb",
+        "frame_beam_3": {
+          "glb": "/3d-parts/diamond/frame_beam_3/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.448,
+            0.04,
+            0.04
+          ],
+          "bytes": 1432,
+          "hash": "cbf8bb083e5d"
+        },
+        "frame_beam_4": {
+          "glb": "/3d-parts/diamond/frame_beam_4/manager.glb",
           "anchor": [
             0.0,
             0.0,
@@ -892,18 +754,14 @@
           ],
           "bbox": [
             0.05,
-            0.05,
-            0.611
+            0.684,
+            0.05
           ],
           "bytes": 1748,
-          "hash": "dc96fc4e44a5",
-          "source_object": "o137",
-          "source_materials": [
-            "Majestic_WhitePaint"
-          ]
+          "hash": "ad01b8665c4d"
         },
-        "leg_l_1": {
-          "glb": "/3d-parts/diamond/leg_l_1/manager.glb",
+        "frame_beam_5": {
+          "glb": "/3d-parts/diamond/frame_beam_5/manager.glb",
           "anchor": [
             0.0,
             0.0,
@@ -911,15 +769,11 @@
           ],
           "bbox": [
             0.05,
-            0.05,
-            0.611
+            0.684,
+            0.05
           ],
-          "bytes": 1752,
-          "hash": "45afdc7e5a3f",
-          "source_object": "o138",
-          "source_materials": [
-            "Majestic_WhitePaint"
-          ]
+          "bytes": 1740,
+          "hash": "4bc7559238c5"
         },
         "leg_r_0": {
           "glb": "/3d-parts/diamond/leg_r_0/manager.glb",
@@ -933,12 +787,8 @@
             0.05,
             0.611
           ],
-          "bytes": 1756,
-          "hash": "eb08c5c107de",
-          "source_object": "o147",
-          "source_materials": [
-            "Majestic_WhitePaint"
-          ]
+          "bytes": 1748,
+          "hash": "b8848458dc99"
         },
         "leg_r_1": {
           "glb": "/3d-parts/diamond/leg_r_1/manager.glb",
@@ -953,72 +803,41 @@
             0.611
           ],
           "bytes": 1752,
-          "hash": "bf8272994923",
-          "source_object": "o148",
-          "source_materials": [
-            "Majestic_WhitePaint"
-          ]
+          "hash": "860f45e74273"
+        },
+        "leg_r_2": {
+          "glb": "/3d-parts/diamond/leg_r_2/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.611
+          ],
+          "bytes": 1752,
+          "hash": "903164884cf5"
+        },
+        "leg_r_3": {
+          "glb": "/3d-parts/diamond/leg_r_3/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.611
+          ],
+          "bytes": 1756,
+          "hash": "0d8338dc4069"
         }
       },
       "baseSize": "160x80",
-      "unknowns": [
-        {
-          "name": "o135",
-          "materials": [
-            "Majestic_WhitePaint"
-          ],
-          "extents": [
-            0.05,
-            0.684,
-            0.05
-          ]
-        },
-        {
-          "name": "o136",
-          "materials": [
-            "Majestic_WhitePaint"
-          ],
-          "extents": [
-            0.05,
-            0.684,
-            0.05
-          ]
-        },
-        {
-          "name": "o145",
-          "materials": [
-            "Majestic_WhitePaint"
-          ],
-          "extents": [
-            0.05,
-            0.684,
-            0.05
-          ]
-        },
-        {
-          "name": "o146",
-          "materials": [
-            "Majestic_WhitePaint"
-          ],
-          "extents": [
-            0.05,
-            0.684,
-            0.05
-          ]
-        },
-        {
-          "name": "Cyc",
-          "materials": [
-            "Cyc_Gradient"
-          ],
-          "extents": [
-            30.0,
-            30.0,
-            0.0
-          ]
-        }
-      ],
-      "productKind": "desk"
+      "unknowns": []
     },
     "Operator": {
       "parts": {
@@ -1035,14 +854,10 @@
             0.03
           ],
           "bytes": 161644,
-          "hash": "e06ac11b5b19",
-          "source_object": "Box3084",
-          "source_materials": [
-            "A398_Italian_Walnut"
-          ]
+          "hash": "b0f6e846f33f"
         },
-        "frame_beam": {
-          "glb": "/3d-parts/diamond/frame_beam/operator.glb",
+        "frame_beam_0": {
+          "glb": "/3d-parts/diamond/frame_beam_0/operator.glb",
           "anchor": [
             0.0,
             0.0,
@@ -1054,14 +869,70 @@
             0.04
           ],
           "bytes": 1436,
-          "hash": "9dc94c6a91c7",
-          "source_object": "Box3086",
-          "source_materials": [
-            "Majestic_WhitePaint"
-          ]
+          "hash": "abd8aa489831"
         },
-        "feet_0": {
-          "glb": "/3d-parts/diamond/feet_0/operator.glb",
+        "frame_beam_1": {
+          "glb": "/3d-parts/diamond/frame_beam_1/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.574,
+            0.05
+          ],
+          "bytes": 1760,
+          "hash": "d5c61b218b56"
+        },
+        "frame_beam_2": {
+          "glb": "/3d-parts/diamond/frame_beam_2/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.574,
+            0.05
+          ],
+          "bytes": 1756,
+          "hash": "05cb57570232"
+        },
+        "frame_beam_3": {
+          "glb": "/3d-parts/diamond/frame_beam_3/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.574,
+            0.05
+          ],
+          "bytes": 1756,
+          "hash": "f7303735e136"
+        },
+        "frame_beam_4": {
+          "glb": "/3d-parts/diamond/frame_beam_4/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.574,
+            0.05
+          ],
+          "bytes": 1752,
+          "hash": "fae903ec70fd"
+        },
+        "grommet_0": {
+          "glb": "/3d-parts/diamond/grommet_0/operator.glb",
           "anchor": [
             0.0,
             0.0,
@@ -1073,14 +944,10 @@
             0.042
           ],
           "bytes": 2944,
-          "hash": "b272f0975bf7",
-          "source_object": "Line1226",
-          "source_materials": [
-            "Majestic_WhitePaint"
-          ]
+          "hash": "21bfc72fd4ae"
         },
-        "feet_1": {
-          "glb": "/3d-parts/diamond/feet_1/operator.glb",
+        "grommet_1": {
+          "glb": "/3d-parts/diamond/grommet_1/operator.glb",
           "anchor": [
             0.0,
             0.0,
@@ -1092,14 +959,10 @@
             0.042
           ],
           "bytes": 2892,
-          "hash": "b9440b80df4c",
-          "source_object": "Line1227",
-          "source_materials": [
-            "Majestic_WhitePaint"
-          ]
+          "hash": "479b6543e125"
         },
-        "feet_2": {
-          "glb": "/3d-parts/diamond/feet_2/operator.glb",
+        "grommet_2": {
+          "glb": "/3d-parts/diamond/grommet_2/operator.glb",
           "anchor": [
             0.0,
             0.0,
@@ -1110,129 +973,11 @@
             0.05,
             0.05
           ],
-          "bytes": 3420,
-          "hash": "66d04d50350a",
-          "source_object": "o259",
-          "source_materials": [
-            "Majestic_WhitePaint"
-          ]
+          "bytes": 3448,
+          "hash": "ef15eb0675db"
         },
-        "feet_3": {
-          "glb": "/3d-parts/diamond/feet_3/operator.glb",
-          "anchor": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "bbox": [
-            0.05,
-            0.05,
-            0.05
-          ],
-          "bytes": 2820,
-          "hash": "89f233435f96",
-          "source_object": "o260",
-          "source_materials": [
-            "Majestic_WhitePaint"
-          ]
-        },
-        "feet_4": {
-          "glb": "/3d-parts/diamond/feet_4/operator.glb",
-          "anchor": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "bbox": [
-            0.05,
-            0.05,
-            0.05
-          ],
-          "bytes": 3476,
-          "hash": "9157785d02d7",
-          "source_object": "o261",
-          "source_materials": [
-            "Majestic_WhitePaint"
-          ]
-        },
-        "feet_5": {
-          "glb": "/3d-parts/diamond/feet_5/operator.glb",
-          "anchor": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "bbox": [
-            0.05,
-            0.05,
-            0.05
-          ],
-          "bytes": 2816,
-          "hash": "b32c4819d663",
-          "source_object": "o262",
-          "source_materials": [
-            "Majestic_WhitePaint"
-          ]
-        },
-        "feet_6": {
-          "glb": "/3d-parts/diamond/feet_6/operator.glb",
-          "anchor": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "bbox": [
-            0.036,
-            0.036,
-            0.009
-          ],
-          "bytes": 10316,
-          "hash": "0f0deddd9a3c",
-          "source_object": "o263",
-          "source_materials": [
-            "Majestic_WhitePaint"
-          ]
-        },
-        "feet_7": {
-          "glb": "/3d-parts/diamond/feet_7/operator.glb",
-          "anchor": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "bbox": [
-            0.036,
-            0.036,
-            0.009
-          ],
-          "bytes": 17496,
-          "hash": "4fdc016548ee",
-          "source_object": "o264",
-          "source_materials": [
-            "Majestic_WhitePaint"
-          ]
-        },
-        "feet_8": {
-          "glb": "/3d-parts/diamond/feet_8/operator.glb",
-          "anchor": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "bbox": [
-            0.05,
-            0.05,
-            0.05
-          ],
-          "bytes": 3444,
-          "hash": "dcb6faa33b19",
-          "source_object": "o269",
-          "source_materials": [
-            "Majestic_WhitePaint"
-          ]
-        },
-        "feet_9": {
-          "glb": "/3d-parts/diamond/feet_9/operator.glb",
+        "grommet_3": {
+          "glb": "/3d-parts/diamond/grommet_3/operator.glb",
           "anchor": [
             0.0,
             0.0,
@@ -1244,14 +989,10 @@
             0.05
           ],
           "bytes": 2808,
-          "hash": "0394559d8050",
-          "source_object": "o270",
-          "source_materials": [
-            "Majestic_WhitePaint"
-          ]
+          "hash": "5c327372c5ef"
         },
-        "feet_10": {
-          "glb": "/3d-parts/diamond/feet_10/operator.glb",
+        "grommet_4": {
+          "glb": "/3d-parts/diamond/grommet_4/operator.glb",
           "anchor": [
             0.0,
             0.0,
@@ -1262,15 +1003,71 @@
             0.05,
             0.05
           ],
-          "bytes": 3456,
-          "hash": "ef4027882f76",
-          "source_object": "o271",
-          "source_materials": [
-            "Majestic_WhitePaint"
-          ]
+          "bytes": 3444,
+          "hash": "13fc552ac52d"
         },
-        "feet_11": {
-          "glb": "/3d-parts/diamond/feet_11/operator.glb",
+        "grommet_5": {
+          "glb": "/3d-parts/diamond/grommet_5/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 2808,
+          "hash": "df82711663c1"
+        },
+        "grommet_6": {
+          "glb": "/3d-parts/diamond/grommet_6/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.036,
+            0.036,
+            0.009
+          ],
+          "bytes": 10288,
+          "hash": "a2dec407872c"
+        },
+        "grommet_7": {
+          "glb": "/3d-parts/diamond/grommet_7/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.036,
+            0.036,
+            0.009
+          ],
+          "bytes": 17488,
+          "hash": "368985e63572"
+        },
+        "grommet_8": {
+          "glb": "/3d-parts/diamond/grommet_8/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 3436,
+          "hash": "572f13dbc1ac"
+        },
+        "grommet_9": {
+          "glb": "/3d-parts/diamond/grommet_9/operator.glb",
           "anchor": [
             0.0,
             0.0,
@@ -1282,14 +1079,40 @@
             0.05
           ],
           "bytes": 2800,
-          "hash": "a5f5ba365410",
-          "source_object": "o272",
-          "source_materials": [
-            "Majestic_WhitePaint"
-          ]
+          "hash": "956486784fa7"
         },
-        "feet_12": {
-          "glb": "/3d-parts/diamond/feet_12/operator.glb",
+        "grommet_10": {
+          "glb": "/3d-parts/diamond/grommet_10/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 3456,
+          "hash": "ad5c639a03a8"
+        },
+        "grommet_11": {
+          "glb": "/3d-parts/diamond/grommet_11/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 2816,
+          "hash": "eed64f722180"
+        },
+        "grommet_12": {
+          "glb": "/3d-parts/diamond/grommet_12/operator.glb",
           "anchor": [
             0.0,
             0.0,
@@ -1300,15 +1123,11 @@
             0.036,
             0.009
           ],
-          "bytes": 10320,
-          "hash": "a5e9c58b48f2",
-          "source_object": "o273",
-          "source_materials": [
-            "Majestic_WhitePaint"
-          ]
+          "bytes": 10296,
+          "hash": "9c41e0a888e1"
         },
-        "feet_13": {
-          "glb": "/3d-parts/diamond/feet_13/operator.glb",
+        "grommet_13": {
+          "glb": "/3d-parts/diamond/grommet_13/operator.glb",
           "anchor": [
             0.0,
             0.0,
@@ -1320,49 +1139,7 @@
             0.009
           ],
           "bytes": 17508,
-          "hash": "47e03856189d",
-          "source_object": "o274",
-          "source_materials": [
-            "Majestic_WhitePaint"
-          ]
-        },
-        "leg_l_0": {
-          "glb": "/3d-parts/diamond/leg_l_0/operator.glb",
-          "anchor": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "bbox": [
-            0.05,
-            0.05,
-            0.611
-          ],
-          "bytes": 1748,
-          "hash": "9325946364ae",
-          "source_object": "o267",
-          "source_materials": [
-            "Majestic_WhitePaint"
-          ]
-        },
-        "leg_l_1": {
-          "glb": "/3d-parts/diamond/leg_l_1/operator.glb",
-          "anchor": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "bbox": [
-            0.05,
-            0.05,
-            0.611
-          ],
-          "bytes": 1752,
-          "hash": "5942cbb79728",
-          "source_object": "o268",
-          "source_materials": [
-            "Majestic_WhitePaint"
-          ]
+          "hash": "88733c898898"
         },
         "leg_r_0": {
           "glb": "/3d-parts/diamond/leg_r_0/operator.glb",
@@ -1376,12 +1153,8 @@
             0.05,
             0.611
           ],
-          "bytes": 1744,
-          "hash": "0ebd0c630844",
-          "source_object": "o277",
-          "source_materials": [
-            "Majestic_WhitePaint"
-          ]
+          "bytes": 1752,
+          "hash": "fbf2685d7591"
         },
         "leg_r_1": {
           "glb": "/3d-parts/diamond/leg_r_1/operator.glb",
@@ -1395,74 +1168,4209 @@
             0.05,
             0.611
           ],
+          "bytes": 1752,
+          "hash": "e29cdc1a69f2"
+        },
+        "leg_r_2": {
+          "glb": "/3d-parts/diamond/leg_r_2/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.611
+          ],
+          "bytes": 1752,
+          "hash": "3372eefdfcdd"
+        },
+        "leg_r_3": {
+          "glb": "/3d-parts/diamond/leg_r_3/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.611
+          ],
           "bytes": 1748,
-          "hash": "4a902b42aa38",
-          "source_object": "o278",
-          "source_materials": [
-            "Majestic_WhitePaint"
-          ]
+          "hash": "800deaf98ebb"
         }
       },
       "baseSize": "140x70",
-      "unknowns": [
-        {
-          "name": "o265",
-          "materials": [
-            "Majestic_WhitePaint"
-          ],
-          "extents": [
-            0.05,
-            0.574,
-            0.05
-          ]
-        },
-        {
-          "name": "o266",
-          "materials": [
-            "Majestic_WhitePaint"
-          ],
-          "extents": [
-            0.05,
-            0.574,
-            0.05
-          ]
-        },
-        {
-          "name": "o275",
-          "materials": [
-            "Majestic_WhitePaint"
-          ],
-          "extents": [
-            0.05,
-            0.574,
-            0.05
-          ]
-        },
-        {
-          "name": "o276",
-          "materials": [
-            "Majestic_WhitePaint"
-          ],
-          "extents": [
-            0.05,
-            0.574,
-            0.05
-          ]
-        },
-        {
-          "name": "Cyc",
-          "materials": [
-            "Cyc_DarkGradient"
-          ],
-          "extents": [
-            30.0,
-            30.0,
+      "unknowns": []
+    },
+    "L-Shape": {
+      "parts": {
+        "top_0": {
+          "glb": "/3d-parts/diamond/top_0/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
             0.0
-          ]
+          ],
+          "bbox": [
+            1.6,
+            0.8,
+            0.03
+          ],
+          "bytes": 161616,
+          "hash": "2388a16b444e"
+        },
+        "top_1": {
+          "glb": "/3d-parts/diamond/top_1/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.5,
+            0.8,
+            0.03
+          ],
+          "bytes": 161616,
+          "hash": "abff8c0f7f2a"
+        },
+        "grommet_0": {
+          "glb": "/3d-parts/diamond/grommet_0/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.002,
+            0.026,
+            0.026
+          ],
+          "bytes": 8064,
+          "hash": "e1e86fdaa753"
+        },
+        "grommet_1": {
+          "glb": "/3d-parts/diamond/grommet_1/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.06,
+            0.06,
+            0.002
+          ],
+          "bytes": 3952,
+          "hash": "7dd4f99b0392"
+        },
+        "grommet_2": {
+          "glb": "/3d-parts/diamond/grommet_2/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.04,
+            0.04,
+            0.005
+          ],
+          "bytes": 1500,
+          "hash": "7d2a5e925bc2"
+        },
+        "grommet_3": {
+          "glb": "/3d-parts/diamond/grommet_3/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.04,
+            0.04,
+            0.053
+          ],
+          "bytes": 3768,
+          "hash": "c7caba6012fb"
+        },
+        "grommet_4": {
+          "glb": "/3d-parts/diamond/grommet_4/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.04,
+            0.04,
+            0.053
+          ],
+          "bytes": 3768,
+          "hash": "ae0ab609be99"
+        },
+        "grommet_5": {
+          "glb": "/3d-parts/diamond/grommet_5/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.06,
+            0.06,
+            0.002
+          ],
+          "bytes": 3952,
+          "hash": "cc4fdb533c40"
+        },
+        "grommet_6": {
+          "glb": "/3d-parts/diamond/grommet_6/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.04,
+            0.04,
+            0.005
+          ],
+          "bytes": 1500,
+          "hash": "cfbb797f915c"
+        },
+        "grommet_7": {
+          "glb": "/3d-parts/diamond/grommet_7/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.04,
+            0.04,
+            0.053
+          ],
+          "bytes": 3764,
+          "hash": "80a28657cace"
+        },
+        "grommet_8": {
+          "glb": "/3d-parts/diamond/grommet_8/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.06,
+            0.06,
+            0.002
+          ],
+          "bytes": 3932,
+          "hash": "147cfad10e75"
+        },
+        "grommet_9": {
+          "glb": "/3d-parts/diamond/grommet_9/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.04,
+            0.04,
+            0.005
+          ],
+          "bytes": 1500,
+          "hash": "643869a5c83b"
+        },
+        "grommet_10": {
+          "glb": "/3d-parts/diamond/grommet_10/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.04,
+            0.04,
+            0.053
+          ],
+          "bytes": 3764,
+          "hash": "a1461b224ad6"
+        },
+        "grommet_11": {
+          "glb": "/3d-parts/diamond/grommet_11/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.06,
+            0.06,
+            0.002
+          ],
+          "bytes": 3932,
+          "hash": "504e145f9ecb"
+        },
+        "grommet_12": {
+          "glb": "/3d-parts/diamond/grommet_12/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.04,
+            0.04,
+            0.005
+          ],
+          "bytes": 1500,
+          "hash": "b405bee981d3"
+        },
+        "grommet_13": {
+          "glb": "/3d-parts/diamond/grommet_13/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.06,
+            0.059,
+            0.13
+          ],
+          "bytes": 2272,
+          "hash": "7ff8182f005f"
+        },
+        "grommet_14": {
+          "glb": "/3d-parts/diamond/grommet_14/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.268,
+            0.02,
+            0.0
+          ],
+          "bytes": 1440,
+          "hash": "9784e555da85"
+        },
+        "grommet_15": {
+          "glb": "/3d-parts/diamond/grommet_15/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.267,
+            0.07,
+            0.002
+          ],
+          "bytes": 1400,
+          "hash": "62a8745de4a1"
+        },
+        "grommet_16": {
+          "glb": "/3d-parts/diamond/grommet_16/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.3,
+            0.108,
+            0.006
+          ],
+          "bytes": 1532,
+          "hash": "b923bfa849c0"
+        },
+        "grommet_17": {
+          "glb": "/3d-parts/diamond/grommet_17/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 2996,
+          "hash": "a91944300ab1"
+        },
+        "grommet_18": {
+          "glb": "/3d-parts/diamond/grommet_18/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 2940,
+          "hash": "8aa268ebe452"
+        },
+        "grommet_19": {
+          "glb": "/3d-parts/diamond/grommet_19/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 3004,
+          "hash": "f0e78d6767ed"
+        },
+        "grommet_20": {
+          "glb": "/3d-parts/diamond/grommet_20/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 2944,
+          "hash": "d4986fc79ce0"
+        },
+        "grommet_21": {
+          "glb": "/3d-parts/diamond/grommet_21/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 3504,
+          "hash": "6df3ee7614f3"
+        },
+        "grommet_22": {
+          "glb": "/3d-parts/diamond/grommet_22/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 2860,
+          "hash": "cf2c6e67d5a9"
+        },
+        "grommet_23": {
+          "glb": "/3d-parts/diamond/grommet_23/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 3556,
+          "hash": "5b10b1633cce"
+        },
+        "grommet_24": {
+          "glb": "/3d-parts/diamond/grommet_24/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 2868,
+          "hash": "07b0117e1f18"
+        },
+        "grommet_25": {
+          "glb": "/3d-parts/diamond/grommet_25/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.036,
+            0.036,
+            0.009
+          ],
+          "bytes": 10372,
+          "hash": "c64ec0d51b41"
+        },
+        "grommet_26": {
+          "glb": "/3d-parts/diamond/grommet_26/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.036,
+            0.036,
+            0.009
+          ],
+          "bytes": 17772,
+          "hash": "f923709100a2"
+        },
+        "grommet_27": {
+          "glb": "/3d-parts/diamond/grommet_27/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 3544,
+          "hash": "f0365f4f8623"
+        },
+        "grommet_28": {
+          "glb": "/3d-parts/diamond/grommet_28/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 2876,
+          "hash": "0cfef839024e"
+        },
+        "grommet_29": {
+          "glb": "/3d-parts/diamond/grommet_29/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 3544,
+          "hash": "053a1d7db15b"
+        },
+        "grommet_30": {
+          "glb": "/3d-parts/diamond/grommet_30/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 2868,
+          "hash": "12b22183bdd4"
+        },
+        "grommet_31": {
+          "glb": "/3d-parts/diamond/grommet_31/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.036,
+            0.036,
+            0.009
+          ],
+          "bytes": 10320,
+          "hash": "876cab1ccaf2"
+        },
+        "grommet_32": {
+          "glb": "/3d-parts/diamond/grommet_32/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.036,
+            0.036,
+            0.009
+          ],
+          "bytes": 18424,
+          "hash": "7c763613a15c"
+        },
+        "handle_0": {
+          "glb": "/3d-parts/diamond/handle_0/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.026,
+            0.167,
+            0.01
+          ],
+          "bytes": 11652,
+          "hash": "5cb8a8729516"
+        },
+        "handle_1": {
+          "glb": "/3d-parts/diamond/handle_1/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.026,
+            0.167,
+            0.01
+          ],
+          "bytes": 11648,
+          "hash": "3004b9f8064f"
+        },
+        "handle_2": {
+          "glb": "/3d-parts/diamond/handle_2/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.026,
+            0.167,
+            0.01
+          ],
+          "bytes": 11636,
+          "hash": "481070dfc828"
+        },
+        "pedestal_0": {
+          "glb": "/3d-parts/diamond/pedestal_0/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.498,
+            0.402,
+            0.019
+          ],
+          "bytes": 1532,
+          "hash": "dd253321c8bb"
+        },
+        "pedestal_1": {
+          "glb": "/3d-parts/diamond/pedestal_1/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.015,
+            0.402,
+            0.519
+          ],
+          "bytes": 1740,
+          "hash": "5edf74fb68d8"
+        },
+        "pedestal_2": {
+          "glb": "/3d-parts/diamond/pedestal_2/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.459,
+            0.345,
+            0.06
+          ],
+          "bytes": 10040,
+          "hash": "81136b329a70"
+        },
+        "pedestal_3": {
+          "glb": "/3d-parts/diamond/pedestal_3/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.487,
+            0.402,
+            0.522
+          ],
+          "bytes": 1912,
+          "hash": "f201624f28d1"
+        },
+        "pedestal_4": {
+          "glb": "/3d-parts/diamond/pedestal_4/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.015,
+            0.402,
+            0.519
+          ],
+          "bytes": 1780,
+          "hash": "e5f4d2cc23b8"
+        },
+        "pedestal_body": {
+          "glb": "/3d-parts/diamond/pedestal_body/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.487,
+            0.402,
+            0.522
+          ],
+          "bytes": 1876,
+          "hash": "7940d4685f82"
+        },
+        "frame_beam_0": {
+          "glb": "/3d-parts/diamond/frame_beam_0/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.448,
+            0.04,
+            0.04
+          ],
+          "bytes": 1484,
+          "hash": "67bbf628bf35"
+        },
+        "frame_beam_1": {
+          "glb": "/3d-parts/diamond/frame_beam_1/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.448,
+            0.04,
+            0.04
+          ],
+          "bytes": 1488,
+          "hash": "e86a31901c54"
+        },
+        "frame_beam_2": {
+          "glb": "/3d-parts/diamond/frame_beam_2/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.684,
+            0.05
+          ],
+          "bytes": 1804,
+          "hash": "f93db14b9760"
+        },
+        "frame_beam_3": {
+          "glb": "/3d-parts/diamond/frame_beam_3/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.684,
+            0.05
+          ],
+          "bytes": 1792,
+          "hash": "6df19a963722"
+        },
+        "frame_beam_4": {
+          "glb": "/3d-parts/diamond/frame_beam_4/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.684,
+            0.05
+          ],
+          "bytes": 1800,
+          "hash": "79a4ccc9d601"
+        },
+        "frame_beam_5": {
+          "glb": "/3d-parts/diamond/frame_beam_5/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.684,
+            0.05
+          ],
+          "bytes": 1796,
+          "hash": "12a75b865216"
+        },
+        "leg_r_0": {
+          "glb": "/3d-parts/diamond/leg_r_0/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.3,
+            0.018,
+            0.35
+          ],
+          "bytes": 1536,
+          "hash": "67fda838c1db"
+        },
+        "leg_r_1": {
+          "glb": "/3d-parts/diamond/leg_r_1/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.611
+          ],
+          "bytes": 1808,
+          "hash": "86191b169a00"
+        },
+        "leg_r_2": {
+          "glb": "/3d-parts/diamond/leg_r_2/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.611
+          ],
+          "bytes": 1808,
+          "hash": "96ea107d6dd0"
+        },
+        "leg_r_3": {
+          "glb": "/3d-parts/diamond/leg_r_3/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.611
+          ],
+          "bytes": 1812,
+          "hash": "1f1efaf4a77a"
+        },
+        "leg_r_4": {
+          "glb": "/3d-parts/diamond/leg_r_4/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.611
+          ],
+          "bytes": 1812,
+          "hash": "addb7f50b16f"
+        },
+        "pedestal_handle_0": {
+          "glb": "/3d-parts/diamond/pedestal_handle_0/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.002,
+            0.026,
+            0.026
+          ],
+          "bytes": 8104,
+          "hash": "bab709166c46"
+        },
+        "pedestal_handle_1": {
+          "glb": "/3d-parts/diamond/pedestal_handle_1/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.026,
+            0.167,
+            0.01
+          ],
+          "bytes": 11656,
+          "hash": "8c954de32eb4"
+        },
+        "pedestal_handle_2": {
+          "glb": "/3d-parts/diamond/pedestal_handle_2/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.026,
+            0.167,
+            0.01
+          ],
+          "bytes": 11668,
+          "hash": "da1691d26188"
+        },
+        "pedestal_handle_3": {
+          "glb": "/3d-parts/diamond/pedestal_handle_3/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.026,
+            0.167,
+            0.01
+          ],
+          "bytes": 11672,
+          "hash": "e766b12407ab"
+        },
+        "pedestal_top": {
+          "glb": "/3d-parts/diamond/pedestal_top/l-shape.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.498,
+            0.402,
+            0.019
+          ],
+          "bytes": 1568,
+          "hash": "24a6be8c4255"
         }
-      ],
-      "productKind": "desk"
+      },
+      "baseSize": null,
+      "unknowns": []
+    },
+    "Meeting 4P": {
+      "parts": {
+        "top": {
+          "glb": "/3d-parts/diamond/top/meeting-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.2,
+            1.2,
+            0.03
+          ],
+          "bytes": 161572,
+          "hash": "e8a5ef9be994"
+        },
+        "grommet_0": {
+          "glb": "/3d-parts/diamond/grommet_0/meeting-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.268,
+            0.02,
+            0.0
+          ],
+          "bytes": 1460,
+          "hash": "90acb0ac9dbc"
+        },
+        "grommet_1": {
+          "glb": "/3d-parts/diamond/grommet_1/meeting-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.267,
+            0.07,
+            0.002
+          ],
+          "bytes": 1420,
+          "hash": "dfa2cd972a10"
+        },
+        "grommet_2": {
+          "glb": "/3d-parts/diamond/grommet_2/meeting-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.3,
+            0.108,
+            0.006
+          ],
+          "bytes": 1552,
+          "hash": "acc2dc6ba785"
+        },
+        "grommet_3": {
+          "glb": "/3d-parts/diamond/grommet_3/meeting-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.041,
+            0.253,
+            0.0
+          ],
+          "bytes": 1464,
+          "hash": "04fa4461258c"
+        },
+        "grommet_4": {
+          "glb": "/3d-parts/diamond/grommet_4/meeting-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.142,
+            0.234,
+            0.002
+          ],
+          "bytes": 1424,
+          "hash": "16e56f3968a3"
+        },
+        "grommet_5": {
+          "glb": "/3d-parts/diamond/grommet_5/meeting-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.22,
+            0.278,
+            0.006
+          ],
+          "bytes": 1568,
+          "hash": "2a6b56b2982e"
+        },
+        "grommet_6": {
+          "glb": "/3d-parts/diamond/grommet_6/meeting-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 3012,
+          "hash": "a910d1439473"
+        },
+        "grommet_7": {
+          "glb": "/3d-parts/diamond/grommet_7/meeting-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 2956,
+          "hash": "b3bc3df8f669"
+        },
+        "grommet_8": {
+          "glb": "/3d-parts/diamond/grommet_8/meeting-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 3012,
+          "hash": "43f1296d8e3f"
+        },
+        "grommet_9": {
+          "glb": "/3d-parts/diamond/grommet_9/meeting-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 2956,
+          "hash": "80597418da0e"
+        },
+        "grommet_10": {
+          "glb": "/3d-parts/diamond/grommet_10/meeting-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 3592,
+          "hash": "b953327bb5d5"
+        },
+        "grommet_11": {
+          "glb": "/3d-parts/diamond/grommet_11/meeting-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 2916,
+          "hash": "7c2784a18770"
+        },
+        "grommet_12": {
+          "glb": "/3d-parts/diamond/grommet_12/meeting-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 3620,
+          "hash": "1f1941a50b8c"
+        },
+        "grommet_13": {
+          "glb": "/3d-parts/diamond/grommet_13/meeting-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 2912,
+          "hash": "a9a05fac13b3"
+        },
+        "grommet_14": {
+          "glb": "/3d-parts/diamond/grommet_14/meeting-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.036,
+            0.036,
+            0.009
+          ],
+          "bytes": 10336,
+          "hash": "59028d3626f2"
+        },
+        "grommet_15": {
+          "glb": "/3d-parts/diamond/grommet_15/meeting-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.036,
+            0.036,
+            0.009
+          ],
+          "bytes": 18616,
+          "hash": "71aa1d1593a1"
+        },
+        "grommet_16": {
+          "glb": "/3d-parts/diamond/grommet_16/meeting-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 3540,
+          "hash": "a24e62b6cde7"
+        },
+        "grommet_17": {
+          "glb": "/3d-parts/diamond/grommet_17/meeting-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 2900,
+          "hash": "30a6c722ad5f"
+        },
+        "grommet_18": {
+          "glb": "/3d-parts/diamond/grommet_18/meeting-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 3580,
+          "hash": "1160f7f057ff"
+        },
+        "grommet_19": {
+          "glb": "/3d-parts/diamond/grommet_19/meeting-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 2900,
+          "hash": "a25515a06e01"
+        },
+        "grommet_20": {
+          "glb": "/3d-parts/diamond/grommet_20/meeting-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.036,
+            0.036,
+            0.009
+          ],
+          "bytes": 10392,
+          "hash": "be6cd105f042"
+        },
+        "grommet_21": {
+          "glb": "/3d-parts/diamond/grommet_21/meeting-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.036,
+            0.036,
+            0.009
+          ],
+          "bytes": 17964,
+          "hash": "fcbe3e195f4a"
+        },
+        "frame_beam_0": {
+          "glb": "/3d-parts/diamond/frame_beam_0/meeting-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.068,
+            0.04,
+            0.04
+          ],
+          "bytes": 1512,
+          "hash": "996926f5f384"
+        },
+        "frame_beam_1": {
+          "glb": "/3d-parts/diamond/frame_beam_1/meeting-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.068,
+            0.04,
+            0.04
+          ],
+          "bytes": 1512,
+          "hash": "6ed38819061a"
+        },
+        "frame_beam_2": {
+          "glb": "/3d-parts/diamond/frame_beam_2/meeting-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            1.079,
+            0.05
+          ],
+          "bytes": 1824,
+          "hash": "b0501615f0de"
+        },
+        "frame_beam_3": {
+          "glb": "/3d-parts/diamond/frame_beam_3/meeting-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            1.079,
+            0.05
+          ],
+          "bytes": 1824,
+          "hash": "e70c0ae5254e"
+        },
+        "frame_beam_4": {
+          "glb": "/3d-parts/diamond/frame_beam_4/meeting-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            1.079,
+            0.05
+          ],
+          "bytes": 1816,
+          "hash": "42111918aba4"
+        },
+        "frame_beam_5": {
+          "glb": "/3d-parts/diamond/frame_beam_5/meeting-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            1.079,
+            0.05
+          ],
+          "bytes": 1816,
+          "hash": "88c9bf839c35"
+        },
+        "leg_r_0": {
+          "glb": "/3d-parts/diamond/leg_r_0/meeting-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.611
+          ],
+          "bytes": 1840,
+          "hash": "c4a25eed0fdf"
+        },
+        "leg_r_1": {
+          "glb": "/3d-parts/diamond/leg_r_1/meeting-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.611
+          ],
+          "bytes": 1832,
+          "hash": "b251e0cf083f"
+        },
+        "leg_r_2": {
+          "glb": "/3d-parts/diamond/leg_r_2/meeting-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.611
+          ],
+          "bytes": 1828,
+          "hash": "65e8c3ae86ab"
+        },
+        "leg_r_3": {
+          "glb": "/3d-parts/diamond/leg_r_3/meeting-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.611
+          ],
+          "bytes": 1828,
+          "hash": "e1d99156e1a1"
+        }
+      },
+      "baseSize": "120x120",
+      "unknowns": []
+    },
+    "Meeting Large": {
+      "parts": {
+        "top_0": {
+          "glb": "/3d-parts/diamond/top_0/meeting-large.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.6,
+            1.4,
+            0.03
+          ],
+          "bytes": 161632,
+          "hash": "3b9148010879"
+        },
+        "top_1": {
+          "glb": "/3d-parts/diamond/top_1/meeting-large.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.6,
+            1.4,
+            0.03
+          ],
+          "bytes": 161636,
+          "hash": "5d61d1d36c46"
+        },
+        "frame_beam_0": {
+          "glb": "/3d-parts/diamond/frame_beam_0/meeting-large.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.392,
+            0.02,
+            0.0
+          ],
+          "bytes": 1464,
+          "hash": "18d23c2dda19"
+        },
+        "frame_beam_1": {
+          "glb": "/3d-parts/diamond/frame_beam_1/meeting-large.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.392,
+            0.02,
+            0.0
+          ],
+          "bytes": 1464,
+          "hash": "8961ae99a570"
+        },
+        "frame_beam_2": {
+          "glb": "/3d-parts/diamond/frame_beam_2/meeting-large.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.392,
+            0.02,
+            0.0
+          ],
+          "bytes": 1460,
+          "hash": "05b890458ca1"
+        },
+        "frame_beam_3": {
+          "glb": "/3d-parts/diamond/frame_beam_3/meeting-large.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.392,
+            0.02,
+            0.0
+          ],
+          "bytes": 1460,
+          "hash": "b82d28a6950d"
+        },
+        "frame_beam_4": {
+          "glb": "/3d-parts/diamond/frame_beam_4/meeting-large.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.487,
+            0.04,
+            0.04
+          ],
+          "bytes": 1508,
+          "hash": "f4c2e0f5070a"
+        },
+        "frame_beam_5": {
+          "glb": "/3d-parts/diamond/frame_beam_5/meeting-large.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.486,
+            0.04,
+            0.04
+          ],
+          "bytes": 1508,
+          "hash": "325d3fcb05dd"
+        },
+        "frame_beam_6": {
+          "glb": "/3d-parts/diamond/frame_beam_6/meeting-large.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.487,
+            0.04,
+            0.04
+          ],
+          "bytes": 1508,
+          "hash": "6a4f0a0ff8b0"
+        },
+        "frame_beam_7": {
+          "glb": "/3d-parts/diamond/frame_beam_7/meeting-large.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.486,
+            0.04,
+            0.04
+          ],
+          "bytes": 1504,
+          "hash": "1477a077b691"
+        },
+        "frame_beam_8": {
+          "glb": "/3d-parts/diamond/frame_beam_8/meeting-large.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.487,
+            0.04,
+            0.04
+          ],
+          "bytes": 1508,
+          "hash": "d08d9caf7875"
+        },
+        "frame_beam_9": {
+          "glb": "/3d-parts/diamond/frame_beam_9/meeting-large.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.486,
+            0.04,
+            0.04
+          ],
+          "bytes": 1508,
+          "hash": "5deb3dec8d6a"
+        },
+        "frame_beam_10": {
+          "glb": "/3d-parts/diamond/frame_beam_10/meeting-large.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.487,
+            0.04,
+            0.04
+          ],
+          "bytes": 1508,
+          "hash": "0ecb9713774d"
+        },
+        "frame_beam_11": {
+          "glb": "/3d-parts/diamond/frame_beam_11/meeting-large.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.486,
+            0.04,
+            0.04
+          ],
+          "bytes": 1504,
+          "hash": "959332f31e19"
+        },
+        "frame_beam_12": {
+          "glb": "/3d-parts/diamond/frame_beam_12/meeting-large.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            1.279,
+            0.05
+          ],
+          "bytes": 1816,
+          "hash": "e389035e8b1a"
+        },
+        "frame_beam_13": {
+          "glb": "/3d-parts/diamond/frame_beam_13/meeting-large.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            1.279,
+            0.05
+          ],
+          "bytes": 1824,
+          "hash": "d452ae3cdf0c"
+        },
+        "frame_beam_14": {
+          "glb": "/3d-parts/diamond/frame_beam_14/meeting-large.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.101,
+            1.091,
+            0.05
+          ],
+          "bytes": 1544,
+          "hash": "00ced4f35779"
+        },
+        "frame_beam_15": {
+          "glb": "/3d-parts/diamond/frame_beam_15/meeting-large.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.03,
+            0.659,
+            0.018
+          ],
+          "bytes": 11200,
+          "hash": "eac1e88765f9"
+        },
+        "frame_beam_16": {
+          "glb": "/3d-parts/diamond/frame_beam_16/meeting-large.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            1.279,
+            0.05
+          ],
+          "bytes": 1820,
+          "hash": "14014b360101"
+        },
+        "frame_beam_17": {
+          "glb": "/3d-parts/diamond/frame_beam_17/meeting-large.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            1.279,
+            0.05
+          ],
+          "bytes": 1824,
+          "hash": "cdcba7a5aaa1"
+        },
+        "grommet_0": {
+          "glb": "/3d-parts/diamond/grommet_0/meeting-large.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.383,
+            0.092,
+            0.002
+          ],
+          "bytes": 1420,
+          "hash": "715253674d53"
+        },
+        "grommet_1": {
+          "glb": "/3d-parts/diamond/grommet_1/meeting-large.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.417,
+            0.144,
+            0.006
+          ],
+          "bytes": 1548,
+          "hash": "bf0875589392"
+        },
+        "grommet_2": {
+          "glb": "/3d-parts/diamond/grommet_2/meeting-large.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.383,
+            0.092,
+            0.002
+          ],
+          "bytes": 1420,
+          "hash": "37b85d48992f"
+        },
+        "grommet_3": {
+          "glb": "/3d-parts/diamond/grommet_3/meeting-large.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.417,
+            0.144,
+            0.006
+          ],
+          "bytes": 1548,
+          "hash": "4fc891a1c5aa"
+        },
+        "grommet_4": {
+          "glb": "/3d-parts/diamond/grommet_4/meeting-large.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 3020,
+          "hash": "06cd4acd608a"
+        },
+        "grommet_5": {
+          "glb": "/3d-parts/diamond/grommet_5/meeting-large.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 2972,
+          "hash": "36920fda729b"
+        },
+        "grommet_6": {
+          "glb": "/3d-parts/diamond/grommet_6/meeting-large.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 3024,
+          "hash": "0c2f6e60c8ad"
+        },
+        "grommet_7": {
+          "glb": "/3d-parts/diamond/grommet_7/meeting-large.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 2972,
+          "hash": "10f6242be001"
+        },
+        "grommet_8": {
+          "glb": "/3d-parts/diamond/grommet_8/meeting-large.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 3024,
+          "hash": "fbf14b368beb"
+        },
+        "grommet_9": {
+          "glb": "/3d-parts/diamond/grommet_9/meeting-large.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 2972,
+          "hash": "6370da3a3ebf"
+        },
+        "grommet_10": {
+          "glb": "/3d-parts/diamond/grommet_10/meeting-large.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 3020,
+          "hash": "03e5ee101461"
+        },
+        "grommet_11": {
+          "glb": "/3d-parts/diamond/grommet_11/meeting-large.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 2980,
+          "hash": "15ff53ec8bea"
+        },
+        "grommet_12": {
+          "glb": "/3d-parts/diamond/grommet_12/meeting-large.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 3016,
+          "hash": "214c4844b49b"
+        },
+        "grommet_13": {
+          "glb": "/3d-parts/diamond/grommet_13/meeting-large.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 3016,
+          "hash": "6fb7dc74be3d"
+        },
+        "grommet_14": {
+          "glb": "/3d-parts/diamond/grommet_14/meeting-large.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 3020,
+          "hash": "ee3ce209125f"
+        },
+        "grommet_15": {
+          "glb": "/3d-parts/diamond/grommet_15/meeting-large.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 3020,
+          "hash": "1aad331f32b2"
+        },
+        "grommet_16": {
+          "glb": "/3d-parts/diamond/grommet_16/meeting-large.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 3544,
+          "hash": "ad292b9f19af"
+        },
+        "grommet_17": {
+          "glb": "/3d-parts/diamond/grommet_17/meeting-large.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 2908,
+          "hash": "907cba1f2d6b"
+        },
+        "grommet_18": {
+          "glb": "/3d-parts/diamond/grommet_18/meeting-large.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 3568,
+          "hash": "3f6fc6710d7e"
+        },
+        "grommet_19": {
+          "glb": "/3d-parts/diamond/grommet_19/meeting-large.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 2912,
+          "hash": "5033b1d37d04"
+        },
+        "grommet_20": {
+          "glb": "/3d-parts/diamond/grommet_20/meeting-large.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.036,
+            0.036,
+            0.009
+          ],
+          "bytes": 10400,
+          "hash": "6e0bb6985466"
+        },
+        "grommet_21": {
+          "glb": "/3d-parts/diamond/grommet_21/meeting-large.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.036,
+            0.036,
+            0.009
+          ],
+          "bytes": 17716,
+          "hash": "c874a14c333a"
+        },
+        "grommet_22": {
+          "glb": "/3d-parts/diamond/grommet_22/meeting-large.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 3548,
+          "hash": "bb61721d1f50"
+        },
+        "grommet_23": {
+          "glb": "/3d-parts/diamond/grommet_23/meeting-large.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 2924,
+          "hash": "4e86775e92c5"
+        },
+        "grommet_24": {
+          "glb": "/3d-parts/diamond/grommet_24/meeting-large.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 3616,
+          "hash": "5967c457afc9"
+        },
+        "grommet_25": {
+          "glb": "/3d-parts/diamond/grommet_25/meeting-large.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 2920,
+          "hash": "16217be5682f"
+        },
+        "grommet_26": {
+          "glb": "/3d-parts/diamond/grommet_26/meeting-large.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.036,
+            0.036,
+            0.009
+          ],
+          "bytes": 10332,
+          "hash": "1463266d4f68"
+        },
+        "grommet_27": {
+          "glb": "/3d-parts/diamond/grommet_27/meeting-large.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.036,
+            0.036,
+            0.009
+          ],
+          "bytes": 18396,
+          "hash": "d35857283bd9"
+        },
+        "leg_r_0": {
+          "glb": "/3d-parts/diamond/leg_r_0/meeting-large.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.611
+          ],
+          "bytes": 1824,
+          "hash": "e3c4c3a31542"
+        },
+        "leg_r_1": {
+          "glb": "/3d-parts/diamond/leg_r_1/meeting-large.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.611
+          ],
+          "bytes": 1832,
+          "hash": "560180806884"
+        },
+        "leg_r_2": {
+          "glb": "/3d-parts/diamond/leg_r_2/meeting-large.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.01,
+            0.599,
+            0.608
+          ],
+          "bytes": 1672,
+          "hash": "1d67924f4d0b"
+        },
+        "leg_r_3": {
+          "glb": "/3d-parts/diamond/leg_r_3/meeting-large.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.01,
+            0.599,
+            0.608
+          ],
+          "bytes": 1672,
+          "hash": "d14c0d0d1530"
+        },
+        "leg_r_4": {
+          "glb": "/3d-parts/diamond/leg_r_4/meeting-large.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.028,
+            0.656
+          ],
+          "bytes": 1536,
+          "hash": "eadef3e3f24c"
+        },
+        "leg_r_5": {
+          "glb": "/3d-parts/diamond/leg_r_5/meeting-large.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.028,
+            0.656
+          ],
+          "bytes": 1536,
+          "hash": "a609600480b2"
+        },
+        "leg_r_6": {
+          "glb": "/3d-parts/diamond/leg_r_6/meeting-large.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.611
+          ],
+          "bytes": 1832,
+          "hash": "098aed4577bf"
+        },
+        "leg_r_7": {
+          "glb": "/3d-parts/diamond/leg_r_7/meeting-large.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.611
+          ],
+          "bytes": 1828,
+          "hash": "dad979101dc9"
+        }
+      },
+      "baseSize": null,
+      "unknowns": []
+    },
+    "Workstation 4P": {
+      "parts": {
+        "top_0": {
+          "glb": "/3d-parts/diamond/top_0/workstation-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.4,
+            0.7,
+            0.03
+          ],
+          "bytes": 161592,
+          "hash": "9f7e414090e2"
+        },
+        "top_1": {
+          "glb": "/3d-parts/diamond/top_1/workstation-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.4,
+            0.7,
+            0.03
+          ],
+          "bytes": 161592,
+          "hash": "13abbf7e6f02"
+        },
+        "top_2": {
+          "glb": "/3d-parts/diamond/top_2/workstation-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.4,
+            0.7,
+            0.03
+          ],
+          "bytes": 161596,
+          "hash": "c0187c71dfc6"
+        },
+        "top_3": {
+          "glb": "/3d-parts/diamond/top_3/workstation-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.4,
+            0.7,
+            0.03
+          ],
+          "bytes": 161592,
+          "hash": "6309007ad7b2"
+        },
+        "frame_beam_0": {
+          "glb": "/3d-parts/diamond/frame_beam_0/workstation-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.101,
+            1.01,
+            0.05
+          ],
+          "bytes": 1536,
+          "hash": "fd66adae9688"
+        },
+        "frame_beam_1": {
+          "glb": "/3d-parts/diamond/frame_beam_1/workstation-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.283,
+            0.04,
+            0.04
+          ],
+          "bytes": 1508,
+          "hash": "b2edf665933d"
+        },
+        "frame_beam_2": {
+          "glb": "/3d-parts/diamond/frame_beam_2/workstation-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.03,
+            0.61,
+            0.018
+          ],
+          "bytes": 11376,
+          "hash": "20dfff556bd7"
+        },
+        "frame_beam_3": {
+          "glb": "/3d-parts/diamond/frame_beam_3/workstation-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.283,
+            0.04,
+            0.04
+          ],
+          "bytes": 1508,
+          "hash": "4eb27c5ba191"
+        },
+        "frame_beam_4": {
+          "glb": "/3d-parts/diamond/frame_beam_4/workstation-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.283,
+            0.04,
+            0.04
+          ],
+          "bytes": 1508,
+          "hash": "efa607e889f0"
+        },
+        "frame_beam_5": {
+          "glb": "/3d-parts/diamond/frame_beam_5/workstation-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.283,
+            0.04,
+            0.04
+          ],
+          "bytes": 1508,
+          "hash": "b2364990508c"
+        },
+        "frame_beam_6": {
+          "glb": "/3d-parts/diamond/frame_beam_6/workstation-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            1.279,
+            0.05
+          ],
+          "bytes": 1832,
+          "hash": "e011a48fdf2b"
+        },
+        "frame_beam_7": {
+          "glb": "/3d-parts/diamond/frame_beam_7/workstation-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            1.279,
+            0.05
+          ],
+          "bytes": 1840,
+          "hash": "83a1aef99496"
+        },
+        "frame_beam_8": {
+          "glb": "/3d-parts/diamond/frame_beam_8/workstation-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            1.279,
+            0.05
+          ],
+          "bytes": 1836,
+          "hash": "ac6fc33a93fa"
+        },
+        "frame_beam_9": {
+          "glb": "/3d-parts/diamond/frame_beam_9/workstation-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            1.279,
+            0.05
+          ],
+          "bytes": 1832,
+          "hash": "31145df729db"
+        },
+        "leg_r_0": {
+          "glb": "/3d-parts/diamond/leg_r_0/workstation-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.026,
+            0.656
+          ],
+          "bytes": 1532,
+          "hash": "3fe466608469"
+        },
+        "leg_r_1": {
+          "glb": "/3d-parts/diamond/leg_r_1/workstation-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.026,
+            0.656
+          ],
+          "bytes": 1532,
+          "hash": "2ecc7185d1f4"
+        },
+        "leg_r_2": {
+          "glb": "/3d-parts/diamond/leg_r_2/workstation-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.01,
+            0.554,
+            0.608
+          ],
+          "bytes": 1664,
+          "hash": "921189ac2804"
+        },
+        "leg_r_3": {
+          "glb": "/3d-parts/diamond/leg_r_3/workstation-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.01,
+            0.554,
+            0.608
+          ],
+          "bytes": 1664,
+          "hash": "d11fc6005696"
+        },
+        "leg_r_4": {
+          "glb": "/3d-parts/diamond/leg_r_4/workstation-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.611
+          ],
+          "bytes": 1824,
+          "hash": "4225b9ce7651"
+        },
+        "leg_r_5": {
+          "glb": "/3d-parts/diamond/leg_r_5/workstation-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.611
+          ],
+          "bytes": 1828,
+          "hash": "22dd134402a7"
+        },
+        "leg_r_6": {
+          "glb": "/3d-parts/diamond/leg_r_6/workstation-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.611
+          ],
+          "bytes": 1832,
+          "hash": "abd8da823b6e"
+        },
+        "leg_r_7": {
+          "glb": "/3d-parts/diamond/leg_r_7/workstation-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.611
+          ],
+          "bytes": 1828,
+          "hash": "044853bd1eea"
+        },
+        "grommet_0": {
+          "glb": "/3d-parts/diamond/grommet_0/workstation-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 3020,
+          "hash": "3f0b6dbed0ca"
+        },
+        "grommet_1": {
+          "glb": "/3d-parts/diamond/grommet_1/workstation-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 2968,
+          "hash": "e88cc153cb0e"
+        },
+        "grommet_2": {
+          "glb": "/3d-parts/diamond/grommet_2/workstation-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 3020,
+          "hash": "f08d372648cb"
+        },
+        "grommet_3": {
+          "glb": "/3d-parts/diamond/grommet_3/workstation-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 2964,
+          "hash": "3ace8b9986bc"
+        },
+        "grommet_4": {
+          "glb": "/3d-parts/diamond/grommet_4/workstation-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 3016,
+          "hash": "0b1ce76e6cba"
+        },
+        "grommet_5": {
+          "glb": "/3d-parts/diamond/grommet_5/workstation-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 2964,
+          "hash": "98ee55db64e2"
+        },
+        "grommet_6": {
+          "glb": "/3d-parts/diamond/grommet_6/workstation-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 3016,
+          "hash": "b4c42c3b3194"
+        },
+        "grommet_7": {
+          "glb": "/3d-parts/diamond/grommet_7/workstation-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.042,
+            0.041,
+            0.042
+          ],
+          "bytes": 2964,
+          "hash": "856795a7c3ce"
+        },
+        "grommet_8": {
+          "glb": "/3d-parts/diamond/grommet_8/workstation-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.268,
+            0.02,
+            0.0
+          ],
+          "bytes": 1456,
+          "hash": "5c6b25e2f5cb"
+        },
+        "grommet_9": {
+          "glb": "/3d-parts/diamond/grommet_9/workstation-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.267,
+            0.07,
+            0.002
+          ],
+          "bytes": 1420,
+          "hash": "9ecd49075716"
+        },
+        "grommet_10": {
+          "glb": "/3d-parts/diamond/grommet_10/workstation-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.3,
+            0.108,
+            0.006
+          ],
+          "bytes": 1552,
+          "hash": "82d5e84abc16"
+        },
+        "grommet_11": {
+          "glb": "/3d-parts/diamond/grommet_11/workstation-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.268,
+            0.02,
+            0.0
+          ],
+          "bytes": 1460,
+          "hash": "0d1eaa3da80f"
+        },
+        "grommet_12": {
+          "glb": "/3d-parts/diamond/grommet_12/workstation-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.267,
+            0.07,
+            0.002
+          ],
+          "bytes": 1420,
+          "hash": "0709484322fc"
+        },
+        "grommet_13": {
+          "glb": "/3d-parts/diamond/grommet_13/workstation-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.3,
+            0.108,
+            0.006
+          ],
+          "bytes": 1548,
+          "hash": "2e4a24ef1f5f"
+        },
+        "grommet_14": {
+          "glb": "/3d-parts/diamond/grommet_14/workstation-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.268,
+            0.02,
+            0.0
+          ],
+          "bytes": 1456,
+          "hash": "90f41f311e19"
+        },
+        "grommet_15": {
+          "glb": "/3d-parts/diamond/grommet_15/workstation-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.267,
+            0.07,
+            0.002
+          ],
+          "bytes": 1420,
+          "hash": "ac244d1328cb"
+        },
+        "grommet_16": {
+          "glb": "/3d-parts/diamond/grommet_16/workstation-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.3,
+            0.108,
+            0.006
+          ],
+          "bytes": 1548,
+          "hash": "80646f042874"
+        },
+        "grommet_17": {
+          "glb": "/3d-parts/diamond/grommet_17/workstation-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.268,
+            0.02,
+            0.0
+          ],
+          "bytes": 1460,
+          "hash": "05a706344be3"
+        },
+        "grommet_18": {
+          "glb": "/3d-parts/diamond/grommet_18/workstation-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.267,
+            0.07,
+            0.002
+          ],
+          "bytes": 1420,
+          "hash": "2777750e5a71"
+        },
+        "grommet_19": {
+          "glb": "/3d-parts/diamond/grommet_19/workstation-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.3,
+            0.108,
+            0.006
+          ],
+          "bytes": 1548,
+          "hash": "2fab2fd2d505"
+        },
+        "grommet_20": {
+          "glb": "/3d-parts/diamond/grommet_20/workstation-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 3544,
+          "hash": "de84fadc37a2"
+        },
+        "grommet_21": {
+          "glb": "/3d-parts/diamond/grommet_21/workstation-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 2904,
+          "hash": "164eba5c9b75"
+        },
+        "grommet_22": {
+          "glb": "/3d-parts/diamond/grommet_22/workstation-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 3592,
+          "hash": "9b1950d2459f"
+        },
+        "grommet_23": {
+          "glb": "/3d-parts/diamond/grommet_23/workstation-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 2912,
+          "hash": "4996b4e328ff"
+        },
+        "grommet_24": {
+          "glb": "/3d-parts/diamond/grommet_24/workstation-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.036,
+            0.036,
+            0.009
+          ],
+          "bytes": 10404,
+          "hash": "aa46177a0592"
+        },
+        "grommet_25": {
+          "glb": "/3d-parts/diamond/grommet_25/workstation-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.036,
+            0.036,
+            0.009
+          ],
+          "bytes": 17940,
+          "hash": "0e70acc2a396"
+        },
+        "grommet_26": {
+          "glb": "/3d-parts/diamond/grommet_26/workstation-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 3576,
+          "hash": "8bb55e13d507"
+        },
+        "grommet_27": {
+          "glb": "/3d-parts/diamond/grommet_27/workstation-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 2900,
+          "hash": "5a4ad0566487"
+        },
+        "grommet_28": {
+          "glb": "/3d-parts/diamond/grommet_28/workstation-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 3624,
+          "hash": "a441726357d1"
+        },
+        "grommet_29": {
+          "glb": "/3d-parts/diamond/grommet_29/workstation-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 2924,
+          "hash": "99982aa512b1"
+        },
+        "grommet_30": {
+          "glb": "/3d-parts/diamond/grommet_30/workstation-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.036,
+            0.036,
+            0.009
+          ],
+          "bytes": 10344,
+          "hash": "ecc5ccb5843f"
+        },
+        "grommet_31": {
+          "glb": "/3d-parts/diamond/grommet_31/workstation-4p.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.036,
+            0.036,
+            0.009
+          ],
+          "bytes": 18584,
+          "hash": "c7bea593b09b"
+        }
+      },
+      "baseSize": null,
+      "unknowns": []
+    },
+    "Coffee Table": {
+      "parts": {
+        "grommet_0": {
+          "glb": "/3d-parts/diamond/grommet_0/coffee-table.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 3508,
+          "hash": "344308181457"
+        },
+        "grommet_1": {
+          "glb": "/3d-parts/diamond/grommet_1/coffee-table.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 2868,
+          "hash": "a07fd2a1ccab"
+        },
+        "grommet_2": {
+          "glb": "/3d-parts/diamond/grommet_2/coffee-table.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 3556,
+          "hash": "e658bb0c3621"
+        },
+        "grommet_3": {
+          "glb": "/3d-parts/diamond/grommet_3/coffee-table.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 2876,
+          "hash": "4de07ddfbbf8"
+        },
+        "grommet_4": {
+          "glb": "/3d-parts/diamond/grommet_4/coffee-table.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.036,
+            0.036,
+            0.009
+          ],
+          "bytes": 10380,
+          "hash": "89b1bb6374d7"
+        },
+        "grommet_5": {
+          "glb": "/3d-parts/diamond/grommet_5/coffee-table.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.036,
+            0.036,
+            0.009
+          ],
+          "bytes": 17820,
+          "hash": "ab4a9ffb7116"
+        },
+        "grommet_6": {
+          "glb": "/3d-parts/diamond/grommet_6/coffee-table.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 3508,
+          "hash": "fa1d6f8adc13"
+        },
+        "grommet_7": {
+          "glb": "/3d-parts/diamond/grommet_7/coffee-table.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 2868,
+          "hash": "e13e38c04e93"
+        },
+        "grommet_8": {
+          "glb": "/3d-parts/diamond/grommet_8/coffee-table.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 3556,
+          "hash": "fe9ee8e7b733"
+        },
+        "grommet_9": {
+          "glb": "/3d-parts/diamond/grommet_9/coffee-table.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 2880,
+          "hash": "b870b726e75e"
+        },
+        "grommet_10": {
+          "glb": "/3d-parts/diamond/grommet_10/coffee-table.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.036,
+            0.036,
+            0.009
+          ],
+          "bytes": 10380,
+          "hash": "b534f9ff51bf"
+        },
+        "grommet_11": {
+          "glb": "/3d-parts/diamond/grommet_11/coffee-table.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.036,
+            0.036,
+            0.009
+          ],
+          "bytes": 17876,
+          "hash": "4b34001a44bd"
+        },
+        "frame_beam_0": {
+          "glb": "/3d-parts/diamond/frame_beam_0/coffee-table.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.484,
+            0.05
+          ],
+          "bytes": 1840,
+          "hash": "ba2c936fa95d"
+        },
+        "frame_beam_1": {
+          "glb": "/3d-parts/diamond/frame_beam_1/coffee-table.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.484,
+            0.05
+          ],
+          "bytes": 1848,
+          "hash": "692173bc23fc"
+        },
+        "frame_beam_2": {
+          "glb": "/3d-parts/diamond/frame_beam_2/coffee-table.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.281
+          ],
+          "bytes": 1856,
+          "hash": "e0dada779859"
+        },
+        "frame_beam_3": {
+          "glb": "/3d-parts/diamond/frame_beam_3/coffee-table.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.281
+          ],
+          "bytes": 1860,
+          "hash": "442bc6392b36"
+        },
+        "frame_beam_4": {
+          "glb": "/3d-parts/diamond/frame_beam_4/coffee-table.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.484,
+            0.05
+          ],
+          "bytes": 1844,
+          "hash": "d5d1ec68b93d"
+        },
+        "frame_beam_5": {
+          "glb": "/3d-parts/diamond/frame_beam_5/coffee-table.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.484,
+            0.05
+          ],
+          "bytes": 1848,
+          "hash": "cec41e9f4fd5"
+        },
+        "frame_beam_6": {
+          "glb": "/3d-parts/diamond/frame_beam_6/coffee-table.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.281
+          ],
+          "bytes": 1848,
+          "hash": "b3edaf535c26"
+        },
+        "frame_beam_7": {
+          "glb": "/3d-parts/diamond/frame_beam_7/coffee-table.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.281
+          ],
+          "bytes": 1864,
+          "hash": "0e7dcccc876b"
+        },
+        "top": {
+          "glb": "/3d-parts/diamond/top/coffee-table.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.6,
+            0.6,
+            0.03
+          ],
+          "bytes": 161536,
+          "hash": "9d092405f36d"
+        }
+      },
+      "baseSize": "60x60",
+      "unknowns": []
+    },
+    "Side Console": {
+      "parts": {
+        "top": {
+          "glb": "/3d-parts/diamond/top/side-console.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.0,
+            0.5,
+            0.03
+          ],
+          "bytes": 161568,
+          "hash": "cdca0d459f76"
+        },
+        "grommet_0": {
+          "glb": "/3d-parts/diamond/grommet_0/side-console.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 3512,
+          "hash": "c38ab2774a3f"
+        },
+        "grommet_1": {
+          "glb": "/3d-parts/diamond/grommet_1/side-console.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 2868,
+          "hash": "7d9f817c3ff6"
+        },
+        "grommet_2": {
+          "glb": "/3d-parts/diamond/grommet_2/side-console.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 3564,
+          "hash": "d5ac452cc17a"
+        },
+        "grommet_3": {
+          "glb": "/3d-parts/diamond/grommet_3/side-console.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 2876,
+          "hash": "1a79378c1fe7"
+        },
+        "grommet_4": {
+          "glb": "/3d-parts/diamond/grommet_4/side-console.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.036,
+            0.036,
+            0.009
+          ],
+          "bytes": 10368,
+          "hash": "72b3b93ec34e"
+        },
+        "grommet_5": {
+          "glb": "/3d-parts/diamond/grommet_5/side-console.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.036,
+            0.036,
+            0.009
+          ],
+          "bytes": 17800,
+          "hash": "6f9472216a91"
+        },
+        "grommet_6": {
+          "glb": "/3d-parts/diamond/grommet_6/side-console.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 3500,
+          "hash": "6ae465e2ced3"
+        },
+        "grommet_7": {
+          "glb": "/3d-parts/diamond/grommet_7/side-console.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 2864,
+          "hash": "af40aa580c37"
+        },
+        "grommet_8": {
+          "glb": "/3d-parts/diamond/grommet_8/side-console.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 3568,
+          "hash": "653c27832035"
+        },
+        "grommet_9": {
+          "glb": "/3d-parts/diamond/grommet_9/side-console.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.05
+          ],
+          "bytes": 2868,
+          "hash": "60abe2ce31c1"
+        },
+        "grommet_10": {
+          "glb": "/3d-parts/diamond/grommet_10/side-console.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.036,
+            0.036,
+            0.009
+          ],
+          "bytes": 10372,
+          "hash": "fd9922ca0d95"
+        },
+        "grommet_11": {
+          "glb": "/3d-parts/diamond/grommet_11/side-console.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.036,
+            0.036,
+            0.009
+          ],
+          "bytes": 17868,
+          "hash": "cb2dc30349d8"
+        },
+        "frame_beam_0": {
+          "glb": "/3d-parts/diamond/frame_beam_0/side-console.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.384,
+            0.05
+          ],
+          "bytes": 1856,
+          "hash": "cc7d041f9b57"
+        },
+        "frame_beam_1": {
+          "glb": "/3d-parts/diamond/frame_beam_1/side-console.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.384,
+            0.05
+          ],
+          "bytes": 1848,
+          "hash": "0b54240d0db7"
+        },
+        "frame_beam_2": {
+          "glb": "/3d-parts/diamond/frame_beam_2/side-console.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.281
+          ],
+          "bytes": 1852,
+          "hash": "cf37194f75cb"
+        },
+        "frame_beam_3": {
+          "glb": "/3d-parts/diamond/frame_beam_3/side-console.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.281
+          ],
+          "bytes": 1848,
+          "hash": "323d910da4d3"
+        },
+        "frame_beam_4": {
+          "glb": "/3d-parts/diamond/frame_beam_4/side-console.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.384,
+            0.05
+          ],
+          "bytes": 1856,
+          "hash": "0656f3520f59"
+        },
+        "frame_beam_5": {
+          "glb": "/3d-parts/diamond/frame_beam_5/side-console.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.384,
+            0.05
+          ],
+          "bytes": 1848,
+          "hash": "c6aa7f4c7456"
+        },
+        "frame_beam_6": {
+          "glb": "/3d-parts/diamond/frame_beam_6/side-console.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.281
+          ],
+          "bytes": 1852,
+          "hash": "ca93b83d6dc3"
+        },
+        "frame_beam_7": {
+          "glb": "/3d-parts/diamond/frame_beam_7/side-console.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.281
+          ],
+          "bytes": 1848,
+          "hash": "ab14c511af19"
+        }
+      },
+      "baseSize": "100x50",
+      "unknowns": []
+    },
+    "Storage Credenza": {
+      "parts": {
+        "modesty_0": {
+          "glb": "/3d-parts/diamond/modesty_0/storage-credenza.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.018,
+            0.404,
+            0.178
+          ],
+          "bytes": 1700,
+          "hash": "9aa7a9cab5f0"
+        },
+        "modesty_1": {
+          "glb": "/3d-parts/diamond/modesty_1/storage-credenza.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.018,
+            0.404,
+            0.175
+          ],
+          "bytes": 1708,
+          "hash": "49fbef14b723"
+        },
+        "modesty_2": {
+          "glb": "/3d-parts/diamond/modesty_2/storage-credenza.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.018,
+            0.404,
+            0.171
+          ],
+          "bytes": 1692,
+          "hash": "258403b99dec"
+        },
+        "grommet_0": {
+          "glb": "/3d-parts/diamond/grommet_0/storage-credenza.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.029,
+            0.016,
+            0.016
+          ],
+          "bytes": 5472,
+          "hash": "de6f26416f24"
+        },
+        "grommet_1": {
+          "glb": "/3d-parts/diamond/grommet_1/storage-credenza.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.029,
+            0.016,
+            0.016
+          ],
+          "bytes": 5472,
+          "hash": "de6f26416f24"
+        },
+        "grommet_2": {
+          "glb": "/3d-parts/diamond/grommet_2/storage-credenza.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.026,
+            0.167,
+            0.01
+          ],
+          "bytes": 11708,
+          "hash": "dea8e15ada09"
+        },
+        "grommet_3": {
+          "glb": "/3d-parts/diamond/grommet_3/storage-credenza.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.026,
+            0.167,
+            0.01
+          ],
+          "bytes": 11712,
+          "hash": "dea8e15ada09"
+        },
+        "grommet_4": {
+          "glb": "/3d-parts/diamond/grommet_4/storage-credenza.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.026,
+            0.167,
+            0.01
+          ],
+          "bytes": 11708,
+          "hash": "dea8e15ada09"
+        },
+        "grommet_5": {
+          "glb": "/3d-parts/diamond/grommet_5/storage-credenza.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.06,
+            0.06,
+            0.002
+          ],
+          "bytes": 3936,
+          "hash": "5a9c18dfa574"
+        },
+        "grommet_6": {
+          "glb": "/3d-parts/diamond/grommet_6/storage-credenza.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.04,
+            0.04,
+            0.005
+          ],
+          "bytes": 1516,
+          "hash": "396e140eb38f"
+        },
+        "grommet_7": {
+          "glb": "/3d-parts/diamond/grommet_7/storage-credenza.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.04,
+            0.04,
+            0.053
+          ],
+          "bytes": 3760,
+          "hash": "e4baf059ec9b"
+        },
+        "grommet_8": {
+          "glb": "/3d-parts/diamond/grommet_8/storage-credenza.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.04,
+            0.04,
+            0.053
+          ],
+          "bytes": 3760,
+          "hash": "e4baf059ec9b"
+        },
+        "grommet_9": {
+          "glb": "/3d-parts/diamond/grommet_9/storage-credenza.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.06,
+            0.06,
+            0.002
+          ],
+          "bytes": 3936,
+          "hash": "5a9c18dfa574"
+        },
+        "grommet_10": {
+          "glb": "/3d-parts/diamond/grommet_10/storage-credenza.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.04,
+            0.04,
+            0.005
+          ],
+          "bytes": 1516,
+          "hash": "396e140eb38f"
+        },
+        "grommet_11": {
+          "glb": "/3d-parts/diamond/grommet_11/storage-credenza.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.04,
+            0.04,
+            0.053
+          ],
+          "bytes": 3760,
+          "hash": "e4baf059ec9b"
+        },
+        "grommet_12": {
+          "glb": "/3d-parts/diamond/grommet_12/storage-credenza.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.06,
+            0.06,
+            0.002
+          ],
+          "bytes": 3940,
+          "hash": "5a9c18dfa574"
+        },
+        "grommet_13": {
+          "glb": "/3d-parts/diamond/grommet_13/storage-credenza.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.04,
+            0.04,
+            0.005
+          ],
+          "bytes": 1520,
+          "hash": "396e140eb38f"
+        },
+        "grommet_14": {
+          "glb": "/3d-parts/diamond/grommet_14/storage-credenza.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.04,
+            0.04,
+            0.053
+          ],
+          "bytes": 3760,
+          "hash": "e4baf059ec9b"
+        },
+        "grommet_15": {
+          "glb": "/3d-parts/diamond/grommet_15/storage-credenza.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.06,
+            0.06,
+            0.002
+          ],
+          "bytes": 3940,
+          "hash": "5a9c18dfa574"
+        },
+        "grommet_16": {
+          "glb": "/3d-parts/diamond/grommet_16/storage-credenza.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.04,
+            0.04,
+            0.005
+          ],
+          "bytes": 1520,
+          "hash": "396e140eb38f"
+        },
+        "grommet_17": {
+          "glb": "/3d-parts/diamond/grommet_17/storage-credenza.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.026,
+            0.167,
+            0.01
+          ],
+          "bytes": 11712,
+          "hash": "dea8e15ada09"
+        },
+        "leg_r_0": {
+          "glb": "/3d-parts/diamond/leg_r_0/storage-credenza.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.48,
+            0.018,
+            0.532
+          ],
+          "bytes": 1700,
+          "hash": "48d77867fd3f"
+        },
+        "leg_r_1": {
+          "glb": "/3d-parts/diamond/leg_r_1/storage-credenza.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.478,
+            0.018,
+            0.51
+          ],
+          "bytes": 1688,
+          "hash": "1f5bd099e604"
+        },
+        "leg_r_2": {
+          "glb": "/3d-parts/diamond/leg_r_2/storage-credenza.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.481,
+            0.018,
+            0.52
+          ],
+          "bytes": 1588,
+          "hash": "e04b663b7790"
+        },
+        "leg_r_3": {
+          "glb": "/3d-parts/diamond/leg_r_3/storage-credenza.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.478,
+            0.018,
+            0.51
+          ],
+          "bytes": 1600,
+          "hash": "99b1c0560946"
+        },
+        "leg_r_4": {
+          "glb": "/3d-parts/diamond/leg_r_4/storage-credenza.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.018,
+            0.38,
+            0.527
+          ],
+          "bytes": 1660,
+          "hash": "9d61393a5500"
+        },
+        "pedestal_top": {
+          "glb": "/3d-parts/diamond/pedestal_top/storage-credenza.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.48,
+            1.596,
+            0.018
+          ],
+          "bytes": 1704,
+          "hash": "3a6ca6c1f24e"
+        },
+        "pedestal": {
+          "glb": "/3d-parts/accessories/pedestal-461330ff7b24.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.018,
+            1.598,
+            0.528
+          ],
+          "bytes": 1680,
+          "hash": "461330ff7b24"
+        },
+        "top_0": {
+          "glb": "/3d-parts/diamond/top_0/storage-credenza.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.52,
+            1.6,
+            0.018
+          ],
+          "bytes": 1576,
+          "hash": "f906fb60d04f"
+        },
+        "top_1": {
+          "glb": "/3d-parts/diamond/top_1/storage-credenza.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.459,
+            0.783,
+            0.018
+          ],
+          "bytes": 1680,
+          "hash": "3d3e96e09ef3"
+        }
+      },
+      "baseSize": null,
+      "unknowns": []
     }
-  },
-  "generated_at": "2026-04-20T03:54:26.784619Z"
+  }
 }

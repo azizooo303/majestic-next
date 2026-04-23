@@ -115,7 +115,7 @@ const SIZE_OPTIONS_PER_CONFIG: Record<string, string[]> = {
   "Meeting 6-Person":     ["180x90", "240x100", "CUSTOM"],
   "Meeting (Large)":      ["300x110", "360x120", "420x140", "CUSTOM"],
   "Workstation 6-Person": ["120x60", "140x70", "160x80", "CUSTOM"],
-  "Storage Credenza":     ["120x40", "160x40", "180x40", "CUSTOM"],
+  "Storage Credenza":     ["120x40", "160x40", "180x40", "1600x540", "CUSTOM"],
   "Tall Credenza":        ["80x40x180", "100x40x180", "CUSTOM"],
   "Coffee Table":         ["120x60", "140x70", "CUSTOM"],
   "Shelf Credenza":       ["1600x700", "2000x800", "2400x800", "3000x900", "CUSTOM"],
@@ -129,6 +129,15 @@ const SIZE_OPTIONS_PER_CONFIG: Record<string, string[]> = {
   "Workstation 4-Person": ["140x70", "160x80", "CUSTOM"],
   "Coffee Table (1000)":  ["100x50", "120x60", "CUSTOM"],
   "Coffee Table (500)":   ["50x50", "60x60", "CUSTOM"],
+  // Diamond family additions (2026-04-23 — Gate 4 wire-up)
+  // Single-entry arrays for fixed-footprint configs — size axis renders but has one option.
+  "Meeting 4P":           ["1200x1200"],
+  "Meeting Large":        ["3200x4000"],
+  "Workstation 4P":       ["2800x1400"],
+  "Side Console":         ["1000x500"],
+  // "L-Shape" already exists above (generic); Diamond overrides via manifest baseSize=null
+  // "Coffee Table" already exists above; Diamond uses baseSize=60x60 (manifest)
+  // "Storage Credenza" already exists above; Diamond size 1600x540 added to that entry
 };
 
 const SIZE_EXTRA_PRICES: Record<string, number> = {
@@ -139,6 +148,8 @@ const SIZE_EXTRA_PRICES: Record<string, number> = {
   "120x40": 200, "160x40": 400, "180x40": 500, "200x40": 600,
   "80x40x180": 700, "100x40x180": 900,
   "160x80+120x60": 400, "180x90+120x60": 600, "180x90+2x120x60": 900,
+  // Diamond fixed-footprint sizes (2026-04-23 Gate 4) — single-option configs, no upcharge
+  "1200x1200": 0, "3200x4000": 0, "2800x1400": 0, "1000x500": 0, "1600x540": 0,
   "CUSTOM": 0,
 };
 
@@ -162,6 +173,11 @@ const CONFIG_META: Record<string, { en: string; ar: string }> = {
   "Workstation":          { en: "Open-plan workstation", ar: "محطة عمل خطة مفتوحة" },
   "Height-Adjustable":    { en: "Motorised · 680–1,200 mm range", ar: "كهربائي · نطاق 680–1,200 مم" },
   "Custom (Contact Us)":  { en: "Non-standard footprint, special finish, bespoke details", ar: "مقاسات غير نمطية، تشطيب خاص، تفاصيل مخصصة" },
+  // Diamond family — short-form config keys matching manifest (2026-04-23 Gate 4)
+  "Meeting 4P":           { en: "1200×1200 · 4-person round/square", ar: "1200×1200 · 4 أشخاص" },
+  "Meeting Large":        { en: "3200×4000 · Boardroom", ar: "3200×4000 · قاعة اجتماعات" },
+  "Workstation 4P":       { en: "2800×1400 · 4-person cluster · Screens included", ar: "2800×1400 · 4 محطات · فواصل مشمولة" },
+  "Side Console":         { en: "1000×500 · Under-desk side storage", ar: "1000×500 · وحدة تخزين جانبية" },
 };
 
 // ─── Leg tile config ──────────────────────────────────────────────────────────

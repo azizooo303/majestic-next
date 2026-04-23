@@ -195,7 +195,19 @@ export const DESK_FAMILIES: DeskFamily[] = [
     slug: "diamond",
     nameEn: "Diamond Desk",
     nameAr: "مكتب دايموند",
-    configs: ["Executive", "Manager", "Operator", "L-Shape", "U-Shape", "Conference", "Custom (Contact Us)"],
+    tagline: { en: "Executive desk system with cable management", ar: "نظام مكتب تنفيذي مع إدارة كابلات" },
+    configs: [
+      "Executive",
+      "Manager",
+      "Operator",
+      "L-Shape",
+      "Meeting 4P",
+      "Meeting Large",
+      "Workstation 4P",
+      "Coffee Table",
+      "Side Console",
+      "Storage Credenza",
+    ],
     hasGlb: true,
     priority: 13,
     status: "live",
@@ -281,6 +293,12 @@ export const CONFIG_EXTRA_PRICES: Record<string, number> = {
   "Meeting 6-Person": 2800,
   "Meeting (Large)": 4500,
   "Workstation 6-Person": 6500,     // 6-seat workstation cluster
+  // Diamond-specific config keys (manifest uses short form without hyphen)
+  // TODO: Aziz to confirm real pricing in Odoo before Gate 5
+  "Meeting 4P": 1800,               // Diamond 4-person meeting table
+  "Meeting Large": 4500,            // Diamond large meeting table (3200x4000)
+  "Workstation 4P": 5500,           // Diamond 4-person workstation cluster
+  "Side Console": 1200,             // Diamond side console credenza
   // Non-desk product types (Lyra + Beauty + Semina)
   "Storage Credenza": 1600,
   "Tall Credenza": 2200,

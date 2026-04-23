@@ -1,0 +1,630 @@
+{
+  "family": "accessories",
+  "generated_at": "2026-04-23T05:30:51.334807Z",
+  "configs": {
+    "ACC-DIAMOND-CABLE-SPINE": {
+      "parts": {
+        "cable_spine_0": {
+          "glb": "/3d-parts/accessories/cable_spine_0/acc-diamond-cable-spine.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.022,
+            0.049,
+            0.036
+          ],
+          "bytes": 19968,
+          "hash": "043e855ea38d"
+        },
+        "cable_spine_1": {
+          "glb": "/3d-parts/accessories/cable_spine_1/acc-diamond-cable-spine.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.022,
+            0.049,
+            0.035
+          ],
+          "bytes": 19980,
+          "hash": "ccd34496497d"
+        },
+        "cable_spine_2": {
+          "glb": "/3d-parts/accessories/cable_spine_2/acc-diamond-cable-spine.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.022,
+            0.048,
+            0.035
+          ],
+          "bytes": 20016,
+          "hash": "79135ef3390a"
+        },
+        "cable_spine_3": {
+          "glb": "/3d-parts/accessories/cable_spine_3/acc-diamond-cable-spine.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.022,
+            0.047,
+            0.035
+          ],
+          "bytes": 20028,
+          "hash": "52643da3e08c"
+        },
+        "cable_spine_4": {
+          "glb": "/3d-parts/accessories/cable_spine_4/acc-diamond-cable-spine.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.022,
+            0.047,
+            0.035
+          ],
+          "bytes": 19988,
+          "hash": "196666053abf"
+        },
+        "cable_spine_5": {
+          "glb": "/3d-parts/accessories/cable_spine_5/acc-diamond-cable-spine.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.022,
+            0.046,
+            0.035
+          ],
+          "bytes": 19952,
+          "hash": "654817e6be61"
+        },
+        "cable_spine_6": {
+          "glb": "/3d-parts/accessories/cable_spine_6/acc-diamond-cable-spine.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.022,
+            0.047,
+            0.036
+          ],
+          "bytes": 19932,
+          "hash": "f37dc865e67f"
+        },
+        "cable_spine_7": {
+          "glb": "/3d-parts/accessories/cable_spine_7/acc-diamond-cable-spine.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.022,
+            0.047,
+            0.036
+          ],
+          "bytes": 19928,
+          "hash": "1e7139a585ec"
+        },
+        "cable_spine_8": {
+          "glb": "/3d-parts/accessories/cable_spine_8/acc-diamond-cable-spine.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.022,
+            0.048,
+            0.036
+          ],
+          "bytes": 19912,
+          "hash": "58dec25cd452"
+        },
+        "cable_spine_9": {
+          "glb": "/3d-parts/accessories/cable_spine_9/acc-diamond-cable-spine.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.022,
+            0.048,
+            0.036
+          ],
+          "bytes": 19928,
+          "hash": "abcbdff2abeb"
+        },
+        "cable_spine_10": {
+          "glb": "/3d-parts/accessories/cable_spine_10/acc-diamond-cable-spine.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.022,
+            0.049,
+            0.036
+          ],
+          "bytes": 19940,
+          "hash": "5de59185e4c8"
+        },
+        "cable_spine_11": {
+          "glb": "/3d-parts/accessories/cable_spine_11/acc-diamond-cable-spine.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.022,
+            0.049,
+            0.035
+          ],
+          "bytes": 19932,
+          "hash": "998482ddc354"
+        },
+        "cable_spine_12": {
+          "glb": "/3d-parts/accessories/cable_spine_12/acc-diamond-cable-spine.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.022,
+            0.049,
+            0.035
+          ],
+          "bytes": 19912,
+          "hash": "ccd82c6ec428"
+        },
+        "cable_spine_13": {
+          "glb": "/3d-parts/accessories/cable_spine_13/acc-diamond-cable-spine.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.022,
+            0.049,
+            0.035
+          ],
+          "bytes": 19928,
+          "hash": "28c60346bf99"
+        },
+        "cable_spine_14": {
+          "glb": "/3d-parts/accessories/cable_spine_14/acc-diamond-cable-spine.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.022,
+            0.047,
+            0.035
+          ],
+          "bytes": 19996,
+          "hash": "26b8e8f4fd76"
+        },
+        "cable_spine_15": {
+          "glb": "/3d-parts/accessories/cable_spine_15/acc-diamond-cable-spine.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.022,
+            0.047,
+            0.035
+          ],
+          "bytes": 19988,
+          "hash": "b1b9089e6f35"
+        },
+        "cable_spine_16": {
+          "glb": "/3d-parts/accessories/cable_spine_16/acc-diamond-cable-spine.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.022,
+            0.047,
+            0.036
+          ],
+          "bytes": 19908,
+          "hash": "8c046243f7ae"
+        },
+        "cable_spine_17": {
+          "glb": "/3d-parts/accessories/cable_spine_17/acc-diamond-cable-spine.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.022,
+            0.046,
+            0.035
+          ],
+          "bytes": 19892,
+          "hash": "b38bf2166d9b"
+        },
+        "cable_spine_18": {
+          "glb": "/3d-parts/accessories/cable_spine_18/acc-diamond-cable-spine.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.022,
+            0.046,
+            0.035
+          ],
+          "bytes": 19852,
+          "hash": "4f157f0f2cca"
+        },
+        "cable_spine_19": {
+          "glb": "/3d-parts/accessories/cable_spine_19/acc-diamond-cable-spine.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.022,
+            0.047,
+            0.035
+          ],
+          "bytes": 20004,
+          "hash": "e24884ff089a"
+        },
+        "cable_spine_20": {
+          "glb": "/3d-parts/accessories/cable_spine_20/acc-diamond-cable-spine.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.022,
+            0.047,
+            0.035
+          ],
+          "bytes": 20020,
+          "hash": "6308cf703ffc"
+        },
+        "cable_spine_21": {
+          "glb": "/3d-parts/accessories/cable_spine_21/acc-diamond-cable-spine.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.12,
+            0.09,
+            0.007
+          ],
+          "bytes": 6636,
+          "hash": "a19ca3dcd8c1"
+        },
+        "cable_spine_22": {
+          "glb": "/3d-parts/accessories/cable_spine_22/acc-diamond-cable-spine.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.07,
+            0.034,
+            0.025
+          ],
+          "bytes": 5784,
+          "hash": "eb9f14d9d41f"
+        },
+        "cable_spine_23": {
+          "glb": "/3d-parts/accessories/cable_spine_23/acc-diamond-cable-spine.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.022,
+            0.046,
+            0.035
+          ],
+          "bytes": 19868,
+          "hash": "ddb75b18ed65"
+        },
+        "cable_spine_24": {
+          "glb": "/3d-parts/accessories/cable_spine_24/acc-diamond-cable-spine.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.022,
+            0.046,
+            0.035
+          ],
+          "bytes": 19860,
+          "hash": "29d3798b0be2"
+        },
+        "cable_spine_25": {
+          "glb": "/3d-parts/accessories/cable_spine_25/acc-diamond-cable-spine.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.022,
+            0.046,
+            0.035
+          ],
+          "bytes": 19856,
+          "hash": "b101a46ea6c0"
+        },
+        "cable_spine_26": {
+          "glb": "/3d-parts/accessories/cable_spine_26/acc-diamond-cable-spine.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.022,
+            0.046,
+            0.035
+          ],
+          "bytes": 19868,
+          "hash": "b80b0330a93f"
+        }
+      },
+      "baseSize": null,
+      "unknowns": []
+    },
+    "ACC-DIAMOND-PEDESTAL": {
+      "parts": {
+        "grommet": {
+          "glb": "/3d-parts/accessories/grommet-bab709166c46.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.002,
+            0.026,
+            0.026
+          ],
+          "bytes": 8076,
+          "hash": "bab709166c46"
+        },
+        "handle_0": {
+          "glb": "/3d-parts/accessories/handle_0/acc-diamond-pedestal.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.026,
+            0.167,
+            0.01
+          ],
+          "bytes": 11644,
+          "hash": "da1691d26188"
+        },
+        "handle_1": {
+          "glb": "/3d-parts/accessories/handle_1/acc-diamond-pedestal.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.026,
+            0.167,
+            0.01
+          ],
+          "bytes": 11632,
+          "hash": "8c954de32eb4"
+        },
+        "handle_2": {
+          "glb": "/3d-parts/accessories/handle_2/acc-diamond-pedestal.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.026,
+            0.167,
+            0.01
+          ],
+          "bytes": 11644,
+          "hash": "e766b12407ab"
+        },
+        "pedestal_0": {
+          "glb": "/3d-parts/accessories/pedestal_0/acc-diamond-pedestal.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.498,
+            0.402,
+            0.019
+          ],
+          "bytes": 1552,
+          "hash": "24a6be8c4255"
+        },
+        "pedestal_1": {
+          "glb": "/3d-parts/accessories/pedestal_1/acc-diamond-pedestal.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.015,
+            0.402,
+            0.519
+          ],
+          "bytes": 1760,
+          "hash": "e5f4d2cc23b8"
+        },
+        "pedestal_body": {
+          "glb": "/3d-parts/accessories/pedestal_body/acc-diamond-pedestal.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.487,
+            0.402,
+            0.522
+          ],
+          "bytes": 1892,
+          "hash": "f201624f28d1"
+        },
+        "pedestal_top": {
+          "glb": "/3d-parts/accessories/pedestal_top/acc-diamond-pedestal.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.459,
+            0.345,
+            0.06
+          ],
+          "bytes": 10020,
+          "hash": "81136b329a70"
+        }
+      },
+      "baseSize": null,
+      "unknowns": []
+    },
+    "ACC-DIAMOND-SCREEN-BRACKET": {
+      "parts": {
+        "screen_front_0": {
+          "glb": "/3d-parts/accessories/screen_front_0/acc-diamond-screen-bracket.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.267,
+            0.07,
+            0.002
+          ],
+          "bytes": 1592,
+          "hash": "1008892a14af"
+        },
+        "screen_front_1": {
+          "glb": "/3d-parts/accessories/screen_front_1/acc-diamond-screen-bracket.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.3,
+            0.108,
+            0.006
+          ],
+          "bytes": 1688,
+          "hash": "f3ff67d191e9"
+        }
+      },
+      "baseSize": null,
+      "unknowns": []
+    },
+    "ACC-DIAMOND-DESK-SCREEN": {
+      "parts": {
+        "screen_front_0": {
+          "glb": "/3d-parts/accessories/screen_front_0/acc-diamond-desk-screen.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.01,
+            0.554,
+            0.608
+          ],
+          "bytes": 1680,
+          "hash": "921189ac2804"
+        },
+        "screen_front_1": {
+          "glb": "/3d-parts/accessories/screen_front_1/acc-diamond-desk-screen.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.01,
+            0.554,
+            0.608
+          ],
+          "bytes": 1680,
+          "hash": "d11fc6005696"
+        },
+        "screen_front_2": {
+          "glb": "/3d-parts/accessories/screen_front_2/acc-diamond-desk-screen.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.03,
+            0.61,
+            0.018
+          ],
+          "bytes": 11392,
+          "hash": "20dfff556bd7"
+        }
+      },
+      "baseSize": null,
+      "unknowns": []
+    }
+  }
+}
