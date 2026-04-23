@@ -1,18 +1,35 @@
-import { createClient } from 'next-sanity'
+import { createClient, type SanityClient } from 'next-sanity'
 import imageUrlBuilder from '@sanity/image-url'
 
-export const client = createClient({
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!,
-  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET ?? 'production',
-  apiVersion: '2024-01-01',
-  useCdn: true,
-})
+// Lazy Proxy — createClient() is deferred until first property access so a
+// missing NEXT_PUBLIC_SANITY_PROJECT_ID in the Preview env doesn't crash
+// module eval during Next.js page-data collection.
+let _client: SanityClient | null = null
+function getClient(): SanityClient {
+  if (!_client) {
+    _client = createClient({
+      projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!,
+      dataset: process.env.NEXT_PUBLIC_SANITY_DATASET ?? 'production',
+      apiVersion: '2024-01-01',
+      useCdn: true,
+    })
+  }
+  return _client
+}
 
-const builder = imageUrlBuilder(client)
+export const client = new Proxy({} as SanityClient, {
+  get(_target, prop) {
+    const c = getClient()
+    const v = (c as unknown as Record<string | symbol, unknown>)[prop]
+    return typeof v === 'function' ? (v as (...a: unknown[]) => unknown).bind(c) : v
+  },
+})
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function urlFor(source: any) {
-  return builder.image(source)
+  // Build the URL builder lazily too — it internally holds a reference to
+  // the client, and building it at module eval would trigger the same issue.
+  return imageUrlBuilder(getClient()).image(source)
 }
 
 // ─── Types ────────────────────────────────────────────────────────────────────
