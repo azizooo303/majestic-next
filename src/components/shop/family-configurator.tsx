@@ -123,6 +123,7 @@ const SIZE_OPTIONS_PER_CONFIG: Record<string, string[]> = {
   "Workstation":          ["120x60", "140x70", "160x80", "CUSTOM"],
   "Custom (Contact Us)":  ["CUSTOM"],
   "Height-Adjustable":    ["120x60", "140x70", "160x80", "180x80", "CUSTOM"],
+  "Open-Frame":           ["120x60", "140x70", "160x80", "180x80", "200x100", "CUSTOM"],
   // Simple family additions (2026-04-21 — protocol §4 onboarding)
   "Meeting 10-Person":    ["320x140", "360x140", "CUSTOM"],
   "Workstation 4-Person": ["140x70", "160x80", "CUSTOM"],

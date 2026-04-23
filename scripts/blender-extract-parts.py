@@ -31,7 +31,7 @@ import os
 HQ_ROOT = r"C:\Users\Admin\Desktop\Majestic-HQ\projects\majestic-3d\04_assets"
 NEXT_OUT = r"C:\Users\Admin\Desktop\Majestic-Next\public\3d-parts"
 
-JOBS = [
+JOBS_ALL = [
     (rf"{HQ_ROOT}\cratos\DESK-CRATOS-EXEC-v2\master.blend", "cratos", "Executive"),
     (rf"{HQ_ROOT}\cratos\DESK-CRATOS-MGR\master.blend",     "cratos", "Manager"),
     (rf"{HQ_ROOT}\cratos\DESK-CRATOS-CONF\master.blend",    "cratos", "Conference"),
@@ -45,7 +45,19 @@ JOBS = [
     (rf"{HQ_ROOT}\simple\SYS-SIMPLE-WS-4P\master.blend",       "simple", "Workstation 4-Person"),
     (rf"{HQ_ROOT}\simple\TBL-SIMPLE-COFFEE-1000\master.blend", "simple", "Coffee Table (1000)"),
     (rf"{HQ_ROOT}\simple\TBL-SIMPLE-COFFEE-500\master.blend",  "simple", "Coffee Table (500)"),
+    # Newton family onboarding 2026-04-23 (fresh Max re-export after clean-slate reset)
+    # HA is a 2P back-to-back workstation (Aziz-confirmed). Open-Frame is single-desk.
+    (rf"{HQ_ROOT}\newton\SYS-NEWTON-HA\master.blend",          "newton", "Height-Adjustable"),
+    (rf"{HQ_ROOT}\newton\newton-openframe\master.blend",       "newton", "Open-Frame"),
 ]
+
+# Filter via env var: ONLY_FAMILY=newton runs just that family's masters.
+# Unset / empty = all families. Used during single-family iteration to avoid
+# churning Draco compression of untouched GLBs (draco is non-deterministic).
+_only = os.environ.get("ONLY_FAMILY", "").strip().lower()
+JOBS = [j for j in JOBS_ALL if (not _only) or j[1].lower() == _only]
+if _only:
+    print(f"ONLY_FAMILY={_only!r} — running {len(JOBS)} / {len(JOBS_ALL)} jobs")
 
 # ---------------------------------------------------------------------------
 # Role classifier — maps (material_name, object_name, bbox, position) -> role.
@@ -95,8 +107,8 @@ def _classify(obj, mat_names_lower, name_lower, bbox):
         return "cable_spine"
     if _has_kw(name_lower, "grommet") or any(_has_kw(m, "grommet") for m in mat_names_lower):
         return "grommet"
-    # Screen divider (workstation dividers)
-    if _has_kw(name_lower, "screen_panel", "divider_front", "screen_front"):
+    # Screen divider (workstation dividers — includes Newton's back-to-back privacy screen)
+    if _has_kw(name_lower, "screen_panel", "divider_front", "screen_front", "screen_divider"):
         return "screen_front"
     if _has_kw(name_lower, "screen_side", "divider_side"):
         return "screen_side"
@@ -143,6 +155,11 @@ def _classify(obj, mat_names_lower, name_lower, bbox):
     # Leg frame (U-shape, H-shape): tall, one dim moderate, one dim thin
     # Widened max to 1.5m to catch Simple family's full-depth H-frames (1370mm wide)
     if dz > 0.3 and min(dx, dy) < 0.1 and max(dx, dy) < 1.5:
+        return "leg_l" if obj.matrix_world.translation.x < 0 else "leg_r"
+    # Full-chassis frame (Newton HA goalpost or Open-Frame T-frame — fused vendor mesh
+    # that spans a full desk or 2P workstation). Tall + wide in both dims.
+    # Distinct from U/H-frames by having min(dx,dy) > 0.3 (bulky, not thin tube).
+    if dz > 0.4 and max(dx, dy) > 0.5 and min(dx, dy) > 0.3:
         return "leg_l" if obj.matrix_world.translation.x < 0 else "leg_r"
     # Pedestal wall (tall thin vertical panel — 500-600mm tall, <0.03m thick)
     if dz > 0.3 and dz < 0.7 and min(dx, dy) < 0.03 and max(dx, dy) > 0.4:

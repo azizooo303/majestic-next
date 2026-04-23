@@ -230,10 +230,10 @@ export const DESK_FAMILIES: DeskFamily[] = [
   {
     sku: "DESK-NEWTON",
     slug: "newton",
-    nameEn: "Newton Height-Adjustable Desk",
-    nameAr: "مكتب نيوتن القابل للتعديل",
-    tagline: {en: "Motorised height-adjustable workstation", ar: "محطة عمل قابلة للتعديل بالمحرك"},
-    configs: ["Executive", "Height-Adjustable", "Custom (Contact Us)"],
+    nameEn: "Newton Desk",
+    nameAr: "مكتب نيوتن",
+    tagline: {en: "Height-adjustable & open-frame column workstation", ar: "محطة عمل بإطار عمودي مفتوح وقابلة للتعديل"},
+    configs: ["Height-Adjustable", "Open-Frame", "Custom (Contact Us)"],
     hasGlb: true,
     priority: 16,
     status: "live",
@@ -289,7 +289,8 @@ export const CONFIG_EXTRA_PRICES: Record<string, number> = {
   "Meeting": 2500,                  // Semina meeting
   "Workstation": 5500,               // Semina workstation
   "Custom (Contact Us)": 0,          // quote path, no direct price
-  "Height-Adjustable": 3000,         // Newton HA
+  "Height-Adjustable": 3000,         // Newton HA (2P back-to-back workstation)
+  "Open-Frame": 2000,                // Newton Open-Frame (single desk, fixed height)
 };
 
 // 32 MFC finishes with Egger/Kastamonu supplier codes
