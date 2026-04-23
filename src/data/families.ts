@@ -142,9 +142,9 @@ export const DESK_FAMILIES: DeskFamily[] = [
   {
     sku: "DESK-TESLA",
     slug: "tesla",
-    nameEn: "Tesla Desk",
-    nameAr: "مكتب تيسلا",
-    configs: ["Meeting 4-Person", "Executive", "Manager", "Operator", "L-Shape", "U-Shape", "Conference", "Custom (Contact Us)"],
+    nameEn: "Tesla Meeting Table",
+    nameAr: "طاولة اجتماعات تيسلا",
+    configs: ["Meeting 4-Person", "Custom (Contact Us)"],
     hasGlb: true,
     heroImage: "/images/shop/tesla-hero.webp",
     priority: 9,

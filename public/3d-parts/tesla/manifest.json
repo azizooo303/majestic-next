@@ -1,181 +1,146 @@
 {
   "family": "tesla",
+  "generated_at": "2026-04-23T02:26:04.092258Z",
   "configs": {
     "Meeting 4-Person": {
       "parts": {
-        "feet_0": {
-          "glb": "/3d-parts/tesla/feet_0/meeting-4-person.glb",
+        "frame_beam": {
+          "glb": "/3d-parts/tesla/frame_beam/meeting-4-person.glb",
           "anchor": [
             0.0,
             0.0,
             0.0
           ],
           "bbox": [
-            0.116,
-            0.116,
-            0.021
+            0.415,
+            0.415,
+            0.05
           ],
-          "bytes": 4380,
-          "hash": "d8fd3779e9ac",
-          "source_object": "Layer:图层1",
-          "source_materials": [
-            "UNKNOWN_a398"
-          ]
-        },
-        "feet_1": {
-          "glb": "/3d-parts/tesla/feet_1/meeting-4-person.glb",
-          "anchor": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "bbox": [
-            0.116,
-            0.116,
-            0.021
-          ],
-          "bytes": 4440,
-          "hash": "86a257444415",
-          "source_object": "Layer:图层1.001",
-          "source_materials": [
-            "UNKNOWN_a398"
-          ]
-        },
-        "feet_2": {
-          "glb": "/3d-parts/tesla/feet_2/meeting-4-person.glb",
-          "anchor": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "bbox": [
-            0.116,
-            0.116,
-            0.021
-          ],
-          "bytes": 4424,
-          "hash": "5f91c423cf81",
-          "source_object": "Layer:图层1.002",
-          "source_materials": [
-            "UNKNOWN_a398"
-          ]
-        },
-        "feet_3": {
-          "glb": "/3d-parts/tesla/feet_3/meeting-4-person.glb",
-          "anchor": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "bbox": [
-            0.116,
-            0.116,
-            0.021
-          ],
-          "bytes": 4344,
-          "hash": "8b8f53e12479",
-          "source_object": "Layer:图层1.003",
-          "source_materials": [
-            "UNKNOWN_a398"
-          ]
-        },
-        "frame_beam_0": {
-          "glb": "/3d-parts/tesla/frame_beam_0/meeting-4-person.glb",
-          "anchor": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "bbox": [
-            0.234,
-            0.234,
-            0.723
-          ],
-          "bytes": 35368,
-          "hash": "5817db4142cd",
-          "source_object": "Layer:压铸脚",
-          "source_materials": [
-            "FRAME_BEAM_a398"
-          ]
-        },
-        "frame_beam_1": {
-          "glb": "/3d-parts/tesla/frame_beam_1/meeting-4-person.glb",
-          "anchor": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "bbox": [
-            0.234,
-            0.234,
-            0.723
-          ],
-          "bytes": 35336,
-          "hash": "ecf9468a7b88",
-          "source_object": "Layer:压铸脚.001",
-          "source_materials": [
-            "FRAME_BEAM_a398"
-          ]
-        },
-        "frame_beam_2": {
-          "glb": "/3d-parts/tesla/frame_beam_2/meeting-4-person.glb",
-          "anchor": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "bbox": [
-            0.234,
-            0.234,
-            0.723
-          ],
-          "bytes": 35388,
-          "hash": "92665b38f198",
-          "source_object": "Layer:压铸脚.002",
-          "source_materials": [
-            "FRAME_BEAM_a398"
-          ]
-        },
-        "frame_beam_3": {
-          "glb": "/3d-parts/tesla/frame_beam_3/meeting-4-person.glb",
-          "anchor": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "bbox": [
-            0.234,
-            0.234,
-            0.723
-          ],
-          "bytes": 35432,
-          "hash": "ddcdd882fa68",
-          "source_object": "Layer:压铸脚.003",
-          "source_materials": [
-            "FRAME_BEAM_a398"
-          ]
+          "bytes": 1824,
+          "hash": "c234573ed2bf"
         },
         "grommet_0": {
-          "glb": "/3d-parts/accessories/grommet-f524bf7d4f42.glb",
+          "glb": "/3d-parts/tesla/grommet_0/meeting-4-person.glb",
           "anchor": [
             0.0,
             0.0,
             0.0
           ],
           "bbox": [
-            0.06,
-            0.06,
-            0.062
+            0.12,
+            0.12,
+            0.051
           ],
-          "bytes": 171036,
-          "hash": "f524bf7d4f42",
-          "source_object": "Layer:钢架.005",
-          "source_materials": [
-            "GROMMET_COVER_a398"
-          ]
+          "bytes": 9272,
+          "hash": "61f17a76ecc9"
         },
         "grommet_1": {
-          "glb": "/3d-parts/accessories/grommet-127a7cd8b668.glb",
+          "glb": "/3d-parts/tesla/grommet_1/meeting-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.116,
+            0.116,
+            0.021
+          ],
+          "bytes": 4644,
+          "hash": "046570292f9e"
+        },
+        "grommet_2": {
+          "glb": "/3d-parts/tesla/grommet_2/meeting-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.12,
+            0.12,
+            0.051
+          ],
+          "bytes": 9228,
+          "hash": "ff5a06a99477"
+        },
+        "grommet_3": {
+          "glb": "/3d-parts/tesla/grommet_3/meeting-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.116,
+            0.116,
+            0.021
+          ],
+          "bytes": 4600,
+          "hash": "b45433ae353d"
+        },
+        "grommet_4": {
+          "glb": "/3d-parts/tesla/grommet_4/meeting-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.12,
+            0.12,
+            0.051
+          ],
+          "bytes": 9268,
+          "hash": "b9c3b4fe1f85"
+        },
+        "grommet_5": {
+          "glb": "/3d-parts/tesla/grommet_5/meeting-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.116,
+            0.116,
+            0.021
+          ],
+          "bytes": 4636,
+          "hash": "2dac0ee5502c"
+        },
+        "grommet_6": {
+          "glb": "/3d-parts/tesla/grommet_6/meeting-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.12,
+            0.12,
+            0.051
+          ],
+          "bytes": 9268,
+          "hash": "6bfda9679ee6"
+        },
+        "grommet_7": {
+          "glb": "/3d-parts/tesla/grommet_7/meeting-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.116,
+            0.116,
+            0.021
+          ],
+          "bytes": 4636,
+          "hash": "73ec8a79c50e"
+        },
+        "grommet_8": {
+          "glb": "/3d-parts/tesla/grommet_8/meeting-4-person.glb",
           "anchor": [
             0.0,
             0.0,
@@ -186,12 +151,83 @@
             0.06,
             0.062
           ],
-          "bytes": 170956,
-          "hash": "127a7cd8b668",
-          "source_object": "Layer:钢架001",
-          "source_materials": [
-            "GROMMET_COVER_a398"
-          ]
+          "bytes": 194416,
+          "hash": "f5fd3e89aab4"
+        },
+        "grommet_9": {
+          "glb": "/3d-parts/tesla/grommet_9/meeting-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.06,
+            0.06,
+            0.062
+          ],
+          "bytes": 194444,
+          "hash": "87e5e56a131d"
+        },
+        "leg_r_0": {
+          "glb": "/3d-parts/tesla/leg_r_0/meeting-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.234,
+            0.234,
+            0.723
+          ],
+          "bytes": 35680,
+          "hash": "0d0a5ee70b37"
+        },
+        "leg_r_1": {
+          "glb": "/3d-parts/tesla/leg_r_1/meeting-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.234,
+            0.234,
+            0.723
+          ],
+          "bytes": 35632,
+          "hash": "64eb13d6fe0f"
+        },
+        "leg_r_2": {
+          "glb": "/3d-parts/tesla/leg_r_2/meeting-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.234,
+            0.234,
+            0.723
+          ],
+          "bytes": 35660,
+          "hash": "3b7d62a74769"
+        },
+        "leg_r_3": {
+          "glb": "/3d-parts/tesla/leg_r_3/meeting-4-person.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.234,
+            0.234,
+            0.723
+          ],
+          "bytes": 35656,
+          "hash": "8c0b977e0bf4"
         },
         "top": {
           "glb": "/3d-parts/tesla/top/meeting-4-person.glb",
@@ -205,74 +241,12 @@
             1.246,
             0.018
           ],
-          "bytes": 32853476,
-          "hash": "82aa34ab8069",
-          "source_object": "Line001",
-          "source_materials": [
-            "DESKTOP_a398"
-          ]
+          "bytes": 3332,
+          "hash": "f560f7098ec5"
         }
       },
       "baseSize": "120x120",
-      "unknowns": [
-        {
-          "name": "Layer:钢架",
-          "materials": [
-            "UNKNOWN_a398"
-          ],
-          "extents": [
-            0.415,
-            0.415,
-            0.05
-          ]
-        },
-        {
-          "name": "Layer:钢架.001",
-          "materials": [
-            "UNKNOWN_a398"
-          ],
-          "extents": [
-            0.12,
-            0.12,
-            0.051
-          ]
-        },
-        {
-          "name": "Layer:钢架.002",
-          "materials": [
-            "UNKNOWN_a398"
-          ],
-          "extents": [
-            0.12,
-            0.12,
-            0.051
-          ]
-        },
-        {
-          "name": "Layer:钢架.003",
-          "materials": [
-            "UNKNOWN_a398"
-          ],
-          "extents": [
-            0.12,
-            0.12,
-            0.051
-          ]
-        },
-        {
-          "name": "Layer:钢架.004",
-          "materials": [
-            "UNKNOWN_a398"
-          ],
-          "extents": [
-            0.12,
-            0.12,
-            0.051
-          ]
-        }
-      ],
-      "productKind": "meeting"
+      "unknowns": []
     }
-  },
-  "generated_at": "2026-04-20T03:54:26.792314Z"
+  }
 }

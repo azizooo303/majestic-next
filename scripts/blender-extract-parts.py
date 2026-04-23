@@ -53,6 +53,10 @@ JOBS_ALL = [
     # (top wood axis + new base wood axis). Objects renamed to canonical roles
     # in a Gate 2.5 pre-extraction pass.
     (rf"{HQ_ROOT}\beauty\CRED-BEAUTY-SHELF\master.blend",      "beauty", "Shelf Credenza"),
+    # Tesla meeting-table onboarding 2026-04-23 — tulip 4-corner-leg 4-person
+    # meeting table. One config. Vendor Chinese names renamed via Gate 2.5 script
+    # (tesla_rename_roles.py).
+    (rf"{HQ_ROOT}\tesla\MTG-TESLA-4P\master.blend",            "tesla", "Meeting 4-Person"),
 ]
 
 # Filter via env var: ONLY_FAMILY=newton runs just that family's masters.
