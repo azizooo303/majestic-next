@@ -26,6 +26,38 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale, id } = await params;
   const isAr = locale === "ar";
+  const family = DESK_FAMILIES.find((f) => f.slug === id.toLowerCase());
+
+  if (family) {
+    const familyLocale = isAr ? "ar" : "en";
+    const familyTitle = isAr ? family.nameAr : family.nameEn;
+    const familyDescription =
+      family.tagline?.[familyLocale] ??
+      `${familyTitle} 3D configurator by Majestic Furniture`;
+    const image = family.heroImage || "/og-image.jpg";
+
+    return {
+      title: { absolute: `${familyTitle} | Majestic Furniture` },
+      description: familyDescription,
+      alternates: {
+        canonical: siteUrl(`/${locale}/shop/${family.slug}`),
+        languages: {
+          en: siteUrl(`/en/shop/${family.slug}`),
+          ar: siteUrl(`/ar/shop/${family.slug}`),
+          "x-default": siteUrl(`/en/shop/${family.slug}`),
+        },
+      },
+      openGraph: {
+        title: `${familyTitle} | Majestic Furniture`,
+        description: familyDescription,
+        type: "website",
+        locale: isAr ? "ar_SA" : "en_SA",
+        siteName: "Majestic Furniture",
+        images: [{ url: image, width: 1200, height: 630, alt: familyTitle }],
+      },
+    };
+  }
+
   let product;
   try {
     product = await getProduct(Number(id));
