@@ -84,10 +84,81 @@ const FAMILY_MANIFEST_URL: Record<string, string> = {
   simple:  "/3d-parts/simple/manifest.json",
 };
 
-function accessoryAxesForCurrentConfig(manifest: FamilyManifest, config: string): string[] {
+const CRATOS_CABLE_AXES_BY_CONFIG: Record<string, string[]> = {
+  Operator: ["cable_tray", "cable_spine", "powerbox"],
+  Manager: ["cable_tray", "cable_spine", "powerbox"],
+  "L-Shape": ["cable_tray", "cable_spine", "powerbox"],
+  "Meeting 6-Person": ["cable_tray", "center_leg_path", "powerbox"],
+  "Meeting (Large)": ["cable_tray", "center_leg_path", "powerbox"],
+  "Workstation 6-Person": ["cable_tray", "powerbox"],
+};
+
+const CRATOS_POWERBOX_COUNT: Record<string, number> = {
+  Operator: 1,
+  Manager: 1,
+  "L-Shape": 2,
+  "Meeting 6-Person": 2,
+  "Meeting (Large)": 3,
+  "Workstation 6-Person": 6,
+};
+
+const CRATOS_CABLE_LOGIC: Record<string, { en: string; ar: string }> = {
+  Operator: {
+    en: "Single-office logic: tray under the rear edge, one serviceable desktop powerbox, and a vertical spine down the modesty side.",
+    ar: "منطق المكتب الفردي: حامل كابلات خلفي، صندوق طاقة واحد قابل للصيانة على السطح، وعمود كابلات نزولا من جهة اللوح.",
+  },
+  Manager: {
+    en: "Private-office logic: rear cable tray, one reachable powerbox, and vertical spine routing to floor or wall service.",
+    ar: "منطق المكتب الخاص: حامل خلفي، صندوق طاقة قريب من المستخدم، وعمود كابلات إلى الأرضية أو الجدار.",
+  },
+  "L-Shape": {
+    en: "Return-desk logic: tray follows the working edge, two power points cover desk and return, with spine drop on the service side.",
+    ar: "منطق المكتب الجانبي: الحامل يتبع جهة العمل، نقطتا طاقة تغطيان المكتب والذراع، وعمود نزول في جهة الخدمة.",
+  },
+  "Meeting 6-Person": {
+    en: "Meeting logic: power is placed on the center line; the middle legs act as concealed cable paths into the floor box.",
+    ar: "منطق الاجتماعات: الطاقة على خط المنتصف؛ الأرجل الوسطى تعمل كمسارات كابلات مخفية إلى صندوق الأرضية.",
+  },
+  "Meeting (Large)": {
+    en: "Boardroom logic: repeated centerline powerboxes, continuous tray below, and middle-leg cable paths for long spans.",
+    ar: "منطق قاعة الاجتماعات: صناديق طاقة متكررة على خط المنتصف، حامل مستمر أسفل السطح، ومسارات عبر الأرجل الوسطى.",
+  },
+  "Workstation 6-Person": {
+    en: "Workstation logic: front and side dividers stay independent; cable trays run per bench, with one powerbox reach zone per user.",
+    ar: "منطق محطات العمل: الفواصل الأمامية والجانبية مستقلة؛ الحوامل لكل صف، ونطاق طاقة واحد لكل مستخدم.",
+  },
+};
+
+function uniqueAxes(axes: string[]): string[] {
+  return Array.from(new Set(axes));
+}
+
+function accessoryAxesForCurrentConfig(manifest: FamilyManifest, config: string, familySlug?: string): string[] {
   const cfg = manifest.configs[config];
   if (!cfg) return [];
-  return accessoryAxesInConfig(cfg);
+  const manifestAxes = accessoryAxesInConfig(cfg).filter((axis) => axis !== "grommet");
+  if (familySlug !== "cratos") return manifestAxes;
+
+  const cableAxes = CRATOS_CABLE_AXES_BY_CONFIG[config] ?? [];
+  const dividerAxes = manifestAxes.filter((axis) => axis.startsWith("screen_"));
+  return uniqueAxes([...cableAxes, ...dividerAxes]);
+}
+
+function accessoryPrice(axis: string, config: string, familySlug?: string): number {
+  if (familySlug === "cratos" && axis === "powerbox") {
+    return (CRATOS_POWERBOX_COUNT[config] ?? 1) * (ACCESSORY_LABELS.powerbox?.price ?? 0);
+  }
+  if (familySlug === "cratos" && axis === "center_leg_path") return 0;
+  return ACCESSORY_LABELS[axis]?.price ?? 0;
+}
+
+function accessoryDisplayLabel(axis: string, config: string, isAr: boolean, familySlug?: string): string {
+  if (familySlug === "cratos" && axis === "powerbox") {
+    const count = CRATOS_POWERBOX_COUNT[config] ?? 1;
+    return isAr ? `صناديق طاقة ×${count}` : `Powerboxes x${count}`;
+  }
+  const label = ACCESSORY_LABELS[axis];
+  return label ? (isAr ? label.ar : label.en) : axis;
 }
 
 // ─── Types ────────────────────────────────────────────────────────────────────
@@ -194,6 +265,7 @@ const ACCESSORY_LABELS: Record<string, { en: string; ar: string; price: number }
   pedestal:     { en: "Pedestal drawer",   ar: "خزانة جانبية",     price: 900 },
   cable_tray:   { en: "Cable tray",        ar: "حامل الكابلات",    price: 120 },
   cable_spine:  { en: "Cable spine",       ar: "عمود الكابلات",    price: 220 },
+  center_leg_path: { en: "Center-leg cable path", ar: "مسار الكابلات عبر الأرجل الوسطى", price: 0 },
   grommet:      { en: "Grommets ×2",       ar: "فتحات الكابلات",   price: 80  },
   powerbox:     { en: "Powerbox (2× SA, 2× USB-C)", ar: "صندوق الطاقة (2× SA, 2× USB-C)", price: 480 },
   screen_front: { en: "Front divider",     ar: "فاصل أمامي",       price: 0   },
@@ -425,12 +497,12 @@ export function FamilyConfigurator({ family, basePrice, locale }: FamilyConfigur
   const pedExtra    = pedestalOption === "match"  ? 900  : 0;
   const accTotal = useMemo(() => {
     if (!manifest) return 0;
-    const axes = accessoryAxesForCurrentConfig(manifest, config);
+    const axes = accessoryAxesForCurrentConfig(manifest, config, family.slug);
     return axes.reduce((sum, axis) => {
       if (!accessories[axis]) return sum;
-      return sum + (ACCESSORY_LABELS[axis]?.price ?? 0);
+      return sum + accessoryPrice(axis, config, family.slug);
     }, 0);
-  }, [manifest, config, accessories]);
+  }, [manifest, config, accessories, family.slug]);
 
   const total = basePrice + configExtra + sizeExtra + sideExtra + pedExtra + accTotal;
 
@@ -471,7 +543,7 @@ export function FamilyConfigurator({ family, basePrice, locale }: FamilyConfigur
   // ── Summary lines ─────────────────────────────────────────────────────────
   const activeSideUnit = sideUnitOption === "match" ? (isAr ? "مطابق للسطح" : "Match desktop") : (sideUnitOption === "custom" ? (isAr ? "مخصص" : "Custom") : null);
   const activePedestal = pedestalOption === "match" ? (isAr ? "مطابق للسطح" : "Match desktop") : (pedestalOption === "custom" ? (isAr ? "مخصص" : "Custom") : null);
-  const accessoryCount = manifest ? accessoryAxesForCurrentConfig(manifest, config).filter(a => accessories[a]).length : 0;
+  const accessoryCount = manifest ? accessoryAxesForCurrentConfig(manifest, config, family.slug).filter(a => accessories[a]).length : 0;
 
   // ── Breakdown rows ────────────────────────────────────────────────────────
   const breakdownRows: Array<[string, number]> = [];
@@ -1049,7 +1121,7 @@ export function FamilyConfigurator({ family, basePrice, locale }: FamilyConfigur
 
             {/* Cable & power — open by default, shows accessory chips */}
             {useAssemblyViewer && manifest && (() => {
-              const axes = accessoryAxesForCurrentConfig(manifest, config);
+              const axes = accessoryAxesForCurrentConfig(manifest, config, family.slug);
               if (axes.length === 0) return null;
               // Cable/power axes: everything except screen_front/screen_side
               const cableAxes = axes.filter(a => !a.startsWith("screen_"));
@@ -1061,13 +1133,15 @@ export function FamilyConfigurator({ family, basePrice, locale }: FamilyConfigur
                   setAccessories={setAccessories}
                   activeCount={activeCount}
                   isAr={isAr}
+                  config={config}
+                  familySlug={family.slug}
                 />
               );
             })()}
 
             {/* Acoustic dividers — only when config has divider parts */}
             {configHasDividers && manifest && (() => {
-              const axes = accessoryAxesForCurrentConfig(manifest, config);
+              const axes = accessoryAxesForCurrentConfig(manifest, config, family.slug);
               const dividerAxes = axes.filter(a => a.startsWith("screen_"));
               if (dividerAxes.length === 0) return null;
               return (
@@ -1303,13 +1377,15 @@ export function FamilyConfigurator({ family, basePrice, locale }: FamilyConfigur
 
 // ─── Cable & power disclosure ────────────────────────────────────────────────
 function CableDisclosure({
-  axes, accessories, setAccessories, activeCount, isAr,
+  axes, accessories, setAccessories, activeCount, isAr, config, familySlug,
 }: {
   axes: string[];
   accessories: Record<string, boolean>;
   setAccessories: React.Dispatch<React.SetStateAction<Record<string, boolean>>>;
   activeCount: number;
   isAr: boolean;
+  config: string;
+  familySlug: string;
 }) {
   const [open, setOpen] = useState(true);
   const stateLabel = activeCount === 0
@@ -1347,13 +1423,16 @@ function CableDisclosure({
       >
         <div className="p-4">
           <p className={["text-[12.5px] text-[#3A3A3A] mb-3 leading-[1.55]", isAr ? "tracking-normal" : ""].join(" ")}>
-            {isAr ? "اجعل المكتب نظيفاً منذ يوم التركيب." : "Keep the desk clean on installation day."}
+            {familySlug === "cratos" && CRATOS_CABLE_LOGIC[config]
+              ? (isAr ? CRATOS_CABLE_LOGIC[config].ar : CRATOS_CABLE_LOGIC[config].en)
+              : (isAr ? "اجعل المكتب نظيفا من يوم التركيب." : "Keep the desk clean on installation day.")}
           </p>
           <div className="flex flex-wrap gap-1.5">
             {axes.map((axis) => {
               const label = ACCESSORY_LABELS[axis];
               if (!label) return null;
               const on = !!accessories[axis];
+              const price = accessoryPrice(axis, config, familySlug);
               return (
                 <label
                   key={axis}
@@ -1382,11 +1461,11 @@ function CableDisclosure({
                     className="sr-only"
                   />
                   <span className="whitespace-nowrap">
-                    {isAr ? label.ar : label.en}
+                    {accessoryDisplayLabel(axis, config, isAr, familySlug)}
                   </span>
-                  {label.price > 0 && (
+                  {price > 0 && (
                     <span className={["text-[11px]", on ? "text-white/70" : "text-[#6B6B6B]"].join(" ")}>
-                      +{label.price}
+                      +{price}
                     </span>
                   )}
                 </label>

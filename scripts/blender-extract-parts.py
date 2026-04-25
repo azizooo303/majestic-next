@@ -32,10 +32,16 @@ HQ_ROOT = r"C:\Users\Admin\Desktop\Majestic-HQ\projects\majestic-3d\04_assets"
 NEXT_OUT = r"C:\Users\Admin\Desktop\Majestic-Next\public\3d-parts"
 
 JOBS_ALL = [
-    (rf"{HQ_ROOT}\cratos\DESK-CRATOS-EXEC-v2\master.blend", "cratos", "Executive"),
-    (rf"{HQ_ROOT}\cratos\DESK-CRATOS-MGR\master.blend",     "cratos", "Manager"),
-    (rf"{HQ_ROOT}\cratos\DESK-CRATOS-CONF\master.blend",    "cratos", "Conference"),
-    (rf"{HQ_ROOT}\cratos\DESK-CRATOS-L\master.blend",       "cratos", "L-Shape"),
+    # Cratos — restored kept list after the 2026-04-21 regression dropped
+    # Meeting 6P, Meeting (Large), and Workstation 6P from the generated manifest.
+    # Executive geometry is the Operator config; Conference and Meeting 4P are
+    # intentionally not extracted for the current Cratos web configurator.
+    (rf"{HQ_ROOT}\cratos\DESK-CRATOS-EXEC-v2\master.blend",  "cratos", "Operator"),
+    (rf"{HQ_ROOT}\cratos\DESK-CRATOS-MGR\master.blend",      "cratos", "Manager"),
+    (rf"{HQ_ROOT}\cratos\DESK-CRATOS-L\master.blend",        "cratos", "L-Shape"),
+    (rf"{HQ_ROOT}\cratos\MTG-CRATOS-MEETING\master.blend",   "cratos", "Meeting 6-Person"),
+    (rf"{HQ_ROOT}\cratos\MTG-CRATOS-WS\master.blend",        "cratos", "Meeting (Large)"),
+    (rf"{HQ_ROOT}\cratos\SYS-CRATOS-WS-6P\master.blend",     "cratos", "Workstation 6-Person"),
     # Simple family onboarding 2026-04-21 (protocol §4 flow)
     (rf"{HQ_ROOT}\simple\DESK-SIMPLE-L\master.blend",          "simple", "L-Shape"),
     (rf"{HQ_ROOT}\simple\DESK-SIMPLE-MGR\master.blend",        "simple", "Manager"),
