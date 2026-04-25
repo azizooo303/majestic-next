@@ -1,27 +1,9 @@
 {
   "family": "nepton",
+  "generated_at": "2026-04-24T02:53:27.263812Z",
   "configs": {
     "Executive": {
       "parts": {
-        "modesty": {
-          "glb": "/3d-parts/accessories/modesty-3f175a6fc136.glb",
-          "anchor": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "bbox": [
-            1.4,
-            0.018,
-            0.35
-          ],
-          "bytes": 1476,
-          "hash": "3f175a6fc136",
-          "source_object": "Box3128",
-          "source_materials": [
-            "Majestic_WhitePaint"
-          ]
-        },
         "top": {
           "glb": "/3d-parts/nepton/top/executive.glb",
           "anchor": [
@@ -34,15 +16,11 @@
             0.8,
             0.03
           ],
-          "bytes": 161692,
-          "hash": "842686d1e189",
-          "source_object": "Box3129",
-          "source_materials": [
-            "Library_A398_ItalianWalnut"
-          ]
+          "bytes": 161728,
+          "hash": "30d66acd4092"
         },
         "grommet_0": {
-          "glb": "/3d-parts/accessories/grommet-a74e57251a0d.glb",
+          "glb": "/3d-parts/nepton/grommet_0/executive.glb",
           "anchor": [
             0.0,
             0.0,
@@ -53,15 +31,11 @@
             0.02,
             0.0
           ],
-          "bytes": 1400,
-          "hash": "a74e57251a0d",
-          "source_object": "Plane062",
-          "source_materials": [
-            "Majestic_WhitePaint"
-          ]
+          "bytes": 1440,
+          "hash": "8195ed390864"
         },
         "grommet_1": {
-          "glb": "/3d-parts/accessories/grommet-a1ea68f72e2b.glb",
+          "glb": "/3d-parts/nepton/grommet_1/executive.glb",
           "anchor": [
             0.0,
             0.0,
@@ -72,15 +46,11 @@
             0.07,
             0.002
           ],
-          "bytes": 1340,
-          "hash": "a1ea68f72e2b",
-          "source_object": "Rectangle335",
-          "source_materials": [
-            "Majestic_WhitePaint"
-          ]
+          "bytes": 1400,
+          "hash": "262aba5f3729"
         },
         "grommet_2": {
-          "glb": "/3d-parts/accessories/grommet-5fcfc5dc04bc.glb",
+          "glb": "/3d-parts/nepton/grommet_2/executive.glb",
           "anchor": [
             0.0,
             0.0,
@@ -91,34 +61,1451 @@
             0.108,
             0.006
           ],
-          "bytes": 1480,
-          "hash": "5fcfc5dc04bc",
-          "source_object": "Rectangle336",
-          "source_materials": [
-            "Majestic_WhitePaint"
-          ]
+          "bytes": 1532,
+          "hash": "694a8c9bbd38"
         },
         "grommet_3": {
-          "glb": "/3d-parts/accessories/grommet-5a87b73207e8.glb",
+          "glb": "/3d-parts/nepton/grommet_3/executive.glb",
           "anchor": [
             0.0,
             0.0,
             0.0
           ],
           "bbox": [
-            0.026,
-            0.167,
-            0.01
+            0.054,
+            0.053,
+            0.016
           ],
-          "bytes": 11660,
-          "hash": "5a87b73207e8",
-          "source_object": "Box3106",
-          "source_materials": [
-            "Majestic_WhitePaint"
-          ]
+          "bytes": 33592,
+          "hash": "cfbbec258d4c"
         },
         "grommet_4": {
-          "glb": "/3d-parts/accessories/grommet-fcc293e4513c.glb",
+          "glb": "/3d-parts/nepton/grommet_4/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.031,
+            0.031,
+            0.01
+          ],
+          "bytes": 45236,
+          "hash": "e2ef4f88c717"
+        },
+        "grommet_5": {
+          "glb": "/3d-parts/nepton/grommet_5/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.016
+          ],
+          "bytes": 32640,
+          "hash": "2fd2cbb8c1cb"
+        },
+        "grommet_6": {
+          "glb": "/3d-parts/nepton/grommet_6/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.031,
+            0.031,
+            0.01
+          ],
+          "bytes": 44528,
+          "hash": "dd9ea3276602"
+        },
+        "grommet_7": {
+          "glb": "/3d-parts/nepton/grommet_7/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.016
+          ],
+          "bytes": 33184,
+          "hash": "8e6946c340d8"
+        },
+        "grommet_8": {
+          "glb": "/3d-parts/nepton/grommet_8/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.031,
+            0.031,
+            0.01
+          ],
+          "bytes": 44640,
+          "hash": "02e3db235471"
+        },
+        "grommet_9": {
+          "glb": "/3d-parts/nepton/grommet_9/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.016
+          ],
+          "bytes": 32796,
+          "hash": "2795ffbe6873"
+        },
+        "grommet_10": {
+          "glb": "/3d-parts/nepton/grommet_10/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.031,
+            0.031,
+            0.01
+          ],
+          "bytes": 45440,
+          "hash": "3fb1d6cded08"
+        },
+        "grommet_11": {
+          "glb": "/3d-parts/nepton/grommet_11/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 18968,
+          "hash": "34776ed7fdac"
+        },
+        "grommet_12": {
+          "glb": "/3d-parts/nepton/grommet_12/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 19348,
+          "hash": "7ce9e241a1c6"
+        },
+        "grommet_13": {
+          "glb": "/3d-parts/nepton/grommet_13/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 19348,
+          "hash": "e13d39066efd"
+        },
+        "grommet_14": {
+          "glb": "/3d-parts/nepton/grommet_14/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 19440,
+          "hash": "f65152674830"
+        },
+        "grommet_15": {
+          "glb": "/3d-parts/nepton/grommet_15/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 19356,
+          "hash": "6dc1454a53bd"
+        },
+        "grommet_16": {
+          "glb": "/3d-parts/nepton/grommet_16/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 19412,
+          "hash": "ec1874335f10"
+        },
+        "grommet_17": {
+          "glb": "/3d-parts/nepton/grommet_17/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 19012,
+          "hash": "0417572a6e01"
+        },
+        "grommet_18": {
+          "glb": "/3d-parts/nepton/grommet_18/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 19388,
+          "hash": "11c9854d4060"
+        },
+        "leg_r_0": {
+          "glb": "/3d-parts/nepton/leg_r_0/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.708
+          ],
+          "bytes": 8752,
+          "hash": "b9aab3128518"
+        },
+        "leg_r_1": {
+          "glb": "/3d-parts/nepton/leg_r_1/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.708
+          ],
+          "bytes": 8628,
+          "hash": "07e40b6df167"
+        },
+        "leg_r_2": {
+          "glb": "/3d-parts/nepton/leg_r_2/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.708
+          ],
+          "bytes": 8628,
+          "hash": "fc7c23b72f53"
+        },
+        "leg_r_3": {
+          "glb": "/3d-parts/nepton/leg_r_3/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.708
+          ],
+          "bytes": 8600,
+          "hash": "bc9df373d8b2"
+        },
+        "frame_beam_0": {
+          "glb": "/3d-parts/nepton/frame_beam_0/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.006,
+            0.405,
+            0.05
+          ],
+          "bytes": 6212,
+          "hash": "76b598829258"
+        },
+        "frame_beam_1": {
+          "glb": "/3d-parts/nepton/frame_beam_1/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.006,
+            0.405,
+            0.05
+          ],
+          "bytes": 6148,
+          "hash": "e7ecb7bc70e6"
+        },
+        "frame_beam_2": {
+          "glb": "/3d-parts/nepton/frame_beam_2/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.101,
+            0.711,
+            0.05
+          ],
+          "bytes": 12844,
+          "hash": "c160bfd56b09"
+        },
+        "frame_beam_3": {
+          "glb": "/3d-parts/nepton/frame_beam_3/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.101,
+            0.711,
+            0.05
+          ],
+          "bytes": 12812,
+          "hash": "5722cba77fcc"
+        },
+        "frame_beam_4": {
+          "glb": "/3d-parts/nepton/frame_beam_4/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.491,
+            0.02,
+            0.05
+          ],
+          "bytes": 8628,
+          "hash": "3e80db8cae58"
+        },
+        "frame_beam_5": {
+          "glb": "/3d-parts/nepton/frame_beam_5/executive.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.491,
+            0.02,
+            0.05
+          ],
+          "bytes": 8596,
+          "hash": "91e717b463d8"
+        }
+      },
+      "baseSize": "180x80",
+      "unknowns": []
+    },
+    "Operator": {
+      "parts": {
+        "top_0": {
+          "glb": "/3d-parts/nepton/top_0/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.4,
+            0.7,
+            0.03
+          ],
+          "bytes": 161728,
+          "hash": "8be48c5859a2"
+        },
+        "top_1": {
+          "glb": "/3d-parts/nepton/top_1/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.4,
+            0.7,
+            0.03
+          ],
+          "bytes": 161736,
+          "hash": "d8cfb696ee9e"
+        },
+        "frame_beam_0": {
+          "glb": "/3d-parts/nepton/frame_beam_0/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.101,
+            1.01,
+            0.05
+          ],
+          "bytes": 1508,
+          "hash": "2c76555fad31"
+        },
+        "frame_beam_1": {
+          "glb": "/3d-parts/nepton/frame_beam_1/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.03,
+            0.61,
+            0.018
+          ],
+          "bytes": 11176,
+          "hash": "4e95fe70c3a4"
+        },
+        "frame_beam_2": {
+          "glb": "/3d-parts/nepton/frame_beam_2/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.101,
+            1.288,
+            0.05
+          ],
+          "bytes": 10732,
+          "hash": "3d99d2166dfe"
+        },
+        "leg_r_0": {
+          "glb": "/3d-parts/nepton/leg_r_0/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.026,
+            0.656
+          ],
+          "bytes": 1508,
+          "hash": "68cf7d8717bb"
+        },
+        "leg_r_1": {
+          "glb": "/3d-parts/nepton/leg_r_1/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.026,
+            0.656
+          ],
+          "bytes": 1504,
+          "hash": "4e07c19246cf"
+        },
+        "leg_r_2": {
+          "glb": "/3d-parts/nepton/leg_r_2/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.01,
+            0.554,
+            0.608
+          ],
+          "bytes": 1632,
+          "hash": "0753e186f74b"
+        },
+        "leg_r_3": {
+          "glb": "/3d-parts/nepton/leg_r_3/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.01,
+            0.554,
+            0.608
+          ],
+          "bytes": 1636,
+          "hash": "349e57c328a1"
+        },
+        "leg_r_4": {
+          "glb": "/3d-parts/nepton/leg_r_4/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.693
+          ],
+          "bytes": 7384,
+          "hash": "b7f50f7c9dde"
+        },
+        "leg_r_5": {
+          "glb": "/3d-parts/nepton/leg_r_5/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.693
+          ],
+          "bytes": 7312,
+          "hash": "d6f6c884dc3f"
+        },
+        "grommet_0": {
+          "glb": "/3d-parts/nepton/grommet_0/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.268,
+            0.02,
+            0.0
+          ],
+          "bytes": 1424,
+          "hash": "112b00fe9d27"
+        },
+        "grommet_1": {
+          "glb": "/3d-parts/nepton/grommet_1/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.267,
+            0.07,
+            0.002
+          ],
+          "bytes": 1384,
+          "hash": "8775a11dece2"
+        },
+        "grommet_2": {
+          "glb": "/3d-parts/nepton/grommet_2/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.3,
+            0.108,
+            0.006
+          ],
+          "bytes": 1516,
+          "hash": "57d822c75354"
+        },
+        "grommet_3": {
+          "glb": "/3d-parts/nepton/grommet_3/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.268,
+            0.02,
+            0.0
+          ],
+          "bytes": 1428,
+          "hash": "625b31b8d20c"
+        },
+        "grommet_4": {
+          "glb": "/3d-parts/nepton/grommet_4/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.267,
+            0.07,
+            0.002
+          ],
+          "bytes": 1388,
+          "hash": "c291cff5a674"
+        },
+        "grommet_5": {
+          "glb": "/3d-parts/nepton/grommet_5/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.3,
+            0.108,
+            0.006
+          ],
+          "bytes": 1520,
+          "hash": "60ba860dea13"
+        },
+        "grommet_6": {
+          "glb": "/3d-parts/nepton/grommet_6/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.069,
+            0.05,
+            0.031
+          ],
+          "bytes": 12708,
+          "hash": "38a578615efe"
+        },
+        "grommet_7": {
+          "glb": "/3d-parts/nepton/grommet_7/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.069,
+            0.05,
+            0.031
+          ],
+          "bytes": 12704,
+          "hash": "f4c29c94617b"
+        },
+        "grommet_8": {
+          "glb": "/3d-parts/nepton/grommet_8/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.016
+          ],
+          "bytes": 29164,
+          "hash": "8685123347cb"
+        },
+        "grommet_9": {
+          "glb": "/3d-parts/nepton/grommet_9/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.031,
+            0.031,
+            0.01
+          ],
+          "bytes": 35172,
+          "hash": "f9388be2d711"
+        },
+        "grommet_10": {
+          "glb": "/3d-parts/nepton/grommet_10/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.016
+          ],
+          "bytes": 28940,
+          "hash": "c596825cb423"
+        },
+        "grommet_11": {
+          "glb": "/3d-parts/nepton/grommet_11/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.031,
+            0.031,
+            0.01
+          ],
+          "bytes": 35152,
+          "hash": "75efb19375af"
+        },
+        "grommet_12": {
+          "glb": "/3d-parts/nepton/grommet_12/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 16056,
+          "hash": "1e1d23b2b198"
+        },
+        "grommet_13": {
+          "glb": "/3d-parts/nepton/grommet_13/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 16052,
+          "hash": "f1dacb79ca58"
+        },
+        "grommet_14": {
+          "glb": "/3d-parts/nepton/grommet_14/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 15956,
+          "hash": "cc02c82ea2ac"
+        },
+        "grommet_15": {
+          "glb": "/3d-parts/nepton/grommet_15/operator.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 15972,
+          "hash": "d0065ccb1303"
+        }
+      },
+      "baseSize": null,
+      "unknowns": [
+        {
+          "name": "Layer:011.002",
+          "materials": [
+            "Majestic_WhitePaint"
+          ],
+          "bbox": [
+            0.006,
+            0.233,
+            0.05
+          ],
+          "location": [
+            0.668,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "Layer:011.026",
+          "materials": [
+            "Majestic_WhitePaint"
+          ],
+          "bbox": [
+            0.006,
+            0.233,
+            0.05
+          ],
+          "location": [
+            0.668,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    "Manager": {
+      "parts": {
+        "leg_r_0": {
+          "glb": "/3d-parts/nepton/leg_r_0/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.3,
+            0.018,
+            0.35
+          ],
+          "bytes": 1552,
+          "hash": "62ae58185a21"
+        },
+        "leg_r_1": {
+          "glb": "/3d-parts/nepton/leg_r_1/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.708
+          ],
+          "bytes": 8520,
+          "hash": "a9ced2232705"
+        },
+        "leg_r_2": {
+          "glb": "/3d-parts/nepton/leg_r_2/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.708
+          ],
+          "bytes": 8416,
+          "hash": "ae33321d78e7"
+        },
+        "leg_r_3": {
+          "glb": "/3d-parts/nepton/leg_r_3/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.708
+          ],
+          "bytes": 8396,
+          "hash": "1dfcef02869f"
+        },
+        "leg_r_4": {
+          "glb": "/3d-parts/nepton/leg_r_4/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.708
+          ],
+          "bytes": 8364,
+          "hash": "e1d2f53c07f0"
+        },
+        "leg_r_5": {
+          "glb": "/3d-parts/nepton/leg_r_5/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.053,
+            0.054,
+            0.708
+          ],
+          "bytes": 8520,
+          "hash": "234e11dac63b"
+        },
+        "leg_r_6": {
+          "glb": "/3d-parts/nepton/leg_r_6/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.053,
+            0.054,
+            0.708
+          ],
+          "bytes": 8400,
+          "hash": "8bede56108a2"
+        },
+        "grommet_0": {
+          "glb": "/3d-parts/nepton/grommet_0/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.002,
+            0.026,
+            0.026
+          ],
+          "bytes": 8072,
+          "hash": "6d85aa6b4fd4"
+        },
+        "grommet_1": {
+          "glb": "/3d-parts/nepton/grommet_1/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.267,
+            0.07,
+            0.002
+          ],
+          "bytes": 1420,
+          "hash": "2a007127737a"
+        },
+        "grommet_2": {
+          "glb": "/3d-parts/nepton/grommet_2/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.3,
+            0.108,
+            0.006
+          ],
+          "bytes": 1556,
+          "hash": "f0827dc3f649"
+        },
+        "grommet_3": {
+          "glb": "/3d-parts/nepton/grommet_3/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.268,
+            0.02,
+            0.0
+          ],
+          "bytes": 1464,
+          "hash": "a0cbf84132ed"
+        },
+        "grommet_4": {
+          "glb": "/3d-parts/nepton/grommet_4/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.016
+          ],
+          "bytes": 32432,
+          "hash": "d0fcbb3cc6d3"
+        },
+        "grommet_5": {
+          "glb": "/3d-parts/nepton/grommet_5/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.069,
+            0.05,
+            0.031
+          ],
+          "bytes": 12676,
+          "hash": "0cc6bd713ec6"
+        },
+        "grommet_6": {
+          "glb": "/3d-parts/nepton/grommet_6/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.069,
+            0.05,
+            0.031
+          ],
+          "bytes": 12584,
+          "hash": "2d1bb7cbe9fe"
+        },
+        "grommet_7": {
+          "glb": "/3d-parts/nepton/grommet_7/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.069,
+            0.05,
+            0.031
+          ],
+          "bytes": 12580,
+          "hash": "bb177e4afbe0"
+        },
+        "grommet_8": {
+          "glb": "/3d-parts/nepton/grommet_8/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.069,
+            0.05,
+            0.031
+          ],
+          "bytes": 12676,
+          "hash": "225099769b46"
+        },
+        "grommet_9": {
+          "glb": "/3d-parts/nepton/grommet_9/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.053,
+            0.054,
+            0.016
+          ],
+          "bytes": 32528,
+          "hash": "7d4fc80b9079"
+        },
+        "grommet_10": {
+          "glb": "/3d-parts/nepton/grommet_10/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.031,
+            0.031,
+            0.01
+          ],
+          "bytes": 43076,
+          "hash": "4fe20c12272b"
+        },
+        "grommet_11": {
+          "glb": "/3d-parts/nepton/grommet_11/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.016
+          ],
+          "bytes": 31496,
+          "hash": "ab6f1ebf65c9"
+        },
+        "grommet_12": {
+          "glb": "/3d-parts/nepton/grommet_12/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.031,
+            0.031,
+            0.01
+          ],
+          "bytes": 42412,
+          "hash": "1b6dee86913e"
+        },
+        "grommet_13": {
+          "glb": "/3d-parts/nepton/grommet_13/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.016
+          ],
+          "bytes": 31952,
+          "hash": "3da16b4c9743"
+        },
+        "grommet_14": {
+          "glb": "/3d-parts/nepton/grommet_14/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.031,
+            0.031,
+            0.01
+          ],
+          "bytes": 42496,
+          "hash": "80dfb53dd7a0"
+        },
+        "grommet_15": {
+          "glb": "/3d-parts/nepton/grommet_15/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.016
+          ],
+          "bytes": 31572,
+          "hash": "6e28630373fc"
+        },
+        "grommet_16": {
+          "glb": "/3d-parts/nepton/grommet_16/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.031,
+            0.031,
+            0.01
+          ],
+          "bytes": 43552,
+          "hash": "7d228f2a9ce0"
+        },
+        "grommet_17": {
+          "glb": "/3d-parts/nepton/grommet_17/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 18516,
+          "hash": "4d9bea3d58e5"
+        },
+        "grommet_18": {
+          "glb": "/3d-parts/nepton/grommet_18/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 18912,
+          "hash": "37db9d89e6d0"
+        },
+        "grommet_19": {
+          "glb": "/3d-parts/nepton/grommet_19/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 18928,
+          "hash": "20d63dbb2a10"
+        },
+        "grommet_20": {
+          "glb": "/3d-parts/nepton/grommet_20/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 18988,
+          "hash": "c6e944a05b7c"
+        },
+        "grommet_21": {
+          "glb": "/3d-parts/nepton/grommet_21/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 18924,
+          "hash": "33d06e700a6d"
+        },
+        "grommet_22": {
+          "glb": "/3d-parts/nepton/grommet_22/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 18992,
+          "hash": "508c9cf75eb0"
+        },
+        "grommet_23": {
+          "glb": "/3d-parts/nepton/grommet_23/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 18552,
+          "hash": "31e77d46050c"
+        },
+        "grommet_24": {
+          "glb": "/3d-parts/nepton/grommet_24/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 18948,
+          "hash": "7fe8ec581321"
+        },
+        "grommet_25": {
+          "glb": "/3d-parts/nepton/grommet_25/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.031,
+            0.031,
+            0.01
+          ],
+          "bytes": 43200,
+          "hash": "7199fbee0f00"
+        },
+        "grommet_26": {
+          "glb": "/3d-parts/nepton/grommet_26/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.053,
+            0.054,
+            0.016
+          ],
+          "bytes": 31424,
+          "hash": "29ddea94eb8d"
+        },
+        "grommet_27": {
+          "glb": "/3d-parts/nepton/grommet_27/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.031,
+            0.031,
+            0.01
+          ],
+          "bytes": 42316,
+          "hash": "4f7bb3eefa5c"
+        },
+        "grommet_28": {
+          "glb": "/3d-parts/nepton/grommet_28/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 18532,
+          "hash": "bc0d19de976f"
+        },
+        "grommet_29": {
+          "glb": "/3d-parts/nepton/grommet_29/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 18928,
+          "hash": "91fb6421b012"
+        },
+        "grommet_30": {
+          "glb": "/3d-parts/nepton/grommet_30/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 18916,
+          "hash": "a13237d7f573"
+        },
+        "grommet_31": {
+          "glb": "/3d-parts/nepton/grommet_31/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 18988,
+          "hash": "4d2c238aa7bf"
+        },
+        "grommet_32": {
+          "glb": "/3d-parts/nepton/grommet_32/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.02,
+            0.001,
+            0.05
+          ],
+          "bytes": 5280,
+          "hash": "2dfa482e80e7"
+        },
+        "handle_0": {
+          "glb": "/3d-parts/nepton/handle_0/manager.glb",
           "anchor": [
             0.0,
             0.0,
@@ -129,15 +1516,2575 @@
             0.167,
             0.01
           ],
-          "bytes": 11664,
-          "hash": "fcc293e4513c",
-          "source_object": "Box3116",
-          "source_materials": [
+          "bytes": 11632,
+          "hash": "5db370cae9d8"
+        },
+        "handle_1": {
+          "glb": "/3d-parts/nepton/handle_1/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.026,
+            0.167,
+            0.01
+          ],
+          "bytes": 11640,
+          "hash": "ef0a8da70ad0"
+        },
+        "handle_2": {
+          "glb": "/3d-parts/nepton/handle_2/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.026,
+            0.167,
+            0.01
+          ],
+          "bytes": 11640,
+          "hash": "bc8e3be33232"
+        },
+        "pedestal_0": {
+          "glb": "/3d-parts/nepton/pedestal_0/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.498,
+            0.402,
+            0.019
+          ],
+          "bytes": 1552,
+          "hash": "e214b856b6f2"
+        },
+        "pedestal_1": {
+          "glb": "/3d-parts/nepton/pedestal_1/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.015,
+            0.402,
+            0.519
+          ],
+          "bytes": 1760,
+          "hash": "c9a67aa51ab8"
+        },
+        "pedestal_body": {
+          "glb": "/3d-parts/nepton/pedestal_body/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.487,
+            0.402,
+            0.522
+          ],
+          "bytes": 1896,
+          "hash": "ac01778272af"
+        },
+        "pedestal_top": {
+          "glb": "/3d-parts/nepton/pedestal_top/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.459,
+            0.345,
+            0.06
+          ],
+          "bytes": 10012,
+          "hash": "77237e1e2d87"
+        },
+        "top_0": {
+          "glb": "/3d-parts/nepton/top_0/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.6,
+            0.8,
+            0.03
+          ],
+          "bytes": 161816,
+          "hash": "d73f0cde083f"
+        },
+        "top_1": {
+          "glb": "/3d-parts/nepton/top_1/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.5,
+            0.8,
+            0.03
+          ],
+          "bytes": 161812,
+          "hash": "c19ae3fa0951"
+        },
+        "frame_beam_0": {
+          "glb": "/3d-parts/nepton/frame_beam_0/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.101,
+            0.713,
+            0.05
+          ],
+          "bytes": 11984,
+          "hash": "6385e2b3a83e"
+        },
+        "frame_beam_1": {
+          "glb": "/3d-parts/nepton/frame_beam_1/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.101,
+            0.713,
+            0.05
+          ],
+          "bytes": 11908,
+          "hash": "7c4d2cda96e2"
+        },
+        "frame_beam_2": {
+          "glb": "/3d-parts/nepton/frame_beam_2/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.298,
+            0.02,
+            0.05
+          ],
+          "bytes": 7936,
+          "hash": "b904d645e0ed"
+        },
+        "frame_beam_3": {
+          "glb": "/3d-parts/nepton/frame_beam_3/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.298,
+            0.02,
+            0.05
+          ],
+          "bytes": 7884,
+          "hash": "f1efbf743cb5"
+        },
+        "frame_beam_4": {
+          "glb": "/3d-parts/nepton/frame_beam_4/manager.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.02,
+            0.942,
+            0.05
+          ],
+          "bytes": 5108,
+          "hash": "2af91d55ac31"
+        }
+      },
+      "baseSize": null,
+      "unknowns": [
+        {
+          "name": "Layer:001.020",
+          "materials": [
             "Majestic_WhitePaint"
+          ],
+          "bbox": [
+            0.006,
+            0.233,
+            0.05
+          ],
+          "location": [
+            1.08,
+            0.063,
+            0.001
           ]
         },
+        {
+          "name": "Layer:001.021",
+          "materials": [
+            "Majestic_WhitePaint"
+          ],
+          "bbox": [
+            0.006,
+            0.233,
+            0.05
+          ],
+          "location": [
+            1.08,
+            0.063,
+            0.001
+          ]
+        },
+        {
+          "name": "Layer:033.010",
+          "materials": [
+            "Majestic_WhitePaint"
+          ],
+          "bbox": [
+            0.119,
+            0.006,
+            0.05
+          ],
+          "location": [
+            1.08,
+            0.063,
+            0.001
+          ]
+        },
+        {
+          "name": "Layer:033.011",
+          "materials": [
+            "Majestic_WhitePaint"
+          ],
+          "bbox": [
+            0.421,
+            0.101,
+            0.05
+          ],
+          "location": [
+            1.08,
+            0.063,
+            0.001
+          ]
+        }
+      ]
+    },
+    "Manager L": {
+      "parts": {
+        "leg_r_0": {
+          "glb": "/3d-parts/nepton/leg_r_0/manager-l.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.3,
+            0.018,
+            0.35
+          ],
+          "bytes": 1548,
+          "hash": "19699d509b30"
+        },
+        "leg_r_1": {
+          "glb": "/3d-parts/nepton/leg_r_1/manager-l.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.708
+          ],
+          "bytes": 8704,
+          "hash": "3fa50322feb9"
+        },
+        "leg_r_2": {
+          "glb": "/3d-parts/nepton/leg_r_2/manager-l.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.708
+          ],
+          "bytes": 8600,
+          "hash": "d04b85d24915"
+        },
+        "leg_r_3": {
+          "glb": "/3d-parts/nepton/leg_r_3/manager-l.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.708
+          ],
+          "bytes": 8572,
+          "hash": "16753c5ce65d"
+        },
+        "leg_r_4": {
+          "glb": "/3d-parts/nepton/leg_r_4/manager-l.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.708
+          ],
+          "bytes": 8548,
+          "hash": "fcdf032472e6"
+        },
+        "leg_r_5": {
+          "glb": "/3d-parts/nepton/leg_r_5/manager-l.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.707
+          ],
+          "bytes": 3584,
+          "hash": "5c5fa8f7addb"
+        },
+        "leg_r_6": {
+          "glb": "/3d-parts/nepton/leg_r_6/manager-l.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.05,
+            0.05,
+            0.707
+          ],
+          "bytes": 3616,
+          "hash": "a1bf205207f0"
+        },
+        "top_0": {
+          "glb": "/3d-parts/nepton/top_0/manager-l.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.6,
+            0.8,
+            0.03
+          ],
+          "bytes": 161812,
+          "hash": "0bed76fd59b7"
+        },
+        "top_1": {
+          "glb": "/3d-parts/nepton/top_1/manager-l.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.5,
+            0.8,
+            0.03
+          ],
+          "bytes": 161808,
+          "hash": "24c0ee47231b"
+        },
+        "pedestal_0": {
+          "glb": "/3d-parts/nepton/pedestal_0/manager-l.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.498,
+            0.402,
+            0.019
+          ],
+          "bytes": 1552,
+          "hash": "808e500e9208"
+        },
+        "pedestal_1": {
+          "glb": "/3d-parts/nepton/pedestal_1/manager-l.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.015,
+            0.402,
+            0.519
+          ],
+          "bytes": 1756,
+          "hash": "4a40d840a602"
+        },
+        "pedestal_body": {
+          "glb": "/3d-parts/nepton/pedestal_body/manager-l.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.487,
+            0.402,
+            0.522
+          ],
+          "bytes": 1888,
+          "hash": "19de34d8d564"
+        },
+        "pedestal_top": {
+          "glb": "/3d-parts/nepton/pedestal_top/manager-l.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.459,
+            0.345,
+            0.06
+          ],
+          "bytes": 10140,
+          "hash": "7f221c119f47"
+        },
+        "grommet_0": {
+          "glb": "/3d-parts/nepton/grommet_0/manager-l.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.002,
+            0.026,
+            0.026
+          ],
+          "bytes": 8068,
+          "hash": "e223e30db660"
+        },
+        "grommet_1": {
+          "glb": "/3d-parts/nepton/grommet_1/manager-l.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.268,
+            0.02,
+            0.0
+          ],
+          "bytes": 1456,
+          "hash": "50553dec42d5"
+        },
+        "grommet_2": {
+          "glb": "/3d-parts/nepton/grommet_2/manager-l.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.267,
+            0.07,
+            0.002
+          ],
+          "bytes": 1420,
+          "hash": "662b348cce50"
+        },
+        "grommet_3": {
+          "glb": "/3d-parts/nepton/grommet_3/manager-l.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.3,
+            0.108,
+            0.006
+          ],
+          "bytes": 1552,
+          "hash": "ee0117f516af"
+        },
+        "grommet_4": {
+          "glb": "/3d-parts/nepton/grommet_4/manager-l.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.016
+          ],
+          "bytes": 33144,
+          "hash": "63b2cf395cc7"
+        },
         "grommet_5": {
-          "glb": "/3d-parts/accessories/grommet-88d59a169489.glb",
+          "glb": "/3d-parts/nepton/grommet_5/manager-l.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.069,
+            0.05,
+            0.031
+          ],
+          "bytes": 12920,
+          "hash": "19baa3798fcb"
+        },
+        "grommet_6": {
+          "glb": "/3d-parts/nepton/grommet_6/manager-l.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.069,
+            0.05,
+            0.031
+          ],
+          "bytes": 12880,
+          "hash": "9414f9163c12"
+        },
+        "grommet_7": {
+          "glb": "/3d-parts/nepton/grommet_7/manager-l.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.069,
+            0.05,
+            0.031
+          ],
+          "bytes": 12892,
+          "hash": "0a3fddff0936"
+        },
+        "grommet_8": {
+          "glb": "/3d-parts/nepton/grommet_8/manager-l.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.069,
+            0.05,
+            0.031
+          ],
+          "bytes": 12924,
+          "hash": "3271e8091ff3"
+        },
+        "grommet_9": {
+          "glb": "/3d-parts/nepton/grommet_9/manager-l.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.031,
+            0.031,
+            0.01
+          ],
+          "bytes": 44828,
+          "hash": "54445e612257"
+        },
+        "grommet_10": {
+          "glb": "/3d-parts/nepton/grommet_10/manager-l.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.016
+          ],
+          "bytes": 32120,
+          "hash": "6a2c8c3d2c9f"
+        },
+        "grommet_11": {
+          "glb": "/3d-parts/nepton/grommet_11/manager-l.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.031,
+            0.031,
+            0.01
+          ],
+          "bytes": 43956,
+          "hash": "75cd0850a762"
+        },
+        "grommet_12": {
+          "glb": "/3d-parts/nepton/grommet_12/manager-l.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.016
+          ],
+          "bytes": 32700,
+          "hash": "167db5896cd2"
+        },
+        "grommet_13": {
+          "glb": "/3d-parts/nepton/grommet_13/manager-l.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.031,
+            0.031,
+            0.01
+          ],
+          "bytes": 43744,
+          "hash": "3a68a78d62b8"
+        },
+        "grommet_14": {
+          "glb": "/3d-parts/nepton/grommet_14/manager-l.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.016
+          ],
+          "bytes": 32184,
+          "hash": "f83ef46cb697"
+        },
+        "grommet_15": {
+          "glb": "/3d-parts/nepton/grommet_15/manager-l.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.031,
+            0.031,
+            0.01
+          ],
+          "bytes": 44700,
+          "hash": "74a5d1a17aea"
+        },
+        "grommet_16": {
+          "glb": "/3d-parts/nepton/grommet_16/manager-l.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 18748,
+          "hash": "2cc62ca55b3b"
+        },
+        "grommet_17": {
+          "glb": "/3d-parts/nepton/grommet_17/manager-l.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 19160,
+          "hash": "db4512112174"
+        },
+        "grommet_18": {
+          "glb": "/3d-parts/nepton/grommet_18/manager-l.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 19160,
+          "hash": "6f88a5629a79"
+        },
+        "grommet_19": {
+          "glb": "/3d-parts/nepton/grommet_19/manager-l.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 19228,
+          "hash": "81f374991a28"
+        },
+        "grommet_20": {
+          "glb": "/3d-parts/nepton/grommet_20/manager-l.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 19204,
+          "hash": "727d774067b6"
+        },
+        "grommet_21": {
+          "glb": "/3d-parts/nepton/grommet_21/manager-l.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 19248,
+          "hash": "428d010a7492"
+        },
+        "grommet_22": {
+          "glb": "/3d-parts/nepton/grommet_22/manager-l.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 18844,
+          "hash": "a3b2acabb0a9"
+        },
+        "grommet_23": {
+          "glb": "/3d-parts/nepton/grommet_23/manager-l.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 19180,
+          "hash": "052be52105eb"
+        },
+        "handle_0": {
+          "glb": "/3d-parts/nepton/handle_0/manager-l.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.026,
+            0.167,
+            0.01
+          ],
+          "bytes": 11908,
+          "hash": "655b1ebc5076"
+        },
+        "handle_1": {
+          "glb": "/3d-parts/nepton/handle_1/manager-l.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.026,
+            0.167,
+            0.01
+          ],
+          "bytes": 11904,
+          "hash": "4a2b9c5427cd"
+        },
+        "handle_2": {
+          "glb": "/3d-parts/nepton/handle_2/manager-l.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.026,
+            0.167,
+            0.01
+          ],
+          "bytes": 11896,
+          "hash": "e0b822612fac"
+        },
+        "frame_beam_0": {
+          "glb": "/3d-parts/nepton/frame_beam_0/manager-l.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.0,
+            0.976,
+            0.05
+          ],
+          "bytes": 1444,
+          "hash": "9a0632a333bb"
+        },
+        "frame_beam_1": {
+          "glb": "/3d-parts/nepton/frame_beam_1/manager-l.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.489,
+            0.05,
+            0.042
+          ],
+          "bytes": 197464,
+          "hash": "e4979b4eaa1b"
+        },
+        "frame_beam_2": {
+          "glb": "/3d-parts/nepton/frame_beam_2/manager-l.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.101,
+            0.713,
+            0.05
+          ],
+          "bytes": 12508,
+          "hash": "b0e64b857e80"
+        },
+        "frame_beam_3": {
+          "glb": "/3d-parts/nepton/frame_beam_3/manager-l.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.101,
+            0.713,
+            0.05
+          ],
+          "bytes": 12560,
+          "hash": "ecf5144088c5"
+        },
+        "frame_beam_4": {
+          "glb": "/3d-parts/nepton/frame_beam_4/manager-l.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.298,
+            0.02,
+            0.05
+          ],
+          "bytes": 8492,
+          "hash": "a9fb553a952a"
+        },
+        "frame_beam_5": {
+          "glb": "/3d-parts/nepton/frame_beam_5/manager-l.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.298,
+            0.02,
+            0.05
+          ],
+          "bytes": 8484,
+          "hash": "4b3a5a18424b"
+        },
+        "frame_beam_6": {
+          "glb": "/3d-parts/nepton/frame_beam_6/manager-l.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.03,
+            0.976,
+            0.0
+          ],
+          "bytes": 1456,
+          "hash": "84ff37a73adb"
+        },
+        "frame_beam_7": {
+          "glb": "/3d-parts/nepton/frame_beam_7/manager-l.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.0,
+            0.976,
+            0.05
+          ],
+          "bytes": 1452,
+          "hash": "4156cf5ac50a"
+        },
+        "frame_beam_8": {
+          "glb": "/3d-parts/nepton/frame_beam_8/manager-l.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.489,
+            0.05,
+            0.05
+          ],
+          "bytes": 3456,
+          "hash": "298da471d6e3"
+        }
+      },
+      "baseSize": null,
+      "unknowns": [
+        {
+          "name": "Layer:030.020",
+          "materials": [
+            "Majestic_WhitePaint"
+          ],
+          "bbox": [
+            0.006,
+            0.233,
+            0.05
+          ],
+          "location": [
+            26.938,
+            -8.159,
+            0.001
+          ]
+        },
+        {
+          "name": "Layer:030.021",
+          "materials": [
+            "Majestic_WhitePaint"
+          ],
+          "bbox": [
+            0.006,
+            0.233,
+            0.05
+          ],
+          "location": [
+            26.938,
+            -8.159,
+            0.001
+          ]
+        }
+      ]
+    },
+    "L-Shape Full Storage": {
+      "parts": {
+        "leg_l_0": {
+          "glb": "/3d-parts/nepton/leg_l_0/l-shape-full-storage.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.1,
+            0.018,
+            0.35
+          ],
+          "bytes": 1532,
+          "hash": "2a24f98bd916"
+        },
+        "leg_l_1": {
+          "glb": "/3d-parts/nepton/leg_l_1/l-shape-full-storage.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.48,
+            0.018,
+            0.532
+          ],
+          "bytes": 1580,
+          "hash": "dfa2235c051f"
+        },
+        "leg_l_2": {
+          "glb": "/3d-parts/nepton/leg_l_2/l-shape-full-storage.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.478,
+            0.018,
+            0.51
+          ],
+          "bytes": 1560,
+          "hash": "efe2d635ddd3"
+        },
+        "leg_l_3": {
+          "glb": "/3d-parts/nepton/leg_l_3/l-shape-full-storage.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.481,
+            0.018,
+            0.52
+          ],
+          "bytes": 1516,
+          "hash": "cad7c3374728"
+        },
+        "leg_l_4": {
+          "glb": "/3d-parts/nepton/leg_l_4/l-shape-full-storage.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.478,
+            0.018,
+            0.51
+          ],
+          "bytes": 1544,
+          "hash": "8674b1282044"
+        },
+        "leg_l_5": {
+          "glb": "/3d-parts/nepton/leg_l_5/l-shape-full-storage.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.018,
+            0.38,
+            0.527
+          ],
+          "bytes": 1552,
+          "hash": "72f4a068b6b5"
+        },
+        "leg_l_6": {
+          "glb": "/3d-parts/nepton/leg_l_6/l-shape-full-storage.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.708
+          ],
+          "bytes": 8388,
+          "hash": "3ece3fbd66ab"
+        },
+        "leg_l_7": {
+          "glb": "/3d-parts/nepton/leg_l_7/l-shape-full-storage.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.708
+          ],
+          "bytes": 8364,
+          "hash": "abf77004f763"
+        },
+        "top_0": {
+          "glb": "/3d-parts/nepton/top_0/l-shape-full-storage.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.8,
+            0.8,
+            0.03
+          ],
+          "bytes": 161792,
+          "hash": "fbabd043a3b4"
+        },
+        "top_1": {
+          "glb": "/3d-parts/nepton/top_1/l-shape-full-storage.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.48,
+            1.596,
+            0.018
+          ],
+          "bytes": 161788,
+          "hash": "2158e160d8fc"
+        },
+        "top_2": {
+          "glb": "/3d-parts/nepton/top_2/l-shape-full-storage.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.52,
+            1.6,
+            0.018
+          ],
+          "bytes": 161784,
+          "hash": "276ff8dad6d5"
+        },
+        "top_3": {
+          "glb": "/3d-parts/nepton/top_3/l-shape-full-storage.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.459,
+            0.783,
+            0.018
+          ],
+          "bytes": 161764,
+          "hash": "14e7b200d93a"
+        },
+        "modesty_0": {
+          "glb": "/3d-parts/nepton/modesty_0/l-shape-full-storage.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.018,
+            0.404,
+            0.178
+          ],
+          "bytes": 1576,
+          "hash": "b96778373d61"
+        },
+        "modesty_1": {
+          "glb": "/3d-parts/nepton/modesty_1/l-shape-full-storage.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.018,
+            0.404,
+            0.175
+          ],
+          "bytes": 1572,
+          "hash": "aee1503853d3"
+        },
+        "modesty_2": {
+          "glb": "/3d-parts/nepton/modesty_2/l-shape-full-storage.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.018,
+            0.404,
+            0.171
+          ],
+          "bytes": 1560,
+          "hash": "1cae9f3cf556"
+        },
+        "grommet_0": {
+          "glb": "/3d-parts/nepton/grommet_0/l-shape-full-storage.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.029,
+            0.016,
+            0.016
+          ],
+          "bytes": 5100,
+          "hash": "6700ea172652"
+        },
+        "grommet_1": {
+          "glb": "/3d-parts/nepton/grommet_1/l-shape-full-storage.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.029,
+            0.016,
+            0.016
+          ],
+          "bytes": 5092,
+          "hash": "bce25bd0b1b7"
+        },
+        "grommet_2": {
+          "glb": "/3d-parts/nepton/grommet_2/l-shape-full-storage.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.026,
+            0.167,
+            0.01
+          ],
+          "bytes": 11624,
+          "hash": "9be7cb45ca3d"
+        },
+        "grommet_3": {
+          "glb": "/3d-parts/nepton/grommet_3/l-shape-full-storage.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.026,
+            0.167,
+            0.01
+          ],
+          "bytes": 11632,
+          "hash": "1437c8741ab9"
+        },
+        "grommet_4": {
+          "glb": "/3d-parts/nepton/grommet_4/l-shape-full-storage.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.026,
+            0.167,
+            0.01
+          ],
+          "bytes": 11640,
+          "hash": "f57d1bf2c54d"
+        },
+        "grommet_5": {
+          "glb": "/3d-parts/nepton/grommet_5/l-shape-full-storage.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.06,
+            0.06,
+            0.002
+          ],
+          "bytes": 3924,
+          "hash": "991873378f10"
+        },
+        "grommet_6": {
+          "glb": "/3d-parts/nepton/grommet_6/l-shape-full-storage.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.04,
+            0.04,
+            0.005
+          ],
+          "bytes": 1496,
+          "hash": "b1c4b41c58b7"
+        },
+        "grommet_7": {
+          "glb": "/3d-parts/nepton/grommet_7/l-shape-full-storage.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.04,
+            0.04,
+            0.053
+          ],
+          "bytes": 3732,
+          "hash": "746ab85ae9e7"
+        },
+        "grommet_8": {
+          "glb": "/3d-parts/nepton/grommet_8/l-shape-full-storage.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.04,
+            0.04,
+            0.053
+          ],
+          "bytes": 3732,
+          "hash": "de7c2d043402"
+        },
+        "grommet_9": {
+          "glb": "/3d-parts/nepton/grommet_9/l-shape-full-storage.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.06,
+            0.06,
+            0.002
+          ],
+          "bytes": 3920,
+          "hash": "20d89f26c850"
+        },
+        "grommet_10": {
+          "glb": "/3d-parts/nepton/grommet_10/l-shape-full-storage.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.04,
+            0.04,
+            0.005
+          ],
+          "bytes": 1496,
+          "hash": "b00d3cf56115"
+        },
+        "grommet_11": {
+          "glb": "/3d-parts/nepton/grommet_11/l-shape-full-storage.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.04,
+            0.04,
+            0.053
+          ],
+          "bytes": 3736,
+          "hash": "e708b5574f66"
+        },
+        "grommet_12": {
+          "glb": "/3d-parts/nepton/grommet_12/l-shape-full-storage.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.06,
+            0.06,
+            0.002
+          ],
+          "bytes": 3924,
+          "hash": "f42256ffb339"
+        },
+        "grommet_13": {
+          "glb": "/3d-parts/nepton/grommet_13/l-shape-full-storage.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.04,
+            0.04,
+            0.005
+          ],
+          "bytes": 1504,
+          "hash": "62bcf627d516"
+        },
+        "grommet_14": {
+          "glb": "/3d-parts/nepton/grommet_14/l-shape-full-storage.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.04,
+            0.04,
+            0.053
+          ],
+          "bytes": 3732,
+          "hash": "e2b325320127"
+        },
+        "grommet_15": {
+          "glb": "/3d-parts/nepton/grommet_15/l-shape-full-storage.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.06,
+            0.06,
+            0.002
+          ],
+          "bytes": 3924,
+          "hash": "d05ddf6c7471"
+        },
+        "grommet_16": {
+          "glb": "/3d-parts/nepton/grommet_16/l-shape-full-storage.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.04,
+            0.04,
+            0.005
+          ],
+          "bytes": 1500,
+          "hash": "cee5b467e0af"
+        },
+        "grommet_17": {
+          "glb": "/3d-parts/nepton/grommet_17/l-shape-full-storage.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.026,
+            0.167,
+            0.01
+          ],
+          "bytes": 11632,
+          "hash": "8f0258841f7e"
+        },
+        "grommet_18": {
+          "glb": "/3d-parts/nepton/grommet_18/l-shape-full-storage.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.268,
+            0.02,
+            0.0
+          ],
+          "bytes": 1440,
+          "hash": "dd1ec4432d2c"
+        },
+        "grommet_19": {
+          "glb": "/3d-parts/nepton/grommet_19/l-shape-full-storage.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.267,
+            0.07,
+            0.002
+          ],
+          "bytes": 1400,
+          "hash": "c348f3ec69c3"
+        },
+        "grommet_20": {
+          "glb": "/3d-parts/nepton/grommet_20/l-shape-full-storage.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.3,
+            0.108,
+            0.006
+          ],
+          "bytes": 1532,
+          "hash": "4b52d844b3f5"
+        },
+        "grommet_21": {
+          "glb": "/3d-parts/nepton/grommet_21/l-shape-full-storage.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.016
+          ],
+          "bytes": 32328,
+          "hash": "16c3c284520f"
+        },
+        "grommet_22": {
+          "glb": "/3d-parts/nepton/grommet_22/l-shape-full-storage.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.069,
+            0.05,
+            0.031
+          ],
+          "bytes": 12712,
+          "hash": "785592ba6101"
+        },
+        "grommet_23": {
+          "glb": "/3d-parts/nepton/grommet_23/l-shape-full-storage.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.069,
+            0.05,
+            0.031
+          ],
+          "bytes": 12744,
+          "hash": "69596d00281a"
+        },
+        "grommet_24": {
+          "glb": "/3d-parts/nepton/grommet_24/l-shape-full-storage.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.069,
+            0.05,
+            0.031
+          ],
+          "bytes": 12732,
+          "hash": "0673917c1a5b"
+        },
+        "grommet_25": {
+          "glb": "/3d-parts/nepton/grommet_25/l-shape-full-storage.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.069,
+            0.05,
+            0.031
+          ],
+          "bytes": 12704,
+          "hash": "5b51984adb9e"
+        },
+        "grommet_26": {
+          "glb": "/3d-parts/nepton/grommet_26/l-shape-full-storage.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.031,
+            0.031,
+            0.01
+          ],
+          "bytes": 42816,
+          "hash": "53d4ed3e7434"
+        },
+        "grommet_27": {
+          "glb": "/3d-parts/nepton/grommet_27/l-shape-full-storage.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.016
+          ],
+          "bytes": 31672,
+          "hash": "7e53698065fd"
+        },
+        "grommet_28": {
+          "glb": "/3d-parts/nepton/grommet_28/l-shape-full-storage.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.031,
+            0.031,
+            0.01
+          ],
+          "bytes": 43856,
+          "hash": "3649fcf96e7b"
+        },
+        "grommet_29": {
+          "glb": "/3d-parts/nepton/grommet_29/l-shape-full-storage.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.111
+          ],
+          "bytes": 4964,
+          "hash": "d72bd54c5650"
+        },
+        "grommet_30": {
+          "glb": "/3d-parts/nepton/grommet_30/l-shape-full-storage.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.111
+          ],
+          "bytes": 4960,
+          "hash": "8ad1590cd186"
+        },
+        "grommet_31": {
+          "glb": "/3d-parts/nepton/grommet_31/l-shape-full-storage.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 18916,
+          "hash": "93226914d359"
+        },
+        "grommet_32": {
+          "glb": "/3d-parts/nepton/grommet_32/l-shape-full-storage.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 19028,
+          "hash": "dc4907af0cf4"
+        },
+        "grommet_33": {
+          "glb": "/3d-parts/nepton/grommet_33/l-shape-full-storage.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 18532,
+          "hash": "258e700e9d92"
+        },
+        "grommet_34": {
+          "glb": "/3d-parts/nepton/grommet_34/l-shape-full-storage.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 18968,
+          "hash": "6bc2790f543d"
+        },
+        "pedestal": {
+          "glb": "/3d-parts/accessories/pedestal-e022f82197e2.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.018,
+            1.598,
+            0.528
+          ],
+          "bytes": 1552,
+          "hash": "e022f82197e2"
+        },
+        "frame_beam_0": {
+          "glb": "/3d-parts/nepton/frame_beam_0/l-shape-full-storage.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.101,
+            0.713,
+            0.05
+          ],
+          "bytes": 12048,
+          "hash": "6b7c772551af"
+        },
+        "frame_beam_1": {
+          "glb": "/3d-parts/nepton/frame_beam_1/l-shape-full-storage.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.101,
+            0.713,
+            0.05
+          ],
+          "bytes": 12076,
+          "hash": "cb1b1d761dce"
+        },
+        "frame_beam_2": {
+          "glb": "/3d-parts/nepton/frame_beam_2/l-shape-full-storage.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.497,
+            0.02,
+            0.05
+          ],
+          "bytes": 7860,
+          "hash": "091ab8b023f4"
+        },
+        "frame_beam_3": {
+          "glb": "/3d-parts/nepton/frame_beam_3/l-shape-full-storage.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.497,
+            0.02,
+            0.05
+          ],
+          "bytes": 7912,
+          "hash": "7aabc8543df3"
+        }
+      },
+      "baseSize": null,
+      "unknowns": [
+        {
+          "name": "Layer:002.012",
+          "materials": [
+            "Majestic_WhitePaint"
+          ],
+          "bbox": [
+            0.006,
+            0.233,
+            0.05
+          ],
+          "location": [
+            -3.497,
+            0.091,
+            0.0
+          ]
+        },
+        {
+          "name": "Layer:002.013",
+          "materials": [
+            "Majestic_WhitePaint"
+          ],
+          "bbox": [
+            0.006,
+            0.233,
+            0.05
+          ],
+          "location": [
+            -3.497,
+            0.091,
+            0.0
+          ]
+        }
+      ]
+    },
+    "L-Shape Return Pedestal": {
+      "parts": {
+        "leg_r_0": {
+          "glb": "/3d-parts/nepton/leg_r_0/l-shape-return-pedestal.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.3,
+            0.018,
+            0.35
+          ],
+          "bytes": 1528,
+          "hash": "b41d9dd381ea"
+        },
+        "leg_r_1": {
+          "glb": "/3d-parts/nepton/leg_r_1/l-shape-return-pedestal.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.708
+          ],
+          "bytes": 8504,
+          "hash": "e2440653d46c"
+        },
+        "leg_r_2": {
+          "glb": "/3d-parts/nepton/leg_r_2/l-shape-return-pedestal.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.708
+          ],
+          "bytes": 8396,
+          "hash": "209cd4fcbeda"
+        },
+        "leg_r_3": {
+          "glb": "/3d-parts/nepton/leg_r_3/l-shape-return-pedestal.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.708
+          ],
+          "bytes": 8372,
+          "hash": "5a668124b4ef"
+        },
+        "leg_r_4": {
+          "glb": "/3d-parts/nepton/leg_r_4/l-shape-return-pedestal.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.708
+          ],
+          "bytes": 8348,
+          "hash": "476315fe0134"
+        },
+        "top_0": {
+          "glb": "/3d-parts/nepton/top_0/l-shape-return-pedestal.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.6,
+            0.8,
+            0.03
+          ],
+          "bytes": 161792,
+          "hash": "2388a16b444e"
+        },
+        "top_1": {
+          "glb": "/3d-parts/nepton/top_1/l-shape-return-pedestal.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.5,
+            0.8,
+            0.03
+          ],
+          "bytes": 161788,
+          "hash": "abff8c0f7f2a"
+        },
+        "grommet_0": {
+          "glb": "/3d-parts/nepton/grommet_0/l-shape-return-pedestal.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.002,
+            0.026,
+            0.026
+          ],
+          "bytes": 8064,
+          "hash": "e1e86fdaa753"
+        },
+        "grommet_1": {
+          "glb": "/3d-parts/nepton/grommet_1/l-shape-return-pedestal.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.06,
+            0.06,
+            0.002
+          ],
+          "bytes": 3952,
+          "hash": "7dd4f99b0392"
+        },
+        "grommet_2": {
+          "glb": "/3d-parts/nepton/grommet_2/l-shape-return-pedestal.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.04,
+            0.04,
+            0.005
+          ],
+          "bytes": 1500,
+          "hash": "7d2a5e925bc2"
+        },
+        "grommet_3": {
+          "glb": "/3d-parts/nepton/grommet_3/l-shape-return-pedestal.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.04,
+            0.04,
+            0.053
+          ],
+          "bytes": 3768,
+          "hash": "c7caba6012fb"
+        },
+        "grommet_4": {
+          "glb": "/3d-parts/nepton/grommet_4/l-shape-return-pedestal.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.04,
+            0.04,
+            0.053
+          ],
+          "bytes": 3768,
+          "hash": "ae0ab609be99"
+        },
+        "grommet_5": {
+          "glb": "/3d-parts/nepton/grommet_5/l-shape-return-pedestal.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.06,
+            0.06,
+            0.002
+          ],
+          "bytes": 3952,
+          "hash": "cc4fdb533c40"
+        },
+        "grommet_6": {
+          "glb": "/3d-parts/nepton/grommet_6/l-shape-return-pedestal.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.04,
+            0.04,
+            0.005
+          ],
+          "bytes": 1500,
+          "hash": "cfbb797f915c"
+        },
+        "grommet_7": {
+          "glb": "/3d-parts/nepton/grommet_7/l-shape-return-pedestal.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.04,
+            0.04,
+            0.053
+          ],
+          "bytes": 3764,
+          "hash": "80a28657cace"
+        },
+        "grommet_8": {
+          "glb": "/3d-parts/nepton/grommet_8/l-shape-return-pedestal.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.06,
+            0.06,
+            0.002
+          ],
+          "bytes": 3932,
+          "hash": "147cfad10e75"
+        },
+        "grommet_9": {
+          "glb": "/3d-parts/nepton/grommet_9/l-shape-return-pedestal.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.04,
+            0.04,
+            0.005
+          ],
+          "bytes": 1500,
+          "hash": "643869a5c83b"
+        },
+        "grommet_10": {
+          "glb": "/3d-parts/nepton/grommet_10/l-shape-return-pedestal.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.04,
+            0.04,
+            0.053
+          ],
+          "bytes": 3764,
+          "hash": "a1461b224ad6"
+        },
+        "grommet_11": {
+          "glb": "/3d-parts/nepton/grommet_11/l-shape-return-pedestal.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.06,
+            0.06,
+            0.002
+          ],
+          "bytes": 3932,
+          "hash": "504e145f9ecb"
+        },
+        "grommet_12": {
+          "glb": "/3d-parts/nepton/grommet_12/l-shape-return-pedestal.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.04,
+            0.04,
+            0.005
+          ],
+          "bytes": 1500,
+          "hash": "b405bee981d3"
+        },
+        "grommet_13": {
+          "glb": "/3d-parts/nepton/grommet_13/l-shape-return-pedestal.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.06,
+            0.059,
+            0.13
+          ],
+          "bytes": 2272,
+          "hash": "7ff8182f005f"
+        },
+        "grommet_14": {
+          "glb": "/3d-parts/nepton/grommet_14/l-shape-return-pedestal.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.268,
+            0.02,
+            0.0
+          ],
+          "bytes": 1440,
+          "hash": "411d9bd7b2b0"
+        },
+        "grommet_15": {
+          "glb": "/3d-parts/nepton/grommet_15/l-shape-return-pedestal.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.267,
+            0.07,
+            0.002
+          ],
+          "bytes": 1400,
+          "hash": "6f2a6dea7373"
+        },
+        "grommet_16": {
+          "glb": "/3d-parts/nepton/grommet_16/l-shape-return-pedestal.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.3,
+            0.108,
+            0.006
+          ],
+          "bytes": 1532,
+          "hash": "42549905635b"
+        },
+        "grommet_17": {
+          "glb": "/3d-parts/nepton/grommet_17/l-shape-return-pedestal.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.016
+          ],
+          "bytes": 32472,
+          "hash": "e36f4c67410f"
+        },
+        "grommet_18": {
+          "glb": "/3d-parts/nepton/grommet_18/l-shape-return-pedestal.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.069,
+            0.05,
+            0.031
+          ],
+          "bytes": 12796,
+          "hash": "ea618896be8c"
+        },
+        "grommet_19": {
+          "glb": "/3d-parts/nepton/grommet_19/l-shape-return-pedestal.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.069,
+            0.05,
+            0.031
+          ],
+          "bytes": 12712,
+          "hash": "2db86efa3258"
+        },
+        "grommet_20": {
+          "glb": "/3d-parts/nepton/grommet_20/l-shape-return-pedestal.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.069,
+            0.05,
+            0.031
+          ],
+          "bytes": 12712,
+          "hash": "7dd05a09148d"
+        },
+        "grommet_21": {
+          "glb": "/3d-parts/nepton/grommet_21/l-shape-return-pedestal.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.069,
+            0.05,
+            0.031
+          ],
+          "bytes": 12788,
+          "hash": "991f1a8989bd"
+        },
+        "grommet_22": {
+          "glb": "/3d-parts/nepton/grommet_22/l-shape-return-pedestal.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.031,
+            0.031,
+            0.01
+          ],
+          "bytes": 43308,
+          "hash": "5c865f93fd6e"
+        },
+        "grommet_23": {
+          "glb": "/3d-parts/nepton/grommet_23/l-shape-return-pedestal.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.016
+          ],
+          "bytes": 31504,
+          "hash": "6eff6a8b28be"
+        },
+        "grommet_24": {
+          "glb": "/3d-parts/nepton/grommet_24/l-shape-return-pedestal.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.031,
+            0.031,
+            0.01
+          ],
+          "bytes": 42576,
+          "hash": "767d0db3411d"
+        },
+        "grommet_25": {
+          "glb": "/3d-parts/nepton/grommet_25/l-shape-return-pedestal.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.016
+          ],
+          "bytes": 31976,
+          "hash": "ccae1ed88573"
+        },
+        "grommet_26": {
+          "glb": "/3d-parts/nepton/grommet_26/l-shape-return-pedestal.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.031,
+            0.031,
+            0.01
+          ],
+          "bytes": 42596,
+          "hash": "2f98e8ec9d37"
+        },
+        "grommet_27": {
+          "glb": "/3d-parts/nepton/grommet_27/l-shape-return-pedestal.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.016
+          ],
+          "bytes": 31620,
+          "hash": "7e2736f68522"
+        },
+        "grommet_28": {
+          "glb": "/3d-parts/nepton/grommet_28/l-shape-return-pedestal.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.031,
+            0.031,
+            0.01
+          ],
+          "bytes": 43640,
+          "hash": "2b2d810ce71d"
+        },
+        "grommet_29": {
+          "glb": "/3d-parts/nepton/grommet_29/l-shape-return-pedestal.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 18520,
+          "hash": "a82307098924"
+        },
+        "grommet_30": {
+          "glb": "/3d-parts/nepton/grommet_30/l-shape-return-pedestal.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 18920,
+          "hash": "ce382330592f"
+        },
+        "grommet_31": {
+          "glb": "/3d-parts/nepton/grommet_31/l-shape-return-pedestal.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 18928,
+          "hash": "59500c13ef75"
+        },
+        "grommet_32": {
+          "glb": "/3d-parts/nepton/grommet_32/l-shape-return-pedestal.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 18976,
+          "hash": "4c8a88030411"
+        },
+        "grommet_33": {
+          "glb": "/3d-parts/nepton/grommet_33/l-shape-return-pedestal.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 18920,
+          "hash": "9e6acc07fe8f"
+        },
+        "grommet_34": {
+          "glb": "/3d-parts/nepton/grommet_34/l-shape-return-pedestal.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 18988,
+          "hash": "770ea9a5bf89"
+        },
+        "grommet_35": {
+          "glb": "/3d-parts/nepton/grommet_35/l-shape-return-pedestal.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 18544,
+          "hash": "24ed1f11089f"
+        },
+        "grommet_36": {
+          "glb": "/3d-parts/nepton/grommet_36/l-shape-return-pedestal.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 18920,
+          "hash": "45c1d09e2a30"
+        },
+        "handle_0": {
+          "glb": "/3d-parts/nepton/handle_0/l-shape-return-pedestal.glb",
           "anchor": [
             0.0,
             0.0,
@@ -149,127 +4096,2692 @@
             0.01
           ],
           "bytes": 11652,
-          "hash": "88d59a169489",
-          "source_object": "Box3117",
-          "source_materials": [
-            "Majestic_WhitePaint"
-          ]
+          "hash": "5cb8a8729516"
         },
-        "feet_0": {
-          "glb": "/3d-parts/nepton/feet_0/executive.glb",
+        "handle_1": {
+          "glb": "/3d-parts/nepton/handle_1/l-shape-return-pedestal.glb",
           "anchor": [
             0.0,
             0.0,
             0.0
           ],
           "bbox": [
-            0.069,
-            0.05,
-            0.031
+            0.026,
+            0.167,
+            0.01
           ],
-          "bytes": 12564,
-          "hash": "c11af2418094",
-          "source_object": "Line1291",
-          "source_materials": [
-            "Majestic_WhitePaint"
-          ]
+          "bytes": 11648,
+          "hash": "3004b9f8064f"
         },
-        "feet_1": {
-          "glb": "/3d-parts/nepton/feet_1/executive.glb",
+        "handle_2": {
+          "glb": "/3d-parts/nepton/handle_2/l-shape-return-pedestal.glb",
           "anchor": [
             0.0,
             0.0,
             0.0
           ],
           "bbox": [
-            0.069,
-            0.05,
-            0.031
+            0.026,
+            0.167,
+            0.01
           ],
-          "bytes": 12564,
-          "hash": "428f4b551cee",
-          "source_object": "Line1292",
-          "source_materials": [
-            "Majestic_WhitePaint"
-          ]
+          "bytes": 11636,
+          "hash": "481070dfc828"
         },
-        "feet_2": {
-          "glb": "/3d-parts/nepton/feet_2/executive.glb",
+        "pedestal_0": {
+          "glb": "/3d-parts/nepton/pedestal_0/l-shape-return-pedestal.glb",
           "anchor": [
             0.0,
             0.0,
             0.0
           ],
           "bbox": [
-            0.069,
-            0.05,
-            0.031
+            0.498,
+            0.402,
+            0.019
           ],
-          "bytes": 12568,
-          "hash": "8486d4532633",
-          "source_object": "Line1293",
-          "source_materials": [
-            "Majestic_WhitePaint"
-          ]
+          "bytes": 1532,
+          "hash": "dd253321c8bb"
         },
-        "feet_3": {
-          "glb": "/3d-parts/nepton/feet_3/executive.glb",
+        "pedestal_1": {
+          "glb": "/3d-parts/nepton/pedestal_1/l-shape-return-pedestal.glb",
           "anchor": [
             0.0,
             0.0,
             0.0
           ],
           "bbox": [
-            0.069,
-            0.05,
-            0.031
+            0.015,
+            0.402,
+            0.519
           ],
-          "bytes": 12564,
-          "hash": "cbf8eff04492",
-          "source_object": "Line1294",
-          "source_materials": [
-            "Majestic_WhitePaint"
-          ]
+          "bytes": 1740,
+          "hash": "5edf74fb68d8"
+        },
+        "pedestal_body": {
+          "glb": "/3d-parts/nepton/pedestal_body/l-shape-return-pedestal.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.487,
+            0.402,
+            0.522
+          ],
+          "bytes": 1876,
+          "hash": "7940d4685f82"
+        },
+        "frame_beam_0": {
+          "glb": "/3d-parts/nepton/frame_beam_0/l-shape-return-pedestal.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.101,
+            0.713,
+            0.05
+          ],
+          "bytes": 12128,
+          "hash": "e6afa56f9e1c"
+        },
+        "frame_beam_1": {
+          "glb": "/3d-parts/nepton/frame_beam_1/l-shape-return-pedestal.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.101,
+            0.713,
+            0.05
+          ],
+          "bytes": 12004,
+          "hash": "566e11c748dc"
+        },
+        "frame_beam_2": {
+          "glb": "/3d-parts/nepton/frame_beam_2/l-shape-return-pedestal.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.298,
+            0.02,
+            0.05
+          ],
+          "bytes": 8012,
+          "hash": "c4fe5178294b"
+        },
+        "frame_beam_3": {
+          "glb": "/3d-parts/nepton/frame_beam_3/l-shape-return-pedestal.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.298,
+            0.02,
+            0.05
+          ],
+          "bytes": 7972,
+          "hash": "4b438a157e5e"
         }
       },
-      "baseSize": "180x80",
+      "baseSize": null,
       "unknowns": [
         {
-          "name": "Layer:015",
+          "name": "Layer:0.020",
           "materials": [
             "Majestic_WhitePaint"
           ],
-          "extents": [
-            1.791,
-            0.789,
-            0.722
+          "bbox": [
+            0.006,
+            0.233,
+            0.05
+          ],
+          "location": [
+            4.635,
+            0.063,
+            0.0
           ]
         },
         {
-          "name": "Box3118",
+          "name": "Layer:0.021",
           "materials": [
             "Majestic_WhitePaint"
           ],
-          "extents": [
-            0.026,
-            0.01,
-            0.153
-          ]
-        },
-        {
-          "name": "Cyc",
-          "materials": [
-            "GradientFloor"
+          "bbox": [
+            0.006,
+            0.233,
+            0.05
           ],
-          "extents": [
-            30.0,
-            30.0,
+          "location": [
+            4.635,
+            0.063,
             0.0
           ]
         }
-      ],
-      "productKind": "desk"
+      ]
+    },
+    "Conference": {
+      "parts": {
+        "top": {
+          "glb": "/3d-parts/nepton/top/conference.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.6,
+            1.4,
+            0.03
+          ],
+          "bytes": 161808,
+          "hash": "5d61d1d36c46"
+        },
+        "frame_beam_0": {
+          "glb": "/3d-parts/nepton/frame_beam_0/conference.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.392,
+            0.02,
+            0.0
+          ],
+          "bytes": 1464,
+          "hash": "18d23c2dda19"
+        },
+        "frame_beam_1": {
+          "glb": "/3d-parts/nepton/frame_beam_1/conference.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.392,
+            0.02,
+            0.0
+          ],
+          "bytes": 1464,
+          "hash": "8961ae99a570"
+        },
+        "frame_beam_2": {
+          "glb": "/3d-parts/nepton/frame_beam_2/conference.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.101,
+            1.288,
+            0.05
+          ],
+          "bytes": 10588,
+          "hash": "8a8587978a8d"
+        },
+        "grommet_0": {
+          "glb": "/3d-parts/nepton/grommet_0/conference.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.383,
+            0.092,
+            0.002
+          ],
+          "bytes": 1420,
+          "hash": "715253674d53"
+        },
+        "grommet_1": {
+          "glb": "/3d-parts/nepton/grommet_1/conference.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.417,
+            0.144,
+            0.006
+          ],
+          "bytes": 1552,
+          "hash": "bf0875589392"
+        },
+        "grommet_2": {
+          "glb": "/3d-parts/nepton/grommet_2/conference.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.069,
+            0.05,
+            0.031
+          ],
+          "bytes": 12616,
+          "hash": "959560fddceb"
+        },
+        "grommet_3": {
+          "glb": "/3d-parts/nepton/grommet_3/conference.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.069,
+            0.05,
+            0.031
+          ],
+          "bytes": 12608,
+          "hash": "1eebbc3f5599"
+        },
+        "grommet_4": {
+          "glb": "/3d-parts/nepton/grommet_4/conference.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.016
+          ],
+          "bytes": 29020,
+          "hash": "42dbc5af60e7"
+        },
+        "grommet_5": {
+          "glb": "/3d-parts/nepton/grommet_5/conference.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.031,
+            0.031,
+            0.01
+          ],
+          "bytes": 35000,
+          "hash": "dca181b4459d"
+        },
+        "grommet_6": {
+          "glb": "/3d-parts/nepton/grommet_6/conference.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.016
+          ],
+          "bytes": 29084,
+          "hash": "54851f7eb53c"
+        },
+        "grommet_7": {
+          "glb": "/3d-parts/nepton/grommet_7/conference.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.031,
+            0.031,
+            0.01
+          ],
+          "bytes": 35392,
+          "hash": "5d5a8e96f723"
+        },
+        "grommet_8": {
+          "glb": "/3d-parts/nepton/grommet_8/conference.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 16016,
+          "hash": "e934f2ec0193"
+        },
+        "grommet_9": {
+          "glb": "/3d-parts/nepton/grommet_9/conference.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 16008,
+          "hash": "7fa02251d6cc"
+        },
+        "grommet_10": {
+          "glb": "/3d-parts/nepton/grommet_10/conference.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 16068,
+          "hash": "109d0ee45a20"
+        },
+        "grommet_11": {
+          "glb": "/3d-parts/nepton/grommet_11/conference.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 16088,
+          "hash": "dbfca6d282ad"
+        },
+        "leg_l_0": {
+          "glb": "/3d-parts/nepton/leg_l_0/conference.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.01,
+            0.554,
+            0.608
+          ],
+          "bytes": 1668,
+          "hash": "aee05f44fb0b"
+        },
+        "leg_l_1": {
+          "glb": "/3d-parts/nepton/leg_l_1/conference.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.693
+          ],
+          "bytes": 7388,
+          "hash": "037fa2b1be1f"
+        },
+        "leg_l_2": {
+          "glb": "/3d-parts/nepton/leg_l_2/conference.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.693
+          ],
+          "bytes": 7296,
+          "hash": "96d534c7c6d6"
+        }
+      },
+      "baseSize": "160x140",
+      "unknowns": [
+        {
+          "name": "Layer:0.003",
+          "materials": [
+            "Majestic_WhitePaint"
+          ],
+          "bbox": [
+            0.006,
+            0.233,
+            0.05
+          ],
+          "location": [
+            -0.226,
+            -3.56,
+            0.0
+          ]
+        }
+      ]
+    },
+    "Meeting": {
+      "parts": {
+        "top": {
+          "glb": "/3d-parts/nepton/top/meeting.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.2,
+            1.2,
+            0.03
+          ],
+          "bytes": 161724,
+          "hash": "e8a5ef9be994"
+        },
+        "grommet_0": {
+          "glb": "/3d-parts/nepton/grommet_0/meeting.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.268,
+            0.02,
+            0.0
+          ],
+          "bytes": 1440,
+          "hash": "90acb0ac9dbc"
+        },
+        "grommet_1": {
+          "glb": "/3d-parts/nepton/grommet_1/meeting.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.267,
+            0.07,
+            0.002
+          ],
+          "bytes": 1400,
+          "hash": "dfa2cd972a10"
+        },
+        "grommet_2": {
+          "glb": "/3d-parts/nepton/grommet_2/meeting.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.3,
+            0.108,
+            0.006
+          ],
+          "bytes": 1532,
+          "hash": "acc2dc6ba785"
+        },
+        "grommet_3": {
+          "glb": "/3d-parts/nepton/grommet_3/meeting.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.016
+          ],
+          "bytes": 32620,
+          "hash": "25583da28cc4"
+        },
+        "grommet_4": {
+          "glb": "/3d-parts/nepton/grommet_4/meeting.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.069,
+            0.05,
+            0.031
+          ],
+          "bytes": 12804,
+          "hash": "f6220ce9cd13"
+        },
+        "grommet_5": {
+          "glb": "/3d-parts/nepton/grommet_5/meeting.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.069,
+            0.05,
+            0.031
+          ],
+          "bytes": 12752,
+          "hash": "ca78aee94d09"
+        },
+        "grommet_6": {
+          "glb": "/3d-parts/nepton/grommet_6/meeting.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.069,
+            0.05,
+            0.031
+          ],
+          "bytes": 12740,
+          "hash": "0f8aa36283e3"
+        },
+        "grommet_7": {
+          "glb": "/3d-parts/nepton/grommet_7/meeting.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.069,
+            0.05,
+            0.031
+          ],
+          "bytes": 12796,
+          "hash": "afefd51e9149"
+        },
+        "grommet_8": {
+          "glb": "/3d-parts/nepton/grommet_8/meeting.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.031,
+            0.031,
+            0.01
+          ],
+          "bytes": 43444,
+          "hash": "049dbb70f512"
+        },
+        "grommet_9": {
+          "glb": "/3d-parts/nepton/grommet_9/meeting.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.016
+          ],
+          "bytes": 31652,
+          "hash": "9129964507d4"
+        },
+        "grommet_10": {
+          "glb": "/3d-parts/nepton/grommet_10/meeting.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.031,
+            0.031,
+            0.01
+          ],
+          "bytes": 42656,
+          "hash": "c176adf639cb"
+        },
+        "grommet_11": {
+          "glb": "/3d-parts/nepton/grommet_11/meeting.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.016
+          ],
+          "bytes": 32196,
+          "hash": "2b9fb7218d60"
+        },
+        "grommet_12": {
+          "glb": "/3d-parts/nepton/grommet_12/meeting.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.031,
+            0.031,
+            0.01
+          ],
+          "bytes": 42784,
+          "hash": "3bea6e970eba"
+        },
+        "grommet_13": {
+          "glb": "/3d-parts/nepton/grommet_13/meeting.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.016
+          ],
+          "bytes": 31748,
+          "hash": "367ad819338c"
+        },
+        "grommet_14": {
+          "glb": "/3d-parts/nepton/grommet_14/meeting.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.031,
+            0.031,
+            0.01
+          ],
+          "bytes": 43948,
+          "hash": "286cb53e908b"
+        },
+        "grommet_15": {
+          "glb": "/3d-parts/nepton/grommet_15/meeting.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 18576,
+          "hash": "537ff9a9bcce"
+        },
+        "grommet_16": {
+          "glb": "/3d-parts/nepton/grommet_16/meeting.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 18968,
+          "hash": "ec0459aacc43"
+        },
+        "grommet_17": {
+          "glb": "/3d-parts/nepton/grommet_17/meeting.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 18936,
+          "hash": "374827c6705a"
+        },
+        "grommet_18": {
+          "glb": "/3d-parts/nepton/grommet_18/meeting.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 19016,
+          "hash": "789f2c355731"
+        },
+        "grommet_19": {
+          "glb": "/3d-parts/nepton/grommet_19/meeting.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 18968,
+          "hash": "c9246a3236c1"
+        },
+        "grommet_20": {
+          "glb": "/3d-parts/nepton/grommet_20/meeting.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 19000,
+          "hash": "e886986e8c36"
+        },
+        "grommet_21": {
+          "glb": "/3d-parts/nepton/grommet_21/meeting.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 18568,
+          "hash": "d22f39ea41b4"
+        },
+        "grommet_22": {
+          "glb": "/3d-parts/nepton/grommet_22/meeting.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 18964,
+          "hash": "91689b1d495f"
+        },
+        "leg_r_0": {
+          "glb": "/3d-parts/nepton/leg_r_0/meeting.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.708
+          ],
+          "bytes": 8528,
+          "hash": "1c3db6b90c61"
+        },
+        "leg_r_1": {
+          "glb": "/3d-parts/nepton/leg_r_1/meeting.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.708
+          ],
+          "bytes": 8404,
+          "hash": "75ba3027c217"
+        },
+        "leg_r_2": {
+          "glb": "/3d-parts/nepton/leg_r_2/meeting.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.708
+          ],
+          "bytes": 8428,
+          "hash": "6b5f3fc63d50"
+        },
+        "leg_r_3": {
+          "glb": "/3d-parts/nepton/leg_r_3/meeting.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.708
+          ],
+          "bytes": 8356,
+          "hash": "765bd62530cd"
+        },
+        "frame_beam_0": {
+          "glb": "/3d-parts/nepton/frame_beam_0/meeting.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.006,
+            0.633,
+            0.05
+          ],
+          "bytes": 5776,
+          "hash": "3dadded1ba59"
+        },
+        "frame_beam_1": {
+          "glb": "/3d-parts/nepton/frame_beam_1/meeting.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.006,
+            0.633,
+            0.05
+          ],
+          "bytes": 5668,
+          "hash": "8664e7c4a815"
+        },
+        "frame_beam_2": {
+          "glb": "/3d-parts/nepton/frame_beam_2/meeting.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.101,
+            1.113,
+            0.05
+          ],
+          "bytes": 11884,
+          "hash": "acbac455d49e"
+        },
+        "frame_beam_3": {
+          "glb": "/3d-parts/nepton/frame_beam_3/meeting.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.101,
+            1.113,
+            0.05
+          ],
+          "bytes": 11840,
+          "hash": "8865a94e9080"
+        },
+        "frame_beam_4": {
+          "glb": "/3d-parts/nepton/frame_beam_4/meeting.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.898,
+            0.02,
+            0.05
+          ],
+          "bytes": 8296,
+          "hash": "e204f0e79281"
+        },
+        "frame_beam_5": {
+          "glb": "/3d-parts/nepton/frame_beam_5/meeting.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.898,
+            0.02,
+            0.05
+          ],
+          "bytes": 8280,
+          "hash": "82a542fef804"
+        }
+      },
+      "baseSize": "120x120",
+      "unknowns": []
+    },
+    "Straight": {
+      "parts": {
+        "leg_l_0": {
+          "glb": "/3d-parts/nepton/leg_l_0/straight.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.3,
+            0.018,
+            0.35
+          ],
+          "bytes": 1548,
+          "hash": "83f85b94bd48"
+        },
+        "leg_l_1": {
+          "glb": "/3d-parts/nepton/leg_l_1/straight.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.708
+          ],
+          "bytes": 8528,
+          "hash": "8fa5aebcd009"
+        },
+        "leg_l_2": {
+          "glb": "/3d-parts/nepton/leg_l_2/straight.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.708
+          ],
+          "bytes": 8432,
+          "hash": "f24c6eaa64b0"
+        },
+        "leg_l_3": {
+          "glb": "/3d-parts/nepton/leg_l_3/straight.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.708
+          ],
+          "bytes": 8424,
+          "hash": "05de2d11cd94"
+        },
+        "leg_l_4": {
+          "glb": "/3d-parts/nepton/leg_l_4/straight.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.708
+          ],
+          "bytes": 8404,
+          "hash": "8483ba565c41"
+        },
+        "top": {
+          "glb": "/3d-parts/nepton/top/straight.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.6,
+            0.8,
+            0.03
+          ],
+          "bytes": 161808,
+          "hash": "4559bd36a583"
+        },
+        "grommet_0": {
+          "glb": "/3d-parts/nepton/grommet_0/straight.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.268,
+            0.02,
+            0.0
+          ],
+          "bytes": 1456,
+          "hash": "8b30d15229d4"
+        },
+        "grommet_1": {
+          "glb": "/3d-parts/nepton/grommet_1/straight.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.267,
+            0.07,
+            0.002
+          ],
+          "bytes": 1416,
+          "hash": "84077e164c5b"
+        },
+        "grommet_2": {
+          "glb": "/3d-parts/nepton/grommet_2/straight.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.3,
+            0.108,
+            0.006
+          ],
+          "bytes": 1548,
+          "hash": "1530d51f6314"
+        },
+        "grommet_3": {
+          "glb": "/3d-parts/nepton/grommet_3/straight.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.041,
+            0.253,
+            0.0
+          ],
+          "bytes": 1464,
+          "hash": "2ce12b51ace7"
+        },
+        "grommet_4": {
+          "glb": "/3d-parts/nepton/grommet_4/straight.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.142,
+            0.234,
+            0.002
+          ],
+          "bytes": 1424,
+          "hash": "12980feb2bbf"
+        },
+        "grommet_5": {
+          "glb": "/3d-parts/nepton/grommet_5/straight.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.22,
+            0.278,
+            0.006
+          ],
+          "bytes": 1564,
+          "hash": "aedd881026c2"
+        },
+        "grommet_6": {
+          "glb": "/3d-parts/nepton/grommet_6/straight.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.09,
+            0.12,
+            0.007
+          ],
+          "bytes": 6672,
+          "hash": "963b2fae5b4f"
+        },
+        "grommet_7": {
+          "glb": "/3d-parts/nepton/grommet_7/straight.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.049,
+            0.022,
+            0.036
+          ],
+          "bytes": 20444,
+          "hash": "6f90e9580ee4"
+        },
+        "grommet_8": {
+          "glb": "/3d-parts/nepton/grommet_8/straight.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.034,
+            0.07,
+            0.025
+          ],
+          "bytes": 5900,
+          "hash": "6be4fcaeecaf"
+        },
+        "grommet_9": {
+          "glb": "/3d-parts/nepton/grommet_9/straight.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.049,
+            0.022,
+            0.035
+          ],
+          "bytes": 20448,
+          "hash": "b435155f105b"
+        },
+        "grommet_10": {
+          "glb": "/3d-parts/nepton/grommet_10/straight.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.048,
+            0.022,
+            0.035
+          ],
+          "bytes": 20496,
+          "hash": "f1bfac664218"
+        },
+        "grommet_11": {
+          "glb": "/3d-parts/nepton/grommet_11/straight.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.046,
+            0.022,
+            0.035
+          ],
+          "bytes": 20068,
+          "hash": "8d6b743c1bf2"
+        },
+        "grommet_12": {
+          "glb": "/3d-parts/nepton/grommet_12/straight.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.046,
+            0.022,
+            0.035
+          ],
+          "bytes": 20072,
+          "hash": "e5bd717c94e0"
+        },
+        "grommet_13": {
+          "glb": "/3d-parts/nepton/grommet_13/straight.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.047,
+            0.022,
+            0.035
+          ],
+          "bytes": 20180,
+          "hash": "6d9d9b4c8c8f"
+        },
+        "grommet_14": {
+          "glb": "/3d-parts/nepton/grommet_14/straight.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.047,
+            0.022,
+            0.035
+          ],
+          "bytes": 20172,
+          "hash": "224575b83fba"
+        },
+        "grommet_15": {
+          "glb": "/3d-parts/nepton/grommet_15/straight.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.046,
+            0.022,
+            0.035
+          ],
+          "bytes": 20076,
+          "hash": "f80ac5f66ce2"
+        },
+        "grommet_16": {
+          "glb": "/3d-parts/nepton/grommet_16/straight.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.046,
+            0.022,
+            0.035
+          ],
+          "bytes": 20200,
+          "hash": "fd43b17e60dc"
+        },
+        "grommet_17": {
+          "glb": "/3d-parts/nepton/grommet_17/straight.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.047,
+            0.022,
+            0.036
+          ],
+          "bytes": 20084,
+          "hash": "54c45e27b4ef"
+        },
+        "grommet_18": {
+          "glb": "/3d-parts/nepton/grommet_18/straight.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.047,
+            0.022,
+            0.036
+          ],
+          "bytes": 20076,
+          "hash": "22db1a231048"
+        },
+        "grommet_19": {
+          "glb": "/3d-parts/nepton/grommet_19/straight.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.048,
+            0.022,
+            0.036
+          ],
+          "bytes": 20080,
+          "hash": "4c2a5c9d9ac1"
+        },
+        "grommet_20": {
+          "glb": "/3d-parts/nepton/grommet_20/straight.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.048,
+            0.022,
+            0.036
+          ],
+          "bytes": 20048,
+          "hash": "73da6ca6d2ec"
+        },
+        "grommet_21": {
+          "glb": "/3d-parts/nepton/grommet_21/straight.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.049,
+            0.022,
+            0.036
+          ],
+          "bytes": 20056,
+          "hash": "b99f684b2279"
+        },
+        "grommet_22": {
+          "glb": "/3d-parts/nepton/grommet_22/straight.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.049,
+            0.022,
+            0.035
+          ],
+          "bytes": 20068,
+          "hash": "34b876fc55e2"
+        },
+        "grommet_23": {
+          "glb": "/3d-parts/nepton/grommet_23/straight.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.049,
+            0.022,
+            0.035
+          ],
+          "bytes": 20060,
+          "hash": "0d70352c3603"
+        },
+        "grommet_24": {
+          "glb": "/3d-parts/nepton/grommet_24/straight.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.049,
+            0.022,
+            0.035
+          ],
+          "bytes": 20368,
+          "hash": "2e10f8e886da"
+        },
+        "grommet_25": {
+          "glb": "/3d-parts/nepton/grommet_25/straight.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.047,
+            0.022,
+            0.035
+          ],
+          "bytes": 20196,
+          "hash": "3601d0642316"
+        },
+        "grommet_26": {
+          "glb": "/3d-parts/nepton/grommet_26/straight.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.047,
+            0.022,
+            0.035
+          ],
+          "bytes": 20176,
+          "hash": "735a385046b8"
+        },
+        "grommet_27": {
+          "glb": "/3d-parts/nepton/grommet_27/straight.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.047,
+            0.022,
+            0.036
+          ],
+          "bytes": 20076,
+          "hash": "c73232de8ce6"
+        },
+        "grommet_28": {
+          "glb": "/3d-parts/nepton/grommet_28/straight.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.046,
+            0.022,
+            0.035
+          ],
+          "bytes": 20072,
+          "hash": "9a1a8666ede5"
+        },
+        "grommet_29": {
+          "glb": "/3d-parts/nepton/grommet_29/straight.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.046,
+            0.022,
+            0.035
+          ],
+          "bytes": 20076,
+          "hash": "08952bbbae4d"
+        },
+        "grommet_30": {
+          "glb": "/3d-parts/nepton/grommet_30/straight.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.047,
+            0.022,
+            0.035
+          ],
+          "bytes": 20192,
+          "hash": "bba1ae52a574"
+        },
+        "grommet_31": {
+          "glb": "/3d-parts/nepton/grommet_31/straight.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.047,
+            0.022,
+            0.035
+          ],
+          "bytes": 20196,
+          "hash": "5116a78e07fa"
+        },
+        "grommet_32": {
+          "glb": "/3d-parts/nepton/grommet_32/straight.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.046,
+            0.022,
+            0.035
+          ],
+          "bytes": 20076,
+          "hash": "c27391331952"
+        },
+        "grommet_33": {
+          "glb": "/3d-parts/nepton/grommet_33/straight.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.016
+          ],
+          "bytes": 32488,
+          "hash": "ce02ffb75c6e"
+        },
+        "grommet_34": {
+          "glb": "/3d-parts/nepton/grommet_34/straight.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.069,
+            0.05,
+            0.031
+          ],
+          "bytes": 12832,
+          "hash": "bfc9910fa92b"
+        },
+        "grommet_35": {
+          "glb": "/3d-parts/nepton/grommet_35/straight.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.069,
+            0.05,
+            0.031
+          ],
+          "bytes": 12748,
+          "hash": "097c67086149"
+        },
+        "grommet_36": {
+          "glb": "/3d-parts/nepton/grommet_36/straight.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.069,
+            0.05,
+            0.031
+          ],
+          "bytes": 12740,
+          "hash": "95d02affd126"
+        },
+        "grommet_37": {
+          "glb": "/3d-parts/nepton/grommet_37/straight.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.069,
+            0.05,
+            0.031
+          ],
+          "bytes": 12824,
+          "hash": "5defdef98714"
+        },
+        "grommet_38": {
+          "glb": "/3d-parts/nepton/grommet_38/straight.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.031,
+            0.031,
+            0.01
+          ],
+          "bytes": 43396,
+          "hash": "45133bec5996"
+        },
+        "grommet_39": {
+          "glb": "/3d-parts/nepton/grommet_39/straight.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.016
+          ],
+          "bytes": 31508,
+          "hash": "0d7c204f2970"
+        },
+        "grommet_40": {
+          "glb": "/3d-parts/nepton/grommet_40/straight.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.031,
+            0.031,
+            0.01
+          ],
+          "bytes": 42604,
+          "hash": "e5b4e01a0d28"
+        },
+        "grommet_41": {
+          "glb": "/3d-parts/nepton/grommet_41/straight.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.016
+          ],
+          "bytes": 32064,
+          "hash": "2b5f69f46fc0"
+        },
+        "grommet_42": {
+          "glb": "/3d-parts/nepton/grommet_42/straight.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.031,
+            0.031,
+            0.01
+          ],
+          "bytes": 42884,
+          "hash": "a9780ed46117"
+        },
+        "grommet_43": {
+          "glb": "/3d-parts/nepton/grommet_43/straight.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.016
+          ],
+          "bytes": 31716,
+          "hash": "10ecc538824c"
+        },
+        "grommet_44": {
+          "glb": "/3d-parts/nepton/grommet_44/straight.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.031,
+            0.031,
+            0.01
+          ],
+          "bytes": 43884,
+          "hash": "b1a493deb3f7"
+        },
+        "grommet_45": {
+          "glb": "/3d-parts/nepton/grommet_45/straight.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 18560,
+          "hash": "6b605fb6e75b"
+        },
+        "grommet_46": {
+          "glb": "/3d-parts/nepton/grommet_46/straight.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 18944,
+          "hash": "54fa73313f4e"
+        },
+        "grommet_47": {
+          "glb": "/3d-parts/nepton/grommet_47/straight.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 18952,
+          "hash": "dc680ec6fce1"
+        },
+        "grommet_48": {
+          "glb": "/3d-parts/nepton/grommet_48/straight.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 18992,
+          "hash": "a211192b74a4"
+        },
+        "grommet_49": {
+          "glb": "/3d-parts/nepton/grommet_49/straight.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 18968,
+          "hash": "99999b95ebc0"
+        },
+        "grommet_50": {
+          "glb": "/3d-parts/nepton/grommet_50/straight.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 19032,
+          "hash": "9f00e1d68c22"
+        },
+        "grommet_51": {
+          "glb": "/3d-parts/nepton/grommet_51/straight.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 18612,
+          "hash": "2041d80fe850"
+        },
+        "grommet_52": {
+          "glb": "/3d-parts/nepton/grommet_52/straight.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 18988,
+          "hash": "929ce2a1889a"
+        },
+        "frame_beam_0": {
+          "glb": "/3d-parts/nepton/frame_beam_0/straight.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.101,
+            0.713,
+            0.05
+          ],
+          "bytes": 12132,
+          "hash": "ac2981d30fa9"
+        },
+        "frame_beam_1": {
+          "glb": "/3d-parts/nepton/frame_beam_1/straight.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.101,
+            0.713,
+            0.05
+          ],
+          "bytes": 12156,
+          "hash": "6da2cc705101"
+        },
+        "frame_beam_2": {
+          "glb": "/3d-parts/nepton/frame_beam_2/straight.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.298,
+            0.02,
+            0.05
+          ],
+          "bytes": 8100,
+          "hash": "7203d3dd22fc"
+        },
+        "frame_beam_3": {
+          "glb": "/3d-parts/nepton/frame_beam_3/straight.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.298,
+            0.02,
+            0.05
+          ],
+          "bytes": 8072,
+          "hash": "fd956c73117f"
+        }
+      },
+      "baseSize": "160x80",
+      "unknowns": [
+        {
+          "name": "Layer:003.020",
+          "materials": [
+            "Majestic_WhitePaint"
+          ],
+          "bbox": [
+            0.006,
+            0.233,
+            0.05
+          ],
+          "location": [
+            -6.684,
+            0.463,
+            0.001
+          ]
+        },
+        {
+          "name": "Layer:003.021",
+          "materials": [
+            "Majestic_WhitePaint"
+          ],
+          "bbox": [
+            0.006,
+            0.233,
+            0.05
+          ],
+          "location": [
+            -6.684,
+            0.463,
+            0.001
+          ]
+        }
+      ]
+    },
+    "Side Console": {
+      "parts": {
+        "top": {
+          "glb": "/3d-parts/nepton/top/side-console.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            1.0,
+            0.5,
+            0.03
+          ],
+          "bytes": 161736,
+          "hash": "cdca0d459f76"
+        },
+        "grommet_0": {
+          "glb": "/3d-parts/nepton/grommet_0/side-console.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.016
+          ],
+          "bytes": 32564,
+          "hash": "b7870231c7da"
+        },
+        "grommet_1": {
+          "glb": "/3d-parts/nepton/grommet_1/side-console.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.016
+          ],
+          "bytes": 32828,
+          "hash": "e74febd27448"
+        },
+        "grommet_2": {
+          "glb": "/3d-parts/nepton/grommet_2/side-console.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.031,
+            0.031,
+            0.01
+          ],
+          "bytes": 43424,
+          "hash": "197282dcef36"
+        },
+        "grommet_3": {
+          "glb": "/3d-parts/nepton/grommet_3/side-console.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.016
+          ],
+          "bytes": 31612,
+          "hash": "03d51bde2388"
+        },
+        "grommet_4": {
+          "glb": "/3d-parts/nepton/grommet_4/side-console.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.031,
+            0.031,
+            0.01
+          ],
+          "bytes": 42572,
+          "hash": "1e79bfd9ad7c"
+        },
+        "grommet_5": {
+          "glb": "/3d-parts/nepton/grommet_5/side-console.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 18552,
+          "hash": "e457d03a0e88"
+        },
+        "grommet_6": {
+          "glb": "/3d-parts/nepton/grommet_6/side-console.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 18940,
+          "hash": "8b73ceb20a22"
+        },
+        "grommet_7": {
+          "glb": "/3d-parts/nepton/grommet_7/side-console.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 18940,
+          "hash": "5804b41f4bc7"
+        },
+        "grommet_8": {
+          "glb": "/3d-parts/nepton/grommet_8/side-console.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 19012,
+          "hash": "7b5da51a0abf"
+        },
+        "grommet_9": {
+          "glb": "/3d-parts/nepton/grommet_9/side-console.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.031,
+            0.031,
+            0.01
+          ],
+          "bytes": 42892,
+          "hash": "42385688ea49"
+        },
+        "grommet_10": {
+          "glb": "/3d-parts/nepton/grommet_10/side-console.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.016
+          ],
+          "bytes": 31556,
+          "hash": "b92d716226e3"
+        },
+        "grommet_11": {
+          "glb": "/3d-parts/nepton/grommet_11/side-console.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.031,
+            0.031,
+            0.01
+          ],
+          "bytes": 42564,
+          "hash": "a91d60db6fa4"
+        },
+        "grommet_12": {
+          "glb": "/3d-parts/nepton/grommet_12/side-console.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 18860,
+          "hash": "1b644c93e720"
+        },
+        "grommet_13": {
+          "glb": "/3d-parts/nepton/grommet_13/side-console.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 18900,
+          "hash": "879e19920a5d"
+        },
+        "grommet_14": {
+          "glb": "/3d-parts/nepton/grommet_14/side-console.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 19072,
+          "hash": "e8087fa4e17b"
+        },
+        "grommet_15": {
+          "glb": "/3d-parts/nepton/grommet_15/side-console.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 19128,
+          "hash": "7a8907aca348"
+        },
+        "leg_l_0": {
+          "glb": "/3d-parts/nepton/leg_l_0/side-console.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.376
+          ],
+          "bytes": 8788,
+          "hash": "954034a3cde7"
+        },
+        "leg_l_1": {
+          "glb": "/3d-parts/nepton/leg_l_1/side-console.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.376
+          ],
+          "bytes": 8652,
+          "hash": "0e4fed7d7ca2"
+        },
+        "leg_l_2": {
+          "glb": "/3d-parts/nepton/leg_l_2/side-console.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.376
+          ],
+          "bytes": 8996,
+          "hash": "90fe3fe61959"
+        },
+        "leg_l_3": {
+          "glb": "/3d-parts/nepton/leg_l_3/side-console.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.376
+          ],
+          "bytes": 8608,
+          "hash": "8037d998922d"
+        }
+      },
+      "baseSize": "100x50",
+      "unknowns": [
+        {
+          "name": "Layer:008.010",
+          "materials": [
+            "Majestic_WhitePaint"
+          ],
+          "bbox": [
+            0.101,
+            0.413,
+            0.05
+          ],
+          "location": [
+            -5.905,
+            -3.366,
+            0.0
+          ]
+        },
+        {
+          "name": "Layer:009.010",
+          "materials": [
+            "Majestic_WhitePaint"
+          ],
+          "bbox": [
+            0.101,
+            0.413,
+            0.05
+          ],
+          "location": [
+            -5.905,
+            -3.366,
+            0.0
+          ]
+        }
+      ]
+    },
+    "Coffee Table": {
+      "parts": {
+        "top": {
+          "glb": "/3d-parts/nepton/top/coffee-table.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.6,
+            0.6,
+            0.03
+          ],
+          "bytes": 161704,
+          "hash": "9d092405f36d"
+        },
+        "grommet_0": {
+          "glb": "/3d-parts/nepton/grommet_0/coffee-table.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.016
+          ],
+          "bytes": 32560,
+          "hash": "b54f13a0f399"
+        },
+        "grommet_1": {
+          "glb": "/3d-parts/nepton/grommet_1/coffee-table.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.016
+          ],
+          "bytes": 32816,
+          "hash": "9e85fb836a75"
+        },
+        "grommet_2": {
+          "glb": "/3d-parts/nepton/grommet_2/coffee-table.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.031,
+            0.031,
+            0.01
+          ],
+          "bytes": 43380,
+          "hash": "a50bbe546e24"
+        },
+        "grommet_3": {
+          "glb": "/3d-parts/nepton/grommet_3/coffee-table.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.016
+          ],
+          "bytes": 31636,
+          "hash": "73f10ed28db8"
+        },
+        "grommet_4": {
+          "glb": "/3d-parts/nepton/grommet_4/coffee-table.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.031,
+            0.031,
+            0.01
+          ],
+          "bytes": 42552,
+          "hash": "dcb4bca2840c"
+        },
+        "grommet_5": {
+          "glb": "/3d-parts/nepton/grommet_5/coffee-table.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 18544,
+          "hash": "caa31c1c7665"
+        },
+        "grommet_6": {
+          "glb": "/3d-parts/nepton/grommet_6/coffee-table.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 18944,
+          "hash": "8658c4e06a6c"
+        },
+        "grommet_7": {
+          "glb": "/3d-parts/nepton/grommet_7/coffee-table.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 18940,
+          "hash": "183f8017406b"
+        },
+        "grommet_8": {
+          "glb": "/3d-parts/nepton/grommet_8/coffee-table.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 19032,
+          "hash": "5e7a69ff3c37"
+        },
+        "grommet_9": {
+          "glb": "/3d-parts/nepton/grommet_9/coffee-table.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.031,
+            0.031,
+            0.01
+          ],
+          "bytes": 43136,
+          "hash": "d53416967b28"
+        },
+        "grommet_10": {
+          "glb": "/3d-parts/nepton/grommet_10/coffee-table.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.016
+          ],
+          "bytes": 31560,
+          "hash": "69c6d03c87a6"
+        },
+        "grommet_11": {
+          "glb": "/3d-parts/nepton/grommet_11/coffee-table.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.031,
+            0.031,
+            0.01
+          ],
+          "bytes": 42872,
+          "hash": "03334c6d3134"
+        },
+        "grommet_12": {
+          "glb": "/3d-parts/nepton/grommet_12/coffee-table.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 18856,
+          "hash": "0a029a6929a4"
+        },
+        "grommet_13": {
+          "glb": "/3d-parts/nepton/grommet_13/coffee-table.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 18876,
+          "hash": "98c46731772f"
+        },
+        "grommet_14": {
+          "glb": "/3d-parts/nepton/grommet_14/coffee-table.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 19048,
+          "hash": "cf5f52269ff4"
+        },
+        "grommet_15": {
+          "glb": "/3d-parts/nepton/grommet_15/coffee-table.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.011,
+            0.011,
+            0.014
+          ],
+          "bytes": 19128,
+          "hash": "bca17d96f38d"
+        },
+        "leg_l_0": {
+          "glb": "/3d-parts/nepton/leg_l_0/coffee-table.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.376
+          ],
+          "bytes": 8792,
+          "hash": "0dea6400cf53"
+        },
+        "leg_l_1": {
+          "glb": "/3d-parts/nepton/leg_l_1/coffee-table.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.376
+          ],
+          "bytes": 8652,
+          "hash": "bd5d62fe6a67"
+        },
+        "leg_l_2": {
+          "glb": "/3d-parts/nepton/leg_l_2/coffee-table.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.376
+          ],
+          "bytes": 9004,
+          "hash": "efd066e014ca"
+        },
+        "leg_l_3": {
+          "glb": "/3d-parts/nepton/leg_l_3/coffee-table.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.054,
+            0.053,
+            0.376
+          ],
+          "bytes": 8604,
+          "hash": "e14380a9a2fd"
+        },
+        "frame_beam_0": {
+          "glb": "/3d-parts/nepton/frame_beam_0/coffee-table.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.101,
+            0.513,
+            0.05
+          ],
+          "bytes": 12508,
+          "hash": "9d7d2e26fc76"
+        },
+        "frame_beam_1": {
+          "glb": "/3d-parts/nepton/frame_beam_1/coffee-table.glb",
+          "anchor": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bbox": [
+            0.101,
+            0.513,
+            0.05
+          ],
+          "bytes": 12496,
+          "hash": "01d81f75e160"
+        }
+      },
+      "baseSize": "60x60",
+      "unknowns": []
     }
-  },
-  "generated_at": "2026-04-20T03:54:26.787754Z"
+  }
 }

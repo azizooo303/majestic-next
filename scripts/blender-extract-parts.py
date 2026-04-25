@@ -63,6 +63,20 @@ JOBS_ALL = [
     # meeting table. One config. Vendor Chinese names renamed via Gate 2.5 script
     # (tesla_rename_roles.py).
     (rf"{HQ_ROOT}\tesla\MTG-TESLA-4P\master.blend",            "tesla", "Meeting 4-Person"),
+    # Nepton family — 11 local-review configs (restored 2026-04-26).
+    # Each base design is its own selectable config. Return/pedestal accessory
+    # toggles stay deferred until Aziz approves the base family shape.
+    (rf"{HQ_ROOT}\nepton\DESK-NEPTON-EXEC\master.blend",       "nepton", "Executive"),
+    (rf"{HQ_ROOT}\nepton\DESK-NEPTON-OPR\master.blend",        "nepton", "Operator"),
+    (rf"{HQ_ROOT}\nepton\DESK-NEPTON-MGR\master.blend",        "nepton", "Manager"),
+    (rf"{HQ_ROOT}\nepton\DESK-NEPTON-MGR-L\master.blend",      "nepton", "Manager L"),
+    (rf"{HQ_ROOT}\nepton\DESK-NEPTON-L-FULL\master.blend",     "nepton", "L-Shape Full Storage"),
+    (rf"{HQ_ROOT}\nepton\DESK-NEPTON-L-RETURN\master.blend",   "nepton", "L-Shape Return Pedestal"),
+    (rf"{HQ_ROOT}\nepton\DESK-NEPTON-CONF\master.blend",       "nepton", "Conference"),
+    (rf"{HQ_ROOT}\nepton\MTG-NEPTON-MEETING\master.blend",     "nepton", "Meeting"),
+    (rf"{HQ_ROOT}\nepton\DESK-NEPTON-STRAIGHT\master.blend",   "nepton", "Straight"),
+    (rf"{HQ_ROOT}\nepton\CRED-NEPTON-CONSOLE\master.blend",    "nepton", "Side Console"),
+    (rf"{HQ_ROOT}\nepton\TBL-NEPTON-COFFEE\master.blend",      "nepton", "Coffee Table"),
 ]
 
 # Filter via env var: ONLY_FAMILY=newton runs just that family's masters.

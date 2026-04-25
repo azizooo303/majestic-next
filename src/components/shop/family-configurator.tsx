@@ -211,6 +211,25 @@ const SIZE_OPTIONS_PER_CONFIG: Record<string, string[]> = {
   // "Storage Credenza" already exists above; Diamond size 1600x540 added to that entry
 };
 
+const NEPTON_SIZE_OPTIONS_PER_CONFIG: Record<string, string[]> = {
+  Executive: ["180x80"],
+  Operator: ["140x70"],
+  Manager: ["160x80"],
+  "Manager L": ["160x80"],
+  "L-Shape Full Storage": ["180x80"],
+  "L-Shape Return Pedestal": ["160x80"],
+  Conference: ["160x140"],
+  Meeting: ["120x120"],
+  Straight: ["160x80"],
+  "Side Console": ["100x50"],
+  "Coffee Table": ["60x60"],
+};
+
+function sizeOptionsForConfig(config: string, familySlug?: string): string[] | undefined {
+  if (familySlug === "nepton") return NEPTON_SIZE_OPTIONS_PER_CONFIG[config];
+  return SIZE_OPTIONS_PER_CONFIG[config];
+}
+
 const SIZE_EXTRA_PRICES: Record<string, number> = {
   "120x60": 0, "140x60": 0, "140x70": 100, "160x70": 150, "160x80": 200,
   "180x80": 300, "180x90": 400, "200x80": 500, "200x100": 650,
@@ -221,6 +240,8 @@ const SIZE_EXTRA_PRICES: Record<string, number> = {
   "160x80+120x60": 400, "180x90+120x60": 600, "180x90+2x120x60": 900,
   // Diamond fixed-footprint sizes (2026-04-23 Gate 4) — single-option configs, no upcharge
   "1200x1200": 0, "3200x4000": 0, "2800x1400": 0, "1000x500": 0, "1600x540": 0,
+  // Nepton fixed footprints (2026-04-26 local review)
+  "160x140": 0, "100x50": 0, "60x60": 0,
   "CUSTOM": 0,
 };
 
@@ -244,6 +265,10 @@ const CONFIG_META: Record<string, { en: string; ar: string }> = {
   "Workstation":          { en: "Open-plan workstation", ar: "محطة عمل خطة مفتوحة" },
   "Height-Adjustable":    { en: "Motorised · 680–1,200 mm range", ar: "كهربائي · نطاق 680–1,200 مم" },
   "Custom (Contact Us)":  { en: "Non-standard footprint, special finish, bespoke details", ar: "مقاسات غير نمطية، تشطيب خاص، تفاصيل مخصصة" },
+  "Manager L":            { en: "160×80 · Manager return layout", ar: "160×80 · مكتب مدير مع امتداد" },
+  "L-Shape Full Storage": { en: "180×80 · L-shape with full storage", ar: "180×80 · مكتب L مع تخزين كامل" },
+  "L-Shape Return Pedestal": { en: "160×80 · L-shape with return pedestal", ar: "160×80 · مكتب L مع خزانة رجوع" },
+  "Straight":             { en: "160×80 · Straight desk", ar: "160×80 · مكتب مستقيم" },
   // Diamond family — short-form config keys matching manifest (2026-04-23 Gate 4)
   "Meeting 4P":           { en: "1200×1200 · 4-person round/square", ar: "1200×1200 · 4 أشخاص" },
   "Meeting Large":        { en: "3200×4000 · Boardroom", ar: "3200×4000 · قاعة اجتماعات" },
@@ -385,7 +410,7 @@ export function FamilyConfigurator({ family, basePrice, locale }: FamilyConfigur
 
   // ── Picker state ──────────────────────────────────────────────────────────
   const [config, setConfig]               = useState(initialState?.config ?? family.configs[0] ?? "Executive");
-  const [size, setSize]                   = useState(initialState?.size ?? SIZE_OPTIONS_PER_CONFIG[initialState?.config ?? family.configs[0]]?.[0] ?? "160x80");
+  const [size, setSize]                   = useState(initialState?.size ?? sizeOptionsForConfig(initialState?.config ?? family.configs[0], family.slug)?.[0] ?? "160x80");
   const [finish, setFinish]               = useState<string>(initialState?.finish ?? DESK_TOP_FINISHES[0]);
   // Base finish (wood-on-wood axis, credenzas only). Defaults to a second decor
   // so the two-tone reads visibly on first load. Ignored by families without a
@@ -404,7 +429,7 @@ export function FamilyConfigurator({ family, basePrice, locale }: FamilyConfigur
   const [prevConfig, setPrevConfig] = useState(config);
   if (prevConfig !== config) {
     setPrevConfig(config);
-    const valid = SIZE_OPTIONS_PER_CONFIG[config];
+    const valid = sizeOptionsForConfig(config, family.slug);
     if (valid && !valid.includes(size)) {
       setSize(valid[0]);
     }
@@ -520,7 +545,7 @@ export function FamilyConfigurator({ family, basePrice, locale }: FamilyConfigur
   const animatedTotal = useAnimatedPrice(total);
 
   // ── Exclusions ────────────────────────────────────────────────────────────
-  const validSizes = SIZE_OPTIONS_PER_CONFIG[config] || [];
+  const validSizes = sizeOptionsForConfig(config, family.slug) || [];
   const excludedLegs = useMemo(() => (
     LEG_COLORS.filter(l => !isValidCombo(family.sku, config, size, l).valid)
   ), [family.sku, config, size]);
