@@ -229,6 +229,9 @@ const NEPTON_SIZE_OPTIONS_PER_CONFIG: Record<string, string[]> = {
 const DAVINCI_SIZE_OPTIONS_PER_CONFIG: Record<string, string[]> = {
   Executive: ["210x90"],
   "L-Shape": ["220x90"],
+  Meeting: ["220x120"],
+  "Tall Credenza": ["166x46x166"],
+  Workstation: ["274x140"],
   "Custom (Contact Us)": ["CUSTOM"],
 };
 
@@ -241,7 +244,7 @@ function sizeOptionsForConfig(config: string, familySlug?: string): string[] | u
 const SIZE_EXTRA_PRICES: Record<string, number> = {
   "120x60": 0, "140x60": 0, "140x70": 100, "160x70": 150, "160x80": 200,
   "180x80": 300, "180x90": 400, "200x80": 500, "200x100": 650, "210x90": 0,
-  "220x90": 700, "220x100": 800, "240x100": 900, "300x110": 1200, "360x120": 1500,
+  "220x90": 700, "220x100": 800, "220x120": 0, "240x100": 900, "274x140": 0, "300x110": 1200, "360x120": 1500,
   "120x120": 300, "140x140": 500, "420x140": 2000,
   "120x40": 200, "160x40": 400, "180x40": 500, "200x40": 600,
   "80x40x180": 700, "100x40x180": 900,
@@ -249,7 +252,7 @@ const SIZE_EXTRA_PRICES: Record<string, number> = {
   // Diamond fixed-footprint sizes (2026-04-23 Gate 4) — single-option configs, no upcharge
   "1200x1200": 0, "3200x4000": 0, "2800x1400": 0, "1000x500": 0, "1600x540": 0,
   // Nepton fixed footprints (2026-04-26 local review)
-  "160x140": 0, "100x50": 0, "60x60": 0,
+  "160x140": 0, "166x46": 0, "166x46x166": 0, "100x50": 0, "60x60": 0,
   "CUSTOM": 0,
 };
 
@@ -324,10 +327,14 @@ function ChevronSvg({ className }: { className?: string }) {
 }
 
 // ─── Parse size string to mm dimensions ──────────────────────────────────────
-function parseSizeMm(size: string): { w: number; d: number } | null {
-  const m = size.match(/^(\d+)x(\d+)/);
+function parseSizeMm(size: string): { w: number; d: number; h?: number } | null {
+  const m = size.match(/^(\d+)x(\d+)(?:x(\d+))?/);
   if (!m) return null;
-  return { w: parseInt(m[1], 10) * 10, d: parseInt(m[2], 10) * 10 };
+  return {
+    w: parseInt(m[1], 10) * 10,
+    d: parseInt(m[2], 10) * 10,
+    h: m[3] ? parseInt(m[3], 10) * 10 : undefined,
+  };
 }
 
 // ─── Format SAR with locale ───────────────────────────────────────────────────
@@ -700,8 +707,8 @@ export function FamilyConfigurator({ family, basePrice, locale }: FamilyConfigur
                   ].join(" ")}
                 >
                   {isAr
-                    ? `ع ${dims.w} × ع ${dims.d} × ع 740 مم`
-                    : `W ${dims.w} × D ${dims.d} × H 740 MM`}
+                    ? `ع ${dims.w} × ع ${dims.d} × ع ${dims.h ?? 740} مم`
+                    : `W ${dims.w} × D ${dims.d} × H ${dims.h ?? 740} MM`}
                 </div>
               )}
 

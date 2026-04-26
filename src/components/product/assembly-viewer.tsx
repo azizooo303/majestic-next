@@ -260,8 +260,12 @@ export function AssemblyViewer({ manifest, state, name, viewpoint = 0, command, 
     const size = box.getSize(new THREE.Vector3());
     const maxDim = Math.max(size.x, size.y, size.z, 1);
     const target = new THREE.Vector3(center.x, Math.max(center.y, 0.44), center.z);
-    const fitDistance = maxDim / (2 * Math.tan(THREE.MathUtils.degToRad(camera.fov) / 2));
-    const distance = Math.max(fitDistance * view.distance, maxDim * 0.95, 1.35);
+    const fov = THREE.MathUtils.degToRad(camera.fov);
+    const fitHeight = size.y / (2 * Math.tan(fov / 2));
+    const fitWidth = size.x / (2 * Math.tan(fov / 2) * camera.aspect);
+    const fitDepth = size.z / (2 * Math.tan(fov / 2));
+    const fitDistance = Math.max(fitHeight, fitWidth, fitDepth, maxDim * 0.55);
+    const distance = Math.max(fitDistance * view.distance * 1.18, maxDim * 1.05, 1.45);
     const direction = new THREE.Vector3(...view.direction).normalize();
 
     controls.target.copy(target);

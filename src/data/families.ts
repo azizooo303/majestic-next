@@ -183,7 +183,7 @@ export const DESK_FAMILIES: DeskFamily[] = [
     nameEn: "Da Vinci Desk",
     nameAr: "مكتب دافنشي",
     tagline: {en: "Artist-inspired executive design", ar: "تصميم تنفيذي مستوحى من الفن"},
-    configs: ["Executive", "L-Shape", "Custom (Contact Us)"],
+    configs: ["Executive", "L-Shape", "Meeting", "Tall Credenza", "Workstation", "Custom (Contact Us)"],
     hasGlb: true,
     priority: 12,
     status: "live",
