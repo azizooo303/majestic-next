@@ -22,7 +22,7 @@
 
 "use client";
 
-import { useState, useEffect, useMemo, useRef } from "react";
+import { useState, useEffect, useMemo, useRef, useCallback } from "react";
 import { useSearchParams, useRouter, usePathname } from "next/navigation";
 import type { DeskFamily } from "@/data/families";
 import {
@@ -37,6 +37,7 @@ import { FinishLibrary } from "@/components/shop/finish-library";
 import { DisclosureAxis } from "@/components/shop/disclosure-axis";
 import { ProductViewer3D } from "@/components/product/product-viewer-3d";
 import { AssemblyViewer } from "@/components/product/assembly-viewer";
+import type { ViewerCommand } from "@/components/product/assembly-viewer";
 import { getProduct3DModel } from "@/lib/products-3d";
 import type { FamilyManifest, AssemblyState } from "@/lib/scene-composer";
 import { accessoryAxesInConfig, DIVIDER_COLOR_MATERIAL, DEFAULT_DIVIDER_COLOR } from "@/lib/scene-composer";
@@ -225,14 +226,21 @@ const NEPTON_SIZE_OPTIONS_PER_CONFIG: Record<string, string[]> = {
   "Coffee Table": ["60x60"],
 };
 
+const DAVINCI_SIZE_OPTIONS_PER_CONFIG: Record<string, string[]> = {
+  Executive: ["210x90"],
+  "L-Shape": ["220x90"],
+  "Custom (Contact Us)": ["CUSTOM"],
+};
+
 function sizeOptionsForConfig(config: string, familySlug?: string): string[] | undefined {
   if (familySlug === "nepton") return NEPTON_SIZE_OPTIONS_PER_CONFIG[config];
+  if (familySlug === "davinci") return DAVINCI_SIZE_OPTIONS_PER_CONFIG[config];
   return SIZE_OPTIONS_PER_CONFIG[config];
 }
 
 const SIZE_EXTRA_PRICES: Record<string, number> = {
   "120x60": 0, "140x60": 0, "140x70": 100, "160x70": 150, "160x80": 200,
-  "180x80": 300, "180x90": 400, "200x80": 500, "200x100": 650,
+  "180x80": 300, "180x90": 400, "200x80": 500, "200x100": 650, "210x90": 0,
   "220x90": 700, "220x100": 800, "240x100": 900, "300x110": 1200, "360x120": 1500,
   "120x120": 300, "140x140": 500, "420x140": 2000,
   "120x40": 200, "160x40": 400, "180x40": 500, "200x40": 600,
@@ -397,6 +405,8 @@ export function FamilyConfigurator({ family, basePrice, locale }: FamilyConfigur
   const searchParams = useSearchParams();
   const router = useRouter();
   const pathname = usePathname();
+  const defaultTopFinish = family.slug === "davinci" ? "Italian Walnut" : DESK_TOP_FINISHES[0];
+  const defaultLegColor = "Black Powder Coat";
 
   // ── Resolve initial state — prefer ?cfg= param, then defaults ────────────
   const initialState = (() => {
@@ -411,19 +421,31 @@ export function FamilyConfigurator({ family, basePrice, locale }: FamilyConfigur
   // ── Picker state ──────────────────────────────────────────────────────────
   const [config, setConfig]               = useState(initialState?.config ?? family.configs[0] ?? "Executive");
   const [size, setSize]                   = useState(initialState?.size ?? sizeOptionsForConfig(initialState?.config ?? family.configs[0], family.slug)?.[0] ?? "160x80");
-  const [finish, setFinish]               = useState<string>(initialState?.finish ?? DESK_TOP_FINISHES[0]);
+  const [finish, setFinish]               = useState<string>(initialState?.finish ?? defaultTopFinish);
   // Base finish (wood-on-wood axis, credenzas only). Defaults to a second decor
   // so the two-tone reads visibly on first load. Ignored by families without a
   // `base` role in their manifest.
   const [baseFinish, setBaseFinish]       = useState<string>(DESK_TOP_FINISHES[1] ?? DESK_TOP_FINISHES[0]);
-  const [leg, setLeg]                     = useState<string>(initialState?.leg ?? "Polished Chrome");
+  const [leg, setLeg]                     = useState<string>(initialState?.leg ?? defaultLegColor);
   const [sideUnitOption, setSideUnitOpt]  = useState<string>(initialState?.sideUnit ?? "");
   const [pedestalOption, setPedestalOpt]  = useState<string>(initialState?.pedestal ?? "");
   const [dividerColor, setDividerColor]   = useState<string>(initialState?.dividerColor ?? DEFAULT_DIVIDER_COLOR);
   const [activeThumb, setActiveThumb]     = useState(0);
+  const [viewerCommand, setViewerCommand] = useState<ViewerCommand | null>(null);
   const [showBreakdown, setShowBreakdown] = useState(false);
   const [pricePulse, setPricePulse]       = useState(false);
   const prevPriceRef = useRef<number>(basePrice);
+  const viewerCommandTokenRef = useRef(0);
+
+  const sendViewerCommand = useCallback((type: ViewerCommand["type"]) => {
+    viewerCommandTokenRef.current += 1;
+    setViewerCommand({ type, token: viewerCommandTokenRef.current });
+  }, []);
+
+  useEffect(() => {
+    setActiveThumb(0);
+    sendViewerCommand("reset");
+  }, [config, sendViewerCommand]);
 
   // Config snap: when Config changes, snap to first valid size.
   const [prevConfig, setPrevConfig] = useState(config);
@@ -551,7 +573,8 @@ export function FamilyConfigurator({ family, basePrice, locale }: FamilyConfigur
   ), [family.sku, config, size]);
 
   // ── Viewer background ─────────────────────────────────────────────────────
-  const viewerBg = (finish === "Premium White" && leg === "White Powder Coat") ? "#E8E8E8" : "#F7F4EE";
+  const needsGreyViewerBg = FINISH_META[finish]?.group === "whites" || leg === "White Powder Coat";
+  const viewerBg = needsGreyViewerBg ? "#E8E8E8" : "#F7F4EE";
 
   // ── Cart handler ──────────────────────────────────────────────────────────
   async function handleAddToCart() {
@@ -633,6 +656,8 @@ export function FamilyConfigurator({ family, basePrice, locale }: FamilyConfigur
                   manifest={manifest}
                   state={assemblyState}
                   name={isAr ? family.nameAr : family.nameEn}
+                  viewpoint={activeThumb}
+                  command={viewerCommand}
                   backgroundColor={viewerBg}
                 />
               ) : family.hasGlb && getProduct3DModel(family.sku, config) ? (
@@ -645,6 +670,8 @@ export function FamilyConfigurator({ family, basePrice, locale }: FamilyConfigur
                     topFinishName={finish}
                     legColorName={leg}
                     backgroundColor={viewerBg}
+                    viewpoint={activeThumb}
+                    command={viewerCommand}
                   />
                   {!getProduct3DModel(family.sku, config)?.label?.includes(config) && (
                     <div className="absolute top-3 left-3 bg-white/90 text-[#3A3A3A] text-[10px] uppercase px-3 py-1.5 border border-[#D4D4D4]"
@@ -681,13 +708,18 @@ export function FamilyConfigurator({ family, basePrice, locale }: FamilyConfigur
               {/* Viewer controls — bottom center */}
               <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex border border-[#D4D4D4] bg-white z-10">
                 {[
-                  { titleEn: "Rotate", titleAr: "تدوير", svg: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg> },
-                  { titleEn: "Zoom",   titleAr: "تكبير", svg: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/><path d="M8 11h6M11 8v6"/></svg> },
-                  { titleEn: "Reset",  titleAr: "إعادة", svg: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/></svg> },
+                  { titleEn: "Rotate", titleAr: "تدوير", action: "rotate" as const, svg: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg> },
+                  { titleEn: "Zoom",   titleAr: "تكبير", action: "zoom" as const, svg: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/><path d="M8 11h6M11 8v6"/></svg> },
+                  { titleEn: "Reset",  titleAr: "إعادة", action: "reset" as const, svg: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/></svg> },
                 ].map((btn, i) => (
                   <button
                     key={btn.titleEn}
                     title={isAr ? btn.titleAr : btn.titleEn}
+                    type="button"
+                    onClick={() => {
+                      if (btn.action === "reset") setActiveThumb(0);
+                      sendViewerCommand(btn.action);
+                    }}
                     className={[
                       "w-9 h-9 flex items-center justify-center text-[#2C2C2C]",
                       "hover:bg-[#F5F5F5] transition-colors",
@@ -711,7 +743,10 @@ export function FamilyConfigurator({ family, basePrice, locale }: FamilyConfigur
                   isAr ? "tracking-normal" : "tracking-[0.14em]",
                 ].join(" ")}
                 aria-label={isAr ? "عرض في الواقع المعزز" : "View in AR"}
-                onClick={() => { /* stub — wire to model-viewer AR entry */ }}
+                onClick={() => {
+                  window.dispatchEvent(new CustomEvent("majestic:view-ar"));
+                  sendViewerCommand("ar");
+                }}
               >
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">
                   <path d="M12 2 3 7v10l9 5 9-5V7Z"/><path d="m3 7 9 5 9-5M12 12v10"/>

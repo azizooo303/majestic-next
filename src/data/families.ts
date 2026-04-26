@@ -183,10 +183,10 @@ export const DESK_FAMILIES: DeskFamily[] = [
     nameEn: "Da Vinci Desk",
     nameAr: "مكتب دافنشي",
     tagline: {en: "Artist-inspired executive design", ar: "تصميم تنفيذي مستوحى من الفن"},
-    configs: ["Executive", "Manager", "Operator", "L-Shape", "U-Shape", "Conference", "Custom (Contact Us)"],
+    configs: ["Executive", "L-Shape", "Custom (Contact Us)"],
     hasGlb: true,
     priority: 12,
-    status: "coming-soon",
+    status: "live",
     breadcrumb: ["Home", "Shop", "Desks", "Executive Desks", "Da Vinci"],
     breadcrumbAr: ["الرئيسية", "المتجر", "المكاتب", "المكاتب التنفيذية", "دافنشي"],
   },
@@ -473,10 +473,10 @@ export const LEG_COLOR_MATERIAL: Record<
   string,
   { hex: string; metalness: number; roughness: number }
 > = {
-  "Black Powder Coat": { hex: "#2B2B2B", metalness: 0.1, roughness: 0.7 },
-  "White Powder Coat": { hex: "#F4F4F4", metalness: 0.1, roughness: 0.65 },
-  "Silver Powder Coat": { hex: "#9A9CA0", metalness: 0.2, roughness: 0.55 },
-  "Polished Chrome":    { hex: "#D9D9D9", metalness: 1.0, roughness: 0.08 },
+  "Black Powder Coat": { hex: "#272727", metalness: 0.0, roughness: 0.86 },
+  "White Powder Coat": { hex: "#F1EEE7", metalness: 0.0, roughness: 0.82 },
+  "Silver Powder Coat": { hex: "#8D9091", metalness: 0.03, roughness: 0.78 },
+  "Polished Chrome":    { hex: "#D6D4CF", metalness: 0.72, roughness: 0.26 },
 };
 
 /**

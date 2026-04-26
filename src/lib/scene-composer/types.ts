@@ -40,6 +40,7 @@ export interface FamilyManifest {
  *
  * - "top" + "pedestal_top" → carry DESK_TOP_FINISH textures (wood grain)
  * - "leg_l", "leg_r", "frame_beam" → carry LEG_COLOR_MATERIAL (metal)
+ * - "body" → fixed painted white/off-white casework from original Max sources
  * - "modesty", "pedestal", "pedestal_handle", "cable_tray", "cable_spine", "screen_front", "screen_side" → accessory toggles
  * - "grommet", "feet" → always visible (structural trim)
  * - "handle" → wood-finish OR painted depending on family
@@ -63,6 +64,7 @@ export type RoleKind =
   | "feet"
   | "handle"
   | "base"
+  | "body"
   | "unknown";
 
 // NOTE: roles are compared AFTER stripping any "_N" numeric suffix (top_0 → top).
@@ -105,6 +107,18 @@ export const METAL_FINISH_ROLES = new Set<string>([
 export const STATIC_METAL_ROLES = new Set<string>([
   "bracket",
 ]);
+
+/** Fixed painted casework/body panels, used when source materials are missing. */
+export const STATIC_BODY_ROLES = new Set<string>([
+  "body",
+]);
+
+export const BODY_COLOR = {
+  hex: "#F3F1EA",
+  metalness: 0.0,
+  roughness: 0.58,
+};
+
 export const BRACKET_COLOR = {
   hex: "#D9D9DA",
   metalness: 0.85,

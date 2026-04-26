@@ -2,6 +2,7 @@
 
 import Script from "next/script";
 import { useEffect, useRef } from "react";
+import type { ViewerCommand } from "@/components/product/assembly-viewer";
 import type { Model3D } from "@/lib/products-3d";
 import {
   FAMILY_MESH_MAP,
@@ -38,11 +39,17 @@ interface MVElement extends HTMLElement {
   model?: MVModel;
   // createTexture is a method on the ModelViewerElement itself (not on .model).
   createTexture?: (uri: string) => Promise<MVTexture>;
+  activateAR?: () => Promise<void> | void;
+  jumpCameraToGoal?: () => void;
+  cameraOrbit?: string;
+  fieldOfView?: string;
 }
 
 interface ProductViewer3DProps {
   model: Model3D;
   name: string;
+  viewpoint?: number;
+  command?: ViewerCommand | null;
   /** SKU used to look up FAMILY_MESH_MAP (e.g. "DESK-CRATOS"). Optional — omit for static viewer. */
   familySku?: string;
   /** Config name (Executive, Manager, Conference, L-Shape). Used to pick a per-config
@@ -60,6 +67,20 @@ interface ProductViewer3DProps {
 const STUDIO_BACKDROP =
   "radial-gradient(ellipse 70% 55% at 50% 45%, #b8b8b8 0%, #cfcfcf 22%, #e6e6e6 45%, #f5f5f5 68%, #ffffff 88%)";
 
+const MODEL_VIEWER_CAMERA_VIEWS = [
+  { theta: 35, phi: 72, fov: "28deg" },
+  { theta: 0, phi: 82, fov: "30deg" },
+  { theta: 0, phi: 8, fov: "32deg" },
+  { theta: 48, phi: 66, fov: "18deg" },
+  { theta: -42, phi: 70, fov: "36deg" },
+] as const;
+
+const AUTO_ROTATE_RESUME_MS = 3500;
+
+function normalizedViewIndex(index: number): number {
+  return ((index % MODEL_VIEWER_CAMERA_VIEWS.length) + MODEL_VIEWER_CAMERA_VIEWS.length) % MODEL_VIEWER_CAMERA_VIEWS.length;
+}
+
 /** Parse #RRGGBB → [r, g, b] floats in 0..1 range. */
 function hexToFloat(hex: string): [number, number, number] {
   const h = hex.replace("#", "");
@@ -72,6 +93,8 @@ function hexToFloat(hex: string): [number, number, number] {
 export function ProductViewer3D({
   model,
   name,
+  viewpoint = 0,
+  command,
   familySku,
   config,
   topFinishName,
@@ -79,6 +102,112 @@ export function ProductViewer3D({
   backgroundColor,
 }: ProductViewer3DProps) {
   const mvRef = useRef<MVElement | null>(null);
+  const autoRotateTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const currentViewRef = useRef(normalizedViewIndex(viewpoint));
+  const currentThetaRef = useRef(MODEL_VIEWER_CAMERA_VIEWS[currentViewRef.current].theta);
+  const currentPhiRef = useRef(MODEL_VIEWER_CAMERA_VIEWS[currentViewRef.current].phi);
+  const currentFovRef = useRef<string>(MODEL_VIEWER_CAMERA_VIEWS[currentViewRef.current].fov);
+
+  useEffect(() => {
+    return () => {
+      if (autoRotateTimerRef.current) clearTimeout(autoRotateTimerRef.current);
+    };
+  }, []);
+
+  useEffect(() => {
+    const el = mvRef.current;
+    if (!el) return;
+
+    const onLoad = () => {
+      setModelViewerCamera(currentThetaRef.current, currentPhiRef.current, currentFovRef.current);
+    };
+
+    el.addEventListener("load", onLoad);
+    applyModelViewerView(currentViewRef.current, { pause: false });
+    return () => el.removeEventListener("load", onLoad);
+  }, [model.glb]);
+
+  useEffect(() => {
+    currentViewRef.current = normalizedViewIndex(viewpoint);
+    applyModelViewerView(currentViewRef.current);
+  }, [viewpoint]);
+
+  useEffect(() => {
+    if (!command) return;
+    if (command.type === "reset") {
+      applyModelViewerView(0);
+    } else if (command.type === "zoom") {
+      zoomModelViewer();
+    } else if (command.type === "rotate") {
+      rotateModelViewer();
+    } else if (command.type === "ar") {
+      void openAR();
+    }
+  }, [command]);
+
+  useEffect(() => {
+    const onArRequest = () => {
+      void openAR();
+    };
+    window.addEventListener("majestic:view-ar", onArRequest);
+    return () => window.removeEventListener("majestic:view-ar", onArRequest);
+  }, []);
+
+  function pauseAutoRotate() {
+    const el = mvRef.current;
+    if (!el) return;
+    el.removeAttribute("auto-rotate");
+    if (autoRotateTimerRef.current) clearTimeout(autoRotateTimerRef.current);
+    autoRotateTimerRef.current = setTimeout(() => {
+      mvRef.current?.setAttribute("auto-rotate", "");
+      autoRotateTimerRef.current = null;
+    }, AUTO_ROTATE_RESUME_MS);
+  }
+
+  function setModelViewerCamera(theta: number, phi: number, fov: string) {
+    const el = mvRef.current;
+    if (!el) return;
+    const orbit = `${theta}deg ${phi}deg auto`;
+    el.cameraOrbit = orbit;
+    el.fieldOfView = fov;
+    el.setAttribute("camera-orbit", orbit);
+    el.setAttribute("field-of-view", fov);
+    el.jumpCameraToGoal?.();
+  }
+
+  function applyModelViewerView(viewIndex: number, options: { pause?: boolean } = {}) {
+    const index = normalizedViewIndex(viewIndex);
+    const view = MODEL_VIEWER_CAMERA_VIEWS[index];
+    currentViewRef.current = index;
+    currentThetaRef.current = view.theta;
+    currentPhiRef.current = view.phi;
+    currentFovRef.current = view.fov;
+    setModelViewerCamera(view.theta, view.phi, view.fov);
+    if (options.pause !== false) pauseAutoRotate();
+  }
+
+  function zoomModelViewer() {
+    const nextFov = `${Math.max(parseFloat(currentFovRef.current) * 0.74, 14).toFixed(1)}deg`;
+    currentFovRef.current = nextFov;
+    setModelViewerCamera(currentThetaRef.current, currentPhiRef.current, nextFov);
+    pauseAutoRotate();
+  }
+
+  function rotateModelViewer() {
+    currentThetaRef.current += 45;
+    setModelViewerCamera(currentThetaRef.current, currentPhiRef.current, currentFovRef.current);
+    pauseAutoRotate();
+  }
+
+  async function openAR() {
+    const el = mvRef.current;
+    if (!el || typeof el.activateAR !== "function") return;
+    try {
+      await el.activateAR();
+    } catch (e) {
+      console.warn("[viewer] AR launch failed", e);
+    }
+  }
 
   // Material swap effect — fires on finish/leg change after GLB is loaded.
   useEffect(() => {
@@ -211,8 +340,9 @@ export function ProductViewer3D({
           auto-rotate-delay="1500"
           rotation-per-second="18deg"
           camera-orbit="35deg 72deg auto"
-          min-camera-orbit="auto 45deg auto"
-          max-camera-orbit="auto 90deg auto"
+          field-of-view="28deg"
+          min-camera-orbit="auto 5deg auto"
+          max-camera-orbit="auto 160deg auto"
           environment-image="neutral"
           exposure="1.0"
           tone-mapping="neutral"

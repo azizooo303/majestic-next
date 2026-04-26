@@ -6,9 +6,9 @@
         "frame_beam_0": {
           "glb": "/3d-parts/davinci/frame_beam_0/executive.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.016,
@@ -25,9 +25,9 @@
         "frame_beam_1": {
           "glb": "/3d-parts/davinci/frame_beam_1/executive.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.5,
@@ -44,9 +44,9 @@
         "frame_beam_2": {
           "glb": "/3d-parts/davinci/frame_beam_2/executive.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.008,
@@ -63,9 +63,9 @@
         "frame_beam_3": {
           "glb": "/3d-parts/davinci/frame_beam_3/executive.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.005,
@@ -82,9 +82,9 @@
         "frame_beam_4": {
           "glb": "/3d-parts/davinci/frame_beam_4/executive.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.209,
@@ -101,9 +101,9 @@
         "feet_0": {
           "glb": "/3d-parts/davinci/feet_0/executive.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.04,
@@ -120,9 +120,9 @@
         "feet_1": {
           "glb": "/3d-parts/davinci/feet_1/executive.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.057,
@@ -139,9 +139,9 @@
         "feet_2": {
           "glb": "/3d-parts/davinci/feet_2/executive.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.04,
@@ -158,9 +158,9 @@
         "feet_3": {
           "glb": "/3d-parts/davinci/feet_3/executive.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.057,
@@ -177,9 +177,9 @@
         "feet_4": {
           "glb": "/3d-parts/davinci/feet_4/executive.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.04,
@@ -196,9 +196,9 @@
         "feet_5": {
           "glb": "/3d-parts/davinci/feet_5/executive.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.057,
@@ -215,9 +215,9 @@
         "feet_6": {
           "glb": "/3d-parts/davinci/feet_6/executive.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.057,
@@ -234,9 +234,9 @@
         "feet_7": {
           "glb": "/3d-parts/davinci/feet_7/executive.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.04,
@@ -253,9 +253,9 @@
         "modesty_0": {
           "glb": "/3d-parts/accessories/modesty-ed86aaf067e9.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.356,
@@ -272,9 +272,9 @@
         "modesty_1": {
           "glb": "/3d-parts/accessories/modesty-e8b28ea62f96.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.018,
@@ -291,9 +291,9 @@
         "modesty_2": {
           "glb": "/3d-parts/accessories/modesty-c00dc9150138.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.018,
@@ -310,9 +310,9 @@
         "modesty_3": {
           "glb": "/3d-parts/accessories/modesty-534ebc0e57d9.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.018,
@@ -329,9 +329,9 @@
         "pedestal_0": {
           "glb": "/3d-parts/accessories/pedestal-37bce8ca6814.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.495,
@@ -348,9 +348,9 @@
         "pedestal_1": {
           "glb": "/3d-parts/accessories/pedestal-35a4f1eca876.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.461,
@@ -367,9 +367,9 @@
         "pedestal_top": {
           "glb": "/3d-parts/accessories/pedestal_top-438d8fcfe94b.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             0.5,
@@ -386,9 +386,9 @@
         "top": {
           "glb": "/3d-parts/davinci/top/executive.glb",
           "anchor": [
-            0.0,
-            0.0,
-            0.0
+            0,
+            0,
+            0
           ],
           "bbox": [
             2.102,
@@ -418,7 +418,94 @@
         }
       ],
       "productKind": "desk"
+    },
+    "L-Shape": {
+      "parts": {
+        "top": {
+          "glb": "/3d-parts/davinci/top/l-shape.glb",
+          "anchor": [
+            0,
+            0,
+            0
+          ],
+          "bbox": [
+            2.951,
+            2.651,
+            0.797
+          ],
+          "bytes": 32208,
+          "hash": "4e6b5bd53510",
+          "source_file": "02_source/max/davinci/davinci collections.max"
+        },
+        "body": {
+          "glb": "/3d-parts/davinci/body/l-shape.glb",
+          "anchor": [
+            0,
+            0,
+            0
+          ],
+          "bbox": [
+            2.949,
+            1.687,
+            0.8
+          ],
+          "bytes": 31648,
+          "hash": "b764d08b31a3",
+          "source_file": "02_source/max/davinci/davinci collections.max"
+        },
+        "frame_beam": {
+          "glb": "/3d-parts/davinci/frame_beam/l-shape.glb",
+          "anchor": [
+            0,
+            0,
+            0
+          ],
+          "bbox": [
+            2.38,
+            2.247,
+            0.853
+          ],
+          "bytes": 352392,
+          "hash": "37f4da950fb6",
+          "source_file": "02_source/max/davinci/davinci collections.max"
+        },
+        "feet": {
+          "glb": "/3d-parts/davinci/feet/l-shape.glb",
+          "anchor": [
+            0,
+            0,
+            0
+          ],
+          "bbox": [
+            2.917,
+            1.639,
+            0.071
+          ],
+          "bytes": 32580,
+          "hash": "b7f25766e63f",
+          "source_file": "02_source/max/davinci/davinci collections.max"
+        },
+        "handle": {
+          "glb": "/3d-parts/davinci/handle/l-shape.glb",
+          "anchor": [
+            0,
+            0,
+            0
+          ],
+          "bbox": [
+            2.068,
+            1.973,
+            0.277
+          ],
+          "bytes": 47968,
+          "hash": "bfa5e5d9688d",
+          "source_file": "02_source/max/davinci/davinci collections.max"
+        }
+      },
+      "baseSize": "220x90",
+      "unknowns": [],
+      "productKind": "desk"
     }
   },
-  "generated_at": "2026-04-20T03:54:26.791207Z"
+  "generated_at": "2026-04-26T01:44:04.263Z"
 }

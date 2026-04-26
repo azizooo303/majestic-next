@@ -18,13 +18,28 @@ interface AssemblyViewerProps {
   manifest: FamilyManifest;
   state: AssemblyState;
   name: string;
+  viewpoint?: number;
+  command?: ViewerCommand | null;
   /** CSS color string for the viewer backdrop. Defaults to transparent so the
    *  parent container's backgroundColor shows through. The parent
    *  (family-configurator) controls the warm off-white / grey flip logic. */
   backgroundColor?: string;
 }
 
-export function AssemblyViewer({ manifest, state, name, backgroundColor }: AssemblyViewerProps) {
+export type ViewerCommand = {
+  type: "rotate" | "zoom" | "reset" | "ar";
+  token: number;
+};
+
+const CAMERA_VIEWS = [
+  { direction: [1.65, 0.72, 1.9], distance: 1.28 },
+  { direction: [0.05, 0.5, 2.1], distance: 1.18 },
+  { direction: [0.05, 2.25, 0.08], distance: 1.55 },
+  { direction: [1.1, 0.48, 1.05], distance: 0.72 },
+  { direction: [-1.8, 0.9, 2.25], distance: 1.55 },
+] as const;
+
+export function AssemblyViewer({ manifest, state, name, viewpoint = 0, command, backgroundColor }: AssemblyViewerProps) {
   const mountRef = useRef<HTMLDivElement | null>(null);
   const rendererRef = useRef<THREE.WebGLRenderer | null>(null);
   const sceneRef = useRef<THREE.Scene | null>(null);
@@ -32,6 +47,8 @@ export function AssemblyViewer({ manifest, state, name, backgroundColor }: Assem
   const controlsRef = useRef<OrbitControls | null>(null);
   const currentAssemblyRef = useRef<THREE.Group | null>(null);
   const rafRef = useRef<number | null>(null);
+  const pausedUntilRef = useRef(0);
+  const currentViewRef = useRef(viewpoint);
 
   // --- one-time setup: renderer + scene + camera + controls + env + resize -------
   useEffect(() => {
@@ -122,15 +139,14 @@ export function AssemblyViewer({ manifest, state, name, backgroundColor }: Assem
     // Auto-rotate when idle (matches the model-viewer feel).
     controls.autoRotate = true;
     controls.autoRotateSpeed = 0.6;
-    let interactionUntil = 0;
     const markInteraction = () => {
-      interactionUntil = Date.now() + 3000;
+      pausedUntilRef.current = Date.now() + 3000;
     };
     renderer.domElement.addEventListener("pointerdown", markInteraction);
     renderer.domElement.addEventListener("wheel", markInteraction);
 
     const animate = () => {
-      controls.autoRotate = Date.now() > interactionUntil;
+      controls.autoRotate = Date.now() > pausedUntilRef.current;
       controls.update();
       renderer.render(scene, camera);
       rafRef.current = requestAnimationFrame(animate);
@@ -205,13 +221,77 @@ export function AssemblyViewer({ manifest, state, name, backgroundColor }: Assem
     const controls = controlsRef.current;
     if (!camera || !controls) return;
     const box = new THREE.Box3().setFromObject(assembly);
-    const center = box.getCenter(new THREE.Vector3());
     const size = box.getSize(new THREE.Vector3());
     const maxDim = Math.max(size.x, size.y, size.z);
-    // Don't move the camera, just retarget; user controls persist.
-    controls.target.set(center.x, Math.max(center.y, 0.4), center.z);
     controls.minDistance = Math.max(maxDim * 0.7, 1.0);
     controls.maxDistance = Math.max(maxDim * 3.5, 5.0);
+    applyCameraView(currentViewRef.current, { pause: false });
+  }
+
+  useEffect(() => {
+    currentViewRef.current = viewpoint;
+    applyCameraView(viewpoint);
+  }, [viewpoint]);
+
+  useEffect(() => {
+    if (!command) return;
+    if (command.type === "reset") {
+      currentViewRef.current = 0;
+      applyCameraView(0);
+    } else if (command.type === "zoom") {
+      zoomCamera(0.78);
+    } else if (command.type === "rotate") {
+      rotateCamera(Math.PI / 4);
+    } else if (command.type === "ar") {
+      // AR is handled by the model-viewer path; the composed three.js viewer has no AR entry.
+      return;
+    }
+  }, [command]);
+
+  function applyCameraView(viewIndex: number, options: { pause?: boolean } = {}) {
+    const assembly = currentAssemblyRef.current;
+    const camera = cameraRef.current;
+    const controls = controlsRef.current;
+    if (!assembly || !camera || !controls) return;
+
+    const view = CAMERA_VIEWS[((viewIndex % CAMERA_VIEWS.length) + CAMERA_VIEWS.length) % CAMERA_VIEWS.length];
+    const box = new THREE.Box3().setFromObject(assembly);
+    const center = box.getCenter(new THREE.Vector3());
+    const size = box.getSize(new THREE.Vector3());
+    const maxDim = Math.max(size.x, size.y, size.z, 1);
+    const target = new THREE.Vector3(center.x, Math.max(center.y, 0.44), center.z);
+    const fitDistance = maxDim / (2 * Math.tan(THREE.MathUtils.degToRad(camera.fov) / 2));
+    const distance = Math.max(fitDistance * view.distance, maxDim * 0.95, 1.35);
+    const direction = new THREE.Vector3(...view.direction).normalize();
+
+    controls.target.copy(target);
+    camera.position.copy(target).add(direction.multiplyScalar(distance));
+    camera.near = Math.max(distance / 120, 0.02);
+    camera.far = Math.max(distance * 8, 50);
+    camera.updateProjectionMatrix();
+    controls.update();
+    if (options.pause !== false) pausedUntilRef.current = Date.now() + 2500;
+  }
+
+  function zoomCamera(factor: number) {
+    const camera = cameraRef.current;
+    const controls = controlsRef.current;
+    if (!camera || !controls) return;
+    const offset = camera.position.clone().sub(controls.target).multiplyScalar(factor);
+    camera.position.copy(controls.target).add(offset);
+    controls.update();
+    pausedUntilRef.current = Date.now() + 2500;
+  }
+
+  function rotateCamera(radians: number) {
+    const camera = cameraRef.current;
+    const controls = controlsRef.current;
+    if (!camera || !controls) return;
+    const offset = camera.position.clone().sub(controls.target);
+    offset.applyAxisAngle(new THREE.Vector3(0, 1, 0), radians);
+    camera.position.copy(controls.target).add(offset);
+    controls.update();
+    pausedUntilRef.current = Date.now() + 2500;
   }
 
   return (

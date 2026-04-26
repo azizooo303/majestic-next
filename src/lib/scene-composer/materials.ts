@@ -18,7 +18,9 @@ import {
   METAL_FINISH_ROLES,
   FABRIC_FINISH_ROLES,
   STATIC_METAL_ROLES,
+  STATIC_BODY_ROLES,
   BRACKET_COLOR,
+  BODY_COLOR,
   DIVIDER_COLOR_MATERIAL,
   DEFAULT_DIVIDER_COLOR,
   baseRole,
@@ -64,13 +66,25 @@ export async function applyWoodFinish(
     const mesh = obj as THREE.Mesh;
     const mat = ensureStandardMaterial(mesh);
     if (tex) {
-      mat.map = tex;
+      ensurePlanarUv(mesh);
+      const woodTex = tex.clone();
+      const bbox = new THREE.Box3().setFromObject(mesh);
+      const size = bbox.getSize(new THREE.Vector3());
+      woodTex.wrapS = THREE.RepeatWrapping;
+      woodTex.wrapT = THREE.RepeatWrapping;
+      woodTex.anisotropy = 8;
+      woodTex.repeat.set(
+        Math.max(1.4, size.x * 1.25),
+        Math.max(1.0, Math.max(size.z, size.y) * 1.25),
+      );
+      woodTex.needsUpdate = true;
+      mat.map = woodTex;
       mat.color.set(0xffffff); // let the texture drive color
     } else if (hex) {
       mat.map = null;
       mat.color.set(hex);
     }
-    mat.roughness = 0.55;
+    mat.roughness = 0.68;
     mat.metalness = 0.0;
     mat.needsUpdate = true;
   });
@@ -132,6 +146,20 @@ export function applyBracketFinish(subtree: THREE.Object3D): void {
   });
 }
 
+/** Apply fixed painted casework finish for baked body panels. */
+export function applyBodyFinish(subtree: THREE.Object3D): void {
+  subtree.traverse((obj) => {
+    if (!(obj as THREE.Mesh).isMesh) return;
+    const mesh = obj as THREE.Mesh;
+    const mat = ensureStandardMaterial(mesh);
+    mat.map = null;
+    mat.color.set(BODY_COLOR.hex);
+    mat.metalness = BODY_COLOR.metalness;
+    mat.roughness = BODY_COLOR.roughness;
+    mat.needsUpdate = true;
+  });
+}
+
 /**
  * Apply leg/metal finish (hex + metalness + roughness) to every mesh in the subtree.
  */
@@ -181,6 +209,8 @@ export async function applyMaterialForRole(
     await applyFabricFinish(subtree, entry.hex);
   } else if (STATIC_METAL_ROLES.has(base)) {
     applyBracketFinish(subtree);
+  } else if (STATIC_BODY_ROLES.has(base)) {
+    applyBodyFinish(subtree);
   } else if (METAL_FINISH_ROLES.has(base)) {
     applyMetalFinish(subtree, legColorName);
   }
@@ -210,4 +240,60 @@ function ensureStandardMaterial(mesh: THREE.Mesh): THREE.MeshStandardMaterial {
   std.userData.__clonedForComposer = true;
   mesh.material = std;
   return std;
+}
+
+function ensurePlanarUv(mesh: THREE.Mesh): void {
+  const geometry = mesh.geometry;
+  if (!geometry || !geometry.getAttribute("position")) return;
+  const existing = geometry.getAttribute("uv");
+  if (existing && uvHasRange(existing)) return;
+
+  geometry.computeBoundingBox();
+  const box = geometry.boundingBox;
+  if (!box) return;
+  const size = box.getSize(new THREE.Vector3());
+  const axes = [
+    { key: "x" as const, min: box.min.x, span: size.x },
+    { key: "y" as const, min: box.min.y, span: size.y },
+    { key: "z" as const, min: box.min.z, span: size.z },
+  ].sort((a, b) => b.span - a.span);
+  const uAxis = axes[0];
+  const vAxis = axes[1] ?? axes[0];
+  const position = geometry.getAttribute("position");
+  const uv = new Float32Array(position.count * 2);
+
+  for (let i = 0; i < position.count; i += 1) {
+    const u = axisValue(position, i, uAxis.key);
+    const v = axisValue(position, i, vAxis.key);
+    uv[i * 2] = uAxis.span > 0 ? (u - uAxis.min) / uAxis.span : 0;
+    uv[i * 2 + 1] = vAxis.span > 0 ? (v - vAxis.min) / vAxis.span : 0;
+  }
+
+  geometry.setAttribute("uv", new THREE.BufferAttribute(uv, 2));
+}
+
+function uvHasRange(attribute: THREE.BufferAttribute | THREE.InterleavedBufferAttribute): boolean {
+  let minU = Infinity;
+  let minV = Infinity;
+  let maxU = -Infinity;
+  let maxV = -Infinity;
+  for (let i = 0; i < attribute.count; i += 1) {
+    const u = attribute.getX(i);
+    const v = attribute.getY(i);
+    minU = Math.min(minU, u);
+    minV = Math.min(minV, v);
+    maxU = Math.max(maxU, u);
+    maxV = Math.max(maxV, v);
+  }
+  return maxU - minU > 0.01 && maxV - minV > 0.01;
+}
+
+function axisValue(
+  attribute: THREE.BufferAttribute | THREE.InterleavedBufferAttribute,
+  index: number,
+  axis: "x" | "y" | "z",
+): number {
+  if (axis === "x") return attribute.getX(index);
+  if (axis === "y") return attribute.getY(index);
+  return attribute.getZ(index);
 }
