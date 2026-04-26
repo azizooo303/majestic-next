@@ -27,14 +27,16 @@ export function ProductGallery({ images, name }: ProductGalleryProps) {
     <div className="space-y-3">
       {/* Main image */}
       <div className="relative aspect-[4/3] bg-[#FFFFFF] rounded-none overflow-hidden border border-[#D4D4D4]">
-        <Image
-          src={activeImage.src}
-          alt={activeImage.alt || name}
-          fill
-          priority
-          className="object-cover"
-          sizes="(max-width: 1024px) 100vw, 55vw"
-        />
+        <div className="absolute inset-3">
+          <Image
+            src={activeImage.src}
+            alt={activeImage.alt || name}
+            fill
+            priority
+            className="object-contain"
+            sizes="(max-width: 1024px) 100vw, 55vw"
+          />
+        </div>
       </div>
 
       {/* Thumbnails */}
@@ -57,7 +59,7 @@ export function ProductGallery({ images, name }: ProductGalleryProps) {
                 src={img.src}
                 alt={img.alt || `${name} ${i + 1}`}
                 fill
-                className="object-cover"
+                className="object-contain"
                 sizes="64px"
               />
             </button>

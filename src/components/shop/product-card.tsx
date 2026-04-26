@@ -60,20 +60,22 @@ export function ProductCard({
     <div className="group bg-white border border-transparent rounded-none overflow-hidden transition-[border-color] duration-[250ms] ease-[cubic-bezier(0.4,0,0.2,1)] hover:border-[#D4D4D4]">
       {/* Clickable image + info area */}
       <Link href={`/shop/${id}`} className="block">
-        <div className="relative aspect-[4/5] bg-[#F5F5F5] overflow-hidden border border-[#E7E7E7] group-hover:border-[#D4D4D4] transition-colors">
+        <div className="relative aspect-[4/5] bg-[#FFFFFF] overflow-hidden border border-[#E7E7E7] group-hover:border-[#D4D4D4] transition-colors">
           {discount && (
             <span className="absolute top-3 start-3 z-10 bg-[#2C2C2C] text-white text-[11px] font-semibold px-2 py-1 rounded-none tracking-[0.04em]">
               -{discount}%
             </span>
           )}
-          <Image
-            src={image || "https://lightyellow-mallard-240169.hostingersite.com/wp-content/uploads/2026/03/hero_office_desktop_en-1.png"}
-            alt={name}
-            fill
-            className="object-cover transition-transform duration-500 group-hover:scale-105"
-            sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
-            onError={(e) => { (e.target as HTMLImageElement).src = "https://lightyellow-mallard-240169.hostingersite.com/wp-content/uploads/2026/03/hero_office_desktop_en-1.png"; }}
-          />
+          <div className="absolute inset-2">
+            <Image
+              src={image || "https://lightyellow-mallard-240169.hostingersite.com/wp-content/uploads/2026/03/hero_office_desktop_en-1.png"}
+              alt={name}
+              fill
+              className="object-contain"
+              sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
+              onError={(e) => { (e.target as HTMLImageElement).src = "https://lightyellow-mallard-240169.hostingersite.com/wp-content/uploads/2026/03/hero_office_desktop_en-1.png"; }}
+            />
+          </div>
         </div>
         <div className="pt-4 pb-2 px-0">
           <p className="overline mb-1">{parseCategory(category)}</p>
